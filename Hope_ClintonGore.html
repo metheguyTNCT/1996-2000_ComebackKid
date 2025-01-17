@@ -572,7 +572,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_3_biden",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Joe Biden as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected Joe Biden as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
@@ -581,7 +581,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_2",
         "fields": {
             "priority": 0,
-            "description": "Mr. President, you've been inaugurated to a full 1st term, but there's one glaring issue: you don't have a Vice President. We need to know who you'll appoint to the position.",
+            "description": "You look at your watch, and realize it’s only been 10 hours since you were taken to the White House. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
             "likelihood": 1
         }
     },
@@ -590,7 +590,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_3_feinstein",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected the first woman to serve as VP, DiaNne Feinstein, and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected the first woman to serve as VP, Diane Feinstein, and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
@@ -599,7 +599,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_3_zeller",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
@@ -608,7 +608,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_5_cuomo",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
@@ -617,7 +617,7 @@ campaignTrail_temp.questions_json = [
         "pk": "gore_question_3_kerry",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
@@ -1703,7 +1703,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20001.1,
         "fields": {
             "question": "gore_question_2",
-            "description": "Well, I had a shortlist that was planned for 2000, but it seems like I'll use it 3 years early. Hopefully I make the right choice...."
+            "description": "Tom, I’m just calling to tell you who I plan to nominate for the Vice Presidency. We need to make Americans feel safe, and this is a damn good way to begin the healing process. Tom, I’m proud to say I’m about to nominate..."
         }
     },
     {
@@ -15325,37 +15325,26 @@ cyoAdventure = function(a) {
             "likelihood": 1
         }
 	}
-    if (ans == 55003.5) {
+    if (e.player_answers.includes(55003.5)) {
         question_insert("insert_yeltsin_unfriendly",win_healthcare_vote_temp);
 		question_insert("insert_yeltsin_friendly",win_healthcare_vote_temp);
     }
-if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
+else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
     console.log("Kennedy healthcare vote triggered.");
     question_insert("insert_yeltsin_unfriendly", win_healthcare_vote_kennedy_temp);
     question_insert("insert_yeltsin_friendly", win_healthcare_vote_kennedy_temp);
+} else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
+    question_insert("insert_yeltsin_unfriendly",refuse_healthcare_vote_temp);
+    question_insert("insert_yeltsin_friendly",refuse_healthcare_vote_temp);
+} else  if (ans == 75002.5) {
+    KennedyFails += 1;
+    question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
+    question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
 } else {
     question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
     question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
     console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
 }
-  
-	// All refuses
-	if (ans == 55004.5 || ans == 55005.5 || ans == 55006.5) {
-        question_insert("insert_yeltsin_unfriendly",refuse_healthcare_vote_temp);
-		question_insert("insert_yeltsin_friendly",refuse_healthcare_vote_temp);
-    }
-	// Special cases
-    if (ans == 75002.5) {
-        KennedyFails += 1;
-        question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
-		question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
-
-        // All fails
-    } if (ans == 75003.5 || ans == 55002.5 || ans == 55001.5 || ans == 65001.5 || 
-		ans == 65002.5 || ans == 65003.5) {
-        question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
-		question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
-    }
 }
     if (Dolewin == false && Buchananwin == false && Lamarwin == false && Specterwin == false && Grammwin == false && Legacy >= 3 && (ans == 210001 || ans == 210002 || ans == 210003)) {
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Republican Party";
@@ -15497,7 +15486,7 @@ resetVariables(resetCondition);
         "pk": "gore_question_2",
         "fields": {
             "priority": 0,
-            "description": "Mr. President, you've been inaugurated to a full 1st term, but theres one glaring issure: you don't have a Vice President. We need to know who you'll appoint to the position.",
+            "description": "You look at your watch, and realize it’s only been 10 hours since you were taken to the White House. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
             "likelihood": 1
         }
         }
@@ -17216,7 +17205,7 @@ let potential_running_mate_pks = e.running_mate_json
         pk: "gore_question_3_biden",
         fields: {
             priority: 0,
-            description: "It's been a few weeks since you selected Joe Biden as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            description: "It's been a few weeks since you selected Joe Biden as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             likelihood: 1,
         },
     });
@@ -17324,7 +17313,7 @@ if (e.running_mate_last_name === "Feinstein") {
         "pk": "gore_question_3_feinstein",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected the first woman to serve as VP, Diane Feinstein, and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected the first woman to serve as VP, Diane Feinstein, and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         },
     });
@@ -17431,7 +17420,7 @@ if (e.running_mate_last_name === "Miller") {
         "pk": "gore_question_3_zeller",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         },
     });
@@ -17538,7 +17527,7 @@ question_insert("gore_question_3_zeller", {
         "pk": "gore_question_3_kerry",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         },
     });
@@ -17645,7 +17634,7 @@ if (e.running_mate_last_name === "Cuomo") {
         "pk": "gore_question_5_cuomo",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development, Mr. President. We have found more information on the assassin, Osama Bin Laden; his goal is to end what he calls ‘American Imperialism’ in the Middle East. It is believed he has fled his assumed hideout in Sudan and is currently in Afghanistan. You know what to do.\n",
+            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     });
