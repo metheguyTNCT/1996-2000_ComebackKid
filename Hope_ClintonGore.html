@@ -569,55 +569,37 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "gore_question_3_biden",
+        "pk": "gore_funeral_question",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Joe Biden as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
+            "description": "You can hardly believe it’s only been three days. It’s certainly felt like decades, with the weight of the world on you. Today, the state funeral for Bill and Hillary Clinton is being held. You walk into the rotunda, and see the 2 empty coffins. Part of you is still hoping it’s a dream, that you’re simply asleep at the Naval Observatory, that you’ll wake up any minute. Unfortunately, you know it’s not the case. You know the eulogy you’re about to give is real, and you walk up to the podium.\n",
             "likelihood": 1
         }
     },
     {
         "model": "campaign_trail.question",
-        "pk": "gore_question_2",
+        "pk": "gore_question_3_invasion",
         "fields": {
             "priority": 0,
-            "description": "You look at your watch, and realize it’s only been 10 hours since you were taken to the White House. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
-            "likelihood": 1
-        }
-    },
-        {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_3_feinstein",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected the first woman to serve as VP, Diane Feinstein, and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
+            "description": "They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
             "likelihood": 1
         }
     },
     {
         "model": "campaign_trail.question",
-        "pk": "gore_question_3_zeller",
+        "pk": "gore_question_3_invasion_iran",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
+            "description": "They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?",
             "likelihood": 1
         }
     },
     {
         "model": "campaign_trail.question",
-        "pk": "gore_question_5_cuomo",
+        "pk": "gore_vp_question",
         "fields": {
             "priority": 0,
-            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_3_kerry",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
+            "description": "After coming back from the funeral, you look at your watch, pondering what to do next. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
             "likelihood": 1
         }
     },
@@ -1313,7 +1295,14 @@ campaignTrail_temp.answers_json = [
     },
 
 	// Separation between "regular" questions and "stored" questions.
-	
+	{
+        "model": "campaign_trail.answer",
+        "pk": 50010.1,
+        "fields": {
+            "question": "gore_funeral_question",
+            "description": "“I wish I could be standing before you under different circumstances. I truly, truly do. Three days ago, a great man was taken from us. A man who worked for the people. A man who did everything he could to ease the suffering of others. William Clinton was a good man. One who should serve as a role model for future generations, as former President Kennedy did for him. But he was more than that. He was my friend, almost family even. I’m distraught he’s gone, and I want to talk about Bill Clinton the man, not the…”\n"
+        }
+    },
     {
         "model": "campaign_trail.answer",
         "pk": 15001.5,
@@ -1702,40 +1691,8 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 20001.1,
         "fields": {
-            "question": "gore_question_2",
+            "question": "gore_vp_question",
             "description": "Tom, I’m just calling to tell you who I plan to nominate for the Vice Presidency. We need to make Americans feel safe, and this is a damn good way to begin the healing process. Tom, I’m proud to say I’m about to nominate..."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 30001.1,
-        "fields": {
-            "question": "gore_question_3_biden",
-            "description": "I think it's quite clear to everyone on Capitol Hill, or in this country what we should do next. Hopefully, Gingrich can put aside politics to do the right thing..."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 30002.1,
-        "fields": {
-            "question": "gore_question_3_feinstein",
-            "description": "I think it's quite clear to everyone on Capitol Hill, or in this country what we should do next. Hopefully, Gingrich can put aside politics to do the right thing..."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 30003.1,
-        "fields": {
-            "question": "gore_question_3_kerry",
-            "description": "I think it's quite clear to everyone on Capitol Hill, or in this country what we should do next. Hopefully, Gingrich can put aside politics to do the right thing..."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 30004.1,
-        "fields": {
-            "question": "gore_question_3_zeller",
-            "description": "I think it's quite clear to everyone on Capitol Hill, or in this country what we should do next. Hopefully, Gingrich can put aside politics to do the right thing..."
         }
     },
     {
@@ -1800,14 +1757,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "gore_question_5",
             "description": "We shouldn't directly try to engage in conflict against the Taliban but we can indirectly fight them by funding Pro American Democratic movements. We also need to supply Afghan civilians with basic human resources like food, water and shelter. \n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 50005.1,
-        "fields": {
-            "question": "gore_question_5_cuomo",
-            "description": "I think it's quite clear to everyone on Capitol Hill, or in this country what we should do next. Hopefully, Gingrich can put aside politics to do the right thing..."
         }
     },
     {
@@ -2266,6 +2215,62 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "healthcare_vote_win_kennedy",
             "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85030.5,
+        "fields": {
+            "question": "gore_question_3_invasion",
+            "description": "Pakistan isn’t the most reliable, but they know damn well what will happen if they don’t help. We need to organize massive airstrikes on the infrastructure they do have, and the best way to do so is through Pakistan. We are at war in all but name, and we will act like it. The current prime minister is a good man, he’ll come through.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85031.5,
+        "fields": {
+            "question": "gore_question_3_invasion",
+            "description": "Osama Bin Laden is nothing short of a monster, and he, along with anyone who aids him, are going to learn a valuable lesson. Nobody would dare stop us right now, so I want every bomber in the Air Force over Kabul tomorrow. I want this put in motion now. Do you understand me?\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85032.5,
+        "fields": {
+            "question": "gore_question_3_invasion",
+            "description": "We need immediate action. I want every man the CIA has on finding this monster, and soon. Get me Prime Minister Khalid, we need to cut off any avenue of escape he may have. Furthermore, Afghanistan is clearly complacent in this, and they will pay dearly. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85040.5,
+        "fields": {
+            "question": "gore_question_3_invasion_iran",
+            "description": "Iran isn’t our friend, but they are the easiest way to Afghanistan. Get me on the phone with the ambassador, now. They can either give us their full cooperation, or the news tomorrow will not be about the devastating attack on our leader, but the one on theirs. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85041.5,
+        "fields": {
+            "question": "gore_question_3_invasion_iran",
+            "description": "Pakistan isn’t the most reliable, but they know damn well what will happen if they don’t help. We need to organize massive airstrikes on the infrastructure they do have, and the best way to do so is through Pakistan. We are at war in all but name, and we will act like it. The current prime minister is a good man, he’ll come through.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85042.5,
+        "fields": {
+            "question": "gore_question_3_invasion_iran",
+            "description": "Osama Bin Laden is nothing short of a monster, and he, along with anyone who aids him, are going to learn a valuable lesson. Nobody would dare stop us right now, so I want every bomber in the Air Force over Kabul tomorrow. I want this put in motion now. Do you understand me?\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85043.5,
+        "fields": {
+            "question": "gore_question_3_invasion_iran",
+            "description": "We need immediate action. I want every man the CIA has on finding this monster, and soon. Get me Prime Minister Khalid, we need to cut off any avenue of escape he may have. Furthermore, Afghanistan is clearly complacent in this, and they will pay dearly. "
         }
     }
 ]
@@ -8831,7 +8836,7 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12633,
+        "pk": "gore_question_3_invasion",
         "fields": {
             "answer": 150001,
             "candidate": 77,
@@ -10978,6 +10983,86 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 80,
             "global_multiplier": 0.02
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12642,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12645,
+        "fields": {
+            "answer": 85031.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12648,
+        "fields": {
+            "answer": 85032.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12653,
+        "fields": {
+            "answer": 85040.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12657,
+        "fields": {
+            "answer": 85041.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12661,
+        "fields": {
+            "answer": 85042.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12665,
+        "fields": {
+            "answer": 85043.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12699,
+        "fields": {
+            "answer": 50010.1,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
     }
 ]
 
@@ -11940,6 +12025,76 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": 0.3,
             "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12643,
+        "fields": {
+            "answer": 85030.5,
+            "issue": 30,
+            "issue_score": -0.01,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12646,
+        "fields": {
+            "answer": 85031.5,
+            "issue": 30,
+            "issue_score": 0.02,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12649,
+        "fields": {
+            "answer": 85032.5,
+            "issue": 30,
+            "issue_score": -0.02,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12654,
+        "fields": {
+            "answer": 85040.5,
+            "issue": 30,
+            "issue_score": -0.2,
+            "issue_importance": 8
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12658,
+        "fields": {
+            "answer": 85041.5,
+            "issue": 30,
+            "issue_score": -0.01,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12662,
+        "fields": {
+            "answer": 85042.5,
+            "issue": 30,
+            "issue_score": 0.02,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12666,
+        "fields": {
+            "answer": 85043.5,
+            "issue": 30,
+            "issue_score": -0.02,
+            "issue_importance": 3
         }
     }
 ]
@@ -15024,6 +15179,78 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "As the midterms get closer, it becomes less likely the democratic majority will stick, meaning you missed your only shot at this."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12641,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "answer_feedback": "After a call with Prime Minister Khalid, you have a pledge of full support. Congress unanimously grants you sweeping powers to declare war in all but name. By this time tomorrow, the invasion of Afghanistan will be in full force. The world is about to see how America responds to an attack.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12644,
+        "fields": {
+            "answer": 85031.5,
+            "candidate": 77,
+            "answer_feedback": "Congress unanimously approves, and it isn’t long before Afghanistan is all but destroyed. You quickly mobilize ground troops through Pakistan. The guerrilla fighting is brutal, and there are heavy American casualties. They don’t stand a chance regardless."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12647,
+        "fields": {
+            "answer": 85032.5,
+            "candidate": 77,
+            "answer_feedback": "Intelligence agencies around the globe roar into action. It’s only a matter of time before they find him. You wish you could be the one to pull the trigger when they do.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12652,
+        "fields": {
+            "answer": 85040.5,
+            "candidate": 77,
+            "answer_feedback": "He thinks you’re bluffing. You call congress into a special session, and within 48 hours American bombs are dropping on Tehran. The fighting is brutal, and the destruction is immense. OPEC backs down, as you knew they would. They should have listened, and now they will be crushed under the weight of their sins."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12656,
+        "fields": {
+            "answer": 85041.5,
+            "candidate": 77,
+            "answer_feedback": "After a call with Prime Minister Khalid, you have a pledge of full support. Congress unanimously grants you sweeping powers to declare war in all but name. By this time tomorrow, the invasion of Afghanistan will be in full force. The world is about to see how America responds to an attack.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12660,
+        "fields": {
+            "answer": 85042.5,
+            "candidate": 77,
+            "answer_feedback": "Congress unanimously approves, and it isn’t long before Afghanistan is all but destroyed. You quickly mobilize ground troops through Pakistan. The guerrilla fighting is brutal, and there are heavy American casualties. They don’t stand a chance regardless."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12664,
+        "fields": {
+            "answer": 85043.5,
+            "candidate": 77,
+            "answer_feedback": "Intelligence agencies around the globe roar into action. It’s only a matter of time before they find him. You wish you could be the one to pull the trigger when they do.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12698,
+        "fields": {
+            "answer": 50010.1,
+            "candidate": 77,
+            "answer_feedback": "You proceed to give a beautiful eulogy, barely able to hold back tears. You speak of Bill’s upbringing, his first meeting with Hillary, the time you spent together, and finally, you speak of how much he cared. When you step off the podium, you can’t hold back the tears any longer. Chelsea is crying herself, and she gives you a hug. “Thank you, Al. That was beautiful. I know my father appreciates it, wherever he is now.”. You feel a fresh wave of emotion, and swear you’ll live up to his, and your own father’s, legacy."
+        }
     }
 ]
 
@@ -15336,7 +15563,7 @@ else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("insert_yeltsin_unfriendly",refuse_healthcare_vote_temp);
     question_insert("insert_yeltsin_friendly",refuse_healthcare_vote_temp);
-} else  if (ans == 75002.5) {
+} else if (ans == 75002.5) {
     KennedyFails += 1;
     question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
     question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
@@ -15396,7 +15623,7 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "The";
             }
         }
         );
-    
+    //EITB CYOA
     } if (ans == 45001.5) {
     customStyling.innerHTML = `
 #campaign_sign {
@@ -15469,66 +15696,103 @@ resetVariables(resetCondition);
             }
         }
         );
-        question_insert("gore_question_1", 
+question_insert("gore_question_1", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "gore_chelsea_question",
+        "fields": {
+            "priority": 0,
+            "description": "Tipper walks up to you, a solemn look on her face. “Al,” You notice a shake in her voice as she continues. “It’s Chelsea. She hasn’t left her room. I don’t think she should stay with Roger, not right now. She’s scared Al, she doesn’t know what’s going to happen to her. We can’t just let her be a ward of the state, we owe it to Bill and Hillary to do that at least”, she says, barely holding in a stream of tears. You sigh, knowing how difficult this must be for her. You know what dad would do. On your way to her room, you look over the landscape of D.C., wondering if things will ever be the same.\n",
+            "likelihood": 1
+        }
+    }
+);
+question_insert("gore_chelsea_question", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "gore_funeral_question",
+        "fields": {
+            "priority": 0,
+            "description": "You can hardly believe it’s only been three days. It’s certainly felt like decades, with the weight of the world on you. Today, the state funeral for Bill and Hillary Clinton is being held. You walk into the rotunda, and see the 2 empty coffins. Part of you is still hoping it’s a dream, that you’re simply asleep at the Naval Observatory, that you’ll wake up any minute. Unfortunately, you know it’s not the case. You know the eulogy you’re about to give is real, and you walk up to the podium.\n",
+            "likelihood": 1
+        }
+    }
+);
+question_insert("gore_funeral_question", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "gore_vp_question",
+        "fields": {
+            "priority": 0,
+            "description": "After coming back from the funeral, you look at your watch, pondering what to do next. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
+            "likelihood": 1
+        }
+    }
+);
+} else if (ans == 45002.5) {
+    question_insert("insert_bill_lives", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "clinton_2nd_term_question_2",
+            "fields": {
+                "priority": 0,
+                "description": "Despite your victory just a few months ago, you’ve barely made a dent in Gingrich’s Coalition, keeping both the Senate and House still under his rule. You’ve arrived at the House chamber to give your first State of the Union address to the barely changed partisan Congress that has fought you tooth and nail over anything and anywhere they can during your first term. What could you possibly hope to say to bring them across the aisle?\n",
+                "likelihood": 1
+            }
+        }
+    );
+    if (SlimGOPCongress == 1) {
+        question_insert("clinton_2nd_term_question_2", 
             {
                 "model": "campaign_trail.question",
-                "pk": "gore_chelsea_question",
+                "pk": "clinton_2nd_term_question_3_slim_gop",
                 "fields": {
                     "priority": 0,
-                    "description": "Tipper walks up to you, a solemn look on her face. “Al,” You notice a shake in her voice as she continues. “It’s Chelsea. She hasn’t left her room. I don’t think she should stay with Roger, not right now. She’s scared Al, she doesn’t know what’s going to happen to her. We can’t just let her be a ward of the state, we owe it to Bill and Hillary to do that at least”, she says, barely holding in a stream of tears. You sigh, knowing how difficult this must be for her. You know what dad would do. On your way to her room, you look over the landscape of D.C., wondering if things will ever be the same.\n",
+                    "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree-hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
                     "likelihood": 1
                 }
             }
-            );
-        question_insert("gore_chelsea_question", 
-        {
-             "model": "campaign_trail.question",
-        "pk": "gore_question_2",
-        "fields": {
-            "priority": 0,
-            "description": "You look at your watch, and realize it’s only been 10 hours since you were taken to the White House. Your face is one of steely determination, and you pledge to yourself that you will be a president worthy of the office. The American people need to know the government is still functioning, and that needs action. You make some calls, before calling Daschle to inform him of your nominee for the Vice Presidency.",
-            "likelihood": 1
-        }
-        }
         );
-       } else if (ans == 45002.5) {
-        question_insert("insert_bill_lives", 
-        {
-              "model": "campaign_trail.question",
-        "pk": "clinton_2nd_term_question_2",
-        "fields": {
-            "priority": 0,
-            "description": "Despite your victory just a few months ago, you’ve barely made a dent in Gingrich’s Coalition, keeping both the Senate and House still under his rule. You’ve arrived at the House chamber to give your first State of the Union address to the barely changed partisan Congress that has fought you tooth and nail over anything and anywhere they can during your first term. What could you possibly hope to say to bring them across the aisle?\n",
-            "likelihood": 1
-        }
-        }
-        );
-        if (SlimGOPCongress == 1) {
-            question_insert("clinton_2nd_term_question_2", 
-                {
-                    "model": "campaign_trail.question",
-                    "pk": "clinton_2nd_term_question_3_slim_gop",
-                    "fields": {
-                        "priority": 0,
-                        "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the worlds 36 richest countries, while providing enviornment-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't apart of it.",
-                        "likelihood": 1
-                    }
-                }
-                );
-        
-    }else{
+    } else {
         question_insert("clinton_2nd_term_question_2", 
             {
                 "model": "campaign_trail.question",
                 "pk": "clinton_2nd_term_question_3",
                 "fields": {
                     "priority": 0,
-                    "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the worlds 36 richest countries, while providing enviornment-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't apart of it.",
+                    "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree-hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
                     "likelihood": 1
                 }
             }
-            );
+        );
     }
+}
+if (e.question_number+1 == 33) {
+if (e.player_answers.includes(10002.1)) {
+    question_insert("gore_vp_question", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "gore_question_3_invasion_iran",
+            "fields": {
+                "priority": 0,
+                "description": "They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan-based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?",
+                "likelihood": 1
+            }
+        }
+    );
+} else if (e.player_answers.includes(10001.1)||e.player_answers.includes(10003.1)) {
+    question_insert("gore_vp_question", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "gore_question_3_invasion",
+            "fields": {
+                "priority": 0,
+                "description": "They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan-based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?",
+                "likelihood": 1
+            }
+        }
+    );
+}
 }
 //WTC Bombing CYOA
    if (ans ==  20001){
@@ -15649,6 +15913,10 @@ resetVariables(resetCondition);
     PublicSupport -= 1;
    FPWin -= 1;
    }
+   //Ted Kennedy stuff
+   if (ans == 75002.5) {
+    KennedyFails += 1;
+}
    //Healthcare Vote CYOA (Succeeds)
    if (ans == 15004.5){
     PublicSupport += 3;
@@ -16123,7 +16391,7 @@ if (ans == 170003){
 				}
             );
             console.log("Cuomo Beat Pataki")
-        } else if (LEGWin <= 2 && DOMWin <= 3 && FPWin <= 3 && KennedyFails == 1){
+        } else if (KennedyFails == 1){
 			DemCongress -= 1;
             GOPSupermajority += 1;
             RomneyWin += 1;
@@ -17148,113 +17416,56 @@ let potential_running_mate_pks = e.running_mate_json
             $("#campaign_sign").html(`<p>${e.candidate_last_name}</p><p>${e.running_mate_last_name}</p>`);
             $("#running_mate_pic").attr("src", e.running_mate_image_url)
         }
-
-	if (e.running_mate_last_name === "Biden") {
-        customStyling.innerHTML = `
-#campaign_sign {
-    background-image: url("https://i.imgur.com/ifhk3LP.png");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 54%;
-  position: relative;
-  clear: both;
-}
-`;
-
-    question_insert("gore_question_2", {
-        model: "campaign_trail.question",
-        pk: "gore_question_3_biden",
-        fields: {
-            priority: 0,
-            description: "It's been a few weeks since you selected Joe Biden as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            likelihood: 1,
-        },
-    });
-     question_insert("gore_question_3_biden", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_4",
-        "fields": {
-            "priority": 0,
-            "description": "A few weeks have passed by and the first American troops have finally arrived in Islamabad Pakistan. You find yourself in a bit of a predicament. Bin Laden’s exact location is unknown but we do know that he was in Afghanistan. Which part of Afghanistan should we investigate? \n",
-            "likelihood": 1
-        }
-    });
-     question_insert("gore_question_4", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_5",
-        "fields": {
-            "priority": 0,
-            "description": " It's time that I ask you an important question. What do you plan to do about the Taliban and Al Qaeda? Secretary of Defense Colin Powell and Former Secretary of Defense Dick Cheney are demanding that you escalate the war into a full-blown war against the Taliban. On the other hand, Senator John Kerry exclaimed in a speech in tune with most Americans' opinion, ‘We are at war with Bin Laden, not Afghanistan’.\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_5", {
-      "model": "campaign_trail.question",
-        "pk": "gore_question_6",
-        "fields": {
-            "priority": 0,
-            "description": "Back home in America, you find yourself with a slightly more friendly Congress so I think it would be a great time to pass new domestic legislation. The most important issues at the moment are: the expansion of the internet, sky high crime rates, domestic terrorism, the Environment; popularized by you, and Trade. \n\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_6", {
-     "model": "campaign_trail.question",
-        "pk": "gore_question_7_vp_biden",
-        "fields": {
-            "priority": 0,
-            "description": "With this war comes a lot of problems and one of them is Immigration. Usually, as a Democrat you would be in favor of immigration but in this case it might help to not be pro immigration. You see, there is a growing fear among the American public of terrorists from Afghanistan coming into the country and killing them. For this reason, a new bill to impose stricter immigration laws is the new talk of the house. \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_7_vp_biden", {
-      "model": "campaign_trail.question",
-        "pk":  "gore_question_8_afghan_government",
-        "fields": {
-            "priority": 0,
-            "description": "The legitimate government of Afghanistan is on the verge of collapse. What will you do to ensure that Afghanistan’s Pro-American government doesn't fall apart and cause a full civil war? Many are calling for you to escalate this into a full-scale invasion of Afghanistan to stop the Taliban for this reason. \n",
-            "likelihood": 1
-        }
-    });
-    console.log(campaignTrail_temp.questions_json[28]);
+        if (e.running_mate_last_name === "Biden") {
+            customStyling.innerHTML = `
+    #campaign_sign {
+        background-image: url("https://i.imgur.com/ifhk3LP.png");
+        background-size: cover;
+        border-color: #c9c9c9;    
+        border-width: .01em;
+        margin: 0 auto;
+        background-position: center;
+        width: 100%; 
+        height: 104px; 
+        margin-left: -0.033em;
+        margin-right: -0.033em;
+      }
+    #campaign_sign p {
+        color: rgb(0 0 0 / 0%);
+    }
+    .inner_window_sign_display {
+      margin: 0;
+        margin-right: 0.033px;
+        margin-left: 0.033px;
+      height: 25%;
+      position: relative;
+      width: 35%;
+      height: 28%;
+      background-color: #FFFFFF;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: double;
+      border-color: #C9C9C9;
+    }
+    #state_info {
+      margin: 5% 0 0;
+      height: 120%;
+      background-color: #FFFFFF;
+      border-style: double;
+      border-color: #C9C9C9;
+    }
+    .inner_window_question {
+      background-color: #FFFFFF;
+      margin: 0
+      padding-top: .3em;
+      border-style: double;
+      border-color: #C9C9C9;
+      text-align: center;
+      height: 54%;
+      position: relative;
+      clear: both;
+    }
+    `;
 }
 
 if (e.running_mate_last_name === "Feinstein") {
@@ -17307,62 +17518,6 @@ if (e.running_mate_last_name === "Feinstein") {
   clear: both;
 }
 `;
-
-    question_insert("gore_question_2", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_3_feinstein",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected the first woman to serve as VP, Diane Feinstein, and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            "likelihood": 1
-        },
-    });
-question_insert("gore_question_3_feinstein", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_4",
-        "fields": {
-            "priority": 0,
-            "description": "A few weeks have passed by and the first American troops have finally arrived in Islamabad Pakistan. You find yourself in a bit of a predicament. Bin Laden’s exact location is unknown but we do know that he was in Afghanistan. Which part of Afghanistan should we investigate? \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_4", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_5",
-        "fields": {
-            "priority": 0,
-            "description": " It's time that I ask you an important question. What do you plan to do about the Taliban and Al Qaeda? Secretary of Defense Colin Powell and Former Secretary of Defense Dick Cheney are demanding that you escalate the war into a full-blown war against the Taliban. On the other hand, Senator John Kerry exclaimed in a speech in tune with most Americans' opinion, ‘We are at war with Bin Laden, not Afghanistan’.\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_5", {
-      "model": "campaign_trail.question",
-        "pk": "gore_question_6",
-        "fields": {
-            "priority": 0,
-            "description": "Back home in America, you find yourself with a slightly more friendly Congress so I think it would be a great time to pass new domestic legislation. The most important issues at the moment are: the expansion of the internet, sky high crime rates, domestic terrorism, the Environment; popularized by you, and Trade. \n\n",
-            "likelihood": 1
-        }
-    });
-     question_insert("gore_question_6", {
-     "model": "campaign_trail.question",
-        "pk": "gore_question_7_senator_biden",
-        "fields": {
-            "priority": 0,
-            "description": "With this war comes a lot of problems and one of them is Immigration. Usually, as a Democrat you would be in favor of immigration but in this case it might help to not be pro immigration. You see, there is a growing fear among the American public of terrorists from Afghanistan coming into the country and killing them. For this reason, a new bill to impose stricter immigration laws is the new talk of the house. \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_7_senator_biden", {
-      "model": "campaign_trail.question",
-        "pk":  "gore_question_8_afghan_government",
-        "fields": {
-            "priority": 0,
-            "description": "The legitimate government of Afghanistan is on the verge of collapse. What will you do to ensure that Afghanistan’s Pro-American government doesn't fall apart and cause a full civil war? Many are calling for you to escalate this into a full-scale invasion of Afghanistan to stop the Taliban for this reason. \n",
-            "likelihood": 1
-        }
-    });
-    console.log(campaignTrail_temp.questions_json[28]);
 }
 if (e.running_mate_last_name === "Miller") {
      customStyling.innerHTML = `
@@ -17415,61 +17570,6 @@ if (e.running_mate_last_name === "Miller") {
 }
 `;
 
-    question_insert("gore_question_2", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_3_zeller",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected Zell Miller as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            "likelihood": 1
-        },
-    });
-question_insert("gore_question_3_zeller", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_4",
-        "fields": {
-            "priority": 0,
-            "description": "A few weeks have passed by and the first American troops have finally arrived in Islamabad Pakistan. You find yourself in a bit of a predicament. Bin Laden’s exact location is unknown but we do know that he was in Afghanistan. Which part of Afghanistan should we investigate? \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_4", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_5",
-        "fields": {
-            "priority": 0,
-            "description": " It's time that I ask you an important question. What do you plan to do about the Taliban and Al Qaeda? Secretary of Defense Colin Powell and Former Secretary of Defense Dick Cheney are demanding that you escalate the war into a full-blown war against the Taliban. On the other hand, Senator John Kerry exclaimed in a speech in tune with most Americans' opinion, ‘We are at war with Bin Laden, not Afghanistan’.\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_5", {
-      "model": "campaign_trail.question",
-        "pk": "gore_question_6",
-        "fields": {
-            "priority": 0,
-            "description": "Back home in America, you find yourself with a slightly more friendly Congress so I think it would be a great time to pass new domestic legislation. The most important issues at the moment are: the expansion of the internet, sky high crime rates, domestic terrorism, the Environment; popularized by you, and Trade. \n\n",
-            "likelihood": 1
-        }
-    });
-     question_insert("gore_question_6", {
-     "model": "campaign_trail.question",
-        "pk": "gore_question_7_senator_biden",
-        "fields": {
-            "priority": 0,
-            "description": "With this war comes a lot of problems and one of them is Immigration. Usually, as a Democrat you would be in favor of immigration but in this case it might help to not be pro immigration. You see, there is a growing fear among the American public of terrorists from Afghanistan coming into the country and killing them. For this reason, a new bill to impose stricter immigration laws is the new talk of the house. \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_7_senator_biden", {
-      "model": "campaign_trail.question",
-        "pk":  "gore_question_8_afghan_government",
-        "fields": {
-            "priority": 0,
-            "description": "The legitimate government of Afghanistan is on the verge of collapse. What will you do to ensure that Afghanistan’s Pro-American government doesn't fall apart and cause a full civil war? Many are calling for you to escalate this into a full-scale invasion of Afghanistan to stop the Taliban for this reason. \n",
-            "likelihood": 1
-        }
-    });
-    console.log(campaignTrail_temp.questions_json[28]);
 }
      if (e.running_mate_last_name === "Kerry") {
         customStyling.innerHTML = `
@@ -17521,62 +17621,6 @@ question_insert("gore_question_3_zeller", {
   clear: both;
 }
 `;
-
-    question_insert("gore_question_2", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_3_kerry",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected John Kerry as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            "likelihood": 1
-        },
-    });
-question_insert("gore_question_3_kerry", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_4",
-        "fields": {
-            "priority": 0,
-            "description": "A few weeks have passed by and the first American troops have finally arrived in Islamabad Pakistan. You find yourself in a bit of a predicament. Bin Laden’s exact location is unknown but we do know that he was in Afghanistan. Which part of Afghanistan should we investigate? \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_4", {
-         "model": "campaign_trail.question",
-        "pk": "gore_question_5_kerry",
-        "fields": {
-            "priority": 0,
-            "description": " It's time that I ask you an important question. What do you plan to do about the Taliban and Al Qaeda? Secretary of Defense Colin Powell and Former Secretary of Defense Dick Cheney are demanding that you escalate the war into a full-blown war against the Taliban. On the other hand, Vice President Kerry exclaimed in a speech in tune with most Americans' opinion, ‘We are at war with Bin Laden, not Afghanistan’.\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_5_kerry", {
-      "model": "campaign_trail.question",
-        "pk": "gore_question_6",
-        "fields": {
-            "priority": 0,
-            "description": "Back home in America, you find yourself with a slightly more friendly Congress so I think it would be a great time to pass new domestic legislation. The most important issues at the moment are: the expansion of the internet, sky high crime rates, domestic terrorism, the Environment; popularized by you, and Trade. \n\n",
-            "likelihood": 1
-        }
-    });
-     question_insert("gore_question_6", {
-     "model": "campaign_trail.question",
-        "pk": "gore_question_7_senator_biden",
-        "fields": {
-            "priority": 0,
-            "description": "With this war comes a lot of problems and one of them is Immigration. Usually, as a Democrat you would be in favor of immigration but in this case it might help to not be pro immigration. You see, there is a growing fear among the American public of terrorists from Afghanistan coming into the country and killing them. For this reason, a new bill to impose stricter immigration laws is the new talk of the house. \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_7_senator_biden", {
-      "model": "campaign_trail.question",
-        "pk":  "gore_question_8_afghan_government",
-        "fields": {
-            "priority": 0,
-            "description": "The legitimate government of Afghanistan is on the verge of collapse. What will you do to ensure that Afghanistan’s Pro-American government doesn't fall apart and cause a full civil war? Many are calling for you to escalate this into a full-scale invasion of Afghanistan to stop the Taliban for this reason. \n",
-            "likelihood": 1
-        }
-    });
-    console.log(campaignTrail_temp.questions_json[28]);
 }
 if (e.running_mate_last_name === "Cuomo") {
  customStyling.innerHTML = `
@@ -17628,62 +17672,6 @@ if (e.running_mate_last_name === "Cuomo") {
   clear: both;
 }
 `;
-
-    question_insert("gore_question_2", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_5_cuomo",
-        "fields": {
-            "priority": 0,
-            "description": "It's been a few weeks since you selected Mario Cuomo as VP and we have a new development. They’ve found the man who did this. His name is Osama Bin Laden, he’s the leader of an Afghan based terror group. The Taliban is currently refusing to allow us entry, what do you want our next move to be? Chairman Shalikashvili of the Joint Chiefs is recommending we make it clear to all other countries that they are with us or against us, and neutrality will be seen as obstructing our effort. What’s your next move?\n",
-            "likelihood": 1
-        }
-    });
-question_insert("gore_question_5_cuomo", {
-        "model": "campaign_trail.question",
-        "pk": "gore_question_4",
-        "fields": {
-            "priority": 0,
-            "description": "A few weeks have passed by and the first American troops have finally arrived in Islamabad Pakistan. You find yourself in a bit of a predicament. Bin Laden’s exact location is unknown but we do know that he was in Afghanistan. Which part of Afghanistan should we investigate? \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_4", {
-       "model": "campaign_trail.question",
-        "pk": "gore_question_5",
-        "fields": {
-            "priority": 0,
-            "description": " It's time that I ask you an important question. What do you plan to do about the Taliban and Al Qaeda? Secretary of Defense Colin Powell and Former Secretary of Defense Dick Cheney are demanding that you escalate the war into a full-blown war against the Taliban. On the other hand, Senator John Kerry exclaimed in a speech in tune with most Americans' opinion, ‘We are at war with Bin Laden, not Afghanistan’.\n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_5", {
-      "model": "campaign_trail.question",
-        "pk": "gore_question_6",
-        "fields": {
-            "priority": 0,
-            "description": "Back home in America, you find yourself with a slightly more friendly Congress so I think it would be a great time to pass new domestic legislation. The most important issues at the moment are: the expansion of the internet, sky high crime rates, domestic terrorism, the Environment; popularized by you, and Trade. \n\n",
-            "likelihood": 1
-        }
-    });
-     question_insert("gore_question_6", {
-     "model": "campaign_trail.question",
-        "pk": "gore_question_7_senator_biden",
-        "fields": {
-            "priority": 0,
-            "description": "With this war comes a lot of problems and one of them is Immigration. Usually, as a Democrat you would be in favor of immigration but in this case it might help to not be pro immigration. You see, there is a growing fear among the American public of terrorists from Afghanistan coming into the country and killing them. For this reason, a new bill to impose stricter immigration laws is the new talk of the house. \n",
-            "likelihood": 1
-        }
-    });
-    question_insert("gore_question_7_senator_biden", {
-      "model": "campaign_trail.question",
-        "pk":  "gore_question_8_afghan_government",
-        "fields": {
-            "priority": 0,
-            "description": "The legitimate government of Afghanistan is on the verge of collapse. What will you do to ensure that Afghanistan’s Pro-American government doesn't fall apart and cause a full civil war? Many are calling for you to escalate this into a full-scale invasion of Afghanistan to stop the Taliban for this reason. \n",
-            "likelihood": 1
-        }
-    });
-    console.log(campaignTrail_temp.questions_json[28]);
 }
 
         $("#inner_window_4").remove();
