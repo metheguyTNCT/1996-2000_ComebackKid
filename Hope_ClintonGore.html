@@ -349,6 +349,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "healthcare_vote_win_kennedy",
+        "fields": {
+            "priority": 0,
+            "description": "You woke up this morning possibly the most stressed you've been in this desk, and that's saying something, as you've already had a year to think things over. As you walked to the Capitol Building, you can't help but feel that all your efforts to get healthcare passed have been in vain, yet at the same time, you've done everything you could. You can't help but think of that promise you made to Hillary to get healthcare passed when you had first ran for the office, she'll be right beside you for the vote, so that gives you a little more peace.  You can back out now, or you could decide to go with the reform. Pick your move, Bill.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "insert_yeltsin_friendly",
         "fields": {
             "priority": 2,
@@ -2240,6 +2249,22 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "gore_chelsea_question",
             "description": "“Chelsea? Can I come in?”. You can almost feel her pain from here. You hear a quiet, choked sob from the other side, and take it as permission to enter.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85018.5,
+        "fields": {
+            "question": "healthcare_vote_win_kennedy",
+            "description": "We got the votes for this to pass, I’m 100% sure of it! Do it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85019.5,
+        "fields": {
+            "question": "healthcare_vote_win_kennedy",
+            "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
         }
     }
 ]
@@ -10912,6 +10937,46 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": -0.07
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12637,
+        "fields": {
+            "answer": 85018.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12640,
+        "fields": {
+            "answer": 85019.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12641,
+        "fields": {
+            "answer": 85018.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12643,
+        "fields": {
+            "answer": 85018.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
     }
 ]
 
@@ -14940,6 +15005,24 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "You sit next to her, letting her cry into your shoulder for a while. Eventually, she stops crying and gives you a hug. “I’m scared.” Those two words echo through your skull all night, and you swear to yourself you will do anything you can to comfort her, just as you would hope Bill would do for your daughters.\n\n\n"
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12636,
+        "fields": {
+            "answer": 85018.5,
+            "candidate": 77,
+            "answer_feedback": "You reassure yourself that you’ll remember this day. As a stampede of press aims their cameras at you in the east wing of the White House, you finish up crossing your ts and dotting your is as you officially sign the American Health Care Reform Act of 1993, or simply Kennedycare.  The weight of the occasion quickly turns into silence as reporters exit the room. Ted was clearly living up to his monacure as his voice booms across the hallway. You bask in whatever limelight remains in that room and wonder: What's next?\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12639,
+        "fields": {
+            "answer": 85019.5,
+            "candidate": 77,
+            "answer_feedback": "As the midterms get closer, it becomes less likely the democratic majority will stick, meaning you missed your only shot at this."
+        }
     }
 ]
 
@@ -14991,6 +15074,8 @@ var SpecterNom = 0
 var LamarNom = 0
 var WarScore = 0
 var NatSecurity = 0
+var NatHeathScore = 0
+TriggerTed=false; 
 Dolewin=false;
 Buchananwin=false;
 Lamarwin=false;
@@ -15202,6 +15287,7 @@ cyoAdventure = function(a) {
         
     }
 	//Healthcare Vote inserter
+    if (e.question_number+1 == 12) {
 	let win_healthcare_vote_temp = {
 		"model": "campaign_trail.question",
 		"pk": "healthcare_vote_win",
@@ -15229,17 +15315,29 @@ cyoAdventure = function(a) {
 			"likelihood": 1
 		}
 	}
-	// All wins
-    if (ans == 75003.5 || ans == 55003.5) {
+    let win_healthcare_vote_kennedy_temp = {
+		"model": "campaign_trail.question",
+        "pk": "healthcare_vote_win_kennedy",
+        "fields": {
+            "priority": 0,
+            "description": "You woke up this morning possibly the most stressed you've been in this desk, and that's saying something, as you've already had a year to think things over. As you walked to the Capitol Building, you can't help but feel that all your efforts to get healthcare passed have been in vain, yet at the same time, you've done everything you could. You can't help but think of that promise you made to Hillary to get healthcare passed when you had first ran for the office, she'll be right beside you for the vote, so that gives you a little more peace.  You can back out now, or you could decide to go with the reform. Pick your move, Bill.",
+            "likelihood": 1
+        }
+	}
+    if (ans == 55003.5) {
         question_insert("insert_yeltsin_unfriendly",win_healthcare_vote_temp);
 		question_insert("insert_yeltsin_friendly",win_healthcare_vote_temp);
     }
-	// All fails
-    if (ans == 75001.5 || ans == 55002.5 || ans == 55001.5 || ans == 65001.5 || 
-		ans == 65002.5 || ans == 65003.5) {
-        question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
-		question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
-    }
+if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
+    console.log("Kennedy healthcare vote triggered.");
+    question_insert("insert_yeltsin_unfriendly", win_healthcare_vote_kennedy_temp);
+    question_insert("insert_yeltsin_friendly", win_healthcare_vote_kennedy_temp);
+} else {
+    question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
+    question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
+    console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
+}
+  
 	// All refuses
 	if (ans == 55004.5 || ans == 55005.5 || ans == 55006.5) {
         question_insert("insert_yeltsin_unfriendly",refuse_healthcare_vote_temp);
@@ -15250,9 +15348,14 @@ cyoAdventure = function(a) {
         KennedyFails += 1;
         question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
 		question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
+
+        // All fails
+    } if (ans == 75003.5 || ans == 55002.5 || ans == 55001.5 || ans == 65001.5 || 
+		ans == 65002.5 || ans == 65003.5) {
+        question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
+		question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
     }
-    
-    
+}
     if (Dolewin == false && Buchananwin == false && Lamarwin == false && Specterwin == false && Grammwin == false && Legacy >= 3 && (ans == 210001 || ans == 210002 || ans == 210003)) {
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Republican Party";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CD0B0A";
@@ -15446,11 +15549,13 @@ resetVariables(resetCondition);
    FPWin += 1;
    Legacy += 1;
    PublicSupport += 1;
+   NatHeathScore += 1;
    }
    //Economic Plan CYOA
    if (ans == 30002){
     PublicSupport += 1;
     DOMWin += 1;
+    NatHeathScore += 1;
     }
     if (ans == 30001){
     PublicSupport -= 1;
@@ -15473,6 +15578,7 @@ resetVariables(resetCondition);
      if (ans == 40002){
     PublicSupport += 1;
     DOMWin += 1;
+    NatHeathScore += 1;
     }
     //DADT CYOA
     if (ans == 60002){
@@ -15506,6 +15612,7 @@ resetVariables(resetCondition);
    }
       if (ans == 80003){
    FPWin += 1;
+   NatHeathScore += 1;
    }
       if (ans == 80004){
     PublicSupport -= 1;
@@ -15516,6 +15623,7 @@ resetVariables(resetCondition);
     PublicSupport += 1;
     LEGWin += 1; 
     NAFTA += 1; 
+    NatHeathScore += 1;
     }
   //Russia CYOA (START III SUCCEEDS)
      if (ans == 85001.5){
@@ -15557,6 +15665,13 @@ resetVariables(resetCondition);
     LEGWin += 1;
     Legacy += 1;
     GotHealthcare += 1;
+    }
+    if (ans == 85018.5){
+    PublicSupport += 5;
+    LEGWin += 1;
+    Legacy += 3;
+    GotHealthcare += 1;
+    ctsAchievement("The Work Goes On");
     }
     //Healthcare Vote CYOA (Fails)
     if (ans == 15001.5){
