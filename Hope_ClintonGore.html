@@ -15311,6 +15311,7 @@ Buchananwin=false;
 Lamarwin=false;
 Specterwin=false
 Grammwin=false
+Wilsonwin=false
 ClintonDead=false
 cyoAdventure = function(a) {
     update_EV_dict();
@@ -16320,7 +16321,29 @@ campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
+//Pete Wilson CYOA
+} else if (ConSocial == 5 && RepublicanRevolution == 1 && ans == 170001){
+    WilsonNom += 1;
+campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
+campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
+campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
+campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
 }
+if (ConSocial == 5 && RepublicanRevolution == 1 && ans == 170002){
+    WilsonNom += 1;
+    campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
+    campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
+    campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
+}
+if (ConSocial == 5 && RepublicanRevolution == 1 && ans == 170003){
+    WilsonNom += 1;
+    campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
+    campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
+    campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
+} 
+
  //Ross Perot and Ralph Nader CYOA
     if (ans == 170001){
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
