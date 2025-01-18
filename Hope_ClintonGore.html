@@ -16844,157 +16844,163 @@ if (ans == 170003){
 				}
             );
             console.log("Congrats! You ''won'' the 1994 midterms!")
-            } if (LibSocial === 2 && GOPSupermajority === 1) {
-    console.log("Executing block: LibSocial === 2 && GOPSupermajority === 1");
-                question_insert("question_17_yugoslavia", 
-                {
-                    "model": "campaign_trail.question",
-                "pk": "candidate_intro_buchanan",
-                "fields": {
-                    "priority": 3,
-                    "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A new figure stands before the Republican delegates, speaking of a brighter future. He criticizes you for shutting down Congress, even going so far as to call you ''America's First Dictator.'' ",
-                    "likelihood": 1
-                }
-                    }
-                
-                );
-question_insert("question_21_iraq_airstrikes", 
-        {
-                    "model": "campaign_trail.question",
-        "pk": "debate_buchanan",
-        "fields": {
-            "priority": -2,
-            "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-            "likelihood": 1
-            }
-        }
-        );
-                
-                } else if (LibSocial === 3 && GOPSupermajority === 1) {
-    console.log("Executing block: LibSocial === 3 && GOPSupermajority === 1");
-                question_insert("question_17_yugoslavia", 
-                {
-                    "model": "campaign_trail.question",
-                "pk": "candidate_intro_alexander",
-                "fields": {
-                    "priority": 3,
-                    "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A folksy politician stands before the Republican delegates, speaking of his vision for America. He criticizes you for governing as ''simply a liberal,'' presenting his own common-sense conservative worldview, all while weaving in anecdotes from his time as Tennessee's Governor. ",
-                    "likelihood": 1
-                }
-                    }
-                
-                );
-                    question_insert("question_21_iraq_airstrikes", 
-        {
-                    "model": "campaign_trail.question",
-        "pk": "debate_alexander",
-        "fields": {
-            "priority": -2,
-            "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-            "likelihood": 1
-            }
-        }
-                );
-                } else if (LibSocial == 2 && RepublicanRevolution == 1) {
-    console.log("Executing block: LibSocial === 2 && RepublicanRevolution == 1");
-                question_insert("question_17_yugoslavia", 
-                {
-                    "model": "campaign_trail.question",
-                "pk": "candidate_intro_specter",
-                "fields": {
-                    "priority": 3,
-                    "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. Senator Arlen Specter stands before the delegates. He talks about a better future, calling out your leadership for the lack of bipartisanship, accusing you of playing politics rather than governing. He even dares to say that your actions have turned Washington into ''a place where compromise is forgotten.'' ",
-                    "likelihood": 1
-                }
-                    }
-                
-                );
-question_insert("question_21_iraq_airstrikes", 
-        {
-                    "model": "campaign_trail.question",
-        "pk": "debate_specter",
-        "fields": {
-            "priority": -2,
-            "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-            "likelihood": 1
-            }
-        }
-        );
-                } else if (LibSocial == 2 && SlimGOPCongress == 1){
-                question_insert("question_17_yugoslavia", 
-                {
-                    "model": "campaign_trail.question",
-        "pk": "candidate_intro_gramm",
-        "fields": {
-            "priority": 0,
-            "description": "After a long, stressful day of hard work, You've been informed by Begala, that the Republican National Convention has officially reached it's climax. Senator Phil Gramm stands before the delegates. He talks about the inherent liberalism of your administration, and calls out your 'laxness' on crime. It ends with the bombastic Senator almost shouting, ''America doesn’t need more bureaucrats in Washington telling hardworking families how to live their lives!''",
-            "likelihood": 1
-        }
-                    }
-                
-                );
-                question_insert("question_21_iraq_airstrikes", 
-        {
-                    "model": "campaign_trail.question",
-        "pk": "debate_alexander",
-        "fields": {
-            "priority": -2,
-            "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-            "likelihood": 1
-            }
-        }
-        );
-    } else if (ConSocial == 5 && RepublicanRevolution == 1){
-        question_insert("question_17_yugoslavia", 
-        {
-           "model": "campaign_trail.question",
-        "pk": "candidate_intro_wilson",
-        "fields": {
-            "priority": 0,
-            "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
-            "likelihood": 1
-        }
-            }
-        
-        );
-        question_insert("question_21_iraq_airstrikes", 
-{
-            "model": "campaign_trail.question",
-"pk": "debate_alexander",
-"fields": {
-    "priority": -2,
-    "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-    "likelihood": 1
     }
-}
-);
-                } else {
-                DoleNom += 1;
+    }
+    if (e.question_number+1 == 23){
+    if (LibSocial === 2 && GOPSupermajority === 1) {
+        console.log("Executing block: LibSocial === 2 && GOPSupermajority === 1");
                     question_insert("question_17_yugoslavia", 
                     {
                         "model": "campaign_trail.question",
-                    "pk": "candidate_intro_dole",
+                    "pk": "candidate_intro_buchanan",
                     "fields": {
                         "priority": 3,
-                        "description": "The moment we've all been waiting for, the Grand Reveal at the Republican National Convention. You've been so focused on your duties as President that you haven’t kept track of the race. The last time you checked, Steve Forbes was leading by a wide margin. But now, you see a familiar face take the stage-one you didn’t expect to see. It’s the face of an old, tired, and grumpy man. ",
+                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A new figure stands before the Republican delegates, speaking of a brighter future. He criticizes you for shutting down Congress, even going so far as to call you ''America's First Dictator.'' ",
                         "likelihood": 1
                     }
                         }
                     
                     );
+    question_insert("question_21_iraq_airstrikes", 
+            {
+                        "model": "campaign_trail.question",
+            "pk": "debate_buchanan",
+            "fields": {
+                "priority": -2,
+                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                "likelihood": 1
+                }
+            }
+            );
+                    
+                    } else if (LibSocial === 3 && GOPSupermajority === 1) {
+        console.log("Executing block: LibSocial === 3 && GOPSupermajority === 1");
+                    question_insert("question_17_yugoslavia", 
+                    {
+                        "model": "campaign_trail.question",
+                    "pk": "candidate_intro_alexander",
+                    "fields": {
+                        "priority": 3,
+                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A folksy politician stands before the Republican delegates, speaking of his vision for America. He criticizes you for governing as ''simply a liberal,'' presenting his own common-sense conservative worldview, all while weaving in anecdotes from his time as Tennessee's Governor. ",
+                        "likelihood": 1
+                    }
+                        }
+                    
+                    );
+                        question_insert("question_21_iraq_airstrikes", 
+            {
+                        "model": "campaign_trail.question",
+            "pk": "debate_alexander",
+            "fields": {
+                "priority": -2,
+                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                "likelihood": 1
+                }
+            }
+                    );
+                    } else if (LibSocial == 2 && RepublicanRevolution == 1) {
+        console.log("Executing block: LibSocial === 2 && RepublicanRevolution == 1");
+                    question_insert("question_17_yugoslavia", 
+                    {
+                        "model": "campaign_trail.question",
+                    "pk": "candidate_intro_specter",
+                    "fields": {
+                        "priority": 3,
+                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. Senator Arlen Specter stands before the delegates. He talks about a better future, calling out your leadership for the lack of bipartisanship, accusing you of playing politics rather than governing. He even dares to say that your actions have turned Washington into ''a place where compromise is forgotten.'' ",
+                        "likelihood": 1
+                    }
+                        }
+                    
+                    );
+    question_insert("question_21_iraq_airstrikes", 
+            {
+                        "model": "campaign_trail.question",
+            "pk": "debate_specter",
+            "fields": {
+                "priority": -2,
+                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                "likelihood": 1
+                }
+            }
+            );
+                    } else if (LibSocial == 2 && SlimGOPCongress == 1){
+                    question_insert("question_17_yugoslavia", 
+                    {
+                        "model": "campaign_trail.question",
+            "pk": "candidate_intro_gramm",
+            "fields": {
+                "priority": 0,
+                "description": "After a long, stressful day of hard work, You've been informed by Begala, that the Republican National Convention has officially reached it's climax. Senator Phil Gramm stands before the delegates. He talks about the inherent liberalism of your administration, and calls out your 'laxness' on crime. It ends with the bombastic Senator almost shouting, ''America doesn’t need more bureaucrats in Washington telling hardworking families how to live their lives!''",
+                "likelihood": 1
+            }
+                        }
+                    
+                    );
                     question_insert("question_21_iraq_airstrikes", 
-        {
-                   "model": "campaign_trail.question",
-        "pk": "debate_dole",
-        "fields": {
-            "priority": 0,
-            "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
-            "likelihood": 1
+            {
+                        "model": "campaign_trail.question",
+            "pk": "debate_alexander",
+            "fields": {
+                "priority": -2,
+                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                "likelihood": 1
+                }
+            }
+            );
+        } else if (ConSocial == 5 && RepublicanRevolution == 1) {
+            console.log('ConSocial:', ConSocial);
+            console.log('RepublicanRevolution:', RepublicanRevolution);
+            question_insert("question_17_yugoslavia", 
+                {
+                    
+                     "model": "campaign_trail.question",
+            "pk": "candidate_intro_wilson",
+            "fields": {
+                "priority": 0,
+                "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+                "likelihood": 1
+            }
+                    }
+                
+                );
+                question_insert("question_21_iraq_airstrikes", 
+    {
+               "model": "campaign_trail.question",
+    "pk": "debate_dole",
+    "fields": {
+        "priority": 0,
+        "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+        "likelihood": 1
+    }
+    }
+    );
+                    } else {
+                    DoleNom += 1;
+                        question_insert("question_17_yugoslavia", 
+                        {
+                            "model": "campaign_trail.question",
+                        "pk": "candidate_intro_dole",
+                        "fields": {
+                            "priority": 3,
+                            "description": "The moment we've all been waiting for, the Grand Reveal at the Republican National Convention. You've been so focused on your duties as President that you haven’t kept track of the race. The last time you checked, Steve Forbes was leading by a wide margin. But now, you see a familiar face take the stage-one you didn’t expect to see. It’s the face of an old, tired, and grumpy man. ",
+                            "likelihood": 1
+                        }
+                            }
+                        
+                        );
+                        question_insert("question_21_iraq_airstrikes", 
+            {
+                       "model": "campaign_trail.question",
+            "pk": "debate_dole",
+            "fields": {
+                "priority": 0,
+                "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+                "likelihood": 1
+            }
+            }
+            );
+                
         }
-        }
-        );
-            
-	}
     }
     if (e.question_number+1 == 23){
     if (LibSocial === 2 && GOPSupermajority === 1) {
