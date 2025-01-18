@@ -467,6 +467,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "candidate_intro_wilson",
+        "fields": {
+            "priority": 0,
+            "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "candidate_intro_gramm",
         "fields": {
             "priority": 0,
@@ -1661,6 +1670,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "debate_alexander",
             "description": "I think I will get the extra sleep. I believe that the key to a great performance at the debate is to get loads of sleep so I don't look tired and unalert like Alexander. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35561.5,
+        "fields": {
+            "question": "candidate_intro_wilson",
+            "description": "The Right Wing has been alienated by Governor Wilson’s nomination and that is something we can exploit. We won’t outright change our policy platform but why don’t we shift a bit more to the Right regarding Social Issues?\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35562.5,
+        "fields": {
+            "question": "candidate_intro_wilson",
+            "description": "Wilson might pretend to be some kind of moderate, but don’t be fooled. Wilson is trying to promote the kind of Agenda we backed away from in 1992 and to abandon our campaign would only deteriorate our efforts to help change America for the better. \n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35563.5,
+        "fields": {
+            "question": "candidate_intro_wilson",
+            "description": "Why don’t we take out a chart to compare and contrast our candidacies? Governor Wilson may have experience leading the state of California but he not only cut welfare benefits but he also proposed a “Balanced Budget” that has left California in a worse state than it was before him. Make no mistake, if he can’t manage California, how could he manage America?\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35564.5,
+        "fields": {
+            "question": "candidate_intro_wilson",
+            "description": "What makes Governor Wilson so vulnerable? His immigration policies. Under his proposed Proposition 187, he would restrict “Illegal” immigrants the right to a Doctor, a good school or other public services. This isn’t about keeping America safe, this is about getting rid of the diaspora vote. "
         }
     },
     {
@@ -11063,6 +11104,126 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": 0.03
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 35561.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35561.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 35561.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12712,
+        "fields": {
+            "answer": 35562.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12713,
+        "fields": {
+            "answer": 35562.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 35562.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12720,
+        "fields": {
+            "answer": 35563.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12721,
+        "fields": {
+            "answer": 35563.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12722,
+        "fields": {
+            "answer": 35563.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12728,
+        "fields": {
+            "answer": 35564.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12729,
+        "fields": {
+            "answer": 35564.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 35564.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
     }
 ]
 
@@ -13366,6 +13527,149 @@ campaignTrail_temp.answer_score_state_json = [
             "issue_score": 0.001,
             "issue_importance": 2
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12707,
+        "fields": {
+            "answer": 35561.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12708,
+        "fields": {
+            "answer": 35561.5,
+            "state": 217,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12709,
+        "fields": {
+            "answer": 35561.5,
+            "state": 227,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12715,
+        "fields": {
+            "answer": 35562.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12716,
+        "fields": {
+            "answer": 35562.5,
+            "state": 217,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12717,
+        "fields": {
+            "answer": 35562.5,
+            "state": 227,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12723,
+        "fields": {
+            "answer": 35563.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12724,
+        "fields": {
+            "answer": 35563.5,
+            "state": 217,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12725,
+        "fields": {
+            "answer": 35563.5,
+            "state": 227,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12731,
+        "fields": {
+            "answer": 35564.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.08
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12732,
+        "fields": {
+            "answer": 35564.5,
+            "state": 217,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12733,
+        "fields": {
+            "answer": 35564.5,
+            "state": 227,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12734,
+        "fields": {
+            "answer": 35564.5,
+            "state": 211,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
     }
 ]
 
@@ -15251,6 +15555,42 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "You proceed to give a beautiful eulogy, barely able to hold back tears. You speak of Bill’s upbringing, his first meeting with Hillary, the time you spent together, and finally, you speak of how much he cared. When you step off the podium, you can’t hold back the tears any longer. Chelsea is crying herself, and she gives you a hug. “Thank you, Al. That was beautiful. I know my father appreciates it, wherever he is now.”. You feel a fresh wave of emotion, and swear you’ll live up to his, and your own father’s, legacy."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35561.5,
+            "candidate": 77,
+            "answer_feedback": "The Buchananites’ lack of enthusiasm for Wilson is only matched by their absolute hatred of you. Instead, the main benefactor is a resurgent Ross Perot, who assails both of you as “Tweedledee and Tweedledum.”\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12711,
+        "fields": {
+            "answer": 35562.5,
+            "candidate": 77,
+            "answer_feedback": "Wilson has gone back and forth on many issues and in his support of your Administration, this is a good way to win back support from Moderates who voted for you in 1992.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12719,
+        "fields": {
+            "answer": 35563.5,
+            "candidate": 77,
+            "answer_feedback": "Wilson fires back criticizing your leadership during the 1993 Budget Crisis and how you handled the Crime situation during your first years in Office, it was a smart move to criticize the Governor based on his leadership but don’t forget that the Republicans are out for you.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12727,
+        "fields": {
+            "answer": 35564.5,
+            "candidate": 77,
+            "answer_feedback": "The Buchananites’ lack of enthusiasm for Wilson is only matched by their absolute hatred of you. Instead, the main benefactor is a resurgent Ross Perot, who assails both of you as “Tweedledee and Tweedledum.”\n"
+        }
     }
 ]
 
@@ -16604,6 +16944,30 @@ question_insert("question_21_iraq_airstrikes",
             }
         }
         );
+    } else if (ConSocial == 5 && RepublicanRevolution == 1){
+        question_insert("question_17_yugoslavia", 
+        {
+           "model": "campaign_trail.question",
+        "pk": "candidate_intro_wilson",
+        "fields": {
+            "priority": 0,
+            "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+            "likelihood": 1
+        }
+            }
+        
+        );
+        question_insert("question_21_iraq_airstrikes", 
+{
+            "model": "campaign_trail.question",
+"pk": "debate_alexander",
+"fields": {
+    "priority": -2,
+    "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+    "likelihood": 1
+    }
+}
+);
                 } else {
                 DoleNom += 1;
                     question_insert("question_17_yugoslavia", 
@@ -16641,6 +17005,8 @@ question_insert("question_21_iraq_airstrikes",
                     ctsAchievement("Snarlin' Arlen");
                     } else if (LibSocial == 2 && SlimGOPCongress == 1){
                     ctsAchievement("Porno-Gramm");
+                } else if (ConSocial == 5 && RepublicanRevolution == 1){
+                    ctsAchievement("Great Incarcerator");
                     } else {
                     ctsAchievement("Soul Man");
                 
