@@ -15295,11 +15295,13 @@ var PublicSupport = 8
 var HillaryRelationship = 4
 var JonesSettled = 0
 var LibSocial = 0
+var ConSocial = 0
 var DoleNom = 0
 var GrammNom = 0
 var BuchananNom = 0
 var SpecterNom = 0
 var LamarNom = 0
+var WilsonNom = 0
 var WarScore = 0
 var NatSecurity = 0
 var NatHeathScore = 0
@@ -15441,7 +15443,7 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50004) {
-        
+    ConSocial += 1;
         question_insert("question_8_somalia", 
         {
             "model": "campaign_trail.question",
@@ -15810,6 +15812,7 @@ if (e.player_answers.includes(10002.1)) {
     PublicSupport += 1;
     DOMWin += 1;
     NatHeathScore += 1;
+    ConSocial += 1;
     }
     if (ans == 30001){
     PublicSupport -= 1;
@@ -15834,6 +15837,13 @@ if (e.player_answers.includes(10002.1)) {
     DOMWin += 1;
     NatHeathScore += 1;
     }
+    //Supreme Court CYOA
+    if (ans == 400013){
+    LibSocial += 1;
+    }
+    if (ans == 400014){
+    ConSocial += 1;
+        }
     //DADT CYOA
     if (ans == 60002){
     PublicSupport -= 1;
@@ -15843,16 +15853,15 @@ if (e.player_answers.includes(10002.1)) {
     if (ans == 70002){
     LibSocial += 1;
     }
+    if (ans == 70001){
+        ConSocial += 1;
+        }
     //If you veto welfare reform
     if (ans == 190002){
     LibSocial += 1;
     }
     //Reichs plan
     if (ans == 30001){
-    LibSocial += 1;
-    }
-    //Laurence Tribe appointed to the supreme court
-    if (ans == 400013){
     LibSocial += 1;
     }
     //Somalia CYOA
@@ -15974,6 +15983,7 @@ PublicSupport += 1;
     if (ans == 150002){
     PublicSupport -= 1;
     LEGWin += 1;
+    ConSocial += 1;
     }
     if (ans == 3357){
 PublicSupport -= 1;
