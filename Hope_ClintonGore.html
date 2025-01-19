@@ -470,7 +470,7 @@ campaignTrail_temp.questions_json = [
         "pk": "candidate_intro_wilson",
         "fields": {
             "priority": 0,
-            "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+            "description": "On the final day of the RNC in San Diego, Pete Wilson and Judd Gregg take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
             "likelihood": 1
         }
     },
@@ -16955,7 +16955,7 @@ if (ans == 170003){
             "pk": "candidate_intro_wilson",
             "fields": {
                 "priority": 0,
-                "description": "On the final day of the RNC in San Diego, Pete Wilson and Jim Bunning take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+                "description": "On the final day of the RNC in San Diego, Pete Wilson and Judd Gregg take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
                 "likelihood": 1
             }
                     }
@@ -17455,9 +17455,9 @@ function setupRelationsArea(parentDiv, toggleDiv) {
           page_list[0][7] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Low</span>`; // Style Legacy
         } else if (Legacy == 3) {
           page_list[0][7] = `<span style="font-weight: bold; color: teal; font-size: 24px;"> Decent</span>`; // Style Legacy
-      } else if (Legacy >= 4 && Legacy <= 5) {
+      } else if (Legacy >= 4 && Legacy >= 6) {
           page_list[0][7] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Great</span>`; // Style Legacy
-      } else if (Legacy === 6) {
+      } else if (Legacy === 7) {
           page_list[0][7] = `<span style="font-weight: bold; color: gold; font-size: 24px;"> Perfect</span>`; // Style Legacy
       } if (PublicSupport <= 0) {
           page_list[0][5] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Abysmal</span>`; // Style PublicSupport
@@ -17467,7 +17467,7 @@ function setupRelationsArea(parentDiv, toggleDiv) {
           page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> Medium</span>`; // Style PublicSupport
         } else if (PublicSupport >= 11 && PublicSupport <= 15) {
           page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> High</span>`; // Style PublicSupport
-        } else if (PublicSupport >= 16 && PublicSupport <= 20) {
+        } else if (PublicSupport >= 16 && PublicSupport >= 20) {
           page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> Very High</span>`; // Style PublicSupport
       } if (FPWin <= 0) {
           page_list[0][9] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Laughingstock</span>`; // Style ForeignReputation
