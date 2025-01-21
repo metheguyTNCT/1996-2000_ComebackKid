@@ -1219,7 +1219,7 @@ campaignTrail_temp.election_json = [
       }
       #mp3Player {
         margin-left: 0;  /* Ensure there's no extra margin on the left */
-        margin-right: 200px;
+        margin-right: 275px;
         align-items: center;
         /* No need for absolute positioning here */
         width: 300px;   /* Your preferred width */
@@ -1240,7 +1240,57 @@ campaignTrail_temp.election_json = [
     //use this function directly or put it in an event listener to start the music on the press of a certain button
     setupMusicPlayer();
     setupRandomizeButton();
-  
+    document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/narutomac7@0.1.11/style.css">'
+    document.head.innerHTML += `<link
+      rel="stylesheet"
+      href="https://jetsimon.com/public/crt.css"
+    >`
+    
+    document.body.classList.add("crt");
+    
+    document.head.innerHTML += `<link
+      rel="stylesheet"
+      href="https://unpkg.com/98.css"
+    >`
+    
+    document.head.innerHTML += `<style>
+    h3 {
+        font-size:1.17em!important;
+    }
+    
+    label {
+        font-size:1em!important;
+    }
+    </style>`
+    
+    document.head.innerHTML += `<link
+      rel="stylesheet"
+      href="https://unpkg.com/narutomac7@0.1.11/style.css"
+    >`
+    
+    document.head.innerHTML += `<style>
+    h3 {
+        font-size:1.17em!important;
+    }
+    
+    label {
+        font-size:1em!important;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif!important;
+    }
+    </style>`
+    let crtStyle = document.createElement('style');
+document.head.appendChild(crtStyle);
+let crtOn = true;
+var setCRTLines = (enabled) => {
+    crtStyle.innerText = enabled ? "" : ".crt::before {background: none;}";
+}
+footer = $(".footer")[0]
+var button = document.createElement("button") // <button onclick="changeBanner()" style="font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;">Change banner</button>
+button.style = `font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;`
+button.innerHTML = "Toggle CRT Lines"
+footer.insertBefore(button, footer.firstChild);
+button.addEventListener("click", () => {crtOn = !crtOn; setCRTLines(crtOn)});
+
   RecReading=true
   e.collect_results=true;
   campaignTrail_temp.achievements = {
