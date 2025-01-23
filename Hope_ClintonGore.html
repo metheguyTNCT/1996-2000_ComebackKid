@@ -15808,6 +15808,22 @@ campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/nj9ev85.png";
 campaignTrail_temp.candidate_last_name = "";
 campaignTrail_temp.running_mate_last_name = "";
+function adjustFeedbackBox(width, height) {
+    // The width and heights are percentages.
+    let styles = `
+    .overlay_window {
+        height: ${height}%;
+        width: ${width}%;
+        top: ${(100-height)/2}%;
+        left: ${(100-width)/2}%;
+    }
+    `
+    var styleSheet = document.createElement("style")
+    styleSheet.textContent = styles
+    document.head.appendChild(styleSheet)
+}
+
+adjustFeedbackBox(54,65);
 
 
 
