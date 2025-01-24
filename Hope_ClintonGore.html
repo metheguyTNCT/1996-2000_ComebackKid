@@ -188,15 +188,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_13_budget",
-        "fields": {
-            "priority": 3,
-            "description": "Tomorrow, the Senate will vote on the increasingly polarizing and ever unpopular Balanced Budget Amendment. You know you really can't win on this issue, as liberal Democrats in Congress are growing more and more negative towards you, and Republicans simply refuse to play ball with you. You've realized you're gonna have to make a sudden move here if you want to kill the amendment. What's your strategy here? ",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "question_14_oklahoma_bombing",
         "fields": {
             "priority": 3,
@@ -552,6 +543,24 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "You've always been in support of addressing the issue of climate change. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a solution, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "white_water_question",
+        "fields": {
+            "priority": 0,
+            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "white_water_question_hale",
+        "fields": {
+            "priority": 0,
+            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
             "likelihood": 1
         }
     },
@@ -1029,30 +1038,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_12_mexico_bailout",
             "description": "I will absolutely send a $45 billion package to the government of Mexico. We have to stabilize their economy and protect the future of NAFTA. This simply comes down to our relationship with our neighbors and the long-term prosperity of both our nations. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 130001,
-        "fields": {
-            "question": "question_13_budget",
-            "description": "You're right. I’ll reach out to big Democrats like Bennett Johnson, Joe Biden, Bob Graham, and Patty Murray. I’ll work to persuade them to stand firm and vote against the Amendment. We need to make sure we’re doing what’s best for the people. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 130002,
-        "fields": {
-            "question": "question_13_budget",
-            "description": "You're absolutely right. I’ll give the Maverick a call. He’s never been one to toe the party line, and maybe, just maybe, he can help bring some of the others along with him. It’s worth a shot. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 130003,
-        "fields": {
-            "question": "question_13_budget",
-            "description": "I’ll deliver a speech in front of the Capitol. I’ll call on Democrats from both Chambers to stand together against this bill. It could set back our progress on ending poverty for years to come. In fact, I’m proposing that next year’s budget includes a significant increase in welfare for our nation’s most disadvantaged. We’ve come too far to let this slip through our fingers."
         }
     },
     {
@@ -2260,6 +2245,70 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 85020.5,
+        "fields": {
+            "question": "white_water_question",
+            "description": "I'm not talkin' about this publically anymore. This was settled during the campaign, and we can't afford anymore publicity surrounding this. I'm putting Myers on this and telling her to deflect if anyone brings this up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85021.5,
+        "fields": {
+            "question": "white_water_question",
+            "description": "Do you know how bad it’ll be if we let this slide? Announce a press conference and dispel the Whitewater rumors once and for all. We'll disavow everybody. The McDougals, Hale, Hubbell, everybody!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85022.5,
+        "fields": {
+            "question": "white_water_question",
+            "description": "Y'know what? I'm sure we can settle something with Hale. I'll set up a meeting with him, and i'll convince him to have Starr drop the investigation."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85023.5,
+        "fields": {
+            "question": "white_water_question",
+            "description": "We're not lookin' in the right place. It's Foster, he needs to go. He's gonna tell on all of us! I knew it was a mistake letting him look into it. Inform Woolsey, get the job done."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85024.5,
+        "fields": {
+            "question": "white_water_question_hale",
+            "description": "I'm not talkin' about this publically anymore. This was settled during the campaign, and we can't afford anymore publicity surrounding this. I'm putting Myers on this and telling her to deflect if anyone brings this up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85025.5,
+        "fields": {
+            "question": "white_water_question_hale",
+            "description": "Do you know how bad it’ll be if we let this slide? Announce a press conference and dispel the Whitewater rumors once and for all. We'll disavow everybody. The McDougals, Hale, Hubbell, everybody!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85026.5,
+        "fields": {
+            "question": "white_water_question_hale",
+            "description": "Y'know what? I'm sure we can settle something with Hale. I'll set up a meeting with him, and i'll convince him to have Starr drop the investigation."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85027.5,
+        "fields": {
+            "question": "white_water_question_hale",
+            "description": "We're not lookin' in the right place. It's Foster, he needs to go. He's gonna tell on all of us! I knew it was a mistake letting him look into it. Inform Woolsey, get the job done."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 10001.1,
         "fields": {
             "question": "gore_question_1",
@@ -2284,7 +2333,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85020.5,
+        "pk": 10004.1,
         "fields": {
             "question": "gore_chelsea_question",
             "description": "“Chelsea? Can I come in?”. You can almost feel her pain from here. You hear a quiet, choked sob from the other side, and take it as permission to enter.\n"
@@ -2292,7 +2341,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85030.5,
+        "pk": 10005.1,
         "fields": {
             "question": "gore_question_3_invasion",
             "description": "Pakistan isn’t the most reliable, but they know damn well what will happen if they don’t help. We need to organize massive airstrikes on the infrastructure they do have, and the best way to do so is through Pakistan. We are at war in all but name, and we will act like it. The current prime minister is a good man, he’ll come through.\n"
@@ -2300,7 +2349,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85031.5,
+        "pk": 10006.1,
         "fields": {
             "question": "gore_question_3_invasion",
             "description": "Osama Bin Laden is nothing short of a monster, and he, along with anyone who aids him, are going to learn a valuable lesson. Nobody would dare stop us right now, so I want every bomber in the Air Force over Kabul tomorrow. I want this put in motion now. Do you understand me?\n"
@@ -2308,7 +2357,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85032.5,
+        "pk": 10007.1,
         "fields": {
             "question": "gore_question_3_invasion",
             "description": "We need immediate action. I want every man the CIA has on finding this monster, and soon. Get me Prime Minister Khalid, we need to cut off any avenue of escape he may have. Furthermore, Afghanistan is clearly complacent in this, and they will pay dearly. "
@@ -2316,7 +2365,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85040.5,
+        "pk": 10008.1,
         "fields": {
             "question": "gore_question_3_invasion_iran",
             "description": "Iran isn’t our friend, but they are the easiest way to Afghanistan. Get me on the phone with the ambassador, now. They can either give us their full cooperation, or the news tomorrow will not be about the devastating attack on our leader, but the one on theirs. "
@@ -2324,7 +2373,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85041.5,
+        "pk": 10009.1,
         "fields": {
             "question": "gore_question_3_invasion_iran",
             "description": "Pakistan isn’t the most reliable, but they know damn well what will happen if they don’t help. We need to organize massive airstrikes on the infrastructure they do have, and the best way to do so is through Pakistan. We are at war in all but name, and we will act like it. The current prime minister is a good man, he’ll come through.\n"
@@ -2332,7 +2381,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85042.5,
+        "pk": 10010.1,
         "fields": {
             "question": "gore_question_3_invasion_iran",
             "description": "Osama Bin Laden is nothing short of a monster, and he, along with anyone who aids him, are going to learn a valuable lesson. Nobody would dare stop us right now, so I want every bomber in the Air Force over Kabul tomorrow. I want this put in motion now. Do you understand me?\n"
@@ -2340,7 +2389,7 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85043.5,
+        "pk": 10011.1,
         "fields": {
             "question": "gore_question_3_invasion_iran",
             "description": "We need immediate action. I want every man the CIA has on finding this monster, and soon. Get me Prime Minister Khalid, we need to cut off any avenue of escape he may have. Furthermore, Afghanistan is clearly complacent in this, and they will pay dearly. "
@@ -8159,16 +8208,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1215,
-        "fields": {
-            "answer": 130001,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.012
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1225,
         "fields": {
             "answer": 170001,
@@ -8855,26 +8894,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12589,
-        "fields": {
-            "answer": 130002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12598,
-        "fields": {
-            "answer": 130003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.021
         }
     },
     {
@@ -10189,16 +10208,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1272241,
-        "fields": {
-            "answer": 10004.1,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1272251,
         "fields": {
             "answer": 30001.1,
@@ -11061,7 +11070,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12642,
         "fields": {
-            "answer": 85030.5,
+            "answer": 10005.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.04
@@ -11071,7 +11080,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12645,
         "fields": {
-            "answer": 85031.5,
+            "answer": 10006.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.03
@@ -11081,7 +11090,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12648,
         "fields": {
-            "answer": 85032.5,
+            "answer": 10007.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.03
@@ -11091,7 +11100,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12653,
         "fields": {
-            "answer": 85040.5,
+            "answer": 10008.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.025
@@ -11101,7 +11110,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12657,
         "fields": {
-            "answer": 85041.5,
+            "answer": 10009.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.04
@@ -11111,7 +11120,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12661,
         "fields": {
-            "answer": 85042.5,
+            "answer": 10010.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.03
@@ -11121,7 +11130,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12665,
         "fields": {
-            "answer": 85043.5,
+            "answer": 10011.1,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.03
@@ -11355,6 +11364,86 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 85020.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 85021.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12705,
+        "fields": {
+            "answer": 85022.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 85023.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 85024.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12717,
+        "fields": {
+            "answer": 85025.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12720,
+        "fields": {
+            "answer": 85026.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12721,
+        "fields": {
+            "answer": 85027.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.005
         }
     }
 ]
@@ -11628,16 +11717,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": -0.15,
             "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 1039,
-        "fields": {
-            "answer": 130001,
-            "issue": 28,
-            "issue_score": -0.3,
-            "issue_importance": 2
         }
     },
     {
@@ -12002,16 +12081,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 1272248,
-        "fields": {
-            "answer": 10004.1,
-            "issue": 31,
-            "issue_score": 0.3,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 1272252,
         "fields": {
             "answer": 30001.1,
@@ -12324,7 +12393,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12643,
         "fields": {
-            "answer": 85030.5,
+            "answer": 10005.1,
             "issue": 30,
             "issue_score": -0.01,
             "issue_importance": 3
@@ -12334,7 +12403,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12646,
         "fields": {
-            "answer": 85031.5,
+            "answer": 10006.1,
             "issue": 30,
             "issue_score": 0.02,
             "issue_importance": 4
@@ -12344,7 +12413,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12649,
         "fields": {
-            "answer": 85032.5,
+            "answer": 10007.1,
             "issue": 30,
             "issue_score": -0.02,
             "issue_importance": 3
@@ -12354,7 +12423,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12654,
         "fields": {
-            "answer": 85040.5,
+            "answer": 10008.1,
             "issue": 30,
             "issue_score": -0.2,
             "issue_importance": 8
@@ -12364,7 +12433,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12658,
         "fields": {
-            "answer": 85041.5,
+            "answer": 10009.1,
             "issue": 30,
             "issue_score": -0.01,
             "issue_importance": 3
@@ -12374,7 +12443,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12662,
         "fields": {
-            "answer": 85042.5,
+            "answer": 10010.1,
             "issue": 30,
             "issue_score": 0.02,
             "issue_importance": 4
@@ -12384,7 +12453,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "model": "campaign_trail.answer_score_issue",
         "pk": 12666,
         "fields": {
-            "answer": 85043.5,
+            "answer": 10011.1,
             "issue": 30,
             "issue_score": -0.02,
             "issue_importance": 3
@@ -13506,39 +13575,6 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 12590,
-        "fields": {
-            "answer": 130002,
-            "state": 183,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12591,
-        "fields": {
-            "answer": 130002,
-            "state": 215,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12592,
-        "fields": {
-            "answer": 130002,
-            "state": 202,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
         "pk": 12592,
         "fields": {
             "answer": 400014,
@@ -13561,94 +13597,6 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 12593,
-        "fields": {
-            "answer": 130002,
-            "state": 218,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12594,
-        "fields": {
-            "answer": 130002,
-            "state": 230,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12595,
-        "fields": {
-            "answer": 130002,
-            "state": 195,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12600,
-        "fields": {
-            "answer": 130003,
-            "state": 215,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12601,
-        "fields": {
-            "answer": 130003,
-            "state": 202,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12602,
-        "fields": {
-            "answer": 130003,
-            "state": 218,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12603,
-        "fields": {
-            "answer": 130003,
-            "state": 230,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12604,
-        "fields": {
-            "answer": 130003,
-            "state": 195,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
         "pk": 12607,
         "fields": {
             "answer": 140001,
@@ -13656,17 +13604,6 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 1272242,
-        "fields": {
-            "answer": 10004.1,
-            "state": 184,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": -0.2
         }
     },
     {
@@ -14170,24 +14107,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 160002,
             "candidate": 77,
             "answer_feedback": "''Hi, Mr. President. I'm Monica Lewinsky.'' Her voice was confident, almost daring. ''I know who you are,'' you replied with a grin, locking eyes for just a moment too long. Before you knew it, you were alone, together in a moment so reckless, so consuming, it felt too good to question, but the shadow, and guilt of it stayed."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 761,
-        "fields": {
-            "answer": 130001,
-            "candidate": 77,
-            "answer_feedback": "You assumed the party would fall in line, yet when the vote came around, only the most loyal Democrats voted against the amendment, rather in anti-climactic fashion. It’s only when you’re sitting at the table, preparing to sign the bill, that you realize the gravity of your mistake."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 762,
-        "fields": {
-            "answer": 130002,
-            "candidate": 77,
-            "answer_feedback": "After a whirlwind of convincing, McCain agreed to vote ''nay'' on the Balanced Budget amendment. Unfortunately, the bill narrowly passed, but several Democrats have now threatened to filibuster, their efforts, however were in vain."
         }
     },
     {
@@ -14840,15 +14759,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12597,
-        "fields": {
-            "answer": 130003,
-            "candidate": 77,
-            "answer_feedback": "What a sight to see! The cheers, the celebrations, the excitement. It was just wonderful. You can't help but smile, squeezing Hillary's hand as you hear that the bill failed."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12611,
         "fields": {
             "answer": 150003,
@@ -15134,15 +15044,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 45001.5,
             "candidate": 77,
             "answer_feedback": "''...Hillary, do you really want to take this on?” Bill asks, his eyes narrowing thoughtfully as he leans back in his chair. “Because if anyone can do it, it’s you. You’re the smartest, hardest-working person I know, and New York would be lucky to have you.''"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 1272240,
-        "fields": {
-            "answer": 10004.1,
-            "candidate": 77,
-            "answer_feedback": "Everything is fine until you start talking about climate change. Some accuse you of politicizing Clinton's death, but no one seems to care."
         }
     },
     {
@@ -15725,7 +15626,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12690,
         "fields": {
-            "answer": 85020.5,
+            "answer": 10004.1,
             "candidate": 77,
             "answer_feedback": "You sit next to her, letting her cry into your shoulder for a while. Eventually, she stops crying and gives you a hug. “I’m scared.” Those two words echo through your skull all night, and you swear to yourself you will do anything you can to comfort her, just as you would hope Bill would do for your daughters.\n\n\n"
         }
@@ -15752,7 +15653,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12641,
         "fields": {
-            "answer": 85030.5,
+            "answer": 10005.1,
             "candidate": 77,
             "answer_feedback": "After a call with Prime Minister Khalid, you have a pledge of full support. Congress unanimously grants you sweeping powers to declare war in all but name. By this time tomorrow, the invasion of Afghanistan will be in full force. The world is about to see how America responds to an attack.\n"
         }
@@ -15761,7 +15662,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12644,
         "fields": {
-            "answer": 85031.5,
+            "answer": 10006.1,
             "candidate": 77,
             "answer_feedback": "Congress unanimously approves, and it isn’t long before Afghanistan is all but destroyed. You quickly mobilize ground troops through Pakistan. The guerrilla fighting is brutal, and there are heavy American casualties. They don’t stand a chance regardless."
         }
@@ -15770,7 +15671,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12647,
         "fields": {
-            "answer": 85032.5,
+            "answer": 10007.1,
             "candidate": 77,
             "answer_feedback": "Intelligence agencies around the globe roar into action. It’s only a matter of time before they find him. You wish you could be the one to pull the trigger when they do.\n"
         }
@@ -15779,7 +15680,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12652,
         "fields": {
-            "answer": 85040.5,
+            "answer": 10008.1,
             "candidate": 77,
             "answer_feedback": "He thinks you’re bluffing. You call congress into a special session, and within 48 hours American bombs are dropping on Tehran. The fighting is brutal, and the destruction is immense. OPEC backs down, as you knew they would. They should have listened, and now they will be crushed under the weight of their sins."
         }
@@ -15788,7 +15689,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12656,
         "fields": {
-            "answer": 85041.5,
+            "answer": 10009.1,
             "candidate": 77,
             "answer_feedback": "After a call with Prime Minister Khalid, you have a pledge of full support. Congress unanimously grants you sweeping powers to declare war in all but name. By this time tomorrow, the invasion of Afghanistan will be in full force. The world is about to see how America responds to an attack.\n"
         }
@@ -15797,7 +15698,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12660,
         "fields": {
-            "answer": 85042.5,
+            "answer": 10010.1,
             "candidate": 77,
             "answer_feedback": "Congress unanimously approves, and it isn’t long before Afghanistan is all but destroyed. You quickly mobilize ground troops through Pakistan. The guerrilla fighting is brutal, and there are heavy American casualties. They don’t stand a chance regardless."
         }
@@ -15806,7 +15707,7 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12664,
         "fields": {
-            "answer": 85043.5,
+            "answer": 10011.1,
             "candidate": 77,
             "answer_feedback": "Intelligence agencies around the globe roar into action. It’s only a matter of time before they find him. You wish you could be the one to pull the trigger when they do.\n"
         }
@@ -15891,6 +15792,78 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "\"With the OKC and World Trade Center bombings? Please.\" That's all he needed to say to win. At home, you robotically rewatch the debate footage to analyize where you went wrong. The moment replays in your head once you get to it, and it doesn't leave for the next week."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12700,
+        "fields": {
+            "answer": 85020.5,
+            "candidate": 77,
+            "answer_feedback": "Hale tries to claim you pressured him into illegally giving Susan $300,000, yet the media doesn't buy much of it, and eventually lose interest. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 85021.5,
+            "candidate": 77,
+            "answer_feedback": "When you sit down and start speaking into the mic, it feels like 10+ years of anger just releases itself. You go from your usual composed self, to completely fired up in a matter of 5 minutes. The general reaction to the conference is one of confusion, shock, and humor. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12704,
+        "fields": {
+            "answer": 85022.5,
+            "candidate": 77,
+            "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary settlement, he disagrees to a settlement. The case continues, and you hang your head in fear."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12707,
+        "fields": {
+            "answer": 85023.5,
+            "candidate": 77,
+            "answer_feedback": "He agrees to the favor, and by a week or so later, Foster is no longer on this earth, breathing the same air as you. They rule it as suicide. You feel heartless when your speaking at his funeral, quoting that song you two loved."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12710,
+        "fields": {
+            "answer": 85024.5,
+            "candidate": 77,
+            "answer_feedback": "Hale tries to claim you pressured him into illegally giving Susan $300,000, yet the media doesn't buy much of it, and eventually lose interest. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12713,
+        "fields": {
+            "answer": 85025.5,
+            "candidate": 77,
+            "answer_feedback": "When you sit down and start speaking into the mic, it feels like 10+ years of anger just releases itself. You go from your usual composed self, to completely fired up in a matter of 5 minutes. The general reaction to the conference is one of confusion, shock, and humor. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12716,
+        "fields": {
+            "answer": 85026.5,
+            "candidate": 77,
+            "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary agreement, he agrees to a settlement of $250,000. You leave, breathing a sigh of relief and smiling."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12719,
+        "fields": {
+            "answer": 85027.5,
+            "candidate": 77,
+            "answer_feedback": "He agrees to the favor, and by a week or so later, Foster is no longer on this earth, breathing the same air as you. They rule it as suicide. You feel heartless when your speaking at his funeral, quoting that song you two loved."
+        }
     }
 ]
 
@@ -15948,7 +15921,7 @@ var RepublicanRevolution = 0
 var GOPSupermajority = 0
 var PublicSupport = 8
 var HillaryRelationship = 4
-var JonesSettled = 0
+var CasesSettled = 0
 var LibSocial = 0
 var ConSocial = 0
 var DoleNom = 0
@@ -16067,6 +16040,34 @@ cyoAdventure = function(a) {
         update_EV_dict();
         campaignTrail_temp.question_number = 49;
         console.log(Wilsonwin = true);
+    }
+    //Whitewater Inserter
+    if (e.question_number+1 == 3) {
+    if (e.player_answers.includes(20003) && e.player_answers.includes(30002)) {
+        question_insert("question_3_deficit", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "white_water_question_hale",
+        "fields": {
+            "priority": 0,
+            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
+            "likelihood": 1
+        }
+            }
+            );
+    } else {
+        question_insert("question_3_deficit", 
+            {
+               "model": "campaign_trail.question",
+        "pk": "white_water_question",
+        "fields": {
+            "priority": 0,
+            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
+            "likelihood": 1
+        }
+            }
+            );
+        }
     }
    //Healthcare Update Inserter
     if (ans === 50001) {
@@ -16189,7 +16190,7 @@ cyoAdventure = function(a) {
         
     }
 	//Healthcare Vote inserter
-    if (e.question_number+1 == 12) {
+    if (e.question_number+1 == 13) {
 	let win_healthcare_vote_temp = {
 		"model": "campaign_trail.question",
 		"pk": "healthcare_vote_win",
@@ -16496,6 +16497,20 @@ if (e.player_answers.includes(10002.1)) {
     LEGWin += 1;
     DOMWin -= 1;
     }
+    // WhiteWater CYOA
+    if (ans == 85021.5 || ans == 85025.5) {
+    PublicSupport -= 2;
+    }
+    if (ans == 85022.5) {
+    PublicSupport -= 1;
+    }
+    if (ans == 85023.5 || ans == 85027.5) {
+    PublicSupport += 1;
+    }
+    if (ans == 85026.5) {
+    CasesSettled += 1;
+    PublicSupport += 1;
+    }
     //Waco CYOA
     if (ans == 40001){
     PublicSupport -= 1;
@@ -16626,19 +16641,6 @@ if (e.player_answers.includes(10002.1)) {
     if (ans == 120002){
     FPWin += 1;
     }
-    //Balanced Budget Ammendment CYOA
-    if (ans == 130001){
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 130002){
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 130003){
-PublicSupport += 1;
-    LEGWin += 1;
-    }
     //OKC Bombing CYOA
     if (ans == 140001){
     PublicSupport += 1;
@@ -16675,7 +16677,7 @@ PublicSupport -= 1;
     }
     if (ans == 230003){
     PublicSupport -= 2;
-    JonesSettled += 1;
+    CasesSettled += 1;
     }
     //End of the Bosnian War CYOA
     if (ans == 170001){
@@ -17041,7 +17043,7 @@ if (ans == 170003){
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 }
-    if (e.question_number+1 == 15){
+    if (e.question_number+1 == 16){
      if (e.player_answers.includes(40002) && (110004) && GotHealthcare == 1){
         ctsAchievement("Counterrevolution");
             DemCongress -= 1;
