@@ -278,6 +278,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "insert_bill_wins",
+        "fields": {
+            "priority": -1,
+            "description": "The euphoria from your victory is still fresh in your mind. You’ve made history, becoming the first Democrat since FDR to win re-election. Despite some tensions within the coalition, your party is riding high, thanks to the fumes of your victory. Mr President! I know it’s only been a few weeks, but it’s time for the APEC Summit in Manila, Philippines. Will you go?\n",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "insert_question_hillary",
         "fields": {
             "priority": 2,
@@ -507,15 +516,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "You’re at Hartford, Connecticut. To your right is Governor Wilson. Wilson tries to match the energy you brought to the 1992 Elections and he seems to be doing very well. Of course, he is running a race against a Popular Incumbent in a sound Economy and Security situation. Of course, it’s best to try and direct the conversation your way if we want to get anywhere at all, what to say Bill?\n",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "insert_bill_lives",
-        "fields": {
-            "priority": -1,
-            "description": "The euphoria from your victory is still fresh in your mind. You’ve made history, becoming the first Democrat since FDR to win re-election. Despite some tensions within the coalition, your party is riding high, thanks to the fumes of your victory. Mr President! I know it’s only been a few weeks, but it’s time for the APEC Summit in Manila, Philippines. Will you go?\n",
             "likelihood": 1
         }
     },
@@ -1611,17 +1611,9 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 45001.5,
-        "fields": {
-            "question": "insert_bill_dies",
-            "description": "Yes. The election season’s still a little fresh in my head, and I just need a second to be somewhere else than Washington. Additionally, I can’t wait to talk to my fellow leaders.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 45002.5,
         "fields": {
-            "question": "insert_bill_lives",
+            "question": "insert_bill_wins",
             "description": "Yes. The election season’s still a little fresh in my head, and I just need a second to be somewhere else than Washington. Additionally, I can’t wait to talk to my fellow leaders.\n"
         }
     },
