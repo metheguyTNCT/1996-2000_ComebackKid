@@ -2269,14 +2269,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85023.5,
-        "fields": {
-            "question": "white_water_question",
-            "description": "We're not lookin' in the right place. It's Foster, he needs to go. He's gonna tell on all of us! I knew it was a mistake letting him look into it. Inform Woolsey, get the job done."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 85024.5,
         "fields": {
             "question": "white_water_question_hale",
@@ -2297,14 +2289,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "white_water_question_hale",
             "description": "Y'know what? I'm sure we can settle something with Hale. I'll set up a meeting with him, and i'll convince him to have Starr drop the investigation."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85027.5,
-        "fields": {
-            "question": "white_water_question_hale",
-            "description": "We're not lookin' in the right place. It's Foster, he needs to go. He's gonna tell on all of us! I knew it was a mistake letting him look into it. Inform Woolsey, get the job done."
         }
     },
     {
@@ -11398,16 +11382,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12711,
-        "fields": {
-            "answer": 85023.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12714,
         "fields": {
             "answer": 85024.5,
@@ -11436,16 +11410,6 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": -0.005
         }
     },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12721,
-        "fields": {
-            "answer": 85027.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.005
-        }
-    }
 ]
 
 campaignTrail_temp.answer_score_issue_json = [
@@ -15822,15 +15786,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12707,
-        "fields": {
-            "answer": 85023.5,
-            "candidate": 77,
-            "answer_feedback": "He agrees to the favor, and by a week or so later, Foster is no longer on this earth, breathing the same air as you. They rule it as suicide. You feel heartless when your speaking at his funeral, quoting that song you two loved."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12710,
         "fields": {
             "answer": 85024.5,
@@ -15854,15 +15809,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 85026.5,
             "candidate": 77,
             "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary agreement, he agrees to a settlement of $250,000. You leave, breathing a sigh of relief and smiling."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12719,
-        "fields": {
-            "answer": 85027.5,
-            "candidate": 77,
-            "answer_feedback": "He agrees to the favor, and by a week or so later, Foster is no longer on this earth, breathing the same air as you. They rule it as suicide. You feel heartless when your speaking at his funeral, quoting that song you two loved."
         }
     }
 ]
@@ -16503,9 +16449,6 @@ if (e.player_answers.includes(10002.1)) {
     }
     if (ans == 85022.5) {
     PublicSupport -= 1;
-    }
-    if (ans == 85023.5 || ans == 85027.5) {
-    PublicSupport += 1;
     }
     if (ans == 85026.5) {
     CasesSettled += 1;
