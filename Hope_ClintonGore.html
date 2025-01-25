@@ -15856,6 +15856,7 @@ Grammwin=false
 Wilsonwin=false
 ClintonDead=false
 cyoAdventure = function(a) {
+    initializeContent();
     update_EV_dict();
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     if (ans == 210001 && ev_dict["77"] < 269 && DoleNom == 1) {
@@ -17714,7 +17715,7 @@ const newButton = document.createElement('button');
 
 newButton.id = 'headquarter_button';
 newButton.style.marginLeft = '1.5em';
-newButton.innerHTML = 'Mac';
+newButton.innerHTML = 'Personal Computer';
 
 const newButtonSound = new Audio('https://audio.jukehost.co.uk/tO2cWkdv5h3DD6m6KQytiK5UEv1l9PaJ'); // Replace with actual sound path
 
@@ -18368,8 +18369,7 @@ function updateHeadlineWithImage(headlineHref, newHeadline, imageUrl) {
     }
 }
 function openHeadquarter() {
-    initializeContent(); // Ensure content is initialized
-
+    initializeContent();
     // Now check if cnnContent exists
 if (!cnnContent) {
     console.log("CNN content is still not initialized.");
