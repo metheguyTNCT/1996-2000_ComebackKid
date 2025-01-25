@@ -15978,8 +15978,6 @@ function initializeContent() {
             <h4>Strategy to Beat Them:</h4>
             <p id="candidateStrategy"></p>
         </div>
-        <div id="chances" style="width: 20%; text-align: center; padding: 10px; border-left: 2px solid #bfa800;">
-            <p id="candidateChances"></p>
         </div>
     </div>
 </div>
@@ -15997,7 +15995,6 @@ const candidates = [
         name: 'Bob Dole',
         image: 'https://i.imgur.com/jWgA3b5.png',
         description: 'Bob Dole is a former Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.',
-        chances: 'Chances of nomination: 75%',
         pros: 'Highly experienced in Washington, and well-respected among almost all factions of the Republicans. Will do well with the old and rural vote.',
         cons: '73 years old, would be oldest president inagurated. Almost 0 appeal to young voters. 3X loser, with loses in 1976, 1980, and 1988.',
         strategy: 'Emphasize your youth, tie Dole to the establishment and unpopular Republicans.'
@@ -16006,7 +16003,6 @@ const candidates = [
         name: 'Steve Forbes',
         image: 'https://i.imgur.com/Ialsyc4.png',
         description: 'Steve Forbes is a businessman and the current Chairman of the Forbes magazine. He is the Grandson of the Forbes founder, B.C. Forbes. As a candidate in 1996, he has been able to play the outsider card, promising great Tax and Economic reform. Due to his lack in political noteriety however, he is unlikely to be nominated.',
-        chances: 'Chances of nomination: 10%',
         pros: 'Somewhat celebrity status. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
         cons: 'Almost no other policies besides economy. Very limited political and governmental experience. Hated by the establishment, will lose out on their vote. Very toxic campaign, easy to exploit.',
         strategy: 'Question him on issues besides economy, Tie him to oligarchs, and emphasize your experience as President.'
@@ -16015,7 +16011,6 @@ const candidates = [
         name: 'Pat Buchanan',
         image: 'https://i.imgur.com/cmLyi4Q.png',
         description: 'Pat Buchanan is a political commentator and Radio personality. During the Reagan administration, Buchanan served as the Communications Director, yet was very critical of George Bush. Buchanan ran in 1992 on Populist rhetoric and extreme conservatism. Due to his lack of appeal, he is very unlikely to be nominated.',
-        chances: 'Chances of nomination: 2%',
         pros: 'Populist Rhetoric and Conservative beliefs that may hit the tone with Middle America. Will do solid in traditional Republican states',
         cons: 'Gaffes, some of his rhetoric bridges on Racism. Little appeal to anyone outside the South and Plain. Will preform horribly everywhere else.',
         strategy: 'Ignore him, focus on your own accomplishments. Attack him on his social positions, and come off as the unifier to his divider.'
@@ -16024,7 +16019,6 @@ const candidates = [
         name: 'Lamar Alexander',
         image: 'https://i.imgur.com/3vOYpbE.png',
         description: 'Lamar Alexander is a former Governor of Tennessee. During the Bush administration, Alexander served as Secretary of Education. He runs on heavy bipartisanship. Due to his lack of name recognition or charisma, he is very unlikely to be nominated.',
-        chances: 'Chances of nomination: 5%',
         pros: 'Fellow Southern Governer, might take away some of your support. Pragmatic solution maker. Background in education is sure to help with Rural voters.',
         cons: 'No Charisma or National recognition',
         strategy: 'Play down to his demographic by speaking more vocally on education, as you could easily sweep them up.'
@@ -16033,7 +16027,6 @@ const candidates = [
         name: 'Phil Gramm',
         image: 'https://i.imgur.com/cnK743z.png',
         description: 'Phil Grammcracker is the current U.S. Senator of Texas, serving since 1985. As a staunch supporter of budget reduction, Gramm has served on the Senate Budget Committee since 1989, and has pushed for bills aiming to reduce the deficit. Due to his lack of appeal with other groups, he is unlikely to be nominated.',
-        chances: 'Chances of nomination: 4%',
         pros: 'Strong track record on economic reforms and budget reform. Will do well with fiscal conservatives and buisnessmen.',
         cons: 'Does not have much appeal outside of fiscal conservatives.',
         strategy: 'Challenge him on other issues outside the economy. Depending on how the economy is, you can either play defense, or ignore the issue.'
@@ -16042,7 +16035,6 @@ const candidates = [
         name: 'Arlen Specter',
         image: 'https://i.imgur.com/2lIVM8J.png',
         description: 'Arlen Specter is the U.S. Senator of Pennsylvania. A known centrist, Specter has constantly had moderate positions on issues like Abortion, Gay rights, and Immigration. He was also formerly a Democrat, which certainly hurts his standing with the Republican base. Due to his lack of name recognition, he is unlikely to be nominated.',
-        chances: 'Chances of nomination: 2%',
         pros: 'Appeals to centrists and moderates due to his social positions. Might take votes away from you in the Midwest as well.',
         cons: 'Many Republicans view him with uncertainty. Party may not be ready to back him.',
         strategy: 'Emphasize a more moderate image, though reclaiming the Midwest could prove dificult with NAFTA.'
@@ -16051,19 +16043,11 @@ const candidates = [
         name: 'Pete Wilson',
         image: 'https://i.imgur.com/BC3FrnZ.png',
         description: 'Pete Wilson is a former U.S. Senator and the current Governor of California. Most known for his controversial Immigration stances and his support of Proposition 187, Wilson inhereted the worst Californian economy since the Great Depression. While Wilson has certainly built a national image of his own, his own state is growing from his ideology. He is unlikely to be nominated.',
-        chances: 'Chances of nomination: 2%',
         pros: 'May make the West Cost competitive, has a decent national image.',
         cons: 'Policies on Immigration and Proposition 187 may hinder his support.',
         strategy: 'Present a balanced approach to immigration and focus on economic successes.'
     }
 ];
-    
-        // Sort candidates by chances of nomination (highest to lowest)
-        candidates.sort((a, b) => {
-            const aChance = parseInt(a.chances.match(/\d+/)[0]);
-            const bChance = parseInt(b.chances.match(/\d+/)[0]);
-            return bChance - aChance;
-        });
     
         // Populate the candidate tabs dynamically
         const tabsContainer = hqContent.querySelector('#tabs');
@@ -16197,7 +16181,6 @@ function toggleSection(sectionId) {
 function loadCandidateContent(candidate) {
     document.getElementById('candidateImage').src = candidate.image;
     document.getElementById('candidateDescription').textContent = candidate.description;
-    document.getElementById('candidateChances').textContent = candidate.chances;
 
     // Populate Pros
     document.getElementById('candidatePros').textContent = candidate.pros || '[Pros not available]';
