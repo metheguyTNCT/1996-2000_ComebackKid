@@ -278,19 +278,19 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "clinton_2nd_term_question_2",
+        "pk": "insert_bill_wins",
         "fields": {
-            "priority": 0,
-            "description": "Despite your victory just a few months ago, you’ve barely made a dent in Gingrich’s Coalition, keeping both the Senate and House still under his rule. You’ve arrived at the House chamber to give your first State of the Union address to the barely changed partisan Congress that has fought you tooth and nail over anything and anywhere they can during your first term. What could you possibly hope to say to bring them across the aisle?\n",
+            "priority": -1,
+            "description": "The euphoria from your victory is still fresh in your mind. You’ve made history, becoming the first Democrat since FDR to win re-election. Despite some tensions within the coalition, your party is riding high, thanks to the fumes of your victory. Mr President! I know it’s only been a few weeks, but it’s time for the APEC Summit in Manila, Philippines. Will you go?\n",
             "likelihood": 1
         }
     },
     {
         "model": "campaign_trail.question",
-        "pk": "insert_bill_wins",
+        "pk": "clinton_2nd_term_question_2",
         "fields": {
-            "priority": -1,
-            "description": "The euphoria from your victory is still fresh in your mind. You’ve made history, becoming the first Democrat since FDR to win re-election. Despite some tensions within the coalition, your party is riding high, thanks to the fumes of your victory. Mr President! I know it’s only been a few weeks, but it’s time for the APEC Summit in Manila, Philippines. Will you go?\n",
+            "priority": 0,
+            "description": "Despite your victory just a few months ago, you’ve barely made a dent in Gingrich’s Coalition, keeping both the Senate and House still under his rule. You’ve arrived at the House chamber to give your first State of the Union address to the barely changed partisan Congress that has fought you tooth and nail over anything and anywhere they can during your first term. What could you possibly hope to say to bring them across the aisle?\n",
             "likelihood": 1
         }
     },
@@ -14648,6 +14648,9 @@ PublicSupport -= 1;
     if (ans == 230003){
     PublicSupport -= 2;
     CasesSettled += 1;
+    }
+    if (CasesSettled == 2) {
+    ctsAchievement("Great Negotiator");
     }
     //End of the Bosnian War CYOA
     if (ans == 170001){
