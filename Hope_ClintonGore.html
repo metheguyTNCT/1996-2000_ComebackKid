@@ -281,7 +281,7 @@ campaignTrail_temp.questions_json = [
         "pk": "insert_bill_wins",
         "fields": {
             "priority": -1,
-            "description": "The euphoria from your victory is still fresh in your mind. You’ve made history, becoming the first Democrat since FDR to win re-election. Despite some tensions within the coalition, your party is riding high, thanks to the fumes of your victory. Mr President! I know it’s only been a few weeks, but it’s time for the APEC Summit in Manila, Philippines. Will you go?\n",
+            "description": "<b><b>Four. More. Years.<b><b><p></p>Words never awarded to a Democrat since FDR.\n",
             "likelihood": 1
         }
     },
@@ -442,8 +442,8 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": "candidate_intro_dole",
         "fields": {
-            "priority": 3,
-            "description": "The moment we've all been waiting for, the Grand Reveal at the Republican National Convention. You've been so focused on your duties as President that you haven’t kept track of the race. The last time you checked, Steve Forbes was leading by a wide margin. But now, you see a familiar face take the stage-one you didn’t expect to see. It’s the face of an old, tired, and grumpy man. ",
+            "priority": 0,
+            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in the government, his honorable service in the Second World War, and a promise to reduce income tax by 15% across-the-board. “Let me be the bridge to an America than only the unknowing call myth. Let me be the bridge to a time of tranquility, faith and confidence in action.” \nYou feel… guilty of what you must do. He’s out of his weight class. Out of time. But politics is politics. You have to beat him either way, and with the momentum rising in your favor… How will you channel it?\n",
             "likelihood": 1
         }
     },
@@ -1398,7 +1398,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35007.5,
         "fields": {
             "question": "candidate_intro_dole",
-            "description": "It's time to roll out the ad campaign. Let's go after our opponent for being a relic of the past. We’ll rely on our appeal with the younger crowd and paint him as simply, a disconnected, out-of-touch old Republican."
+            "description": "Although I have great respect for him and his service to our country, Bob Dole is a relic of an bygone era, which we, as a nation, need to move on from. We do not need to build a bridge to the past, we need to build a bridge to the future.\n"
         }
     },
     {
@@ -1406,7 +1406,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35008.5,
         "fields": {
             "question": "candidate_intro_dole",
-            "description": "Where do I even start with Bob Dole? The man’s a relic, a shadow of what the party needs. Frankly, the Republicans should be ashamed of themselves for picking him. I think our campaign would be well served if we talk more about our accomplishments, and less about the GOP spin-machine."
+            "description": "The ad opens to ominous drums of war follow bright red text of Newt Gingrich and Bob Dole stating they’re against family leave, higher wages  and vaccines for children. Then bright flashing white and blue text of Clinton Gore pop out, with a quick paced drums to boot. Listing your achievements, higher wages, clear air and water 10,000,000 new jobs. The ad ends with a question to the viewer; When it comes to America's future...which drummer do YOU want to march to?"
         }
     },
     {
@@ -1414,7 +1414,15 @@ campaignTrail_temp.answers_json = [
         "pk": 35009.5,
         "fields": {
             "question": "candidate_intro_dole",
-            "description": "Alright, let’s take the high road here. No mudslinging or no low blows. We’ll focus on the real issues that matter to the American people. I’ll treat my opponent with the respect and dignity he deserves, even if we don’t agree on everything. Look at the polls, anyway, we don't need to go crazy.  "
+            "description": "Al represents the future of the Democratic Party and we should exploit that. Now I know I can't micromanage and plan everything about what we wanna present, but why don’t we get him some spotlight during the Campaign Trail and at the Convention?  "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35009.51,
+        "fields": {
+            "question": "candidate_intro_dole",
+            "description": "Bob Dole? Him? I can’t say I’m worried. I was expecting tougher competition from Steve Forbes or Newt, but Dole? Not worth losing sleep over. We won't even mention him, just talk about our policies."
         }
     },
     {
@@ -9075,86 +9083,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12699,
-        "fields": {
-            "answer": 35007.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12700,
-        "fields": {
-            "answer": 35007.5,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.09
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12701,
-        "fields": {
-            "answer": 35007.5,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12704,
-        "fields": {
-            "answer": 35008.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.017
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12705,
-        "fields": {
-            "answer": 35008.5,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.09
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12706,
-        "fields": {
-            "answer": 35008.5,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.026
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12709,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12709,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.0051
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12714,
         "fields": {
             "answer": 35003.5,
@@ -10511,6 +10439,116 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 35007.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35007.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 35007.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12717,
+        "fields": {
+            "answer": 35008.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12718,
+        "fields": {
+            "answer": 35008.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12719,
+        "fields": {
+            "answer": 35008.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12728,
+        "fields": {
+            "answer": 35009.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 35009.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12750,
+        "fields": {
+            "answer": 35009.51,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12751,
+        "fields": {
+            "answer": 35009.51,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12752,
+        "fields": {
+            "answer": 35009.51,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.01
         }
     }
 ]
@@ -12429,6 +12467,270 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 78,
             "state_multiplier": -0.03
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12709,
+        "fields": {
+            "answer": 35007.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35007.5,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12711,
+        "fields": {
+            "answer": 35007.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12712,
+        "fields": {
+            "answer": 35007.5,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12713,
+        "fields": {
+            "answer": 35007.5,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12714,
+        "fields": {
+            "answer": 35007.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12720,
+        "fields": {
+            "answer": 35008.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12721,
+        "fields": {
+            "answer": 35008.5,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12722,
+        "fields": {
+            "answer": 35008.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12723,
+        "fields": {
+            "answer": 35008.5,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12724,
+        "fields": {
+            "answer": 35008.5,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12725,
+        "fields": {
+            "answer": 35008.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12731,
+        "fields": {
+            "answer": 35009.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12732,
+        "fields": {
+            "answer": 35009.5,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12733,
+        "fields": {
+            "answer": 35009.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12734,
+        "fields": {
+            "answer": 35009.5,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12735,
+        "fields": {
+            "answer": 35009.5,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12736,
+        "fields": {
+            "answer": 35009.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12753,
+        "fields": {
+            "answer": 35009.51,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12754,
+        "fields": {
+            "answer": 35009.51,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12755,
+        "fields": {
+            "answer": 35009.51,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12756,
+        "fields": {
+            "answer": 35009.51,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12757,
+        "fields": {
+            "answer": 35009.51,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12758,
+        "fields": {
+            "answer": 35009.51,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
     }
 ]
 
@@ -13344,33 +13646,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12698,
-        "fields": {
-            "answer": 35007.5,
-            "candidate": 77,
-            "answer_feedback": "The only thing you and Gingrich agree on is your hatred for Bob Dole. Be prepared for a fragmented Republican Party this fall. \n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12703,
-        "fields": {
-            "answer": 35008.5,
-            "candidate": 77,
-            "answer_feedback": "Quite a harsh comment on your opponent. You will definitely be getting some negative attention for this ‘gaffe’\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12708,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "answer_feedback": "This is a solid answer that satisfies moderates and those who don't vote based on character. The growing liberal coalition is furious, but frankly, you don't care, what are they gonna do, vote for Old Man Dole? Please."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12713,
         "fields": {
             "answer": 35004.5,
@@ -14010,6 +14285,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary agreement, he agrees to a settlement of $250,000. You leave, breathing a sigh of relief and smiling."
         }
     },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35007.5,
+            "candidate": 77,
+            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12716,
+        "fields": {
+            "answer": 35008.5,
+            "candidate": 77,
+            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12727,
+        "fields": {
+            "answer": 35009.5,
+            "candidate": 77,
+            "answer_feedback": "Setting up your successor’s image for 2000? Good idea Slick. You two storm the presses on successes and personal struggles. But sadly, most of it is forgotten when Al Gore does his own version of the macarena center stage at the DNC. Luckily it didn’t seem hamper your momentum much."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12749,
+        "fields": {
+            "answer": 35009.51,
+            "candidate": 77,
+            "answer_feedback": "Talk about disrespectful. This cocky attitude only emboldens republicans resolve to pull off an upset of a lifetime. Not only that, but you’re also damping your own momentum with this strategy. The term ‘Dolementum’ spreads like wildfire across political landscape. Your advisors can’t convince you quick enough before polls show dole closing in on you, fast."
+        }
+    }
 ]
 
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
@@ -14275,7 +14586,9 @@ cyoAdventure = function(a) {
                 console.error("cnnContent not initialized yet.");
                 return;
             }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline1", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline2", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  // Replaces the first headline (Gulf War) with new text
         }, 1000);
     
         question_insert("question_9_nafta", {
@@ -14295,7 +14608,9 @@ cyoAdventure = function(a) {
                 console.error("cnnContent not initialized yet.");
                 return;
             }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline1", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline2", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  // Replaces the first headline (Gulf War) with new text
         }, 1000);
     
         question_insert("question_9_nafta", {
@@ -14315,7 +14630,9 @@ cyoAdventure = function(a) {
                 console.error("cnnContent not initialized yet.");
                 return;
             }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline1", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline2", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  // Replaces the first headline (Gulf War) with new text
         }, 1000);
     
         question_insert("question_9_nafta", {
@@ -14335,7 +14652,9 @@ cyoAdventure = function(a) {
                 console.error("cnnContent not initialized yet.");
                 return;
             }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline1", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  // Replaces the first headline (Gulf War) with new text
+            updateHeadlineWithImage("#headline2", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  // Replaces the first headline (Gulf War) with new text
         }, 1000);
     
         question_insert("question_9_nafta", {
@@ -15189,13 +15508,14 @@ if (e.question_number+1 == 16){
                     DoleNom += 1;
                         question_insert("question_17_yugoslavia", 
                         {
-                            "model": "campaign_trail.question",
-                        "pk": "candidate_intro_dole",
-                        "fields": {
-                            "priority": 3,
-                            "description": "The moment we've all been waiting for, the Grand Reveal at the Republican National Convention. You've been so focused on your duties as President that you haven’t kept track of the race. The last time you checked, Steve Forbes was leading by a wide margin. But now, you see a familiar face take the stage-one you didn’t expect to see. It’s the face of an old, tired, and grumpy man. ",
-                            "likelihood": 1
-                        }
+                           
+        "model": "campaign_trail.question",
+        "pk": "candidate_intro_dole",
+        "fields": {
+            "priority": 0,
+            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in the government, his honorable service in the Second World War, and a promise to reduce income tax by 15% across-the-board. “Let me be the bridge to an America than only the unknowing call myth. Let me be the bridge to a time of tranquility, faith and confidence in action.” \nYou feel… guilty of what you must do. He’s out of his weight class. Out of time. But politics is politics. You have to beat him either way, and with the momentum rising in your favor… How will you channel it?\n",
+            "likelihood": 1
+        }
                             }
                         
                         );
@@ -16196,14 +16516,14 @@ function loadCandidateContent(candidate) {
     } else {
         console.log("hqContent already exists. Skipping creation.");
     }        
-    // Initialize CNN 1990s content
+    // Initialize 'cnn.com' content
 if (!cnnContent) {
     console.log("Creating cnnContent for the first time...");
     
     cnnContent = document.createElement('div');
     cnnContent.id = 'cnn1990sContent';
     cnnContent.innerHTML = `
-    <h1 style="font-family: Arial, sans-serif; color: #333;">CNN - 1990s Edition</h1>
+    <h1 style="font-family: Arial, sans-serif; color: #333;">CNN</h1>
 <div style="background-color: #ccc; padding: 1em; margin-bottom: 20px; border-radius: 8px;">
     <h2 style="font-size: 24px; margin-bottom: 5px;">Top Headlines</h2>
     <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -16301,7 +16621,7 @@ if (!cnnContent) {
     console.log("CNN content is available.");
 }
 
-alert("Headquarters Activated!");
+alert("Netscape loading...");
 if (questions) questions.style.display = 'none';
 
 const hqButton = document.getElementById('headquarter_button');
@@ -16366,7 +16686,7 @@ tabBar.style.color = '#fff';
 tabBar.style.padding = '0.5em';
 
 let tab1 = document.createElement('a');
-tab1.textContent = 'Headquarters';
+tab1.textContent = 'WhiteHouse.gov.';
 tab1.href = '#headquarters';
 tab1.style.flexGrow = '1';
 tab1.style.textAlign = 'center';
@@ -16374,11 +16694,11 @@ tab1.style.cursor = 'pointer';
 tab1.style.padding = '0.5em';
 tab1.style.textDecoration = 'none';
 tab1.style.color = '#fff';
-tab1.onclick = () => switchTab('headquarters');
+tab1.onclick = () => switchTab('WhiteHouse.gov.');
 
 let tab2 = document.createElement('a');
-tab2.textContent = 'CNN 1990s';
-tab2.href = '#cnn1990s';
+tab2.textContent = 'cnn.com';
+tab2.href = '#cnn';
 tab2.style.flexGrow = '1';
 tab2.style.textAlign = 'center';
 tab2.style.cursor = 'pointer';
@@ -16408,7 +16728,7 @@ document.body.appendChild(hqDiv);
 
 // Switch between tabs
 function switchTab(tab) {
-  if (tab === 'headquarters') {
+  if (tab === 'WhiteHouse.gov.') {
     hqContent.style.display = 'block';
     cnnContent.style.display = 'none';
     tab1.style.backgroundColor = '#0073e6'; // Active color
@@ -16425,15 +16745,15 @@ function switchTab(tab) {
 window.addEventListener('hashchange', () => {
   const hash = window.location.hash;
   if (hash === '#headquarters') {
-    switchTab('headquarters');
-  } else if (hash === '#cnn1990s') {
+    switchTab('WhiteHouse.gov.');
+  } else if (hash === '#cnn') {
     switchTab('cnn1990s');
   }
 });
 
 // Default tab switch based on URL
 if (window.location.hash === '#headquarters') {
-  switchTab('headquarters');
+  switchTab('WhiteHouse.gov.');
 } else {
   switchTab('cnn1990s');
 }
