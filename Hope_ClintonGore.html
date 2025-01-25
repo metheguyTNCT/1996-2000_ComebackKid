@@ -1208,14 +1208,6 @@ campaignTrail_temp.answers_json = [
             "description": "I want to give a speech at our campaign headquarters, in Little Rock. We’ve made good progress since 1992, but the journey is far, far from over. Together, we can keep pushing forward towards a stronger, fairer America for all who call this great nation home. \n"
         }
     },
-     {
-        "model": "campaign_trail.answer",
-        "pk": 220001,
-        "fields": {
-            "question": "clinton_2nd_term_question_2",
-            "description": "We must protect our environment in every community. I urge you to pass my proposal to make big polluters live by a simple rule: If you pollute our environment, you should pay to clean it up."
-        }
-    },
     {
         "model": "campaign_trail.answer",
         "pk": 220002,
@@ -10520,16 +10512,6 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": -0.03
         }
     },
-        {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1272221,
-        "fields": {
-            "answer": 220001,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01
-        }
-    },
     {
         "model": "campaign_trail.answer_score_global",
         "pk": 1272223,
@@ -11409,7 +11391,7 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": -0.005
         }
-    },
+    }
 ]
 
 campaignTrail_temp.answer_score_issue_json = [
@@ -15343,15 +15325,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer_feedback": "The Islamic State of Afghanistan is still the Islamic State of Afghanistan, so it hardly makes sense to continue supporting it. The only problem is that in retaliation to your actions, the official government of Afghanistan has blocked American military access to US troops. \n"
         }
     },
-     {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 1272219,
-        "fields": {
-            "answer": 220001,
-            "candidate": 77,
-            "answer_feedback": "You would think Newt Gingrich is the last person that would agree with you when it comes to solving climate change, but you should know better than to judge a book by it’s cover. He takes your plan with great interest, and hopes to work out a strong green bill to your desk ASAP, bringing you a great feeling of whiplash for the rest of the week.\n\n\n"
-        }
-    },
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 1272222,
@@ -15810,7 +15783,7 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary agreement, he agrees to a settlement of $250,000. You leave, breathing a sigh of relief and smiling."
         }
-    }
+    },
 ]
 
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
@@ -15850,26 +15823,22 @@ campaignTrail_temp.jet_data = [{
 ]
 campaignTrail_temp.cyoa = true
 var FPWin = 0
-var DOMWin = 0
 var LEGWin = 0
+var Ideology = 0
+var PublicSupport = 8
+var Legacy = 0
 var RichardsBeatW = 0
 var CuomoBeatPataki = 0
 var KennedyFails = 0
 var RomneyWin = 0
 var NorthWin = 0
-var Legacy = 0
 var GotHealthcare = 0
-var BangedMonica = 0
 var NAFTA = 0
 var DemCongress = 1
 var SlimGOPCongress = 0
 var RepublicanRevolution = 0
 var GOPSupermajority = 0
-var PublicSupport = 8
-var HillaryRelationship = 4
 var CasesSettled = 0
-var LibSocial = 0
-var ConSocial = 0
 var DoleNom = 0
 var GrammNom = 0
 var BuchananNom = 0
@@ -15879,7 +15848,6 @@ var WilsonNom = 0
 var WarScore = 0
 var NatSecurity = 0
 var NatHeathScore = 0
-TriggerTed=false; 
 Dolewin=false;
 Buchananwin=false;
 Lamarwin=false;
@@ -15989,32 +15957,32 @@ cyoAdventure = function(a) {
     }
     //Whitewater Inserter
     if (e.question_number+1 == 3) {
-    if (e.player_answers.includes(20003) && e.player_answers.includes(30002)) {
-        question_insert("question_3_deficit", 
-            {
-                "model": "campaign_trail.question",
-        "pk": "white_water_question_hale",
-        "fields": {
-            "priority": 0,
-            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
-            "likelihood": 1
-        }
+        if (e.player_answers.includes(20003) && e.player_answers.includes(30002)) {
+            question_insert("question_3_deficit", 
+                {
+                    "model": "campaign_trail.question",
+            "pk": "white_water_question_hale",
+            "fields": {
+                "priority": 0,
+                "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
+                "likelihood": 1
             }
-            );
-    } else {
-        question_insert("question_3_deficit", 
-            {
-               "model": "campaign_trail.question",
-        "pk": "white_water_question",
-        "fields": {
-            "priority": 0,
-            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
-            "likelihood": 1
-        }
+                }
+                );
+        } else {
+            question_insert("question_3_deficit", 
+                {
+                   "model": "campaign_trail.question",
+            "pk": "white_water_question",
+            "fields": {
+                "priority": 0,
+                "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
+                "likelihood": 1
             }
-            );
+                }
+                );
+            }
         }
-    }
    //Healthcare Update Inserter
     if (ans === 50001) {
         
@@ -16062,79 +16030,99 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50004) {
-    ConSocial += 1;
         question_insert("question_8_somalia", 
         {
             "model": "campaign_trail.question",
         "pk": "insert_healthcare_disaster",
         "fields": {
             "priority": 2,
-            "description": "Your in the Oval Office when you overhear Al and Reich going balistic in the other room. ''What the hell is this!?'', you hear Al frantically gasp out, you can also hear Reich saying ''I knew this was gonna fucking happen''. You rush into the room, and they regain slight composure upon seeing you. Reich breaks the news to you that the healthcare reform has been compromised by pharmaceutical corporations and the GOP. They just took almost all talking points from the HEART Act, and just slapped on more tax breaks for healthcare buisnesses. Your enraged, your not letting this shit see the house floor, so you might as well kill it before it gets the chance.",
+            "description": "Your in the Oval Office when you overhear Al and Reich going balistic in the other room. ''What the hell is this!?'', you hear Al frantically gasp out, you can also hear Reich saying ''I knew this was gonna fucking happen''. You rush into the room, and they regain slight composure upon seeing you. Reich breaks the news to you that the healthcare reform has been compromised by pharmaceutical corporations and the GOP. They just took almost all talking points from the HEART Act, and just slapped on more tax breaks for healthcare businesses. Your enraged, your not letting this shit see the house floor, so you might as well kill it before it gets the chance.",
             "likelihood": 1
             }
         }
         );
         
     }
+   
     if (ans == 10003) {
-        question_insert("question_9_nafta", 
-        {
-        "model": "campaign_trail.question",
-        "pk": "insert_yeltsin_friendly",
-        "fields": {
-            "priority": 2,
-            "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-            "likelihood": 1
+        setTimeout(() => {
+            if (!cnnContent) {
+                console.error("cnnContent not initialized yet.");
+                return;
             }
-        }
-        );
-        
-    }
-    //Russia Question Inserter
-        if (ans == 10001) {
-        question_insert("question_9_nafta", 
-        {
-                "model": "campaign_trail.question",
-        "pk": "insert_yeltsin_unfriendly",
-        "fields": {
-            "priority": 2,
-            "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-            "likelihood": 1
+            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  // Replaces the first headline (Gulf War) with new text
+        }, 1000);
+    
+        question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_friendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
             }
-        }
-        );
-        
+        });
     }
-      if (ans == 10002) {
-        
-        question_insert("question_9_nafta", 
-        {
-                "model": "campaign_trail.question",
-        "pk": "insert_yeltsin_unfriendly",
-        "fields": {
-            "priority": 2,
-            "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-            "likelihood": 1
+    
+    if (ans == 10001) {
+        setTimeout(() => {
+            if (!cnnContent) {
+                console.error("cnnContent not initialized yet.");
+                return;
             }
-        }
-        );
-        
-    }
-	if (ans == 10004) {
-        
-        question_insert("question_9_nafta", 
-        {
-               "model": "campaign_trail.question",
-        "pk": "insert_yeltsin_unfriendly",
-        "fields": {
-            "priority": 2,
-            "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-            "likelihood": 1
+            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  // Replaces the first headline (Gulf War) with new text
+        }, 1000);
+    
+        question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
             }
-        }
-        );
-        
+        });
     }
+    
+    if (ans == 10002) {
+        setTimeout(() => {
+            if (!cnnContent) {
+                console.error("cnnContent not initialized yet.");
+                return;
+            }
+            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  // Replaces the first headline (Gulf War) with new text
+        }, 1000);
+    
+        question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
+            }
+        });
+    }
+    
+    if (ans == 10004) {
+        setTimeout(() => {
+            if (!cnnContent) {
+                console.error("cnnContent not initialized yet.");
+                return;
+            }
+            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  // Replaces the first headline (Gulf War) with new text
+        }, 1000);
+    
+        question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your friendship with Boris Yeltsin is so close that critics and supporters alike compare it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
+            }
+        });
+    }    
 	//Healthcare Vote inserter
     if (e.question_number+1 == 13) {
 	let win_healthcare_vote_temp = {
@@ -16418,7 +16406,6 @@ if (e.player_answers.includes(10002.1)) {
 }
 //WTC Bombing CYOA
    if (ans ==  20001){
-   DOMWin += 1;
    PublicSupport += 1;
    }
    if (ans == 20003){
@@ -16430,70 +16417,72 @@ if (e.player_answers.includes(10002.1)) {
    //Economic Plan CYOA
    if (ans == 30002){
     PublicSupport += 1;
-    DOMWin += 1;
     NatHeathScore += 1;
-    ConSocial += 1;
+    Ideology -= 1;
     }
     if (ans == 30001){
     PublicSupport -= 1;
-    DOMWin -= 1;
+    Ideology += 1;
     }
     if (ans == 30003){
     PublicSupport -= 1;
     LEGWin += 1;
-    DOMWin -= 1;
     }
     // WhiteWater CYOA
     if (ans == 85021.5 || ans == 85025.5) {
-    PublicSupport -= 2;
-    }
-    if (ans == 85022.5) {
-    PublicSupport -= 1;
-    }
-    if (ans == 85026.5) {
-    CasesSettled += 1;
-    PublicSupport += 1;
+        PublicSupport -= 2;
+        }
+        if (ans == 85022.5) {
+        PublicSupport -= 1;
+        }
+        if (ans == 85026.5) {
+        CasesSettled += 1;
+        PublicSupport += 1;
     }
     //Waco CYOA
     if (ans == 40001){
     PublicSupport -= 1;
-    DOMWin -= 1;
     }
      if (ans == 40003){
     PublicSupport -= 2;
-    DOMWin -= 1;
     }
      if (ans == 40002){
     PublicSupport += 1;
-    DOMWin += 1;
     NatHeathScore += 1;
     }
     //Supreme Court CYOA
     if (ans == 400013){
-    LibSocial += 1;
+    Ideology += 1;
     }
     if (ans == 400014){
-    ConSocial += 1;
+    Ideology -= 1;
         }
+    if (ans == 400015){
+    PublicSupport -= 1;
+    }
+    //Healthcare Pick
+    if (ans == 50001) {
+    Ideology += 1;
+    PublicSupport += 1;
+    }
+    if (ans == 50004) {
+    Ideology -= 1;
+    }
     //DADT CYOA
     if (ans == 60002){
     PublicSupport -= 1;
-    LibSocial += 1;
+    Ideology += 1;
+    }
+    if (ans == 60003){
+    PublicSupport -= 1;
+    Ideology -= 1;
     }
     //Crime CYOA
     if (ans == 70002){
-    LibSocial += 1;
+    Ideology += 1;
     }
     if (ans == 70001){
-        ConSocial += 1;
-        }
-    //If you veto welfare reform
-    if (ans == 190002){
-    LibSocial += 1;
-    }
-    //Reichs plan
-    if (ans == 30001){
-    LibSocial += 1;
+    Ideology -= 1;
     }
     //Somalia CYOA
     if (ans == 80001){
@@ -16563,12 +16552,14 @@ if (e.player_answers.includes(10002.1)) {
     LEGWin += 1;
     Legacy += 1;
     GotHealthcare += 1;
+    Ideology += 1;
     }
     if (ans == 85018.5){
     PublicSupport += 5;
     LEGWin += 1;
     Legacy += 3;
     GotHealthcare += 1;
+    Ideology += 3;
     ctsAchievement("The Work Goes On");
     }
     //Healthcare Vote CYOA (Fails)
@@ -16580,14 +16571,15 @@ if (e.player_answers.includes(10002.1)) {
     if (ans == 120001){
     PublicSupport -= 1;
     FPWin -= 1;
+    Ideology += 1;
     }
     if (ans == 120002){
     FPWin += 1;
+    Ideology -= 1;
     }
     //OKC Bombing CYOA
     if (ans == 140001){
     PublicSupport += 1;
-    DOMWin += 1;
     Legacy += 1;
     }
     if (ans == 140002){
@@ -16601,18 +16593,11 @@ if (e.player_answers.includes(10002.1)) {
     if (ans == 150002){
     PublicSupport -= 1;
     LEGWin += 1;
-    ConSocial += 1;
+    Ideology -= 1;
     }
     if (ans == 3357){
 PublicSupport -= 1;
     LEGWin -= 1;
-    }
-    //1st Lewinsky encounter CYOA
-    if (ans == 160002){
-    BangedMonica += 1;
-    }
-    if (ans == 160003){
-    BangedMonica += 1;
     }
     //Paula Jones CYOA
     if (ans == 230002){
@@ -16639,33 +16624,40 @@ PublicSupport -= 1;
     //DOMA CYOA
     if (ans == 180001){
     LEGWin += 1;
+    Ideology -= 1;
     }
     if (ans == 180002){
 PublicSupport -= 2;
     LEGWin -= 1;
+    Ideology += 1;
     }
     //PRWOA CYOA
     if (ans == 190001){
 PublicSupport += 1;
     LEGWin += 1;
+    Ideology -= 1;
     }
     if (ans == 190002){
     PublicSupport -= 2;
     LEGWin -= 1;
+    Ideology += 1;
     }
     //Internet CYOA
     if (ans == 240001){
     PublicSupport += 2;
+    Ideology += 1;
     }
     if (ans == 240002){
     PublicSupport -= 1;
+    Ideology -= 1;
     }
-    if (ans == 240002){
+    if (ans == 240003){
     PublicSupport -= 1;
     LEGWin -= 1;
     }
     if (ans == 240004){
     PublicSupport += 1;
+    Ideology += 1;
     }
     //Desert Strike CYOA
     if (ans == 200001){
@@ -16687,12 +16679,8 @@ PublicSupport += 1;
     //2nd Term CYOA
 
     //State of the Union Adress CYOA
-    if (ans == 220001){
-    PublicSupport += 1;
-    }
     if (ans == 220002){
     PublicSupport += 3;
-    DOMWin += 1;
     }
     if (ans == 220004){
     PublicSupport += 2;
@@ -16844,7 +16832,7 @@ if(ans == 170003){
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
 
 //Pat Buchanan CYOA
-} else if (LibSocial == 2 && GOPSupermajority == 1 && ans == 170001){
+} else if (Ideology == 6 && GOPSupermajority == 1 && ans == 170001){
     BuchananNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -16854,7 +16842,7 @@ if(ans == 170003){
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "Lamm";
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 }
-if (LibSocial == 2 && GOPSupermajority == 1 && ans == 170002){
+if (Ideology == 6 && GOPSupermajority == 1 && ans == 170002){
     BuchananNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -16864,7 +16852,7 @@ campaignTrail_temp.candidate_json[3]["fields"].last_name = "Lamm";
 campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
 campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 }
-if(LibSocial == 2 && GOPSupermajority == 1 && ans == 170003){
+if (Ideology == 6 && GOPSupermajority == 1 && ans == 170003){
     BuchananNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -16875,21 +16863,21 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
 campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 
 //Specter CYOA
-} else if (LibSocial == 2 && RepublicanRevolution == 1 && ans == 170001){
+} else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170001){
     SpecterNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if (LibSocial == 2 && RepublicanRevolution == 1 && ans == 170002){
+if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170002){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if(LibSocial == 2 && RepublicanRevolution == 1 && ans == 170003){
+if(Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170003){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
@@ -16897,63 +16885,63 @@ campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 
 //Gramm CYOA
-} else if (LibSocial == 2 && SlimGOPCongress == 1 && ans == 170001){
+} else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170001){
     GrammNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
-if (LibSocial == 2 && SlimGOPCongress == 1 && ans == 170002){
+if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170002){
     GrammNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
-if(LibSocial == 2 && SlimGOPCongress == 1 && ans == 170003){
+if(Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170003){
     GrammNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 
-} else if (LibSocial == 2 && GOPSupermajority == 1 && ans == 170001){
+} else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170001){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 }
-if (LibSocial == 2 && GOPSupermajority == 1 && ans == 170002){
+if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170002){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 }
-if (LibSocial == 2 && GOPSupermajority == 1 && ans == 170003){
+if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170003){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 //Pete Wilson CYOA
-} else if (ConSocial == 4 && RepublicanRevolution == 1 && ans == 170001){
+} else if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170001){
     WilsonNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
 }
-if (ConSocial == 4 && RepublicanRevolution == 1 && ans == 170002){
+if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170002){
     WilsonNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
 }
-if (ConSocial == 4 && RepublicanRevolution == 1 && ans == 170003){
+if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170003){
     WilsonNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
@@ -16986,7 +16974,7 @@ if (ans == 170003){
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 }
-    if (e.question_number+1 == 16){
+if (e.question_number+1 == 16){
      if (e.player_answers.includes(40002) && (110004) && GotHealthcare == 1){
         ctsAchievement("Counterrevolution");
             DemCongress -= 1;
@@ -17124,7 +17112,7 @@ if (ans == 170003){
     }
     }
     if (e.question_number+1 == 23){
-    if (LibSocial === 2 && GOPSupermajority === 1) {
+    if (Ideology == 6 && GOPSupermajority == 1) {
         console.log("Executing block: LibSocial === 2 && GOPSupermajority === 1");
                     question_insert("question_17_yugoslavia", 
                     {
@@ -17150,7 +17138,7 @@ if (ans == 170003){
             }
             );
                     
-                    } else if (LibSocial === 3 && GOPSupermajority === 1) {
+                    } else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1) {
         console.log("Executing block: LibSocial === 3 && GOPSupermajority === 1");
                     question_insert("question_17_yugoslavia", 
                     {
@@ -17175,7 +17163,7 @@ if (ans == 170003){
                 }
             }
                     );
-                    } else if (LibSocial == 2 && RepublicanRevolution == 1) {
+                    } else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1) {
         console.log("Executing block: LibSocial === 2 && RepublicanRevolution == 1");
                     question_insert("question_17_yugoslavia", 
                     {
@@ -17200,7 +17188,7 @@ if (ans == 170003){
                 }
             }
             );
-                    } else if (LibSocial == 2 && SlimGOPCongress == 1){
+                    } else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1){
                     question_insert("question_17_yugoslavia", 
                     {
                         "model": "campaign_trail.question",
@@ -17224,7 +17212,7 @@ if (ans == 170003){
                 }
             }
             );
-        } else if (ConSocial == 5 && RepublicanRevolution == 1) {
+        } else if (Ideology == -7 && RepublicanRevolution == 1) {
             question_insert("question_17_yugoslavia", 
                 {
                     
@@ -17278,15 +17266,15 @@ if (ans == 170003){
         }
     }
     if (e.question_number+1 == 23){
-    if (LibSocial === 2 && GOPSupermajority === 1) {
+    if (Ideology === 6 && GOPSupermajority === 1) {
      ctsAchievement("Pitchfork Pat");
-                    } else if (LibSocial === 3 && GOPSupermajority === 1) {
+                    } else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority === 1) {
                     ctsAchievement("Easy as ABC");
-                    } else if (LibSocial == 2 && RepublicanRevolution == 1) {
+                    } else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1) {
                     ctsAchievement("Snarlin' Arlen");
-                    } else if (LibSocial == 2 && SlimGOPCongress == 1){
+                    } else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1){
                     ctsAchievement("Porno-Gramm");
-                } else if (ConSocial == 5 && RepublicanRevolution == 1){
+                } else if (Ideology == -5 && RepublicanRevolution == 1){
                     ctsAchievement("Great Incarcerator");
                     } else {
                     ctsAchievement("Soul Man");
@@ -17662,343 +17650,1017 @@ if (ans == 20001.1) {
         
 }
 }
-    function addGovernmentButton() {
-    if (document.getElementById('government_button')) {
+/*
+Welcome to Astro's Variable Headquarters
+This is a fairly simple function you can add to your mods. It will create a little menu in which the player can view the numbers laid out within the functions.
+This is a great way to give the player a little more information about your mod.
+
+Across this code, you will find a lot of aspects you can edit. I have left plenty of comments to help you understand what each part does.
+Don't be afraid to ask in #mod-help on the Discord for clarification or help with editing this code.
+
+To use this, place this code below your Code 2, and edit it as needed. You can duplicate the 'let a = document.createElement('p');' section to add more lines of text.
+
+Functions are referenced in text like so: ' + function + '. This will display the number from the function in the text.
+Credit to Nina, who made the original code that summoned the new screen (originally for the 1960Red/1952Blue advisor screen)
+Go ahead and use this code in your mods - just give me credit. I hope it helps you out!
+*/
+
+e =campaignTrail_temp
+let loopingSound; // Declare loopingSound globally
+// Load the sound
+const errorSound = new Audio('https://audio.jukehost.co.uk/kCQEFsusfQmaqunaLbrSlyej5we0tGJF');
+
+// Global error handler
+window.onerror = function (message, source, lineno, colno, error) {
+    // Play the error sound
+    if (errorSound.paused) {
+        errorSound.loop = true;
+        errorSound.play();
+        audio.pause();
+    }
+
+    // Log the error for debugging
+    console.error(`Error occurred: ${message} at ${source}:${lineno}:${colno}`);
+
+    // Optionally, notify the user
+    alert("An error occurred. Please check the console for details.");
+
+    // Return true to prevent the default error handler
+    return true;
+};
+
+// Optional: Stop the sound after debugging is done
+window.onkeydown = function (event) {
+    if (event.key === "Escape") { // Stop on pressing "Escape"
+        errorSound.pause();
+        errorSound.currentTime = 0; // Reset playback
+    }
+};
+
+function addHeadquarterButton() {
+    // Check if the button already exists
+    if (document.getElementById('headquarter_button')) {
         return;
     }
 
+    // Find the reference button by its ID
     const refButton = document.getElementById('view_electoral_map');
     if (!refButton) {
         return;
     }
 
-    const newButton = document.createElement('button');
-    newButton.id = 'government_button';
-    newButton.innerHTML = 'Government';
-    newButton.addEventListener('click', openRelationsView);
-    newButton.style.marginLeft = "25px";
-    refButton.insertAdjacentElement('afterend', newButton);
-}
-    // Function to open the Administration Relations View
-    function openRelationsView() {
-    newRelationsData = false; // Reset new data indicator
-    document.getElementById('government_button').innerHTML = 'Government';
-    let questions = document.querySelector(".inner_window_question");
-    questions.style.display = 'none';
+   // Create a new button element
+const newButton = document.createElement('button');
 
-    let relationsDiv = document.createElement('div');
-    relationsDiv.id = 'relations_view';
-    relationsDiv.style.height = '100%';
-    relationsDiv.style.backgroundColor = '#fff'; // Use white background for retro feel
-    relationsDiv.style.padding = '20px';
-    relationsDiv.style.fontFamily = "'Courier New', monospace"; // Retro font
-    relationsDiv.style.color = '#000'; // Black text for contrast
-    setupRelationsArea(relationsDiv, questions);
+newButton.id = 'headquarter_button';
+newButton.style.marginLeft = '1.5em';
+newButton.innerHTML = 'Campaign Data';
 
-    questions.parentNode.insertBefore(relationsDiv, questions.nextSibling);
-    const playerContainer = document.getElementById("player");
-    if (playerContainer) {
-        playerContainer.style.display = 'none'; // Hide the player
-    }
-}
+const newButtonSound = new Audio('https://audio.jukehost.co.uk/tO2cWkdv5h3DD6m6KQytiK5UEv1l9PaJ'); // Replace with actual sound path
 
-let page_list;  // Declare with let if it's modified later
+// Attach the click event listener
+newButton.addEventListener('click', function () {
+    // Show the pixelated loading screen
+    showLoadingScreen();
 
-function setupRelationsArea(parentDiv, toggleDiv) {
-    let current_page = 0; // Start on page 0
-    page_list = [
-        ["Congressional Majority:", "error", "Congressional Approval:", "error", "Public Support:", "error", "Legacy:", "error", "Foreign Reputation:", "error", "Relationship with Hillary:", "error", "Expected Opponent:", "Unknown"]
-    ];
+    // Pause the current soundtrack
+    const audio = document.getElementById("audio");
+    audio.pause();
 
-    // Function to apply permanent changes once when ans == 1272222
-    function applyPermanentChanges() {
-        if (ClintonDead == true) {
-            page_list[0][6] = "War Situation:";  // Legacy -> War Situation
-            page_list[0][10] = "Homeland Security:";  // Relationship with Hillary -> Homeland Security
-            console.log("Changes applied: Legacy and RWH deleted and replaced.");
+    // Play the Campaign Data sound effect
+    newButtonSound.play();
+
+    // Once the sound is finished, start looping sound
+    newButtonSound.onended = function () {
+        if (!loopingSound) {
+            loopingSound = new Audio('https://audio.jukehost.co.uk/e19IDfLbWvkktOmCzyC4s54Aj8g75CZI');
         }
-    }
-
-    function styleSpecialWords() {
-        // Style special words
-        page_list.forEach((page, pageIndex) => {
-            page_list[pageIndex] = page.map(content => {
-                if (content === "Unknown") {
-                    return `<span style="font-weight: bold; color: red; font-size: 24px;">${content}</span>`;
-                }
-                return content; // Leave other content unchanged
-            });
-        });
-    }
-   // Function to update page_list based on conditions
-      function updatePageList() {
-        // Apply permanent changes before styling
-        applyPermanentChanges();
-        // Apply styles to the list after applying permanent changes
-        styleSpecialWords();
-       ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
-      if (DemCongress === 1) {
-          page_list[0][1] = `<span style="font-weight: bold; color: blue; font-size: 24px;">SLIM DEM MAJORITY</span>`; // Style DEM
-          page_list[0][3] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> Average</span>`; // Style Congressional Approval
-      } else if (RepublicanRevolution == 1) {
-          page_list[0][1] = `<span style="font-weight: bold; color: red; font-size: 24px;"> HUGE GOP MAJORITY</span>`; // Style GOP
-          page_list[0][3] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Horrible</span>`; // Style Congressional Approval
-      } else if (SlimGOPCongress == 1) {
-          page_list[0][1] = `<span style="font-weight: bold; color: red; font-size: 24px;"> SLIM GOP MAJORITY</span>`; // Style GOP
-          page_list[0][3] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bad</span>`; // Style Congressional Approval
-      } else if (GOPSupermajority == 1) {
-          page_list[0][1] = `<span style="font-weight: bold; color: red; font-size: 24px;"> GOP SUPERMAJORITY</span>`; // Style GOP
-          page_list[0][3] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Abysmal</span>`; // Style Congressional Approval
-      } if (Legacy === 0) {
-          page_list[0][7] = `<span style="font-weight: bold; color: black; font-size: 24px;"> None</span>`; // Style Legacy
-      } else if (Legacy >= 1 && Legacy <= 2) {
-          page_list[0][7] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Low</span>`; // Style Legacy
-        } else if (Legacy == 3) {
-          page_list[0][7] = `<span style="font-weight: bold; color: teal; font-size: 24px;"> Decent</span>`; // Style Legacy
-      } else if (Legacy >= 4 && Legacy >= 6) {
-          page_list[0][7] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Great</span>`; // Style Legacy
-      } else if (Legacy === 7) {
-          page_list[0][7] = `<span style="font-weight: bold; color: gold; font-size: 24px;"> Perfect</span>`; // Style Legacy
-      } if (PublicSupport <= 0) {
-          page_list[0][5] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Abysmal</span>`; // Style PublicSupport
-        } else if (PublicSupport >= 1 && PublicSupport <= 5) {
-          page_list[0][5] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Low</span>`; // Style PublicSupport
-        } else if (PublicSupport >= 6 && PublicSupport <= 10) {
-          page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> Medium</span>`; // Style PublicSupport
-        } else if (PublicSupport >= 11 && PublicSupport <= 15) {
-          page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> High</span>`; // Style PublicSupport
-        } else if (PublicSupport >= 16 && PublicSupport >= 20) {
-          page_list[0][5] = `<span style="font-weight: bold; color: gray; font-size: 24px;"> Very High</span>`; // Style PublicSupport
-      } if (FPWin <= 0) {
-          page_list[0][9] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Laughingstock</span>`; // Style ForeignReputation
-      } else if (FPWin >= 1 && FPWin <=3) {
-          page_list[0][9] = `<span style="font-weight: bold; color: green; font-size: 24px;"> Respected</span>`; // Style ForeignReputation
-      } else if (FPWin >= 4 && FPWin <=5) {
-          page_list[0][9] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Honoured</span>`; // Style ForeignReputation
-      }    if (HillaryRelationship === 4) {
-          page_list[0][11] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Ok</span>`; // Style HillaryRelationship
-      } else if (HillaryRelationship >= 5 && HillaryRelationship <= 7) {
-          page_list[0][11] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Good</span>`; // Style HillaryRelationship
-      } else if (HillaryRelationship == 8) {
-          page_list[0][11] = `<span style="font-weight: bold; color: blue; font-size: 24px;"> Great</span>`; // Style HillaryRelationship
-      } if (ans == 3425) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Steve Forbes</span>`; // Style ExpectedOpponent
-      } else if (ans == 3426) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Steve Forbes</span>`; // Style ExpectedOpponent
-      } if (LibSocial == 2 && GOPSupermajority == 1 && ans == 160002) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Pat Buchanan</span>`; // Style ExpectedOpponent
-      } else if (LibSocial == 2 && GOPSupermajority == 1 && ans == 160003) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Pat Buchanan</span>`; // Style ExpectedOpponent
-        } if (LibSocial == 3 && GOPSupermajority == 1 && ans == 160002) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Lamar Alexander</span>`; // Style ExpectedOpponent
-      } else if (LibSocial == 3 && GOPSupermajority == 1 && ans == 160003) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Lamar Alexander</span>`; // Style ExpectedOpponent
-      } else if (RepublicanRevolution == 1 && ans == 160002){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      } else if (LibSocial >= 1 && RepublicanRevolution == 1 && ans == 160003){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      } else if (SlimGOPCongress == 1 && ans == 160002){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      } else if (SlimGOPCongress == 1 && ans == 160003){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      }    else if (LibSocial <= 1 && GOPSupermajority == 1 && ans == 160002){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      } else if (LibSocial <= 1 && GOPSupermajority == 1 && ans == 160003){ 
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Bob Dole</span>`; // Style ExpectedOpponent
-      } else if (LibSocial == 2 && RepublicanRevolution == 1 && ans == 160002) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Arlen Specter</span>`; // Style ExpectedOpponent
-    } else if (LibSocial == 2 && RepublicanRevolution == 1 && ans == 160003) {
-          page_list[0][13] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Arlen Specter</span>`; // Style ExpectedOpponent
-        } if (WarScore <= 0 && page_list[0][6] == "War Situation:") {
-        page_list[0][7] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Dire</span>`; // Style WarSituation
-         } else if (WarScore >= 1 && WarScore <= 3 && page_list[0][6] == "War Situation:") {
-        page_list[0][7] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Poor</span>`; // Style WarSituation
-         } if (NatSecurity <= 0 && page_list[0][10] == "Homeland Security:") {
-          page_list[0][11] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Severely Threatened</span>`; // Style HomelandSecurity
-         } else if (NatSecurity >= 1 && NatSecurity <= 3 && page_list[0][10] == "Homeland Security:") {
-          page_list[0][11] = `<span style="font-weight: bold; color: red; font-size: 24px;"> Threatened</span>`; // Style HomelandSecurity
-         } 
-        
-        
-        
-        
-  }
-      // Update page_list before rendering
-      updatePageList();
-
-       // Create the header
-    let headerDiv = createHeader(parentDiv, toggleDiv, page_list);
-    parentDiv.appendChild(headerDiv);
-parentDiv.style.backgroundImage = 'url("https://i.imgur.com/pySkSD7.png")'; // Add background image
-    // Create the container for the page content
-   // For the body content, create a retro-looking content box
-const textContainer = document.createElement('div');
-textContainer.style.width = '80%';
-textContainer.style.height = '300px'; // Max height to trigger scroll
-textContainer.style.margin = '20px auto';
-textContainer.style.border = '3px solid #000'; // Thick black border like a computer screen frame
-textContainer.style.borderRadius = '0'; // No rounded corners, flat screen style
-textContainer.style.backgroundColor = '#D3D3D3'; // Light gray for the screen background (fallback color)
-textContainer.style.backgroundSize = 'cover'; // Ensure the image covers the entire container
-textContainer.style.backgroundPosition = 'center'; // Center the image
-textContainer.style.padding = '20px';
-textContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-textContainer.style.overflowY = 'auto'; // Auto scroll when content overflows
-textContainer.style.maxHeight = '300px'; // Ensure content overflows only when necessary
-textContainer.style.display = 'block'; // Block layout for better scrolling behavior
-textContainer.style.fontFamily = 'Courier New, monospace'; // Monospaced font for the terminal look
-textContainer.style.fontSize = '14px'; // Classic size for text on old computer screens
-textContainer.style.color = '#000'; // Black text for readability
-
-// Apply the scrollbar styles (for modern browsers)
-textContainer.style.scrollbarWidth = 'thin'; // For Firefox
-textContainer.style.scrollbarColor = '#0000FF #D3D3D3'; // Blue scrollbar with gray background for Firefox
-
-// For Webkit-based browsers (Chrome, Safari, etc.)
-const style = document.createElement('style');
-style.innerHTML = `
-    /* Custom scrollbar styles for Webkit browsers */
-    div::-webkit-scrollbar {
-        width: 12px; /* Set width of the scrollbar */
-    }
-
-    div::-webkit-scrollbar-track {
-        background: #D3D3D3; /* Light gray track */
-    }
-
-    div::-webkit-scrollbar-thumb {
-        background: #0000FF; /* Blue scrollbar thumb */
-        border-radius: 6px;
-    }
-
-    div::-webkit-scrollbar-thumb:hover {
-        background: #1E90FF; /* Darker blue when hovered */
-    }
-`;
-document.head.appendChild(style);
-parentDiv.appendChild(textContainer);
-
-    // Function to render content for the current page
-    function renderPage(pageIndex) {
-        textContainer.innerHTML = ''; // Clear previous content
-        const pageContent = page_list[pageIndex];
-        
-        pageContent.forEach(content => {
-            const paragraph = document.createElement('p');
-            paragraph.innerHTML = content;
-            paragraph.style.fontSize = '20px';
-            paragraph.style.margin = '10px 0';
-            paragraph.style.textAlign = 'center'; // Center align text
-            paragraph.style.fontWeight = 'bold'; // Bold text for emphasis
-            textContainer.appendChild(paragraph);
-        });
-    }
-
-    // Initial page render
-    renderPage(current_page);
-
-    // Function to create the header
-  function createHeader(parentDiv, toggleDiv, page_list) {
-    let headerDiv = document.createElement('div');
-    headerDiv.style.display = 'flex';
-    headerDiv.style.color = 'black'; // Black text for the title
-    headerDiv.style.backgroundColor = '#A9A9A9'; // Gray background for the "computer" look
-    headerDiv.style.border = '3px solid #000'; // Thick black border for the computer screen effect
-    headerDiv.style.borderRadius = '0'; // Sharp corners for that retro feel
-    headerDiv.style.padding = '8px 12px'; // Tight padding
-    headerDiv.style.width = '80%'; // Set the width to 80% of the page
-    headerDiv.style.maxWidth = '100%'; // Max width at 100% of its container
-    headerDiv.style.margin = '0 auto'; // Center the header div horizontally
-    headerDiv.style.alignItems = 'center'; // Center items vertically
-
-    // Create a div to wrap the title and center it
-    let titleWrapper = document.createElement('div');
-    titleWrapper.style.flex = '1'; // Let it take up remaining space
-    titleWrapper.style.textAlign = 'center'; // Center the text inside it
-    titleWrapper.style.display = 'flex';
-    titleWrapper.style.justifyContent = 'center'; // Ensure the title is horizontally centered
-    titleWrapper.appendChild(createHeaderText('Government')); // Add the title
-
-    // Create the left section for the back button
-    let leftSection = document.createElement('div');
-    leftSection.style.flex = '0 0 auto'; // Prevent it from stretching
-    leftSection.appendChild(createBackButton(parentDiv, toggleDiv));
-
-    // Append both sections to the header
-    headerDiv.appendChild(leftSection);
-    headerDiv.appendChild(titleWrapper); // Append the title wrapper
-
-    return headerDiv;
-}
-    // Create a back button to exit
-   function createBackButton(parentDiv, toggleDiv) {
-    let backButton = document.createElement('button');
-    backButton.innerText = 'Back';
-    backButton.style.margin = '5px';
-    backButton.style.backgroundColor = '#D3D3D3'; // Light gray background for that classic computer feel
-    backButton.style.color = '#000'; // Black text
-    backButton.style.border = '2px solid #000'; // Black border for 90s screen aesthetic
-    backButton.style.padding = '6px 16px';
-    backButton.style.fontFamily = 'Courier New, monospace'; // Monospaced font for a terminal feel
-    backButton.style.fontSize = '14px';
-    backButton.style.textTransform = 'uppercase'; // All caps for that old-school vibe
-
-    backButton.onclick = function () {
-        parentDiv.remove(); // Removes the parentDiv
-        toggleDiv.style.display = ''; // Restores the toggleDiv
-
-        // Bring back the soundtrack player
-        const playerContainer = document.getElementById("player");
-        if (playerContainer) {
-            playerContainer.style.display = 'flex'; // Restore the player's visibility
-        }
+        loopingSound.loop = true;
+        loopingSound.play();
+        console.log('Campaign sound ended, starting loop');
     };
 
-    return backButton;
+    // Load the macBackground function after 3 seconds (when the loading screen ends)
+    setTimeout(() => {
+        hideLoadingScreen();
+        macBackground();
+    }, 3000); // 3 seconds
+});
+
+// Insert the new button next to the reference button
+refButton.insertAdjacentElement('afterend', newButton);
 }
-   // Header title with pixelated text (white text)
-function createHeaderText(title) {
-    const headerTitle = document.createElement('h3');
-    headerTitle.innerText = title;
-    headerTitle.style.margin = '0';
-    headerTitle.style.color = '#FFFFFF'; // White text
-    headerTitle.style.fontFamily = 'Courier New, monospace'; // Monospaced font
-    headerTitle.style.fontSize = '18px'; // Slightly larger text
-    return headerTitle;
+    // Function to show the pixelated loading screen
+function showLoadingScreen() {
+    let loadingOverlay = document.createElement('div');
+    loadingOverlay.id = 'loadingOverlay';
+    loadingOverlay.style.position = 'fixed';
+    loadingOverlay.style.top = '0';
+    loadingOverlay.style.left = '0';
+    loadingOverlay.style.width = '100%';
+    loadingOverlay.style.height = '100%';
+    loadingOverlay.style.backgroundColor = 'black'; // Old computer screens were often black
+    loadingOverlay.style.color = 'green'; // Typical green text on old screens
+    loadingOverlay.style.fontFamily = '"Press Start 2P", monospace'; // Pixelated font
+    loadingOverlay.style.fontSize = '20px';
+    loadingOverlay.style.zIndex = '10000';
+    loadingOverlay.style.display = 'flex';
+    loadingOverlay.style.alignItems = 'center';
+    loadingOverlay.style.justifyContent = 'center';
+    loadingOverlay.style.flexDirection = 'column';
+
+    loadingOverlay.innerHTML = `
+    <div style="text-align: center; animation: fadeIn 2s ease-in-out;">
+        <img src="https://i.imgur.com/Y1YF19J.png" 
+            alt="Loading" 
+            style="width: 200px; height: auto; animation: fadeIn 2s ease-in-out;">
+    </div>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @font-face {
+            font-family: "Press Start 2P";
+            src: url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+        }
+    </style>
+`;
+
+
+
+
+    document.body.appendChild(loadingOverlay);
+}
+
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    if (loadingOverlay) {
+        loadingOverlay.remove();
+    }
+}
+let draggablePic; // Global variable for headquarters image
+let minsweeperPic; // Global variable for minsweeper image
+function macBackground() {
+    // Create and set up a full-page background container
+    let bgContainer = document.createElement('div');
+    bgContainer.id = 'bgContainer';
+    bgContainer.style.position = 'fixed';
+    bgContainer.style.top = '0';
+    bgContainer.style.left = '0';
+    bgContainer.style.width = '100%';
+    bgContainer.style.height = '100%';
+    bgContainer.style.backgroundImage = 'url(https://i.imgur.com/gpdpc72.png)';
+    bgContainer.style.backgroundSize = 'cover';
+    bgContainer.style.backgroundPosition = 'center';
+    bgContainer.style.zIndex = '999';
+    document.body.appendChild(bgContainer);
+
+    // Create the draggable picture element for Headquarters
+    let draggablePic = document.createElement('img');
+    draggablePic.src = 'https://i.imgur.com/hbT1unU.png';
+    draggablePic.style.position = 'fixed';
+    draggablePic.style.right = '20px';
+    draggablePic.style.top = '40%';
+    draggablePic.style.transform = 'translateY(-50%)';
+    draggablePic.style.cursor = 'pointer';
+    draggablePic.style.zIndex = '1000';
+    document.body.appendChild(draggablePic);
+
+    // Make the image draggable
+    makeDraggable(draggablePic);
+
+    // Add click event to trigger openHeadquarters function
+    draggablePic.addEventListener('click', openHeadquarter);
+
+    // Add event listener to make draggablePic visible when clicked
+    draggablePic.addEventListener('click', function() {
+        cnnContent.style.display = 'none'; // Show the draggablePic element
+        hqContent.style.display = 'block'; // Show the draggablePic element
+    });
+
+    // Create the draggable picture element for minsweeper
+    let minsweeperPic = document.createElement('img');
+    minsweeperPic.src = 'https://i.imgur.com/WHvQ8KI.png';
+    minsweeperPic.style.position = 'fixed';
+    minsweeperPic.style.left = '20px';
+    minsweeperPic.style.top = '40%';
+    minsweeperPic.style.transform = 'translateY(-50%)';
+    minsweeperPic.style.cursor = 'pointer';
+    minsweeperPic.style.zIndex = '1000';
+    document.body.appendChild(minsweeperPic);
+
+    // Make the image draggable
+    makeDraggable(minsweeperPic);
+
+    // Add click event to trigger minsweeper window
+    minsweeperPic.addEventListener('click', openMinesweeper);
+
+    // Create the "Close Mac" button
+    let closeMacButton = document.createElement('button');
+    closeMacButton.textContent = 'Close Mac';
+    closeMacButton.style.position = 'fixed';
+    closeMacButton.style.top = '10px';
+    closeMacButton.style.left = '10px';
+    closeMacButton.style.zIndex = '1001'; // Make sure it's above the other elements
+    document.body.appendChild(closeMacButton);
+
+    // Add event listener to the "Close Mac" button
+closeMacButton.addEventListener('click', function() {
+    // Show the confirmation box
+    let confirmClose = confirm("Do you want to close your mac?");
+    
+    if (confirmClose) {
+        // If the user chooses "Yes", hide everything
+        if (loopingSound) {
+            console.log("Attempting to stop the looping sound...");
+    
+            // Stop the looping sound
+            loopingSound.pause(); // Pause the sound
+            loopingSound.currentTime = 0; // Reset the time to the beginning
+    
+            // Ensure it is not looping anymore
+            loopingSound.loop = false; // Disable the loop
+    
+            // Forcefully stop the sound if it's still playing
+            if (!loopingSound.paused) {
+                console.log("Sound was playing, forcing stop..."); // Debugging
+                loopingSound.pause(); // Pause the sound again
+                loopingSound.currentTime = 0; // Reset to the beginning
+            } else {
+                console.log("Sound already paused."); // Debugging
+            }
+        } else {
+            console.log("No looping sound to stop."); // Debugging
+        }
+        audio.play(); // Assuming 'audio' is the other sound you want to resume
+        if (bgContainer) bgContainer.style.display = 'none'; // Hide the background container
+        if (draggablePic) draggablePic.style.display = 'none'; // Hide the draggable headquarters image
+        if (minsweeperPic) minsweeperPic.style.display = 'none'; // Hide the minsweeper image
+        if (hqDiv) hqDiv.style.display = 'none'; // Hide the minsweeper image
+        if (questions) questions.style.display = ''; // Restore the questions visibility if applicable
+        
+        // Hide the "Close Mac" button itself
+        closeMacButton.style.display = 'none';
+    } else {
+        // If the user chooses "No", do nothing
+        console.log("Mac remains open.");
+    }
+});
+}
+// Declare globally to initialize only once
+let cnnContent;
+let hqContent;
+questions = document.querySelector(".inner_window_question");
+let hqDiv;
+function initializeContent() {
+    if (!hqContent) {
+        console.log("Creating hqContent for the first time...");
+        hqContent = document.createElement('div');
+    
+          // Full HTML structure with clickable links and dynamic content
+    hqContent.innerHTML = `
+    <div style="font-family: 'Times New Roman', Times, serif; background-color: #fff; color: #bfa800; padding: 20px; border: 3px solid #bfa800; width: 70%; margin: 0 auto; text-align: center; font-size: 16px;">
+        
+        <!-- Shiny gold plate behind the title -->
+        <h1 style="font-size: 24px; margin-bottom: 1em; 
+            background: linear-gradient(135deg, #ffd700, #ffcc00); 
+            padding: 10px; border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            The White House
+        </h1>
+
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 1em;">Welcome to the Official Website of the White House</p>
+
+        <img src="https://i.imgur.com/GsCF3UY.jpeg" 
+            style="width: 100%; height: auto; margin-bottom: 1em; border: 5px solid #bfa800; border-radius: 10px;">
+    
+        <div style="font-size: 18px; margin-bottom: 1em;">
+            <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
+            <a href="#" id="abroad" style="color: #bfa800; text-decoration: none;">The Fight Abroad</a><br>
+            <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
+            <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
+        </div>
+
+        <div id="dynamicContent" style="font-size: 18px; margin-top: 20px;">
+            <p id="contentText">Please click a section above to learn more.</p>
+        </div>
+
+        <div id="homeContent" style="display: none; margin-top: 20px;">
+                <h2>The Fight At Home</h2>
+                <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
+                    <h3>Your Campaign Promises:</h3>
+                    <ul>
+                        <li><input type="checkbox" id="healthcare"> Universal Healthcare</li>
+                        <li><input type="checkbox" id="economy"> Economic Recovery</li>
+                        <li><input type="checkbox" id="education"> Education Reform</li>
+                        <li><input type="checkbox" id="environment"> Environmental Protection</li>
+                        <li><input type="checkbox" id="taxCuts"> Tax Cuts for the Middle Class</li>
+                    </ul>
+                </div>
+                <div id="congress1993" style="margin-top: 20px;">
+    <h3>1993 Congressional Landscape</h3>
+    <div style="display: flex; justify-content: space-around; margin-top: 10px;">
+        <div>
+            <img id="houseImage" src="https://i.imgur.com/WunYh6Q.png" alt="House Majority" 
+                 style="border: 3px solid #bfa800; border-radius: 10px;">
+            <p id="houseMajorityText">House Majority (Democratic)</p>
+        </div>
+        <div>
+            <img id="senateImage" src="https://i.imgur.com/KjlKeY3.png" alt="Senate Majority" 
+                 style="border: 3px solid #bfa800; border-radius: 10px;">
+            <p id="senateMajorityText">Senate Majority (Democratic)</p>
+        </div>
+    </div>
+    <div id="congressLeaders" style="margin-top: 20px;">
+        <h4>Leaders:</h4>
+        <div>
+            <img id="foleyImage" src=https://i.imgur.com/YeJhVwb.png" alt="Tom Foley" 
+                 style="border: 3px solid #bfa800; border-radius: 10px;">
+            <p id="foleyText">Speaker of the House: Thomas Foley</p>
+        </div>
+        <div>
+        <div id="approvalRating" style="margin-top: 20px;">
+                    <h3>Approval on Capitol Hill:</h3>
+                    <p id="approvalText">[insert approval text]</p>
+                </div>
+            <img id="mitchellImage" src="https://i.imgur.com/amHcUoK.png" alt="George Mitchell" 
+                 style="border: 3px solid #bfa800; border-radius: 10px;">
+            <p id="mitchellText">Senate Majority Leader: George Mitchell</p>
+        </div>
+    </div>
+</div>
+            </div>
+       <div id="abroadContent" style="display: none; margin-top: 20px;">
+    <h2>The Fight Abroad</h2>
+    <div id="internationalStanding" style="font-size: 18px; margin-top: 20px;">
+        <h3>International Standing:</h3>
+        <p id="dynamicStandingText">[Dynamic text will appear here]</p>
+    </div>
+</div>
+        <div id="legacyContent" style="display: none; margin-top: 20px;">
+            <h2>Ideology & Legacy</h2>
+            <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
+            <p>The People's Ideology:</p>
+                <p style="font-weight: bold; margin-top: 5px; color: #DE0100;">Slightly Conservative</p>
+
+                <p>Your ideology:</p>
+                <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
+                
+                <p>Your legacy:</p>
+                <p id="legacyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Legacy]</p>
+
+            </div>
+        </div>
+<div id="oppositionTabs" style="display: none; margin-top: 20px;">
+    <h2>The Opposition Candidates</h2>
+    <div id="tabs"></div>
+    <div id="tabContent" style="margin-top: 20px; display: flex; justify-content: space-around;">
+        <div id="candidateContent" style="width: 70%; overflow-y: scroll; height: 200px;">
+            <div style="border: 5px solid #bfa800; padding: 10px; background-color: #fff; display: inline-block; border-radius: 10px; margin-bottom: 10px;">
+                <img id="candidateImage" src="" style="width: 100%; max-width: 200px; height: auto;" />
+            </div>
+            <p id="candidateDescription"></p>
+
+            <!-- New sections for Pros, Cons, and Strategy -->
+            <h4>Pros:</h4>
+            <ul>
+                <li id="candidatePros"></li>
+            </ul>
+            <h4>Cons:</h4>
+            <ul>
+                <li id="candidateCons"></li>
+            </ul>
+            <h4>Strategy to Beat Them:</h4>
+            <p id="candidateStrategy"></p>
+        </div>
+        <div id="chances" style="width: 20%; text-align: center; padding: 10px; border-left: 2px solid #bfa800;">
+            <p id="candidateChances"></p>
+        </div>
+    </div>
+</div>
+
+        <p style="font-size: 14px; margin-top: 1.5em; color: #000;">
+            <strong>For more information:</strong><br>
+            The White House | 1600 Pennsylvania Avenue | Washington, DC 20500
+        </p>
+    </div>
+`;
+    
+        // Candidate data with pros, cons, and strategies
+const candidates = [
+    {
+        name: 'Bob Dole',
+        image: 'https://i.imgur.com/jWgA3b5.png',
+        description: 'Bob Dole is a former Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.',
+        chances: 'Chances of nomination: 75%',
+        pros: 'Highly experienced in Washington, and well-respected among almost all factions of the Republicans. Will do well with the old and rural vote.',
+        cons: '73 years old, would be oldest president inagurated. Almost 0 appeal to young voters. 3X loser, with loses in 1976, 1980, and 1988.',
+        strategy: 'Emphasize your youth, tie Dole to the establishment and unpopular Republicans.'
+    },
+    {
+        name: 'Steve Forbes',
+        image: 'https://i.imgur.com/Ialsyc4.png',
+        description: 'Steve Forbes is a businessman and the current Chairman of the Forbes magazine. He is the Grandson of the Forbes founder, B.C. Forbes. As a candidate in 1996, he has been able to play the outsider card, promising great Tax and Economic reform. Due to his lack in political noteriety however, he is unlikely to be nominated.',
+        chances: 'Chances of nomination: 10%',
+        pros: 'Somewhat celebrity status. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
+        cons: 'Almost no other policies besides economy. Very limited political and governmental experience. Hated by the establishment, will lose out on their vote. Very toxic campaign, easy to exploit.',
+        strategy: 'Question him on issues besides economy, Tie him to oligarchs, and emphasize your experience as President.'
+    },
+    {
+        name: 'Pat Buchanan',
+        image: 'https://i.imgur.com/cmLyi4Q.png',
+        description: 'Pat Buchanan is a political commentator and Radio personality. During the Reagan administration, Buchanan served as the Communications Director, yet was very critical of George Bush. Buchanan ran in 1992 on Populist rhetoric and extreme conservatism. Due to his lack of appeal, he is very unlikely to be nominated.',
+        chances: 'Chances of nomination: 2%',
+        pros: 'Populist Rhetoric and Conservative beliefs that may hit the tone with Middle America. Will do solid in traditional Republican states',
+        cons: 'Gaffes, some of his rhetoric bridges on Racism. Little appeal to anyone outside the South and Plain. Will preform horribly everywhere else.',
+        strategy: 'Ignore him, focus on your own accomplishments. Attack him on his social positions, and come off as the unifier to his divider.'
+    },
+    {
+        name: 'Lamar Alexander',
+        image: 'https://i.imgur.com/3vOYpbE.png',
+        description: 'Lamar Alexander is a former Governor of Tennessee. During the Bush administration, Alexander served as Secretary of Education. He runs on heavy bipartisanship. Due to his lack of name recognition or charisma, he is very unlikely to be nominated.',
+        chances: 'Chances of nomination: 5%',
+        pros: 'Fellow Southern Governer, might take away some of your support. Pragmatic solution maker. Background in education is sure to help with Rural voters.',
+        cons: 'No Charisma or National recognition',
+        strategy: 'Play down to his demographic by speaking more vocally on education, as you could easily sweep them up.'
+    },
+    {
+        name: 'Phil Gramm',
+        image: 'https://i.imgur.com/cnK743z.png',
+        description: 'Phil Grammcracker is the current U.S. Senator of Texas, serving since 1985. As a staunch supporter of budget reduction, Gramm has served on the Senate Budget Committee since 1989, and has pushed for bills aiming to reduce the deficit. Due to his lack of appeal with other groups, he is unlikely to be nominated.',
+        chances: 'Chances of nomination: 4%',
+        pros: 'Strong track record on economic reforms and budget reform. Will do well with fiscal conservatives and buisnessmen.',
+        cons: 'Does not have much appeal outside of fiscal conservatives.',
+        strategy: 'Challenge him on other issues outside the economy. Depending on how the economy is, you can either play defense, or ignore the issue.'
+    },
+    {
+        name: 'Arlen Specter',
+        image: 'https://i.imgur.com/2lIVM8J.png',
+        description: 'Arlen Specter is the U.S. Senator of Pennsylvania. A known centrist, Specter has constantly had moderate positions on issues like Abortion, Gay rights, and Immigration. He was also formerly a Democrat, which certainly hurts his standing with the Republican base. Due to his lack of name recognition, he is unlikely to be nominated.',
+        chances: 'Chances of nomination: 2%',
+        pros: 'Appeals to centrists and moderates due to his social positions. Might take votes away from you in the Midwest as well.',
+        cons: 'Many Republicans view him with uncertainty. Party may not be ready to back him.',
+        strategy: 'Emphasize a more moderate image, though reclaiming the Midwest could prove dificult with NAFTA.'
+    },
+    {
+        name: 'Pete Wilson',
+        image: 'https://i.imgur.com/BC3FrnZ.png',
+        description: 'Pete Wilson is a former U.S. Senator and the current Governor of California. Most known for his controversial Immigration stances and his support of Proposition 187, Wilson inhereted the worst Californian economy since the Great Depression. While Wilson has certainly built a national image of his own, his own state is growing from his ideology. He is unlikely to be nominated.',
+        chances: 'Chances of nomination: 2%',
+        pros: 'May make the West Cost competitive, has a decent national image.',
+        cons: 'Policies on Immigration and Proposition 187 may hinder his support.',
+        strategy: 'Present a balanced approach to immigration and focus on economic successes.'
+    }
+];
+    
+        // Sort candidates by chances of nomination (highest to lowest)
+        candidates.sort((a, b) => {
+            const aChance = parseInt(a.chances.match(/\d+/)[0]);
+            const bChance = parseInt(b.chances.match(/\d+/)[0]);
+            return bChance - aChance;
+        });
+    
+        // Populate the candidate tabs dynamically
+        const tabsContainer = hqContent.querySelector('#tabs');
+        candidates.forEach(candidate => {
+            const tabButton = document.createElement('button');
+            tabButton.textContent = candidate.name;
+            tabButton.style.padding = '10px';
+            tabButton.style.margin = '5px';
+            tabButton.style.backgroundColor = '#ffd700';
+            tabButton.style.border = 'none';
+            tabButton.style.cursor = 'pointer';
+            tabButton.addEventListener('click', function() {
+                loadCandidateContent(candidate);
+            });
+            tabsContainer.appendChild(tabButton);
+        });
+
+            // Function to dynamically update Legacy and Ideology content
+    function updateLegacyAndIdeology() {
+        const legacyText = document.getElementById('legacyText');
+        const ideologyText = document.getElementById('ideologyText');
+
+        // Legacy content
+        if (Legacy == 7) {
+            legacyText.textContent = "Perfect";
+        } else if (Legacy >= 4 && Legacy <= 6) {
+            legacyText.textContent = "Remarkable";
+        } else if (Legacy == 3) {
+            legacyText.textContent = "Decent";
+        } else if (Legacy >= 1 && Legacy >= 2) {
+            legacyText.textContent = "Developing";
+        } else {
+            legacyText.textContent = "Minimal";
+        }
+
+        // Ensure Ideology is a number
+Ideology = Number(Ideology);
+
+// Debugging log to see the value of Ideology
+console.log("Ideology value: ", Ideology);
+
+// Ideology content
+if (Ideology === 0) {
+    ideologyText.textContent = "Moderate";
+} else if (Ideology >= -5 && Ideology <= -1) {
+    ideologyText.textContent = "Third Way";
+} else if (Ideology >= -10 && Ideology <= -6) {
+    ideologyText.textContent = "Blue Dog";
+} else if (Ideology >= 1 && Ideology <= 5) {
+    ideologyText.textContent = "New Deal Democrat";
+} else if (Ideology >= 6 && Ideology <= 13) {
+    ideologyText.textContent = "Progressive";
+} else {
+    ideologyText.textContent = "Undefined";
+}
+    }
+    function updateApprovalRating() {
+        // Update dynamic approval text based on LEGWin variable
+    const approvalText = document.getElementById('approvalText');
+        if (LEGWin == 7) {
+            approvalText.textContent = "Excellent";
+        } else if (LEGWin >= 3 && LEGWin <= 6) {
+            approvalText.textContent = "Moderate";
+        } else if (LEGWin >= 1 && LEGWin <= 2) {
+            approvalText.textContent = "Bad";
+        } else {
+            approvalText.textContent = "Abysmal";
+        }
+    };
+   // Function to update dynamic content for "International Standing"
+function updateInternationalStanding() {
+    const standingText = document.getElementById('dynamicStandingText');
+
+    // Example logic for International Standing text
+    if (FPWin == 5) {
+        standingText.textContent = "Strong alliances and global influence.";
+    } else if (FPWin >= 2 && FPWin <= 4) {
+        standingText.textContent = "Moderate influence abroad, working on key partnerships.";
+    } else if (FPWin == 1) {
+        standingText.textContent = "Emerging influence in some regions.";
+    } else {
+        standingText.textContent = "Limited influence on the global stage.";
+    }
+}
+
+// Function to toggle section display
+function toggleSection(sectionId) {
+    const sections = ['homeContent', 'abroadContent', 'legacyContent', 'oppositionTabs'];
+    sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (id === sectionId) {
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    });
+    document.getElementById('contentText').style.display = 'none';
+
+    // Update Legacy, Ideology, and International Standing when respective sections are opened
+    if (sectionId === 'legacyContent') {
+        updateLegacyAndIdeology();
+    } else if (sectionId === 'abroadContent') {
+        updateInternationalStanding();  // Update the international standing when "The Fight Abroad" is clicked
+    } else if (sectionId === 'homeContent') {
+        updateApprovalRating()
+    }
+}
+    
+        // Event listeners for section links
+        hqContent.querySelector('#home').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('homeContent');
+        });
+    
+        hqContent.querySelector('#abroad').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('abroadContent');
+        });
+    
+        hqContent.querySelector('#opposition').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('oppositionTabs');
+        });
+    
+        hqContent.querySelector('#legacy').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('legacyContent');
+        });
+    
+        // Function to load candidate content dynamically
+function loadCandidateContent(candidate) {
+    document.getElementById('candidateImage').src = candidate.image;
+    document.getElementById('candidateDescription').textContent = candidate.description;
+    document.getElementById('candidateChances').textContent = candidate.chances;
+
+    // Populate Pros
+    document.getElementById('candidatePros').textContent = candidate.pros || '[Pros not available]';
+
+    // Populate Cons
+    document.getElementById('candidateCons').textContent = candidate.cons || '[Cons not available]';
+
+    // Populate Strategy
+    document.getElementById('candidateStrategy').textContent = candidate.strategy || '[Strategy not available]';
+}
+    
+        hqContent.id = 'hqContent';
+    } else {
+        console.log("hqContent already exists. Skipping creation.");
+    }        
+    // Initialize CNN 1990s content
+if (!cnnContent) {
+    console.log("Creating cnnContent for the first time...");
+    
+    cnnContent = document.createElement('div');
+    cnnContent.id = 'cnn1990sContent';
+    cnnContent.innerHTML = `
+    <h1 style="font-family: Arial, sans-serif; color: #333;">CNN - 1990s Edition</h1>
+<div style="background-color: #ccc; padding: 1em; margin-bottom: 20px; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 5px;">Top Headlines</h2>
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+        <li id="headline0" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline0" style="color: #0066cc; text-decoration: none; font-size: 18px;">How will George Bush be remembered?</a>
+            <img src="https://i.imgur.com/zIx7bKP.jpeg" alt="headline1" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline1" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline1" style="color: #0066cc; text-decoration: none; font-size: 18px;">As Inauguration Day draws near, here's what to expect from a Clinton Administration</a>
+            <img src="https://i.imgur.com/0f7T8tP.png" alt="headline2" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline2" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline2" style="color: #0066cc; text-decoration: none; font-size: 18px;">Billboard's Top Songs of 1992</a>
+            <img src="https://i.imgur.com/sK7wulc.png" alt="headline3" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline3" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline3" style="color: #0066cc; text-decoration: none; font-size: 18px;">The dissolution of Czechoslovakia explained</a>
+            <img src="https://i.imgur.com/mQvafh4.png" alt="headline4" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline4" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline4" style="color: #0066cc; text-decoration: none; font-size: 18px;">Bush sends troops to Somalia in "Operation Restore Hope"</a>
+            <img src="https://i.imgur.com/xa27FyI.png" alt="headline5" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+    </ul>
+</div>
+<div style="background-color: #ccc; padding: 1em; margin-bottom: 20px; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 5px;">Technology News</h2>
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+        <li id="headline5" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline5" style="color: #0066cc; text-decoration: none; font-size: 18px;">First "Text Message" sent in groundbreaking development</a>
+            <img src="https://i.imgur.com/YR67Dsg.png" alt="headline6" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline6" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline6" style="color: #0066cc; text-decoration: none; font-size: 18px;">IBM reports massive losses in 1992</a>
+            <img src="https://i.imgur.com/HPDzi2A.png" alt="headline7" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline7" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline7" style="color: #0066cc; text-decoration: none; font-size: 18px;">Who's winning the "Console War"?</a>
+            <img src="https://i.imgur.com/OdMqoUn.png" alt="headline8" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+    </ul>
+</div>
+<div style="background-color: #ccc; padding: 1em; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 5px;">Entertainment News</h2>
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+        <li id="headline8" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline8" style="color: #0066cc; text-decoration: none; font-size: 18px;">Disney's 'Aladdin' continues to dominate the box office</a>
+            <img src="https://i.imgur.com/5nM0tI2.png" alt="headline9" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline9" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline9" style="color: #0066cc; text-decoration: none; font-size: 18px;">David Letterman is moving to CBS</a>
+            <img src="https://i.imgur.com/WLSNzD7.png" alt="headline10" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+        <li id="headline10" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+            <a href="#headline10" style="color: #0066cc; text-decoration: none; font-size: 18px;">Upcoming movies for 1993</a>
+            <img src="https://i.imgur.com/JD8kUu7.png" alt="headline11" style="width: 100%; height: auto; margin-top: 10px;">
+        </li>
+    </ul>
+</div>
+`;
+        document.body.appendChild(cnnContent);
+        console.log("cnnContent created and added to the DOM.");
+    } else {
+        console.log("cnnContent already exists. Skipping creation.");
+    }
+}
+function updateHeadlineWithImage(headlineHref, newHeadline, imageUrl) {
+    if (!cnnContent) {
+        console.error("cnnContent is not initialized.");
+        return;
+    }
+
+    // Find the <a> tag with the specific href
+    const headlineLink = cnnContent.querySelector(`a[href="${headlineHref}"]`);
+
+    if (headlineLink) {
+        const headlineElement = headlineLink.closest('li'); // Get the parent <li> element
+        const headlineImage = headlineElement.querySelector('img');
+
+        // Update headline text and image
+        headlineLink.textContent = newHeadline;
+        headlineImage.src = imageUrl;
+        headlineImage.alt = newHeadline;
+        console.log(`Updated headline with href ${headlineHref} with new text and image.`);
+    } else {
+        console.log(`Headline with href ${headlineHref} not found.`);
+    }
+}
+function openHeadquarter() {
+    initializeContent(); // Ensure content is initialized
+
+    // Now check if cnnContent exists
+if (!cnnContent) {
+    console.log("CNN content is still not initialized.");
+} else {
+    console.log("CNN content is available.");
+}
+
+alert("Headquarters Activated!");
+if (questions) questions.style.display = 'none';
+
+const hqButton = document.getElementById('headquarter_button');
+if (hqButton) hqButton.remove();
+
+hqDiv = document.createElement('div');
+hqDiv.id = 'headquarter';
+hqDiv.style.position = 'absolute';
+hqDiv.style.top = '20%';
+hqDiv.style.left = '30%';
+hqDiv.style.width = '45%';
+hqDiv.style.height = '25%';
+hqDiv.style.backgroundColor = '#f4f4f4';
+hqDiv.style.border = '2px solid #ccc';
+hqDiv.style.borderRadius = '8px';
+hqDiv.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+hqDiv.style.display = 'flex';
+hqDiv.style.flexDirection = 'column';
+hqDiv.style.zIndex = '1000';
+hqDiv.style.cursor = 'move';
+
+// Fullscreen Toggle Button
+let fullscreenButton = document.createElement('button');
+fullscreenButton.textContent = '⛶'; // Fullscreen icon
+fullscreenButton.style.position = 'absolute';
+fullscreenButton.style.top = '10px';
+fullscreenButton.style.left = '10px';
+fullscreenButton.style.backgroundColor = '#2d89ef';
+fullscreenButton.style.color = '#fff';
+fullscreenButton.style.border = 'none';
+fullscreenButton.style.padding = '0.25em 0.5em';
+fullscreenButton.style.borderRadius = '4px';
+fullscreenButton.style.cursor = 'pointer';
+fullscreenButton.onclick = function () {
+  if (!document.fullscreenElement) {
+    hqDiv.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+};
+
+// Close Button
+let closeButton = document.createElement('button');
+closeButton.textContent = 'X';
+closeButton.style.backgroundColor = '#ff5c5c';
+closeButton.style.color = '#fff';
+closeButton.style.border = 'none';
+closeButton.style.padding = '0.25em 0.5em';
+closeButton.style.cursor = 'pointer';
+closeButton.style.position = 'absolute';
+closeButton.style.top = '10px';
+closeButton.style.right = '10px';
+closeButton.onclick = function () {
+  hqDiv.remove();
+};
+
+// Tab Bar
+let tabBar = document.createElement('div');
+tabBar.style.display = 'flex';
+tabBar.style.backgroundColor = '#2d89ef';
+tabBar.style.color = '#fff';
+tabBar.style.padding = '0.5em';
+
+let tab1 = document.createElement('a');
+tab1.textContent = 'Headquarters';
+tab1.href = '#headquarters';
+tab1.style.flexGrow = '1';
+tab1.style.textAlign = 'center';
+tab1.style.cursor = 'pointer';
+tab1.style.padding = '0.5em';
+tab1.style.textDecoration = 'none';
+tab1.style.color = '#fff';
+tab1.onclick = () => switchTab('headquarters');
+
+let tab2 = document.createElement('a');
+tab2.textContent = 'CNN 1990s';
+tab2.href = '#cnn1990s';
+tab2.style.flexGrow = '1';
+tab2.style.textAlign = 'center';
+tab2.style.cursor = 'pointer';
+tab2.style.padding = '0.5em';
+tab2.style.textDecoration = 'none';
+tab2.style.color = '#fff';
+tab2.onclick = () => switchTab('cnn1990s');
+
+tabBar.appendChild(tab1);
+tabBar.appendChild(tab2);
+
+hqDiv.appendChild(fullscreenButton); // Add fullscreen button
+hqDiv.appendChild(closeButton);
+hqDiv.appendChild(tabBar);
+
+let contentArea = document.createElement('div');
+contentArea.style.flexGrow = '1';
+contentArea.style.padding = '1em';
+contentArea.style.overflowY = 'auto';
+contentArea.style.backgroundColor = '#fff';
+
+contentArea.appendChild(hqContent);
+contentArea.appendChild(cnnContent);
+
+hqDiv.appendChild(contentArea);
+document.body.appendChild(hqDiv);
+
+// Switch between tabs
+function switchTab(tab) {
+  if (tab === 'headquarters') {
+    hqContent.style.display = 'block';
+    cnnContent.style.display = 'none';
+    tab1.style.backgroundColor = '#0073e6'; // Active color
+    tab2.style.backgroundColor = '#ddd'; // Inactive color
+  } else if (tab === 'cnn1990s') {
+    hqContent.style.display = 'none';
+    cnnContent.style.display = 'block';
+    tab1.style.backgroundColor = '#ddd'; // Inactive color
+    tab2.style.backgroundColor = '#0073e6'; // Active color
+  }
+}
+
+// Listen for hash changes in the URL to switch tabs automatically
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash;
+  if (hash === '#headquarters') {
+    switchTab('headquarters');
+  } else if (hash === '#cnn1990s') {
+    switchTab('cnn1990s');
+  }
+});
+
+// Default tab switch based on URL
+if (window.location.hash === '#headquarters') {
+  switchTab('headquarters');
+} else {
+  switchTab('cnn1990s');
 }
 }
 
-  // Mutation observer setup
-  let observerRunning = false;
-  let element = document.getElementById('controlElement');
-  if (!element) {
-      let singleObserver = new MutationObserver(handleMutations);
-      singleObserver.observe(document.documentElement, { childList: true, subtree: true });
-      let controlElement = document.createElement('div');
-      controlElement.style.display = 'none';
-      controlElement.id = 'controlElement';
-      document.body.appendChild(controlElement);
-  }
-  
-  // Handle DOM mutations to add the button in case the target is not present
-  function handleMutations(mutationsList, observer) {
-      if (observerRunning) return;
-      observerRunning = true;
-      addGovernmentButton();
-      observer.observe(document.documentElement, { childList: true, subtree: true });
-      observerRunning = false;
-  }
-  
-  // Function to refresh relations view
-  function refreshRelationsView() {
-      let relationsDiv = document.getElementById('relations_view');
-      if (relationsDiv) {
-          relationsDiv.innerHTML = ''; // Clear the existing content
-          setupRelationsArea(relationsDiv, document.querySelector(".inner_window_question"));
+
+    function openMinesweeper() {
+        createWindow(
+            'Retro Minesweeper',
+            '',
+            '',
+            `<iframe src="https://minesweeper.online/" style="width:100%; height:100%; border:none;"></iframe>`
+        );
       }
-  }
-  
+    
+      function createWindow(title, textContent, imgSrc, customContent = '') {
+        // Create the main window div
+        let mainDiv = document.createElement('div');
+        mainDiv.style.position = 'absolute';
+        mainDiv.style.top = '20%'; // Center vertically
+        mainDiv.style.left = '30%'; // Center horizontally
+        mainDiv.style.width = '45%'; // Fixed width
+        mainDiv.style.height = '25%'; // Fixed height
+        mainDiv.style.backgroundColor = '#f4f4f4';
+        mainDiv.style.border = '2px solid #ccc';
+        mainDiv.style.borderRadius = '8px';
+        mainDiv.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        mainDiv.style.display = 'flex';
+        mainDiv.style.flexDirection = 'column';
+        mainDiv.style.zIndex = '1000';
+    
+        // Create the title bar
+        let titleBar = document.createElement('div');
+        titleBar.style.display = 'flex';
+        titleBar.style.justifyContent = 'space-between';
+        titleBar.style.alignItems = 'center';
+        titleBar.style.backgroundColor = '#2d89ef';
+        titleBar.style.color = '#fff';
+        titleBar.style.padding = '0.5em';
+        titleBar.style.cursor = 'move';
+    
+        let titleText = document.createElement('span');
+        titleText.textContent = title;
+        titleBar.appendChild(titleText);
+    
+        let closeButton = document.createElement('button');
+        closeButton.textContent = 'X';
+        closeButton.style.backgroundColor = '#ff5c5c';
+        closeButton.style.color = '#fff';
+        closeButton.style.border = 'none';
+        closeButton.style.padding = '0.25em 0.5em';
+        closeButton.style.cursor = 'pointer';
+        closeButton.onclick = function () {
+            mainDiv.remove();
+        };
+        titleBar.appendChild(closeButton);
+        mainDiv.appendChild(titleBar);
+    
+        // Content area
+        let contentArea = document.createElement('div');
+        contentArea.style.flexGrow = '1';
+        contentArea.style.padding = '1em';
+        contentArea.style.overflowY = 'auto';
+    
+        if (textContent) {
+          let contentText = document.createElement('p');
+          contentText.textContent = textContent;
+          contentArea.appendChild(contentText);
+        }
+    
+        if (imgSrc) {
+          let contentImg = document.createElement('img');
+          contentImg.src = imgSrc;
+          contentImg.style.width = '100px';
+          contentImg.style.marginTop = '1em';
+          contentImg.style.border = '1px solid #ccc';
+          contentArea.appendChild(contentImg);
+        }
+    
+        if (customContent) {
+          contentArea.innerHTML = customContent;
+        }
+    
+        mainDiv.appendChild(contentArea);
+        document.body.appendChild(mainDiv);
+    
+        // Drag functionality
+        let isDragging = false;
+        let offsetX, offsetY;
+    
+        titleBar.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          offsetX = e.clientX - mainDiv.getBoundingClientRect().left;
+          offsetY = e.clientY - mainDiv.getBoundingClientRect().top;
+        });
+    
+        document.addEventListener('mousemove', (e) => {
+          if (isDragging) {
+            mainDiv.style.left = `${e.clientX - offsetX}px`;
+            mainDiv.style.top = `${e.clientY - offsetY}px`;
+          }
+        });
+    
+        document.addEventListener('mouseup', () => {
+          isDragging = false;
+        });
+      }
+    
+      function makeDraggable(element) {
+        let isDragging = false;
+        let offsetX, offsetY;
+    
+        element.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          offsetX = e.clientX - element.getBoundingClientRect().left;
+          offsetY = e.clientY - element.getBoundingClientRect().top;
+        });
+    
+        window.addEventListener('mousemove', (e) => {
+          if (isDragging) {
+            element.style.left = `${e.clientX - offsetX}px`;
+            element.style.top = `${e.clientY - offsetY}px`;
+          }
+        });
+    
+        window.addEventListener('mouseup', () => {
+          isDragging = false;
+        });
+      }
+function handleMutations(mutationsList, observer) {
+    if (observerRunning) return;
+    observerRunning = true;
 
+    addHeadquarterButton()
+
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    observerRunning = false;
+}
+
+
+let observerRunning = false;
+
+var element = document.getElementById('controlElement');
+if (!element) {
+	let singleObserver = new MutationObserver(handleMutations);
+	singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+	var controlElement = document.createElement('div');
+	controlElement.style.display = 'none';
+	controlElement.id = 'controlElement';
+	document.body.appendChild(controlElement);
+}
 ev_dict={};
 pop_dict={};
 
@@ -18391,10 +19053,8 @@ console.log(ev_dict); // Logs the ev_dict object
   function resetVariables(resetCondition) {
     if (resetCondition) {
         FPWin = 0;
-        DOMWin = 0;
         LEGWin = 0;
         Legacy = 0;
-        HillaryRelationship = 0;
     }
 }
 function getTooltips(str) {
