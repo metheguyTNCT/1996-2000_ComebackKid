@@ -612,7 +612,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20002,
         "fields": {
             "question": "question_2_wtc_bombing",
-            "description": "Jesus fucking Christ. Let’s coordinate with the FBI and Governor Cuomo to determine who was responsible and uncover why this happened."
+            "description": "Jesus fucking Christ. We need to know who did this. Put out a quick statement so we can start, and let's coordinate with the FBI and Governor Cuomo to determine who was responsible and uncover why this happened."
         }
     },
     {
@@ -901,14 +901,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_14_oklahoma_bombing",
             "description": "Today our nation joins with you in grief. We mourn with you. We share your hope against hope that some may still survive. We thank all those who have worked so heroically to save lives and to solve this crime and those here in Oklahoma; those who are across this great land and the many who left their own lives to come here to work hand in hand with you.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 140002,
-        "fields": {
-            "question": "question_14_oklahoma_bombing",
-            "description": "Wait, before we make any comments, we need some explanations. Launch an investigation into this and find out who did it, and once he's identified, launch the manhunt."
         }
     },
     {
@@ -8351,16 +8343,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12608,
-        "fields": {
-            "answer": 140002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12612,
         "fields": {
             "answer": 150003,
@@ -8937,26 +8919,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12683,
-        "fields": {
-            "answer": 140002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12684,
-        "fields": {
-            "answer": 140002,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.02998
         }
     },
     {
@@ -10480,16 +10442,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 30,
             "issue_score": 0.075,
             "issue_importance": 1.25
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 897,
-        "fields": {
-            "answer": 140002,
-            "issue": 28,
-            "issue_score": 0.3,
-            "issue_importance": 3
         }
     },
     {
@@ -12841,15 +12793,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 780,
-        "fields": {
-            "answer": 140002,
-            "candidate": 77,
-            "answer_feedback": "As it turns out, the culprit was a man by the name of Timothy McVeigh. His reason for the attack was to avenge the Ruby Ridge, and Waco incidents. You sit and think painfully about how if you hadn't given Reno the giveaway to use the gas, this incident could've possibly been avoided. You couldn't sleep for the rest of the night. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 791,
         "fields": {
             "answer": 210001,
@@ -14620,6 +14563,7 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "The";
     LEGWin += 1; 
     NAFTA += 1; 
     NatHeathScore += 1;
+    Legacy += 1;
     }
   //Russia CYOA (START III SUCCEEDS)
      if (ans == 85001.5){
@@ -14683,10 +14627,6 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "The";
     //OKC Bombing CYOA
     if (ans == 140001){
     PublicSupport += 1;
-    Legacy += 1;
-    }
-    if (ans == 140002){
-    PublicSupport -= 1;
     }
     //Government Shutdown CYOA
     if (ans == 150001){
