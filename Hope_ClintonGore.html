@@ -1406,7 +1406,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35008.5,
         "fields": {
             "question": "candidate_intro_dole",
-            "description": "The ad opens to ominous drums of war follow bright red text of Newt Gingrich and Bob Dole stating they’re against family leave, higher wages  and vaccines for children. Then bright flashing white and blue text of Clinton Gore pop out, with a quick paced drums to boot. Listing your achievements, higher wages, clear air and water 10,000,000 new jobs. The ad ends with a question to the viewer; When it comes to America's future...which drummer do YOU want to march to?"
+            "description": "Dole would have you think he’s a principled bipartisan. That couldn’t be any further from the truth. Dole stands by Gingrich’s uncompromising congress. He’s so buddy-buddy with them he might as well drop Kemp from the ticket and replace him with Gingrich!"
         }
     },
     {
@@ -14291,7 +14291,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35007.5,
             "candidate": 77,
-            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground"
+            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground."
         }
     },
     {
@@ -14300,7 +14300,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35008.5,
             "candidate": 77,
-            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground"
+            "answer_feedback": "The ad opens to ominous drums of war follow bright red text of Newt Gingrich and Bob Dole stating they’re against family leave, higher wages  and vaccines for children. Then bright flashing white and blue text of Clinton Gore pop out, with a quick paced drums to boot. Listing your achievements, higher wages, clear air and water 10,000,000 new jobs. The ad ends with a question to the viewer; When it comes to America's future...which drummer do YOU want to march to?"
         }
     },
     {
@@ -16222,36 +16222,36 @@ function initializeContent() {
                         <li><input type="checkbox" id="taxCuts"> Tax Cuts for the Middle Class</li>
                     </ul>
                 </div>
-                <div id="congress1993" style="margin-top: 20px;">
-    <h3>1993 Congressional Landscape</h3>
+               <div id="congress1993" style="margin-top: 20px;">
+    <h3>The Congressional Landscape</h3>
     <div style="display: flex; justify-content: space-around; margin-top: 10px;">
-        <div>
-            <img id="houseImage" src="https://i.imgur.com/WunYh6Q.png" alt="House Majority" 
+        <div id="houseMajority">
+            <img id="houseImage" src="" alt="House Majority" 
                  style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="houseMajorityText">House Majority (Democratic)</p>
+            <p id="houseMajorityText"></p>
         </div>
-        <div>
-            <img id="senateImage" src="https://i.imgur.com/KjlKeY3.png" alt="Senate Majority" 
+        <div id="senateMajority">
+            <img id="senateImage" src="" alt="Senate Majority" 
                  style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="senateMajorityText">Senate Majority (Democratic)</p>
+            <p id="senateMajorityText"></p>
         </div>
     </div>
     <div id="congressLeaders" style="margin-top: 20px;">
         <h4>Leaders:</h4>
-        <div>
-            <img id="foleyImage" src=https://i.imgur.com/LFHpO6O.png" alt="Tom Foley" 
+        <div id="houseLeader">
+            <img id="houseLeaderImage" src="" alt="House Leader" 
                  style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="foleyText">Speaker of the House: Tom Foley</p>
+            <p id="houseLeaderText"></p>
         </div>
-        <div>
-        <div id="approvalRating" style="margin-top: 20px;">
-                    <h3>Approval on Capitol Hill:</h3>
-                    <p id="approvalText">[insert approval text]</p>
-                </div>
-            <img id="mitchellImage" src="https://i.imgur.com/LVyxC4N.png" alt="George Mitchell" 
+        <div id="senateLeader">
+            <img id="senateLeaderImage" src="" alt="Senate Leader" 
                  style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="mitchellText">Senate Majority Leader: George Mitchell</p>
+            <p id="senateLeaderText"></p>
         </div>
+    </div>
+    <div id="approvalRating" style="margin-top: 20px;">
+        <h3>Approval on Capitol Hill:</h3>
+        <p id="approvalText">[insert approval text]</p>
     </div>
 </div>
             </div>
@@ -16313,7 +16313,7 @@ function initializeContent() {
 const candidates = [
     {
         name: 'Bob Dole',
-        image: 'https://i.imgur.com/7w3SCcy.jpeg',
+        image: 'https://i.imgur.com/vD5hejd.png',
         description: 'Bob Dole is a former Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.',
         pros: 'Highly experienced in Washington, and well-respected among almost all factions of the Republicans. Will do well with the old and rural vote.',
         cons: '73 years old, would be oldest president inagurated. Almost 0 appeal to young voters. 3X loser, with loses in 1976, 1980, and 1988.',
@@ -16321,7 +16321,7 @@ const candidates = [
     },
     {
         name: 'Steve Forbes',
-        image: 'https://i.imgur.com/111fwSZ.png',
+        image: 'https://i.imgur.com/y6q3197.png',
         description: 'Steve Forbes is a businessman and the current Chairman of the Forbes magazine. He is the Grandson of the Forbes founder, B.C. Forbes. As a candidate in 1996, he has been able to play the outsider card, promising great Tax and Economic reform. Due to his lack in political noteriety however, he is unlikely to be nominated.',
         pros: 'Somewhat celebrity status. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
         cons: 'Almost no other policies besides economy. Very limited political and governmental experience. Hated by the establishment, will lose out on their vote. Very toxic campaign, easy to exploit.',
@@ -16329,7 +16329,7 @@ const candidates = [
     },
     {
         name: 'Pat Buchanan',
-        image: 'https://i.imgur.com/hun5B5H.png',
+        image: 'https://i.imgur.com/uA6LEaX.png',
         description: 'Pat Buchanan is a political commentator and radio personality. During the Reagan administration, Buchanan served as the Communications Director, yet was very critical of George Bush. Buchanan ran in 1992 on Populist rhetoric and extreme conservatism. Due to his lack of appeal, he is very unlikely to be nominated.',
         pros: 'Populist Rhetoric and Conservative beliefs that may hit the tone with Middle America. Will do solid in traditional Republican states',
         cons: 'Gaffes, some of his rhetoric bridges on Racism. Little appeal to anyone outside the South and Plain. Will preform horribly everywhere else.',
@@ -16337,7 +16337,7 @@ const candidates = [
     },
     {
         name: 'Lamar Alexander',
-        image: 'https://i.imgur.com/elvxLJ3.png',
+        image: 'https://i.imgur.com/NCUN4Qf.png',
         description: 'Lamar Alexander is a former Governor of Tennessee. During the Bush administration, Alexander served as Secretary of Education. He runs on heavy bipartisanship. Due to his lack of name recognition or charisma, he is very unlikely to be nominated.',
         pros: 'Fellow Southern Governor, might take away some of your support. Pragmatic solution maker. Background in education is sure to help with Rural voters.',
         cons: 'No Charisma or National recognition',
@@ -16345,7 +16345,7 @@ const candidates = [
     },
     {
         name: 'Phil Gramm',
-        image: 'https://i.imgur.com/DTI6cqd.jpeg',
+        image: 'https://i.imgur.com/DYkb9Sz.png',
         description: 'Phil Gramm is the current U.S. Senator of Texas, serving since 1985. As a staunch supporter of budget reduction, Gramm has served on the Senate Budget Committee since 1989, and has pushed for bills aiming to reduce the deficit. Due to his lack of appeal with other groups, he is unlikely to be nominated.',
         pros: 'Strong track record on economic reforms and budget reform. Will do well with fiscal conservatives and buisnessmen.',
         cons: 'Does not have much appeal outside of fiscal conservatives.',
@@ -16353,7 +16353,7 @@ const candidates = [
     },
     {
         name: 'Arlen Specter',
-        image: 'https://i.imgur.com/0CDuvsI.jpeg',
+        image: 'https://i.imgur.com/hARhX2E.png',
         description: 'Arlen Specter is the U.S. Senator of Pennsylvania. A known centrist, Specter has constantly had moderate positions on issues like Abortion, Gay rights, and Immigration. He was also formerly a Democrat, which certainly hurts his standing with the Republican base. Due to his lack of name recognition, he is unlikely to be nominated.',
         pros: 'Appeals to centrists and moderates due to his social positions. Might take votes away from you in the Midwest as well.',
         cons: 'Many Republicans view him with uncertainty. Party may not be ready to back him.',
@@ -16361,7 +16361,7 @@ const candidates = [
     },
     {
         name: 'Pete Wilson',
-        image: 'https://i.imgur.com/iVIF2j8.png',
+        image: 'https://i.imgur.com/ZPQArJj.png',
         description: 'Pete Wilson is a former U.S. Senator and the current Governor of California. Most known for his controversial Immigration stances and his support of Proposition 187, Wilson inherited the worst Californian economy since the Great Depression. While Wilson has certainly built a national image of his own, his own state is growing from his ideology. He is unlikely to be nominated.',
         pros: 'May make the West Cost competitive, has a decent national image.',
         cons: 'Policies on Immigration and Proposition 187 may hinder his support.',
@@ -16424,6 +16424,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Undefined";
 }
     }
+
     function updateApprovalRating() {
         // Update dynamic approval text based on LEGWin variable
     const approvalText = document.getElementById('approvalText');
@@ -16436,6 +16437,69 @@ if (Ideology === 0) {
         } else {
             approvalText.textContent = "Abysmal";
         }
+
+        // Update the page dynamically based on DemCongress value
+    if (DemCongress === 1) {
+        // Democratic Congress
+        // Majority Images and Texts
+        document.getElementById("houseImage").src = "https://i.imgur.com/WunYh6Q.png";
+        document.getElementById("houseMajorityText").innerText = "House Majority: Democratic";
+
+        document.getElementById("senateImage").src = "https://i.imgur.com/KjlKeY3.png";
+        document.getElementById("senateMajorityText").innerText = "Senate Majority: Democratic";
+
+        // Leaders
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/MCkGBGQ.png";
+        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Tom Foley";
+
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/hf7tBBN.png";
+        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: George Mitchell";
+    } else if (SlimGOPCongress == 1) {
+        // Republican Congress
+        // Majority Images and Texts
+        document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
+        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
+
+        document.getElementById("senateImage").src = "https://i.imgur.com/NxUzkfS.png"; // Replace with actual URL
+        document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
+
+        // Leaders
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
+
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+    } else if (GOPSupermajority == 1) {
+        // Republican Congress
+        // Majority Images and Texts
+        document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
+        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
+
+        document.getElementById("senateImage").src = "https://i.imgur.com/iDYqoaJ.png"; // Replace with actual URL
+        document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
+
+        // Leaders
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
+
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+    } else {
+        // Republican Congress
+        // Majority Images and Texts
+        document.getElementById("houseImage").src = "https://i.imgur.com/hhN5EAQ.png"; // Replace with actual URL
+        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
+
+        document.getElementById("senateImage").src = "https://i.imgur.com/t9kNW9d.png"; // Replace with actual URL
+        document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
+
+        // Leaders
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
+
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+    }
     };
    // Function to update dynamic content for "International Standing"
 function updateInternationalStanding() {
