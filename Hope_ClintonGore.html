@@ -16313,7 +16313,7 @@ function initializeContent() {
 const candidates = [
     {
         name: 'Bob Dole',
-        image: 'https://i.imgur.com/vD5hejd.png',
+        image: 'https://i.imgur.com/5nL1HEB.png',
         description: 'Bob Dole is a former Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.',
         pros: 'Highly experienced in Washington, and well-respected among almost all factions of the Republicans. Will do well with the old and rural vote.',
         cons: '73 years old, would be oldest president inagurated. Almost 0 appeal to young voters. 3X loser, with loses in 1976, 1980, and 1988.',
@@ -16368,7 +16368,57 @@ const candidates = [
         strategy: 'Present a balanced approach to immigration and focus on economic successes.'
     }
 ];
-    
+    // Define updateOppositionTabs function first
+function updateOppositionTabs(candidate) {
+    const candidateImage = document.getElementById('candidateImage');
+    const candidateDescription = document.getElementById('candidateDescription');
+    const candidatePros = document.getElementById('candidatePros');
+    const candidateCons = document.getElementById('candidateCons');
+    const candidateStrategy = document.getElementById('candidateStrategy');
+
+    // Update content dynamically
+    candidateImage.src = candidate.image;
+    candidateDescription.textContent = candidate.description;
+
+    // Update Pros
+    candidatePros.innerHTML = '';
+    candidate.pros.split('. ').forEach(pro => {
+        if (pro.trim()) {
+            const li = document.createElement('li');
+            li.textContent = pro.trim();
+            candidatePros.appendChild(li);
+        }
+    });
+
+    // Update Cons
+    candidateCons.innerHTML = '';
+    candidate.cons.split('. ').forEach(con => {
+        if (con.trim()) {
+            const li = document.createElement('li');
+            li.textContent = con.trim();
+            candidateCons.appendChild(li);
+        }
+    });
+
+    // Update Strategy
+    candidateStrategy.textContent = candidate.strategy;
+}
+
+function updateCandidateDescription(candidateName, newDescription) {
+    // Find the candidate in the array
+    const candidate = candidates.find(c => c.name === candidateName);
+    if (!candidate) {
+        console.error('Candidate not found!');
+        return;
+    }
+
+    // Update the candidate's description
+    candidate.description = newDescription;
+
+    // Update the DOM to reflect the new description
+    updateOppositionTabs(candidate);
+}
+
         // Populate the candidate tabs dynamically
         const tabsContainer = hqContent.querySelector('#tabs');
         candidates.forEach(candidate => {
@@ -16449,7 +16499,7 @@ if (Ideology === 0) {
         document.getElementById("senateMajorityText").innerText = "Senate Majority: Democratic";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/MCkGBGQ.png";
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/mgACXuh.png";
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Tom Foley";
 
         document.getElementById("senateLeaderImage").src = "https://i.imgur.com/hf7tBBN.png";
@@ -16460,45 +16510,48 @@ if (Ideology === 0) {
         document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
         document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
 
-        document.getElementById("senateImage").src = "https://i.imgur.com/NxUzkfS.png"; // Replace with actual URL
+        document.getElementById("senateImage").src = "https://i.imgur.com/JSufjgz.png"; // Replace with actual URL
         document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/zy0Htu0.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
-        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+        updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
     } else if (GOPSupermajority == 1) {
         // Republican Congress
         // Majority Images and Texts
         document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
         document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
 
-        document.getElementById("senateImage").src = "https://i.imgur.com/iDYqoaJ.png"; // Replace with actual URL
+        document.getElementById("senateImage").src = "https://i.imgur.com/b0gT9Jn.png"; // Replace with actual URL
         document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/zy0Htu0.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
-        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+        updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
     } else {
         // Republican Congress
         // Majority Images and Texts
         document.getElementById("houseImage").src = "https://i.imgur.com/hhN5EAQ.png"; // Replace with actual URL
         document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
 
-        document.getElementById("senateImage").src = "https://i.imgur.com/t9kNW9d.png"; // Replace with actual URL
+        document.getElementById("senateImage").src = "https://i.imgur.com/Eif6mNc.png"; // Replace with actual URL
         document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/I164ufy.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/zy0Htu0.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
-        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/vD5hejd.png"; // Replace with actual URL
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
+        updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
     }
     };
    // Function to update dynamic content for "International Standing"
