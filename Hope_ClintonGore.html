@@ -7988,7 +7988,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 15004.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.051
+            "global_multiplier": 0.03
         }
     },
     {
@@ -16792,6 +16792,14 @@ closeButton.style.position = 'absolute';
 closeButton.style.top = '10px';
 closeButton.style.right = '10px';
 closeButton.onclick = function () {
+  // Close all sections when close button is clicked
+  const sections = ['homeContent', 'abroadContent', 'legacyContent', 'oppositionTabs'];
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    section.style.display = 'none';
+  });
+
+  // Optionally remove content or parent div
   hqDiv.remove();
 };
 
