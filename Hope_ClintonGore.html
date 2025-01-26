@@ -259,14 +259,14 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
-        "model": "campaign_trail.question",
-        "pk": "question_21_iraq_airstrikes",
-        "fields": {
-            "priority": 0,
-            "description": "Iraq, under that kook Saddam Hussein, has escalated military aggression against Kurdish forces in Northern Iraq, violating no-fly zone agreements. Some Senators, cabinet officials, and military leaders are calling for airstrikes to enforce the zones and prevent further violations. Will you give in to the demands?",
-            "likelihood": 1
-        }
-    },
+      "model": "campaign_trail.question",
+      "pk": "question_21_iraq_airstrikes",
+      "fields": {
+          "priority": 0,
+          "description": "A Bloody War is happening between the Iraqi Government led by Saddam Hussein and what is formally known as “Iraqi Kurdistan”. As of today, the Iraqi government has launched missiles into Kurdistani territory in violation of their No-Fly Zone and in order to initiate an offensive in the  War. You have called an emergency meeting with the Joint Chiefs of Staff which has led you to two conclusions. That being either that you would bomb Iraq into Submission or issue a complaint with the International Community. Sitting in your chair, you consider your options on what to do.",
+          "likelihood": 1
+      }
+  },
     {
         "model": "campaign_trail.question",
         "pk": "question_22_1996_election",
@@ -897,22 +897,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 120001,
-        "fields": {
-            "question": "question_12_mexico_bailout",
-            "description": "I will send $100 billion to the Mexican government immediately. We must stand by our close ally in this crisis and help Mexico recover to its pre-recession strength. If we don't act now, the effects will ripple back to the U.S. economy as well."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 120002,
-        "fields": {
-            "question": "question_12_mexico_bailout",
-            "description": "I will absolutely send a $45 billion package to the government of Mexico. We have to stabilize their economy and protect the future of NAFTA. This simply comes down to our relationship with our neighbors and the long-term prosperity of both our nations. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 140001,
         "fields": {
             "question": "question_14_oklahoma_bombing",
@@ -949,14 +933,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_15_republican_budget",
             "description": "Did the Republicans really step on the third rail like that? Raise hell about this in our campaigning, tie every swing-seat Republican to this travesty. We can't let an opportunity like this go to waste."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 160002,
-        "fields": {
-            "question": "question_16_monica",
-            "description": "Uh, nothing... Al? Do you think you could take over the meeting?... Outside the Oval? I just realized I’ve got a few calls scheduled in about five minutes, and I need to take them."
         }
     },
     {
@@ -1029,30 +1005,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_19_pr_and_wo_act",
             "description": "They’re going to bitch, and they’re going to keep bitching, but this... this goes too far. My hand’s shaking, and that’s not something I take lightly. We’ve worked hard to get here, but this bill doesn’t sit right with me. I’m not going to sign it."
-        }
-    },
-	{
-        "model": "campaign_trail.answer",
-        "pk": 200001,
-        "fields": {
-            "question": "question_21_iraq_airstrikes",
-            "description": "You bet. It's simple, really, we cannot let Saddam get away with this. You have my full authorization to conduct decisive, targeted strikes, focused, strategic, and deep enough to send an unmistakable message: the United States does not tolerate threats to global peace. \n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 200002,
-        "fields": {
-            "question": "question_21_iraq_airstrikes",
-            "description": "Well, you know, obviously, we stand against what Saddam has done, it’s unacceptable and destabilizing, but I’ve got to say, a military strike right now doesn’t feel proportional to the situation. Let’s take a step back, folks. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 200003,
-        "fields": {
-            "question": "question_21_iraq_airstrikes",
-            "description": "You bet. We are going to bomb the shit out of Iraq, we cannot let Saddam get away with this. You have my full authorization to carry out decisive military strikes, targeting Baghdad and other key areas. The United States and its allies will not stand by and let this happen."
         }
     },
     {
@@ -1159,6 +1111,22 @@ campaignTrail_temp.answers_json = [
             "description": "I believe that the Internet is a tool that can be used to both our advantage and disadvantage. Jay Rockefeller's been talking about putting regulations on the Web, and I'm inclined to agree with him.\n"
         }
     },
+    {
+      "model": "campaign_trail.answer",
+      "pk": 200001,
+      "fields": {
+          "question": "question_21_iraq_airstrikes",
+          "description": "What Iraq has done is merely nothing but a power play for regional dominance and it would not sit well with our voters to let suppression of minorities go under our noses. Why don’t you bring in a telephone so I can get a call over to Perry over at the Pentagon, this is the day the dam breaks"
+      }
+  },
+  {
+      "model": "campaign_trail.answer",
+      "pk": 200002,
+      "fields": {
+          "question": "question_21_iraq_airstrikes",
+          "description": "I know that the United States needs to be seen as the Strongest Nation on Earth, but if we bomb Iraq, we would be portraying ourselves as bloodthirsty killers attacking a Nation that cannot even stand on their own two feet without taking a tumble. We will issue a diplomatic statement denouncing the Iraqi regime and potentially bringing it to the United Nations."
+      }
+  },
 
 	// Separation between "regular" questions and "stored" questions.
     {
@@ -1622,7 +1590,7 @@ campaignTrail_temp.answers_json = [
         "pk": 45002.5,
         "fields": {
             "question": "insert_bill_wins",
-            "description": "Yes. The election season’s still a little fresh in my head, and I just need a second to be somewhere else than Washington. Additionally, I can’t wait to talk to my fellow leaders.\n"
+            "description": "Tonight is a night for joy not just for us here but for all Americans. For the 53nd time in our history our people have made their quiet and deliberate decision. They have come together with their powerful voice and expressed their will. Tonight we celebrate the miracle of America. Tomorrow we greet the dawn and begin our work anew.\n"
         }
     },
     {
@@ -7613,16 +7581,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1155,
-        "fields": {
-            "answer": 100003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1159,
         "fields": {
             "answer": 170002,
@@ -8383,26 +8341,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12586,
-        "fields": {
-            "answer": 120001,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12587,
-        "fields": {
-            "answer": 120001,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12606,
         "fields": {
             "answer": 140001,
@@ -8885,7 +8823,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12669,
         "fields": {
-            "answer": 160002,
+            "answer": 160003,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.012493
@@ -8897,38 +8835,8 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 160003,
             "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.012493
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12669,
-        "fields": {
-            "answer": 160002,
-            "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.011
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12669,
-        "fields": {
-            "answer": 160003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.011
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12669,
-        "fields": {
-            "answer": 160002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.1127137
         }
     },
     {
@@ -9003,16 +8911,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12676,
-        "fields": {
-            "answer": 100003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12677,
         "fields": {
             "answer": 100004,
@@ -9029,26 +8927,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12679,
-        "fields": {
-            "answer": 120002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12680,
-        "fields": {
-            "answer": 120002,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.011
         }
     },
     {
@@ -9559,66 +9437,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12824,
-        "fields": {
-            "answer": 200001,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12827,
-        "fields": {
-            "answer": 200002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12831,
-        "fields": {
-            "answer": 200003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12832,
-        "fields": {
-            "answer": 200002,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12833,
-        "fields": {
-            "answer": 200003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12834,
-        "fields": {
-            "answer": 200003,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": 0.015
         }
     },
     {
@@ -10550,7 +10368,27 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 80,
             "global_multiplier": 0.01
         }
-    }
+    },
+    {
+      "model": "campaign_trail.answer_score_global",
+      "pk": 12700,
+      "fields": {
+          "answer": 200001,
+          "candidate": 77,
+          "affected_candidate": 77,
+          "global_multiplier": 0.02
+      }
+  },
+  {
+      "model": "campaign_trail.answer_score_global",
+      "pk": 12703,
+      "fields": {
+          "answer": 200002,
+          "candidate": 77,
+          "affected_candidate": 77,
+          "global_multiplier": -0.02
+      }
+  }
 ]
 
 campaignTrail_temp.answer_score_issue_json = [
@@ -10646,42 +10484,12 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 895,
-        "fields": {
-            "answer": 120001,
-            "issue": 29,
-            "issue_score": 0.5,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 896,
-        "fields": {
-            "answer": 120001,
-            "issue": 30,
-            "issue_score": 0.2,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 897,
         "fields": {
             "answer": 140002,
             "issue": 28,
             "issue_score": 0.3,
             "issue_importance": 3
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 902,
-        "fields": {
-            "answer": 120002,
-            "issue": 29,
-            "issue_score": 0.3,
-            "issue_importance": 2
         }
     },
     {
@@ -11156,36 +10964,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 12828,
-        "fields": {
-            "answer": 200002,
-            "issue": 30,
-            "issue_score": 0.33,
-            "issue_importance": 1.6
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 12829,
-        "fields": {
-            "answer": 200003,
-            "issue": 30,
-            "issue_score": -0.2,
-            "issue_importance": 1.6
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 12829,
-        "fields": {
-            "answer": 200001,
-            "issue": 30,
-            "issue_score": -0.1,
-            "issue_importance": 1.6
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 1281833,
         "fields": {
             "answer": 12818912,
@@ -11233,7 +11011,27 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_score": 0.3,
             "issue_importance": 2
         }
-    }
+    },
+    {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12701,
+      "fields": {
+          "answer": 200001,
+          "issue": 30,
+          "issue_score": -0.6,
+          "issue_importance": 2
+      }
+  },
+  {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12704,
+      "fields": {
+          "answer": 200002,
+          "issue": 30,
+          "issue_score": 0.4,
+          "issue_importance": 2
+      }
+  }
 ]
 
 campaignTrail_temp.answer_score_state_json = [
@@ -12962,15 +12760,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 757,
-        "fields": {
-            "answer": 160002,
-            "candidate": 77,
-            "answer_feedback": "''Hi, Mr. President. I'm Monica Lewinsky.'' Her voice was confident, almost daring. ''I know who you are,'' you replied with a grin, locking eyes for just a moment too long. Before you knew it, you were alone, together in a moment so reckless, so consuming, it felt too good to question, but the shadow, and guilt of it stayed."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 766,
         "fields": {
             "answer": 100001,
@@ -13061,24 +12850,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 787,
-        "fields": {
-            "answer": 120001,
-            "candidate": 77,
-            "answer_feedback": "You thought it was a little much, but you knew it'd get the job done. Mexico is thankfull for this payout, but Ross Perot capitalizes on this, deeming it another fundraiser to NAFTA, and you lose overall midwestern support, but they'll surely fall in line if they know what's good for them."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 788,
-        "fields": {
-            "answer": 120002,
-            "candidate": 77,
-            "answer_feedback": "You thought this was a reasonable amount for a situation like this, and to many in the country and media, it is. The only dissatisfied are hardliners who believe you shouldn't have given anything to Mexico."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 791,
         "fields": {
             "answer": 210001,
@@ -13110,7 +12881,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 100003,
             "candidate": 77,
-            "answer_feedback": "You'd swore you were diferent, and could actually make peace with the most isolated country on Earth. But you knew It was too good to last. Kim Jong Il, like his father before him, accuses you of trying to trick him into disarming the nation. In response, you order the continuation of the joint US-South Korean military exercise, Team Spirit."
+            "answer_feedback": "Shocking everyone, North Korea says it’ll begin to freeze it’s nuclear assets for the betterment of peace on the peninsula. Such a sudden change in direction has many questioning if it’s too good to be true, but you don’t let get to you. You’ve done what many thought possible, planting the seeds of united Korea. All thanks to you, and, Jimmy Carter, of course."
         }
     },
     {
@@ -13835,50 +13606,31 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12825,
-        "fields": {
-            "answer": 200001,
-            "candidate": 77,
-            "answer_feedback": "The strikes were aimed primarily at military targets and were a success, but in the end, they don't accomplish much, other than scaring Saddam, but at least it gives you some great press in the papers"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12826,
-        "fields": {
-            "answer": 200002,
-            "candidate": 77,
-            "answer_feedback": "Perry is furious when he hears the news, and the press is having a field day slandering your indecisiveness. They're calling you vacillating and weak. You knew you made a mistake and authorized another bombing, but the damage had already been done.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12830,
-        "fields": {
-            "answer": 200003,
-            "candidate": 77,
-            "answer_feedback": "The strikes, were successful. However, the American people are appaled as to why you would chose civilian areas. The press focuses relentlessly on the civilian impact of your strikes against Iraq, eagerly showing the tearful faces of injured children. For fuck's sake."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 1272219,
         "fields": {
             "answer": 45002.5,
             "candidate": 77,
-            "answer_feedback": "The trip goes completely fine, besides a scare when a bomb was found under a bridge on your route, thankfully it was intercepted by Secret Service before things could go worse.\n"
+            "answer_feedback": "''I am more grateful than I can say. You have given me an opportunity and a responsibility that comes to few people. I will do my best. And together, we will—we will—build that bridge to the 21st century. Thank you. Good night, and God bless America.''\n"
         }
     },
     {
-        //Cutoff between Clinton and Gore Feedback
-        "model": "campaign_trail.answer_feedback",
-        "pk": 1272223,
-        "fields": {
-            "answer": 45001.5,
-            "candidate": 77,
-            "answer_feedback": "''...Hillary, do you really want to take this on?” Bill asks, his eyes narrowing thoughtfully as he leans back in his chair. “Because if anyone can do it, it’s you. You’re the smartest, hardest-working person I know, and New York would be lucky to have you.''"
-        }
-    },
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12699,
+      "fields": {
+          "answer": 200001,
+          "candidate": 77,
+          "answer_feedback": "Guided Missiles take off from the USS Laboon, Shiloh and California, making their destination to Air Defense targets in Southern Iraq which gives Saddam a black eye. With the strikes as cover, American soldiers evacuate 700 members of the INC and 6,000 kurds from Northern Iraq.\nEffects "
+      }
+  },
+  {
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12702,
+      "fields": {
+          "answer": 200002,
+          "candidate": 77,
+          "answer_feedback": "Eventually, the British decide to take action for themselves and launch Guided Missiles from the Cardiff and Glasgow on October 9th. The Empire has made their stand in Iraq while you appear weak to the American Public."
+      }
+  },
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 12811,
@@ -14928,16 +14680,6 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "The";
     PublicSupport -= 3;
     LEGWin -= 1;
     }
-    //Peso Crisis CYOA
-    if (ans == 120001){
-    PublicSupport -= 1;
-    FPWin -= 1;
-    Ideology += 1;
-    }
-    if (ans == 120002){
-    FPWin += 1;
-    Ideology -= 1;
-    }
     //OKC Bombing CYOA
     if (ans == 140001){
     PublicSupport += 1;
@@ -15025,20 +14767,12 @@ PublicSupport += 1;
     }
     //Desert Strike CYOA
     if (ans == 200001){
-    PublicSupport -= 1;
-    FPWin -= 1;
+    PublicSupport += 1;
+    FPWin += 1;
     }
     if (ans == 200002){
     PublicSupport -= 1;
     FPWin -= 1;
-    }
-    if (ans == 200003){
-    PublicSupport -= 1;
-    FPWin -= 1;
-    } 
-    //APEC Summit CYOA
-    if (ans == 45002.5) {
-    FPWin +=1;
     }
     //2nd Term CYOA
 
@@ -15378,7 +15112,7 @@ if (e.question_number+1 == 16){
             console.log("Congrats! You ''won'' the 1994 midterms!")
     }
     }
-    if (e.question_number+1 == 23){
+    if (e.question_number+1 == 22){
     if (Ideology == 6 && GOPSupermajority == 1) {
         console.log("Executing block: LibSocial === 2 && GOPSupermajority === 1");
                     question_insert("question_17_yugoslavia", 
@@ -15533,7 +15267,7 @@ if (e.question_number+1 == 16){
                 
         }
     }
-    if (e.question_number+1 == 23){
+    if (e.question_number+1 == 22){
     if (Ideology === 6 && GOPSupermajority === 1) {
      ctsAchievement("Pitchfork Pat");
                     } else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority === 1) {
