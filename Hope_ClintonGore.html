@@ -179,15 +179,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_12_mexico_bailout",
-        "fields": {
-            "priority": 3,
-            "description": "Well, even after the circus that was the midterms, Christopher's informed you of the chaos erupting in Mexico. The government has devalued the peso by abandoning its exchange rate policy, causing its value to plummet overnight. Now, the Mexican president is urgently requesting American intervention. The strength of the recently signed NAFTA is really being put to the test early, huh? Protectionists and anti-NAFTA activists are blaming the agreement, while others are refusing to support a full government bailout. How are you going to respond?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "question_14_oklahoma_bombing",
         "fields": {
             "priority": 3,
@@ -14535,10 +14526,11 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "The";
     }
     //Crime CYOA
     if (ans == 70002){
-    Ideology += 1;
+    Ideology += 2;
     }
     if (ans == 70001){
-    Ideology -= 1;
+    Ideology -= 2;
+    LEGWin += 1;
     }
     //Somalia CYOA
     if (ans == 80001){
@@ -14723,14 +14715,19 @@ PublicSupport += 1;
     if (ans == 220004){
     PublicSupport += 2;
     }
+    // Get the element from the DOM
+const ideologyText = document.getElementById("ideologyText");
+if (e.question_number+1 == 22){
     //Bob Dole CYOA
-    if (ans == 170001){
+    if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && RepublicanRevolution == 1 && ans == 170001){
+      DoleNom += 1;
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E4463E";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/pz9sYma.jpeg";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
 }
-if (ans == 170002){
+if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && RepublicanRevolution == 1 && ans == 170002){
+  DoleNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E4463E";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/pz9sYma.jpeg";
@@ -14766,14 +14763,15 @@ if (ans == 210003){
     campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/vh8o1AN.png';
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/6WTOUwW.png';
 }
-if(ans == 170003){
+if(Ideology == 0 || Ideology >= -5 && Ideology <= -1 && RepublicanRevolution == 1 && ans == 170003){
+  DoleNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E4463E";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/pz9sYma.jpeg";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
 
 //Pat Buchanan CYOA
-} else if (Ideology == 6 && GOPSupermajority == 1 && ans == 170001){
+} else if (Ideology >= 6 && Ideology <= 13 && GOPSupermajority == 1 && ans == 170001){
     BuchananNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -14783,7 +14781,7 @@ if(ans == 170003){
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "Lamm";
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 }
-if (Ideology == 6 && GOPSupermajority == 1 && ans == 170002){
+if (Ideology >= 6 && Ideology <= 13 && GOPSupermajority == 1 && ans == 170002){
     BuchananNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -14793,7 +14791,7 @@ campaignTrail_temp.candidate_json[3]["fields"].last_name = "Lamm";
 campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
 campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 }
-if (Ideology == 6 && GOPSupermajority == 1 && ans == 170003){
+if (Ideology >= 6 && Ideology <= 13 && GOPSupermajority == 1 && ans == 170003){
     BuchananNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#800020";
@@ -14804,21 +14802,21 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
 campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 
 //Specter CYOA
-} else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170001){
+} else if (Ideology >= -6 && Ideology <= -10 && ans == 170001){
     SpecterNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170002){
+if (Ideology >= -6 && Ideology <= -10 && ans == 170002){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if(Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1 && ans == 170003){
+if(Ideology >= -6 && Ideology <= -10 && ans == 170003){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
@@ -14826,63 +14824,63 @@ campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 
 //Gramm CYOA
-} else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170001){
+} else if (Ideology >= 6 && Ideology <= 13 && SlimGOPCongress == 1 || RepublicanRevolution == 1 && ans == 170001){
     GrammNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
-if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170002){
+if (Ideology >= 6 && Ideology <= 13 && SlimGOPCongress == 1 || RepublicanRevolution == 1 && ans == 170002){
     GrammNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
-if(Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1 && ans == 170003){
+if(Ideology >= 6 && Ideology <= 13 && SlimGOPCongress == 1 || RepublicanRevolution == 1 && ans == 170003){
     GrammNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/jR55oZB.jpeg";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 
-} else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170001){
+} else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && SlimGOPCongress == 1 && ans == 170001){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 }
-if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170002){
+if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && SlimGOPCongress == 1 && ans == 170002){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 }
-if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1 && ans == 170003){
+if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && SlimGOPCongress == 1 && ans == 170003){
     LamarNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B2232F";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/ASUAmNe.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
 //Pete Wilson CYOA
-} else if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170001){
+} else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && GOPSupermajority == 1 && ans == 170001){
     WilsonNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
 }
-if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170002){
+if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && GOPSupermajority == 1 && ans == 170002){
     WilsonNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
 }
-if (Ideology == -7 && RepublicanRevolution == 1 && ans == 170003){
+if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && GOPSupermajority == 1 && ans == 170003){
     WilsonNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
@@ -14914,6 +14912,7 @@ if (ans == 170003){
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#800080";
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+}
 }
 if (e.question_number+1 == 16){
      if (e.player_answers.includes(40002) && (110004) && GotHealthcare == 1){
@@ -15053,84 +15052,117 @@ if (e.question_number+1 == 16){
     }
     }
     if (e.question_number+1 == 22){
-    if (Ideology == 6 && GOPSupermajority == 1) {
-        console.log("Executing block: LibSocial === 2 && GOPSupermajority === 1");
-                    question_insert("question_17_yugoslavia", 
-                    {
-                        "model": "campaign_trail.question",
-                    "pk": "candidate_intro_buchanan",
-                    "fields": {
-                        "priority": 3,
-                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A new figure stands before the Republican delegates, speaking of a brighter future. He criticizes you for shutting down Congress, even going so far as to call you ''America's First Dictator.'' ",
-                        "likelihood": 1
-                    }
-                        }
-                    
-                    );
+      if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
+        // Bob Dole Inserters
+        if (RepublicanRevolution == 1)  {
+              question_insert("question_17_yugoslavia", 
+              {
+                 
+  "model": "campaign_trail.question",
+  "pk": "candidate_intro_dole",
+  "fields": {
+  "priority": 0,
+  "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in the government, his honorable service in the Second World War, and a promise to reduce income tax by 15% across-the-board. “Let me be the bridge to an America than only the unknowing call myth. Let me be the bridge to a time of tranquility, faith and confidence in action.” \nYou feel… guilty of what you must do. He’s out of his weight class. Out of time. But politics is politics. You have to beat him either way, and with the momentum rising in your favor… How will you channel it?\n",
+  "likelihood": 1
+  }
+                  }
+              
+              );
+              question_insert("question_21_iraq_airstrikes", 
+  {
+             "model": "campaign_trail.question",
+  "pk": "debate_dole",
+  "fields": {
+      "priority": 0,
+      "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+      "likelihood": 1
+  }
+  }
+  );
+  // Alexander Inserters
+      } else if (SlimGOPCongress == 1) {
+        question_insert("question_17_yugoslavia", 
+          {
+              "model": "campaign_trail.question",
+          "pk": "candidate_intro_alexander",
+          "fields": {
+              "priority": 3,
+              "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A folksy politician stands before the Republican delegates, speaking of his vision for America. He criticizes you for governing as ''simply a liberal,'' presenting his own common-sense conservative worldview, all while weaving in anecdotes from his time as Tennessee's Governor. ",
+              "likelihood": 1
+          }
+              }
+          
+          );
+              question_insert("question_21_iraq_airstrikes", 
+    {
+              "model": "campaign_trail.question",
+    "pk": "debate_alexander",
+    "fields": {
+      "priority": -2,
+      "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+      "likelihood": 1
+      }
+    }
+          );
+    // Wilson Inserters 
+    
+ } else if (GOPSupermajority == 1) {
+  question_insert("question_17_yugoslavia", 
+    {
+        
+         "model": "campaign_trail.question",
+"pk": "candidate_intro_wilson",
+"fields": {
+    "priority": 0,
+    "description": "On the final day of the RNC in San Diego, Pete Wilson and Judd Gregg take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+    "likelihood": 1
+}
+        }
+    
+    );
     question_insert("question_21_iraq_airstrikes", 
-            {
-                        "model": "campaign_trail.question",
-            "pk": "debate_buchanan",
-            "fields": {
-                "priority": -2,
-                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-                "likelihood": 1
-                }
-            }
-            );
+{
+   "model": "campaign_trail.question",
+"pk": "debate_wilson",
+"fields": {
+"priority": 0,
+"description": "You’re at Hartford, Connecticut. To your right is Governor Wilson. Wilson tries to match the energy you brought to the 1992 Elections and he seems to be doing very well. Of course, he is running a race against a Popular Incumbent in a sound Economy and Security situation. Of course, it’s best to try and direct the conversation your way if we want to get anywhere at all, what to say Bill?\n",
+"likelihood": 1
+}
+}
+);
+
+} 
+                    } else if (Ideology >= 6 && Ideology <= 13) {
+                      // Buchanan Inserters
+                      if (GOPSupermajority == 1) {
+                        qquestion_insert("question_17_yugoslavia", 
+                          {
+                              "model": "campaign_trail.question",
+                          "pk": "candidate_intro_buchanan",
+                          "fields": {
+                              "priority": 3,
+                              "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A new figure stands before the Republican delegates, speaking of a brighter future. He criticizes you for shutting down Congress, even going so far as to call you ''America's First Dictator.'' ",
+                              "likelihood": 1
+                          }
+                              }
+                          
+                          );
+          question_insert("question_21_iraq_airstrikes", 
+                  {
+                              "model": "campaign_trail.question",
+                  "pk": "debate_buchanan",
+                  "fields": {
+                      "priority": -2,
+                      "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                      "likelihood": 1
+                      }
+                  }
+                  );
+                    // Gramm Inserters 
                     
-                    } else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority == 1) {
-        console.log("Executing block: LibSocial === 3 && GOPSupermajority === 1");
-                    question_insert("question_17_yugoslavia", 
-                    {
-                        "model": "campaign_trail.question",
-                    "pk": "candidate_intro_alexander",
-                    "fields": {
-                        "priority": 3,
-                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. A folksy politician stands before the Republican delegates, speaking of his vision for America. He criticizes you for governing as ''simply a liberal,'' presenting his own common-sense conservative worldview, all while weaving in anecdotes from his time as Tennessee's Governor. ",
-                        "likelihood": 1
-                    }
-                        }
-                    
-                    );
-                        question_insert("question_21_iraq_airstrikes", 
-            {
-                        "model": "campaign_trail.question",
-            "pk": "debate_alexander",
-            "fields": {
-                "priority": -2,
-                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-                "likelihood": 1
-                }
-            }
-                    );
-                    } else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1) {
-        console.log("Executing block: LibSocial === 2 && RepublicanRevolution == 1");
-                    question_insert("question_17_yugoslavia", 
-                    {
-                        "model": "campaign_trail.question",
-                    "pk": "candidate_intro_specter",
-                    "fields": {
-                        "priority": 3,
-                        "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. Senator Arlen Specter stands before the delegates. He talks about a better future, calling out your leadership for the lack of bipartisanship, accusing you of playing politics rather than governing. He even dares to say that your actions have turned Washington into ''a place where compromise is forgotten.'' ",
-                        "likelihood": 1
-                    }
-                        }
-                    
-                    );
-    question_insert("question_21_iraq_airstrikes", 
-            {
-                        "model": "campaign_trail.question",
-            "pk": "debate_specter",
-            "fields": {
-                "priority": -2,
-                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
-                "likelihood": 1
-                }
-            }
-            );
-                    } else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1){
-                    question_insert("question_17_yugoslavia", 
+                 } else if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
+                  question_insert("question_17_yugoslavia", 
                     {
                         "model": "campaign_trail.question",
             "pk": "candidate_intro_gramm",
@@ -15153,15 +15185,40 @@ if (e.question_number+1 == 16){
                 }
             }
             );
-        } else if (Ideology == -7 && RepublicanRevolution == 1) {
+              }
+                    } else if (Ideology >= -6 && Ideology <= -10){
+                    question_insert("question_17_yugoslavia", 
+                    {
+                        "model": "campaign_trail.question",
+        "pk": "candidate_intro_specter",
+        "fields": {
+            "priority": 3,
+            "description": "After a long, stressful day of hard work, I'm here to inform you that the Republican National Convention has officially begun. Senator Arlen Specter stands before the delegates. He talks about a better future, calling out your leadership for the lack of bipartisanship, accusing you of playing politics rather than governing. He even dares to say that your actions have turned Washington into ''a place where compromise is forgotten.'' ",
+            "likelihood": 1
+        }
+                        }
+                    
+                    );
+                    question_insert("question_21_iraq_airstrikes", 
+            {
+                        "model": "campaign_trail.question",
+            "pk": "debate_specter",
+            "fields": {
+                "priority": -2,
+                "description": "Mr. President, it's one week before the debate. You've been swamped with work, and now you're down to the wire with little time to dive into the key issues. Will you cut your losses and wing it, or will you use every minute you have left to study as much as you can?",
+                "likelihood": 1
+                }
+            }
+            );
+        } else if (Ideology >= 1 && Ideology <= 5) {
             question_insert("question_17_yugoslavia", 
                 {
                     
                      "model": "campaign_trail.question",
-            "pk": "candidate_intro_wilson",
+            "pk": "candidate_intro_forbes",
             "fields": {
                 "priority": 0,
-                "description": "On the final day of the RNC in San Diego, Pete Wilson and Judd Gregg take the stage. Governor Wilson’s combination of establishment appeal and anti-immigrant bona fides let him pitch himself as the most electable candidate. He promises, “We will end the culture of unfairness and entitlement this administration has fostered.” Given the result of the convention, the Governor is going to be a fair challenge to your re-election bid. How do we combat him?\n",
+                "description": "Legend Steve Forbes\n",
                 "likelihood": 1
             }
                     }
@@ -15178,16 +15235,15 @@ if (e.question_number+1 == 16){
         }
     }
     );
-                    } else {
-                    DoleNom += 1;
+                    } else if (e.player_answers.includes(60002) && e.player_answers.includes(80002) && e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5)) {
                         question_insert("question_17_yugoslavia", 
                         {
                            
         "model": "campaign_trail.question",
-        "pk": "candidate_intro_dole",
+        "pk": "candidate_intro_powell",
         "fields": {
             "priority": 0,
-            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in the government, his honorable service in the Second World War, and a promise to reduce income tax by 15% across-the-board. “Let me be the bridge to an America than only the unknowing call myth. Let me be the bridge to a time of tranquility, faith and confidence in action.” \nYou feel… guilty of what you must do. He’s out of his weight class. Out of time. But politics is politics. You have to beat him either way, and with the momentum rising in your favor… How will you channel it?\n",
+            "description": "The General has risen\n",
             "likelihood": 1
         }
                             }
@@ -15208,17 +15264,17 @@ if (e.question_number+1 == 16){
         }
     }
     if (e.question_number+1 == 22){
-    if (Ideology === 6 && GOPSupermajority === 1) {
+    if (Ideology >= 6 && Ideology <= 13 && GOPSupermajority == 1) {
      ctsAchievement("Pitchfork Pat");
-                    } else if (Ideology >= 3 && Ideology <= 5 && GOPSupermajority === 1) {
+                    } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && SlimGOPCongress == 1) {
                     ctsAchievement("Easy as ABC");
-                    } else if (Ideology >= 3 && Ideology <= 5 && RepublicanRevolution == 1) {
+                    } else if (Ideology >= -6 && Ideology <= -10) {
                     ctsAchievement("Life Among the Cannibals");
-                    } else if (Ideology >= 3 && Ideology <= 5 && SlimGOPCongress == 1){
+                    } else if (Ideology >= 6 && Ideology <= 13 && SlimGOPCongress == 1 || RepublicanRevolution == 1){
                     ctsAchievement("Porno-Gramm");
-                } else if (Ideology == -5 && RepublicanRevolution == 1){
+                } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && GOPSupermajority == 1){
                     ctsAchievement("Great Incarcerator");
-                    } else {
+                    } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && RepublicanRevolution == 1){
                     ctsAchievement("Soul Man");
                 
         }
@@ -16138,7 +16194,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Moderate";
 } else if (Ideology >= -5 && Ideology <= -1) {
     ideologyText.textContent = "Third Way";
-} else if (Ideology >= -10 && Ideology <= -6) {
+} else if (Ideology >= -6 && Ideology <= -10) {
     ideologyText.textContent = "Blue Dog";
 } else if (Ideology >= 1 && Ideology <= 5) {
     ideologyText.textContent = "New Deal Democrat";
