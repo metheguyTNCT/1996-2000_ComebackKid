@@ -14912,28 +14912,28 @@ if (Ideology >= 1 && Ideology <= 5 && ans == 170003){
   campaignTrail_temp.candidate_json[1]["fields"].first_name = "Steve";
 }
 //Powell CYOA
-if (NorthWin == 1 || RomneyWin == 1 && ans == 170001){
+if (GOPSuperMajority == 1 && ans == 170001){
   PowellNom += 1;
   campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
   campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#00a3e3";
   campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#cc0007";
-  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/FzNeJDt.png";
+  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/bbFUVyO.png";
   campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
 }
-if (NorthWin == 1 || RomneyWin == 1 && ans == 170002){
+if (GOPSuperMajority == 1 && ans == 170002){
   PowellNom += 1;
   campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
   campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#00a3e3";
   campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#cc0007";
-  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/FzNeJDt.png";
+  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/bbFUVyO.png";
   campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
 }
-if (NorthWin == 1 || RomneyWin == 1 && ans == 170003){
+if (GOPSuperMajority == 1 && ans == 170003){
   PowellNom += 1;
   campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
   campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#00a3e3";
   campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#cc0007";
-  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/FzNeJDt.png";
+  campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/bbFUVyO.png";
   campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
 }
  //Ross Perot and Ralph Nader CYOA
@@ -15327,8 +15327,10 @@ if (e.question_number+1 == 16){
                     ctsAchievement("Great Incarcerator");
                     } else if ((Ideology == 0 || Ideology >= -5 && Ideology <= -1) && RepublicanRevolution == 1){
                     ctsAchievement("Soul Man");
-                  } else if ((Ideology == 0 || Ideology >= -5 && Ideology <= -1) && RepublicanRevolution == 1){
-                    ctsAchievement("Soul Man");
+                  } else if (Ideology >= 1 && Ideology <= 5){
+                    ctsAchievement("Rage Against the Machine");
+                  } else if (GOPSupermajority == 1){
+                    ctsAchievement("General Commotion");
                     
                 
         }
