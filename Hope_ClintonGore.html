@@ -115,6 +115,15 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+      "model": "campaign_trail.question",
+      "pk": "whitewater_question",
+      "fields": {
+          "priority": 0,
+          "description": " Everything keeps coming back to Whitewater whenever a new ‘scandal’ breaks the news. Troopergate? That’s connected! Nannygate? You bet it’s connected! A god damn haircut? Of course it’s connected! What are you, stupid? The non-stop media harping on Whitewater has got to end before it swallows your presidency whole. But how?",
+          "likelihood": 1
+      }
+  },
+    {
         "model": "campaign_trail.question",
         "pk": "question_5_healthcare_task_force",
         "fields": {
@@ -562,24 +571,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "You've always been in support of addressing the issue of climate change. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a solution, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "white_water_question",
-        "fields": {
-            "priority": 0,
-            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "white_water_question_hale",
-        "fields": {
-            "priority": 0,
-            "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
             "likelihood": 1
         }
     }
@@ -1154,6 +1145,38 @@ campaignTrail_temp.answers_json = [
           "description": "I know that the United States needs to be seen as the Strongest Nation on Earth, but if we bomb Iraq, we would be portraying ourselves as bloodthirsty killers attacking a Nation that cannot even stand on their own two feet without taking a tumble. We will issue a diplomatic statement denouncing the Iraqi regime and potentially bringing it to the United Nations."
       }
   },
+  {
+    "model": "campaign_trail.answer",
+    "pk": 250001,
+    "fields": {
+        "question": "whitewater_question",
+        "description": "I am not letting the Whitewater umbrella break our momentum. I’ll make sure that this stays in the past, where it belongs. We’re gonna fight against the accusations so fiercely they’ll go "
+    }
+},
+{
+    "model": "campaign_trail.answer",
+    "pk": 250002,
+    "fields": {
+        "question": "whitewater_question",
+        "description": "You know what? Call up Hale, let’s settle this once and for all. That’ll really shock the crazies, making a good parting deal with Hale oughta end this nonsense."
+    }
+},
+{
+    "model": "campaign_trail.answer",
+    "pk": 250003,
+    "fields": {
+        "question": "whitewater_question",
+        "description": "I ain’t gotta clue what they want me to admit to. There is no wrong doing on my part! But if it’s what it takes to fold the umbrella, then sure. I’ll collaborate. Get Reno to appoint a independent counsel too."
+    }
+},
+{
+    "model": "campaign_trail.answer",
+    "pk": 250004,
+    "fields": {
+        "question": "whitewater_question",
+        "description": "Look, they can speculate all they want, there’s nothing else to be added or gain by entertaining the conversation. Besides, the nation agrees that there was nothing improper in those investments. They wouldn’t have elected me if they did."
+    }
+},
 
 	// Separation between "regular" questions and "stored" questions.
     {
@@ -1899,54 +1922,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "healthcare_vote_win_kennedy",
             "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85020.5,
-        "fields": {
-            "question": "white_water_question",
-            "description": "I'm not talkin' about this publically anymore. This was settled during the campaign, and we can't afford anymore publicity surrounding this. I'm putting Myers on this and telling her to deflect if anyone brings this up."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85021.5,
-        "fields": {
-            "question": "white_water_question",
-            "description": "Do you know how bad it’ll be if we let this slide? Announce a press conference and dispel the Whitewater rumors once and for all. We'll disavow everybody. The McDougals, Hale, Hubbell, everybody. I'm done holding my tounge on this."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85022.5,
-        "fields": {
-            "question": "white_water_question",
-            "description": "You know what? I'm sure we can settle something with Hale. I'll set up a meeting with him, and i'll convince him to have Starr drop the investigation."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85024.5,
-        "fields": {
-            "question": "white_water_question_hale",
-            "description": "I'm not talkin' about this publically anymore. This was settled during the campaign, and we can't afford anymore publicity surrounding this. I'm putting Myers on this and telling her to deflect if anyone brings this up."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85025.5,
-        "fields": {
-            "question": "white_water_question_hale",
-            "description": "Do you know how bad it’ll be if we let this slide? Announce a press conference and dispel the Whitewater rumors once and for all. We'll disavow everybody. The McDougals, Hale, Hubbell, everybody. I'm done holding my tounge on this."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85026.5,
-        "fields": {
-            "question": "white_water_question_hale",
-            "description": "You know what? I'm sure we can settle something with Hale. I'll set up a meeting with him, and i'll convince him to have Starr drop the investigation."
         }
     },
     {
@@ -9674,66 +9649,6 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12702,
         "fields": {
-            "answer": 85020.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.04
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12703,
-        "fields": {
-            "answer": 85021.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12705,
-        "fields": {
-            "answer": 85022.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12714,
-        "fields": {
-            "answer": 85024.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.04
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12717,
-        "fields": {
-            "answer": 85025.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12720,
-        "fields": {
-            "answer": 85026.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12702,
-        "fields": {
             "answer": 35007.5,
             "candidate": 77,
             "affected_candidate": 77,
@@ -9949,6 +9864,46 @@ campaignTrail_temp.answer_score_global_json = [
         "affected_candidate": 77,
         "global_multiplier": 0.03
     }
+},
+{
+  "model": "campaign_trail.answer_score_global",
+  "pk": 12843,
+  "fields": {
+      "answer": 250001,
+      "candidate": 77,
+      "affected_candidate": 77,
+      "global_multiplier": -0.03
+  }
+},
+{
+  "model": "campaign_trail.answer_score_global",
+  "pk": 12846,
+  "fields": {
+      "answer": 250002,
+      "candidate": 77,
+      "affected_candidate": 77,
+      "global_multiplier": -0.05
+  }
+},
+{
+  "model": "campaign_trail.answer_score_global",
+  "pk": 12849,
+  "fields": {
+      "answer": 250003,
+      "candidate": 77,
+      "affected_candidate": 77,
+      "global_multiplier": -0.04
+  }
+},
+{
+  "model": "campaign_trail.answer_score_global",
+  "pk": 12852,
+  "fields": {
+      "answer": 250004,
+      "candidate": 77,
+      "affected_candidate": 77,
+      "global_multiplier": -0.02
+  }
 }
 ]
 
@@ -14698,60 +14653,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12700,
-        "fields": {
-            "answer": 85020.5,
-            "candidate": 77,
-            "answer_feedback": "Hale tries to claim you pressured him into illegally giving Susan $300,000, yet the media doesn't buy much of it, and eventually lose interest. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12701,
-        "fields": {
-            "answer": 85021.5,
-            "candidate": 77,
-            "answer_feedback": "When you sit down and start speaking into the mic, it feels like 1000 lifetimes of anger just releases itself. You go from your usual composed self, to completely fired up in a matter of 5 minutes. You walk off the stage relieved, but when you see your staff, they look appaled. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12704,
-        "fields": {
-            "answer": 85022.5,
-            "candidate": 77,
-            "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary settlement, he disagrees to a settlement. The case continues, and you hang your head in fear."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12710,
-        "fields": {
-            "answer": 85024.5,
-            "candidate": 77,
-            "answer_feedback": "Hale tries to claim you pressured him into illegally giving Susan $300,000, yet the media doesn't buy much of it, and eventually lose interest. The Mcdougals stay silent, thank god. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12713,
-        "fields": {
-            "answer": 85025.5,
-            "candidate": 77,
-            "answer_feedback": "When you sit down and start speaking into the mic, it feels like 1000 lifetimes of anger just releases itself. You go from your usual composed self, to completely fired up in a matter of 5 minutes. You walk off the stage relieved, but when you see your staff, they look appaled. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12716,
-        "fields": {
-            "answer": 85026.5,
-            "candidate": 77,
-            "answer_feedback": "You eventually get into contact with Hale, and through much pleading, and even a monitary agreement, he agrees to a settlement of $250,000. You leave, breathing a sigh of relief and smiling."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12701,
         "fields": {
             "answer": 35007.5,
@@ -14794,7 +14695,43 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "The applause are almost as loud as they were in 92. Let's see who the GOP picks..."
         }
-    }
+    },
+    {
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12842,
+      "fields": {
+          "answer": 250001,
+          "candidate": 77,
+          "answer_feedback": "The battle for narrative control against the media distracts the nation from any achievements and hurts the goodwill of the media to shine light on those achievements. Many in your administration are questioned in the crossfire, especially one of your best friends, Vince Foster. “Who is Vince Foster?” Well, if you listen to the WSJ, he’s a freak, careless about the law. With his reputation in the gutter, Foster takes a trip to Fort Marcy Park, where he doesn’t come back alive. The last paragraph of a torn draft of his resignation reads: “I was not meant for the job or the spotlight of public life in Washington. Here ruining people is considered sport.” "
+      }
+  },
+  {
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12845,
+      "fields": {
+          "answer": 250002,
+          "candidate": 77,
+          "answer_feedback": "\nYou really flanked the opposition on this one, or so you thought. Suddenly everyone wants a piece of compensation in exchange for silence. When reporters question if you’ll continue to pay off your troubles away, you gaffe, “This isn’t a charity.” Protesters dressed up as yourself ring bells advertising investors to the “Clinton charity drive,” becoming a staple of Clinton-era protest culture. A disillusioned Vince Foster hands you his resignation. With Foster out, it felt like the White House just lost its spine.\n"
+      }
+  },
+  {
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12848,
+      "fields": {
+          "answer": 250003,
+          "candidate": 77,
+          "answer_feedback": "Robert Fiske is initially assigned as special prosecutor, but the investigation is halted when news breaks of the suicide of your childhood friend Vince Foster. In his suicide note, he blames himself for not trying hard enough to stop what you're going through. You barely have time to weep before you hear that Fiske has been replaced by the GOP with the partisan Kenneth Starr, smelling blood in the water. The body isn’t even practically cold yet."
+      }
+  },
+  {
+      "model": "campaign_trail.answer_feedback",
+      "pk": 12851,
+      "fields": {
+          "answer": 250004,
+          "candidate": 77,
+          "answer_feedback": "The battle for narrative control against the media distracts the nation from any achievements and hurts the goodwill of the media to shine light on those achievements. Many in your administration are questioned in the crossfire, especially one of your best friends, Vince Foster. “Who is Vince Foster?” Well, if you listen to the WSJ, he’s a freak, careless about the law. With his reputation in the gutter, Foster takes a trip to Fort Marcy Park, where he doesn’t come back alive. The last paragraph of a torn draft of his resignation reads: “I was not meant for the job or the spotlight of public life in Washington. Here ruining people is considered sport.” "
+      }
+  }
 ]
 
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
@@ -14998,34 +14935,6 @@ cyoAdventure = function(a) {
         campaignTrail_temp.question_number = 49;
         console.log(Powellwin = true);
     }
-    //Whitewater Inserter
-    if (e.question_number+1 == 3) {
-        if (e.player_answers.includes(20003) && e.player_answers.includes(30002)) {
-            question_insert("question_3_deficit", 
-                {
-                    "model": "campaign_trail.question",
-            "pk": "white_water_question_hale",
-            "fields": {
-                "priority": 0,
-                "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
-                "likelihood": 1
-            }
-                }
-                );
-        } else {
-            question_insert("question_3_deficit", 
-                {
-                   "model": "campaign_trail.question",
-            "pk": "white_water_question",
-            "fields": {
-                "priority": 0,
-                "description": "It's that Whitewater scandal again. You knew this was coming back up, sooner or later. You tried to bury this shit during the primary, but the opposition's like a dog running back to it's vomit. Now David Hale and and Kenneth Starr are on your ass with that council, and are trying to dig up anything they can.\n",
-                "likelihood": 1
-            }
-                }
-                );
-            }
-        }
    //Healthcare Update Inserter
     if (ans === 50001) {
         
@@ -15298,13 +15207,13 @@ campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#004496";
     LEGWin += 1;
     }
     // WhiteWater CYOA
-    if (ans == 85021.5 || ans == 85025.5) {
+    if (ans == 250001 || ans == 250003) {
         PublicSupport -= 2;
         }
-        if (ans == 85022.5) {
+        if (ans == 250004) {
         PublicSupport -= 1;
         }
-        if (ans == 85026.5) {
+        if (ans == 250002) {
         CasesSettled += 1;
         PublicSupport += 1;
     }
