@@ -13553,7 +13553,7 @@ campaignTrail_temp.answer_feedback_json = [
       "fields": {
           "answer": 200001,
           "candidate": 77,
-          "answer_feedback": "Guided Missiles take off from the USS Laboon, Shiloh and California, making their destination to Air Defense targets in Southern Iraq which gives Saddam a black eye. With the strikes as cover, American soldiers evacuate 700 members of the INC and 6,000 kurds from Northern Iraq.\nEffects "
+          "answer_feedback": "Guided Missiles take off from the USS Laboon, Shiloh and California, making their destination to Air Defense targets in Southern Iraq which gives Saddam a black eye. With the strikes as cover, American soldiers evacuate 700 members of the INC and 6,000 kurds from Northern Iraq.\n"
       }
   },
   {
@@ -14802,21 +14802,21 @@ campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
 campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
 
 //Specter CYOA
-} else if (Ideology >= -6 && Ideology <= -10 && ans == 170001){
+} else if (Ideology >= -10 && Ideology <= -6 && ans == 170001){
     SpecterNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if (Ideology >= -6 && Ideology <= -10 && ans == 170002){
+if (Ideology >= -10 && Ideology <= -6 && ans == 170002){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
 }
-if(Ideology >= -6 && Ideology <= -10 && ans == 170003){
+if(Ideology >= -10 && Ideology <= -6 && ans == 170003){
     SpecterNom += 1;
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
@@ -15186,7 +15186,7 @@ if (e.question_number+1 == 16){
             }
             );
               }
-                    } else if (Ideology >= -6 && Ideology <= -10){
+                    } else if (Ideology >= -10 && Ideology <= -6){
                     question_insert("question_17_yugoslavia", 
                     {
                         "model": "campaign_trail.question",
@@ -15268,7 +15268,7 @@ if (e.question_number+1 == 16){
      ctsAchievement("Pitchfork Pat");
                     } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1 && SlimGOPCongress == 1) {
                     ctsAchievement("Easy as ABC");
-                    } else if (Ideology >= -6 && Ideology <= -10) {
+                    } else if (Ideology >= -10 && Ideology <= -6) {
                     ctsAchievement("Life Among the Cannibals");
                     } else if (Ideology >= 6 && Ideology <= 13 && SlimGOPCongress == 1 || RepublicanRevolution == 1){
                     ctsAchievement("Porno-Gramm");
@@ -16194,7 +16194,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Moderate";
 } else if (Ideology >= -5 && Ideology <= -1) {
     ideologyText.textContent = "Third Way";
-} else if (Ideology >= -6 && Ideology <= -10) {
+} else if (Ideology >= -10 && Ideology <= -6) {
     ideologyText.textContent = "Blue Dog";
 } else if (Ideology >= 1 && Ideology <= 5) {
     ideologyText.textContent = "New Deal Democrat";
