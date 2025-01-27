@@ -15406,10 +15406,11 @@ var NatHeathScore = 0
 Dolewin=false;
 Buchananwin=false;
 Lamarwin=false;
-Specterwin=false
-Grammwin=false
-Wilsonwin=false
-ClintonDead=false
+Specterwin=false;
+Grammwin=false;
+Wilsonwin=false;
+Forbeswin=false;
+Powellwin=false
 cyoAdventure = function(a) {
     initializeContent();
     update_EV_dict();
@@ -15510,6 +15511,36 @@ cyoAdventure = function(a) {
         update_EV_dict();
         campaignTrail_temp.question_number = 49;
         console.log(Wilsonwin = true);
+    } else if (ans == 210001 && ev_dict["77"] < 269 && ForbesNom == 1) {
+        Forbeswin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Forbeswin = true);
+    } else if (ans == 210002 && ev_dict["77"] < 269 && ForbesNom == 1) {
+        Forbeswin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Forbeswin = true);
+    } else if (ans == 210003 && ev_dict["77"] < 269 && ForbesNom == 1) {
+        Forbeswin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Forbeswin = true);
+    } else if (ans == 210001 && ev_dict["77"] < 269 && PowellNom == 1) {
+        Powellwin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Powellwin = true);
+    } else if (ans == 210002 && ev_dict["77"] < 269 && PowellNom == 1) {
+        Powellwin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Powellwin = true);
+    } else if (ans == 210003 && ev_dict["77"] < 269 && PowellNom == 1) {
+        Powellwin=true;
+        update_EV_dict();
+        campaignTrail_temp.question_number = 49;
+        console.log(Powellwin = true);
     }
     //Whitewater Inserter
     if (e.question_number+1 == 3) {
