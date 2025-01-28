@@ -78,6 +78,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+        {
+        "model": "campaign_trail.question",
+        "pk": "question_5_healthcare_task_force",
+        "fields": {
+            "priority": 2,
+            "description": "Your first few days in Washington have been... busy, to say the least. You're laying back in the Oval Office, thinking about one of your biggest campaign promises, one of Hillary's greatest dreams since you met her back at Yale, the choice to your heart is obvious, but your mind tells you she has no experience to run any show, let alone a legacy-defining moment. Regardless, you have a choice. Who are you going to let run this massive healthcare reform?",
+            "likelihood": 1
+        }
+    },
     {
         "model": "campaign_trail.question",
         "pk": "question_2_wtc_bombing",
@@ -123,15 +132,6 @@ campaignTrail_temp.questions_json = [
           "likelihood": 1
       }
   },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_5_healthcare_task_force",
-        "fields": {
-            "priority": 2,
-            "description": "Your first few months in Washington have been... busy, to say the least. You're laying back in the Oval Office, thinking about one of your biggest campaign promises, one of Hillary's greatest dreams since you met her back at Yale, the choice to your heart is obvious, but your mind tells you she has no experience to run any show, let alone a legacy-defining moment. Regardless, you have a choice. Who are you going to let run this massive healthcare reform?",
-            "likelihood": 1
-        }
-    },
     {
         "model": "campaign_trail.question",
         "pk": "question_6_dont_show_dont_tell",
@@ -15844,7 +15844,7 @@ cyoAdventure = function(a) {
     }
    //Healthcare Update Inserter
     if (ans === 50001) {
-        
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/OH75Nfe.png';
         question_insert("question_8_somalia", 
         {
             "model": "campaign_trail.question",
@@ -15859,7 +15859,7 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50002) {
-        
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/ScKn5Tk.png';
         question_insert("question_8_somalia", 
         {
             "model": "campaign_trail.question",
@@ -15874,7 +15874,7 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50003) {
-        
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/w2sLInd.png';
         question_insert("question_8_somalia", 
         {
                     "model": "campaign_trail.question",
@@ -16244,6 +16244,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     Legacy += 1;
     GotHealthcare += 1;
     Ideology += 1;
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
     }
     if (ans == 85018.5){
     PublicSupport += 5;
@@ -16252,12 +16253,18 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     GotHealthcare += 1;
     Ideology += 3;
     ctsAchievement("The Work Goes On");
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
     }
     //Healthcare Vote CYOA (Fails)
     if (ans == 15001.5){
     PublicSupport -= 3;
     LEGWin -= 1;
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
     }
+    if (ans == 15002.5 || ans == 15005.5){
+        PublicSupport -= 2;
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
+        }
     //OKC Bombing CYOA
     if (ans == 140001){
     PublicSupport += 1;
@@ -18111,7 +18118,7 @@ tabBar.style.color = '#fff';
 tabBar.style.padding = '0.5em';
 
 let tab1 = document.createElement('a');
-tab1.textContent = 'WhiteHouse.gov.';
+tab1.textContent = 'WhiteHouse.gov';
 tab1.href = '#headquarters';
 tab1.style.flexGrow = '1';
 tab1.style.textAlign = 'center';
@@ -18119,7 +18126,7 @@ tab1.style.cursor = 'pointer';
 tab1.style.padding = '0.5em';
 tab1.style.textDecoration = 'none';
 tab1.style.color = '#fff';
-tab1.onclick = () => switchTab('WhiteHouse.gov.');
+tab1.onclick = () => switchTab('WhiteHouse.gov');
 
 let tab2 = document.createElement('a');
 tab2.textContent = 'cnn.com';
@@ -18153,7 +18160,7 @@ document.body.appendChild(hqDiv);
 
 // Switch between tabs
 function switchTab(tab) {
-  if (tab === 'WhiteHouse.gov.') {
+  if (tab === 'WhiteHouse.gov') {
     hqContent.style.display = 'block';
     cnnContent.style.display = 'none';
     tab1.style.backgroundColor = '#0073e6'; // Active color
@@ -18170,7 +18177,7 @@ function switchTab(tab) {
 window.addEventListener('hashchange', () => {
   const hash = window.location.hash;
   if (hash === '#headquarters') {
-    switchTab('WhiteHouse.gov.');
+    switchTab('WhiteHouse.gov');
   } else if (hash === '#cnn') {
     switchTab('cnn1990s');
   }
@@ -18178,7 +18185,7 @@ window.addEventListener('hashchange', () => {
 
 // Default tab switch based on URL
 if (window.location.hash === '#headquarters') {
-  switchTab('WhiteHouse.gov.');
+  switchTab('WhiteHouse.gov');
 } else {
   switchTab('cnn1990s');
 }
