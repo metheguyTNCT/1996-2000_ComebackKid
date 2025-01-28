@@ -233,10 +233,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "clinton_nominated",
+        "pk": "question_20_internet",
         "fields": {
             "priority": 0,
-            "description": "To nobody's surprise, you've been renominated for president. As you take the stage, you think of when you were sworn in, and how far you've came. What will you say?",
+            "description": "As the American public begin to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential and sneer at it. The fools say it's just a fad, but to the many, its rise and eventual domination of our very lives isn't up for debate. A new tool to be used for your aims. A world in which nothing but fond opinions of the Administration sounds truly beautiful, but we are so, so, far from that. What are your plans to address it?\n",
             "likelihood": 1
         }
     },
@@ -255,15 +255,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "After months of negotiations  on a bipartisan welfare reform, the moment of decision has arrived. During your 92' campaign, you promised to ''end welfare as we know it,'' and the rabid pack of Republicans are holding you to that pledge. You’ve vetoed two previous welfare bills, but on this latest one, you’ve went out of your way to persuade Gingrich to craft something compromisable. Now, the ''Personal Responsibility and Work Opportunity Act'' sits on your desk, awaiting your signature. What’s your decision?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_20_internet",
-        "fields": {
-            "priority": 0,
-            "description": "As the American public begin to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential and sneer at it. The fools say it's just a fad, but to the many, its rise and eventual domination of our very lives isn't up for debate. A new tool to be used for your aims. A world in which nothing but fond opinions of the Administration sounds truly beautiful, but we are so, so, far from that. What are your plans to address it?\n",
             "likelihood": 1
         }
     },
@@ -1922,14 +1913,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "healthcare_vote_win_kennedy",
             "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 19921996,
-        "fields": {
-            "question": "clinton_nominated",
-            "description": "I met an ingenious business woman who was once on welfare in West Virginia; a brave police officer, shot and paralyzed, now a civic leader in Kentucky; an autoworker in Ohio, once unemployed, now proud to be working in the oldest auto plant in America to help make America number one in auto production again for the first time in 20 years. I met a grandmother fighting for her grandson's environment in Michigan. And I stood with two wonderful little children proudly reading from their favorite book, \"The Little Engine That Could.\" At every stop, large and exuberant crowds greeted me. And maybe more important, when we just rolled through little towns, there were always schoolchildren there waving their American flags, all of them believing in America and its future. I would not have missed that trip for all the world, for that trip showed me that hope is back in America. We are on the right track to the 21st century. "
         }
     },
 ]
@@ -14875,15 +14858,6 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12836,
-        "fields": {
-            "answer": 19921996,
-            "candidate": 77,
-            "answer_feedback": "The applause are almost as loud as they were in 92. Let's see who the GOP picks..."
-        }
-    },
-    {
       "model": "campaign_trail.answer_feedback",
       "pk": 12842,
       "fields": {
@@ -15740,7 +15714,7 @@ if (ans == 210003){
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/6WTOUwW.png';
 }
  //Ross Perot and Ralph Nader CYOA
-    if (ans == 19921996){
+    if (ans == 240001 || 240002 || 240003 || 240004){
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
     campaignTrail_temp.candidate_json[2]["fields"].last_name = "Nader";
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
@@ -15889,7 +15863,7 @@ if (e.question_number+1 == 16){
       // Powell Inserters
       if (e.player_answers.includes(60002) && (80002) && (85004.5 || 85008.5) && MassiveGOPMajority == 1) {
         powellMentum();
-        question_insert("clinton_nominated", 
+        question_insert("question_20_internet", 
         {
            
 "model": "campaign_trail.question",
@@ -15919,7 +15893,7 @@ if (e.question_number+1 == 16){
         // Bob Dole Inserters
         if (RepublicanRevolution == 1)  {
             doleMentum();
-              question_insert("clinton_nominated", 
+              question_insert("question_20_internet", 
               {
                  
   "model": "campaign_trail.question",
@@ -15946,7 +15920,7 @@ if (e.question_number+1 == 16){
   // Alexander Inserters
       } else if (SlimGOPCongress == 1) {
         lamarMentum();
-        question_insert("clinton_nominated", 
+        question_insert("question_20_internet", 
           {
               "model": "campaign_trail.question",
           "pk": "candidate_intro_alexander",
@@ -15973,7 +15947,7 @@ if (e.question_number+1 == 16){
     
  } else if (MassiveGOPMajority== 1) {
     wilsonMentum();
-  question_insert("clinton_nominated", 
+  question_insert("question_20_internet", 
     {
         
          "model": "campaign_trail.question",
@@ -16003,7 +15977,7 @@ if (e.question_number+1 == 16){
                       // Buchanan Inserters
                       if (MassiveGOPMajority== 1) {
                         patMentum();
-                        qquestion_insert("clinton_nominated", 
+                        qquestion_insert("question_20_internet", 
                           {
                               "model": "campaign_trail.question",
                           "pk": "candidate_intro_buchanan",
@@ -16030,7 +16004,7 @@ if (e.question_number+1 == 16){
                     
                  } else if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
                     grammMentum();
-                  question_insert("clinton_nominated", 
+                  question_insert("question_20_internet", 
                     {
                         "model": "campaign_trail.question",
             "pk": "candidate_intro_gramm",
@@ -16057,7 +16031,7 @@ if (e.question_number+1 == 16){
               //Specter Inserters
                     } else if (Ideology >= -10 && Ideology <= -6){
                         specterMentum();
-                    question_insert("clinton_nominated", 
+                    question_insert("question_20_internet", 
                     {
                         "model": "campaign_trail.question",
         "pk": "candidate_intro_specter",
@@ -16083,7 +16057,7 @@ if (e.question_number+1 == 16){
             // Forbes Inserters
         } else if (Ideology >= 1 && Ideology <= 5) {
             forbesMentum();
-            question_insert("clinton_nominated", 
+            question_insert("question_20_internet", 
                 {
                     
                      "model": "campaign_trail.question",
