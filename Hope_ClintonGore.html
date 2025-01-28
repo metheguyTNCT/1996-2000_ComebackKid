@@ -1525,30 +1525,6 @@ campaignTrail_temp.answers_json = [
     }, 
     {
         "model": "campaign_trail.answer",
-        "pk": 35020.5,
-        "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "First and foremost, Mr. Forbes is a businessman. He was born with a silver spoon, being the son of a big publisher. He doesn't understand the struggle that many Americans in our middle and lower classes have went through, including myself. I've worked to get where I am. From the son of a poor, widowed mother, living in an abusive household with barely any money, to the President of the United States. I'm for the average American, Steve Forbes is for the wealthy."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 35021.5,
-        "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "America, do you really wanna rock the boat this fast? If you elect Steve Forbes, you see a return to Bush economics. Don't you remember what life was like under him? The economy was stagnant,  the Wealth Gap was larger than it was in generations, and Americans we desperate for change and reform to our system. Who did you elect for a break from that? Me."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 35022.5,
-        "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "Steve Forbes doesn't have what it takes to make true change in this country. He's too bland and compromising. I, however, have had the perfect liberal administration to lead America into the 21st century and push the real change our country needs."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 36001.5,
         "fields": {
             "question": "debate_dole",
@@ -1872,10 +1848,19 @@ campaignTrail_temp.answers_json = [
         "pk": 85011.5,
         "fields": {
             "question": "candidate_intro_gramm",
-            "description": "I want to address the American people from my hometown of Hope, Arkansas, and talk about the real efforts we’ve made. I’ve got respect for Senator Gramm, but let’s ask: are you better off now than four years ago? Are his ideas, tax cuts for the wealthy, deregulation, and less investment in working families, really the path to a stronger, secure future?"
+            "description": "I'm gonna address the American people from my hometown of Hope, Arkansas, and talk about the real efforts we’ve made. I’ve got respect for Senator Gramm, but let’s ask: are you better off now than four years ago? Are his ideas, tax cuts for the wealthy, deregulation, and less investment in working families, really the path to a stronger, secure future?"
         }
     },
     {
+        "model": "campaign_trail.question",
+        "pk": "clinton_2nd_term_question_3",
+        "fields": {
+            "priority": 0,
+            "description": "You've always been in support of addressing the issue of climate change. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a solution, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
+            "likelihood": 1
+        }
+    },
+	    {
         "model": "campaign_trail.answer",
         "pk": 85012.5,
         "fields": {
@@ -1939,7 +1924,32 @@ campaignTrail_temp.answers_json = [
             "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
         }
     },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35020.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "First and foremost, Mr. Forbes is a businessman. He was born with a silver spoon, being the son of a big publisher. He doesn't understand the struggle that many Americans in our middle and lower classes have went through, including myself. I've worked to get where I am. From the son of a poor, widowed mother, living in an abusive household with barely any money, to the President of the United States. I'm for the average American, Steve Forbes is for the wealthy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35021.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "America, do you really wanna rock the boat this fast? If you elect Steve Forbes, you see a return to Bush economics. Don't you remember what life was like under him? The economy was stagnant,  the Wealth Gap was larger than it was in generations, and Americans we desperate for change and reform to our system. Who did you elect for a break from that? Me."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35022.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "Steve Forbes doesn't have what it takes to make true change in this country. He's too bland and compromising. I, however, have had the perfect liberal administration to lead America into the 21st century and push the real change our country needs."
+        }
+    }
 ]
+
 
 
 campaignTrail_temp.states_json = [
@@ -14157,7 +14167,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 80004,
             "candidate": 77,
-            "answer_feedback": "It's bold, but that's always been your approach, Bill. Unfortunately, you not only fail to locate him in Ethiopia, Kenya, or anywhere else, but you also shift our mission’s tone from peacekeeping to occupation. After the Battle of Mogadishu, when our men’s bodies were dragged through the streets amid cries of ''Death to America'', you pushed people further toward supporting Aidid."
+            "answer_feedback": "It's bold, but that's always been your approach. Unfortunately, you not only fail to locate him in Ethiopia, Kenya, or anywhere else, but you also shift our mission’s tone from peacekeeping to occupation. After the Battle of Mogadishu, when our men’s bodies were dragged through the streets amid cries of ''Death to America'', you pushed people further toward supporting Aidid."
         }
     },
     {
@@ -14238,7 +14248,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 110003,
             "candidate": 77,
-            "answer_feedback": "The NAFTA signing makes the trip a slight burdon for you, but you can wipe it away with your classic southern charm, the same spell that always sways them towards you."
+            "answer_feedback": "Your promptly greeted by Blue-Collar workers who are eager to shake your hand. Some arrived to protest NAFTA, but you can wipe it away with your classic southern charm, the same spell that always sways them towards you."
         }
     },
     {
@@ -14454,7 +14464,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50004,
             "candidate": 77,
-            "answer_feedback": "That’s a very technocratic move, sir. Al, the Atari Democrats, and the so-called Clinton coalition of business and middle-class voters will certainly appreciate this approach."
+            "answer_feedback": "Al, the Atari Democrats, and the Clinton coalition of business and middle-class voters appreciate the approch, as to you, the only real way for change is to depoliticize by attaching the doctors."
         }
     },
     {
@@ -14661,7 +14671,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85004.5,
             "candidate": 77,
-            "answer_feedback": "You're ahead of the curve here, Big Dog. Boris is deeply offended by what you're implying and kicks you and the other powers out of Russia, setting the negotiations back to square one. Great job ruining a friendship."
+            "answer_feedback": "Boris is deeply offended by what you're implying and kicks you and the other powers out of Russia, setting the negotiations back to square one."
         }
     },
     {
@@ -14724,7 +14734,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25002.5,
             "candidate": 77,
-            "answer_feedback": "The media deems you petty, the party cheers you on, and the Republicans, just look at the statement and laugh. Total arrogance. "
+            "answer_feedback": "The media deems you petty, the party cheers you on, and the Republicans, just look at the statement and laugh. Total arrogance, they won't be laughing soon. "
         }
     },
     {
@@ -14733,7 +14743,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25003.5,
             "candidate": 77,
-            "answer_feedback": "This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. \n"
+            "answer_feedback": " The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and the base believes you've given in. They keep complaining.\n"
         }
     },
     {
@@ -14742,7 +14752,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25016.5,
             "candidate": 77,
-            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, and the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
+            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, yet the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
         }
     },
     {
@@ -14760,7 +14770,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25018.5,
             "candidate": 77,
-            "answer_feedback": " This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. \n"
+            "answer_feedback": " You advise Morris to stay alert for 1998, he gives a little smirk and starts rallying the troops.\n"
         }
     },
     {
@@ -14769,7 +14779,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25010.5,
             "candidate": 77,
-            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, and the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
+            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, yet the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
         }
     },
     {
@@ -14805,7 +14815,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25012.5,
             "candidate": 77,
-            "answer_feedback": "This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. \n"
+            "answer_feedback": "The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and the base believes you've given in. They keep complaining.\n"
         }
     },
     {
@@ -14814,7 +14824,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25013.5,
             "candidate": 77,
-            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, and the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
+            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, yet the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
         }
     },
     {
@@ -14832,7 +14842,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25015.5,
             "candidate": 77,
-            "answer_feedback": "This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. \n"
+            "answer_feedback": " The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and the base believes you've given in. They keep complaining.\n"
         }
     },
     {
@@ -14841,7 +14851,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25004.5,
             "candidate": 77,
-            "answer_feedback": "Everyone is, Bill. I'm starting to fear that this is the end for you. If the public has THIS type of reaction to the midterms, God knows what they'll do in 1996."
+            "answer_feedback": "The base is purely frightened, while the Republicans are truly smug and too confident for their own good. You sit in your bed that night, '96 scenarios cycling through your head, you couldn't go to sleep."
         }
     },
     {
@@ -14850,7 +14860,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25005.5,
             "candidate": 77,
-            "answer_feedback": "This is purely ineffective and only leads to more political turmoil."
+            "answer_feedback": "The media deems you petty, the party cheers you on, and the Republicans, just look at the statement and laugh. Total arrogance, they won't be laughing soon."
         }
     },
     {
@@ -14859,7 +14869,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25006.5,
             "candidate": 77,
-            "answer_feedback": "This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. This situation is worse since they have no congressional leverage.\n"
+            "answer_feedback": " The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and the base believes you've given in. They keep complaining.\n"
         }
     },
     {
@@ -14868,7 +14878,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25007.5,
             "candidate": 77,
-            "answer_feedback": "Everyone is, Bill. I'm starting to fear that this is the end for you. If the public has THIS type of reaction to the midterms, God knows what they'll do in 1996."
+            "answer_feedback": "The base is purely frightened, while the Republicans are truly smug and too confident for their own good. You sit in your bed that night, '96 scenarios cycling through your head, you couldn't go to sleep."
         }
     },
     {
@@ -14877,7 +14887,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 190001,
             "candidate": 77,
-            "answer_feedback": "This will give liberals more ammunition to use against you, but at the end of the day, most people feel that welfare has gone too far in its current form. This bill, which replaces the New Deal-era Aid to Families with Dependent Children (AFDC) program, is fairly moderate and something that most people can stomach."
+            "answer_feedback": "The non-Clinton liberals attempt to use this as ammunition against you, but at the end of the day, most people feel that welfare has gone too far in its current form. This bill, which replaces the New Deal-era Aid to Families with Dependent Children (AFDC) program, is fairly moderate and something that most people can stomach."
         }
     },
     {
@@ -14886,7 +14896,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 190002,
             "candidate": 77,
-            "answer_feedback": "You've always seen yourself as more liberal than the press or even your own party gives you credit for, and your restraint on this bill proves that. But having Gingrich and Congressional Republicans come to the White House to work on this, only to veto it when the pressure mounted... it's not a great look, sir."
+            "answer_feedback": "You've always seen yourself as more liberal than the press or even your own party gives you credit for, and your restraint on this bill proves that. But having Gingrich and Congressional Republicans come to the White House to work on this, only to veto it when the pressure mounted."
         }
     },
     {
@@ -14895,7 +14905,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25008.5,
             "candidate": 77,
-            "answer_feedback": "This is purely ineffective and only leads to more political turmoil."
+            "answer_feedback": "The media deems you petty, the party cheers you on, and the Republicans, just look at the statement and laugh. Total arrogance, they won't be laughing soon."
         }
     },
     {
@@ -14904,7 +14914,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 25009.5,
             "candidate": 77,
-            "answer_feedback": "This is pretty good strategy. The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and they believe you've given in. They keep complaining. This situation is worse since they have no congressional leverage.\n"
+            "answer_feedback": " The meeting with Gingrich goes very well and he moderates his rhetoric a bit. On the other hand, he wants to you to give up your more Liberal ideas and the base believes you've given in. They keep complaining.\n"
         }
     },
     {
@@ -15003,7 +15013,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35005.5,
             "candidate": 77,
-            "answer_feedback": "Buchanan’s gaffes definitely get a lot of attention, but at least he is getting publicity. Meanwhile, you are sitting at a small desk in the Oval Office. \n"
+            "answer_feedback": "Buchanan’s gaffes put himn center stage in the newspaper, with pundits alike criticising his radical tendency. You chuckle and think to yourself the GOP dropped the ball drafting him. \n"
         }
     },
     {
@@ -15012,7 +15022,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35006.5,
             "candidate": 77,
-            "answer_feedback": "You can't fight fire with fire, Bill. I thought you were better than that. Stooping down to Buchanan’s level only humanizes his claims. \n"
+            "answer_feedback": "You attempt to match Buchanans energy, yet circles run around your mind trying to understand what his exact appeal is. In a frustrating way, the media talks less of you, and more of Buchanan and his radical policies. \n"
         }
     },
     {
@@ -15211,7 +15221,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35018.5,
             "candidate": 77,
-            "answer_feedback": "The people, they're not listening. You try as hard as you can to convince them otherwise, but all they see is the president being a stick in the mud. I think this one's over."
+            "answer_feedback": "The people, they're not listening. You try as hard as you can to convince them otherwise, but all they see is the president being a stick in the mud, the powell campaign sees you as a dead man walking."
         }
     },
     {
@@ -15220,7 +15230,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35019.5,
             "candidate": 77,
-            "answer_feedback": "Nobody cares about Don Nickles. You flail around, trying to find any little way to justify this, but you just can't find anything. It's over, man."
+            "answer_feedback": "You flail around, trying to find any little way to justify this, but you just can't find anything."
         }
     },
     {
@@ -15454,7 +15464,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85019.5,
             "candidate": 77,
-            "answer_feedback": "As the midterms get closer, it becomes less likely the democratic majority will stick, meaning you missed your only shot at this."
+            "answer_feedback": "As the midterms get closer, almost everything is uncertain. The base calls you a liar, they spit at you, and turn their back, and the opposition cheerish this as the final sign of their incoming victory."
         }
     },
     {
@@ -15463,7 +15473,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35013.5,
             "candidate": 77,
-            "answer_feedback": "The Buchananites’ lack of enthusiasm for Wilson is only matched by their absolute hatred of you. Instead, the main benefactor is a resurgent Ross Perot, who assails both of you as “Tweedledee and Tweedledum.”\n"
+            "answer_feedback": "The Buchananites’ lack of enthusiasm for Wilson is only matched by their absolute hatred of you. Instead, the main benefactor is a resurgent and ever painful Perot, who assails both of you as “Tweedledee and Tweedledum.”\n"
         }
     },
     {
@@ -15472,7 +15482,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35014.5,
             "candidate": 77,
-            "answer_feedback": "Wilson has gone back and forth on many issues and in his support of your Administration, this is a good way to win back support from Moderates who voted for you in 1992.\n"
+            "answer_feedback": "Wilson is a serial flip-flopper, going back and forth on many issues and in his support of your Administration. All he does is what's politically conveniet, our people are wolves who see through that.\n"
         }
     },
     {
@@ -15553,7 +15563,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35009.5,
             "candidate": 77,
-            "answer_feedback": "Setting up your successor’s image for 2000? Good idea Slick. You two storm the presses on successes and personal struggles. But sadly, most of it is forgotten when Al Gore does his own version of the macarena center stage at the DNC. Luckily it didn’t seem hamper your momentum much."
+            "answer_feedback": "Setting up your successor’s image for 2000? A surefire way to extend the olivebranch to a wider coalition. You two storm the presses on successes and personal struggles. But sadly, most of it is forgotten when Al does his own version of the macarena center stage at the DNC."
         }
     },
     {
@@ -15563,6 +15573,33 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 35009.51,
             "candidate": 77,
             "answer_feedback": "They call it  ‘Dolementum’, it spreads like wildfire across the political landscape. Your advisors can’t convince you quick enough before polls show Dole closing in on you, fast. You don't believe it. Bob Dole is not gonna beat you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12578,
+        "fields": {
+            "answer": 35020.5,
+            "candidate": 77,
+            "answer_feedback": "Soon enough, ads contrasting you backgrounds are played all on TVs around the county. \"Hard Work vs Nepotism\" as the ads are called, hit the spot with middle America perfectly."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12604,
+        "fields": {
+            "answer": 35021.5,
+            "candidate": 77,
+            "answer_feedback": "This attack against Forbes certainly works, just make sure to talk more about your plans for America in your 2nd term."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12627,
+        "fields": {
+            "answer": 35022.5,
+            "candidate": 77,
+            "answer_feedback": "Unfortunately, this line doesn't work as well as you hoped it would. Forbes uses these words to build himself up as a bipartisan solution maker, and you as a crazy liberal who'd do anything it took to get his agenda passed. Be in for a rough November, Bill."
         }
     },
     {
@@ -15580,7 +15617,7 @@ campaignTrail_temp.answer_feedback_json = [
       "fields": {
           "answer": 250002,
           "candidate": 77,
-          "answer_feedback": "\nYou really flanked the opposition on this one, or so you thought. Suddenly everyone wants a piece of compensation in exchange for silence. When reporters question if you’ll continue to pay off your troubles away, you gaffe, “This isn’t a charity.” Protesters dressed up as yourself ring bells advertising investors to the “Clinton charity drive,” becoming a staple of Clinton-era protest culture. A disillusioned Vince Foster hands you his resignation. With Foster out, it felt like the White House just lost its spine.\n"
+          "answer_feedback": "\nYou thought you'd corner the oposition on this, you couldn't've been more wrong. Abruptly, everyone wants a piece of compensation in exchange for silence. The media asks if you’ll continue to pay off your troubles, you reply “This isn’t a charity.” Protesters dressed up as yourself ring bells advertising investors to the “Clinton charity drive,” to your chagrin. A disillusioned Foster hands you his resignation, siting how he was not prepared for Washington politics\n"
       }
   },
   {
@@ -15598,37 +15635,11 @@ campaignTrail_temp.answer_feedback_json = [
       "fields": {
           "answer": 250004,
           "candidate": 77,
-          "answer_feedback": "Without any reaction from the president, the media begins to shine scrutiny on a homesick and depressed Vince Foster. What follows is an unwarranted attack on your boyhood friend. Questioning his character and integrity, which ultimately culminates in his suicide. It wrecks you to your core. When it came time for your eulogy, you quoted a song that always brought back memories of better times. ‘I've loved you for my life; yes, you're a friend of mine.’"
+          "answer_feedback": "The media begins to shine scrutiny on a homesick and depressed Vince Foster. The vicious campaign begins, with personel questioning his character and integrity, which culminates in his suicide. As you gingerly wait to read his eulogy, It sets in like a pit in your stomach, but you know it's just how Washington gets, ruthless. "
       }
-  },
-  {
-    "model": "campaign_trail.answer_feedback",
-    "pk": 12578,
-    "fields": {
-        "answer": 35020.5,
-        "candidate": 77,
-        "answer_feedback": "Soon enough, ads contrasting you backgrounds are played all on TVs around the county. \"Hard Work vs Nepotism\" as the ads are called, hit the spot with middle America perfectly."
-    }
-},
-{
-    "model": "campaign_trail.answer_feedback",
-    "pk": 12604,
-    "fields": {
-        "answer": 35021.5,
-        "candidate": 77,
-        "answer_feedback": "This attack against Forbes certainly works, just make sure to talk more about your plans for America in your 2nd term."
-    }
-},
-{
-    "model": "campaign_trail.answer_feedback",
-    "pk": 12627,
-    "fields": {
-        "answer": 35022.5,
-        "candidate": 77,
-        "answer_feedback": "Unfortunately, this line doesn't work as well as you hoped it would. Forbes uses these words to build himself up as a bipartisan solution maker, and you as a crazy liberal who'd do anything it took to get his agenda passed. Be in for a rough November, Bill."
-    }
-}
+  }
 ]
+
 
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/nj9ev85.png";
