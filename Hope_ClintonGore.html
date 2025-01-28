@@ -15509,6 +15509,10 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CE6B6B";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/NxU555l.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.2
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.1
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = 0.1
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.3
 //Gramm CYOA
 } else if (Ideology >= 6 && Ideology <= 13 && (RepublicanRevolution == 1 || SlimGOPCongress == 1) && ans == 19921996){
     GrammNom += 1;
@@ -15529,6 +15533,10 @@ campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FC6C85";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/zpHcV3g.png";
 campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.1
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.1
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = 0.2
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.3
 }
 // Forbes CYOA
 if (Ideology >= 1 && Ideology <= 5 && ans == 19921996){
@@ -15546,6 +15554,10 @@ if (e.player_answers.includes(60002) && (80002) && (85004.5 || 85008.5) && Massi
   campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#cc0007";
   campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/bbFUVyO.png";
   campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
+  e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.2
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.2
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = 0.1
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.3
 }
  //Ross Perot and Ralph Nader CYOA
     if (ans == 19921996){
