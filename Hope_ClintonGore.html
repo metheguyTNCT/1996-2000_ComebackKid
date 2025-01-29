@@ -227,7 +227,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_17_yugoslavia",
         "fields": {
             "priority": 3,
-            "description": "Now, you find yourself facing a difficult choice to : to end years of war in the Balkans, with Serbia, Croatia, and Bosnia, or to continue the conflict until the last breath is drawn on the battlefield. As you grip the pen, ready to sign, you hesitate. You drop it. This cycle repeats, and time continues to slip by. It's getting late now. What's the move? ",
+            "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
             "likelihood": 1
         }
     },
@@ -950,15 +950,7 @@ campaignTrail_temp.answers_json = [
         "pk": 170001,
         "fields": {
             "question": "question_17_yugoslavia",
-            "description": "This war has dragged on far too long. What began as a straightforward demonstration of American strength against communism has now become a brutal conflict, a tragic quagmire that continues to claim the lives of our soldiers. Of course I'll sign it."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 170002,
-        "fields": {
-            "question": "question_17_yugoslavia",
-            "description": "I’m going to sign this treaty, but let me be clear: I want Bosnia to stand as an independent nation, free from any threats to its sovereignty, whether from Serbia, Croatia, or anyone else."
+            "description": "There are times and places where our leadership can mean the difference between peace and war, and where we can defend our fundamental values as a people and serve our most basic, strategic interests. My fellow Americans, in this new era there are still times when America and America alone can and should make the difference for peace."
         }
     },
     {
@@ -966,7 +958,7 @@ campaignTrail_temp.answers_json = [
         "pk": 170003,
         "fields": {
             "question": "question_17_yugoslavia",
-            "description": "You know, Every single Yugoslav war criminal must be found and held accountable. If Serbia refuses to meet our demands, I’ll continue this fight for as long as it takes. We're not backing down, we can't afford to."
+            "description": "We need to be more harsher on Serbia. Most of the casualties lost during the War were Bosniaks and they are angry about that. To appease them, we’ll add in a joint-tribunal for Serbian War Criminals and form a mutual security pact with the two nations in order to prevent another war from taking place."
         }
     },
     {
@@ -7054,16 +7046,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1159,
-        "fields": {
-            "answer": 170002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.002
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1161,
         "fields": {
             "answer": 40001,
@@ -10503,16 +10485,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 170003,
             "issue": 30,
             "issue_score": -0.5,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 12641,
-        "fields": {
-            "answer": 170002,
-            "issue": 30,
-            "issue_score": 0.2,
             "issue_importance": 2
         }
     },
@@ -14406,20 +14378,11 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 969,
-        "fields": {
-            "answer": 170002,
-            "candidate": 77,
-            "answer_feedback": "Both sides act cool but deep down they both want to take each other's guts out. There's no way they'll agree to this. Your compromise is thrown out without so much as a second thought. \n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 998,
         "fields": {
             "answer": 170001,
             "candidate": 77,
-            "answer_feedback": "America is weary, to say the least. It feels like they haven’t had a break since World War II. The public is generally happy with this response, but many hawks are not. "
+            "answer_feedback": "Lake and his plan are able to be accepted by all sides despite muted Serbian protest. On December 14th, 1995, the Dayton Agreement is signed helping to end the War in the Balkans which helps your popularity back at home and America’s strength abroad."
         }
     },
     {
@@ -14941,7 +14904,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 170003,
             "candidate": 77,
-            "answer_feedback": "And with that, the carnage begins anew. More blood, more death, more atrocities. All on you.\n"
+            "answer_feedback": "Both Serbia and Bosnia-Herzegovina deny your terms and with your interference on Lake’s plan, the Accords fall apart leaving 3 years dedicated towards peace in the Balkans dead in the water. With the war continuing, the “Failure at Dayton” becomes another loss on the pile.\n"
         }
     },
     {
@@ -16293,10 +16256,6 @@ PublicSupport -= 1;
     if (ans == 170001){
     PublicSupport += 1;
     FPWin += 1;
-    Legacy += 1;
-    }
-    if (ans == 170002){
-    PublicSupport += 1;
     Legacy += 1;
     }
     if (ans == 170003){
