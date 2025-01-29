@@ -83,7 +83,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_5_healthcare_task_force",
         "fields": {
             "priority": 2,
-            "description": "Your first few days in Washington have been... busy, to say the least. You're laying back in the Oval Office, thinking about one of your biggest campaign promises, one of Hillary's greatest dreams since you met her back at Yale, the choice to your heart is obvious, but your mind tells you she has no experience to run any show, let alone a legacy-defining moment. Regardless, you have a choice. Who are you going to let run this massive healthcare reform?",
+            "description": "Your first days in the White House feel like living in a museum. You sit back in the Oval Office, thinking about who’ll be the perfect fit for leading the task force to achieving your biggest promise during the campaign, universal healthcare. A dream of millions, especially for Hillary since you met her back in Yale. Such a massive undertaking ought to be with the same drive for this legacy-defining struggle, like Ted. be headed by someone you can trust, like Hillary. Someone with more experience, like Mitchell and Foley. Someone with the same drive for this legacy-defining struggle, like Ted. No person holds all these qualities together, but one of them has to lead, right? Maybe you could grab some experts to find a solution? There’s no time to waste; I don’t want to keep the people waiting any longer.",
             "likelihood": 1
         }
     },
@@ -132,30 +132,30 @@ campaignTrail_temp.questions_json = [
           "likelihood": 1
       }
   },
+  {
+    "model": "campaign_trail.question",
+    "pk": "question_8_somalia",
+    "fields": {
+        "priority": 2,
+        "description": "The Somali people have turned against the U.S. and UNOSOM II forces following a botched raid on a villa owned by warlord Mohamed Aidid, which resulted in the deaths of many innocent women, children, and community leaders. The incident has well... rightfully sparked outrage from human rights organizations, labeling it a massacre. It’s clear to you that you must quickly change tactics to salvage what little support remains among the Somali population, otherwise, the situation could escalate unpredictably.",
+        "likelihood": 1
+    }
+},
+{
+    "model": "campaign_trail.question",
+    "pk": "question_7_crime",
+    "fields": {
+        "priority": 2,
+        "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
+        "likelihood": 1
+    }
+},
     {
         "model": "campaign_trail.question",
         "pk": "question_6_dont_show_dont_tell",
         "fields": {
             "priority": 2,
             "description": "Your plans to allow members of the homosexual community to serve openly in the military have faced significant resistance from military leadership, as you expected, however, your being blasted from St. Louis to Baton Rouge. Now, Military generals are threatening to resign en masse if allowed. After a lot of discussion, General Colin Powell presents you with a compromise: recruiters would not ask about an individual's sexual orientation, but the military would retain the right to discharge those who are openly gay. It sounds good to just bite the bullet, but then comes the issue of pissing off the gay people who voted for you.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_7_crime",
-        "fields": {
-            "priority": 2,
-            "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_8_somalia",
-        "fields": {
-            "priority": 2,
-            "description": "The Somali people have turned against the U.S. and UNOSOM II forces following a botched raid on a villa owned by warlord Mohamed Aidid, which resulted in the deaths of many innocent women, children, and community leaders. The incident has well... rightfully sparked outrage from human rights organizations, labeling it a massacre. It’s clear to you that you must quickly change tactics to salvage what little support remains among the Somali population, otherwise, the situation could escalate unpredictably.",
             "likelihood": 1
         }
     },
@@ -15845,7 +15845,7 @@ cyoAdventure = function(a) {
    //Healthcare Update Inserter
     if (ans === 50001) {
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/sy23bGr.png';
-        question_insert("question_8_somalia", 
+        question_insert("whitewater_question", 
         {
             "model": "campaign_trail.question",
             "pk": "insert_ted_advice_healthcare",
@@ -15860,7 +15860,7 @@ cyoAdventure = function(a) {
     }
     if (ans === 50002) {
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
-        question_insert("question_8_somalia", 
+        question_insert("whitewater_question", 
         {
             "model": "campaign_trail.question",
             "pk": "insert_question_hillary",
@@ -15874,8 +15874,8 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50003) {
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/mQPxzjS.png';
-        question_insert("question_8_somalia", 
+     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/mQPxzjS.png';
+        question_insert("whitewater_question", 
         {
                     "model": "campaign_trail.question",
         "pk": "insert_health_insurance",
@@ -15889,7 +15889,7 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50004) {
-        question_insert("question_8_somalia", 
+        question_insert("whitewater_question", 
         {
             "model": "campaign_trail.question",
         "pk": "insert_healthcare_disaster",
@@ -15991,7 +15991,7 @@ cyoAdventure = function(a) {
         });
     }    
 	//Healthcare Vote inserter
-    if (e.question_number+1 == 13) {
+    if (e.question_number+1 == 10) {
 	let win_healthcare_vote_temp = {
 		"model": "campaign_trail.question",
 		"pk": "healthcare_vote_win",
@@ -16029,23 +16029,18 @@ cyoAdventure = function(a) {
         }
 	}
     if (e.player_answers.includes(55003.5)) {
-        question_insert("insert_yeltsin_unfriendly",win_healthcare_vote_temp);
-		question_insert("insert_yeltsin_friendly",win_healthcare_vote_temp);
+        question_insert("question_7_crime",win_healthcare_vote_temp);
     }
 else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
     console.log("Kennedy healthcare vote triggered.");
-    question_insert("insert_yeltsin_unfriendly", win_healthcare_vote_kennedy_temp);
-    question_insert("insert_yeltsin_friendly", win_healthcare_vote_kennedy_temp);
+    question_insert("question_7_crime", win_healthcare_vote_kennedy_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
-    question_insert("insert_yeltsin_unfriendly",refuse_healthcare_vote_temp);
-    question_insert("insert_yeltsin_friendly",refuse_healthcare_vote_temp);
+    question_insert("question_7_crime",refuse_healthcare_vote_temp);
 } else if (ans == 75002.5) {
     KennedyFails += 1;
-    question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
-    question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
+    question_insert("question_7_crime",fail_healthcare_vote_temp);
 } else {
-    question_insert("insert_yeltsin_unfriendly",fail_healthcare_vote_temp);
-    question_insert("insert_yeltsin_friendly",fail_healthcare_vote_temp);
+    question_insert("question_7_crime",fail_healthcare_vote_temp);
     console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
 }
 }
