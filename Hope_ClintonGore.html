@@ -431,15 +431,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "midterm_gop_sweep_massachusetts",
-        "fields": {
-            "priority": 0,
-            "description": "Jesus, it was a massacre against all things holy. The Republican Party didn’t just sweep Congress, they even got Mitt Romney to beat Ted Kennedy in Massachusetts. How do we even respond to that?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "midterm_gop_sweep_virginia",
         "fields": {
             "priority": 0,
@@ -17153,7 +17144,7 @@ cyoAdventure = function(a) {
         });
     }    
 	//Healthcare Vote inserter
-    if (e.question_number+1 == 10) {
+    if (e.question_number+1 == 14) {
 	let win_healthcare_vote_temp = {
 		"model": "campaign_trail.question",
 		"pk": "healthcare_vote_win",
@@ -17191,15 +17182,15 @@ cyoAdventure = function(a) {
         }
 	}
     if (e.player_answers.includes(55003.5)) {
-        question_insert("question_7_crime",win_healthcare_vote_temp);
+        question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
 else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
     console.log("Kennedy healthcare vote triggered.");
-    question_insert("question_7_crime", win_healthcare_vote_kennedy_temp);
+    question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
-    question_insert("question_7_crime",refuse_healthcare_vote_temp);
+    question_insert("question_10_foreign_intervention",refuse_healthcare_vote_temp);
 } else {
-    question_insert("question_7_crime",fail_healthcare_vote_temp);
+    question_insert("question_10_foreign_intervention",fail_healthcare_vote_temp);
     console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
 }
 }
@@ -18018,10 +18009,10 @@ vpTable = {
     "Newt Gingrich" : "J.C. Watts",
     "Oliver North" : "Tom Ridge",
     "Donald Trump" : "George Voinovich",
-    "Mitt Romney" : "Thad Cochran",
+    "Bill Weld" : "John Kasich",
     "George Pataki" : "Orrin Hatch",
     "George W. Bush" : "Dick Cheney",
-    "Elizabeth Dole" : "John Kasich",
+    "Elizabeth Dole" : "Fred Thompson",
     "Jeb Bush" : "Frank Keating",
     "John McCain" : "Chuck Hagel",
 
