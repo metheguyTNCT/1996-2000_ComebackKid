@@ -558,6 +558,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "debate_forbes",
+        "fields": {
+            "priority": 0,
+            "description": "New York City. Steve Forbes to your right. Forbes, while being charismatic and very open with the American people, doesn’t have the experience that you do. Now, you step onto the stage. Standing at your podium, you see him come out, a bit shaky but he does make his appearance known. As the Moderator introduces the two, you decide on one topic to angle Steve on during the debate.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "clinton_2nd_term_question_3",
         "fields": {
             "priority": 0,
@@ -1421,14 +1430,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 35009.5,
-        "fields": {
-            "question": "candidate_intro_dole",
-            "description": "Al represents the future of the Democratic Party and we should exploit that. Now I know I can't micromanage and plan everything about what we wanna present, but why don’t we get him some spotlight during the Campaign Trail and at the Convention?  "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 35009.51,
         "fields": {
             "question": "candidate_intro_dole",
@@ -1473,14 +1474,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "candidate_intro_wilson",
             "description": "Wilson might pretend to be some kind of moderate, but don’t be fooled. Wilson is trying to promote the kind of Agenda we backed away from in 1992 and to abandon our campaign would only deteriorate our efforts to help change America for the better. \n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 35015.5,
-        "fields": {
-            "question": "candidate_intro_wilson",
-            "description": "Why don’t we take out a chart to compare and contrast our candidacies? Governor Wilson may have experience leading the state of California but he not only cut welfare benefits but he also proposed a “Balanced Budget” that has left California in a worse state than it was before him. Make no mistake, if he can’t manage California, how could he manage America?\n"
         }
     },
     {
@@ -1649,6 +1642,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "debate_specter",
             "description": "I think I will get the extra sleep. I believe that the key to a great performance at the debate is to get loads of sleep so I look more presentable than Specter. \n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36018.5,
+        "fields": {
+            "question": "debate_forbes",
+            "description": "During his acceptance speech, Forbes promised, among other things, a flat tax that would tax Americans on a constant basis not based around income level. This would not only increase the wealth gap between the rich and the poor but would put our budget in a severe deficit. Can we trust him on tax policy? And even then, what else does he have to offer?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36019.5,
+        "fields": {
+            "question": "debate_forbes",
+            "description": "Forbes has run a Bush style campaign that has not only glorified the former president, but defended a majority of his policies. It's not that shocking, given the fact they both grew up with silver spoons. If you don't wanna go back to 4 years ago, vote Clinton/Gore this election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36020.5,
+        "fields": {
+            "question": "debate_forbes",
+            "description": "Let's steer clear of any attacks in this one. I wanna talk about how we've run a good, liberal administration. I'll talk about my many successes in this period, and what I plan to do in my 2nd term."
         }
     },
     {
@@ -8476,16 +8493,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12710,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.095
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12714,
         "fields": {
             "answer": 35004.5,
@@ -9466,29 +9473,89 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12720,
+        "pk": 12699,
         "fields": {
-            "answer": 35015.5,
+            "answer": 36018.5,
             "candidate": 77,
             "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 36018.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 36018.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 36019.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12705,
+        "fields": {
+            "answer": 36019.5,
+            "candidate": 77,
+            "affected_candidate": 78,
             "global_multiplier": -0.01
         }
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12721,
+        "pk": 12706,
         "fields": {
-            "answer": 35015.5,
+            "answer": 36019.5,
             "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.02
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
         }
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12722,
+        "pk": 12709,
         "fields": {
-            "answer": 35015.5,
+            "answer": 36020.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12710,
+        "fields": {
+            "answer": 36020.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 36020.5,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.06
@@ -9699,26 +9766,6 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 12719,
         "fields": {
             "answer": 35008.5,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.06
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12728,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12730,
-        "fields": {
-            "answer": 35009.5,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.06
@@ -11857,61 +11904,6 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 12723,
-        "fields": {
-            "answer": 35015.5,
-            "state": 185,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 100007,
-        "fields": {
-            "answer": 35015.5,
-            "state": 183,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.04
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 100008,
-        "fields": {
-            "answer": 35015.5,
-            "state": 208,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.04
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12724,
-        "fields": {
-            "answer": 35015.5,
-            "state": 217,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12725,
-        "fields": {
-            "answer": 35015.5,
-            "state": 227,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
         "pk": 12731,
         "fields": {
             "answer": 35016.5,
@@ -12135,72 +12127,6 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 12725,
         "fields": {
             "answer": 35008.5,
-            "state": 216,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12731,
-        "fields": {
-            "answer": 35009.5,
-            "state": 224,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12732,
-        "fields": {
-            "answer": 35009.5,
-            "state": 231,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12733,
-        "fields": {
-            "answer": 35009.5,
-            "state": 186,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12734,
-        "fields": {
-            "answer": 35009.5,
-            "state": 207,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12735,
-        "fields": {
-            "answer": 35009.5,
-            "state": 196,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12736,
-        "fields": {
-            "answer": 35009.5,
             "state": 216,
             "candidate": 77,
             "affected_candidate": 78,
@@ -15450,15 +15376,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12719,
-        "fields": {
-            "answer": 35015.5,
-            "candidate": 77,
-            "answer_feedback": "Wilson fires back criticizing your leadership during the 1993 Budget Crisis and how you handled the Crime situation during your first years in Office, it was a smart move to criticize the Governor based on his leadership but don’t forget that the Republicans are out for you.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12727,
         "fields": {
             "answer": 35016.5,
@@ -15518,15 +15435,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 35008.5,
             "candidate": 77,
             "answer_feedback": "The ad opens to ominous drums of war follow bright red text of Newt Gingrich and Bob Dole stating they’re against family leave, higher wages  and vaccines for children. Then bright flashing white and blue text of Clinton Gore pop out, with a quick paced drums to boot. Listing your achievements, higher wages, clear air and water 10,000,000 new jobs. The ad ends with a question to the viewer; When it comes to America's future...which drummer do YOU want to march to?"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12727,
-        "fields": {
-            "answer": 35009.5,
-            "candidate": 77,
-            "answer_feedback": "Setting up your successor’s image for 2000? A surefire way to extend the olivebranch to a wider coalition. You two storm the presses on successes and personal struggles. But sadly, most of it is forgotten when Al does his own version of the macarena center stage at the DNC."
         }
     },
     {
@@ -15600,7 +15508,34 @@ campaignTrail_temp.answer_feedback_json = [
           "candidate": 77,
           "answer_feedback": "The media begins to shine scrutiny on a homesick and depressed Vince Foster. The vicious campaign begins, with personal questioning his character and integrity, which culminates in his suicide. As you gingerly wait to read his eulogy, It sets in like a pit in your stomach, but you know it's just how Washington gets, ruthless. "
       }
-  }
+  },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12698,
+    "fields": {
+        "answer": 36018.5,
+        "candidate": 77,
+        "answer_feedback": "Granted, the flat tax policy is quite popular among his base, and Forbes puts up a good fight when it comes to other issues. The results come back skewed, with no apparent winner."
+    }
+},
+{
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12703,
+    "fields": {
+        "answer": 36019.5,
+        "candidate": 77,
+        "answer_feedback": "Building up Forbes' image of a \"silver spooned elitist\" is always sure to work. Forbes tries to flip the question around, and make it about \"party unity\", but to no alas. Many believe you won the debate."
+    }
+},
+{
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12708,
+    "fields": {
+        "answer": 36020.5,
+        "candidate": 77,
+        "answer_feedback": "Whitewater, Filegate, Paula Jones, he goes on about. You just say \"I don't believe that's appropriate, Mr Forbes.\" You look mad, and the viewers can tell. When the morning polls come back, many believe Forbes won the debate."
+    }
+}
 ]
 
 
@@ -16780,10 +16715,10 @@ if (e.question_number+1 == 16){
                 question_insert("question_21_iraq_airstrikes", 
     {
                "model": "campaign_trail.question",
-        "pk": "debate_wilson",
+        "pk": "debate_forbes",
         "fields": {
             "priority": 0,
-            "description": "You're in San Diego, the same city that nominated your opponent. To your right is Governor Wilson. Wilson tries to match the energy you brought to the 1992 Elections and he seems to be doing very well. Of course, he is running a race against a Popular Incumbent in a sound Economy and Security situation. Of course, it’s best to try and direct the conversation your way if we want to get anywhere at all, what to say Bill?\n",
+            "description": "New York City. Steve Forbes to your right. Forbes, while being charismatic and very open with the American people, doesn’t have the experience that you do. Now, you step onto the stage. Standing at your podium, you see him come out, a bit shaky but he does make his appearance known. As the Moderator introduces the two, you decide on one topic to angle Steve on during the debate.",
             "likelihood": 1
         }
     }
