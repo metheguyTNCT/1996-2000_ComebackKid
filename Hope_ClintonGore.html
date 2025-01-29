@@ -1220,6 +1220,14 @@ campaignTrail_temp.answers_json = [
             "description": "It’s too risky to push this right now. Timing matters, and we’ll come back to it when I know we’ve got the votes to make it stick."
         }
     },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 15006.5,
+        "fields": {
+            "question":"healthcare_vote_refuse",
+            "description": "Damn it! I can’t just give the people nothing. We’ll have to pass it."
+        }
+    },
 	{
         "model": "campaign_trail.answer",
         "pk": 25001.5,
@@ -10040,6 +10048,16 @@ campaignTrail_temp.answer_score_global_json = [
         "affected_candidate": 80,
         "global_multiplier": 0.02
     }
+},
+{
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12575,
+    "fields": {
+        "answer": 15006.5,
+        "candidate": 77,
+        "affected_candidate": 77,
+        "global_multiplier": -0.02
+    }
 }
 ]
 
@@ -15745,7 +15763,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 15003.5,
             "candidate": 77,
-            "answer_feedback": "Although this was expected, it still hurts you."
+            "answer_feedback": "After a frantic series of calls to the moderates, the vote fails. Barely. The media labels you a two-timing liar, a sentiment that the people grow to agree with. “It’s all so unfair.” You complain to Hillary."
         }
     },
     {
@@ -16756,6 +16774,15 @@ campaignTrail_temp.answer_feedback_json = [
         "candidate": 77,
         "answer_feedback": "Buchanan calls your claim \"fearmongering\", but it's too late. Everyone associates him with fascism, and nobody's listening anymore. As soon as you step off the stage, you begin to write your victory speech."
     }
+},
+{
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12576,
+    "fields": {
+        "answer": 15006.5,
+        "candidate": 77,
+        "answer_feedback": "A few days later, you sign the HEART act with great applause from Republicans and Democrats alike. Sitting behind the resolute desk answering questions, you can’t ignore the intense presence of smug triumph from Newt Gingrich behind you. Reveling in stealing your thunder. That bastard."
+    }
 }
 ]
 
@@ -17371,6 +17398,14 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     if (ans == 15002.5 || ans == 15005.5){
         PublicSupport -= 2;
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
+        }
+    if (ans == 15003.5) {
+    PublicSupport -= 2;
+    LEGWin -= 1;
+    }
+    if (ans == 15006.5) {
+        PublicSupport -= 1;
+        LEGWin += 1;
         }
     // midterms stuff
     if (ans == 25003.5) {
