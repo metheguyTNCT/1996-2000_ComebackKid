@@ -17155,9 +17155,6 @@ else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
     question_insert("question_7_crime", win_healthcare_vote_kennedy_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("question_7_crime",refuse_healthcare_vote_temp);
-} else if (ans == 75002.5) {
-    KennedyFails += 1;
-    question_insert("question_7_crime",fail_healthcare_vote_temp);
 } else {
     question_insert("question_7_crime",fail_healthcare_vote_temp);
     console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
@@ -17347,10 +17344,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     PublicSupport -= 1;
    FPWin -= 1;
    }
-   //Ted Kennedy stuff
-   if (ans == 75002.5) {
-    KennedyFails += 1;
-}
    //Healthcare Vote CYOA (Succeeds)
    if (ans == 15004.5){
     PublicSupport += 3;
@@ -17647,22 +17640,6 @@ if (e.question_number+1 == 16){
 				}
             );
             console.log("Cuomo Beat Pataki")
-        } else if (KennedyFails == 1){
-			DemCongress -= 1;
-            MassiveGOPMajority+= 1;
-            RomneyWin += 1;
-			question_insert ("question_11_midterm_prep", 
-				{
-					"model": "campaign_trail.question",
-					"pk": "midterm_gop_sweep_massachusetts",
-					"fields": {
-						"priority": 0,
-						"description": "Jesus, it was a massacre against all things holy. The Republican Party didn’t just sweep Congress, they even got Mitt Romney to beat Ted Kennedy in Massachusetts. How do we even respond to that?",
-						"likelihood": 1
-					}
-				}
-			);
-            console.log("Kennedy Dynasty Over.")
 		} else if (e.player_answers.includes(80002) &&  e.player_answers.includes(85004.5) && e.player_answers.includes(100004) && GotHealthcare == 0){
 			DemCongress -= 1;
             MassiveGOPMajority+= 1;
