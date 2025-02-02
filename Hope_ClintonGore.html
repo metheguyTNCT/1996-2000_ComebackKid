@@ -18297,6 +18297,7 @@ refButton.insertAdjacentElement('afterend', newButton);
 let netscapePic; // Global variable for headquarters image
 let minsweeperPic; // Global variable for minsweeper image
 let closeMacButton;
+let loopingSound; // Declare loopingSound globally
 function macBackground() {
     openHeadquarter();
 
@@ -18306,6 +18307,11 @@ function macBackground() {
         console.error("Target element not found.");
         return;
     }
+
+    // Load sound but do not play initially
+    let loopingSound = new Audio('https://audio.jukehost.co.uk/e19IDfLbWvkktOmCzyC4s54Aj8g75CZI');
+    loopingSound.loop = true;
+    loopingSound.volume = 0.5;
 
     // Create and set up a background container inside the target element
     let bgContainer = document.createElement('div');
@@ -18322,7 +18328,7 @@ function macBackground() {
     targetElement.appendChild(bgContainer);
 
     // Create the draggable picture element for Headquarters
-  netscapePic = document.createElement('img');
+    netscapePic = document.createElement('img');
     netscapePic.src = 'https://i.imgur.com/hbT1unU.png';
     netscapePic.style.position = 'absolute';
     netscapePic.style.right = '20px';
@@ -18330,7 +18336,6 @@ function macBackground() {
     netscapePic.style.transform = 'translateY(-50%)';
     netscapePic.style.cursor = 'pointer';
     netscapePic.style.zIndex = '1000';
-    netscapePic.style.display = 'none';
     targetElement.appendChild(netscapePic);
 
     // Add click event to trigger openHeadquarters function
@@ -18345,11 +18350,47 @@ function macBackground() {
     minsweeperPic.style.transform = 'translateY(-50%)';
     minsweeperPic.style.cursor = 'pointer';
     minsweeperPic.style.zIndex = '1000';
-    minsweeperPic.style.display = 'none';
     targetElement.appendChild(minsweeperPic);
 
     // Add click event to trigger Minesweeper window
     minsweeperPic.addEventListener('click', openMinesweeper);
+
+    // Create a checkbox for sound settings
+    let soundContainer = document.createElement('div');
+    soundContainer.style.position = 'absolute';
+    soundContainer.style.bottom = '10px';
+    soundContainer.style.left = '10px';
+    soundContainer.style.background = 'linear-gradient(to right, #1e3c72, #2a5298)';
+    soundContainer.style.color = 'white';
+    soundContainer.style.padding = '5px 10px';
+    soundContainer.style.borderRadius = '5px';
+    soundContainer.style.zIndex = '1001';
+
+    let soundCheckbox = document.createElement('input');
+    soundCheckbox.type = 'checkbox';
+    soundCheckbox.id = 'soundToggle';
+    soundCheckbox.checked = false; // Default to OFF
+
+    let soundLabel = document.createElement('label');
+    soundLabel.htmlFor = 'soundToggle';
+    soundLabel.textContent = ' Enable Menu Music';
+    soundLabel.style.marginLeft = '5px';
+
+    // Toggle sound setting
+    soundCheckbox.addEventListener('change', function () {
+        if (soundCheckbox.checked) {
+            loopingSound.play();
+            audio.pause();
+        } else {
+            loopingSound.pause();
+            audio.play();
+            loopingSound.currentTime = 0; // Reset sound
+        }
+    });
+
+    soundContainer.appendChild(soundCheckbox);
+    soundContainer.appendChild(soundLabel);
+    targetElement.appendChild(soundContainer);
 
     // Create the "Close Mac" button
     closeMacButton = document.createElement('button');
@@ -18358,8 +18399,12 @@ function macBackground() {
     closeMacButton.style.top = '10px';
     closeMacButton.style.left = '10px';
     closeMacButton.style.zIndex = '1001';
-    closeMacButton.style.display = 'none';
     targetElement.appendChild(closeMacButton);
+
+    // hide them until you press exitbutton
+    netscapePic.style.display = 'none';
+    minsweeperPic.style.display = 'none';
+    closeMacButton.style.display = 'none';
 
     // Add event listener to the "Close Mac" button
     closeMacButton.addEventListener('click', function() {
@@ -18370,11 +18415,22 @@ function macBackground() {
             netscapePic.style.display = 'none';
             minsweeperPic.style.display = 'none';
             closeMacButton.style.display = 'none';
-            hqDiv.style.display = 'none';
-            mainDiv.style.display = 'none';
+            soundContainer.style.display = 'none';
+
+            // Ensure hqDiv and mainDiv exist before trying to hide them
+            let hqDiv = document.getElementById('hqDiv');
+            let mainDiv = document.getElementById('mainDiv');
+
+            if (hqDiv) hqDiv.style.display = 'none';
+            if (mainDiv) mainDiv.style.display = 'none';
+
+            // Stop and reset sound completely
+            loopingSound.pause();
+            audio.play();
+            loopingSound.currentTime = 0;
+            soundCheckbox.checked = false; // Uncheck the box
         }
     });
-    
 }
 // Declare globally to initialize only once
 let cnnContent;
@@ -18955,7 +19011,9 @@ function openHeadquarter() {
         console.error("Game window not found!");
         return;
     }
-
+    if (netscapePic) netscapePic.style.display = 'none';
+    if (minsweeperPic) minsweeperPic.style.display = 'none';
+    if (closeMacButton) closeMacButton.style.display = 'none';
     hqDiv = document.createElement('div');
     hqDiv.id = 'headquarter';
     hqDiv.style.position = 'absolute';
