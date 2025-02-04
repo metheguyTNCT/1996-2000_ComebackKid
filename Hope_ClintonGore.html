@@ -16683,7 +16683,6 @@ var FPWin = 0
 var LEGWin = 0
 var Ideology = 0
 var PublicSupport = 8
-var Legacy = 0
 var RichardsBeatW = 0
 var CuomoBeatPataki = 0
 var KennedyFails = 0
@@ -17109,7 +17108,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
    }
    if (ans == 20003){
    FPWin += 1;
-   Legacy += 1;
    PublicSupport += 1;
    NatHeathScore += 1;
    }
@@ -17207,7 +17205,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     LEGWin += 1; 
     NAFTA += 1; 
     NatHeathScore += 1;
-    Legacy += 1;
     }
   //Russia CYOA (START III SUCCEEDS)
      if (ans == 85001.5){
@@ -17247,7 +17244,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
    if (ans == 15004.5){
     PublicSupport += 3;
     LEGWin += 1;
-    Legacy += 1;
     GotHealthcare += 1;
     Ideology += 1;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/g5moPwD.png';
@@ -17255,7 +17251,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     if (ans == 85018.5){
     PublicSupport += 5;
     LEGWin += 1;
-    Legacy += 3;
     GotHealthcare += 1;
     Ideology += 3;
     ctsAchievement("The Work Goes On");
@@ -17293,7 +17288,6 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     //Government Shutdown CYOA
     if (ans == 150001){
     PublicSupport += 1;
-    Legacy += 1;
     }
     if (ans == 150002){
     PublicSupport -= 1;
@@ -17319,7 +17313,6 @@ PublicSupport -= 1;
     if (ans == 170001){
     PublicSupport += 1;
     FPWin += 1;
-    Legacy += 1;
     }
     if (ans == 170003){
     PublicSupport -= 1;
@@ -17497,7 +17490,6 @@ if (e.question_number+1 == 16){
         ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
-            Legacy += 1;
             RichardsBeatW += 1;
             question_insert ("question_11_midterm_prep", 
 				{
@@ -17515,7 +17507,6 @@ if (e.question_number+1 == 16){
             ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
-            Legacy += 1;
             RichardsBeatW += 1;
             question_insert ("question_11_midterm_prep", 
 				{
@@ -17533,7 +17524,6 @@ if (e.question_number+1 == 16){
             ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
-            Legacy += 1;
             CuomoBeatPataki += 1;
             question_insert ("question_11_midterm_prep", 
 				{
@@ -17598,7 +17588,6 @@ if (e.question_number+1 == 16){
             ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
-            Legacy += 1;
 			question_insert ("question_11_midterm_prep", 
             {
 				"model": "campaign_trail.question",
@@ -18464,7 +18453,7 @@ function initializeContent() {
             <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
             <a href="#" id="abroad" style="color: #bfa800; text-decoration: none;">The Fight Abroad</a><br>
             <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
-            <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
+            <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Support</a><br>
         </div>
 
         <div id="dynamicContent" style="font-size: 18px; margin-top: 20px;">
@@ -18524,15 +18513,15 @@ function initializeContent() {
     </div>
 </div>
         <div id="legacyContent" style="display: none; margin-top: 20px;">
-            <h2>Ideology & Legacy</h2>
+            <h2>Ideology & Support</h2>
             <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
-            <p>The People's Ideology:</p>
+            <p>America's Ideology:</p>
                 <p style="font-weight: bold; margin-top: 5px; color: #DE0100;">Slightly Conservative</p>
 
                 <p>Your ideology:</p>
                 <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
                 
-                <p>Your legacy:</p>
+                <p>Your Support:</p>
                 <p id="legacyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Legacy]</p>
 
             </div>
@@ -18697,21 +18686,23 @@ function updateCandidateDescription(candidateName, newDescription) {
         });
 
             // Function to dynamically update Legacy and Ideology content
-    function updateLegacyAndIdeology() {
+    function updateSupportAndIdeology() {
         const legacyText = document.getElementById('legacyText');
         const ideologyText = document.getElementById('ideologyText');
 
         // Legacy content
-        if (Legacy == 7) {
-            legacyText.textContent = "Perfect";
-        } else if (Legacy >= 4 && Legacy <= 6) {
-            legacyText.textContent = "Remarkable";
-        } else if (Legacy == 3) {
+        if (PublicSupport >= 20) {
+            legacyText.textContent = "Great";
+        } else if (PublicSupport >= 16 && PublicSupport <= 19) {
+            legacyText.textContent = "Really Good";
+        } else if (PublicSupport >= 11 && PublicSupport <= 15) {
+            legacyText.textContent = "Good";
+        } else if (PublicSupport >= 6 && PublicSupport <= 10) {
             legacyText.textContent = "Decent";
-        } else if (Legacy >= 1 && Legacy >= 2) {
-            legacyText.textContent = "Developing";
+        } else if (PublicSupport >= 1 && PublicSupport <= 5) {
+            legacyText.textContent = "Low";
         } else {
-            legacyText.textContent = "Minimal";
+            legacyText.textContent = "Nonexistant";
         }
 
         // Ensure Ideology is a number
@@ -18846,7 +18837,7 @@ function toggleSection(sectionId) {
 
     // Update Legacy, Ideology, and International Standing when respective sections are opened
     if (sectionId === 'legacyContent') {
-        updateLegacyAndIdeology();
+        updateSupportAndIdeology();
     } else if (sectionId === 'abroadContent') {
         updateInternationalStanding();  // Update the international standing when "The Fight Abroad" is clicked
     } else if (sectionId === 'homeContent') {
