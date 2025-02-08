@@ -909,38 +909,23 @@ playerContainer.appendChild(controlsContainer);
   
    const volumeContainer = document.createElement("div");
     volumeContainer.id = "volume-container";
-  
-  const volumeLabel = document.createElement("img");
-  volumeLabel.src = "https://i.imgur.com/R4ezatp.png";
-  volumeLabel.alt = "Volume";
-  volumeLabel.style.width = "50px";  // Increase the widthnextButton.style.height = "50px";  // Increase the height
-volumeLabel.style.height = "50px";  // Increase the height
-  volumeContainer.appendChild(volumeLabel);
-  
-    const volumeSliderContainer = document.createElement("div");
-    volumeSliderContainer.classList.add("is-vertical");
-    volumeSliderContainer.style.marginLeft = "23%";
-    volumeSliderContainer.style.height = "126px";
-  
-    const volumeSlider = document.createElement("input");
-    volumeSlider.type = "range";
-    volumeSlider.id = "volumeSlider";
-    volumeSlider.min = 0;
-    volumeSlider.max = 9;
-    volumeSlider.step = 1;
-    volumeSlider.value = 1; // Initial volume
-  
-    volumeSliderContainer.appendChild(volumeSlider);
-  
-    const volumeDisplay = document.createElement("span");
-    volumeDisplay.id = "volume-display";
-    volumeDisplay.style.fontWeight = 'bold'; 
-    volumeDisplay.style.display = 'none';
-    volumeDisplay.textContent = "1";
-  
-    volumeContainer.appendChild(volumeSliderContainer);
-    volumeContainer.appendChild(volumeDisplay);
-  
+
+    const volumeUpButton = document.createElement("img");
+    volumeUpButton.style.width = "70px";  // Increase the width
+  volumeUpButton.style.height = "70px";  // Increase the height
+    volumeUpButton.id = "volumeUpButton";
+    volumeUpButton.src = "https://i.imgur.com/R4ezatp.png";
+    volumeUpButton.alt = "Volume Up";
+    volumeContainer.appendChild(volumeUpButton);
+
+  const volumeDownButton = document.createElement("img");
+  volumeDownButton.style.width = "70px";  // Increase the width
+  volumeDownButton.style.height = "70px";  // Increase the height
+    volumeDownButton.id = "volumeDownButton";
+    volumeDownButton.src = "https://i.imgur.com/6H5k0U1.png";
+    volumeDownButton.alt = "Volume Down";
+    volumeContainer.appendChild(volumeDownButton);
+
     playerContainer.appendChild(volumeContainer);
   
     gameWindow_player.insertAdjacentElement("afterend", playerContainer);
@@ -975,12 +960,22 @@ volumeLabel.style.height = "50px";  // Increase the height
       audio.play();
     });
   
-      let currentVolume = 1; // Initial volume
+      let currentVolume = 6; // Initial volume
   
-    volumeSlider.addEventListener("input", function () {
-      currentVolume = parseInt(volumeSlider.value, 10);
-      updateVolumeDisplay();
-      updateAudioVolume();
+      volumeUpButton.addEventListener("click", function () {
+        const audio = document.getElementById("audio");
+        if (currentVolume < 20) { // Increased max volume range
+            currentVolume++;
+            audio.volume = currentVolume / 20; // Adjusted for new range
+        }
+    });
+    
+    volumeDownButton.addEventListener("click", function () {
+        const audio = document.getElementById("audio");
+        if (currentVolume > 0) {
+            currentVolume--;
+            audio.volume = currentVolume / 20; // Adjusted for new range
+        }
     });
   
     function updateVolumeDisplay() {
@@ -1037,9 +1032,6 @@ volumeLabel.style.height = "50px";  // Increase the height
       align-items: center;
       width: 100%;
   }
-    .is-vertical #volumeSlider {
-    width: 125px;
-  }
   
   #controls {
     display: flex;
@@ -1064,7 +1056,7 @@ volumeLabel.style.height = "50px";  // Increase the height
     }
     #mp3Player {
       margin-left: 0;  /* Ensure there's no extra margin on the left */
-      margin-right: 175px;
+      margin-right: 250px;
       align-items: center;
       /* No need for absolute positioning here */
       width: 300px;   /* Your preferred width */
