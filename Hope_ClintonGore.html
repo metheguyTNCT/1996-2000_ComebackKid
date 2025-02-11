@@ -17561,9 +17561,44 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 }
+console.log(PublicSupport);
 if (e.question_number+1 == 16){
     if (GotHealthcare == 1) {
-     if (e.player_answers.includes(40002) && (e.player_answers.includes(110004) || e.player_answers.includes(110003) ||e.player_answers.includes(110002))){
+    if (e.player_answers.includes(50003)) {
+    if (PublicSupport < 17) {
+            DemCongress -= 1;
+            SlimGOPCongress += 1;
+            Legacy += 1;
+			question_insert ("question_11_midterm_prep", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "midterm_gop_revolution",
+                "fields": {
+                    "priority": 0,
+                    "description": "Well, we’ve got some bad news. It’s a disaster. The Republicans have obtained sweeping gains in the midterms, to a level where several big name Democrats, including Speaker Foley, were unable to win re-election, as the election was a sweeping rebuke of your presidency, as even the heir-apparent to the Speakership, Newt Gingrich, dubbing this a ''Republican Revolution.'' You’ve got to do some damage control here.",
+                    "likelihood": 1
+                }
+            }
+        ); 
+    } else {
+   DemCongress -= 1;
+            SlimGOPCongress += 1;
+            Legacy += 1;
+			question_insert ("question_11_midterm_prep", 
+            {
+				"model": "campaign_trail.question",
+				"pk": "midterm_minor_gop_win_none",
+				"fields": {
+					"priority": 0,
+					"description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You've made the House unexpectedly competitive while holding onto the Senate, a situation that bodes well for passing your agenda and gives you the freedom to make some daring moves until ’96. What’s your plan from here?",
+					"likelihood": 1
+					}
+				}
+            );
+            ctsAchievement("Counterrevolution");
+    }
+    }
+     else if (e.player_answers.includes(40002) && (e.player_answers.includes(110004) || e.player_answers.includes(110003) ||e.player_answers.includes(110002))){
         ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
