@@ -17615,7 +17615,7 @@ if (e.question_number+1 == 16){
             );
 		}
     } if (GotHealthcare == 0) {
-        if (e.player_answers.includes(80002) &&  e.player_answers.includes(85004.5) && e.player_answers.includes(100004)){
+        if (e.player_answers.includes(80002) &&  (85004.5 || 85008.5) && e.player_answers.includes(100004)){
 			DemCongress -= 1;
             MassiveGOPMajority+= 1;
             NorthWin += 1;
@@ -17630,21 +17630,6 @@ if (e.question_number+1 == 16){
 					}
 				}
 			);
-		} else if (e.player_answers.includes(80002) &&  e.player_answers.includes(85008.5) && e.player_answers.includes(100004)){
-			DemCongress -= 1;
-            MassiveGOPMajority+= 1;
-            NorthWin += 1;
-			question_insert ("question_11_midterm_prep", 
-				{
-					"model": "campaign_trail.question",
-					"pk": "midterm_gop_sweep",
-					"fields": {
-						"priority": 0,
-						"description": " Jesus. You look at your advisors as they analyze the results of the midterms, you can’t help but feel the grim feeling across the room, as they tell you there's no other fitting word, it’s a disaster, as trusty and respected senators and governors fall, and staggering majorities for the Republicans establish themselves across the walls of Congress. You have to act, now.",
-						"likelihood": 1
-					}
-				}
-			);	
         } else {
            DemCongress -= 1;
             RepublicanRevolution += 1;
