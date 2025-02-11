@@ -16767,6 +16767,7 @@ var LamarNom = 0
 var WilsonNom = 0
 var ForbesNom = 0
 var PowellNom = 0
+var HWNom = 0
 var NatHeathScore = 0
 Dolewin=false;
 Buchananwin=false;
@@ -17515,6 +17516,13 @@ function powellMentum() {
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
       e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.5
   e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.3
+}
+function hwMentum() {
+    HWNom += 1;
+    campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#cf2d18";
+    campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
+    campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
 }
 if (ans == 210001){
     campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/aMmEU3J.png";
