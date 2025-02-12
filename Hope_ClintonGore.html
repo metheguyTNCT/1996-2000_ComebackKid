@@ -17171,7 +17171,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
    PublicSupport += 1;
    }
    if (ans == 20003){
-   FPWin -= 1;
+   FPWin += 1;
    Legacy += 1;
    PublicSupport += 1;
    NatHeathScore += 1;
@@ -17581,7 +17581,7 @@ if (e.question_number+1 == 16){
             }
         ); 
     } else {
-            DemCongress -= 1;
+   DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
 			question_insert ("question_11_midterm_prep", 
@@ -17684,34 +17684,36 @@ if (e.question_number+1 == 16){
     }
     }
     if (e.question_number+1 == 23){
-if (e.player_answers.includes(20003) && (80002 || 80004) && (70002) && (60002) && (85004.5 || 85008.5) && (170003)) {
-hwMentum();
-question_insert("question_20_internet", 
-              {
-                 
-  "model": "campaign_trail.question",
-  "pk": "candidate_intro_hw",
-  "fields": {
-  "priority": 0,
-  "description": "Wait, is that 41? The hell is his old ass doing on the stage? I thought he learned a thing or two from 4 years ago. I guess some things never change. He’s got a fire in him, one I don’t think I’ve seen before.  He’s saying something along the lines of “The Clinton Administration’s failed America and spit on our troops.”\n",
-  "likelihood": 1
-  }
-                  }
-              
-              );
-              question_insert("question_21_iraq_airstrikes", 
-  {
-             "model": "campaign_trail.question",
-  "pk": "debate_dole",
-  "fields": {
-      "priority": 0,
-      "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
-      "likelihood": 1
-  }
-  }
-  );
-  ctsAchievement("Repeat Offender");
- } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
+      // Powell Inserters
+      if (e.player_answers.includes(60002) && (80002) && (85004.5 || 85008.5) && MassiveGOPMajority == 1) {
+        powellMentum();
+        question_insert("question_20_internet", 
+        {
+           
+"model": "campaign_trail.question",
+"pk": "candidate_intro_powell",
+"fields": {
+"priority": 0,
+"description": "Like Eisenhower before him, Colin Powell stands at the RNC stage. Aweing those who chose to draft him, Don Nickles among them, the General begins. He talks of integrity. Resolve. Faith in America’s future. You need to stay focused, no time for games.",
+"likelihood": 1
+}
+            }
+        
+        );
+        question_insert("question_21_iraq_airstrikes", 
+{
+       "model": "campaign_trail.question",
+"pk": "debate_dole",
+"fields": {
+"priority": 0,
+"description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+"likelihood": 1
+}
+}
+);
+
+
+} else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
         // Bob Dole Inserters
         if (RepublicanRevolution == 1)  {
             doleMentum();
@@ -17739,7 +17741,6 @@ question_insert("question_20_internet",
   }
   }
   );
-  ctsAchievement("Soul Man");
   // Alexander Inserters
       } else if (SlimGOPCongress == 1) {
         lamarMentum();
@@ -17766,7 +17767,6 @@ question_insert("question_20_internet",
       }
     }
           );
-           ctsAchievement("Easy as ABC");
     // Wilson Inserters 
     
  } else if (MassiveGOPMajority== 1) {
@@ -17795,11 +17795,11 @@ question_insert("question_20_internet",
 }
 }
 );
-ctsAchievement("Great Incarcerator");
+
 } 
                     } else if (Ideology >= 6 && Ideology <= 13) {
                       // Buchanan Inserters
-                      if (MassiveGOPMajority == 1) {
+                      if (MassiveGOPMajority== 1) {
                         patMentum();
                         qquestion_insert("question_20_internet", 
                           {
@@ -17824,7 +17824,6 @@ ctsAchievement("Great Incarcerator");
                       }
                   }
                   );
-                  ctsAchievement("Pitchfork Pat");
                     // Gramm Inserters 
                     
                  } else if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
@@ -17852,11 +17851,9 @@ ctsAchievement("Great Incarcerator");
                 }
             }
             );
-            ctsAchievement("Porno-Gramm");
               }
               //Specter Inserters
                     } else if (Ideology >= -10 && Ideology <= -6){
-                    if (SlimGOPCongress == 1) {
                         specterMentum();
                     question_insert("question_20_internet", 
                     {
@@ -17881,35 +17878,6 @@ ctsAchievement("Great Incarcerator");
                 }
             }
             );
-            ctsAchievement("Life Among the Cannibals");
-            } else if (MassiveGOPMajority == 1 || RepublicanRevolution == 1) {
-                                powellMentum();
-        question_insert("question_20_internet", 
-        {
-           
-"model": "campaign_trail.question",
-"pk": "candidate_intro_powell",
-"fields": {
-"priority": 0,
-"description": "Like Eisenhower before him, Colin Powell stands at the RNC stage. Aweing those who chose to draft him, Don Nickles among them, the General begins. He talks of integrity. Resolve. Faith in America’s future. You need to stay focused, no time for games.",
-"likelihood": 1
-}
-            }
-        
-        );
-        question_insert("question_21_iraq_airstrikes", 
-{
-       "model": "campaign_trail.question",
-"pk": "debate_dole",
-"fields": {
-"priority": 0,
-"description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
-"likelihood": 1
-}
-}
-);
-ctsAchievement("General Commotion");
-            }
             // Forbes Inserters
         } else if (Ideology >= 1 && Ideology <= 5) {
             forbesMentum();
@@ -17938,14 +17906,32 @@ ctsAchievement("General Commotion");
     }
     );
                     }
+    }
+    if (e.question_number+1 == 23){
+      if (e.player_answers.includes(60002) && (80002) && (85004.5 || 85008.5) && MassiveGOPMajority == 1){
+        ctsAchievement("General Commotion");
+       } else if (Ideology >= 6 && Ideology <= 13 && MassiveGOPMajority== 1) {
+     ctsAchievement("Pitchfork Pat");
+                    } else if ((Ideology == 0 || Ideology >= -5 && Ideology <= -1) && SlimGOPCongress == 1) {
+                    ctsAchievement("Easy as ABC");
+                    } else if (Ideology >= -10 && Ideology <= -6) {
+                    ctsAchievement("Life Among the Cannibals");
+                    } else if (Ideology >= 6 && Ideology <= 13 && (RepublicanRevolution == 1 || SlimGOPCongress == 1)) {
+                      ctsAchievement("Porno-Gramm");
+                  } else if ((Ideology == 0 || Ideology >= -5 && Ideology <= -1) && MassiveGOPMajority== 1){
+                    ctsAchievement("Great Incarcerator");
+                    } else if ((Ideology == 0 || Ideology >= -5 && Ideology <= -1) && RepublicanRevolution == 1){
+                    ctsAchievement("Soul Man");
+                  } else if (Ideology >= 1 && Ideology <= 5){
                     ctsAchievement("Rage Against the Machine");
+                  } 
     }
 let vpName = "Monica Lewinsky Error";
 vpTable = {
     "Bill Clinton" : "Al Gore",
     "Al Gore" : vpName,
 
-    "Bob Dole" : "Jack Kemp",
+        "Bob Dole" : "Jack Kemp",
     "Patrick Buchanan" : "Bill Bennett",
     "Steve Forbes" : "John Engler",
     "Lamar Alexander" : "Connie Mack III",
@@ -17954,6 +17940,7 @@ vpTable = {
     "Pete Wilson" : "Judd Gregg",
     "Colin Powell" : "Don Nickles",
     "George Bush" : "George Allen",
+
 
     "Dan Quayle" : "John Ashcroft",
     "Gary Johnson" : "John Ashcroft",
@@ -18869,7 +18856,7 @@ if (Ideology === 0) {
         document.getElementById("senateMajorityText").innerText = "Senate Majority: *Democratic (tied)";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/xJ3CdXv.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/m9VvA2r.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
         document.getElementById("senateLeaderImage").src = "https://i.imgur.com/Jk2Kg8L.png";
@@ -18900,10 +18887,10 @@ if (Ideology === 0) {
         document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/xJ3CdXv.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/m9VvA2r.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
-        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/2jCBRFj.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
         updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
     }
