@@ -17771,7 +17771,7 @@ question_insert("question_20_internet",
            ctsAchievement("Easy as ABC");
     // Wilson Inserters 
     
- } else if (MassiveGOPMajority== 1) {
+ } else if (MassiveGOPMajority == 1) {
     wilsonMentum();
   question_insert("question_20_internet", 
     {
@@ -17799,7 +17799,7 @@ question_insert("question_20_internet",
 );
 ctsAchievement("Great Incarcerator");
 } 
-                    } else if (Ideology >= 6 && Ideology <= 13) {
+                    } else if (Ideology >= 1 && Ideology <= 5 || Ideology >= 6 && Ideology <= 13) {
                       // Buchanan Inserters
                       if (MassiveGOPMajority == 1) {
                         patMentum();
@@ -17829,7 +17829,7 @@ ctsAchievement("Great Incarcerator");
                   ctsAchievement("Pitchfork Pat");
                     // Gramm Inserters 
                     
-                 } else if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
+                 } else if (SlimGOPCongress == 1) {
                     grammMentum();
                   question_insert("question_20_internet", 
                     {
@@ -17855,10 +17855,38 @@ ctsAchievement("Great Incarcerator");
             }
             );
             ctsAchievement("Porno-Gramm");
-              }
+            //Forbes inserters
+              } else if (RepublicanRevolution == 1) {
+            forbesMentum();
+            question_insert("question_20_internet", 
+                {
+                    
+                     "model": "campaign_trail.question",
+        "pk": "candidate_intro_forbes",
+        "fields": {
+            "priority": 0,
+            "description": "As the final night of the RNC concludes, stepping onto the stage is Republican Nominee for president and chief editor of Forbes magazine, Steve Forbes alongside his nominee for Vice President, Governor John Engler of Michigan. On stage, Forbes promises to the nation that he will: “continue what Bush has started, to bring back the glory of the Republican days”. It’s clear that Mr. Forbes has a unique personality in the casing of his Mainstream Republicanism. If anything, how are you going to address his candidacy?",
+            "likelihood": 1
+        }
+                    }
+                
+                );
+                question_insert("question_21_iraq_airstrikes", 
+    {
+               "model": "campaign_trail.question",
+        "pk": "debate_forbes",
+        "fields": {
+            "priority": 0,
+            "description": "New York City. Steve Forbes to your right. Forbes, while being charismatic and very open with the American people, doesn’t have the experience that you do. Now, you step onto the stage. Standing at your podium, you see him come out, a bit shaky but he does make his appearance known. As the Moderator introduces the two, you decide on one topic to angle Steve on during the debate.",
+            "likelihood": 1
+        }
+    }
+    );
+                    }
+                    ctsAchievement("Rage Against the Machine");
               //Specter Inserters
                     } else if (Ideology >= -10 && Ideology <= -6){
-                    if (SlimGOPCongress == 1) {
+                    if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
                         specterMentum();
                     question_insert("question_20_internet", 
                     {
@@ -17884,7 +17912,7 @@ ctsAchievement("Great Incarcerator");
             }
             );
             ctsAchievement("Life Among the Cannibals");
-            } else if (MassiveGOPMajority == 1 || RepublicanRevolution == 1) {
+            } else if (MassiveGOPMajority == 1) {
                                 powellMentum();
         question_insert("question_20_internet", 
         {
@@ -17913,34 +17941,7 @@ ctsAchievement("Great Incarcerator");
 ctsAchievement("General Commotion");
             }
             // Forbes Inserters
-        } else if (Ideology >= 1 && Ideology <= 5) {
-            forbesMentum();
-            question_insert("question_20_internet", 
-                {
-                    
-                     "model": "campaign_trail.question",
-        "pk": "candidate_intro_forbes",
-        "fields": {
-            "priority": 0,
-            "description": "As the final night of the RNC concludes, stepping onto the stage is Republican Nominee for president and chief editor of Forbes magazine, Steve Forbes alongside his nominee for Vice President, Governor John Engler of Michigan. On stage, Forbes promises to the nation that he will: “continue what Bush has started, to bring back the glory of the Republican days”. It’s clear that Mr. Forbes has a unique personality in the casing of his Mainstream Republicanism. If anything, how are you going to address his candidacy?",
-            "likelihood": 1
-        }
-                    }
-                
-                );
-                question_insert("question_21_iraq_airstrikes", 
-    {
-               "model": "campaign_trail.question",
-        "pk": "debate_forbes",
-        "fields": {
-            "priority": 0,
-            "description": "New York City. Steve Forbes to your right. Forbes, while being charismatic and very open with the American people, doesn’t have the experience that you do. Now, you step onto the stage. Standing at your podium, you see him come out, a bit shaky but he does make his appearance known. As the Moderator introduces the two, you decide on one topic to angle Steve on during the debate.",
-            "likelihood": 1
-        }
-    }
-    );
-                    }
-                    ctsAchievement("Rage Against the Machine");
+        } 
     }
 let vpName = "Monica Lewinsky Error";
 vpTable = {
