@@ -5160,7 +5160,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 195,
-            "state_multiplier": 1.089811678998
+            "state_multiplier": 1.07811678998
         }
     },
     {
@@ -5232,7 +5232,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 203,
-            "state_multiplier": 1.23112999812398931241
+            "state_multiplier": 1.21999812398931241
         }
     },
     {
@@ -5709,7 +5709,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 205,
-            "state_multiplier": 1.0898912777775514
+            "state_multiplier": 0.998912777775514
         }
     },
     {
@@ -5799,7 +5799,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 215,
-            "state_multiplier": 1.1611139921981125
+            "state_multiplier": 1.1411139921981125
         }
     },
     {
@@ -9984,7 +9984,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35004.5,
         "candidate": 77,
         "affected_candidate": 78,
-        "global_multiplier": -0.05
+        "global_multiplier": 0.005
     }
 },
 {
@@ -10014,7 +10014,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35005.5,
         "candidate": 77,
         "affected_candidate": 78,
-        "global_multiplier": -0.07
+        "global_multiplier": -0.02
     }
 },
 {
@@ -10044,7 +10044,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35006.5,
         "candidate": 77,
         "affected_candidate": 78,
-        "global_multiplier": -0.08
+        "global_multiplier": -0.03
     }
 },
 {
@@ -19007,12 +19007,12 @@ console.log(LEGWin)
     LEGWin += 1;
     IRLScore += 1;
     }
-    //Crime CYOA
     if (ans == 85027.5){
     Ideology += 2;
     Legacy += 1;
     PublicSupport += 1;
     LEGWin += 1;
+    ctsAchievement("Orange Tips Only");
     }
     if (ans == 85026.5){
     Ideology -= 2;
@@ -19199,11 +19199,12 @@ PublicSupport -= 1;
     PublicSupport -= 3;
     Ideology -= 2;
     }
-    if (ans == 850224.5){
+    if (ans == 85024.5){
     PublicSupport += 1;
     Ideology -= 2;
     LEGWin += 1;
     Legacy += 1;
+    ctsAchievement("Out and Proud");
     }
     if (ans == 180002){
 PublicSupport -= 2;
