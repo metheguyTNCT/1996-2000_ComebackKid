@@ -18866,6 +18866,25 @@ PublicSupport -= 1;
     LEGWin += 1;
     Ideology -= 1;
     }
+    //Gay Rights CYOA ques
+    if (ans == 85020.5 || ans == 85023.5){
+    PublicSupport -= 1;
+    Ideology += 1;
+    }
+    if (ans == 85022.5 || ans == 85025.5){
+    PublicSupport += 1;
+    Ideology -= 1;
+    }
+    if (ans == 85021.5){
+    PublicSupport -= 3;
+    Ideology -= 2;
+    }
+    if (ans == 850224.5){
+    PublicSupport += 1;
+    Ideology -= 2;
+    LEGWin += 1;
+    Legacy += 1;
+    }
     if (ans == 180002){
 PublicSupport -= 2;
     LEGWin -= 1;
@@ -20286,10 +20305,12 @@ function updateCandidateDescription(candidateName, newDescription) {
         const ideologyText = document.getElementById('ideologyText');
 
         // Legacy content
-        if (Legacy == 7) {
+        if (Legacy == 10) {
             legacyText.textContent = "Perfect";
+         } else if (Legacy >= 7 && Legacy <= 9) {
+            legacyText.textContent = "Great";
         } else if (Legacy >= 4 && Legacy <= 6) {
-            legacyText.textContent = "Remarkable";
+            legacyText.textContent = "Good";
         } else if (Legacy == 3) {
             legacyText.textContent = "Decent";
         } else if (Legacy >= 1 && Legacy >= 2) {
