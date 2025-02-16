@@ -1870,7 +1870,7 @@ campaignTrail_temp.answers_json = [
         "pk": 85020.5,
         "fields": {
             "question": "question_ques_18_alt_fail",
-            "description": "I may not be able to push anything through congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
+            "description": "I may not be able to push anything through Congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
         }
     },
     {
@@ -1894,7 +1894,7 @@ campaignTrail_temp.answers_json = [
         "pk": 85023.5,
         "fields": {
             "question": "question_ques_18_alt_win",
-            "description": "I may not be able to push anything through congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
+            "description": "I may not be able to push anything through Congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
         }
     },
     {
@@ -10754,6 +10754,66 @@ campaignTrail_temp.answer_score_issue_json = [
           "issue_score": 0.4,
           "issue_importance": 2
       }
+  },
+    {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85020.5,
+          "issue": 28,
+          "issue_score": 0.3,
+          "issue_importance": 2
+      }
+    },
+    {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85021.5,
+          "issue": 28,
+          "issue_score": 0.5,
+          "issue_importance": 2
+      }
+    },
+          {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85022.5,
+          "issue": 28,
+          "issue_score": 0.1,
+          "issue_importance": 2
+      }
+  },
+      {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85023.5,
+          "issue": 28,
+          "issue_score": 0.3,
+          "issue_importance": 2
+      }
+    },
+    {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85024.5,
+          "issue": 28,
+          "issue_score": 0.6,
+          "issue_importance": 2
+      }
+    },
+          {
+      "model": "campaign_trail.answer_score_issue",
+      "pk": 12705,
+      "fields": {
+          "answer": 85025.5,
+          "issue": 28,
+          "issue_score": 0.1,
+          "issue_importance": 2
+      }
   }
 ]
 
@@ -18469,7 +18529,7 @@ if (e.question_number+1 == 24) {
         }
 	} 
     if (e.player_answers.includes(60002) || e.player_answers.includes(60001)) {
-    if (SlimGOPCongress == 1) {
+    if (SlimGOPCongress == 1 && LEGWin >= 3) {
         question_insert("candidate_intro_dole",ques_18_alt_win);
         question_insert("candidate_intro_buchanan",ques_18_alt_win);
         question_insert("candidate_intro_alexander",ques_18_alt_win);
@@ -18546,6 +18606,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
         );
     }
 }
+console.log(LEGWin)
 //WTC Bombing CYOA
    if (ans ==  20001){
    PublicSupport += 1;
@@ -18979,7 +19040,7 @@ console.log(IRLScore);
 if (e.question_number+1 == 16){
     if (GotHealthcare == 1) {
     if (e.player_answers.includes(50003)) {
-    if (PublicSupport < 17) {
+    if (PublicSupport < 15) {
             DemCongress -= 1;
             RepublicanRevolution += 1;
             Legacy += 1;
@@ -20263,13 +20324,13 @@ if (Ideology === 0) {
         // Update dynamic approval text based on LEGWin variable
     const approvalText = document.getElementById('approvalText');
         if (LEGWin == 7) {
-            approvalText.textContent = "Excellent";
+            approvalText.textContent = "Great";
         } else if (LEGWin >= 3 && LEGWin <= 6) {
-            approvalText.textContent = "Moderate";
+            approvalText.textContent = "Good";
         } else if (LEGWin >= 1 && LEGWin <= 2) {
-            approvalText.textContent = "Bad";
+            approvalText.textContent = "Decent";
         } else {
-            approvalText.textContent = "Abysmal";
+            approvalText.textContent = "Bad";
         }
 
         // Update the page dynamically based on DemCongress value
