@@ -139,15 +139,7 @@ campaignTrail_temp.questions_json = [
         "likelihood": 1
     }
 },
-{
-    "model": "campaign_trail.question",
-    "pk": "question_7_crime",
-    "fields": {
-        "priority": 2,
-        "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
-        "likelihood": 1
-    }
-},
+
     {
         "model": "campaign_trail.question",
         "pk": "question_6_dont_show_dont_tell",
@@ -388,6 +380,24 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "Well, we’ve got some bad news. It’s a disaster. The Republicans have obtained sweeping gains in the midterms, to a level where several big name Democrats, including Speaker Foley, were unable to win re-election, as the election was a sweeping rebuke of your presidency, as even the heir-apparent to the Speakership, Newt Gingrich, dubbing this a ''Republican Revolution.'' You’ve got to do some damage control here.",
+            "likelihood": 1
+        }
+    },
+    {
+    "model": "campaign_trail.question",
+    "pk": "question_7_crime",
+    "fields": {
+        "priority": 2,
+        "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
+        "likelihood": 1
+    }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
             "likelihood": 1
         }
     },
@@ -1911,6 +1921,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_ques_18_alt_win",
             "description": "In any other context I could. But right here I just can't. What would it be worth? I'd just cost myself the presidency to help less than 2% of the population that would vote for me anyway? They waited for decades, they can surely wait until November."
+        }
+    },
+        {
+        "model": "campaign_trail.answer",
+        "pk": 85026.5,
+        "fields": {
+            "question": "question_7_crime_alt",
+            "description": " Now look, getting crime under control is absolutely critical, and we’ve got to crack down, no two ways about it. I want to get on the phone with that Chair of the Judiciary Committee, Joe Biden, big on law and order. That fella, He’s tough as nails on this issue, and if it came down to it, he’d make himself a martyr if that’s what it took."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85027.5,
+        "fields": {
+            "question": "question_7_crime_alt",
+            "description": "Some common-sense regulations are the right way to go here, but we’ve got to remember, what works for a gun owner in rural Alaska isn’t the same as what’s needed in midtown Manhattan. I’ll propose an assault weapons ban for major population centers, paired with stricter licensing standards. This is what works."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85028.5,
+        "fields": {
+            "question": "question_7_crime_alt",
+            "description": "Look, the truth is we just don’t have the votes for real reform right now. And I’m not about to stoop to Reagan’s level and start fearmongering just to get it through. We’ll shelve this for now and come back after the midterms, when, God willing, our majority’s a little bigger."
         }
     },
     {
@@ -10180,10 +10214,50 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 80,
             "global_multiplier": -0.04
         }
+    },
+        {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1240,
+        "fields": {
+            "answer": 85027.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12272,
+        "fields": {
+            "answer": 85028.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12305,
+        "fields": {
+            "answer": 85026.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0125
+        }
     }
 ]
 
 campaignTrail_temp.answer_score_issue_json = [
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12271,
+        "fields": {
+            "answer": 85027.5,
+            "issue": 28,
+            "issue_score": 0.5,
+            "issue_importance": 3
+        }
+    },
     {
         "model": "campaign_trail.answer_score_issue",
         "pk": 771,
@@ -16367,6 +16441,33 @@ campaignTrail_temp.answer_score_state_json = [
 campaignTrail_temp.answer_feedback_json = [
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 716,
+        "fields": {
+            "answer": 85026.5,
+            "candidate": 77,
+            "answer_feedback": "''Don’t worry about a thing, Bil-Mr. President. Let me work my magic, and I’ll have this bill through the Senate by December,'' Joe says with that familiar, easy grin of his. There’s something reassuring about his confidence, it’s why you trust him to get the job done. True to his word, the bill sails through nearly unanimously on November 19th."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 717,
+        "fields": {
+            "answer": 85027.5,
+            "candidate": 77,
+            "answer_feedback": "NRA President Robert Corbin did his speech \"over his cold dead hands\". Republican are fuming all the heat they possibly can, more and more people are calling you the anti-Christ or literally Hitler for having made their access to guns marginally harder. Whatever they think, crime's going down and your poll numbers are still high."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 718,
+        "fields": {
+            "answer": 85028.5,
+            "candidate": 77,
+            "answer_feedback": "This isn’t going to cut it, Mr. President! If you don’t start making decisions, real ones, there won’t be a majority after the midterms!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 708,
         "fields": {
             "answer": 40001,
@@ -18440,6 +18541,33 @@ cyoAdventure = function(a) {
             }
         });
     }    
+    if (e.question_number+1 == 9) {
+    if (LEGWin == 1) {
+    question_insert("question_8_somalia", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
+            "likelihood": 1
+        }
+            }
+        );
+    } else {
+    question_insert("question_8_somalia", 
+    {
+    "model": "campaign_trail.question",
+    "pk": "question_7_crime",
+    "fields": {
+    "priority": 2,
+    "description": "It's everyday at this point that you uncover yet another issue you’ve inherited from the Bush administration, no wonder you kicked his ass so badly. The crime rate skyrocketed under Reagan and got historically worse under 41, marking our highest crime rate in US history just 3 years ago. Reno's been urging some sort of reform, and you're finally weighing your options. What's your choice?",
+    "likelihood": 1
+    }
+    }
+    );
+    }
+    }
 	//Healthcare Vote inserter
     if (e.question_number+1 == 14) {
 	let win_healthcare_vote_temp = {
@@ -20381,11 +20509,11 @@ if (Ideology === 0) {
         document.getElementById("senateMajorityText").innerText = "Senate Majority: *Democratic (tied)";
 
         // Leaders
-        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/xJ3CdXv.png"; // Replace with actual URL
+        document.getElementById("houseLeaderImage").src = "https://i.imgur.com/UbxRARu.png"; // Replace with actual URL
         document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
 
-        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/Jk2Kg8L.png";
-        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: George Mitchell";
+        document.getElementById("senateLeaderImage").src = "https://i.imgur.com/1Kw6dyL.png";
+        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Tom Daschle";
     } else if (MassiveGOPMajority== 1) {
         // Republican Congress
         // Majority Images and Texts
