@@ -72,7 +72,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_1_inauguration",
         "fields": {
             "priority": 0,
-            "description": "Yesterday, you knelt at the grave of your hero, John F. Kennedy. Today, you stand proudly, facing the gathered masses of Washington. The boy from Hope, Arkansas turned Commander-in-chief. You begin your speech, the first of many.",
+            "description": "Yesterday, you knelt at the grave of John F. Kennedy. Today, you stand proudly, facing the gathered masses of Washington. The boy from Hope, Arkansas turned Commander-in-chief. You begin your speech, the first of many.",
             "likelihood": 1
         }
     },
@@ -227,15 +227,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "As the American public begin to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential and sneer at it. The fools say it's just a fad, but to the many, its rise and eventual domination of our very lives isn't up for debate. A new tool to be used for your aims. A world in which nothing but fond opinions of the Administration sounds truly beautiful, but we are so, so, far from that. What are your plans to address it?\n",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_19_pr_and_wo_act",
-        "fields": {
-            "priority": 0,
-            "description": "You’ve been negotiating with Congress for months, and now, it’s sitting in front of you. A bill which, in your own words, will “end welfare as we know it”. You’ve vetoed two of these in the past, though this one seems less unreasonable. The country awaits your verdict.",
             "likelihood": 1
         }
     },
@@ -438,6 +429,51 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+		 "model": "campaign_trail.question",
+        "pk": "question_18_defense_of_marriage",
+        "fields": {
+            "priority": 3,
+            "description": "In yet another episode of Republican moralizing, Congress has put together a new bill. The “Defense of Marriage Act” trudges on through both houses, making the rounds on FOX as it goes. Most in your party want you to back it, but the activist base watches on in dismay. It’s your move.",
+            "likelihood": 1
+        }
+	},
+	{
+		"model": "campaign_trail.question",
+        "pk": "question_ques_18_alt_fail",
+        "fields": {
+            "priority": 0,
+            "description": "Since compromise policy couldn't get anywhere, the question of the right of the gay community is once more becoming a part of discussion as their political limbo neither satisfy neither does their opponent. You had promised to them that their right will grow not shrink in your term. And now for many it feel like it's time for you to make good on your promises, before the election possibly take you away the power to do anything.",
+            "likelihood": 1
+        }
+	},
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_ques_18_alt_win",
+        "fields": {
+            "priority": 0,
+            "description": "Since compromise policy couldn't get anywhere, the question of the right of the gay community is once more becoming a part of discussion as their political limbo neither satisfy neither does their opponent. You had promised to them that their right will grow not shrink in your term. And now for many it feel like it's time for you to make good on your promises, before the election possibly take you away the power to do anything.",
+            "likelihood": 1
+        }
+	},
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_19_pr_and_wo_act",
+        "fields": {
+            "priority": 0,
+            "description": "You’ve been negotiating with Congress for months, and now, it’s sitting in front of you. A bill which, in your own words, will “end welfare as we know it”. You’ve vetoed two of these in the past, though this one seems less unreasonable. The country awaits your verdict.",
+            "likelihood": 1
+        }
+    },
+        {
+        "model": "campaign_trail.question",
+        "pk": "question_19_alt",
+        "fields": {
+            "priority": 0,
+            "description": "Welfare is a question you had yet to solve and now, the clock is ticking before election day. As the pressure of the republican is not as extreme as expected considering their lack of power in the house, some have been particularly ambitious with what to push while other are just wanting to simply make the monster of welfare somewhat more of a tamed beast. What get's through goes through you.",
+            "likelihood": 1
+        }
+    },
+    {
         "model": "campaign_trail.question",
         "pk": "candidate_intro_dole",
         "fields": {
@@ -509,6 +545,16 @@ campaignTrail_temp.questions_json = [
             "description": "As the final night of the RNC concludes, stepping onto the stage is Republican Nominee for president and chief editor of Forbes magazine, Steve Forbes alongside his nominee for Vice President, Governor John Engler of Michigan. On stage, Forbes promises to the nation that he will: “continue what Bush has started, to bring back the glory of the Republican days”. It’s clear that Mr. Forbes has a unique personality in the casing of his Mainstream Republicanism. If anything, how are you going to address his candidacy?",
             "likelihood": 1
         }
+    },
+    {
+                 
+  "model": "campaign_trail.question",
+  "pk": "candidate_intro_hw",
+  "fields": {
+  "priority": 0,
+  "description": "Wait, is that 41? The hell is his old ass doing on the stage? I thought he learned a thing or two from 4 years ago. I guess some things never change. He’s got a fire in him, one I don’t think I’ve seen before.  He’s saying something along the lines of “The Clinton Administration’s failed America and spit on our troops.”\n",
+  "likelihood": 1
+  }
     },
     {
         "model": "campaign_trail.question",
@@ -1945,6 +1991,22 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_7_crime_alt",
             "description": "Look, the truth is we just don’t have the votes for real reform right now. And I’m not about to stoop to Reagan’s level and start fearmongering just to get it through. We’ll shelve this for now and come back after the midterms, when, God willing, our majority’s a little bigger."
+        }
+    },
+        {
+        "model": "campaign_trail.answer",
+        "pk": 85029.5,
+        "fields": {
+            "question": "question_19_alt",
+            "description": "I didn't forget my promised for a balance budget. I'll contact both side of the isle and see what works and what doesn't. The cycle of poverty will be broken, family that need welfare will get the help they need to no longer have it and welfare will slowly fade away as the thing so many American obsess over."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 85030.5,
+        "fields": {
+            "question": "question_19_alt",
+            "description": "I think we may as well work at the root of the problem. We'll be having a budget surplus soon so why not work on a bill that will push a lot of money to revitalize the community that have required direct help for so long?"
         }
     },
     {
@@ -10244,6 +10306,66 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": -0.0125
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 85029.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 85029.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 85029.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12705,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12706,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12707,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
     }
 ]
 
@@ -10888,7 +11010,27 @@ campaignTrail_temp.answer_score_issue_json = [
           "issue_score": 0.1,
           "issue_importance": 2
       }
-  }
+  },
+  {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12703,
+        "fields": {
+            "answer": 85029.5,
+            "issue": 28,
+            "issue_score": -0.5,
+            "issue_importance": 1.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12708,
+        "fields": {
+            "answer": 85030.5,
+            "issue": 28,
+            "issue_score": 0.6,
+            "issue_importance": 1.1
+        }
+    }
 ]
 
 campaignTrail_temp.answer_score_state_json = [
@@ -18104,6 +18246,24 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "As you find those people with big smile and those Aid's badge on their chest on the rally, you felt your billion dollar smile flinch a bit. They truly are loyal voters to continue supporting you even when you gave them nothing but promise that revealed themselves to be empty."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12699,
+        "fields": {
+            "answer": 85029.5,
+            "candidate": 77,
+            "answer_feedback": "The bill ended up having quite some partisan support. It could have been seen as something maybe a moderate Republican would have come up but it was you that signed it. Welfare would never be the same after your signing of PERFO, or at least you'll have the next few years to see if it did."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12704,
+        "fields": {
+            "answer": 85030.5,
+            "candidate": 77,
+            "answer_feedback": "As it's dreamt up, the new infrastructure bill is a bit controversial even inside the party as the budget though improving is still in the red. Still, if soon we have the necessary funds to get it through and you do get re-elected, it's thousand of people that'll get a decent home, and urban decay that may be a thing of the past."
+        }
     }
 ]
 
@@ -18620,15 +18780,6 @@ else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
 }
 }
 if (e.question_number+1 == 24) {
-	let win_healthcare_vote_temp = {
-		"model": "campaign_trail.question",
-		"pk": "healthcare_vote_win",
-		"fields": {
-			"priority": 0,
-			"description": "You woke up this morning feeling more stressed than ever at this job-and that’s saying something, given you’ve already had a year to think things over. As you head to the Capitol Building, you can’t help but feel all your efforts to pass healthcare reform have been in vain, even though you’ve done everything you could. You keep thinking about the promise you made to Hillary when you first ran for office, she’ll be right beside you for the vote, which gives you a little more peace. Still, the choice is yours: you can back out now, or you can move forward with the reform. Pick your move, Bill.",
-			"likelihood": 1
-		}
-	}
 	let doma_normal = {
 		 "model": "campaign_trail.question",
         "pk": "question_18_defense_of_marriage",
@@ -18690,6 +18841,35 @@ if (e.question_number+1 == 24) {
         question_insert("candidate_intro_hw",doma_normal);
 }
 }
+     if (e.question_number+1 == 25){
+    let ques_19_alt = {
+  "model": "campaign_trail.question",
+        "pk": "question_19_alt",
+        "fields": {
+            "priority": 0,
+            "description": "Welfare is a question you had yet to solve and now, the clock is ticking before election day. As the pressure of the republican is not as extreme as expected considering their lack of power in the house, some have been particularly ambitious with what to push while other are just wanting to simply make the monster of welfare somewhat more of a tamed beast. What get's through goes through you.",
+            "likelihood": 1
+        }
+     }
+     let question_19_pr_and_wo_act = {
+    "model": "campaign_trail.question",
+        "pk": "question_19_pr_and_wo_act",
+        "fields": {
+            "priority": 0,
+            "description": "You’ve been negotiating with Congress for months, and now, it’s sitting in front of you. A bill which, in your own words, will “end welfare as we know it”. You’ve vetoed two of these in the past, though this one seems less unreasonable. The country awaits your verdict.",
+            "likelihood": 1
+        }
+     }
+     if (SlimGOPCongress == 1) {
+    question_insert("question_18_defense_of_marriage",ques_19_alt);
+    question_insert("question_ques_18_alt_fail",ques_19_alt);
+    question_insert("question_ques_18_alt_win",ques_19_alt);
+     } else {
+    question_insert("question_18_defense_of_marriage",question_19_pr_and_wo_act);
+    question_insert("question_ques_18_alt_fail",question_19_pr_and_wo_act);
+    question_insert("question_ques_18_alt_win",question_19_pr_and_wo_act);
+     }
+     }
     if (Dolewin == false && Buchananwin == false && Lamarwin == false && Specterwin == false && Grammwin == false && Wilsonwin == false && Forbeswin == false && Powellwin == false && (ans == 210001 || ans == 210002 || ans == 210003)) {
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Republican Party";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#CD0B0A";
@@ -19033,6 +19213,17 @@ PublicSupport -= 2;
     //PRWOA CYOA
     if (ans == 190001){
 PublicSupport += 1;
+    LEGWin += 1;
+    Ideology -= 1;
+    }
+    if (ans == 190002){
+    PublicSupport -= 2;
+    LEGWin -= 1;
+    Ideology += 1;
+    }
+    //PRWOA alt CYOA
+    if (ans == 190001){
+    PublicSupport += 2;
     LEGWin += 1;
     Ideology -= 1;
     }
