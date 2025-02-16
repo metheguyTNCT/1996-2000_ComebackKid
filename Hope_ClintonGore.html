@@ -1869,7 +1869,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85020.5,
         "fields": {
-            "question": "question_18_alt_fail",
+            "question": "question_ques_18_alt_fail",
             "description": "I may not be able to push anything through congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
         }
     },
@@ -1877,7 +1877,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85021.5,
         "fields": {
-            "question": "question_18_alt_fail",
+            "question": "question_ques_18_alt_fail",
             "description": "I need a big bill. Something that would finally make them not fear for their life as homosexual. Loving one that share your sex shouldn't be a social death sentence and I'm certain I can make it go through. It may need compromise, it may need to sooth ego, but we can do it."
         }
     },
@@ -1885,7 +1885,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85022.5,
         "fields": {
-            "question": "question_18_alt_fail",
+            "question": "question_ques_18_alt_fail",
             "description": "In any other context I could. But right here I just can't. What would it be worth? I'd just cost myself the presidency to help less than 2% of the population that would vote for me anyway? They waited for decades, they can surely wait until November."
         }
     },
@@ -1893,7 +1893,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85023.5,
         "fields": {
-            "question": "question_18_alt_win",
+            "question": "question_ques_18_alt_win",
             "description": "I may not be able to push anything through congress at the time but I've got the power of the presidency. I'll sign a few executive orders. If I can do nothing else, at least I can do that."
         }
     },
@@ -1901,7 +1901,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85024.5,
         "fields": {
-            "question": "question_18_alt_win",
+            "question": "question_ques_18_alt_win",
             "description": "I need a big bill. Something that would finally make them not fear for their life as homosexual. Loving one that share your sex shouldn't be a social death sentence and I'm certain I can make it go through. It may need compromise, it may need to sooth ego, but we can do it."
         }
     },
@@ -1909,7 +1909,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 85025.5,
         "fields": {
-            "question": "question_18_alt_win",
+            "question": "question_ques_18_alt_win",
             "description": "In any other context I could. But right here I just can't. What would it be worth? I'd just cost myself the presidency to help less than 2% of the population that would vote for me anyway? They waited for decades, they can surely wait until November."
         }
     },
@@ -18450,18 +18450,18 @@ if (e.question_number+1 == 23) {
             "likelihood": 1
         }
 	}
-	let 18_alt_fail = {
+	let ques_18_alt_fail = {
 		"model": "campaign_trail.question",
-        "pk": "question_18_alt_fail",
+        "pk": "question_ques_18_alt_fail",
         "fields": {
             "priority": 0,
             "description": "Since compromise policy couldn't get anywhere, the question of the right of the gay community is once more becoming a part of discussion as their political limbo neither satisfy neither does their opponent. You had promised to them that their right will grow not shrink in your term. And now for many it feel like it's time for you to make good on your promises, before the election possibly take you away the power to do anything.",
             "likelihood": 1
         }
 	}
-    let 18_alt_win = {
+    let ques_18_alt_win = {
         "model": "campaign_trail.question",
-        "pk": "question_18_alt_win",
+        "pk": "question_ques_18_alt_win",
         "fields": {
             "priority": 0,
             "description": "Since compromise policy couldn't get anywhere, the question of the right of the gay community is once more becoming a part of discussion as their political limbo neither satisfy neither does their opponent. You had promised to them that their right will grow not shrink in your term. And now for many it feel like it's time for you to make good on your promises, before the election possibly take you away the power to do anything.",
@@ -18470,25 +18470,25 @@ if (e.question_number+1 == 23) {
 	} 
     if (e.player_answers.includes(60002) || e.player_answers.includes(60001)) {
     if (SlimGOPCongress == 1) {
-        question_insert("candidate_intro_dole",18_alt_win);
-        question_insert("candidate_intro_buchanan",18_alt_win);
-        question_insert("candidate_intro_alexander",18_alt_win);
-        question_insert("candidate_intro_powell",18_alt_win);
-        question_insert("candidate_intro_specter",18_alt_win);
-        question_insert("candidate_intro_wilson",18_alt_win);
-        question_insert("candidate_intro_gramm",18_alt_win);
-        question_insert("candidate_intro_forbes",18_alt_win);
-        question_insert("candidate_intro_hw",18_alt_win);
+        question_insert("candidate_intro_dole",ques_18_alt_win);
+        question_insert("candidate_intro_buchanan",ques_18_alt_win);
+        question_insert("candidate_intro_alexander",ques_18_alt_win);
+        question_insert("candidate_intro_powell",ques_18_alt_win);
+        question_insert("candidate_intro_specter",ques_18_alt_win);
+        question_insert("candidate_intro_wilson",ques_18_alt_win);
+        question_insert("candidate_intro_gramm",ques_18_alt_win);
+        question_insert("candidate_intro_forbes",ques_18_alt_win);
+        question_insert("candidate_intro_hw",ques_18_alt_win);
     } else {
-            question_insert("candidate_intro_dole",18_alt_fail);
-        question_insert("candidate_intro_buchanan",18_alt_fail);
-        question_insert("candidate_intro_alexander",18_alt_fail);
-        question_insert("candidate_intro_powell",18_alt_fail);
-        question_insert("candidate_intro_specter",18_alt_fail);
-        question_insert("candidate_intro_wilson",18_alt_fail);
-        question_insert("candidate_intro_gramm",18_alt_fail);
-        question_insert("candidate_intro_forbes",18_alt_fail);
-        question_insert("candidate_intro_hw",18_alt_fail);
+            question_insert("candidate_intro_dole",ques_18_alt_fail);
+        question_insert("candidate_intro_buchanan",ques_18_alt_fail);
+        question_insert("candidate_intro_alexander",ques_18_alt_fail);
+        question_insert("candidate_intro_powell",ques_18_alt_fail);
+        question_insert("candidate_intro_specter",ques_18_alt_fail);
+        question_insert("candidate_intro_wilson",ques_18_alt_fail);
+        question_insert("candidate_intro_gramm",ques_18_alt_fail);
+        question_insert("candidate_intro_forbes",ques_18_alt_fail);
+        question_insert("candidate_intro_hw",ques_18_alt_fail);
     }
     } else {
         question_insert("candidate_intro_dole",doma_normal);
