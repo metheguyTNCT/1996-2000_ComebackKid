@@ -11384,7 +11384,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.175
+            "state_multiplier": -0.2
         }
     },
     {
@@ -11461,7 +11461,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 218,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.175
+            "state_multiplier": -0.2
         }
     },
     {
@@ -11472,7 +11472,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 230,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.175
+            "state_multiplier": -0.2
         }
     },
     {
@@ -11483,7 +11483,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 195,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.051
+            "state_multiplier": -0.07
         }
     },
     {
@@ -11494,7 +11494,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 194,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.175
+            "state_multiplier": -0.2
         }
     },
     {
@@ -18823,6 +18823,18 @@ console.log(LEGWin)
     Ideology += 2;
     }
     if (ans == 70001){
+    Ideology -= 2;
+    LEGWin += 1;
+    IRLScore += 1;
+    }
+    //Crime CYOA
+    if (ans == 85027.5){
+    Ideology += 2;
+    Legacy += 1;
+    PublicSupport += 1;
+    LEGWin += 1;
+    }
+    if (ans == 85026.5){
     Ideology -= 2;
     LEGWin += 1;
     IRLScore += 1;
