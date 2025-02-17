@@ -18865,12 +18865,24 @@ cyoAdventure = function(a) {
             "likelihood": 1
         }
 	}
+        let win_healthcare_vote_hillary_temp = {
+        "model": "campaign_trail.question",
+        "pk": "healthcare_vote_win_hillary",
+        "fields": {
+            "priority": 0,
+            "description": "You woke up this morning feeling more stressed than ever at this job-and that’s saying something, given you’ve already had a year to think things over. As you head to the Capitol Building, you can’t help but feel all your efforts to pass healthcare reform have been in vain, even though you’ve done everything you could. You keep thinking about the promise you made to Hillary when you first ran for office, she’ll be right beside you for the vote, which gives you a little more peace. Still, the choice is yours: you can back out now, or you can move forward with the reform. Pick your move, Bill.",
+            "likelihood": 1
+        }
+	}
     if (e.player_answers.includes(55003.5)) {
         question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
 else if (e.player_answers.includes(20003) && e.player_answers.includes(30002) && e.player_answers.includes(40002) && e.player_answers.includes(80003) && e.player_answers.includes(90001) && e.player_answers.includes(75001.5)) {
     console.log("Kennedy healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
+} else if (e.player_answers.includes(20003) && e.player_answers.includes(30002) && e.player_answers.includes(40002) && e.player_answers.includes(80003) && e.player_answers.includes(90001) && e.player_answers.includes(65004.5)) {
+    console.log("Hillary healthcare vote triggered.");
+    question_insert("question_10_foreign_intervention", win_healthcare_vote_hillary_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("question_10_foreign_intervention",refuse_healthcare_vote_temp);
 } else {
