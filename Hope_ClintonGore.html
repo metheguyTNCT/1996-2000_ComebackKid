@@ -349,6 +349,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "healthcare_vote_win_hillary",
+        "fields": {
+            "priority": 0,
+            "description": "You woke up this morning feeling more stressed than ever at this job-and that’s saying something, given you’ve already had a year to think things over. As you head to the Capitol Building, you can’t help but feel all your efforts to pass healthcare reform have been in vain, even though you’ve done everything you could. You keep thinking about the promise you made to Hillary when you first ran for office, she’ll be right beside you for the vote, which gives you a little more peace. Still, the choice is yours: you can back out now, or you can move forward with the reform. Pick your move, Bill.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "insert_yeltsin_friendly",
         "fields": {
             "priority": 2,
@@ -1256,6 +1265,22 @@ campaignTrail_temp.answers_json = [
             "description": "Damn it! I can’t just give the people nothing. We’ll have to pass it."
         }
     },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 15007.5,
+        "fields": {
+            "question": "healthcare_vote_win_hillary",
+            "description": "We’ve got the votes, I’m 100% sure of it. Let’s not wait. Call it up and get it done."
+        }
+    },
+        {
+        "model": "campaign_trail.answer",
+        "pk": 15008.5,
+        "fields": {
+            "question": "healthcare_vote_win",
+            "description": "It’s too risky to push this right now. Timing matters, and we’ll come back to it when I know we’ve got the votes to make it stick."
+        }
+    },
 	{
         "model": "campaign_trail.answer",
         "pk": 25001.5,
@@ -1734,6 +1759,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "insert_question_hillary",
             "description": "I trust we can have that plan work, we just need to make it clearer, to make people understand how it's something good for them. Right now it's just a monster but we can reach through the mind of both public and congress that it's just the best course of action."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 65004.5,
+        "fields": {
+            "question": 12284,
+            "description": "There’s a middle ground we have to walk. We can’t be too ambitious, but it needs to have some substance to it. While I know we promised to have everyone insured, we're asking a mouse to eat an alligator right now. We'll get the new health care board and fight on big pharma first.\n"
         }
     },
     {
@@ -7522,6 +7555,46 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 12349,
         "fields": {
             "answer": 15005.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+     {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12347,
+        "fields": {
+            "answer": 15007.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12696,
+        "fields": {
+            "answer": 15007.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12697,
+        "fields": {
+            "answer": 15007.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12349,
+        "fields": {
+            "answer": 15008.5,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.02
@@ -17145,7 +17218,25 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 15005.5,
             "candidate": 77,
-            "answer_feedback": "As the midterms approach, it’s looking more and more like the Democratic majority won’t hold, which means you’ve missed your only shot at this. Another promise down the fucking drain."
+            "answer_feedback": "For the first time in nearly a year, Washington falls silent. The frantic Capitol Hill that defines your administration to the many staffers that work there, falls into an uneasy silence. As you meander on about the necessity for patience to the healthcare reform task force, everybody in that room is wondering if their effort had been wasted on. After that speech, you withdraw to the Oval Office. You swivel your chair around to face the windows that envelop your room and wonder: Was it all worth it? "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12346,
+        "fields": {
+            "answer": 15007.5,
+            "candidate": 77,
+            "answer_feedback": "Their was the usual joust of interest and politicking as it went. However it felt much as only for show as once the debate circled only on big pharma malpractice, people ready to defend them where few and far between. It could have been so much more, but it's also to see it as a door to greater reform. The National Health board is only the beginning."
+        }
+    },
+        {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12348,
+        "fields": {
+            "answer": 15008.5,
+            "candidate": 77,
+            "answer_feedback": "For the first time in nearly a year, Washington falls silent. The frantic Capitol Hill that defines your administration to the many staffers that work there, falls into an uneasy silence. As you meander on about the necessity for patience to the healthcare reform task force, everybody in that room is wondering if their effort had been wasted on. After that speech, you withdraw to the Oval Office. You swivel your chair around to face the windows that envelop your room and wonder: Was it all worth it? "
         }
     },
     {
@@ -17163,7 +17254,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 15002.5,
             "candidate": 77,
-            "answer_feedback": "As the midterms approach, it’s looking more and more like the Democratic majority won’t hold, which means you’ve missed your only shot at this. Another promise down the fucking drain."
+            "answer_feedback": "For the first time in nearly a year, Washington falls silent. The frantic Capitol Hill that defines your administration to the many staffers that work there, falls into an uneasy silence. As you meander on about the necessity for patience to the healthcare reform task force, everybody in that room is wondering if their effort had been wasted on. After that speech, you withdraw to the Oval Office. You swivel your chair around to face the windows that envelop your room and wonder: Was it all worth it? "
         }
     },
     {
@@ -18264,6 +18355,15 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "As it's dreamt up, the new infrastructure bill is a bit controversial even inside the party as the budget though improving is still in the red. Still, if soon we have the necessary funds to get it through and you do get re-elected, it's thousand of people that'll get a decent home, and urban decay that may be a thing of the past."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12697,
+        "fields": {
+            "answer": 65004.5,
+            "candidate": 77,
+            "answer_feedback": "Giving up on crux of the issue in it's largest part felt hard on Hillary. While yes, the number of the uninsured will drop after the plan is complete, it will never be on acceptable levels. She say she can't help but feel like she betrayed one part of America to save another. "
+        }
     }
 ]
 
@@ -18374,7 +18474,6 @@ var LEGWin = 0
 var Ideology = 0
 var PublicSupport = 8
 var Legacy = 0
-var NatHeathScore = 0
 var IRLScore = 0
 var RichardsBeatW = 0
 var CuomoBeatPataki = 0
@@ -18769,14 +18868,13 @@ cyoAdventure = function(a) {
     if (e.player_answers.includes(55003.5)) {
         question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
-else if (NatHeathScore == 5 && e.player_answers.includes(75001.5)) {
+else if (e.player_answers.includes(20003) && e.player_answers.includes(30002) && e.player_answers.includes(40002) && e.player_answers.includes(80003) && e.player_answers.includes(90001) && e.player_answers.includes(75001.5)) {
     console.log("Kennedy healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("question_10_foreign_intervention",refuse_healthcare_vote_temp);
 } else {
     question_insert("question_10_foreign_intervention",fail_healthcare_vote_temp);
-    console.log("Condition not met or already handled. NatHeathScore = " + NatHeathScore + ", ans = " + ans);
 }
 }
 if (e.question_number+1 == 24) {
@@ -18926,12 +19024,10 @@ console.log(LEGWin)
    FPWin -= 1;
    Legacy += 1;
    PublicSupport += 1;
-   NatHeathScore += 1;
    }
    //Economic Plan CYOA
    if (ans == 30002){
     PublicSupport += 1;
-    NatHeathScore += 1;
     Ideology -= 1;
     }
     if (ans == 30001){
@@ -18965,7 +19061,6 @@ console.log(LEGWin)
     }
      if (ans == 40002){
     PublicSupport += 1;
-    NatHeathScore += 1;
     }
     //Supreme Court CYOA
     if (ans == 400012){
@@ -19031,7 +19126,6 @@ console.log(LEGWin)
    }
       if (ans == 80003){
    FPWin += 1;
-   NatHeathScore += 1;
    }
       if (ans == 80004){
     PublicSupport -= 1;
@@ -19041,7 +19135,6 @@ console.log(LEGWin)
    if (ans == 90001){
     PublicSupport += 1;
     LEGWin += 1; 
-    NatHeathScore += 1;
     Legacy += 1;
     }
   //Russia CYOA (START III SUCCEEDS)
@@ -19108,6 +19201,13 @@ console.log(LEGWin)
     Ideology += 1;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/YkXlcyd.png';
     }
+    if (ans == 15007.5){
+    LEGWin += 1;
+    GotHealthcare += 1;
+    Ideology += 1;
+    ctsAchievement("I Do");
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/YkXlcyd.png';
+    }
     if (ans == 85018.5){
     PublicSupport += 5;
     LEGWin += 1;
@@ -19123,7 +19223,7 @@ console.log(LEGWin)
     LEGWin -= 1;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/YkXlcyd.png';
     }
-    if (ans == 15002.5 || ans == 15005.5){
+    if (ans == 15002.5 || ans == 15005.5 || ans == 15008.5) {
         PublicSupport -= 2;
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/YkXlcyd.png';
         }
@@ -19390,7 +19490,7 @@ console.log(PublicSupport);
 console.log(IRLScore);
 if (e.question_number+1 == 16){
     if (GotHealthcare == 1) {
-    if (e.player_answers.includes(50003)) {
+    if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
     if (PublicSupport < 15) {
             DemCongress -= 1;
             RepublicanRevolution += 1;
