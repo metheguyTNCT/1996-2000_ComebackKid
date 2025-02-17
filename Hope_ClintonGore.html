@@ -565,6 +565,33 @@ campaignTrail_temp.questions_json = [
   "likelihood": 1
   }
     },
+        {
+        "model": "campaign_trail.question",
+        "pk": "campaign_1_dole",
+        "fields": {
+            "priority": 0,
+            "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, just what should you remind America of to take back control?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_dole",
+        "fields": {
+            "priority": 0,
+            "description": "Dole's a really easy target. He’s known to all and yet loved by nearly nobody, as a lot of baggage is attached to him and yet he has become the champion of Republicans. You're gonna need something sharp that will shatter the whole façade.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_3_dole",
+        "fields": {
+            "priority": 0,
+            "description": "You’ve talked about the issues that affect the nation more widely, but you shouldn't forget the work needed on the states that will decide us the election. Whatever Dole’s gonna to do, you’ll have to strike your own where it matters.",
+            "likelihood": 1
+        }
+    },
     {
         "model": "campaign_trail.question",
         "pk": "debate_dole",
@@ -1520,7 +1547,31 @@ campaignTrail_temp.answers_json = [
             "question": "candidate_intro_powell",
             "description": "Colin Powell, in his own words “Lacks a passion for politics.” So who would be doing the politics if he were elected? Don Nickles, that’s who. He’s openly made it a mission to remove Roe v. Wade as law of the land. Do you think Powell has what it takes to stop him and the party leadership from going further? I don’t!"
         }
-    }, 
+    },
+     {
+        "model": "campaign_trail.answer",
+        "pk": 35020.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "First and foremost, Mr. Forbes is a business executive. He was born with a silver spoon, being the son of a big publisher. He doesn't understand the struggle that many Americans in our middle and lower classes have gone through, including myself. I've worked to get where I am. From the son of a poor, widowed mother, living in an abusive household with barely any money, to the President of the United States. I'm for the average American, Steve Forbes is for the wealthy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35021.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "America, do you really want to rock the boat this fast? If you elect Steve Forbes, you see a return to Bush economics. Don't you remember what life was like under him? The economy was stagnant,  the wealth gap was larger than it was in generations, and Americans were desperate for change and reform to our system. Who did you elect for a break from that? Me."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35022.5,
+        "fields": {
+            "question": "candidate_intro_forbes",
+            "description": "Steve Forbes doesn't have what it takes to make true change in this country. He's too bland and compromising. I, however, have governed with a proud, bold administration to lead America into the 21st century and push for the real change our country needs."
+        }
+    },
     {
         "model": "campaign_trail.answer",
         "pk": 36001.5,
@@ -2044,26 +2095,90 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 35020.5,
+        "pk": 86001.5,
         "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "First and foremost, Mr. Forbes is a business executive. He was born with a silver spoon, being the son of a big publisher. He doesn't understand the struggle that many Americans in our middle and lower classes have gone through, including myself. I've worked to get where I am. From the son of a poor, widowed mother, living in an abusive household with barely any money, to the President of the United States. I'm for the average American, Steve Forbes is for the wealthy."
+            "question": "campaign_1_dole",
+            "description": "Get back Dick Morris, what people get, what people want are numbers, action, tangible things. Let’s get back to our image of pragmatism far from the extremist both Republican and Democrat.\n"
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 35021.5,
+        "pk": 86002.5,
         "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "America, do you really want to rock the boat this fast? If you elect Steve Forbes, you see a return to Bush economics. Don't you remember what life was like under him? The economy was stagnant,  the wealth gap was larger than it was in generations, and Americans were desperate for change and reform to our system. Who did you elect for a break from that? Me."
+            "question": "campaign_1_dole",
+            "description": "Let’s use “McIssues”, simple stuff, things that are not too hard for us to do but show we’re still working on stuff and not resting on our laurels. They will make the voters feel important."
         }
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 35022.5,
+        "pk": 86003.5,
         "fields": {
-            "question": "candidate_intro_forbes",
-            "description": "Steve Forbes doesn't have what it takes to make true change in this country. He's too bland and compromising. I, however, have governed with a proud, bold administration to lead America into the 21st century and push for the real change our country needs."
+            "question": "campaign_1_dole",
+            "description": "Let’s keep it stupid simple. No matter what the Republicans may claim, we got a lot of things done already. It’s the economy, stupid! And they know who got it for them!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86004.5,
+        "fields": {
+            "question": "campaign_1_dole",
+            "description": "Let’s put the focus not on us but the opposition. Dole-Gingrich shouldn't be left off the hook for all the things they scuttled, not today, not on election day!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86005.5,
+        "fields": {
+            "question": "campaign_2_dole",
+            "description": "Congress, Congress, Congress. Dole may as well be Doctor No considering all the things he had refused. Let’s put on an ad that says it is clear what Doctor No has refused the American people."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86006.5,
+        "fields": {
+            "question": "campaign_2_dole",
+            "description": "In warfare, there's the shock of cavalry charge but also the fear of seeing it reflected back on you. Let’s counteract the most egregious attack ads his being pumping. I’ve strengthened America's border, not weakened it. Republicans are the ones that are replacing US workers by foreign ones."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86007.5,
+        "fields": {
+            "question": "campaign_2_dole",
+            "description": "Let’s strike at the heart of the issue, remind them of 1991. The Republicans have done so little to help them, this hasn't changed a bit. Really hammer in on the fact that 41 signed started NAFTA, not me. They don't back the average worker."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86008.5,
+        "fields": {
+            "question": "campaign_2_dole",
+            "description": "Let’s not beat around the bush, Dole’s old and he looks older than he is. He’s so seasoned he won’t ever try something new. He's struggling with stairs and maybe even with breathing while I jog every morning."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86009.5,
+        "fields": {
+            "question": "campaign_3_dole",
+            "description": "I think we should assert some dominance in the South, really lay some groundwork down there. Come to think of it, could we make em' Democrat strongholds for the future? If we pour enough effort down there, we could be looking at a blue Mississippi this election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86010.5,
+        "fields": {
+            "question": "campaign_3_dole",
+            "description": "I don't like the numbers Perot’s having in the Midwest. Dole isn’t good at taking the concerns of the anti-nafta crowd so if I could simply make them think of and that prosperity is just a few years away, we could secure it well. No Republican won without Ohio afterall!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86011.5,
+        "fields": {
+            "question": "campaign_3_dole",
+            "description": "The question of our border remains on every lips. I should show myself as a true uniter. Let’s meet everyone on the ground, show how common sense programs will improve the life of both old and new Americans that have come to this land for a better life. This is what the flag stands for."
         }
     }
 ]
@@ -10439,6 +10554,206 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": 0.01
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 86001.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12705,
+        "fields": {
+            "answer": 86001.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12706,
+        "fields": {
+            "answer": 86001.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12709,
+        "fields": {
+            "answer": 86002.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12710,
+        "fields": {
+            "answer": 86002.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 86002.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12713,
+        "fields": {
+            "answer": 86003.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 86003.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12715,
+        "fields": {
+            "answer": 86003.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12718,
+        "fields": {
+            "answer": 86004.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12719,
+        "fields": {
+            "answer": 86004.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12720,
+        "fields": {
+            "answer": 86004.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12727,
+        "fields": {
+            "answer": 86005.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12728,
+        "fields": {
+            "answer": 86005.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 86006.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12731,
+        "fields": {
+            "answer": 86006.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12733,
+        "fields": {
+            "answer": 86007.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12734,
+        "fields": {
+            "answer": 86007.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12740,
+        "fields": {
+            "answer": 86008.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12741,
+        "fields": {
+            "answer": 86008.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.005
+        }
     }
 ]
 
@@ -11102,6 +11417,26 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": 0.6,
             "issue_importance": 1.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12707,
+        "fields": {
+            "answer": 86001.5,
+            "issue": 28,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12716,
+        "fields": {
+            "answer": 86002.5,
+            "issue": 30,
+            "issue_score": -0.4,
+            "issue_importance": 3
         }
     }
 ]
@@ -16650,6 +16985,446 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 77,
             "state_multiplier": 0.01
         }
+    },
+        {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12735,
+        "fields": {
+            "answer": 86007.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12736,
+        "fields": {
+            "answer": 86007.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12737,
+        "fields": {
+            "answer": 86007.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12738,
+        "fields": {
+            "answer": 86007.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5,
+            "state": 204,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12748,
+        "fields": {
+            "answer": 86009.5,
+            "state": 220,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12750,
+        "fields": {
+            "answer": 86009.5,
+            "state": 213,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12751,
+        "fields": {
+            "answer": 86009.5,
+            "state": 222,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12752,
+        "fields": {
+            "answer": 86009.5,
+            "state": 184,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12753,
+        "fields": {
+            "answer": 86009.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12754,
+        "fields": {
+            "answer": 86009.5,
+            "state": 197,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12755,
+        "fields": {
+            "answer": 86009.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12756,
+        "fields": {
+            "answer": 86009.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12757,
+        "fields": {
+            "answer": 86009.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12758,
+        "fields": {
+            "answer": 86009.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12759,
+        "fields": {
+            "answer": 86009.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12760,
+        "fields": {
+            "answer": 86009.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12761,
+        "fields": {
+            "answer": 86009.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12764,
+        "fields": {
+            "answer": 86010.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12765,
+        "fields": {
+            "answer": 86010.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12766,
+        "fields": {
+            "answer": 86010.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12767,
+        "fields": {
+            "answer": 86010.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12768,
+        "fields": {
+            "answer": 86010.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12769,
+        "fields": {
+            "answer": 86010.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12771,
+        "fields": {
+            "answer": 86010.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12774,
+        "fields": {
+            "answer": 86010.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12775,
+        "fields": {
+            "answer": 86010.5,
+            "state": 211,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12776,
+        "fields": {
+            "answer": 86010.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12780,
+        "fields": {
+            "answer": 86011.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12781,
+        "fields": {
+            "answer": 86011.5,
+            "state": 204,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12782,
+        "fields": {
+            "answer": 86011.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12783,
+        "fields": {
+            "answer": 86011.5,
+            "state": 220,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12784,
+        "fields": {
+            "answer": 86011.5,
+            "state": 213,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12785,
+        "fields": {
+            "answer": 86011.5,
+            "state": 197,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12786,
+        "fields": {
+            "answer": 86011.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12789,
+        "fields": {
+            "answer": 86011.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12790,
+        "fields": {
+            "answer": 86011.5,
+            "state": 211,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12791,
+        "fields": {
+            "answer": 86011.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
     }
 ]
 
@@ -18364,6 +19139,105 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "Giving up on crux of the issue in it's largest part felt hard on Hillary. While yes, the number of the uninsured will drop after the plan is complete, it will never be on acceptable levels. She say she can't help but feel like she betrayed one part of America to save another. "
         }
+    },
+        {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.5,
+            "candidate": 77,
+            "answer_feedback": "You pushed on hard with your new bills that you said will “get 100,000 new policemen on ground”. The number is quite optimistic but compared to the crime wave of 41’s years, people are taking notice, especially after you get the police associations support."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12708,
+        "fields": {
+            "answer": 86002.5,
+            "candidate": 77,
+            "answer_feedback": "As you called for big support on school uniforms and after school programs, some of which had been scuttled by Republicans, you suddenly became the candidate of family values. You’re expecting a huge gain from soccer moms everywhere."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12712,
+        "fields": {
+            "answer": 86003.5,
+            "candidate": 77,
+            "answer_feedback": "Seeing Al presenting graphs of how things have already gone better in the last 4 years and how things can further improve has got you a cease and desist order from Ross Perot. Still, the Republicans are claiming part of the credit, no matter how absurd that sounds."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12717,
+        "fields": {
+            "answer": 86004.5,
+            "candidate": 77,
+            "answer_feedback": "While initially bringing out once more the bloodied flag of Congress deadlock, most people had already made their mind on that front. Furthermore, you’ve left yourselves open to further criticism on how you had lost the trust of the people in 94, that what brought you here in the first place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12726,
+        "fields": {
+            "answer": 86005.5,
+            "candidate": 77,
+            "answer_feedback": "Dole said no on a balanced budget, Dole said no on tax cuts, Dole said no to protecting kids… Dole may well have said no to celebrating Christmas, it’s devastating to his campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12729,
+        "fields": {
+            "answer": 86006.5,
+            "candidate": 77,
+            "answer_feedback": "Soon after you used his ads on the flow of illegal immigrants right against him, he pulled it out and made himself much more muted on immigration. Still, there’s been a lot of grumbling among our base that are beginning to think you’re trying to out-Republican the Republicans."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12732,
+        "fields": {
+            "answer": 86007.5,
+            "candidate": 77,
+            "answer_feedback": "Opening old wounds to get back the support of the average worker has been very effective. They are trying to deflect all they want by saying it’s against those that abuse the system, not the average worker but all Americans knew at least a neighbor, a friend or a family member that had struggled under their rule."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12739,
+        "fields": {
+            "answer": 86008.5,
+            "candidate": 77,
+            "answer_feedback": "Dole’s being a fossil is known to all. Attacking him on health was less effective than expected as everyone had already made their mind on if he was too old. Attacking the age of his ideas did have some effect on polling. It seems like the papers were already so scorched earth on him on those parts you got nothing new to add to it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12744,
+        "fields": {
+            "answer": 86009.5,
+            "candidate": 77,
+            "answer_feedback": "You aren't wrong that the South still loves you as much as they did in '92 and without only one Texan left to really compete, numbers not seen since Carter are beginning to appear. On the contrary, Perot rallies the anti-NAFTA troops in the Midwest, really making a serious impact there."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12763,
+        "fields": {
+            "answer": 86010.5,
+            "candidate": 77,
+            "answer_feedback": "Speaking frankly with workers on the ground could have gone badly but in the end, it went fine as you avoided sounding either pretentious or out of touch when you presented plans for worker support and formation. Dole makes ground with border states, trying to hammer in the weak-Immigration image."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12779,
+        "fields": {
+            "answer": 86011.5,
+            "candidate": 77,
+            "answer_feedback": "Speaking under the burning sun of Arizona of a greater hope that appeals to both the Latin and White population is a challenge that you stepped up too. You could see it in their eyes by the time it was over that you reached them even if it was mostly just words not actions. You know those words will be used against you in the deep south."
+        }
     }
 ]
 
@@ -19682,6 +20556,39 @@ question_insert("question_20_internet",
               
               );
               question_insert("question_21_iraq_airstrikes", 
+  {
+             "model": "campaign_trail.question",
+        "pk": "campaign_1_dole",
+        "fields": {
+            "priority": 0,
+            "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, just what should you remind America of to take back control?",
+            "likelihood": 1
+        }
+  }
+  );
+                question_insert("campaign_1_dole", 
+  {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_dole",
+        "fields": {
+            "priority": 0,
+            "description": "Dole's a really easy target. He’s known to all and yet loved by nearly nobody, as a lot of baggage is attached to him and yet he has become the champion of Republicans. You're gonna need something sharp that will shatter the whole façade.",
+            "likelihood": 1
+        }
+  }
+  );
+                  question_insert("campaign_2_dole", 
+  {
+        "model": "campaign_trail.question",
+        "pk": "campaign_3_dole",
+        "fields": {
+            "priority": 0,
+            "description": "You’ve talked about the issues that affect the nation more widely, but you shouldn't forget the work needed on the states that will decide us the election. Whatever Dole’s gonna to do, you’ll have to strike your own where it matters.",
+            "likelihood": 1
+        }
+  }
+  );
+   question_insert("campaign_3_dole", 
   {
              "model": "campaign_trail.question",
   "pk": "debate_dole",
