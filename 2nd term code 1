@@ -491,21 +491,21 @@ campaignTrail_temp.candidate_json = [
   "model": "campaign_trail.candidate",
   "pk": 97,
   "fields": {
-      "first_name": "Pat",
-      "last_name": "Buchanan",
+      "first_name": "Perot",
+      "last_name": "Faction",
       "election": 9,
-      "party": "Republican",
-      "state": "Virginia",
+      "party": "Reform",
+      "state": "Based in Texas",
       "priority": 11,
       "description": "''",
       "color_hex": "#800080",
       "secondary_color_hex": "#FFFFC0",
       "is_active": 0,
-      "image_url": "https://i.imgur.com/wpqSW1b.png",
+      "image_url": "https://i.imgur.com/9dUNehO.png",
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Sick of his party</p>",
+      "description_as_running_mate": "<p>Sensible Reform</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -514,67 +514,21 @@ campaignTrail_temp.candidate_json = [
   "model": "campaign_trail.candidate",
   "pk": 98,
   "fields": {
-      "first_name": "Donald",
-      "last_name": "Trump",
+      "first_name": "Ventura",
+      "last_name": "Faction",
       "election": 9,
-      "party": "Democrat",
-      "state": "New York",
+      "party": "Reform",
+      "state": "Based in Minnesota",
       "priority": 11,
       "description": "''",
       "color_hex": "#800080",
       "secondary_color_hex": "#FFFFC0",
       "is_active": 0,
-      "image_url": "https://i.imgur.com/7HlZnIg.png",
+      "image_url": "https://i.imgur.com/u81d7YW.png",
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Make America Great Again!</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
-  "pk": 99,
-  "fields": {
-      "first_name": "John",
-      "last_name": "Hagelin",
-      "election": 9,
-      "party": "Independent",
-      "state": "Pennsylvania",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/M54DDxQ.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>The Doc</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
-  "pk": 100,
-  "fields": {
-      "first_name": "Lowell",
-      "last_name": "Weicker",
-      "election": 9,
-      "party": "Republican",
-      "state": "Connecticut",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/9V2z1l7.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Connecticut Senator</p>",
+      "description_as_running_mate": "<p>Wacky Folks</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -725,22 +679,6 @@ campaignTrail_temp.running_mate_json = [
   "fields": {
       "candidate": 80,
       "running_mate": 98
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
-  "pk": 66,
-  "fields": {
-      "candidate": 80,
-      "running_mate": 99
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
-  "pk": 67,
-  "fields": {
-      "candidate": 80,
-      "running_mate": 100
   }
 }
 ]
