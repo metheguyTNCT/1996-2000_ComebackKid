@@ -4,10 +4,10 @@ campaignTrail_temp.election_json = [
       "pk": 9,
       "fields": {
           "year": 2000,
-          "summary": "<p>Bill Clinton cannot believe he’s here. Gliding through town halls and stages across the country, he shared a hopeful, modern vision, a ''third way'' forward. By bringing together the diverse strands of America, he created a diverse coalition that propelled his ship to victory over the once-popular George Bush. \n</p><p>Now, Clinton sits in the same office once held by his hero, John F. Kennedy, before his assassination. Like Kennedy, Clinton must navigate scandals and challenges, both at home and abroad, to prove he is the charismatic, modern president the nation needs, not just a clown for tabloid headlines. He must show the American people that the boy born in Hope, to a widow, is capable of leading the free world.</p>",
-          "image_url": "https://i.imgur.com/hBVdYSU.png",
+          "summary": "<p>gee willikers I wonder wholl be president</p>",
+          "image_url": "https://i.imgur.com/8PQDwq0.png",
           "winning_electoral_vote_number": 270,
-          "advisor_url": "https://i.imgur.com/zD9sUbZ.png",
+          "advisor_url": "https://i.imgur.com/ttoSncj.png",
           "recommended_reading": "<h4 style=\"margin-top: 0.5em;\">1996/First Term Sources</h4><a href=\"https://archive.org/details/presidentialfoll00hall\" target=”_blank”>Ralph Z. Hallow & Bradley S. O'Leary - Presidential Follies : Those Who Would be President and Those Who Should Think Again!</a></br><a href=\"https://www.hoover.org/research/my-guy\" target=”_blank”>Hoover Institution - My Guy</a></br><a href=\"http://www.amazon.com/exec/obidos/ASIN/032110028X/amhius20-20\" target=”_blank”>Larry Sabato - Overtime! The Election 2000 Thriller</a><h4>2000/Second Term Sources</h4><a href=\"https://p2000.us/cands.html\" target=”_blank”>Democracy in Action 2000</a></br><a href=\"https://www.amazon.com/Vast-Conspiracy-Scandal-Brought-President-ebook/dp/B009UAO1KQ\" target=”_blank”>Jeffery Toobin - A Vast Conspiracy: The Real Story of the Sex Scandal That Nearly Brought Down a President</a></br><a href=\"http://www.amazon.com/exec/obidos/ASIN/B003YFIYWY/amhius20-20\" target=”_blank”>The Ralph Nader Reader</a><h4>Links</h4><a href=\"http://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=2&psid=3377\" target=”_blank”>Digital History - The Disputed Election of 2000</a></br><a href=\"http://www.pbs.org/wnet/supremecourt/future/landmark_bush.html\" target=”_blank”><em>Bush v. Gore</em></a></br><a href=\"http://www.vanityfair.com/news/2004/10/florida-election-2000\" target=”_blank”>The Path to Florida</a></br><a href=\"http://www.historyplace.com/speeches/gore-concedes.htm\" target=”_blank”>Al Gore Concedes the 2000 Election</a>",
           "has_visits": 1,
           "no_electoral_majority_image": "https://www.jetsimon.com/public/static/images/2012-no-majority.jpg",
@@ -288,17 +288,17 @@ campaignTrail_temp.candidate_json = [
       "last_name": "Keyes",
       "election": 9,
       "party": "Republican",
-      "state": "New York",
+      "state": "Maryland",
       "priority": 11,
       "description": "''",
       "color_hex": "#CD0B0A",
       "secondary_color_hex": "#DC5B5A",
       "is_active": 0,
-      "image_url": "https://i.imgur.com/ScVwUKE.png",
+      "image_url": "https://i.imgur.com/VRFa2BX.png",
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Keyes to power</p>",
+      "description_as_running_mate": "<p>BECAUSE YOU'RE BLACK!!!!</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -311,7 +311,7 @@ campaignTrail_temp.candidate_json = [
       "last_name": "Dole",
       "election": 9,
       "party": "Republican",
-      "state": "Kansas",
+      "state": "North Carolina",
       "priority": 11,
       "description": "''",
       "color_hex": "#CD0B0A",
@@ -367,7 +367,7 @@ campaignTrail_temp.candidate_json = [
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Senator of Ohio</p>",
+      "description_as_running_mate": "<p>Congressman of Ohio</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -471,7 +471,7 @@ campaignTrail_temp.candidate_json = [
       "first_name": "Ross",
       "last_name": "Perot",
       "election": 9,
-      "party": "Republican",
+      "party": "Republican?",
       "state": "Texas",
       "priority": 11,
       "description": "''",
@@ -491,11 +491,11 @@ campaignTrail_temp.candidate_json = [
   "model": "campaign_trail.candidate",
   "pk": 97,
   "fields": {
-      "first_name": "Perot",
-      "last_name": "Faction",
+      "first_name": "The",
+      "last_name": "Perot Faction",
       "election": 9,
-      "party": "Reform",
-      "state": "Based in Texas",
+      "party": "Republican",
+      "state": "Nationwide",
       "priority": 11,
       "description": "''",
       "color_hex": "#800080",
@@ -505,7 +505,7 @@ campaignTrail_temp.candidate_json = [
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Sensible Reform</p>",
+      "description_as_running_mate": "<p>racism</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -514,11 +514,11 @@ campaignTrail_temp.candidate_json = [
   "model": "campaign_trail.candidate",
   "pk": 98,
   "fields": {
-      "first_name": "Ventura",
-      "last_name": "Faction",
+      "first_name": "The",
+      "last_name": "Ventura Faction",
       "election": 9,
-      "party": "Reform",
-      "state": "Based in Minnesota",
+      "party": "Democrat",
+      "state": "New York",
       "priority": 11,
       "description": "''",
       "color_hex": "#800080",
@@ -528,7 +528,53 @@ campaignTrail_temp.candidate_json = [
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Wacky Folks</p>",
+      "description_as_running_mate": "<p>Make America Great Again!</p>",
+      "candidate_score": 0,
+      "running_mate": true
+  }
+},
+{
+  "model": "campaign_trail.candidate",
+  "pk": 99,
+  "fields": {
+      "first_name": "John",
+      "last_name": "Hagelin",
+      "election": 9,
+      "party": "Independent",
+      "state": "Pennsylvania",
+      "priority": 11,
+      "description": "''",
+      "color_hex": "#CD0B0A",
+      "secondary_color_hex": "#DC5B5A",
+      "is_active": 0,
+      "image_url": "https://i.imgur.com/M54DDxQ.png",
+      "electoral_victory_message": "''",
+      "electoral_loss_message": "''",
+      "no_electoral_majority_message": "''",
+      "description_as_running_mate": "<p>The Doc</p>",
+      "candidate_score": 0,
+      "running_mate": true
+  }
+},
+{
+  "model": "campaign_trail.candidate",
+  "pk": 100,
+  "fields": {
+      "first_name": "Lowell",
+      "last_name": "Weicker",
+      "election": 9,
+      "party": "Republican",
+      "state": "Connecticut",
+      "priority": 11,
+      "description": "''",
+      "color_hex": "#CD0B0A",
+      "secondary_color_hex": "#DC5B5A",
+      "is_active": 0,
+      "image_url": "https://i.imgur.com/9V2z1l7.png",
+      "electoral_victory_message": "''",
+      "electoral_loss_message": "''",
+      "no_electoral_majority_message": "''",
+      "description_as_running_mate": "<p>Connecticut Senator</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -679,6 +725,22 @@ campaignTrail_temp.running_mate_json = [
   "fields": {
       "candidate": 80,
       "running_mate": 98
+  }
+},
+{
+  "model": "campaign_trail.running_mate",
+  "pk": 66,
+  "fields": {
+      "candidate": 80,
+      "running_mate": 99
+  }
+},
+{
+  "model": "campaign_trail.running_mate",
+  "pk": 67,
+  "fields": {
+      "candidate": 80,
+      "running_mate": 100
   }
 }
 ]
