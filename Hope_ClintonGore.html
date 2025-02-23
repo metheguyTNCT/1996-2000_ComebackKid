@@ -21018,8 +21018,35 @@ e.pages = []
 e.header = "";
 e.executable = []
 nct_stuff.themes[nct_stuff.selectedTheme].text_col = "black"
+//Beat Dole
+if (quickstats[0] >= 270 && DoleNom == 1) {
+  e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS SENATOR DOLE</h3>
+          <p>If you see this, you beat Bob Dole!<br></p>`)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/M38Dp9B.gif'})])
+e.pages.push(`<h3>PRESIDENT DOLE TO NOT RUN FOR REELECTION</h3>
+              <p> To nobody’s surprise, the oldest man ever elected president announced earlier today he would not seek a 2nd term, seeing as he would be an unprecedented 81 years old at the end of it. Dole’s term has been mediocre at best, currently sitting at a 46% approval rating. During his term, he passed the Tax Code Reform Act of 1997, which simplified tax codes while also providing a tax cut to middle class Americans.<br><br>Although he wasn’t Clinton-Gingrich level of relationship with Congress, they haven’t agreed on everything, mostly due to his push for entitlement reform, and Democrats in congress showed increased resistance and hostility towards President Dole’s attempts at welfare reform. The economy has made significant gains, and many consider Dole’s leadership ''steady yet boring.'' VP Kemp has began his own campaign for the White House, but is sure to face a heavy contest in the primaries, with big Republicans like Jeb Bush, John McCain, Steve Forbes and others heading potential competition.<br></p><br></p>`)
+    //e.image = ""
+    e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/S5hJzZZ.png'})])
+    e.pages.push(`<h3>Yes She Can: Why Hillary Clinton Will in the 2000 Election.</h3>
+          <p> While Bill’s been enjoying his retirement, Hillary has been working hard to fight for you and me. Ever since she won the NY Senate race two years back, she’s been one of the most active Senators on Capitol Hill. She’s opposed President Dole every step of the way, including being the loudest voice against his failed welfare reforms, and spearheading the Democratic gains in the midterms.<br><br>You see, Hillary isn’t like your average First Lady, she’s determined, she’s focused, she’s a fighter, and she thinks outside of the box. Even though she’s only been a Senator for two years, she already has what it takes to become our Commander-In-Chief, especially compared to the ineffective leadership we’ve seen under our current POTUS, who is thankfully not running again.<br><br>She also understands that the tech boom was the backbone of our economic recovery, and promises to keep investing in newer and brighter resources.<br><br>When Hillary runs for the Democratic Nomination, support her as much as you can, go from door to door getting people registered to make history. A vote for Hillary is a vote for diversity, leadership and history.<br></p> - Robert J. Winkle<br></p><br></p>`)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/3ePA2rt.png'})])
+e.pages.push(`<h3>Bob Dole was, in fact, President</h3>
+     <p>wow.<br><br>I wonder what the folks in the 20s think about that<br></p><br></p>`)
+e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+    const doleLoss = new Playlist();
+  const doleLossSong = new Song(
+    "Soul Man",
+    "Sam & Dave",
+    "https://audio.jukehost.co.uk/s53kF4pP9Q4mcTlTZENprqIEszzzGcTz"
+  );
+doleLoss.addSong(doleLossSong);
+changePlaylist(doleLoss);
 //Dole win
-if (Dolewin === true && Buchananwin === false && Specterwin === false && Lamarwin === false && Grammwin === false && Wilsonwin === false) {
+} else if (Dolewin === true && Buchananwin === false && Specterwin === false && Lamarwin === false && Grammwin === false && Wilsonwin === false) {
   e.pages.push(`<h3>CNN CAN NOW PROJECT BOB DOLE THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
