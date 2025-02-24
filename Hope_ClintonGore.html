@@ -22334,7 +22334,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
     }
 }
 if (e.question_number+1 == 3) {
-if (e.player_answers.includes(10001)) {
+if (e.player_answers.includes(10001) || e.player_answers.includes(10003)) {
         question_insert("question_2_wtc_bombing", 
         {
         "model": "campaign_trail.question",
