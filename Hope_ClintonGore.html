@@ -611,6 +611,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "campaign_1_bush_commies",
+        "fields": {
+            "priority": 0,
+            "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "commie_return_question",
         "fields": {
             "priority": 0,
@@ -2345,6 +2354,38 @@ campaignTrail_temp.answers_json = [
         }
     },
         {
+        "model": "campaign_trail.answer",
+        "pk": 86020.5,
+        "fields": {
+            "question": "campaign_1_bush_commies",
+            "description": "There was something Yeltsin had spoken about when the question of NATO enlargement came, a deal that would see NATO not expand in Eastern Europe that Bush informally agreed before the fall of the Soviet Union. Let's spin that story. We will bring the hawks against Bush on how he was ready to sell out the free people of Europe!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86021.5,
+        "fields": {
+            "question": "campaign_1_bush_commies",
+            "description": "We have stakes that never could be higher. I hate to come to such a point but a tougher hand cannot be the answer where the lives of everyone is at stake. We cannot have an expansion of our military, of our missiles, of our strategic defense on the guise that the Russians could strike us because if they do, we'd be dead anyway. We'll push through that we're not in a campaign to have a war where by the end there's 2 Americans alive and 1 Russian."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86022.5,
+        "fields": {
+            "question": "campaign_1_bush_commies",
+            "description": "We'll make a dozen publicized visits. Both in Russia and in Eastern Europe. We can show to everyone that we can handle it, that we can find peace in our land. The Russian know I'll give them a better deal than Bush would, Poland knows I was ready to protect them in NATO. I must simply continue to show the people we'll be able to talk as neighbors on that planet that is our home to all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86023.5,
+        "fields": {
+            "question": "campaign_1_bush_commies",
+            "description": "We must show strength to the entire country. We'll contact our top dogs, show force and decisiveness with people in arms behind me. If that is what the people want, so I shall provide. I know that we can get it through if we just convince them that Bush really is the wimp."
+        }
+    },
+    {
         "model": "campaign_trail.answer",
         "pk": 87001.5,
         "fields": {
@@ -11471,6 +11512,86 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 80,
             "global_multiplier": -0.01
         }
+    },
+        {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 86020.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12713,
+        "fields": {
+            "answer": 86021.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12725,
+        "fields": {
+            "answer": 86022.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12726,
+        "fields": {
+            "answer": 86022.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12727,
+        "fields": {
+            "answer": 86022.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12729,
+        "fields": {
+            "answer": 86023.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 86023.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12731,
+        "fields": {
+            "answer": 86023.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.005
+        }
     }
 ]
 
@@ -12203,6 +12324,26 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 86018.5,
             "issue": 28,
             "issue_score": 0.4,
+            "issue_importance": 2
+        }
+    },
+        {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12703,
+        "fields": {
+            "answer": 86020.5,
+            "issue": 30,
+            "issue_score": -0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12714,
+        "fields": {
+            "answer": 86021.5,
+            "issue": 30,
+            "issue_score": 0.3,
             "issue_importance": 2
         }
     }
@@ -20932,6 +21073,193 @@ campaignTrail_temp.answer_score_state_json = [
             "state_multiplier": 0.05
         }
     },
+        {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12704,
+        "fields": {
+            "answer": 86020.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12705,
+        "fields": {
+            "answer": 86020.5,
+            "state": 204,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12706,
+        "fields": {
+            "answer": 86020.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12707,
+        "fields": {
+            "answer": 86020.5,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12708,
+        "fields": {
+            "answer": 86020.5,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12709,
+        "fields": {
+            "answer": 86020.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 86020.5,
+            "state": 192,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12711,
+        "fields": {
+            "answer": 86020.5,
+            "state": 182,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12715,
+        "fields": {
+            "answer": 86021.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12716,
+        "fields": {
+            "answer": 86021.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12717,
+        "fields": {
+            "answer": 86021.5,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12718,
+        "fields": {
+            "answer": 86021.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12719,
+        "fields": {
+            "answer": 86021.5,
+            "state": 219,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12720,
+        "fields": {
+            "answer": 86021.5,
+            "state": 187,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12721,
+        "fields": {
+            "answer": 86021.5,
+            "state": 210,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12722,
+        "fields": {
+            "answer": 86021.5,
+            "state": 188,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12723,
+        "fields": {
+            "answer": 86021.5,
+            "state": 200,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.02
+        }
+    }
 ]
 
 campaignTrail_temp.answer_feedback_json = [
@@ -22915,6 +23243,42 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "It's a bit hypocritical to say this as while the Republicans have been quite active against you, you still control the Senate. It's been seen as just blame shifting and the people seem confused by your points."
         }
+    },
+        {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 86020.5,
+            "candidate": 77,
+            "answer_feedback": "Out-Hawking Bush was not the way people thought you would go about it. Still, as you leaked it in the most right wing of sectors in America, many hawks began to strike against Bush on showing weakness to the Russians, unable to really finish the job like he should. It's bringing chaos to the traditional Republican conservative coalition."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12712,
+        "fields": {
+            "answer": 86021.5,
+            "candidate": 77,
+            "answer_feedback": "\"These are the stakes! To make a world in which all of God's children can live, or to go into the dark. We must either love each other, or we must die.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12724,
+        "fields": {
+            "answer": 86022.5,
+            "candidate": 77,
+            "answer_feedback": "You must have held the hands of two dozen world leaders and ministers. Zyuganov, Kwaśniewski, Horn, Chirac... The last one of them seemed especially in support of your work though in his tone, you could glean that he thought you were responsible for this whole mess in the first place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12728,
+        "fields": {
+            "answer": 86023.5,
+            "candidate": 77,
+            "answer_feedback": "At first it worked quite well, but quickly, there came the attack ads. You were compared to Dukakis in his tank. It was an unfair comparison but for most voters it stuck. You really looked out of your depth after they kept on repeating that you were."
+        }
     }
 ]
 
@@ -24108,7 +24472,22 @@ question_insert("question_20_internet",
               
               );
 }
-            if (SlimGOPCongress == 1) {
+if (CommieReturn == 1) {
+       question_insert("question_21_iraq_airstrikes", 
+              {
+                 
+        "model": "campaign_trail.question",
+        "pk": "campaign_1_bush_commies",
+        "fields": {
+            "priority": 0,
+            "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
+            "likelihood": 1
+        }
+                  }
+              
+              );
+            
+           } else if (SlimGOPCongress == 1) {
               question_insert("question_21_iraq_airstrikes", 
   {
         "model": "campaign_trail.question",
@@ -24135,6 +24514,28 @@ question_insert("question_20_internet",
 
             }
                 question_insert("campaign_1_bush", 
+  {
+             "model": "campaign_trail.question",
+  "pk": "debate_dole",
+  "fields": {
+      "priority": 0,
+      "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+      "likelihood": 1
+        }
+  }
+  );
+                 question_insert("campaign_1_bush_commies", 
+  {
+             "model": "campaign_trail.question",
+  "pk": "debate_dole",
+  "fields": {
+      "priority": 0,
+      "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+      "likelihood": 1
+        }
+  }
+  );
+                   question_insert("campaign_1_bush_mitigation", 
   {
              "model": "campaign_trail.question",
   "pk": "debate_dole",
