@@ -23037,6 +23037,7 @@ var SlimGOPCongress = 0
 var RepublicanRevolution = 0
 var MassiveGOPMajority= 0
 var CasesSettled = 0
+var CommieReturn = 0
 var DoleNom = 0
 var GrammNom = 0
 var BuchananNom = 0
@@ -24189,6 +24190,7 @@ if (e.question_number+1 == 16){
     }
     if (e.question_number+1 == 21){
     if(e.player_answers.includes(80004)) && ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5))) {
+    CommieReturn += 1;
     question_insert("question_16.5_jones_case", 
               {
                  
@@ -24221,6 +24223,21 @@ if (e.question_number+1 == 16){
     if (e.question_number+1 == 23){
 if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
 hwMentum();
+if (CommieReturn == 1){
+question_insert("question_20_internet", 
+              {
+                 
+        "model": "campaign_trail.question",
+        "pk": "candidate_intro_hw_commies",
+        "fields": {
+            "priority": 0,
+            "description": "There was quite some denial when it first started being picked up. The republican nomination was very competitive but one name kept on being floated and somehow, someway, he was drafted for the second time since the second World War. By an incongruous miracle, former president George Bush is the Republican nominee, for the third time. ",
+            "likelihood": 1
+        }
+                  }
+              
+              );
+} else {
 question_insert("question_20_internet", 
               {
                  
@@ -24234,6 +24251,7 @@ question_insert("question_20_internet",
                   }
               
               );
+}
             if (SlimGOPCongress == 1) {
               question_insert("question_21_iraq_airstrikes", 
   {
