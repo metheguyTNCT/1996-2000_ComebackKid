@@ -214,6 +214,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "question_17_yugoslavia",
+        "fields": {
+            "priority": 3,
+            "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "question_20_internet",
         "fields": {
             "priority": 0,
@@ -680,16 +689,7 @@ campaignTrail_temp.questions_json = [
             "description": "You've always been in support of addressing the issue of climate change. Although you're by no means one of those tree hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a solution, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally-friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
             "likelihood": 1
         }
-    },
-        {
-        "model": "campaign_trail.question",
-        "pk": "question_17_yugoslavia",
-        "fields": {
-            "priority": 3,
-            "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
-            "likelihood": 1
-        }
-    },
+    }
 ]
 
 campaignTrail_temp.answers_json = [
@@ -23059,133 +23059,6 @@ cyoAdventure = function(a) {
     initializeContent();
     update_EV_dict();
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
-    if (ans == 210001 && ev_dict["77"] < 269 && DoleNom == 1) {
-        Dolewin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Dolewin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && DoleNom == 1) {
-        Dolewin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Dolewin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && DoleNom == 1) {
-        Dolewin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Dolewin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && BuchananNom == 1) {
-        Buchananwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Buchananwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && BuchananNom == 1) {
-        Buchananwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Buchananwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && BuchananNom == 1) {
-        Buchananwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Buchananwin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && LamarNom == 1) {
-        Lamarwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Lamarwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && LamarNom == 1) {
-        Lamarwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Lamarwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && LamarNom == 1) {
-        Lamarwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Lamarwin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && GrammNom == 1) {
-        Grammwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Grammwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && GrammNom == 1) {
-        Grammwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Grammwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && GrammNom == 1) {
-        Grammwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Grammwin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && SpecterNom == 1) {
-        Specterwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Specterwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && SpecterNom == 1) {
-        Specterwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Specterwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && SpecterNom == 1) {
-        Specterwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Specterwin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && WilsonNom == 1) {
-        Wilsonwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        
-        console.log(Wilsonwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && WilsonNom == 1) {
-        Wilsonwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Wilsonwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && WilsonNom == 1) {
-        Wilsonwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Wilsonwin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && ForbesNom == 1) {
-        Forbeswin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Forbeswin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && ForbesNom == 1) {
-        Forbeswin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Forbeswin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && ForbesNom == 1) {
-        Forbeswin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Forbeswin = true);
-    } else if (ans == 210001 && ev_dict["77"] < 269 && PowellNom == 1) {
-        Powellwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Powellwin = true);
-    } else if (ans == 210002 && ev_dict["77"] < 269 && PowellNom == 1) {
-        Powellwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Powellwin = true);
-    } else if (ans == 210003 && ev_dict["77"] < 269 && PowellNom == 1) {
-        Powellwin=true;
-        update_EV_dict();
-        campaignTrail_temp.question_number = 49;
-        console.log(Powellwin = true);
-    }
    //Healthcare Update Inserter
     if (ans === 50001) {
         updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
@@ -24189,7 +24062,7 @@ if (e.question_number+1 == 16){
     }
     }
     if (e.question_number+1 == 21){
-    if(e.player_answers.includes(80004) && (e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5))) {
+    if(e.player_answers.includes(80004)) && ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5))) {
     CommieReturn += 1;
     question_insert("question_16.5_jones_case", 
               {
@@ -24492,8 +24365,8 @@ ctsAchievement("Great Incarcerator");
         }
     }
     );
-    ctsAchievement("Rage Against the Machine");
                     }
+                    ctsAchievement("Rage Against the Machine");
               //Specter Inserters
                     } else if (Ideology >= -10 && Ideology <= -6){
                     if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
@@ -25014,7 +24887,7 @@ e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
 forbesLoss.addSong(forbesLossSong);
 changePlaylist(forbesLoss);
 //Dole win
-} else if (Dolewin === true && Buchananwin === false && Specterwin === false && Lamarwin === false && Grammwin === false && Wilsonwin === false) {
+} else if (DoleNom == 1 && quickstats[0] <= 268) {
   e.pages.push(`<h3>CNN CAN NOW PROJECT BOB DOLE THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25042,7 +24915,7 @@ doleWin.addSong(doleWinSong);
 changePlaylist(doleWin);
 ctsAchievement("Heartbreak Hotel");
 //Buchanan win
-} else if (Buchananwin === true && Specterwin === false && Dolewin === false && Lamarwin === false && Grammwin === false && Wilsonwin === false) {
+} else if (BuchananNom == 1 && quickstats[0] <= 268) {
      e.pages.push(`<h3>''CNN CAN NOW PROJECT PAT BUCHANAN THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25065,7 +24938,7 @@ buchananWin.addSong(buchananWinSong);
 changePlaylist(buchananWin);
 ctsAchievement("Heartbreak Hotel");
 //Specter win
-} else if (Buchananwin === false && Specterwin === true && Dolewin === false && Lamarwin === false && Grammwin === false && Wilsonwin === false) {
+} else if (SpecterNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT ARLEN SPECTER THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25088,7 +24961,7 @@ specterWin.addSong(specterWinSong);
 changePlaylist(specterWin);
 ctsAchievement("Heartbreak Hotel");
 //Alexander win
-    } else if (Lamarwin === true && Specterwin === false && Dolewin === false && Buchananwin === false && Grammwin === false && Wilsonwin === false) {
+    } else if (LamarNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT LAMAR ALEXANDER THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25111,7 +24984,7 @@ alexanderWin.addSong(alexanderWinSong);
 changePlaylist(alexanderWin);
 ctsAchievement("Heartbreak Hotel");
 //Gramm win
-} else if (Lamarwin === false && Specterwin === false && Dolewin === false && Buchananwin === false && Grammwin === true && Wilsonwin === false) {
+} else if (GrammNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT PHIL GRAMM THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
           <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25133,7 +25006,7 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
 grammWin.addSong(grammWinSong);
 changePlaylist(grammWin);
 ctsAchievement("Heartbreak Hotel");
-} else if (Lamarwin === false && Specterwin === false && Dolewin === false && Buchananwin === false && Grammwin === false && Wilsonwin === true) {
+} else if (WilsonNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT PETE WILSON THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
         <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
         // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -25154,6 +25027,72 @@ const wilsonWinSong = new Song(
 );
 wilsonWin.addSong(wilsonWinSong);
 changePlaylist(wilsonWin);
+ctsAchievement("Heartbreak Hotel");
+} else if (ForbesNom == 1 && quickstats[0] <= 268) {
+    e.pages.push(`<h3>''CNN CAN NOW PROJECT STEVE FORBES THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+        <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
+        // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/0de67tJ.gif'})])
+e.pages.push(`<h3>''FORBES SLIDE 2''</h3>
+            <p>paragraph one<br><br>paragraph 2<br></p><br></p>`)
+//e.image = ""
+e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/5aQWkSh.png'})])
+e.pages.push(`<h3>Slide Three</h3>
+        <p>if someone could figure out how to add a slide in between the last one and this one thatd be great</p>`)
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+  const forbesWin = new Playlist();
+const forbesWinSong = new Song(
+  "The Man Who Sold The World",
+  "Nirvana",
+  "https://audio.jukehost.co.uk/PMIK6WHngYsr7d4xxyS20DihNYcuBHaN"
+);
+forbesWin.addSong(forbesWinSong);
+changePlaylist(forbesWin);
+ctsAchievement("Heartbreak Hotel");
+} else if (PowellNom == 1 && quickstats[0] <= 268) {
+    e.pages.push(`<h3>''CNN CAN NOW PROJECT COLIN POWELL THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+        <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
+        // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/EmTwKYr.gif'})])
+e.pages.push(`<h3>''POWELL SLIDE 2''</h3>
+            <p>paragraph one<br><br>paragraph 2<br></p><br></p>`)
+//e.image = ""
+e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/5aQWkSh.png'})])
+e.pages.push(`<h3>Slide Three</h3>
+        <p>if someone could figure out how to add a slide in between the last one and this one thatd be great</p>`)
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+  const powellWin = new Playlist();
+const powellWinSong = new Song(
+  "Rule",
+  "Nas",
+  "https://audio.jukehost.co.uk/6W2ATN9Owy2Ft1cLlP3GP9tasyaQ3Qf6"
+);
+powellWin.addSong(powellWinSong);
+changePlaylist(powellWin);
+ctsAchievement("Heartbreak Hotel");
+} else if (HWNom == 1 && quickstats[0] <= 268) {
+    e.pages.push(`<h3>''CNN CAN NOW PROJECT GEORGE BUSH THE 41ST AND 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+        <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
+        // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/9vCpGcm.gif'})])
+e.pages.push(`<h3>''POWELL SLIDE 2''</h3>
+            <p>paragraph one<br><br>paragraph 2<br></p><br></p>`)
+//e.image = ""
+e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/5aQWkSh.png'})])
+e.pages.push(`<h3>Slide Three</h3>
+        <p>if someone could figure out how to add a slide in between the last one and this one thatd be great</p>`)
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+  const hwWin = new Playlist();
+const hwWinSong = new Song(
+  "Looking For Freedom",
+  "David Hasselhoff",
+  "https://audio.jukehost.co.uk/Ke8EIXRvybvxed4F6KuqwPZqu9pWW68p"
+);
+hwWin.addSong(hwWinSong);
+changePlaylist(hwWin);
 ctsAchievement("Heartbreak Hotel");
 } else {
 return "<h3>That's odd. The mod seems broken.</h3><p>Contact the creator of the mod. Congrats if you won, better luck next time if you lost.</p>"
