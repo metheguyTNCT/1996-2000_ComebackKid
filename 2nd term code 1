@@ -806,7 +806,7 @@ campaignTrail_temp.temp_election_list = [
       "id": 9,
       "year": 2000,
       "is_premium": 0,
-      "display_year": "Hope"
+      "display_year": "HOPE 2"
   }
 ]
 
@@ -820,7 +820,7 @@ jet_data = {
   "backgroundImageUrl": "https://i.imgur.com/qQ0B4wr.jpeg",
   "endingTextColor": "#000000",
   "customQuote": "",
-  "gameTitle": "HOPE"
+  "gameTitle": "HOPE 2"
 }
 
 
@@ -838,7 +838,7 @@ quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
 
 
-corrr=`\n<h2>HOPE</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+corrr=`\n<h2>HOPE 2</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
 
 
@@ -1671,56 +1671,6 @@ button.addEventListener("click", () => {crtOn = !crtOn; setCRTLines(crtOn)});
 RecReading=true
 e.collect_results=true;
 campaignTrail_temp.achievements = {
-    "Soul Man" : {
-        "image" : "https://i.imgur.com/KKMUbQy.png",
-        "description" : "Face off against Bob Dole in 1996.",
-        "cannotBeCheated" : true
-    },
-  "Pitchfork Pat" : {
-        "image" : "https://i.imgur.com/9S8iYxi.png",
-        "description" : "Face off against Pat Buchanan in 1996.",
-        "cannotBeCheated" : true
-    },
-    "Rage Against the Machine" : {
-    "image" : "https://i.imgur.com/sqHuOcV.png",
-    "description" : "Face off against Steve Forbes in 1996.",
-    "cannotBeCheated" : true
-  },
-    "Easy as ABC" : {
-      "image" : "https://i.imgur.com/UvGmeEc.png",
-      "description" : "Face off against Lamar Alexander in 1996.",
-      "cannotBeCheated" : true
-  },
-  "Porno-Gramm" : {
-    "image" : "https://i.imgur.com/GszDM2j.png",
-    "description" : "Face off against Phil Gramm in 1996.",
-    "cannotBeCheated" : true
-  },
-  "Life Among the Cannibals" : {
-    "image" : "https://i.imgur.com/qmIyrdk.png",
-    "description" : "Face off against Arlen Specter in 1996.",
-    "cannotBeCheated" : true
-  },
-  "Great Incarcerator" : {
-    "image" : "https://i.imgur.com/Z0beDUe.png",
-    "description" : "Face off against Pete Wilson in 1996.",
-    "cannotBeCheated" : true
-  },
-  "General Commotion" : {
-    "image" : "https://i.imgur.com/NRhm2cK.png",
-    "description" : "Face off against Colin Powell in 1996.",
-    "cannotBeCheated" : true
-  },
-  "Repeat Offender" : {
-    "image" : "https://i.imgur.com/c9gONcd.png",
-    "description" : "Face off against George Bush in 1996.",
-    "cannotBeCheated" : true
-  },
-  "Perotnoia" : {
-    "image" : "https://i.imgur.com/zotUE9c.png",
-    "description" : "Face off against Ross Perot in 2000.",
-    "cannotBeCheated" : true
-  },
   "King of the Hill" : {
     "image" : "https://i.imgur.com/pfwpjjG.png",
     "description" : "Face off against Newt Gingrich in 2000.",
@@ -1769,51 +1719,6 @@ campaignTrail_temp.achievements = {
   "Fortunate Son" : {
     "image" : "https://i.imgur.com/N1JEMKk.png",
     "description" : "Face off against Jeb Bush in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Heartbreak Hotel" : {
-    "image" : "https://i.imgur.com/gIftQix.png",
-    "description" : "Lose reelection.",
-    "cannotBeCheated" : true
-  },
-  "The Work Goes On" : {
-    "image" : "https://i.imgur.com/ZfNsEr8.png",
-    "description" : "Fulfill Ted's dream.",
-    "cannotBeCheated" : true
-  },
-  "I Do" : {
-    "image" : "https://i.imgur.com/tdj9Wki.png",
-    "description" : "Fulfill your ultimate promise.",
-    "cannotBeCheated" : true
-  },
-  "Great Negotiator" : {
-    "image" : "https://i.imgur.com/4RS2LSh.png",
-    "description" : "Pay your enemies off.",
-    "cannotBeCheated" : true
-  },
-  "Orange Tips Only" : {
-    "image" : "https://i.imgur.com/t85rqCb.png",
-    "description" : "End the root problem.",
-    "cannotBeCheated" : true
-  },
-  "Out and Proud" : {
-    "image" : "https://i.imgur.com/Lu1hn11.png",
-    "description" : "Make it all up.",
-    "cannotBeCheated" : true
-  },
-  "His Cheatin' Heart" : {
-    "image" : "https://i.imgur.com/QhYM21E.png",
-    "description" : "Suffer the ultimate indignity.",
-    "cannotBeCheated" : true
-  },
-  "Counterrevolution" : {
-    "image" : "https://i.imgur.com/KBaDooq.png",
-    "description" : "Preserve your mandate.",
-    "cannotBeCheated" : true
-  },
-  "Between Hope and History" : {
-    "image" : "https://i.imgur.com/UeC9nsu.png",
-    "description" : "Properly build a bridge into the 21st century.",
     "cannotBeCheated" : true
   }
   }
