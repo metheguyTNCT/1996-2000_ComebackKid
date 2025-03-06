@@ -117,7 +117,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_4andahalf_supremecourt",
         "fields": {
             "priority": 2,
-            "description": "Associate Justice Byron 'Whizzer' White has announced his intention to retire. The Jack Kennedy appointee is considered a liberal and perhaps the last of an ideological generation of judges. You've had a few private discussions with some in your cabinet, including Al, but ultimately, the choice remains firmly in your hands. What are you thinking? ",
+            "description": "80 days and counting... Associate Justice Byron 'Whizzer' White has announced his intention to retire, giving you the first Supreme Court vacancy of your presidency. The Jack Kennedy appointee is considered a liberal and perhaps the last of an ideological generation of judges. The press is restless, names have risen and fallen, and every choice comes with its risks. You’ve had long, winding discussions with Al and others, but ultimately, the decision is yours. What are you thinking? ",
             "likelihood": 1
         }
     },
@@ -984,15 +984,23 @@ campaignTrail_temp.answers_json = [
         "pk": 400012,
         "fields": {
             "question": "question_4andahalf_supremecourt",
-            "description": "I'm gonna go with Ruth Bader Ginsburg. She's a Carter appointee, and a person that liberals will love. But more importantly, she's someone that most folks across the spectrum, can feel good about."
+            "description": "I'm gonna go with Ruth Bader Ginsburg. She's a Carter appointee, and a person that liberals will love. More importantly, she’s the kind of nominee who can win confirmation without a dragged-out fight. The Court needs sharp minds, and she’s one of the sharpest.."
         }
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 4000131,
+        "fields": {
+            "question": "question_4andahalf_supremecourt",
+            "description": "Bruce Babbitt, Secretary of the Interior, former Arizona governor. He’s got the experience, the temperament, and a record that shows he can navigate the law and politics. He’s no stranger to tough fights, and I like that about him."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
         "pk": 400013,
         "fields": {
             "question": "question_4andahalf_supremecourt",
-            "description": "I don’t care what they’re saying. Laurence Tribe is nothing short of a genius, probably the best legal mind of his generation. This decision sets a tone for my presidency; we’re moving forward in America and this is the direction we need to take."
+            "description": "I don’t care what they’re saying. Laurence Tribe is nothing short of a genius, probably the best legal mind of his generation. This decision sets a tone for my presidency; we’re moving forward, not back. The Court should reflect that."
         }
     },
     {
@@ -8386,6 +8394,16 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 1161,
         "fields": {
+            "answer": 4000131,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1161,
+        "fields": {
             "answer": 400014,
             "candidate": 77,
             "affected_candidate": 77,
@@ -14862,6 +14880,16 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 400013,
             "issue": 28,
             "issue_score": 0.61,
+            "issue_importance": 1.7
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 12605,
+        "fields": {
+            "answer": 4000131,
+            "issue": 28,
+            "issue_score": 0.01,
             "issue_importance": 1.7
         }
     },
@@ -26596,7 +26624,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 400012,
             "candidate": 77,
-            "answer_feedback": "You champion Ginsburg’s nomination, pointing to her experience on the U.S. Court of Appeals for D.C. and her reserved, moderate persona. As the second woman on the Court, she’s historic, but she doesn’t stir up much controversy, aside from some positive, if vague, headlines for your administration. Good,that's just the way you like it."
+            "answer_feedback": "You champion Ginsburg’s nomination, pointing to her experience on the U.S. Court of Appeals for D.C. and her reserved, moderate persona. As the second woman on the Court, she’s historic, but she doesn’t stir up much controversy, aside from some positive, if vague, headlines for your administration. Good, that's just the way you like it."
         }
     },
     {
@@ -26606,6 +26634,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 400013,
             "candidate": 77,
             "answer_feedback": "Though he’s not quite considered a radical, Mr. Tribe, a longtime Harvard professor, is viewed as a liberal pick by both the GOP and the media. You needed to throw them a bone anyway. Al wasn’t a fan, apparently calling Tribe an ‘oddball,’ but you don’t really care, and you don’t have to."
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 709,
+        "fields": {
+            "answer": 4000131,
+            "candidate": 77,
+            "answer_feedback": "Babbitt was one of the first names you came up with. Just a few months ago, he sailed through Senate confirmation as Secretary of the Interior without a hitch. But now, Senators Hatch and Dole aren’t happy about the idea of him on the Court, calling him too political. Still, you have the numbers to push through your former DLC ally, if you’re willing to fight for him. "
         }
     },
     {
@@ -29315,6 +29352,7 @@ campaignTrail_temp.answer_feedback_json = [
 
 campaignTrail_temp.candidate_image_url = "https://i.imgur.com/fOQHe72.png";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/nj9ev85.png";
+e.answer_count = 5;
 campaignTrail_temp.candidate_last_name = "";
 campaignTrail_temp.running_mate_last_name = "";
 function adjustFeedbackBox(width, height) {
