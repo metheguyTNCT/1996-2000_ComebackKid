@@ -187,15 +187,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_15_republican_budget",
-        "fields": {
-            "priority": 3,
-            "description": "Since the midterms, the Republicans have carried this smug and cheeky confidence. Almost infuriatingly, Gingrich's mandate is so wide to him that he's committed the House to passing a set of spending cuts and tax reductions, including cuts to Medicare - and they think their so grand as to threaten you with a Government shutdown if you get out of pocket on education. This can't happen. ",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "question_16_monica",
         "fields": {
             "priority": 3,
@@ -861,6 +852,42 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_17_yugoslavia_win",
+        "fields": {
+            "priority": 3,
+            "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_15_republican_budget",
+        "fields": {
+            "priority": 3,
+            "description": "Since the midterms, the Republicans have carried this smug and cheeky confidence. Almost infuriatingly, Gingrich's mandate is so wide to him that he's committed the House to passing a set of spending cuts and tax reductions, including cuts to Medicare - and they think their so grand as to threaten you with a Government shutdown if you get out of pocket on education. This can't happen. ",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_15_huge_budget",
+        "fields": {
+            "priority": 0,
+            "description": "With the total control of both legislative branches, Gingrich is able to simply power through anything he want and overrule any veto you may bring. Elected on a platform of youth and change, you're now de-toothed and for some, a lame duck. What to even do now that the Republicans are ready to tear everything that ever helped the people down?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_15_mitigation_budget",
+        "fields": {
+            "priority": 0,
+            "description": "You could see it in his face, Gingrich is very frustrated. Without the influence of an expectant landslide that he had worked so had to achieve, the man that loved to shout to never compromised must compromise. The question is how much you'll agree to do so, you're equally responsible for the financial well-being of the nation, aren't you?",
+            "likelihood": 1
+        }
+    }
 ]
 
 campaignTrail_temp.answers_json = [
@@ -1218,6 +1245,62 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 150004,
+        "fields": {
+            "question": "question_15_huge_budget",
+            "description": "While I cannot simply present myself as some cinder block in front of them, I'm certain I can work on the ground to avoid some of the damage. Push through all the committiees, all the overture at negotiation, make it so that budget is looking much closer to us than it is to them by drawing them in different consideration before the last moment."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150005,
+        "fields": {
+            "question": "question_15_huge_budget",
+            "description": "They will want to push their insane bill, and I will say no. They will try to force it through, and I'll still say no. I'll continue to use my veto on all their retrograde bill until they understand that they cannot ignore me. The people will see it through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150006,
+        "fields": {
+            "question": "question_15_huge_budget",
+            "description": "We lost, that's just how it is. While those few years are to be the one where they dominate, we must take advantage of any slip up of any of their congressman. They've got a lot of new names here, many that are inexperienced. We need to give the republican party an image of incompetence and corruption."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150007,
+        "fields": {
+            "question": "question_15_huge_budget",
+            "description": "I'm no glorified roadblock, while the opposition is in power in the legislative, that won't stop me from working both with them and as a president. Those are special times but that should not stop us from working as usual."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150008,
+        "fields": {
+            "question": "question_15_mitigation_budget",
+            "description": "Let's keep it in the same line as the previous years. We'll continue the focus on reducing the deficit with possibly some nice middle class tax cut if that can be worked out. We're making great progress and I'm sure we'll be able to give a bit to each other this year."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150009,
+        "fields": {
+            "question": "question_15_mitigation_budget",
+            "description": "I think we need to give the American something to dream about. It doesn't have to be particularly expensive but it need to strike people's consciousness. Let's Rework on the ISS project, we have a legacy to respect."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150010,
+        "fields": {
+            "question": "question_15_mitigation_budget",
+            "description": "I think we should try and push our luck a little. We've not yet made enough on my commitment on education and their as been a growing weight on our students in the loans they must undertake to simply afford school. I'm certain we can give a gift they won't forget."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
         "pk": 160003,
         "fields": {
             "question": "question_16_monica",
@@ -1234,10 +1317,42 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 170003,
+        "pk": 170002,
         "fields": {
             "question": "question_17_yugoslavia",
             "description": "We need to be much harsher on Serbia. Most of the casualties of the war were Bosniaks, and they are angry about that. To appease them, we’ll add in a joint-tribunal for Serbian war criminals and form a mutual security pact with the two nations in order to prevent another war from taking place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170003,
+        "fields": {
+            "question": "question_17_yugoslavia",
+            "description": "They are people fighting against Milosevic inside of Yugoslavia. If we can make the Serb rise up against him or at least pressure him into a true accord for peace, we could. But as long as they have those bombs falling over them, the government will have their support. We can do this switch in the nature of Warfare and win on both side."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170004,
+        "fields": {
+            "question": "question_17_yugoslavia_win",
+            "description": "There are times and places where our leadership can mean the difference between peace and war, and where we can defend our fundamental values as a people and serve our most basic, strategic interests. My fellow Americans, in this new era there are still times when America and America alone can and should make the difference for peace."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170005,
+        "fields": {
+            "question": "question_17_yugoslavia_win",
+            "description": "We need to be much harsher on Serbia. Most of the casualties of the war were Bosniaks, and they are angry about that. To appease them, we’ll add in a joint-tribunal for Serbian war criminals and form a mutual security pact with the two nations in order to prevent another war from taking place."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 170006,
+        "fields": {
+            "question": "question_17_yugoslavia_win",
+            "description": "They are people fighting against Milosevic inside of Yugoslavia. If we can make the Serb rise up against him or at least pressure him into a true accord for peace, we could. But as long as they have those bombs falling over them, the government will have their support. We can do this switch in the nature of Warfare and win on both side."
         }
     },
     {
@@ -1416,6 +1531,14 @@ campaignTrail_temp.answers_json = [
           "description": "I know that the United States must be seen as the strongest nation on Earth. But if we go to bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re gonna issue a clear, firm statement condemning the Iraqi regime, and, if necessary, bring this matter before the United Nations. That’s the kind of principled leadership that our nation deserves. "
       }
   },
+  {
+    "model": "campaign_trail.answer",
+    "pk": 200003,
+    "fields": {
+        "question": "question_21_iraq_airstrikes",
+        "description": "What we need is a more permanent solution. Not invasion of course but a renewed pressure. We have not only to have that push being out but inside too. Let's help the Kurds, let's help those democratic to fight Saddam's regime. If he's taken both in and out the mad dog will have to learn how to play.\n"
+    }
+    },
   {
     "model": "campaign_trail.answer",
     "pk": 250001,
@@ -8331,6 +8454,26 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 1225,
+        "fields": {
+            "answer": 170004,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1225,
+        "fields": {
+            "answer": 170004,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 1231,
         "fields": {
             "answer": 40002,
@@ -9013,7 +9156,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12638,
         "fields": {
-            "answer": 170003,
+            "answer": 170002,
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.027
@@ -9023,7 +9166,7 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12638,
         "fields": {
-            "answer": 170003,
+            "answer": 170002,
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": -0.01
@@ -9033,7 +9176,37 @@ campaignTrail_temp.answer_score_global_json = [
         "model": "campaign_trail.answer_score_global",
         "pk": 12638,
         "fields": {
-            "answer": 170003,
+            "answer": 170002,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12638,
+        "fields": {
+            "answer": 170005,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.027
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12638,
+        "fields": {
+            "answer": 170005,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12638,
+        "fields": {
+            "answer": 170005,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.015
@@ -13958,6 +14131,286 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 80,
             "global_multiplier": 0.02
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12706,
+        "fields": {
+            "answer": 150004,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12707,
+        "fields": {
+            "answer": 150004,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12708,
+        "fields": {
+            "answer": 150004,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12709,
+        "fields": {
+            "answer": 150005,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12710,
+        "fields": {
+            "answer": 150005,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 150005,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.07
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12712,
+        "fields": {
+            "answer": 150006,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12713,
+        "fields": {
+            "answer": 150006,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 150006,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12716,
+        "fields": {
+            "answer": 150007,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12717,
+        "fields": {
+            "answer": 150007,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12722,
+        "fields": {
+            "answer": 170006,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12723,
+        "fields": {
+            "answer": 170006,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12724,
+        "fields": {
+            "answer": 170006,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12729,
+        "fields": {
+            "answer": 170003,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 170003,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12731,
+        "fields": {
+            "answer": 170003,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12729,
+        "fields": {
+            "answer": 200003,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 200003,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12731,
+        "fields": {
+            "answer": 200003,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12738,
+        "fields": {
+            "answer": 150008,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12739,
+        "fields": {
+            "answer": 150008,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12742,
+        "fields": {
+            "answer": 150009,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12743,
+        "fields": {
+            "answer": 150009,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12744,
+        "fields": {
+            "answer": 150009,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12747,
+        "fields": {
+            "answer": 150010,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12748,
+        "fields": {
+            "answer": 150010,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12749,
+        "fields": {
+            "answer": 150010,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
     }
 ]
 
@@ -14422,12 +14875,21 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_importance": 1.7
         }
     },
-
     {
         "model": "campaign_trail.answer_score_issue",
         "pk": 12640,
         "fields": {
-            "answer": 170003,
+            "answer": 170002,
+            "issue": 30,
+            "issue_score": -0.5,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12640,
+        "fields": {
+            "answer": 170005,
             "issue": 30,
             "issue_score": -0.5,
             "issue_importance": 2
@@ -14438,6 +14900,16 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12642,
         "fields": {
             "answer": 170001,
+            "issue": 30,
+            "issue_score": -0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12642,
+        "fields": {
+            "answer": 170004,
             "issue": 30,
             "issue_score": -0.4,
             "issue_importance": 2
@@ -14960,6 +15432,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 36031.5,
             "issue": 28,
             "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12725,
+        "fields": {
+            "answer": 170006,
+            "issue": 30,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12732,
+        "fields": {
+            "answer": 170003,
+            "issue": 30,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12732,
+        "fields": {
+            "answer": 200003,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12740,
+        "fields": {
+            "answer": 150008,
+            "issue": 28,
+            "issue_score": 0.1,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12745,
+        "fields": {
+            "answer": 150009,
+            "issue": 28,
+            "issue_score": 0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12750,
+        "fields": {
+            "answer": 150010,
+            "issue": 28,
+            "issue_score": 0.2,
             "issue_importance": 2
         }
     }
@@ -26393,6 +26925,15 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 998,
+        "fields": {
+            "answer": 170004,
+            "candidate": 77,
+            "answer_feedback": "Lake and his plan are able to be accepted by all sides despite muted Serbian protest. On December 14th, 1995, the Dayton Agreement is signed helping to end the War in the Balkans which helps your popularity back at home and America’s strength abroad."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 12240,
         "fields": {
             "answer": 10001,
@@ -26899,7 +27440,16 @@ campaignTrail_temp.answer_feedback_json = [
         "model": "campaign_trail.answer_feedback",
         "pk": 12637,
         "fields": {
-            "answer": 170003,
+            "answer": 170002,
+            "candidate": 77,
+            "answer_feedback": "Both Serbia and Bosnia-Herzegovina deny your terms and with your interference on Lake’s plan, the Accords fall apart leaving 3 years dedicated towards peace in the Balkans dead in the water. With the war continuing, the “Failure at Dayton” becomes another loss on the pile.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12637,
+        "fields": {
+            "answer": 170005,
             "candidate": 77,
             "answer_feedback": "Both Serbia and Bosnia-Herzegovina deny your terms and with your interference on Lake’s plan, the Accords fall apart leaving 3 years dedicated towards peace in the Balkans dead in the water. With the war continuing, the “Failure at Dayton” becomes another loss on the pile.\n"
         }
@@ -27093,6 +27643,15 @@ campaignTrail_temp.answer_feedback_json = [
           "answer_feedback": "Eventually, the British decide to take matters into their own hands. On October 9th, guided missiles are launched from the Cardiff and Glasgow, it seems the Empire still stands proud and ready to jump into action. Meanwhile, some in the American public, and especially in the media, are eager to portray your reluctance as weakness."
       }
   },
+  {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12728,
+    "fields": {
+        "answer": 200003,
+        "candidate": 77,
+        "answer_feedback": "The Kurds are in the midst of a civil war between people wishing a compromise with Saddam and another wishing for near independence or full independence. Throwing your weight behind the later as well as the united opposition which fought at their side has been grinding on Saddam resolve. You're unlikely to hear him bark for much longer."
+    }
+},
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 12811,
@@ -28669,6 +29228,87 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "By the time Wilson catches on to your game, it’s too late. You’ve already shirked the liberal elements of your party, but many of the conservatives that propped Wilson up begin abandoning ship. The debate was declared a draw, but your plan worked perfectly, Slick."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 150004,
+            "candidate": 77,
+            "answer_feedback": "If the objective was to safeguard most of the gains Democrats have made for America, this has succeeded. There's been a lot of damage but we can get through the other side, if we get reelected in 1996 that is."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12702,
+        "fields": {
+            "answer": 150005,
+            "candidate": 77,
+            "answer_feedback": "While some especially liberal voters applaud your principled stance, for many Americans, you're seen as the permanent roadblock to get anything done. You have seen Republicans lower the vitriol of their bills somewhat to avoid the red paint of veto but you know you'll still have to use that stamp a lot until they truly calm themselves."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12704,
+        "fields": {
+            "answer": 150006,
+            "candidate": 77,
+            "answer_feedback": "That plan was really more of a slow burn. While we left the door wide open for the Republicans to attack, the reveal of Michael Huffington and Larry Craig's homosexuality, Chuck Haytaian Sexual harassments, and everything that ever involved Oliver North has led to the Republican unity slowly cracking as witch hunt for ideological purity took the ranks. It seems like they had over extended and would pay the price next November."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12705,
+        "fields": {
+            "answer": 150007,
+            "candidate": 77,
+            "answer_feedback": "The papers had many articles already prepared on the expected deadlock and shooting matches following the landslide and yet... There was nothing. It seems like the Republicans really have won, for no one is resisting them anymore or even trying to put up a fight."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12721,
+        "fields": {
+            "answer": 170006,
+            "candidate": 77,
+            "answer_feedback": "At first it felt like you had just lost leverage on Milosevic but as he couldn't push further his own forces having already dwindled, the negotiation just dragged on more and more until protest started to form in March of 1996. First of only students but then also from some blue collar workers. In the end, Milosevic accepted the only nominal autonomy of the Republika Srpska inside of Bosnia as his regime was on the brink to lift the sanctions."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12728,
+        "fields": {
+            "answer": 170003,
+            "candidate": 77,
+            "answer_feedback": "You where determined it should have worked and for what it's worth, it almost had. Sadly, as you didn't budge and Russia began to waver their opposition to Serbian Yugoslavia. The agreement was ever so slowly falling apart. Because of your action in Serbia however, the reports on new weaponry from the east going to Belgrade are seen as retaliatory measures."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12737,
+        "fields": {
+            "answer": 150008,
+            "candidate": 77,
+            "answer_feedback": "You agreed to greater subsidies for farmers and some slight cuts to other sectors and they agreed for your greater spending on the environment and your tax cut. Keeping that rhythm, the nation should be at equilibrium before the year 2000."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12741,
+        "fields": {
+            "answer": 150009,
+            "candidate": 77,
+            "answer_feedback": "Seeing yourself switch from being a budget hawks to be open to expand NASA funding, the ISS and possibly even the Texan Super Collider has come as a big shock to many but the facts are clear. You can make one hell of a JFK impression when speaking of Mars and those cost aren't the massive hole in the budget that were initially forecasted."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12746,
+        "fields": {
+            "answer": 150010,
+            "candidate": 77,
+            "answer_feedback": "As discussion on reworking the entire student loan system may take years, there was one quick decision that was undertook. You forgave all student loans that have been contracted since more than 3 years. The right is calling it reckless and yet you feel like those student stuck in debt will be in yours now."
+        }
     }
 ]
 
@@ -29006,6 +29646,45 @@ cyoAdventure = function(a) {
     );
     }
     }
+    if (e.question_number+1 == 18) {
+        if (MassiveGOPMajority == 1) {
+        question_insert("question_14_oklahoma_bombing", 
+                {
+                    "model": "campaign_trail.question",
+                    "pk": "question_15_huge_budget",
+                    "fields": {
+                        "priority": 0,
+                        "description": "With the total control of both legislative branches, Gingrich is able to simply power through anything he want and overrule any veto you may bring. Elected on a platform of youth and change, you're now de-toothed and for some, a lame duck. What to even do now that the Republicans are ready to tear everything that ever helped the people down?",
+                        "likelihood": 1
+                    }
+                }
+            );
+        } else if (SlimGOPCongress == 1) {
+        question_insert("question_14_oklahoma_bombing", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "question_15_mitigation_budget",
+            "fields": {
+                "priority": 0,
+                "description": "You could see it in his face, Gingrich is very frustrated. Without the influence of an expectant landslide that he had worked so had to achieve, the man that loved to shout to never compromised must compromise. The question is how much you'll agree to do so, you're equally responsible for the financial well-being of the nation, aren't you?",
+                "likelihood": 1
+            }
+        }
+        );
+    } else {
+        question_insert("question_14_oklahoma_bombing", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "question_15_republican_budget",
+            "fields": {
+                "priority": 3,
+                "description": "Since the midterms, the Republicans have carried this smug and cheeky confidence. Almost infuriatingly, Gingrich's mandate is so wide to him that he's committed the House to passing a set of spending cuts and tax reductions, including cuts to Medicare - and they think their so grand as to threaten you with a Government shutdown if you get out of pocket on education. This can't happen. ",
+                "likelihood": 1
+            }
+        }
+        );
+        }
+        }
 	//Healthcare Vote inserter
     if (e.question_number+1 == 14) {
 	let win_healthcare_vote_temp = {
@@ -29433,9 +30112,26 @@ console.log(LEGWin)
     LEGWin += 1;
     Ideology -= 1;
     }
-    if (ans == 3357){
-PublicSupport -= 1;
+    if (ans == 150003){
+    PublicSupport -= 1;
     LEGWin -= 1;
+    }
+    //Government Shutdown Huge CYOA
+    if (ans == 150004){
+    PublicSupport -= 2;
+    LEGWin -= 1;
+    }
+    if (ans == 150005){
+    PublicSupport -= 3;
+    LEGWin -= 2;
+    Ideology += 1;
+    }
+    if (ans == 150006){
+    PublicSupport -= 1;
+    }
+    if (ans == 150007){
+    PublicSupport -= 2;
+    LEGWin -= 2;
     }
     //Paula Jones CYOA
     if (ans == 230002){
@@ -29449,14 +30145,22 @@ PublicSupport -= 1;
     ctsAchievement("Great Negotiator");
     }
     //End of the Bosnian War CYOA
-    if (ans == 170001){
+    if (ans == 170001 || ans == 170004) {
     PublicSupport += 1;
     FPWin += 1;
     Legacy += 1;
     }
-    if (ans == 170003){
+    if (ans == 170002 || ans == 170005){
     PublicSupport -= 1;
     FPWin -= 1;
+    }
+    if (ans == 170003) {
+    PublicSupport -= 2;
+    FPWin -= 1;
+    }
+    if (ans == 170006){
+    PublicSupport += 2;
+    FPWin += 1;
     }
     //DOMA CYOA
     if (ans == 180001){
@@ -29534,6 +30238,10 @@ PublicSupport += 1;
     }
     if (ans == 200002){
     PublicSupport -= 1;
+    FPWin -= 1;
+    }
+    if (ans == 200003){
+    PublicSupport += 2;
     FPWin -= 1;
     }
     //2nd Term CYOA
@@ -29818,19 +30526,35 @@ if (e.question_number+1 == 16){
               
               );
     } else {
+    if (e.player_answers.includes(80001) || e.player_answers.includes(80002) || e.player_answers.includes(80004)) {
+        question_insert("question_16.5_jones_case", 
+            {
+               
+      "model": "campaign_trail.question",
+      "pk": "question_17_yugoslavia",
+      "fields": {
+          "priority": 3,
+          "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
+          "likelihood": 1
+      }
+                }
+            
+            );
+    } else {
         question_insert("question_16.5_jones_case", 
               {
                  
-        "model": "campaign_trail.question",
-        "pk": "question_17_yugoslavia",
-        "fields": {
-            "priority": 3,
-            "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
-            "likelihood": 1
-        }
+                "model": "campaign_trail.question",
+                "pk": "question_17_yugoslavia_win",
+                "fields": {
+                    "priority": 3,
+                    "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war has seemingly no end in sight. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line. Which would keep the nation unified and separate the various ethnic group to their own territory. The final decision comes down you if you would like to attempt to negotiations or continue the bombings.",
+                    "likelihood": 1
+                }
                   }
               
               );
+    }
     }
     }
     if (e.question_number+1 == 23){
@@ -30738,7 +31462,7 @@ e.pages.push(`<h3>Bob Dole was, in fact, President</h3>
 e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
     const grammLoss = new Playlist();
   const grammLossSong = new Song(
-    "Hound Dog",
+   "Hound Dog",
     "Elvis Presley",
     "https://audio.jukehost.co.uk/V8Fc7ZhJh6tHRXk63vyygWVf88yVXEcZ"
   );
@@ -31338,6 +32062,7 @@ e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
   );
 doleWin.addSong(doleWinSong);
 changePlaylist(doleWin);
+
 //Buchanan win
 } else if (BuchananNom == 1 && quickstats[0] <= 268) {
      e.pages.push(`<h3>''CNN CAN NOW PROJECT PAT BUCHANAN THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
@@ -31360,6 +32085,7 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
   );
 buchananWin.addSong(buchananWinSong);
 changePlaylist(buchananWin);
+
 //Specter win
 } else if (SpecterNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT ARLEN SPECTER THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
@@ -31382,6 +32108,7 @@ const specterWin = new Playlist();
   );
 specterWin.addSong(specterWinSong);
 changePlaylist(specterWin);
+
 //Alexander win
     } else if (LamarNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT LAMAR ALEXANDER THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
@@ -31404,6 +32131,7 @@ e.pages.push(`<h3>Header</h3>
   );
 alexanderWin.addSong(alexanderWinSong);
 changePlaylist(alexanderWin);
+
 //Gramm win
 } else if (GrammNom == 1 && quickstats[0] <= 268) {
       e.pages.push(`<h3>''CNN CAN NOW PROJECT PHIL GRAMM THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
@@ -31426,6 +32154,7 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
   );
 grammWin.addSong(grammWinSong);
 changePlaylist(grammWin);
+
 } else if (WilsonNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT PETE WILSON THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
         <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
@@ -31447,6 +32176,7 @@ const wilsonWinSong = new Song(
 );
 wilsonWin.addSong(wilsonWinSong);
 changePlaylist(wilsonWin);
+
 } else if (ForbesNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT STEVE FORBES THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
         <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
@@ -31468,6 +32198,7 @@ const forbesWinSong = new Song(
 );
 forbesWin.addSong(forbesWinSong);
 changePlaylist(forbesWin);
+
 } else if (PowellNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT COLIN POWELL THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
         <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
@@ -31489,6 +32220,7 @@ const powellWinSong = new Song(
 );
 powellWin.addSong(powellWinSong);
 changePlaylist(powellWin);
+
 } else if (HWNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT GEORGE BUSH THE 41ST AND 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
         <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio—states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>`)
@@ -31510,6 +32242,7 @@ const hwWinSong = new Song(
 );
 hwWin.addSong(hwWinSong);
 changePlaylist(hwWin);
+
 } else {
 return "<h3>That's odd. The mod seems broken.</h3><p>Contact the creator of the mod. Congrats if you won, better luck next time if you lost.</p>"
 }
