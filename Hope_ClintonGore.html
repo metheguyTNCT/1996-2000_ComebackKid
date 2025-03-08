@@ -31818,6 +31818,7 @@ console.log(LEGWin)
    //Economic Plan CYOA
    if (ans == 30002){
     PublicSupport += 1;
+    LEGWin += 1;
     Ideology -= 1;
     }
     if (ans == 30001){
@@ -31826,7 +31827,6 @@ console.log(LEGWin)
     }
     if (ans == 30003){
     PublicSupport -= 1;
-    LEGWin += 1;
     IRLScore += 1;
     }
     // WhiteWater CYOA
@@ -34483,9 +34483,6 @@ document.addEventListener('keydown', (event) => {
 
     // Add event listener to the "Close Mac" button
     closeMacButton.addEventListener('click', function() {
-        let confirmClose = confirm("Do you want to close your mac?");
-        
-        if (confirmClose) {
             bgContainer.style.display = 'none';
             netscapePic.style.display = 'none';
             minsweeperPic.style.display = 'none';
@@ -34504,8 +34501,7 @@ document.addEventListener('keydown', (event) => {
             audio.play();
             loopingSound.currentTime = 0;
             soundCheckbox.checked = false; // Uncheck the box
-        }
-    });
+        } );
 }
 // Declare globally to initialize only once
 let cnnContent;
@@ -34601,8 +34597,8 @@ function initializeContent() {
         <div id="legacyContent" style="display: none; margin-top: 20px;">
             <h2>Ideology & Legacy</h2>
             <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
-            <p>The People's Ideology:</p>
-                <p style="font-weight: bold; margin-top: 5px; color: #DE0100;">Slightly Conservative</p>
+            <p>Public Support of the Administration:</p>
+                <p id="PublicSupportText" style="font-weight: bold; margin-top: 5px;">[Dynamic Public Support]</p>
 
                 <p>Your ideology:</p>
                 <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
@@ -34772,8 +34768,9 @@ function updateCandidateDescription(candidateName, newDescription) {
         });
 
             // Function to dynamically update Legacy and Ideology content
-    function updateLegacyAndIdeology() {
+    function updateLegacyPublicSupportAndIdeology() {
         const legacyText = document.getElementById('legacyText');
+        const PublicSupportText = document.getElementById('PublicSupportText');
         const ideologyText = document.getElementById('ideologyText');
 
         // Legacy content
@@ -34785,10 +34782,25 @@ function updateCandidateDescription(candidateName, newDescription) {
             legacyText.textContent = "Good";
         } else if (Legacy == 3) {
             legacyText.textContent = "Decent";
-        } else if (Legacy >= 1 && Legacy >= 2) {
+        } else if (Legacy >= 1 && Legacy <= 2) {
             legacyText.textContent = "Developing";
         } else {
             legacyText.textContent = "Minimal";
+        }
+
+        // Public Support content
+        if (PublicSupport >= 20) {
+            PublicSupportText.textContent = "Sky High";
+         } else if (PublicSupport >= 16 && PublicSupport <= 19) {
+            PublicSupportText.textContent = "Very High";
+        } else if (PublicSupport >= 11 && PublicSupport <= 15) {
+            PublicSupportText.textContent = "High";
+        } else if (PublicSupport >= 6 && PublicSupport <= 10) {
+            PublicSupportText.textContent = "Decent";
+        } else if (PublicSupport >= 1 && PublicSupport <= 5) {
+            PublicSupportText.textContent = "Low";
+        } else {
+            PublicSupportText.textContent = "In The Gutter";
         }
 
         // Ensure Ideology is a number
@@ -34923,7 +34935,7 @@ function toggleSection(sectionId) {
 
     // Update Legacy, Ideology, and International Standing when respective sections are opened
     if (sectionId === 'legacyContent') {
-        updateLegacyAndIdeology();
+        updateLegacyPublicSupportAndIdeology();
     } else if (sectionId === 'abroadContent') {
         updateInternationalStanding();  // Update the international standing when "The Fight Abroad" is clicked
     } else if (sectionId === 'homeContent') {
