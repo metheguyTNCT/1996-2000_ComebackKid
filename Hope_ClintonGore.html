@@ -33063,7 +33063,7 @@ function powellMentum() {
       e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.5
   e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.3
 }
-function hwMentum() {
+function bushMentum() {
     BushNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#136FC1";
@@ -33298,7 +33298,7 @@ if (e.question_number+1 == 16){
         }
         if (e.question_number+1 == 23){
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
-    hwMentum();
+    bushMentum();
     if (CommieReturn == 1){
     question_insert("question_20_internet", 
                   {
