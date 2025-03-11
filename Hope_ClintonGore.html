@@ -32472,10 +32472,10 @@ cyoAdventure = function(a) {
     if (e.player_answers.includes(55003.5)) {
         question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
-else if (e.player_answers.includes(20003) && e.player_answers.includes(30002) && e.player_answers.includes(40002) && e.player_answers.includes(80003) && e.player_answers.includes(90001) && e.player_answers.includes(75001.5)) {
+else if (PublicSupport >= 15 && e.player_answers.includes(75001.5)) { PublicSupport +=
     console.log("Kennedy healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
-} else if (e.player_answers.includes(20003) && e.player_answers.includes(30002) && e.player_answers.includes(40002) && e.player_answers.includes(80003) && e.player_answers.includes(90001) && e.player_answers.includes(65004.5)) {
+} else if (PublicSupport >= 15 && e.player_answers.includes(65004.5)) {
     console.log("Hillary healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_hillary_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
