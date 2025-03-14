@@ -9987,25 +9987,25 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
-        "pk": 12675,
-        "fields": {
-            "answer": 100003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-	"model": "campaign_trail.answer_score_global",
-        "pk": 12675,
-        "fields": {
-            "answer": 100003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.006
-        }
-    },
+        "model": "campaign_trail.answer_score_global",
+            "pk": 12675,
+            "fields": {
+                "answer": 100003,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "global_multiplier": 0.005
+            }
+        },
+        {
+        "model": "campaign_trail.answer_score_global",
+            "pk": 12675,
+            "fields": {
+                "answer": 100003,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "global_multiplier": 0.006
+            }
+        },
     {
         "model": "campaign_trail.answer_score_global",
         "pk": 12677,
@@ -34544,8 +34544,8 @@ PublicSupport += 1;
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#810A0A";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/hBmckvd.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Patrick";
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Weld";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "William";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.7
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.8
@@ -34599,6 +34599,7 @@ function powellMentum() {
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B7167D";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
+    campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#c7b10a";
       e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.5
   e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.3
 }
@@ -35533,6 +35534,7 @@ vpTable = {
 
     "Ralph Nader" : "Winona LaDuke",
     "H. Ross Perot" : "Pat Choate",
+    "William Weld" : "Michael Jordan",
     "Pat Buchanan" : "Ezola Foster",
     "John Hagelin" : "Nat Goldhaber",
     "Donald Trump" : "Tim Penny", 
