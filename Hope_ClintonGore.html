@@ -37846,6 +37846,9 @@ PublicSupport += 1;
     }
     function doleMentum() {
         DoleNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E03C35";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
@@ -37867,6 +37870,9 @@ PublicSupport += 1;
     }
     function lamarMentum() {
         LamarNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B22329";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
@@ -37874,6 +37880,9 @@ PublicSupport += 1;
     }
     function specterMentum() {
             SpecterNom += 1;
+            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
             campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
             campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C55653";
             campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
@@ -37885,6 +37894,9 @@ PublicSupport += 1;
     }
     function grammMentum() {
         GrammNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
@@ -37892,6 +37904,9 @@ PublicSupport += 1;
 }
 function wilsonMentum() {
     WilsonNom += 1;
+    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F8657B";
 campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
@@ -37901,6 +37916,9 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
 }
 function forbesMentum() {
     ForbesNom += 1;
+    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Forbes";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9A142C";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/rE6zjln.png";
@@ -37920,6 +37938,9 @@ function powellMentum() {
 }
 function bushMentum() {
     BushNom += 1;
+    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#136FC1";
     campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#CC0A10";
@@ -37957,13 +37978,10 @@ if (ans == 210003){
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.imgur.com/38VktbU.png';
 }
  //Ross Perot and Ralph Nader CYOA
-    if (ans == 240001 || 240002 || 240003 || 240004 && (PowellNomm == 0 || BuchananNom == 0)){
-    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+    if (ans == 240001 || 240002 || 240003 || 240004){
     campaignTrail_temp.candidate_json[2]["fields"].last_name = "Nader";
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#800080";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
-    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 }
 console.log(PublicSupport);
 console.log(IRLScore);
