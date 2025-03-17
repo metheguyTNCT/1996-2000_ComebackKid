@@ -497,7 +497,7 @@ campaignTrail_temp.questions_json = [
         "pk": "candidate_intro_powell",
         "fields": {
         "priority": 0,
-        "description": "Like Eisenhower before him, Colin Powell stands at the RNC stage. Aweing those who chose to draft him, Don Nickles among them, the General begins. He talks of integrity. Resolve. Faith in America’s future. You need to stay focused, no time for games.",
+        "description": "You glare at the TV unblinking as King Collin is coronated. With the backing of Bob Dole and George Bush, Powell gives a stiff speech on how his experience in the Gulf War leaves him ready to deal with the crisis you’ve left abroad and at home. With a bone thrown to the right wing through a reticent Don Nickles, you know only one thing for certain; this must be an ugly brawl.",
         "likelihood": 1
         }
     },
@@ -524,7 +524,7 @@ campaignTrail_temp.questions_json = [
         "pk": "candidate_intro_gramm",
         "fields": {
             "priority": 0,
-            "description": "After a very bitter primary, you turn on the TV to watch the RNC. You see Phil Gramm stands before the delegates. He talks about the inherent liberalism of your administration, and calls out your 'laxness' on crime. It ends with the bombastic Senator almost shouting, ''America doesn’t need more bureaucrats in Washington telling hardworking families how to live their lives!'' You can make out Tommy Thompson by his side. Sure, the Senators giving a rousing speech, but you know the people will trust you above him any day of the week.",
+            "description": "Hooray for big money politics -- Senator Phil Gramm, the bombastic, and hard right Texan Senator with the massive war chest, prevailed over the less well-funded candidates. Hand in hand with Governor Tommy Thompson of Wisconsin, they weep for a nation filled with crime, red tape and children born out of wedlock and promise to win a final battle against your far left liberalism. How are you going to dispatch dumb and dumber here?",
             "likelihood": 1
         }
     },
@@ -1970,7 +1970,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35017.5,
         "fields": {
             "question": "candidate_intro_powell",
-            "description": "You know, this is a special moment for millions of African Americans in this nation, and I don’t think it would be smart to spit all over that. I, along with many people across this nation were inspired to see General Powell on the stage, but my friends, I don’t think he has all the answers on the economy, or on what we should do about welfare. "
+            "description": "Colin Powell is a war hero par excellence, no doubt about it. But has this left him ready to lead a nation at peace? Does he really have a head for a tax code, or to address social issues? I doubt it. "
         }
     },
     {
@@ -1978,7 +1978,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35018.5,
         "fields": {
             "question": "candidate_intro_powell",
-            "description": "For all of this talk about him never wanting the nomination under any circumstances from the get-go. He’s all, “ready to serve his country” now huh? I’ll just say it like it is y’all, he lied to you. He ain’t no humble servant of the people, it’s all a ruse. He’s a servant to the old military-industrial complex Ike was talking about decades ago. Heed his warning folks, don’t be fooled."
+            "description": "The right wing gossip rags like to talk about my marriage. It’s true, I haven’t been a perfect husband, but Collin doesn’t strike me as husband of the year either, judging by how Alma didn’t appear anywhere at the RNC. Did he really choose power over his wife?"
         }
     },
     {
@@ -1987,6 +1987,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "candidate_intro_powell",
             "description": "Colin Powell, in his own words “Lacks a passion for politics.” So who would be doing the politics if he were elected? Don Nickles, that’s who. He’s openly made it a mission to remove Roe v. Wade as law of the land. Do you think Powell has what it takes to stop him and the party leadership from going further? I don’t!"
+        }
+    },
+     {
+	"model": "campaign_trail.answer",
+        "pk": 3501919.5,
+        "fields": {
+            "question": "candidate_intro_powell",
+            "description": "Not everyone is happy about Colin Powell. I mean, this is a pro-abortion, pro-affirmative action guy. I know Pat Buchanan is trying to hijack Reform to protest, maybe we can help him. Some mysterious cash flows, some lobbied attacks. Remind the right they have two horses in this race."
         }
     },
      {
@@ -2570,7 +2578,7 @@ campaignTrail_temp.answers_json = [
         "pk": 85009.5,
         "fields": {
             "question": "candidate_intro_gramm",
-            "description": "It's time to step in front of the American people. We need to stand tall and defend our record of progress, while inviting those who supported Bush to join us. The Republican Party may represent the past, but the Democratic Party is the way forward, a party for the future, with a vision that unites us all in building a stronger, fairer America."
+            "description": "He uh, actually won? Really? I guess money can buy elections, because I would have thought Mr. Porn-O-Gramm would be dead in the water. Well uh, let’s hit him on that. Through surrogates, obviously."
         }
     },
     {
@@ -2582,11 +2590,19 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+	"model": "campaign_trail.answer",
+        "pk": 8501011.5,
+        "fields": {
+            "question": "candidate_intro_gramm",
+            "description": "He’s an economist? Then you’d think he’s my biggest fan. After the Bush recession, we’ve seen massive growth, higher wages and more jobs. I would have thought a man as educated as Senator Gramm would understand that."
+        }
+    },
+    {
         "model": "campaign_trail.answer",
         "pk": 85011.5,
         "fields": {
             "question": "candidate_intro_gramm",
-            "description": "I'm gonna address the American people from my hometown of Hope, Arkansas, and talk about the real efforts we’ve made. I’ve got respect for Senator Gramm, but let’s ask: are you better off now than four years ago? Are his ideas, tax cuts for the wealthy, deregulation, and less investment in working families, really the path to a stronger, secure future?"
+            "description": "Phil Gramm may be more respectable than Pat Buchanan, but the fact that Gram is an outright extremist. He favours these frankly authoritarian laws, he’ll ban burning flags, men loving men, and abortions. I don’t support these things, but I oppose the kind of senseless overreach of them."
         }
     },
     {
@@ -10405,7 +10421,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 85009.5,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": -0.0295
+            "global_multiplier": -0.00695
         }
     },
     {
@@ -10443,6 +10459,36 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 1272226,
         "fields": {
             "answer": 85010.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 1272224,
+        "fields": {
+            "answer": 8501011.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1272225,
+        "fields": {
+            "answer": 8501011.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1272226,
+        "fields": {
+            "answer": 8501011.5,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.02
@@ -11255,7 +11301,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35018.5,
         "candidate": 77,
         "affected_candidate": 77,
-        "global_multiplier": -0.055
+        "global_multiplier": -0.065
     }
 },
 {
@@ -11306,6 +11352,36 @@ campaignTrail_temp.answer_score_global_json = [
         "candidate": 77,
         "affected_candidate": 77,
         "global_multiplier": 0.03
+    }
+},
+{
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12796,
+    "fields": {
+        "answer": 3501919.5,
+        "candidate": 77,
+        "affected_candidate": 77,
+        "global_multiplier": -0.062
+    }
+},
+{
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12797,
+    "fields": {
+        "answer": 3501919.5,
+        "candidate": 77,
+        "affected_candidate": 78,
+        "global_multiplier": 0.04
+    }
+},
+{
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12798,
+    "fields": {
+        "answer": 3501919.5,
+        "candidate": 77,
+        "affected_candidate": 77,
+        "global_multiplier": 0.035
     }
 },
 {
@@ -17272,6 +17348,16 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 12845,
+        "fields": {
+            "answer": 85011.5,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 1
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_issue",
         "pk": 12952,
         "fields": {
@@ -19243,6 +19329,17 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 12720,
         "fields": {
             "answer": 35019.5,
+            "state": 191,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.025
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12720,
+        "fields": {
+            "answer": 3501919.5,
             "state": 191,
             "candidate": 77,
             "affected_candidate": 77,
@@ -21373,6 +21470,391 @@ campaignTrail_temp.answer_score_state_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12799,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 217,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12800,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 227,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12801,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 192,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12802,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12803,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 208,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12804,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12805,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12806,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 211,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12807,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12808,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12809,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 184,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12810,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 198,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12811,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12812,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12813,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 193,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12814,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 194,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12815,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12816,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12817,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12818,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 229,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12819,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 197,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12820,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 222,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.06
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12821,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12822,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12823,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 220,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12824,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12825,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 200,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12826,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 188,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12827,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 210,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12828,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 187,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12829,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12830,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12831,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 219,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12832,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 209,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12833,
+        "fields": {
+            "answer": 3501919.5,
+            "state": 199,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.04
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_state",
         "pk": 12639,
         "fields": {
@@ -22917,6 +23399,17 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 12592,
         "fields": {
             "answer": 85010.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04462
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12592,
+        "fields": {
+            "answer": 8501011.5,
             "state": 223,
             "candidate": 77,
             "affected_candidate": 78,
@@ -32721,7 +33214,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35017.5,
             "candidate": 77,
-            "answer_feedback": "While there is certainly room to praise the life story of Colin Powell, this comes across as overly conciliatory. The news picks up this speech as “defeatist” “revealing” and “the president accepting his fate.” "
+            "answer_feedback": "General Powell calls this ''laughable''. ''Millions of taxpaying Americans understand the tax code perfectly well. The President’s insinuations are him either calling me stupid, or more likely a desperate attempt to hide how he’s failed the American public.''"
         }
     },
     {
@@ -32730,7 +33223,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35018.5,
             "candidate": 77,
-            "answer_feedback": "The people, they're not listening. You try as hard as you can to convince them otherwise, but all they see is the president being a stick in the mud, the powell campaign sees you as a dead man walking."
+            "answer_feedback": "Testing the waters, you have Bill Richardson make a snide remark on a Sunday show. The backlash is furious and immense, and worse yet -- bipartisan, as blue dogs turn their back on you to denounce this invasion into a man’s private life. Richardson issues an apology, and Powell stays silent throughout it all."
         }
     },
     {
@@ -32739,7 +33232,16 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35019.5,
             "candidate": 77,
-            "answer_feedback": "You flail around, trying to find any little way to justify this, but you just can't find anything."
+            "answer_feedback": "Pointing the finger at Don Nickles, the young conservative senator from Oklahoma, tapped to be Powell's running mate, seems like a smart move given the broad popularity at the front of the Republican ticket. But something about this line... it just doesn’t stick."
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12795,
+        "fields": {
+            "answer": 3501919.5,
+            "candidate": 77,
+            "answer_feedback": "Pat is frothing about Powell, coming dangerously close to crossing a line when he talks about affirmative action. However, a dying Strom Thurmond is wheeled out to read a statement pledging to support Powell, and calling on Republicans to not repeat his 1948 mistake. It seems like Thurmond is desperate for an image change in the end."
         }
     },
     {
@@ -32775,7 +33277,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85009.5,
             "candidate": 77,
-            "answer_feedback": "Phil Gramm, a towering and bombastic Senator of the great state of Texas, is generally regarded as rhetorically strong. It looks like he'll give you a fight."
+            "answer_feedback": "It’s like trench warfare. The Democrats lob an accusation of funding porn at the west point. The Republicans fire back east with accusations of marijuana smoking. Thousands argue. Not an inch of ground is gained by either side."
         }
     },
     {
@@ -32788,12 +33290,21 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 1272223,
+        "fields": {
+            "answer": 8501011.5,
+            "candidate": 77,
+            "answer_feedback": "But there could be more! But Bush pushed NAFTA through! But the debt! But regulations! So many buts, so many excuses, so few interested in them."
+        }
+    },
+    {
         "model": "campaign_trail.answer_feedback",
         "pk": 1272227,
         "fields": {
             "answer": 85011.5,
             "candidate": 77,
-            "answer_feedback": "It seems like this is shaping up to be a relatively tame contest. Senator Gramm is more than happy to slam you, but you don't seem willing to take the bait. This might just be smart enough to work."
+            "answer_feedback": "Gramm only has one solution to his sleaze problem, overcorrect with desperate appeals to the unelectably far right. He embraces his image as a modern day crusader, discussing a national sodomy ban. He just doesn’t know how to win."
         }
     },
      {
@@ -36427,7 +36938,7 @@ if (e.question_number+1 == 16){
                 "pk": "candidate_intro_gramm",
                 "fields": {
                     "priority": 0,
-                    "description": "After a long, stressful day of hard work, You've been informed by Begala, that the Republican National Convention has officially reached it's climax. Senator Phil Gramm stands before the delegates. He talks about the inherent liberalism of your administration, and calls out your 'laxness' on crime. It ends with the bombastic Senator almost shouting, ''America doesn’t need more bureaucrats in Washington telling hardworking families how to live their lives!''",
+                    "description": "Hooray for big money politics -- Senator Phil Gramm, the bombastic, and hard right Texan Senator with the massive war chest, prevailed over the less well-funded candidates. Hand in hand with Governor Tommy Thompson of Wisconsin, they weep for a nation filled with crime, red tape and children born out of wedlock and promise to win a final battle against your far left liberalism. How are you going to dispatch dumb and dumber here?",
                     "likelihood": 1
                 }
                             }
@@ -36574,7 +37085,7 @@ if (e.question_number+1 == 16){
     "pk": "candidate_intro_powell",
     "fields": {
     "priority": 0,
-    "description": "Like Eisenhower before him, Colin Powell stands at the RNC stage. Aweing those who chose to draft him, Don Nickles among them, the General begins. He talks of integrity. Resolve. Faith in America’s future. You need to stay focused, no time for games.",
+    "description": "You glare at the TV unblinking as King Collin is coronated. With the backing of Bob Dole and George Bush, Powell gives a stiff speech on how his experience in the Gulf War leaves him ready to deal with the crisis you’ve left abroad and at home. With a bone thrown to the right wing through a reticent Don Nickles, you know only one thing for certain; this must be an ugly brawl.",
     "likelihood": 1
     }
                 }
