@@ -41931,33 +41931,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12811,
-        "fields": {
-            "answer": 36005.5,
-            "candidate": 77,
-            "answer_feedback": "While you speak confidently about America's resolve to make the world a better place for future generations, Pat Buchanan rants about the U.S. being a ''debtor nation'' and a ''nation in decline.'' What a loon."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12815,
-        "fields": {
-            "answer": 36006.5,
-            "candidate": 77,
-            "answer_feedback": "The debate was apparently a resounding success, drawing in hundreds of thousands of viewers. The turning point that truly secured your victory was when you emphasized how Buchanan's policies would drag the country backward."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12819,
-        "fields": {
-            "answer": 36007.5,
-            "candidate": 77,
-            "answer_feedback": "The excuse of not getting much sleep the night before doesn’t cut it; Buchanan had time to rehearse, while you seemed off balance and lost your flow. And with the polls shifting in his favor, it’s clear things aren’t going your way."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 1272219,
         "fields": {
             "answer": 45002.5,
@@ -46388,6 +46361,33 @@ if (e.question_number+1 == 16){
         }
         }
         }
+        if (e.question_number+1 == 31 && BuchananNom == 1){
+            if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
+                question_insert("campaign_3_buchanan", 
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "debate_buchanan_alt",
+                        "fields": {
+                            "priority": 0,
+                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
+                            "likelihood": 1
+                        }
+                    }
+                    );
+            } else {
+                question_insert("campaign_3_buchanan", 
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "debate_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
+                            "likelihood": 1
+                        }
+                    }
+                    );
+            }
+        }
         if (e.question_number+1 == 23){
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     bushMentum();
@@ -46854,31 +46854,6 @@ if (e.question_number+1 == 16){
                                 }
                             }
                             );
-                            if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
-                                question_insert("campaign_3_buchanan", 
-                                    {
-                                        "model": "campaign_trail.question",
-                                        "pk": "debate_buchanan_alt",
-                                        "fields": {
-                                            "priority": 0,
-                                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
-                                            "likelihood": 1
-                                        }
-                                    }
-                                    );
-                            } else {
-                                question_insert("campaign_3_buchanan", 
-                                    {
-                                        "model": "campaign_trail.question",
-                                        "pk": "debate_buchanan",
-                                        "fields": {
-                                            "priority": 0,
-                                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
-                                            "likelihood": 1
-                                        }
-                                    }
-                                    );
-                            }
                         // Gramm Inserters 
                         
                      } else if (MassiveGOPMajority == 1) {
