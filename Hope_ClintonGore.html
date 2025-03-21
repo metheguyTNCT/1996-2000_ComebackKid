@@ -46090,73 +46090,6 @@ function adjustFeedbackBox(width, height) {
 
 adjustFeedbackBox(57,69);
 
-// Listen for user input
-document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {
-        let input = prompt("Enter a cheat code:");
-        if (input && input.toLowerCase() === 'clinton') {
-            campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/kEhb9nL.png';
-
-        } if (input && input.toLowerCase() === 'gore') {
-            campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/k1DDlsQ.png';
-        } if (input && input.toLowerCase() === 'sax' || input && input.toLowerCase() === 'saxophone' ) {
-            campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/mz5Mgeu.png';
-        
-        } if (input && input.toLowerCase() === '1996' || input && input.toLowerCase() === '96') {
-            customStyling.innerHTML = `
-#campaign_sign {
-    background-image: url("https://i.imgur.com/p0LhGJX.png");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 54%;
-  position: relative;
-  clear: both;
-}
-`;
-
-        }
-    }
-});
-
 campaignTrail_temp.jet_data = [{
     "banner_enabled": true,
     "banner_data": {
@@ -46923,7 +46856,7 @@ if (e.question_number+1 == 27) {
             "likelihood": 1
         }
 	}
-    if (Ideology >= 1 && Ideology <= 5 || Ideology >= 6 && Ideology <= 13) {
+    if (Ideology >= 1) {
     if (FPWin >= 4) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_dean_goodpell_decenthillary);
@@ -47067,7 +47000,7 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_hw_commies",dnc_bayh_badpell_badhillary);
     }
     }
-} else if (Ideology >= -10 && Ideology <= -6) {
+} else if (Ideology <= -10) {
     if (FPWin >= 4) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_landrieu_goodpell_decenthillary);
@@ -48549,7 +48482,7 @@ if (e.question_number+1 == 19){
         }
         );
     } 
-                        } else if (Ideology >= 1 && Ideology <= 5 || Ideology >= 6 && Ideology <= 13) {
+                        } else if (Ideology >= 1) {
                           // Buchanan Inserters
                           if (SlimGOPCongress == 1) {
                             patMentum();
@@ -48734,7 +48667,7 @@ if (e.question_number+1 == 19){
             }
                         }
                   //Specter Inserters
-                        } else if (Ideology >= -10 && Ideology <= -6){
+                        } else if (Ideology <= -10){
                         if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
                             specterMentum();
                         question_insert("question_20_internet", 
@@ -50177,15 +50110,7 @@ function macBackground() {
 
     // Add click event to trigger Minesweeper window
     minsweeperPic.addEventListener('click', openMinesweeper);
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        let input = prompt("Enter a cheat code:");
-        if (input && input.toLowerCase() === 'clinton') {
-            bgContainer.style.backgroundImage = 'url(https://i.imgur.com/X19HxxR.png)'; // Replace with a new image URL
-            
-        }
-    }
-});
+    
     // Create a checkbox for sound settings
     let soundContainer = document.createElement('div');
     soundContainer.style.position = 'absolute';
@@ -50570,7 +50495,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Moderate";
 } else if (Ideology >= -5 && Ideology <= -1) {
     ideologyText.textContent = "Third Way";
-} else if (Ideology >= -10 && Ideology <= -6) {
+} else if (Ideology <= -10) {
     ideologyText.textContent = "Blue Dog";
 } else if (Ideology >= 1 && Ideology <= 5) {
     ideologyText.textContent = "New Deal Democrat";
