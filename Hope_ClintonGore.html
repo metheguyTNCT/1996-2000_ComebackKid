@@ -46617,7 +46617,7 @@ cyoAdventure = function(a) {
                 "pk": "budget_1_reich",
                 "fields": {
                     "priority": 0,
-                    "description": "When it began to look like you where becoming one of those \"tax and spend\" Democrats, the shields of the Republican party and deficit hawks were raised very high and strong. To make anything like this come to pass, you'll have to use some \"voodoo magic\" as Gore said. People are calling way too ambitious and decried as going against basic economics. Yet, you have to get through it.",
+                    "description": "When it began to look like you were becoming one of those ''tax and spend'' Democrats, the shields of the Republican Party and deficit hawks were raised high and strong. To make anything like this come to pass, you'll have to use some ''voodoo magic,'' as Gore said. People are calling it way too ambitious and decrying it as going against basic economics. Yet, you have to get through it",
                     "likelihood": 1
                 }
             }
@@ -46629,7 +46629,7 @@ cyoAdventure = function(a) {
                 "pk": "budget_1_bentsen",
                 "fields": {
                     "priority": 0,
-                    "description": "As soon has you began to speak of large cuts and balancing the budget, people could hear the chainsaw being revved up. Bentsen's grin shining as clear as day, he's planning to reach equilibrium by 1998. However, people are beginning to get cold feet as some of those cuts with tax hike may actually be too great and depress our rebounding growth. Still, who are we to give such debt to future generation?",
+                    "description": "As soon as you began to speak of large cuts and balancing the budget, people could hear the chainsaw being revved up. Bentsen's grin, shining as clear as a Texas day, signals his plan to reach equilibrium by 1998. However, people are beginning to get cold feet, as some of those cuts, combined with tax hikes, may actually be too great and depress our rebounding growth. Still, who are we to pass such debt on to future generations?",
                     "likelihood": 1
                 }
             }
@@ -46641,7 +46641,7 @@ cyoAdventure = function(a) {
                 "pk": "budget_1_normal",
                 "fields": {
                     "priority": 0,
-                    "description": "As soon as you spoke of plans to have the deficit divided by the end of your term, everyone dreamt up plans on just how to go about it. Most Republicans despise the prospect of raising taxes on the rich and many in our own party a considering the energy tax hike and tax cuts to be too ambitions. It's supposed to be something that will please everyone and yet, everyone is gritting their teeth.",
+                    "description": "As soon as you spoke of plans to have the deficit divided by the end of your term, everyone dreamt up their own plans on just how to go about it. Most Republicans despise the prospect of raising taxes on the rich, and many in our own party are considering the energy tax hike and tax cuts to be too ambitious. It's supposed to be something that will please everyone, and yet, everyone is gritting their teeth.",
                     "likelihood": 1
                 }
             }
@@ -46650,6 +46650,9 @@ cyoAdventure = function(a) {
     }
     if (e.question_number+1 == 23) {
     if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
+        ctsAchievement("Deficit Hawk");
+        PublicSupport += 2
+        Legacy += 2;
         question_insert("question_16_monica", 
             {
                 "model": "campaign_trail.question",
@@ -47393,6 +47396,7 @@ console.log(LEGWin)
     if (ans == 88017.5){
     PublicSupport += 2;
     LEGWin += 1;
+    ctsAchievement("No Lie");
     }
     if (ans == 88018.5){
     PublicSupport += 1;
@@ -47407,11 +47411,14 @@ console.log(LEGWin)
     if (ans == 88020.5){
     PublicSupport -= 3;
     LEGWin -= 1;
+    ctsAchievement("Chainsaw Man");
+    Legacy -= 3
     }
     if (ans == 88021.5){
     PublicSupport += 3;
     Ideology += 3;
     LEGWin += 1;
+    ctsAchievement("Renewal");
     }
     if (ans == 88022.5){
     PublicSupport -= 3;
