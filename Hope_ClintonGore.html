@@ -4708,7 +4708,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88012.5,
         "fields": {
             "question": "budget_2",
-            "description": "What the tragedy at the World Trade Center has shown is that our current modicum of war is outdated. Today, forces wishing to break the liberal order would rather use terrorism and forms of warfare that cannot be countered by nukes and tanks. We should not so much cut everything as rework it into an arm that would help us avoid such a tragedy coming again."
+            "description":  "What the tragedy at the World Trade Center has shown is that our current modicum of war is outdated. Today, forces wishing to break the liberal order would rather use terrorism and forms of warfare that cannot be countered by nukes and tanks. We should not so much cut everything as rework it into an arm that would help us avoid such a tragedy coming again."
         }
     },
     {
@@ -21914,16 +21914,6 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
-        "pk": 12761,
-        "fields": {
-            "answer": 88010.5,
-            "issue": 30,
-            "issue_score": 0.5,
-            "issue_importance": 2
-        }
-    },
-    {
         "model": "campaign_trail.answer_score_issue",
         "pk": 12770,
         "fields": {
@@ -22081,6 +22071,16 @@ campaignTrail_temp.answer_score_issue_json = [
              "issue": 28,
              "issue_score": -0.01,
              "issue_importance": 1
+         }
+     },
+    {
+ 	"model": "campaign_trail.answer_score_issue",
+         "pk": 12761,
+         "fields": {
+             "answer": 88010.5,
+             "issue": 30,
+             "issue_score": 0.5,
+             "issue_importance": 2
          }
      },
 ]
@@ -46960,7 +46960,7 @@ else if (PublicSupport >= 15 && e.player_answers.includes(75001.5)) { PublicSupp
     question_insert("question_10_foreign_intervention",fail_healthcare_vote_temp);
 }
 }
-if (e.question_number+1 == 27) {
+if (e.question_number+1 == 28) {
 	let dnc_dean_badpell_badhillary = {
         "model": "campaign_trail.question",
         "pk": "dnc_dean_badpell_badhillary",
@@ -47341,7 +47341,7 @@ if (e.question_number+1 == 27) {
     }
 }
 }
-if (e.question_number+1 == 28) {
+if (e.question_number+1 == 29) {
 	let doma_normal = {
 		 "model": "campaign_trail.question",
         "pk": "question_18_defense_of_marriage",
@@ -47430,7 +47430,7 @@ if (e.question_number+1 == 28) {
         question_insert("dnc_landrieu_goodpell_goodhillary",doma_normal);
 }
 }
-     if (e.question_number+1 == 29){
+     if (e.question_number+1 == 30){
     let ques_19_alt = {
   "model": "campaign_trail.question",
         "pk": "question_19_alt",
