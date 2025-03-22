@@ -1329,6 +1329,16 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_9_altnafta",
+        "fields": {
+            "priority": 0,
+            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+            "likelihood": 1
+        }
+    }
+    
 ]
 
 campaignTrail_temp.answers_json = [
@@ -47234,8 +47244,8 @@ cyoAdventure = function(a) {
         );
         
     }
-   
-    if (ans == 10003) {
+    if (e.question_number+1 == 15) {
+    if (e.player_answers.includes(10003)) {
         setTimeout(() => {
             if (!cnnContent) {
                 console.error("cnnContent not initialized yet.");
@@ -47263,9 +47273,7 @@ cyoAdventure = function(a) {
                 "likelihood": 1
             }
         });
-    }
-    
-    if (ans == 10001) {
+    } else {
         setTimeout(() => {
             if (!cnnContent) {
                 console.error("cnnContent not initialized yet.");
@@ -47294,67 +47302,7 @@ cyoAdventure = function(a) {
             }
         });
     }
-    
-    if (ans == 10002) {
-        IRLScore += 1;
-        setTimeout(() => {
-            if (!cnnContent) {
-                console.error("cnnContent not initialized yet.");
-                return;
-            }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  
-            updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-        }, 1000);
-    
-        question_insert("question_9_nafta", {
-            "model": "campaign_trail.question",
-            "pk": "insert_yeltsin_unfriendly",
-            "fields": {
-                "priority": 2,
-                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-                "likelihood": 1
-            }
-        });
-        question_insert("question_9_altnafta", {
-            "model": "campaign_trail.question",
-            "pk": "insert_yeltsin_unfriendly",
-            "fields": {
-                "priority": 2,
-                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-                "likelihood": 1
-            }
-        });
-    }
-    
-    if (ans == 10004) {
-        setTimeout(() => {
-            if (!cnnContent) {
-                console.error("cnnContent not initialized yet.");
-                return;
-            }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  
-            updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-        }, 1000);
-    
-        question_insert("question_9_nafta", {
-            "model": "campaign_trail.question",
-            "pk": "insert_yeltsin_unfriendly",
-            "fields": {
-                "priority": 2,
-                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-                "likelihood": 1
-            }
-        });
-        question_insert("question_9_altnafta", {
-            "model": "campaign_trail.question",
-            "pk": "insert_yeltsin_unfriendly",
-            "fields": {
-                "priority": 2,
-                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
-                "likelihood": 1
-            }
-        });
-    }    
+}
     if (e.question_number+1 == 11) {
     if (LEGWin >= 1) {
     question_insert("question_8_somalia", 
@@ -50964,7 +50912,7 @@ changePlaylist(doleWin);
                 <p>⭐ 6/10 A rare dud for classic Family Guy<br><br>This is another political episode, pre-American Dad, before Seth really found his kind of niche. The results are really hamfisted, and like all episodes with Mayor Pat before they replaced him with Mayor Carradine, this one is a bit of a slog.<br><br>It’s a shame, because the concept is funny. Peter, angry that Steve successfully petitioned for a tax hike, declares that he’s defecting from the United States. We get some good gags about Peter going to the UN until he meets Russian Ambassador Igor Ivanov, who tells him if he wants respect he should invade a country. This is an eye rolling reference, of course, to the 1998 invasion of Georgia. But that’s not all; when Peter ‘’annexes’’ his neighbour Joe’s pool, the plot becomes all about Mayor Pat’s efforts to protect Peter from the UN and NATO.<br><br>GET IT! ISN’T IT FUNNY HOW BUCHANAN IS TREATING THIS SWIMMING POOL LIKE GEORGIA! This was dated in 1999, and looking back it’s even more dated. I don’t like American Dad much, but Family Guy got so much better when Seth got to whine about politics there and keep Family Guy about the gags.<br><br>Still, I did chuckle at the ending. Peter and Pat, on trial for warcrimes, being sentenced to a week of prison before coming back for another week of hijinks is just a perfect level of silliness.</p>`)
         e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/LvAxveu.png'})])
         e.pages.push(`<span style="font-size: 32px; text-decoration: underline;">2008 This Land</span><br><br><img src=https://i.imgur.com/xMqoFoc.png><p>JibJab.com - This Land<br>7,769,879 views                                  40k 👍 4.4k 👎<br><br>In our first satire since President Kerry and Senator Lott starred in On Our Way To DC, we sadly say goodbye to President Kerry - but don’t cry, at least we get to keep Veep Joe Biden! And with him and Wesley Clark ready to battle Representative Ron Paul and Governor Mike Huckabee, we thought it was only right we give them a proper JibJab spanking!</p>`)
-        e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/H30JfNy.png'})])
+         e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/H30JfNy.png'})])
         } else if (CommieReturn == 1) {
             e.pages.push(`<span style="font-size: 32px; text-decoration: underline;">White House Press briefing, 07/12/1998</span><br><br>
                 <p>KEYES: Alright, the White House is extremely busy addressing global developments, so I’m hoping to keep this brief. Yes, the President is supporting Georgia with arms. We don’t believe that feet on the ground will be required, but we’re willing to keep anything on the table. Talks with Finland, Czechia, Poland and Hungary are progressing well but of course we can't go into details on that. Uh,yes, you for CNN.<br><br>BLITZER: Is there any truth to the rumors that Ukraine is interested in joining NATO?<br><br>KEYES: Well I haven’t spoken with Mr. Kuchma. Ukraine has that declaration of sovereignty thing that says they can’t join power blocs or establish itself as a nuclear power, so if they want in they need to change that. You, NBC.<br><br>WALLACE: Has Prime Minister Blair confirmed his stance on possible NATO intervention?<br><br>KEYES: Well, the President made his case for this being defensive. If the Prime Minister doesn’t want to see reason, then that’s on him. Anyone else? No, not you. We have too many things to do than bicker with lying news like ABC. You, from Limbaugh.<br><br>SNOW: While what Russia is doing in Georgia is unconscionable, isn’t so much support for the state a betrayal of America First values?<br><br>KEYES: Of course not. That’s ridiculous. America First means we look out for America, and America is a christian nation. We have a duty and obligation to stand up Godlessness wherever it is. Frankly if you’re opposed to stopping communism, then you’re America Last.</p>`)
