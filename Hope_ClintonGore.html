@@ -47246,14 +47246,6 @@ cyoAdventure = function(a) {
     }
     if (e.question_number+1 == 15) {
     if (e.player_answers.includes(10003)) {
-        setTimeout(() => {
-            if (!cnnContent) {
-                console.error("cnnContent not initialized yet.");
-                return;
-            }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  
-            updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-        }, 1000);
     
         question_insert("question_9_nafta", {
             "model": "campaign_trail.question",
@@ -47274,14 +47266,6 @@ cyoAdventure = function(a) {
             }
         });
     } else {
-        setTimeout(() => {
-            if (!cnnContent) {
-                console.error("cnnContent not initialized yet.");
-                return;
-            }
-            updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  
-            updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-        }, 1000);
     
         question_insert("question_9_nafta", {
             "model": "campaign_trail.question",
@@ -48274,6 +48258,23 @@ if (e.question_number+1 == 29) {
     }
 }
 console.log(LEGWin)
+// Inauguration CYOA
+if (ans == 10001) {
+    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  
+    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");
+}
+if (ans == 10002) {
+    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  
+    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
+}
+if (ans == 10003) {
+    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  
+    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png"); 
+}
+if (ans == 10004) {
+    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  
+    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
+}
 //WTC Bombing CYOA
    if (ans ==  20001){
    PublicSupport += 2;
