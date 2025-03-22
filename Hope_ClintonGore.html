@@ -47648,6 +47648,18 @@ cyoAdventure = function(a) {
                     }
                 }
             );
+     if (ReichPoints >= 3) {
+        question_insert("question_8_somalia", 
+                {
+                    "model": "campaign_trail.question",
+                    "pk": "question_9_altnafta",
+                    "fields": {
+                        "priority": 0,
+                        "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+                        "likelihood": 1
+                    }
+                }
+            );
         } else if (SlimGOPCongress == 1) {
         question_insert("question_14_oklahoma_bombing", 
         {
