@@ -1600,7 +1600,7 @@ campaignTrail_temp.answers_json = [
 	"model": "campaign_trail.answer",
         "pk": 90001,
         "fields": {
-            "question": "alternativenafta",
+            "question": "question_9_altnafta",
             "description": "My fellow Americans, the fall of the Berlin Wall showed us that no society can resist the winds of change. Our only choice is to embrace it and create tomorrow's jobs. NAFTA will create 200,000 jobs in two years and a million in five. These export-driven jobs pay better, and while some will be lost, the net result will be growth -- helping us lead and compete on the world stage."
         }
     },
@@ -1608,7 +1608,7 @@ campaignTrail_temp.answers_json = [
 	"model": "campaign_trail.answer",
         "pk": 900015551,
         "fields": {
-            "question": "alternativenafta",
+            "question": "question_9_altnafta",
             "description": "Whoa, not so fast. I want NAFTA to work for the American worker, not just for multinational corporations and monopoly men. I want to go back to the table and secure a strong set of eight side agreements, for labor, the environment, and basic fairness. Then we’ll get it approved by the Senate and hold a signing ceremony. Preferably in that order. Call it the NAFTA Bill of Rights, if you like."
         }
     },
@@ -47460,19 +47460,6 @@ cyoAdventure = function(a) {
                 }
             }
         );
-} else if (e.player_answers.includes(80001.5) || e.player_answers.includes(80002.5)) || e.player_answers.includes(80003.5)) || e.player_answers.includes(80004.5)) {
-        if (ReichPoints >= 3) {
-        question_insert("insert_yeltsin_friendly", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "alternativenafta",
-                "fields": {
-                    "priority": 0,
-                    "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
-                    "likelihood": 1
-                }
-            }
-        );
         question_insert("insert_yeltsin_unfriendly", 
             {
                 "model": "campaign_trail.question",
@@ -48741,6 +48728,18 @@ PublicSupport += 1;
     if (ans == 240001){
     PublicSupport += 2;
     Ideology += 1;
+    }
+    if (ReichPoints >= 3) {
+      // HELL HAPPENS TWENTY TWO
+      campaignTrail_temp.questions_json[15] = {
+        "model": "campaign_trail.question",
+        "pk": 900015551,
+        "fields": {
+          "priority": 1,
+          "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+          "likelihood": 1
+        }
+      }
     }
     if (ans == 240002){
     PublicSupport -= 1;
