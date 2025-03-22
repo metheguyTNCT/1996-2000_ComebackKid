@@ -169,15 +169,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_9_nafta",
-        "fields": {
-            "priority": 2,
-            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "question_10_foreign_intervention",
         "fields": {
             "priority": 3,
@@ -1326,6 +1317,15 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "As people begin to look at the numbers, they appear staggering over the past four years. The deficit has always been down, down, down, and down. And suddenly, you cannot quite believe it -- you see, for the first time, green numbers next to the chart as it crosses the line back into positive. 1996 is predicted to be a budget surplus!",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_9_nafta",
+        "fields": {
+            "priority": 2,
+            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
             "likelihood": 1
         }
     },
@@ -47254,6 +47254,15 @@ cyoAdventure = function(a) {
                 "likelihood": 1
             }
         });
+        question_insert("question_9_altnafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_friendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations? ",
+                "likelihood": 1
+            }
+        });
     }
     
     if (ans == 10001) {
@@ -47267,6 +47276,15 @@ cyoAdventure = function(a) {
         }, 1000);
     
         question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
+            }
+        });
+        question_insert("question_9_altnafta", {
             "model": "campaign_trail.question",
             "pk": "insert_yeltsin_unfriendly",
             "fields": {
@@ -47297,6 +47315,15 @@ cyoAdventure = function(a) {
                 "likelihood": 1
             }
         });
+        question_insert("question_9_altnafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
+            }
+        });
     }
     
     if (ans == 10004) {
@@ -47310,6 +47337,15 @@ cyoAdventure = function(a) {
         }, 1000);
     
         question_insert("question_9_nafta", {
+            "model": "campaign_trail.question",
+            "pk": "insert_yeltsin_unfriendly",
+            "fields": {
+                "priority": 2,
+                "description": "Just a few years ago, the U.S. and Russia were mortal enemies, teetering on the edge of mutual destruction. Now, at what some are calling ''the End of History,'' your relationship with Boris Yeltsin is so close that both critics and supporters liken it to a love affair. Standing here in the Kremlin, what will you prioritize in these negotiations?",
+                "likelihood": 1
+            }
+        });
+        question_insert("question_9_altnafta", {
             "model": "campaign_trail.question",
             "pk": "insert_yeltsin_unfriendly",
             "fields": {
@@ -47345,6 +47381,33 @@ cyoAdventure = function(a) {
     }
     );
     }
+    }
+    if (e.question_number+1 == 14) {
+        if (ReichPoints >= 3) {
+            question_insert("budget_3",  
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "question_9_altnafta",
+                        "fields": {
+                            "priority": 0,
+                            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+                            "likelihood": 1
+                        }
+                    }
+                );
+            } else {
+                        question_insert("budget_3",  
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "question_9_nafta",
+                        "fields": {
+                            "priority": 2,
+                            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+                            "likelihood": 1
+                        }
+                    }
+                );
+            }
     }
     if (e.question_number+1 == 16) {
     if (e.player_answers.includes(30003)) {
@@ -47644,18 +47707,6 @@ cyoAdventure = function(a) {
                     "fields": {
                         "priority": 0,
                         "description": "With the total control of both legislative branches, Gingrich is able to simply power through anything he want and overrule any veto you may bring. Once elected as a symbol of youth and change, you now find yourself politically defanged, some are even calling you a lame duck. What can you do now, as the Republicans prepare to dismantle everything that ever helped the people?",
-                        "likelihood": 1
-                    }
-                }
-            );
-        } else if (ReichPoints >= 3) {
-        question_insert("question_8_somalia",  
-                {
-                    "model": "campaign_trail.question",
-                    "pk": "question_9_altnafta",
-                    "fields": {
-                        "priority": 0,
-                        "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
                         "likelihood": 1
                     }
                 }
