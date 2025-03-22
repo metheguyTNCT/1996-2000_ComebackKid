@@ -9852,7 +9852,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 90001,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.06911191919751575
+            "global_multiplier": 0.0751
         }
     },
     {
@@ -22850,7 +22850,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 195,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0569
+            "state_multiplier": -0.0513
         }
     },
     {
@@ -23675,7 +23675,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.18175
+            "state_multiplier": -0.174975
         }
     },
     {
@@ -48760,18 +48760,6 @@ PublicSupport += 1;
     if (ans == 240001){
     PublicSupport += 2;
     Ideology += 1;
-    }
-    if (ReichPoints >= 3) {
-      // HELL HAPPENS TWENTY TWO
-      campaignTrail_temp.questions_json[15] = {
-        "model": "campaign_trail.question",
-        "pk": 900015551,
-        "fields": {
-          "priority": 1,
-          "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
-          "likelihood": 1
-        }
-      }
     }
     if (ans == 240002){
     PublicSupport -= 1;
