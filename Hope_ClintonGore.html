@@ -50236,6 +50236,7 @@ if (e.question_number+1 == 19){
      } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
+	    if (e.player_answers.includes(88005.5)) {
                 doleMentum();
                   question_insert("question_20_internet", 
                   {
@@ -50284,6 +50285,67 @@ if (e.question_number+1 == 19){
       }
       );
        question_insert("campaign_3_dole", 
+      {
+                 "model": "campaign_trail.question",
+      "pk": "debate_dole",
+      "fields": {
+          "priority": 0,
+          "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+          "likelihood": 1
+      }
+      }
+      );
+      } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
+            // SECRET SONNY BONO PATH. DONT TELL AGREEABLE.
+            if (RepublicanRevolution == 1)  {
+                bonoMentum();
+                  question_insert("question_20_internet", 
+                  {
+                     
+      "model": "campaign_trail.question",
+      "pk": "candidate_intro_bono",
+      "fields": {
+      "priority": 0,
+      "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts railing against the ''unfair, unfit, and unworkable'' tax system, particularly slamming the ''barbaric'' carbon tax. You can’t believe that people actually fell for this bullshit. Now it's time to start plotting. ",
+      "likelihood": 1
+      }
+                      }
+                  
+                  );
+                  question_insert("question_21_iraq_airstrikes", 
+      {
+                 "model": "campaign_trail.question",
+            "pk": "campaign_1_bono",
+            "fields": {
+                "priority": 0,
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
+                "likelihood": 1
+            }
+      }
+      );
+                    question_insert("campaign_1_bono", 
+      {
+            "model": "campaign_trail.question",
+            "pk": "campaign_2_bono",
+            "fields": {
+                "priority": 0,
+                "description": "The rise of Sonny Bono was nominally on the back of your carbon tax, but it doesn't take an expert to see he's tapping into a much deeper conservative discontent. Your campaign has assembled document after document targeting his scandals and inconsistencies -- most of them already tried by his Republican opponents during the bitter primary race. How do you want to stop this guy?",
+                "likelihood": 1
+            }
+      }
+      );
+                      question_insert("campaign_2_bono", 
+      {
+            "model": "campaign_trail.question",
+            "pk": "campaign_3_bono",
+            "fields": {
+                "priority": 0,
+                "description": "You’ve talked about the issues that affect the nation more widely, but you shouldn't forget the work needed on the states that will decide us the election. Whatever Dole’s gonna to do, you’ll have to strike your own where it matters.",
+                "likelihood": 1
+            }
+      }
+      );
+       question_insert("campaign_3_bono", 
       {
                  "model": "campaign_trail.question",
       "pk": "debate_dole",
