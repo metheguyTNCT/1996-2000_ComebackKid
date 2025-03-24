@@ -50716,7 +50716,8 @@ PublicSupport += 1;
     }
     if (ans == 89026.5) {
     PublicSupport += 2;
-    Legacy += 2;   
+    Legacy += 2;  
+    ctsAchievement("Shir LaShalom"); 
     }
     //State of the Union Adress CYOA
     if (ans == 220002){
@@ -52979,6 +52980,35 @@ e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.p
   );
 powellLoss.addSong(powellLossSong);
 changePlaylist(powellLoss);
+// Beat Bono
+} else if (quickstats[0] >= 270 && quickstats[0] <= 449 && BonoNom == 1) {
+    ctsAchievement("Laugh");
+  e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS CONGRESSMAN BONO</h3>
+          <p>And so, another one bites the dust. At the Excelsior Hotel, victory felt just as good the second time around. You could have hoped for even more blue states showing on that screen, but you didn't have to stay all night biting your nails to grasp your victory. There had been a few doubts on you winning the election, now the hopes are that that victory will also translate to a victory downballot. <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding a Gulf War grifter who had no legs of his own to stand on to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> The general held a post-election meeting as split as the coalition that supported his candidacy. There were all sorts of corners of the GOP present, the near fanatical supporters who tried to blame Powell's loss on anything between Don Nickles and racism, the moderates in the party, who were never really sold on him to begin with, and some particularly vile far-right nuts calling him a baby killer that had to be escorted out. He kept his calm to the end before leaving with dignity, his job remaining yet unfinished.<br><br>The call was to the point, he assured you that he held no grudge in defeat and that he will continue to serve the nation and it's Commander-in-Chief faithfully. During the call, he brought something up that he'd never said in public, simply out of annoyance of hearing the word "race card." He thought all people of color had a good place to be in the nation, however there remains people that would only like to see them gone. The gap of color in the nation has not fully healed, and simple excellence won't ever satisfy those that simply refuse that you should exist. He asked you if you could make a vow, to support those in this country who don't have a voice. You say yes of course, and the call ends, both of you on good terms.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
+          `)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/Ozw7NUV.gif'})])
+e.pages.push(`<h3>PRESIDENT DOLE TO NOT RUN FOR REELECTION</h3>
+              <p> To nobody’s surprise, the oldest man ever elected president announced earlier today he would not seek a 2nd term, seeing as he would be an unprecedented 81 years old at the end of it. Dole’s term has been mediocre at best, currently sitting at a 46% approval rating. During his term, he passed the Tax Code Reform Act of 1997, which simplified tax codes while also providing a tax cut to middle class Americans.<br><br>Although he wasn’t Clinton-Gingrich level of relationship with Congress, they haven’t agreed on everything, mostly due to his push for entitlement reform, and Democrats in congress showed increased resistance and hostility towards President Dole’s attempts at welfare reform. The economy has made significant gains, and many consider Dole’s leadership ''steady yet boring.'' VP Kemp has began his own campaign for the White House, but is sure to face a heavy contest in the primaries, with big Republicans like Jeb Bush, John McCain, Steve Forbes and others heading potential competition.<br></p><br></p>`)
+    //e.image = ""
+    e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/S5hJzZZ.png'})])
+    e.pages.push(`<h3>Yes She Can: Why Hillary Clinton Will in the 2000 Election.</h3>
+          <p> While Bill’s been enjoying his retirement, Hillary has been working hard to fight for you and me. Ever since she won the NY Senate race two years back, she’s been one of the most active Senators on Capitol Hill. She’s opposed President Dole every step of the way, including being the loudest voice against his failed welfare reforms, and spearheading the Democratic gains in the midterms.<br><br>You see, Hillary isn’t like your average First Lady, she’s determined, she’s focused, she’s a fighter, and she thinks outside of the box. Even though she’s only been a Senator for two years, she already has what it takes to become our Commander-In-Chief, especially compared to the ineffective leadership we’ve seen under our current POTUS, who is thankfully not running again.<br><br>She also understands that the tech boom was the backbone of our economic recovery, and promises to keep investing in newer and brighter resources.<br><br>When Hillary runs for the Democratic Nomination, support her as much as you can, go from door to door getting people registered to make history. A vote for Hillary is a vote for diversity, leadership and history.<br></p> - Robert J. Winkle<br></p><br></p>`)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/3ePA2rt.png'})])
+e.pages.push(`<h3>Bob Dole was, in fact, President</h3>
+     <p>wow.<br><br>I wonder what the folks in the 20s think about that<br></p><br></p>`)
+e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+    const bonoLoss = new Playlist();
+  const bonoLossSong = new Song(
+    "The Shoop Shoop Song (It’s in His Kiss)",
+    "Cher",
+    "https://audio.jukehost.co.uk/UijGZVkARZxEnJFtTUCBF2IeTxNH9B2d"
+  );
+bonoLoss.addSong(bonoLossSong);
+changePlaylist(bonoLoss);
 //Beat Bush
 } else if (quickstats[0] >= 270 && quickstats[0] <= 449 && BushNom == 1) {
   e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS BUSH AGAIN</h3>
@@ -53268,6 +53298,35 @@ changePlaylist(forbesLoss);
     );
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
+        //Blowout Colin Powell
+} else if (quickstats[0] >= 450 && quickstats[0] <= 537 && BonoNom == 1) {
+    ctsAchievement("Laugh");
+    e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS CONGRESSMAN BONO</h3>
+          <p>There was an expectation it would take at least a few hours for the results to trickle in and for you to be elected. You knew you had done a great campaign, your opponent always on the backfoot. However, you didn't expect the result to be called for you in less than an hour! Not everyone had even the time to come before people where already celebrating. A sea of blue, states that Republicans thought to be their safe havens since Nixon switching back to you. Maybe it will be enough to gain some control back of Congress. If this don't, nothing will after all! <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding a Gulf War grifter who had no legs of his own to stand on to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> The general held a post-election meeting as split as the coalition that supported his candidacy. Still, the mood was clear, ranging from disapointment to outright hate. He had everything to vainquish that hated president, over-promised and under-delivered. The hero of Iraq became a pariah. He would carry on his words under constant insults before finally vacating the premises.<br><br>The call was to the point, he assured you that he held no grudge in defeat and that he will continue to serve the nation and it's Commander-in-Chief faithfully. During the call, he brought something up that he'd never said in public, simply out of annoyance of hearing the word "race card." He thought all people of color had a good place to be in the nation, however there remains people that would only like to see them gone. The gap of color in the nation has not fully healed, and simple excellence won't ever satisfy those that simply refuse that you should exist. He asked you if you could make a vow, to support those in this country who don't have a voice. You say yes of course, and the call ends, both of you on good terms.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
+          `)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/Ozw7NUV.gif'})])
+  e.pages.push(`<h3>PRESIDENT DOLE TO NOT RUN FOR REELECTION</h3>
+                <p> To nobody’s surprise, the oldest man ever elected president announced earlier today he would not seek a 2nd term, seeing as he would be an unprecedented 81 years old at the end of it. Dole’s term has been mediocre at best, currently sitting at a 46% approval rating. During his term, he passed the Tax Code Reform Act of 1997, which simplified tax codes while also providing a tax cut to middle class Americans.<br><br>Although he wasn’t Clinton-Gingrich level of relationship with Congress, they haven’t agreed on everything, mostly due to his push for entitlement reform, and Democrats in congress showed increased resistance and hostility towards President Dole’s attempts at welfare reform. The economy has made significant gains, and many consider Dole’s leadership ''steady yet boring.'' VP Kemp has began his own campaign for the White House, but is sure to face a heavy contest in the primaries, with big Republicans like Jeb Bush, John McCain, Steve Forbes and others heading potential competition.<br></p><br></p>`)
+      //e.image = ""
+      e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/S5hJzZZ.png'})])
+      e.pages.push(`<h3>Yes She Can: Why Hillary Clinton Will in the 2000 Election.</h3>
+            <p> While Bill’s been enjoying his retirement, Hillary has been working hard to fight for you and me. Ever since she won the NY Senate race two years back, she’s been one of the most active Senators on Capitol Hill. She’s opposed President Dole every step of the way, including being the loudest voice against his failed welfare reforms, and spearheading the Democratic gains in the midterms.<br><br>You see, Hillary isn’t like your average First Lady, she’s determined, she’s focused, she’s a fighter, and she thinks outside of the box. Even though she’s only been a Senator for two years, she already has what it takes to become our Commander-In-Chief, especially compared to the ineffective leadership we’ve seen under our current POTUS, who is thankfully not running again.<br><br>She also understands that the tech boom was the backbone of our economic recovery, and promises to keep investing in newer and brighter resources.<br><br>When Hillary runs for the Democratic Nomination, support her as much as you can, go from door to door getting people registered to make history. A vote for Hillary is a vote for diversity, leadership and history.<br></p> - Robert J. Winkle<br></p><br></p>`)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/3ePA2rt.png'})])
+  e.pages.push(`<h3>Bob Dole was, in fact, President</h3>
+       <p>wow.<br><br>I wonder what the folks in the 20s think about that<br></p><br></p>`)
+  e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+      const ClintonBlowout = new Playlist();
+    const ClintonBlowoutSong = new Song(
+      "Macarena",
+      "Los Del Rio",
+      "https://audio.jukehost.co.uk/dZTZX8Z6AU5XAnHk8M3AGyIVMJPrPdRs"
+    );
+  ClintonBlowout.addSong(ClintonBlowoutSong);
+  changePlaylist(ClintonBlowout);
         //Blowout George Bush
 } else if (quickstats[0] >= 450 && quickstats[0] <= 537 && BushNom == 1) {
     e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GEORGE BUSH AGAIN</h3>
@@ -53520,6 +53579,34 @@ changePlaylist(forbesLoss);
       );
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
+        //538 Sonny Bono
+} else if (quickstats[0] == 538 && BonoNom == 1) {
+    ctsAchievement("Laugh");
+    e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS CONGRESSMAN BONO</h3>
+            <p>If you see this, you beat Colin Powell in a landslide!<br></p>`)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/Ozw7NUV.gif'})])
+  e.pages.push(`<h3>PRESIDENT DOLE TO NOT RUN FOR REELECTION</h3>
+                <p> To nobody’s surprise, the oldest man ever elected president announced earlier today he would not seek a 2nd term, seeing as he would be an unprecedented 81 years old at the end of it. Dole’s term has been mediocre at best, currently sitting at a 46% approval rating. During his term, he passed the Tax Code Reform Act of 1997, which simplified tax codes while also providing a tax cut to middle class Americans.<br><br>Although he wasn’t Clinton-Gingrich level of relationship with Congress, they haven’t agreed on everything, mostly due to his push for entitlement reform, and Democrats in congress showed increased resistance and hostility towards President Dole’s attempts at welfare reform. The economy has made significant gains, and many consider Dole’s leadership ''steady yet boring.'' VP Kemp has began his own campaign for the White House, but is sure to face a heavy contest in the primaries, with big Republicans like Jeb Bush, John McCain, Steve Forbes and others heading potential competition.<br></p><br></p>`)
+      //e.image = ""
+      e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/S5hJzZZ.png'})])
+      e.pages.push(`<h3>Yes She Can: Why Hillary Clinton Will in the 2000 Election.</h3>
+            <p> While Bill’s been enjoying his retirement, Hillary has been working hard to fight for you and me. Ever since she won the NY Senate race two years back, she’s been one of the most active Senators on Capitol Hill. She’s opposed President Dole every step of the way, including being the loudest voice against his failed welfare reforms, and spearheading the Democratic gains in the midterms.<br><br>You see, Hillary isn’t like your average First Lady, she’s determined, she’s focused, she’s a fighter, and she thinks outside of the box. Even though she’s only been a Senator for two years, she already has what it takes to become our Commander-In-Chief, especially compared to the ineffective leadership we’ve seen under our current POTUS, who is thankfully not running again.<br><br>She also understands that the tech boom was the backbone of our economic recovery, and promises to keep investing in newer and brighter resources.<br><br>When Hillary runs for the Democratic Nomination, support her as much as you can, go from door to door getting people registered to make history. A vote for Hillary is a vote for diversity, leadership and history.<br></p> - Robert J. Winkle<br></p><br></p>`)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/3ePA2rt.png'})])
+  e.pages.push(`<h3>Bob Dole was, in fact, President</h3>
+       <p>wow.<br><br>I wonder what the folks in the 20s think about that<br></p><br></p>`)
+  e.executable.push([3, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+      const ClintonBlowout = new Playlist();
+    const ClintonBlowoutSong = new Song(
+        "Bitter Sweet Symphony",
+        "The Verve",
+        "https://audio.jukehost.co.uk/uaETrKWUpRnWGxWG7xTcp6TdgvOOs44l"
+      );
+  ClintonBlowout.addSong(ClintonBlowoutSong);
+  changePlaylist(ClintonBlowout);
         //538 George Bush
 } else if (quickstats[0] == 538 && BushNom == 1) {
     e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GEORGE BUSH AGAIN</h3>
@@ -53750,6 +53837,29 @@ const powellWinSong = new Song(
 );
 powellWin.addSong(powellWinSong);
 changePlaylist(powellWin);
+
+} else if (BonoNom == 1 && quickstats[0] <= 268) {
+    e.pages.push(`<h3>''CNN CAN NOW PROJECT SONNY BONO THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+        <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio, states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>
+        `)
+        // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/NbEvhRB.gif'})])
+e.pages.push(`<h3>''POWELL SLIDE 2''</h3>
+            <p>paragraph one<br><br>paragraph 2<br></p><br></p>`)
+//e.image = ""
+e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/5aQWkSh.png'})])
+e.pages.push(`<h3>Slide Three</h3>
+        <p>if someone could figure out how to add a slide in between the last one and this one thatd be great</p>`)
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/y4eg352.png'})])
+  const bonoWin = new Playlist();
+const bonoWinSong = new Song(
+  "The Revolution Kind",
+  "Sonny Bono",
+  "https://audio.jukehost.co.uk/CJiZPfw9S8C1SvUHMYLx70qFawg3JLG4"
+);
+bonoWin.addSong(bonoWinSong);
+changePlaylist(bonoWin);
 
 } else if (BushNom == 1 && quickstats[0] <= 268) {
     e.pages.push(`<h3>''CNN CAN NOW PROJECT GEORGE BUSH THE 41ST AND 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
