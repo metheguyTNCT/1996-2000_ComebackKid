@@ -48878,7 +48878,7 @@ if (e.question_number+1 == 28) {
        question_insert("candidate_intro_hw_commies",dnc_dean_badpell_badhillary);
     }
     }
-    } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1) {
+    } else if (Ideology == 0 || Ideology >= -2 && Ideology <= -1) {
     if (FPWin >= 4) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_bayh_goodpell_decenthillary);
@@ -48950,7 +48950,7 @@ if (e.question_number+1 == 28) {
        question_insert("candidate_intro_hw_commies",dnc_bayh_badpell_badhillary);
     }
     }
-} else if (Ideology <= -6) {
+} else if (Ideology <= -3) {
     if (FPWin >= 4) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_landrieu_goodpell_decenthillary);
@@ -50233,7 +50233,7 @@ if (e.question_number+1 == 19){
     
                 }
       ctsAchievement("Repeat Offender");
-     } else if (Ideology == 0 || Ideology >= -5 && Ideology <= -1)  {
+     } else if (Ideology == 0 || Ideology >= -2 && Ideology <= -1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
                 doleMentum();
@@ -50700,7 +50700,7 @@ if (e.question_number+1 == 19){
             }
                         }
                   //Bono Inserters
-                        } else if (Ideology <= -6){
+                        } else if (Ideology <= -3){
                             if (SlimGOPCongress == 1) {
                             bonoMentum();
                             question_insert("question_20_internet", 
@@ -52607,7 +52607,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Moderate";
 } else if (Ideology >= -5 && Ideology <= -1) {
     ideologyText.textContent = "Third Way";
-} else if (Ideology <= -6) {
+} else if (Ideology <= -3) {
     ideologyText.textContent = "Blue Dog";
 } else if (Ideology >= 1 && Ideology <= 5) {
     ideologyText.textContent = "New Deal Democrat";
