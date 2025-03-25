@@ -47453,7 +47453,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86042.5,
             "candidate": 77,
-            "answer_feedback": "Pat scrambles to explain what he really meant by calling Capitol Hill, ''Israeli-occupied territory,'' as decades of Washington consensus come crashing down on him for questioning America’s greatest ally. Meanwhile, images of you shaking hands with Prime Minister Netanyahu make the rounds, leaving Buchanan flailing in a desperate series of flip-flops."
+            "answer_feedback": "Pat scrambles to explain what he really meant by calling Capitol Hill, ''Israeli-occupied territory,'' as decades of Washington consensus come crashing down on him for questioning America’s greatest ally. Meanwhile, images of visits to Israel and actually getting things done make the rounds, leaving Buchanan flailing in a desperate series of flip-flops."
         }
     },
     {
@@ -51368,6 +51368,7 @@ PublicSupport += 1;
     FPWin -= 1;
     }
     if (ans == 89006.5 || ans == 89009.5) {
+    OsloPoints += 1;
     PublicSupport += 1;
     LEGWin += 1;
     FPWin += 1;
@@ -51410,7 +51411,7 @@ PublicSupport += 1;
     }
     if (ans == 89023.5) {
     PublicSupport += 1;
-    OsloPoints == 1;    
+    OsloPoints += 1;    
     }
     if (ans == 89026.5) {
     PublicSupport += 2;
@@ -54756,7 +54757,7 @@ function updateCandidateDescription(candidateName, newDescription) {
         const ideologyText = document.getElementById('ideologyText');
 
         // Legacy content
-        if (Legacy == 10) {
+        if (Legacy >= 10) {
             legacyText.textContent = "Perfect";
          } else if (Legacy >= 7 && Legacy <= 9) {
             legacyText.textContent = "Great";
@@ -54810,7 +54811,7 @@ if (Ideology === 0) {
     function updateApprovalRating() {
         // Update dynamic approval text based on LEGWin variable
     const approvalText = document.getElementById('approvalText');
-        if (LEGWin == 7) {
+        if (LEGWin >= 7) {
             approvalText.textContent = "Great";
         } else if (LEGWin >= 3 && LEGWin <= 6) {
             approvalText.textContent = "Good";
@@ -54891,7 +54892,7 @@ function updateInternationalStanding() {
     const standingText = document.getElementById('dynamicStandingText');
 
     // Example logic for International Standing text
-    if (FPWin == 5) {
+    if (FPWin >= 5) {
         standingText.textContent = "Strong alliances and global influence.";
     } else if (FPWin >= 2 && FPWin <= 4) {
         standingText.textContent = "Moderate influence abroad, working on key partnerships.";
