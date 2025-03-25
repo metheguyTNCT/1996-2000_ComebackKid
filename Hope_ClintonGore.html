@@ -1196,6 +1196,24 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "question_15_mitigation_budget_space",
+        "fields": {
+            "priority": 0,
+            "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_15_mitigation_budget_nospace",
+        "fields": {
+            "priority": 0,
+            "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "budget_1_normal",
         "fields": {
             "priority": 0,
@@ -1844,6 +1862,46 @@ campaignTrail_temp.answers_json = [
         "pk": 150010,
         "fields": {
             "question": "question_15_mitigation_budget",
+            "description": "I think we should try and push our luck a little. We've not yet done enough on my commitment to education, and there has been a growing weight on our students from the loans they must undertake simply to afford school. I'm certain we can give them a gift they won't forget."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150011,
+        "fields": {
+            "question": "question_15_mitigation_budget_space",
+            "description": "Let's keep it in line with previous years. We'll continue focusing on reducing the deficit, with possibly a nice middle-class tax cut if that can be worked out. We're making great progress, and I'm sure we'll be able to give a bit to each other this year."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150012,
+        "fields": {
+            "question": "question_15_mitigation_budget_space",
+            "description": "I think we need to give the American something to dream about. It doesn't have to be particularly expensive but it need to strike people's consciousness. Let's Rework on the ISS project, we have a legacy to respect."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150013,
+        "fields": {
+            "question": "question_15_mitigation_budget_space",
+            "description": "I think we should try and push our luck a little. We've not yet done enough on my commitment to education, and there has been a growing weight on our students from the loans they must undertake simply to afford school. I'm certain we can give them a gift they won't forget."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150014,
+        "fields": {
+            "question": "question_15_mitigation_budget_nospace",
+            "description": "Let's keep it in line with previous years. We'll continue focusing on reducing the deficit, with possibly a nice middle-class tax cut if that can be worked out. We're making great progress, and I'm sure we'll be able to give a bit to each other this year."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 150015,
+        "fields": {
+            "question": "question_15_mitigation_budget_nospace",
             "description": "I think we should try and push our luck a little. We've not yet done enough on my commitment to education, and there has been a growing weight on our students from the loans they must undertake simply to afford school. I'm certain we can give them a gift they won't forget."
         }
     },
@@ -20798,6 +20856,136 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": 0.0145
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 150011,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0194
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 150011,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0145
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12706,
+        "fields": {
+            "answer": 150013,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0252
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12707,
+        "fields": {
+            "answer": 150013,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0323
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12708,
+        "fields": {
+            "answer": 150013,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 150012,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0245
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12712,
+        "fields": {
+            "answer": 150012,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0134
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12713,
+        "fields": {
+            "answer": 150012,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12718,
+        "fields": {
+            "answer": 150014,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0194
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12719,
+        "fields": {
+            "answer": 150014,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0145
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12729,
+        "fields": {
+            "answer": 150015,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0252
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 150015,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0323
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12731,
+        "fields": {
+            "answer": 150015,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
     }
 ]
 
@@ -23661,6 +23849,56 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 30,
             "issue_score": -0.3,
             "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12703,
+        "fields": {
+            "answer": 150011,
+            "issue": 28,
+            "issue_score": 0.1,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12709,
+        "fields": {
+            "answer": 150013,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12714,
+        "fields": {
+            "answer": 150012,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12720,
+        "fields": {
+            "answer": 150014,
+            "issue": 28,
+            "issue_score": 0.1,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12732,
+        "fields": {
+            "answer": 150015,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 2
         }
     }
 ]
@@ -48002,7 +48240,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 150009,
             "candidate": 77,
-            "answer_feedback": "Seeing yourself switch from being a budget hawks to be open to expand NASA funding, the ISS and possibly even the Texas Super Collider has come as a big shock to many but the facts are clear. You can make one hell of a JFK impression when speaking of Mars and those cost aren't the massive hole in the budget that were initially forecasted."
+            "answer_feedback": "Seeing yourself switch from being a budget hawk to be open to expand NASA funding, the ISS and possibly even the Texas Super Collider has come as a big shock to many but the facts are clear. You can make one hell of a JFK impression when speaking of Mars and those cost aren't the massive hole in the budget that were initially forecasted."
         }
     },
     {
@@ -49561,6 +49799,51 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "Hafez would try to stall as much as he could but with the combined pressure of the two greatest nuclear power, even he was forced to fold. It would be while gritting his teeth that he signed the dotted line which would settle the Golan back to it's 1948 borders. You did promise to also solve the Lebanese question but that can still be settled in it's own time. Yitzhak will make true on his promise."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12704,
+        "fields": {
+            "answer": 150011,
+            "candidate": 77,
+            "answer_feedback": "You agreed to greater subsidies for farmers and some slight cuts to other sectors and they agreed for your greater spending on the environment and your tax cut. Keeping that rhythm, the nation should be at equilibrium before the year 2000."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12705,
+        "fields": {
+            "answer": 150013,
+            "candidate": 77,
+            "answer_feedback": "As discussion on reworking the entire student loan system may take years, there was one quick decision that was undertook. You forgave all student loans that have been contracted since more than 3 years. The right is calling it reckless and yet you feel like those student stuck in debt will be in yours now."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12710,
+        "fields": {
+            "answer": 150012,
+            "candidate": 77,
+            "answer_feedback": "And from the ashes, the biggest gun in the world finally will have the funds to finish some time after 2000. Considering how much effort was made in the hopes to kill the Texas Super Collider, it's survival is a real miracle. Maybe America will be the first one discovering the mysterious Higgs Boson?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12717,
+        "fields": {
+            "answer": 150014,
+            "candidate": 77,
+            "answer_feedback": "You agreed to greater subsidies for farmers and some slight cuts to other sectors and they agreed for your greater spending on the environment and your tax cut. Keeping that rhythm, the nation should be at equilibrium before the year 2000."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12728,
+        "fields": {
+            "answer": 150015,
+            "candidate": 77,
+            "answer_feedback": "As discussion on reworking the entire student loan system may take years, there was one quick decision that was undertook. You forgave all student loans that have been contracted since more than 3 years. The right is calling it reckless and yet you feel like those student stuck in debt will be in yours now."
+        }
     }
 ]
 
@@ -50191,7 +50474,54 @@ cyoAdventure = function(a) {
                     }
                 }
             );
-        } else if (SlimGOPCongress == 1) {
+        } else if (SlimGOPCongress == 1) { 
+        if (e.player_answers.includes(88015.5))  {
+        question_insert("oslo_question_1_slimgop", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "question_15_mitigation_budget_nospace",
+            "fields": {
+                "priority": 0,
+                "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+                "likelihood": 1
+            }
+        }
+        );
+        question_insert("oslo_question_1_slimgop_start", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "question_15_mitigation_budget_nospace",
+                "fields": {
+                    "priority": 0,
+                    "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+                    "likelihood": 1
+                }
+            }
+            );
+        } else if (e.player_answers.includes(88014.5)) {
+        question_insert("oslo_question_1_slimgop", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "question_15_mitigation_budget_space",
+            "fields": {
+                "priority": 0,
+                "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+                "likelihood": 1
+            }
+        }
+        );
+        question_insert("oslo_question_1_slimgop_start", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "question_15_mitigation_budget_space",
+                "fields": {
+                    "priority": 0,
+                    "description": "You can see it in his face, Gingrich, Satan himself, is frustrated. Without the landslide victory he had worked so hard to achieve, the man who loved to shout and never compromise is now forced to do just that. The question is: how much will you agree to give? After all, you've met with your cabinet, and they remind you that you're just as responsible for the financial well-being of the nation as he is, aren’t you?",
+                    "likelihood": 1
+                }
+            }
+            );
+        } else {
         question_insert("oslo_question_1_slimgop", 
         {
             "model": "campaign_trail.question",
@@ -50214,6 +50544,7 @@ cyoAdventure = function(a) {
                 }
             }
             );
+        }
     } else {
         question_insert("oslo_question_1", 
         {
