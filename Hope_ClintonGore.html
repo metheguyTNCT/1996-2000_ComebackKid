@@ -54426,141 +54426,144 @@ function initializeContent() {
     
           // Full HTML structure with clickable links and dynamic content
     hqContent.innerHTML = `
-    <div style="font-family: 'Times New Roman', Times, serif; background-color: #fff; color: #bfa800; padding: 20px; border: 3px solid #bfa800; width: 70%; margin: 0 auto; text-align: center; font-size: 16px;">
-        
-        <!-- Shiny gold plate behind the title -->
-        <h1 style="font-size: 24px; margin-bottom: 1em; 
-            background: linear-gradient(135deg, #ffd700, #ffcc00); 
-            padding: 10px; border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            The White House
-        </h1>
+<div style="font-family: 'Times New Roman', Times, serif; background-color: #fff; color: #bfa800; padding: 20px; border: 3px solid #bfa800; width: 70%; margin: 0 auto; text-align: center; font-size: 16px; box-sizing: border-box;">
+    <!-- Shiny gold plate behind the title -->
+    <h1 style="font-size: 24px; margin-bottom: 1em; 
+        background: linear-gradient(135deg, #ffd700, #ffcc00); 
+        padding: 10px; border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        The White House
+    </h1>
 
-        <p style="font-size: 18px; font-weight: bold; margin-bottom: 1em;">Welcome to the Official Website of the White House</p>
+    <p style="font-size: 18px; font-weight: bold; margin-bottom: 1em;">Welcome to the Official Website of the White House</p>
 
-        <img src="https://i.imgur.com/GsCF3UY.jpeg" 
-            style="width: 100%; height: auto; margin-bottom: 1em; border: 5px solid #bfa800; border-radius: 10px;">
-    
-        <div style="font-size: 18px; margin-bottom: 1em;">
-            <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
-            <a href="#" id="abroad" style="color: #bfa800; text-decoration: none;">The Fight Abroad</a><br>
-            <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
-            <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
+    <img src="https://i.imgur.com/GsCF3UY.jpeg" 
+        style="width: 100%; height: auto; margin-bottom: 1em; border: 5px solid #bfa800; border-radius: 10px;">
+
+    <div style="font-size: 18px; margin-bottom: 1em;">
+        <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
+        <a href="#" id="abroad" style="color: #bfa800; text-decoration: none;">The Fight Abroad</a><br>
+        <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
+        <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
+    </div>
+
+    <div id="dynamicContent" style="font-size: 18px; margin-top: 20px;">
+        <p id="contentText">Please click a section above to learn more.</p>
+    </div>
+
+    <!-- Main content area -->
+    <div id="homeContent" style="display: none; margin-top: 20px;">
+        <h2>The Fight At Home</h2>
+        <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
+            <h3>Your Campaign Promises:</h3>
+            <ul>
+                <li><input type="checkbox" id="welfare" disabled> Welfare Reform</li>
+                <li><input type="checkbox" id="deficit" disabled> Deficit Reduction</li>
+                <li><input type="checkbox" id="healthcare" disabled> Healthcare Reform</li>
+            </ul>
         </div>
-
-        <div id="dynamicContent" style="font-size: 18px; margin-top: 20px;">
-            <p id="contentText">Please click a section above to learn more.</p>
+        <div id="wins" style="text-align: center; margin-top: 20px; border: 3px solid #bfa800; padding: 10px; background-color: #fff;">
+            <h3>The Rundown:</h3>
+            <ul id="winsList">
+                <li id="win-status">[Dynamic Public Support]</li>
+            </ul>
         </div>
-
-        <div id="homeContent" style="display: none; margin-top: 20px;">
-                <h2>The Fight At Home</h2>
-                <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
-                    <h3>Your Campaign Promises:</h3>
-                    <ul>
-                        <li><input type="checkbox" id="welfare" disabled> Welfare Reform</li>
-                        <li><input type="checkbox" id="deficit" disabled> Deficit Reduction</li>
-                        <li><input type="checkbox" id="healthcare" disabled> Healthcare Reform</li>
-                    </ul>
-                </div>
-<div id="wins" style="text-align: center; margin-top: 20px; border: 3px solid #bfa800; padding: 10px; background-color: #fff;">
-    <h3>The Rundown:</h3>
-    <ul id="winsList">
-        <!-- Dynamic Text -->
-        <li id="win-status">[Dynamic Public Support]</li>
-    <div id="approvalRating" style="margin-top: 20px;">
-        <h3>Approval on Capitol Hill:</h3>
-        <p id="approvalText">[insert approval text]</p>
+        <div id="approvalRating" style="margin-top: 20px;">
+            <h3>Approval on Capitol Hill:</h3>
+            <p id="approvalText">[insert approval text]</p>
+        </div>
         <!-- Hidden Wins (Initially Hidden) -->
-        <li id="win-healthcare" style="display: none;">America recieved Moderate Healthcare reform.</li>
-        <li id="win-healthcare-ted" style="display: none;">America recieved the Healthcare it deserves.</li>
-        <li id="win-welfare" style="display: none;">Welfare reform secured.</li>
-        <li id="win-deficit" style="display: none;">Deficit Reduction secured.</li>
-        <li id="gay-bill" style="display: none;">You've passed a bill to protect Gay Rights.</li>
-        <li id="gun-bill" style="display: none;">Dangerous guns have been taken off the streets.</li>
-    </ul>
-</div>
-               <div id="congress1993" style="margin-top: 20px;">
-    <h3>The Congressional Landscape</h3>
-<div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
-    <div id="houseMajority">
-        <img id="houseImage" src="" alt="House Majority" 
-             style="border: 3px solid #bfa800; border-radius: 10px;">
-        <p id="houseMajorityText"></p>
-    </div>
-    <div id="senateMajority">
-        <img id="senateImage" src="" alt="Senate Majority" 
-             style="border: 3px solid #bfa800; border-radius: 10px;">
-        <p id="senateMajorityText"></p>
-    </div>
-</div>
-    <div id="congressLeaders" style="margin-top: 20px;">
-        <h4>Leaders:</h4>
-        <div id="houseLeader">
-            <img id="houseLeaderImage" src="" alt="House Leader" 
-                 style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="houseLeaderText"></p>
-        </div>
-        <div id="senateLeader">
-            <img id="senateLeaderImage" src="" alt="Senate Leader" 
-                 style="border: 3px solid #bfa800; border-radius: 10px;">
-            <p id="senateLeaderText"></p>
-        </div>
-    </div>
-    </div>
-</div>
+        <ul style="display: none;">
+            <li id="win-healthcare">America received Moderate Healthcare reform.</li>
+            <li id="win-healthcare-ted">America received the Healthcare it deserves.</li>
+            <li id="win-welfare">Welfare reform secured.</li>
+            <li id="win-deficit">Deficit Reduction secured.</li>
+            <li id="gay-bill">You've passed a bill to protect Gay Rights.</li>
+            <li id="gun-bill">Dangerous guns have been taken off the streets.</li>
+        </ul>
+
+        <div id="congress1993" style="margin-top: 20px;">
+            <h3>The Congressional Landscape</h3>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+                <div id="houseMajority">
+                    <img id="houseImage" src="" alt="House Majority" 
+                        style="border: 3px solid #bfa800; border-radius: 10px;">
+                    <p id="houseMajorityText"></p>
+                </div>
+                <div id="senateMajority">
+                    <img id="senateImage" src="" alt="Senate Majority" 
+                        style="border: 3px solid #bfa800; border-radius: 10px;">
+                    <p id="senateMajorityText"></p>
+                </div>
             </div>
-       <div id="abroadContent" style="display: none; margin-top: 20px;">
-    <h2>The Fight Abroad</h2>
-    <div id="internationalStanding" style="font-size: 18px; margin-top: 20px;">
-        <h3>International Standing:</h3>
-        <p id="dynamicStandingText">[Dynamic text will appear here]</p>
+            <div id="congressLeaders" style="margin-top: 20px;">
+                <h4>Leaders:</h4>
+                <div id="houseLeader">
+                    <img id="houseLeaderImage" src="" alt="House Leader" 
+                        style="border: 3px solid #bfa800; border-radius: 10px;">
+                    <p id="houseLeaderText"></p>
+                </div>
+                <div id="senateLeader">
+                    <img id="senateLeaderImage" src="" alt="Senate Leader" 
+                        style="border: 3px solid #bfa800; border-radius: 10px;">
+                    <p id="senateLeaderText"></p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-        <div id="legacyContent" style="display: none; margin-top: 20px;">
-            <h2>Ideology & Legacy</h2>
-            <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
+
+    <div id="abroadContent" style="display: none; margin-top: 20px;">
+        <h2>The Fight Abroad</h2>
+        <div id="internationalStanding" style="font-size: 18px; margin-top: 20px;">
+            <h3>International Standing:</h3>
+            <p id="dynamicStandingText">[Dynamic text will appear here]</p>
+        </div>
+    </div>
+
+    <div id="legacyContent" style="display: none; margin-top: 20px;">
+        <h2>Ideology & Legacy</h2>
+        <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
             <p>Public Support of the Administration:</p>
-                <p id="PublicSupportText" style="font-weight: bold; margin-top: 5px;">[Dynamic Public Support]</p>
+            <p id="PublicSupportText" style="font-weight: bold; margin-top: 5px;">[Dynamic Public Support]</p>
 
-                <p>Your ideology:</p>
-                <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
-                
-                <p>Your legacy:</p>
-                <p id="legacyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Legacy]</p>
+            <p>Your ideology:</p>
+            <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
 
-            </div>
-        </div>
-<div id="oppositionTabs" style="display: none; margin-top: 20px;">
-    <h2>The Opposition Candidates</h2>
-    <div id="tabs"></div>
-    <div id="tabContent" style="margin-top: 20px; display: flex; justify-content: space-around;">
-        <div id="candidateContent" style="width: 70%; overflow-y: scroll; height: 200px;">
-            <div style="border: 5px solid #bfa800; padding: 10px; background-color: #fff; display: inline-block; border-radius: 10px; margin-bottom: 10px;">
-                <img id="candidateImage" src="" style="width: 100%; max-width: 200px; height: auto;" />
-            </div>
-            <p id="candidateDescription"></p>
-
-            <!-- New sections for Pros, Cons, and Strategy -->
-            <h4>Pros:</h4>
-            <ul>
-                <li id="candidatePros"></li>
-            </ul>
-            <h4>Cons:</h4>
-            <ul>
-                <li id="candidateCons"></li>
-            </ul>
-            <h4>Strategy to Beat Them:</h4>
-            <p id="candidateStrategy"></p>
-        </div>
+            <p>Your legacy:</p>
+            <p id="legacyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Legacy]</p>
         </div>
     </div>
+
+    <div id="oppositionTabs" style="display: none; margin-top: 20px;">
+        <h2>The Opposition Candidates</h2>
+        <div id="tabs"></div>
+        <div id="tabContent" style="margin-top: 20px; display: flex; justify-content: space-around;">
+            <div id="candidateContent" style="width: 70%; overflow-y: scroll; height: 200px;">
+                <div style="border: 5px solid #bfa800; padding: 10px; background-color: #fff; display: inline-block; border-radius: 10px; margin-bottom: 10px;">
+                    <img id="candidateImage" src="" style="width: 100%; max-width: 200px; height: auto;" />
+                </div>
+                <p id="candidateDescription"></p>
+
+                <!-- New sections for Pros, Cons, and Strategy -->
+                <h4>Pros:</h4>
+                <ul>
+                    <li id="candidatePros"></li>
+                </ul>
+                <h4>Cons:</h4>
+                <ul>
+                    <li id="candidateCons"></li>
+                </ul>
+                <h4>Strategy to Beat Them:</h4>
+                <p id="candidateStrategy"></p>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size: 14px; margin-top: 1.5em; color: #000;">
+        <strong>For more information:</strong><br>
+        The White House | 1600 Pennsylvania Avenue | Washington, DC 20500
+    </p>
 </div>
-
-        <p style="font-size: 14px; margin-top: 1.5em; color: #000;">
-            <strong>For more information:</strong><br>
-            The White House | 1600 Pennsylvania Avenue | Washington, DC 20500
-        </p>
-    </div>
 `;
 // Function to automatically check a policy checkbox
 function checkPolicy(policyId) {
