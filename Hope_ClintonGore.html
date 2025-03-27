@@ -49885,14 +49885,12 @@ campaignTrail_temp.jet_data = [{
 campaignTrail_temp.cyoa = true
 var FPWin = 0
 var LEGWin = 0
+var Wins = 0
 var Ideology = 0
 var PublicSupport = 8
 var Legacy = 0
-var IRLScore = 0
 var ReichPoints = 0
 var OsloPoints = 0
-var RichardsBeatW = 0
-var CuomoBeatPataki = 0
 var GotHealthcare = 0
 var DemCongress = 1
 var SlimGOPCongress = 0
@@ -49910,14 +49908,6 @@ var WilsonNom = 0
 var ForbesNom = 0
 var PowellNom = 0
 var BushNom = 0
-Dolewin=false;
-Buchananwin=false;
-Lamarwin=false;
-Specterwin=false;
-Grammwin=false;
-Wilsonwin=false;
-Forbeswin=false;
-Powellwin=false
 cyoAdventure = function(a) {
     initializeContent();
     update_EV_dict();
@@ -49944,7 +49934,6 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50002) {
-        IRLScore += 1;
         updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
         updateHeadlineWithImage("#headline1", 'Clinton picks the First Lady to run Healthcare Task Force', "https://i.imgur.com/7VuN8iG.png"); 
         updateHeadlineWithImage("#headline9", 'The Cowboys are Super Bowl champions', "https://i.imgur.com/8pXXHTQ.png"); 
@@ -51131,34 +51120,6 @@ if (e.question_number+1 == 29) {
     question_insert("question_ques_18_alt_win",question_19_pr_and_wo_act);
      }
      }
-    if (Dolewin == false && Buchananwin == false && Lamarwin == false && Specterwin == false && Grammwin == false && Wilsonwin == false && Forbeswin == false && Powellwin == false && (ans == 210001 || ans == 210002 || ans == 210003)) {
-    if (SlimGOPCongress == 1) {
-        question_insert("clinton_2nd_term_question_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "clinton_2nd_term_question_3_slim_gop",
-                "fields": {
-                    "priority": 0,
-                    "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree-hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
-                    "likelihood": 1
-                }
-            }
-        );
-    } else {
-        question_insert("clinton_2nd_term_question_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "clinton_2nd_term_question_3",
-                "fields": {
-                    "priority": 0,
-                    "description": "On the issue of Climate Change, you've always been in support. Although you're by no means one of those tree-hugging hippies, you can still understand the common-sense essence of wanting a better tomorrow. After sending Al to the UN in order to figure out a resolve, you've finally sat down to read the agreement he brokered. The \"Kyoto Protocol\" looks to involve the world's 36 richest countries, while providing environmentally friendly economic aid to the lesser developed ones. It sounds good, but you know 90% of Republicans aren't agreeing to this. Most of them are either not informed correctly, or are completely pissed off that China isn't a part of it.",
-                    "likelihood": 1
-                }
-            }
-        );
-    }
-}
-console.log(LEGWin)
 // Inauguration CYOA
 if (ans == 10001) {
     updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  
@@ -51180,9 +51141,6 @@ if (ans == 10004) {
    if (ans ==  20001){
    PublicSupport += 2;
    }
-   if (ans ==  20002){
-   IRLScore += 1;
-   }
    if (ans == 20003){
    FPWin -= 1;
    Legacy += 1;
@@ -51199,7 +51157,6 @@ if (ans == 10004) {
     }
     if (ans == 30003){
     PublicSupport -= 1;
-    IRLScore += 1;
     }
     if (ans == 88000.5){
     PublicSupport -= 1;
@@ -51292,6 +51249,7 @@ if (ans == 10004) {
     PublicSupport += 3;
     Ideology += 3;
     LEGWin += 1;
+    Wins += 1;
     ctsAchievement("Renewal");
     }
     if (ans == 88022.5){
@@ -51313,7 +51271,6 @@ if (ans == 10004) {
     }
     if (ans == 250004) {
     PublicSupport += 1;
-    IRLScore += 1;
     }
     if (ans == 250002) {
     CasesSettled += 1;
@@ -51322,7 +51279,6 @@ if (ans == 10004) {
     //Waco CYOA
     if (ans == 40001){
     PublicSupport -= 1;
-    IRLScore += 1;
     }
      if (ans == 40003){
     PublicSupport -= 2;
@@ -51331,9 +51287,6 @@ if (ans == 10004) {
     PublicSupport += 1;
     }
     //Supreme Court CYOA
-    if (ans == 400012){
-    IRLScore += 1;
-    }
     if (ans == 400013){
     Ideology += 2;
     }
@@ -51362,7 +51315,6 @@ if (ans == 10004) {
     if (ans == 60003){
     PublicSupport -= 1;
     Ideology -= 1;
-    IRLScore += 1;
     }
     //Crime CYOA
     if (ans == 70002){
@@ -51371,7 +51323,6 @@ if (ans == 10004) {
     if (ans == 70001){
     Ideology -= 2;
     LEGWin += 1;
-    IRLScore += 1;
     PublicSupport += 1;
     }
     if (ans == 85027.5){
@@ -51379,18 +51330,17 @@ if (ans == 10004) {
     Legacy += 1;
     PublicSupport += 1;
     LEGWin += 1;
+    Wins += 1;
     ctsAchievement("Orange Tips Only");
     }
     if (ans == 85026.5){
     Ideology -= 2;
     LEGWin += 1;
-    IRLScore += 1;
     }
     //Somalia CYOA
     if (ans == 80001){
     PublicSupport -= 1;
    FPWin -= 1;
-   IRLScore += 1;
    }
       if (ans == 80002){
     PublicSupport -= 1;
@@ -51420,7 +51370,6 @@ if (ans == 10004) {
      if (ans == 85001.5){
     PublicSupport += 1;
    FPWin += 1;
-   IRLScore += 1;
    }
     if (ans == 85002.5){
     PublicSupport += 1;
@@ -51438,7 +51387,6 @@ if (ans == 10004) {
     if (ans == 85005.5){
     PublicSupport += 1;
    FPWin += 1;
-   IRLScore += 1;
    }
     if (ans == 85006.5){
     PublicSupport -= 1;
@@ -51456,16 +51404,13 @@ if (ans == 10004) {
    if (ans == 100001) {
     PublicSupport += 1;
     FPWin += 1;
-    IRLScore += 1;
    }
    if (ans == 100002) {
     FPWin += 1;
-    IRLScore += 1;
    }
     if (ans == 100003) {
     PublicSupport += 1;
     FPWin -= 1;
-    IRLScore += 1;
    }
     if (ans == 100004) {
     PublicSupport -= 1;
@@ -51478,6 +51423,7 @@ if (ans == 10004) {
     Legacy += 1;
     GotHealthcare += 1;
     Ideology += 1;
+    Wins += 1;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/yutvmi.png';
     }
     if (ans == 10001){
@@ -51511,6 +51457,7 @@ if (ans == 10004) {
     LEGWin += 1;
     GotHealthcare += 1;
     Ideology += 1;
+    Wins += 1;
     ctsAchievement("I Do");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/yutvmi.png';
     }
@@ -51520,6 +51467,7 @@ if (ans == 10004) {
     Legacy += 3;
     GotHealthcare += 1;
     Ideology += 3;
+    Wins += 2;
     ctsAchievement("The Work Goes On");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/yutvmi.png';
     }
@@ -51633,6 +51581,7 @@ if (ans == 10004) {
     Ideology -= 2;
     LEGWin += 1;
     Legacy += 1;
+    Wins += 1;
     ctsAchievement("Out and Proud");
     }
     if (ans == 180002){
@@ -51746,7 +51695,8 @@ PublicSupport += 1;
     }
     if (ans == 89026.5) {
     PublicSupport += 2;
-    Legacy += 2;  
+    Legacy += 2; 
+    Wins += 2; 
     ctsAchievement("Shir LaShalom"); 
     }
     //State of the Union Adress CYOA
@@ -51910,9 +51860,7 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#800080";
 }
-console.log(PublicSupport);
-console.log(IRLScore);
-if (e.question_number+1 == 19){
+if (e.question_number+1 == 20){
     if (GotHealthcare == 1) {
     if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
     if (PublicSupport < 15) {
@@ -51953,7 +51901,6 @@ if (e.question_number+1 == 19){
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
-            RichardsBeatW += 1;
             question_insert ("question_11_midterm_prep", 
 				{
 					"model": "campaign_trail.question",
@@ -51970,7 +51917,6 @@ if (e.question_number+1 == 19){
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
-            CuomoBeatPataki += 1;
             question_insert ("question_11_midterm_prep", 
 				{
 					"model": "campaign_trail.question",
@@ -52000,22 +51946,7 @@ if (e.question_number+1 == 19){
             );
 		}
     } else if (GotHealthcare == 0) {
-        if (IRLScore == 12) {
-           DemCongress -= 1;
-            RepublicanRevolution += 1;
-            question_insert ("question_11_midterm_prep", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "midterm_gop_revolution",
-                "fields": {
-                    "priority": 0,
-                    "description": "Well, we’ve got some bad news. It’s a disaster. The Republicans have obtained sweeping gains in the midterms, to a level where several big name Democrats, including Speaker Foley, were unable to win re-election, as the election was a sweeping rebuke of your presidency, as even the heir-apparent to the Speakership, Newt Gingrich, dubbing this a ''Republican Revolution.'' You’ve got to do some damage control here.",
-                    "likelihood": 1
-                }
-            }
-        );    
-        console.log("Republican Revolution")
-    } else if (PublicSupport <= 8){
+        if (PublicSupport <= 8){
 			DemCongress -= 1;
             MassiveGOPMajority+= 1;
 			question_insert ("question_11_midterm_prep", 
@@ -54526,13 +54457,28 @@ function initializeContent() {
                 <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
                     <h3>Your Campaign Promises:</h3>
                     <ul>
-                        <li><input type="checkbox" id="healthcare"> Universal Healthcare</li>
-                        <li><input type="checkbox" id="recovery"> Economic Recovery</li>
-                        <li><input type="checkbox" id="welfare"> Welfare Reform</li>
-                        <li><input type="checkbox" id="deficit"> Deficit Reduction</li>
-                        <li><input type="checkbox" id="taxCuts"> Tax Cuts for the Middle Class</li>
+                        <li><input type="checkbox" id="recovery" disabled> Economic Recovery</li>
+                        <li><input type="checkbox" id="welfare" disabled> Welfare Reform</li>
+                        <li><input type="checkbox" id="deficit" disabled> Deficit Reduction</li>
+                        <li><input type="checkbox" id="healthcare" disabled> Healthcare Reform</li>
                     </ul>
                 </div>
+<div id="wins" style="text-align: center; margin-top: 20px; border: 3px solid #bfa800; padding: 10px; background-color: #fff;">
+    <h3>The Rundown:</h3>
+    <ul id="winsList">
+        <!-- Dynamic Text -->
+        <li id="win-status">[Dynamic Public Support]</li>
+    <div id="approvalRating" style="margin-top: 20px;">
+        <h3>Approval on Capitol Hill:</h3>
+        <p id="approvalText">[insert approval text]</p>
+        <!-- Hidden Wins (Initially Hidden) -->
+        <li id="win-healthcare" style="display: none;">Healthcare Reform Secured.</li>
+        <li id="win-recovery" style="display: none;">✅ Economic Recovery Achieved!</li>
+        <li id="win-welfare" style="display: none;">✅ Welfare Reform Enacted!</li>
+        <li id="win-deficit" style="display: none;">✅ Deficit Reduction Implemented!</li>
+        <li id="gun-bill" style="display: none;">Dangerous guns have been taken off the streets.</li>
+    </ul>
+</div>
                <div id="congress1993" style="margin-top: 20px;">
     <h3>The Congressional Landscape</h3>
 <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
@@ -54560,9 +54506,6 @@ function initializeContent() {
             <p id="senateLeaderText"></p>
         </div>
     </div>
-    <div id="approvalRating" style="margin-top: 20px;">
-        <h3>Approval on Capitol Hill:</h3>
-        <p id="approvalText">[insert approval text]</p>
     </div>
 </div>
             </div>
@@ -54619,6 +54562,13 @@ function initializeContent() {
         </p>
     </div>
 `;
+// Function to automatically check a policy checkbox
+function checkPolicy(policyId) {
+    let checkbox = document.getElementById(policyId);
+    if (checkbox) {
+        checkbox.checked = true; // Check the checkbox when the policy is passed
+    }
+}
     
         // Candidate data with pros, cons, and strategies
 const candidates = [
@@ -54679,6 +54629,30 @@ const candidates = [
         strategy: 'Present a balanced approach to immigration and focus on economic successes.'
     }
 ];
+
+function updateWinStatus() {
+    let winStatus = document.getElementById("win-status");
+    
+    if (Wins <= 0) {
+        winStatus.innerText = `Your administration has no wins. (${Wins})`;
+    } else if (Wins > 0 && Wins <= 2) {
+        winStatus.innerText = `Your administration has some wins. (${Wins})`;
+    } else if (Wins > 2 && Wins <= 4) {
+        winStatus.innerText = `Your administration has a decent amount of wins. (${Wins})`;
+    } else {
+        winStatus.innerText = `Your administration has a lot of wins. (${Wins})`;
+    }
+}
+
+// Function to show a win and update the counter
+function showWin(winId) {
+    let winItem = document.getElementById(winId);
+    if (winItem && winItem.style.display === "none") {
+        winItem.style.display = "list-item"; // Make it visible
+        wins++; // Increment the win count
+    }
+}
+
     // Define updateOppositionTabs function first
 function updateOppositionTabs(candidate) {
     const candidateImage = document.getElementById('candidateImage');
@@ -54881,6 +54855,11 @@ if (Ideology === 0) {
         document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
         updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
+    } if (GotHealthcare == 1) {
+    showWin("win-healthcare");
+    checkPolicy("healthcare");
+    } if (e.player_answers.includes(85027.5)) {
+        showWin("gun-bill");
     }
     };
    // Function to update dynamic content for "International Standing"
@@ -54918,7 +54897,8 @@ function toggleSection(sectionId) {
     } else if (sectionId === 'abroadContent') {
         updateInternationalStanding();  // Update the international standing when "The Fight Abroad" is clicked
     } else if (sectionId === 'homeContent') {
-        updateApprovalRating()
+        updateWinStatus();
+        updateApprovalRating();
     }
 }
     
