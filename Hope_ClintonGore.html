@@ -3793,7 +3793,7 @@ campaignTrail_temp.answers_json = [
         "pk": 85029.5,
         "fields": {
             "question": "question_19_alt",
-            "description": "I didn't forget my promise for a balance budget. I'll contact both side of the isle and see what works and what doesn't. The cycle of poverty will be broken, family that need welfare will get the help they need to no longer have it and welfare will slowly fade away as the thing so many American obsess over."
+            "description": "I didn't forget my promise for a balance budget. I'll contact both side of the isle and see what works and what doesn't. The cycle of poverty will be broken, families that need welfare will get the help they need to no longer have it and welfare will slowly fade away as the thing so many American obsess over."
         }
     },
     {
@@ -54457,7 +54457,6 @@ function initializeContent() {
                 <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
                     <h3>Your Campaign Promises:</h3>
                     <ul>
-                        <li><input type="checkbox" id="recovery" disabled> Economic Recovery</li>
                         <li><input type="checkbox" id="welfare" disabled> Welfare Reform</li>
                         <li><input type="checkbox" id="deficit" disabled> Deficit Reduction</li>
                         <li><input type="checkbox" id="healthcare" disabled> Healthcare Reform</li>
@@ -54472,10 +54471,11 @@ function initializeContent() {
         <h3>Approval on Capitol Hill:</h3>
         <p id="approvalText">[insert approval text]</p>
         <!-- Hidden Wins (Initially Hidden) -->
-        <li id="win-healthcare" style="display: none;">Healthcare Reform Secured.</li>
-        <li id="win-recovery" style="display: none;">✅ Economic Recovery Achieved!</li>
-        <li id="win-welfare" style="display: none;">✅ Welfare Reform Enacted!</li>
-        <li id="win-deficit" style="display: none;">✅ Deficit Reduction Implemented!</li>
+        <li id="win-healthcare" style="display: none;">America recieved Moderate Healthcare reform.</li>
+        <li id="win-healthcare-ted" style="display: none;">America recieved the Healthcare it deserves.</li>
+        <li id="win-welfare" style="display: none;">Welfare reform secured.</li>
+        <li id="win-deficit" style="display: none;">Deficit Reduction secured.</li>
+        <li id="gay-bill" style="display: none;">You've passed a bill to protect Gay Rights.</li>
         <li id="gun-bill" style="display: none;">Dangerous guns have been taken off the streets.</li>
     </ul>
 </div>
@@ -54855,11 +54855,22 @@ if (Ideology === 0) {
         document.getElementById("senateLeaderImage").src = "https://i.imgur.com/5nL1HEB.png"; // Replace with actual URL
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
         updateCandidateDescription('Bob Dole', 'Bob Dole is the current Senate Majority Leader, and a long-time U.S. Senator from Kansas, having served since 1969. After his run with President Gerald Ford in 1976 marked a pivitol moment in his career, Dole aims to finish the job he started and become president in 1996. Given the lack of notable party members running, Dole is very likely to be nominated.');
-    } if (GotHealthcare == 1) {
+    } if (e.player_answers.includes(15004.5) || e.player_answers.includes(15007.5)) {
     showWin("win-healthcare");
     checkPolicy("healthcare");
+    } if (e.player_answers.includes(85018.5)) {
+        showWin("win-healthcare-ted");
+        checkPolicy("healthcare");
     } if (e.player_answers.includes(85027.5)) {
         showWin("gun-bill");
+    } if (e.player_answers.includes(85024.5)) {
+        showWin("gay-bill");
+    } if (e.player_answers.includes(88018.5)) {
+        showWin("win-deficit");
+        checkPolicy("deficit");
+    }if (e.player_answers.includes(190001) || e.player_answers.includes(5029.5)) {
+    showWin("win-welfare");
+    checkPolicy("welfare");
     }
     };
    // Function to update dynamic content for "International Standing"
