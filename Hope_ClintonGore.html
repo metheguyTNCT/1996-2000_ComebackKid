@@ -54593,7 +54593,6 @@ function showWin(winId) {
         wins++; // Increment the win count
     }
 }
-
 // Function to add a new candidate dynamically (only if they don't already exist)
 function addCandidate(candidate) {
     const tabsContainer = document.getElementById('tabs');
@@ -54895,6 +54894,8 @@ function updateInternationalStanding() {
     }
 }
 
+deleteCandidateButton("Bob Dole");
+
 function changeOpponentsTab() {
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     addCandidate({
@@ -54904,6 +54905,15 @@ function changeOpponentsTab() {
         pros: 'Fellow President, which diminishes your "incumbent" advantage. High foreign policy success, which could come in handy if it were the main issue of the campaign.',
         cons: 'Lost his original re-election bid in a blowout, would have to reinvent himself.',
         strategy: 'Reminding America of his failiures compared to your successes, and why it would not be smart to go back.'
+    });
+} if (GOPSuperMajority == 1) {
+    addCandidate({
+        name: 'Colin Powell',
+        image: 'https://i.imgur.com/cmWeIum.png',
+        description: 'Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of "passion for politics", though a severe rebuke of your administration could change his mind.',
+        pros: 'Broad support among Americans, war hero status. Will absoloutely dig at your base of minority support.',
+        cons: 'Weak in the south, pro-choice which might not sit well with some Republicans.',
+        strategy: 'Attempt to make it seem as if he has no legs of his own to stand on, and no personal conviction.'
     });
 }
 }
