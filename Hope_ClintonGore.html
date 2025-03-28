@@ -49895,7 +49895,7 @@ var GotHealthcare = 0
 var DemCongress = 1
 var SlimGOPCongress = 0
 var RepublicanRevolution = 0
-var MassiveGOPMajority= 0
+var DisasterMidterms= 0
 var CasesSettled = 0
 var CommieReturn = 0
 var DoleNom = 0
@@ -50440,7 +50440,7 @@ cyoAdventure = function(a) {
         }
     }
     if (e.question_number+1 == 21) {
-        if (MassiveGOPMajority == 1) {
+        if (DisasterMidterms == 1) {
         question_insert("oslo_question_1", 
                 {
                     "model": "campaign_trail.question",
@@ -51949,7 +51949,7 @@ if (e.question_number+1 == 20){
     } else if (GotHealthcare == 0) {
         if (PublicSupport <= 8){
 			DemCongress -= 1;
-            MassiveGOPMajority+= 1;
+            DisasterMidterms+= 1;
 			question_insert ("question_11_midterm_prep", 
 				{
 					"model": "campaign_trail.question",
@@ -52734,7 +52734,7 @@ if (e.question_number+1 == 20){
                     );
         // Wilson Inserters 
         
-     } else if (MassiveGOPMajority == 1) {
+     } else if (DisasterMidterms == 1) {
         wilsonMentum();
       question_insert("question_20_internet", 
         {
@@ -52920,7 +52920,7 @@ if (e.question_number+1 == 20){
                             );
                         // Gramm Inserters 
                         
-                     } else if (MassiveGOPMajority == 1) {
+                     } else if (DisasterMidterms == 1) {
                         grammMentum();
                       question_insert("question_20_internet", 
                         {
@@ -53114,7 +53114,7 @@ if (e.question_number+1 == 20){
                     }
                 }
                 );
-                } else if (MassiveGOPMajority == 1) {
+                } else if (DisasterMidterms == 1) {
                                     powellMentum();
             question_insert("question_20_internet", 
             {
@@ -54828,7 +54828,7 @@ if (Ideology === 0) {
 
         document.getElementById("senateLeaderImage").src = "https://i.imgur.com/1Kw6dyL.png";
         document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Tom Daschle";
-    } else if (MassiveGOPMajority== 1) {
+    } else if (DisasterMidterms== 1) {
         // Republican Congress
         // Majority Images and Texts
         document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
@@ -54904,7 +54904,7 @@ function changeOpponentsTab() {
         cons: 'Lost his original re-election bid in a blowout, would have to reinvent himself.',
         strategy: 'Reminding America of his failiures compared to your successes, and why it would not be smart to go back.'
     });
-} if (GOPSuperMajority == 1) {
+} if (DisasterMidterms == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Steve Forbes");
