@@ -54894,8 +54894,6 @@ function updateInternationalStanding() {
     }
 }
 
-deleteCandidateButton("Bob Dole");
-
 function changeOpponentsTab() {
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     addCandidate({
@@ -54907,6 +54905,11 @@ function changeOpponentsTab() {
         strategy: 'Reminding America of his failiures compared to your successes, and why it would not be smart to go back.'
     });
 } if (GOPSuperMajority == 1) {
+    deleteCandidateButton("Bob Dole");
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Steve Forbes");
+    deleteCandidateButton("Lamar Alexander");
+    deleteCandidateButton("Arlen Specter");
     addCandidate({
         name: 'Colin Powell',
         image: 'https://i.imgur.com/cmWeIum.png',
