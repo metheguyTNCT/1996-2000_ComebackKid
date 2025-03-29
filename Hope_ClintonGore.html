@@ -50786,7 +50786,7 @@ if (e.question_number+1 == 28) {
         }
 	}
     if (Ideology >= 1) {
-    if (FPWin >= 4) {
+    if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_dean_goodpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_dean_goodpell_decenthillary);
@@ -54393,7 +54393,6 @@ function initializeContent() {
 
     <div style="font-size: 18px; margin-bottom: 1em;">
         <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
-        <a href="#" id="abroad" style="color: #bfa800; text-decoration: none;">The Fight Abroad</a><br>
         <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
         <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
     </div>
@@ -54404,7 +54403,7 @@ function initializeContent() {
 
     <!-- Main content area -->
         <div id="homeContent" style="display: none; margin-top: 20px;">
-                <h2>The Fight At Home</h2>
+                <h2>The Various Fights</h2>
                 <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
                     <h3>Your Campaign Promises:</h3>
                     <ul>
@@ -54419,13 +54418,15 @@ function initializeContent() {
         <!-- Dynamic Text -->
         <li id="win-status">[Dynamic wins]</li>
         <li id="approvalText">[insert approval text]</p>
+        <li id="dynamicStandingText">[Dynamic text will appear here]</p>
         <!-- Hidden Wins (Initially Hidden) -->
-        <li id="win-healthcare" style="display: none;">America recieved Moderate Healthcare reform.</li>
-        <li id="win-healthcare-ted" style="display: none;">America recieved the Healthcare it deserves.</li>
-        <li id="win-welfare" style="display: none;">Welfare reform secured.</li>
-        <li id="win-deficit" style="display: none;">Deficit Reduction secured.</li>
-        <li id="gay-bill" style="display: none;">You've passed a bill to protect Gay Rights.</li>
-        <li id="gun-bill" style="display: none;">Dangerous guns have been taken off the streets.</li>
+        <li id="win-healthcare" style="display: none;">America recieved <span style="color: blue; font-weight: bold;">Moderate Healthcare reform.</span></li>
+        <li id="win-healthcare-ted" style="display: none;">America recieved the <span style="color: green; font-weight: bold;">Healthcare it deserves.</span></li>
+        <li id="win-oslo" style="display: none;">Peace in the Middle East <span style="color: green; font-weight: bold;">secured.</span></li>
+        <li id="win-welfare" style="display: none;">Welfare reform <span style="color: green; font-weight: bold;">secured.</span></li>
+        <li id="win-deficit" style="display: none;">Deficit Reduction <span style="color: green; font-weight: bold;">secured.</span></li>
+        <li id="gay-bill" style="display: none;">You've passed a bill to <span style="color: green; font-weight: bold;">protect Gay Rights</span></li>
+        <li id="gun-bill" style="display: none;">Dangerous guns have been <span style="color: green; font-weight: bold;">taken off the streets.</span></li>
     </ul>
 </div>
 
@@ -54456,14 +54457,6 @@ function initializeContent() {
                     <p id="senateLeaderText"></p>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div id="abroadContent" style="display: none; margin-top: 20px;">
-        <h2>The Fight Abroad</h2>
-        <div id="internationalStanding" style="font-size: 18px; margin-top: 20px;">
-            <h3>International Standing:</h3>
-            <p id="dynamicStandingText">[Dynamic text will appear here]</p>
         </div>
     </div>
 
@@ -54881,9 +54874,11 @@ if (Ideology === 0) {
     } if (e.player_answers.includes(88018.5)) {
         showWin("win-deficit");
         checkPolicy("deficit");
-    }if (e.player_answers.includes(190001) || e.player_answers.includes(85029.5)) {
+    } if (e.player_answers.includes(190001) || e.player_answers.includes(85029.5)) {
     showWin("win-welfare");
     checkPolicy("welfare");
+    } if (e.player_answers.includes(89026.5)) {
+    showWin("win-oslo");
     }
     };
    // Function to update dynamic content for "International Standing"
@@ -54891,14 +54886,16 @@ function updateInternationalStanding() {
     const standingText = document.getElementById('dynamicStandingText');
 
     // Example logic for International Standing text
-    if (FPWin >= 5) {
-        standingText.textContent = "Strong alliances and global influence.";
-    } else if (FPWin >= 2 && FPWin <= 4) {
-        standingText.textContent = "Moderate influence abroad, working on key partnerships.";
-    } else if (FPWin == 1) {
-        standingText.textContent = "Emerging influence in some regions.";
+    if (Wins <= 0) {
+        standingText.innerText = `Your administration has no foreign wins. (${Wins})`;
+    } else if (Wins > 0 && Wins <= 2) {
+        standingText.innerText = `Your administration has little foreign wins. (${Wins})`;
+    } else if (Wins > 2 && Wins <= 5) {
+        standingText.innerText = `Your administration has some foreign wins. (${Wins})`;
+    } else if (Wins > 5 && Wins <= 7) {
+        standingText.innerText = `Your administration has a good amount of foreign wins. (${Wins})`;
     } else {
-        standingText.textContent = "Limited influence on the global stage.";
+        standingText.innerText = `Your administration has many foreign wins. (${Wins})`;
     }
 }
 
@@ -54941,7 +54938,7 @@ function changeOpponentsTab() {
 
 // Function to toggle section display
 function toggleSection(sectionId) {
-    const sections = ['homeContent', 'abroadContent', 'legacyContent', 'oppositionTabs'];
+    const sections = ['homeContent', 'legacyContent', 'oppositionTabs'];
     sections.forEach(id => {
         const section = document.getElementById(id);
         if (id === sectionId) {
@@ -54955,9 +54952,8 @@ function toggleSection(sectionId) {
     // Update Legacy, Ideology, and International Standing when respective sections are opened
     if (sectionId === 'legacyContent') {
         updateLegacyPublicSupportAndIdeology();
-    } else if (sectionId === 'abroadContent') {
-        updateInternationalStanding();  // Update the international standing when "The Fight Abroad" is clicked
     } else if (sectionId === 'homeContent') {
+        updateInternationalStanding();
         updateWinStatus();
         updateApprovalRating();
     } else if (sectionId === 'oppositionTabs') {
@@ -54969,11 +54965,6 @@ function toggleSection(sectionId) {
         hqContent.querySelector('#home').addEventListener('click', function(event) {
             event.preventDefault();
             toggleSection('homeContent');
-        });
-    
-        hqContent.querySelector('#abroad').addEventListener('click', function(event) {
-            event.preventDefault();
-            toggleSection('abroadContent');
         });
     
         hqContent.querySelector('#opposition').addEventListener('click', function(event) {
@@ -55171,7 +55162,7 @@ function openHeadquarter() {
     closeButton.style.top = '10px';
     closeButton.style.right = '10px';
     closeButton.onclick = function () {
-        const sections = ['homeContent', 'abroadContent', 'legacyContent', 'oppositionTabs'];
+        const sections = ['homeContent', 'legacyContent', 'oppositionTabs'];
         sections.forEach(id => {
             const section = document.getElementById(id);
             if (section) section.style.display = 'none';
