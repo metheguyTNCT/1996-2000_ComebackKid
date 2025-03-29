@@ -54788,13 +54788,13 @@ if (Ideology === 0) {
         // Update dynamic approval text based on LEGWin variable
     const approvalText = document.getElementById('approvalText');
     if (LEGWin <= 0) {
-        approvalText.innerText = `You have no congressional wins. (${Wins})`;
+        approvalText.innerText = `You have no congressional wins. (${LEGWin})`;
     } else if (Wins > 0 && Wins <= 2) {
-        approvalText.innerText = `Your have few congressional wins. (${Wins})`;
+        approvalText.innerText = `Your have few congressional wins. (${LEGWin})`;
     } else if (Wins > 2 && Wins <= 4) {
-        approvalText.innerText = `You have some congressional wins. (${Wins})`;
+        approvalText.innerText = `You have some congressional wins. (${LEGWin})`;
     } else {
-        approvalText.innerText = `You have a lot of congressional wins. (${Wins})`;
+        approvalText.innerText = `You have a lot of congressional wins. (${LEGWin})`;
     }
 
         // Update the page dynamically based on DemCongress value
@@ -54887,15 +54887,15 @@ function updateInternationalStanding() {
 
     // Example logic for International Standing text
     if (Wins <= 0) {
-        standingText.innerText = `Your administration has no foreign wins. (${Wins})`;
+        standingText.innerText = `Your administration has no foreign wins. (${FPWin})`;
     } else if (Wins > 0 && Wins <= 2) {
-        standingText.innerText = `Your administration has little foreign wins. (${Wins})`;
+        standingText.innerText = `Your administration has little foreign wins. (${FPWin})`;
     } else if (Wins > 2 && Wins <= 5) {
-        standingText.innerText = `Your administration has some foreign wins. (${Wins})`;
+        standingText.innerText = `Your administration has some foreign wins. (${FPWin})`;
     } else if (Wins > 5 && Wins <= 7) {
-        standingText.innerText = `Your administration has a good amount of foreign wins. (${Wins})`;
+        standingText.innerText = `Your administration has a good amount of foreign wins. (${FPWin})`;
     } else {
-        standingText.innerText = `Your administration has many foreign wins. (${Wins})`;
+        standingText.innerText = `Your administration has many foreign wins. (${FPWin})`;
     }
 }
 
