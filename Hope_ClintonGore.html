@@ -50821,7 +50821,7 @@ if (e.question_number+1 == 28) {
        question_insert("candidate_intro_hw",dnc_dean_goodpell_badhillary);
        question_insert("candidate_intro_hw_commies",dnc_dean_goodpell_badhillary);
     } 
-   } else if (FPWin <= 3) {
+   } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_dean_badpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_dean_badpell_decenthillary);
@@ -50858,7 +50858,7 @@ if (e.question_number+1 == 28) {
     }
     }
     } else if (Ideology == 0 || Ideology >= -2 && Ideology <= -1) {
-    if (FPWin >= 4) {
+    if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_bayh_goodpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_bayh_goodpell_decenthillary);
@@ -50893,7 +50893,7 @@ if (e.question_number+1 == 28) {
        question_insert("candidate_intro_hw",dnc_bayh_goodpell_badhillary);
        question_insert("candidate_intro_hw_commies",dnc_bayh_goodpell_badhillary);
     } 
-   } else if (FPWin <= 3) {
+   } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_bayh_badpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_bayh_badpell_decenthillary);
@@ -50930,7 +50930,7 @@ if (e.question_number+1 == 28) {
     }
     }
 } else if (Ideology <= -4) {
-    if (FPWin >= 4) {
+    if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_landrieu_goodpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_landrieu_goodpell_decenthillary);
@@ -50965,7 +50965,7 @@ if (e.question_number+1 == 28) {
        question_insert("candidate_intro_hw",dnc_landrieu_goodpell_badhillary);
        question_insert("candidate_intro_hw_commies",dnc_landrieu_goodpell_badhillary);
     } 
-   } else if (FPWin <= 3) {
+   } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
         question_insert("candidate_intro_dole",dnc_landrieu_badpell_decenthillary);
         question_insert("candidate_intro_buchanan",dnc_landrieu_badpell_decenthillary);
@@ -54789,9 +54789,9 @@ if (Ideology === 0) {
     const approvalText = document.getElementById('approvalText');
     if (LEGWin <= 0) {
         approvalText.innerText = `You have no congressional wins. (${LEGWin})`;
-    } else if (Wins > 0 && Wins <= 2) {
+    } else if (LEGWin > 0 && LEGWin <= 2) {
         approvalText.innerText = `You have few congressional wins. (${LEGWin})`;
-    } else if (Wins > 2 && Wins <= 4) {
+    } else if (LEGWin > 2 && LEGWin <= 4) {
         approvalText.innerText = `You have some congressional wins. (${LEGWin})`;
     } else {
         approvalText.innerText = `You have a lot of congressional wins. (${LEGWin})`;
@@ -54886,13 +54886,13 @@ function updateInternationalStanding() {
     const standingText = document.getElementById('dynamicStandingText');
 
     // Example logic for International Standing text
-    if (Wins <= 0) {
+    if (FPWin <= 0) {
         standingText.innerText = `Your administration has no foreign wins. (${FPWin})`;
-    } else if (Wins > 0 && Wins <= 2) {
+    } else if (FPWin > 0 && FPWin <= 2) {
         standingText.innerText = `Your administration has little foreign wins. (${FPWin})`;
-    } else if (Wins > 2 && Wins <= 5) {
+    } else if (FPWin > 2 && FPWin <= 5) {
         standingText.innerText = `Your administration has some foreign wins. (${FPWin})`;
-    } else if (Wins > 5 && Wins <= 7) {
+    } else if (FPWin > 5 && FPWin <= 7) {
         standingText.innerText = `Your administration has a good amount of foreign wins. (${FPWin})`;
     } else {
         standingText.innerText = `Your administration has many foreign wins. (${FPWin})`;
@@ -54932,6 +54932,39 @@ function changeOpponentsTab() {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Steve Forbes");
     deleteCandidateButton("Pete Wilson");
+    deleteCandidateButton("Phil Gramm");
+} if (DoleNom == 1) {
+    deleteCandidateButton("Steve Forbes");
+    deleteCandidateButton("Arlen Specter");
+} if (BuchananNom == 1) {
+    deleteCandidateButton("Lamar Alexander");
+    deleteCandidateButton("Arlen Specter");
+} if (LamarNom == 1) {
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Arlen Specter");
+} if (SpecterNom == 1) {
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Lamar Alexander");
+} if (ForbesNom == 1) {
+    deleteCandidateButton("Bob Dole");
+    deleteCandidateButton("Arlen Specter");
+} if (WilsonNom == 1) {
+    deleteCandidateButton("Phil Gramm");
+    deleteCandidateButton("Colin Powell");
+} if (GrammNom == 1) {
+    deleteCandidateButton("Pete Wilson");
+    deleteCandidateButton("Colin Powell");
+} if (PowellNom == 1) {
+    deleteCandidateButton("Pete Wilson");
+    deleteCandidateButton("Phil Gramm");
+} if (BushNom == 1) {
+    deleteCandidateButton("Bob Dole");
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Steve Forbes");
+    deleteCandidateButton("Pete Wilson");
+    deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Colin Powell");
+    deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Phil Gramm");
 }
 }
