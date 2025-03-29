@@ -54417,10 +54417,8 @@ function initializeContent() {
     <h3>The Rundown:</h3>
     <ul id="winsList">
         <!-- Dynamic Text -->
-        <li id="win-status">[Dynamic Public Support]</li>
-    <div id="approvalRating" style="margin-top: 20px;">
-        <h3>Approval on Capitol Hill:</h3>
-        <p id="approvalText">[insert approval text]</p>
+        <li id="win-status">[Dynamic wins]</li>
+        <li id="approvalText">[insert approval text]</p>
         <!-- Hidden Wins (Initially Hidden) -->
         <li id="win-healthcare" style="display: none;">America recieved Moderate Healthcare reform.</li>
         <li id="win-healthcare-ted" style="display: none;">America recieved the Healthcare it deserves.</li>
@@ -54796,15 +54794,15 @@ if (Ideology === 0) {
     function updateApprovalRating() {
         // Update dynamic approval text based on LEGWin variable
     const approvalText = document.getElementById('approvalText');
-        if (LEGWin >= 7) {
-            approvalText.textContent = "Great";
-        } else if (LEGWin >= 3 && LEGWin <= 6) {
-            approvalText.textContent = "Good";
-        } else if (LEGWin >= 1 && LEGWin <= 2) {
-            approvalText.textContent = "Decent";
-        } else {
-            approvalText.textContent = "Bad";
-        }
+    if (LEGWin <= 0) {
+        approvalText.innerText = `You have no congressional wins. (${Wins})`;
+    } else if (Wins > 0 && Wins <= 2) {
+        approvalText.innerText = `Your have few congressional wins. (${Wins})`;
+    } else if (Wins > 2 && Wins <= 4) {
+        approvalText.innerText = `You have some congressional wins. (${Wins})`;
+    } else {
+        approvalText.innerText = `You have a lot of congressional wins. (${Wins})`;
+    }
 
         // Update the page dynamically based on DemCongress value
     // Update the page dynamically based on DemCongress value
