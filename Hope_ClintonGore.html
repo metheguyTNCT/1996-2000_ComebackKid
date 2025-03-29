@@ -51321,7 +51321,7 @@ if (ans == 10004) {
     if (ans == 70002){
     Ideology += 2;
     }
-    if (ans == 70001){
+    if (ans == 70001 || ans == 85026.5){
     Ideology -= 2;
     LEGWin += 1;
     PublicSupport += 1;
@@ -51333,10 +51333,6 @@ if (ans == 10004) {
     LEGWin += 1;
     Wins += 1;
     ctsAchievement("Orange Tips Only");
-    }
-    if (ans == 85026.5){
-    Ideology -= 2;
-    LEGWin += 1;
     }
     //Somalia CYOA
     if (ans == 80001){
@@ -54150,6 +54146,12 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/mcnbbhB.p
     e.pages.push(`<span style="font-size: 32px; ">Grand Theft Nerf-o</span><br><br>
         <p>Grand Theft Auto was always the poster child for concerned parents and liberals across the country on just how violent kids were becoming because of video games.<br><br>The message of a game taking shots at the cycles of violence, the failure of the American dream and of the police inability to stop crime long term were completely overshadowed by "We can kill innocent people on the street.", until this day.<br><br>In collaboration with NERF, Rockstar developed a special version of the game which would be compliant in all fifty states even if any of them tried their hand at banning it.<br><br>The result was Grand Theft NERF-o, a bizarre yet oddly charming spin on the criminal underworld. Players still stole cars, ran from cops, and caused mayhem—but now, every shootout was a foam-dartillery frenzy.<br><br>Instead of capping rival gangsters with a 9mm, you ambushed them with a brightly colored NERF Maverick, landing critical hits with suction-cup darts. Drive-bys became drive-pews, with passengers leaning out windows, frantically pumping NERF Rapidstrikes while enemies dramatically clutched their chests and collapsed in a shower of harmless foam.<br><br>The police response was equally absurd. SWAT teams rolled up in riot gear, only to unleash a barrage of NERF Rival rounds. If you got "wanted stars," officers would chase you down and tag you with Elite darts until you surrendered—or ran out of "health" (which was just your dignity).<br><br>Surprisingly, critics loved it. "A satirical masterpiece," said one reviewer. "Finally, a game where crime is both fun and OSHA-compliant." Parents' groups, initially skeptical, were disarmed (literally) by the lack of real firearms, reminiscent of the use of lasers instead of real weapons in 80´s cartoons. Meanwhile, hardcore fans modded the game to add realistic gun sounds, only for the devs to patch it out—replacing bullet noises with squeaky toy sounds instead.<br><br>As such, as both version allowed for cross play between the two, the NERF version became almost as popular as the real deal, making some wonder if it’ll become the official version in violence adverse nations like Germany or state like California. Still, other wonder if that game isn’t just the best marketed cash grab in existence as it sold a mod to change weapons for the same price as the original game.</p>`)
 e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/qAgut9j.png'})])
+}
+if (e.player_answers.includes(70001) || e.player_answers.includes(85026.5) && quickstats[0] >= 268) // Passed Crime Bill
+{
+    e.pages.push(`<span style="font-size: 32px; ">Prison Labor</span><br><br>
+        <p>Last Week Tonight With John Oliver (S6 EP19)<br><br>Ah, the 13th Amendment—America’s bold declaration that slavery is over!<br><br>…Unless, of course, you’ve committed a crime, in which case, welcome back to the plantation!" (said with a nasally southern impression)<br><br>Because yes, the amendment that supposedly abolished slavery in 1865 technically did… except for this one hilariously convenient exception: "except as punishment for crime." And oh boy, did America immediately start treating that loophole like an all-you-can-exploit buffet.<br><br>Now, to be fair, when this was written, it wasn’t supposed to be a permanent feature—like how a "temporary" McDonald’s breakfast menu item somehow becomes a way of life. But here’s the kicker: <b>it wasn’t even punishable to enslave someone under this exception until 1941.</b> That’s right—for 76 years, this wasn’t a bug in the system; it was the entire operating system.<br><br>And while we’ve (thankfully) moved past the days when cops would just round up Black people and immigrants for funsies, the prison system has kept itself busy finding other ways to turn human beings into <b>literal ATMs.</b> Because nothing says "justice" like forcing inmates to work for pennies while corporations rake in the profits.<br><br>The incentives here are batshit: <br><br><ul><li>On one hand, no matter how much Republicans would like you to believe prisons are just <b>"the place criminals live in forever"</b>, prisons are supposed to rehabilitate people.</li><li>On the other hand, if you rehabilitate them, you lose your workforce! So, naturally, the system magically decides some people are just too dangerous to release—conveniently right around the time their labor becomes profitable.</li></ul><br><br>And here’s the real kicker: The U.S. incarcerates more people than China—a country with four times our population that literally runs re-education labor camps. That’s right—a communist dictatorship locks up fewer people than the 'Land of the Free.'<br><br>So congratulations, America! We may not be the most violent country, but we are the best at turning punishment into profit—because nothing screams "freedom" like a prison-industrial complex that never misses a chance to monetize human misery.<br><br>(Cut to a close up stare of John Oliver.)</p>`)
+e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/6XEtZqy.png'})])
 }
 return construct(0);
 }
