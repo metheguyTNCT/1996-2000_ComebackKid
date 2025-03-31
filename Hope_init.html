@@ -374,6 +374,14 @@ background-color: #DDE7FE;
 }
 </style>`
 
+styling = document.createElement("style");
+document.head.appendChild(styling);          
+styling.innerHTML = `
+body {
+    background-size: cover;
+}
+`
+
 // Tooltips
 function addDynamicCSS() {
   var css = `
