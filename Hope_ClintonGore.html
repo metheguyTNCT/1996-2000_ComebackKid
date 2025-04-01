@@ -67,15 +67,6 @@ function ctsAchievement(achievement, difficultyChecker = true){
 	}
 }
 campaignTrail_temp.questions_json = [
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_1_inauguration",
-        "fields": {
-            "priority": 0,
-            "description": "Yesterday, you knelt at the grave of John F. Kennedy. As you placed a white rose on his tombstone, you silently vowed to continue the work he began. Today, you stand proudly, facing the gathered masses of Washington. The boy from Hope, Arkansas is now Commander-in-chief. You begin your speech, the first of many.",
-            "likelihood": 1
-        }
-    },
         {
         "model": "campaign_trail.question",
         "pk": "question_5_healthcare_task_force",
@@ -100,15 +91,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 1,
             "description": "Twelve years of the Gipper and Old Man Bush's so-called ''fiscal responsibility'' have left America drowning in a new kind of 'red scare'; not communism, but debt. Tax breaks for the wealthy drained the coffers, and by fiscal year 1992, the nation faced a recession and a $290 billion deficit. Now, your economic team, Bentsen at Treasury, Panetta at OMB, Reich at Labor, and Rubin as economic advisor, clash over the path forward. Bentsen urges deficit reduction to restore investor confidence, while Reich argues for policies to tackle stagnant wages and drive consumer spending.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_4_waco",
-        "fields": {
-            "priority": 2,
-            "description": "After a tense gunfight, ATF and FBI agents have begun a siege at the Branch Davidians’ Mount Carmel Center in Waco, Texas. Attorney General Janet Reno has approved an assault to end the standoff, citing concerns of child abuse inside the compound. The FBI has also been authorized to use CS gas during the operation. Will you back her decision, or propose another plan to resolve the siege?",
             "likelihood": 1
         }
     },
@@ -1425,38 +1407,6 @@ campaignTrail_temp.questions_json = [
 campaignTrail_temp.answers_json = [
     {
         "model": "campaign_trail.answer",
-        "pk": 10001,
-        "fields": {
-            "question": "question_1_inauguration",
-            "description": "Thomas Jefferson believed that preserving the very foundations of our nation would require bold and dramatic change from time to time. Well, my fellow citizens, that time is now. Let us embrace it."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 10002,
-        "fields": {
-            "question": "question_1_inauguration",
-            "description": "Our democracy should not only be the envy of the world but also the driving force behind our nation’s renewal. There is nothing wrong with America that cannot be fixed by what is right with America."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 10003,
-        "fields": {
-            "question": "question_1_inauguration",
-            "description": "While America rebuilds at home, we will not shy away from the challenges or miss the opportunities of this new world. Together with our friends and allies, we will work to guide and shape change, rather than let it overwhelm us."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 10004,
-        "fields": {
-            "question": "question_1_inauguration",
-            "description": "On behalf of our nation, I salute my predecessor, President Bush, for his half-century of dedicated service to America. I also thank the millions of men and women whose steadfastness and sacrifice enabled us to triumph over the Great Depression, fascism, and communism."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 20001,
         "fields": {
             "question": "question_2_wtc_bombing",
@@ -1505,14 +1455,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 40001,
-        "fields": {
-            "question": "question_4_waco",
-            "description": "If you think this is the right call, Janet, then you have my support. I trust your judgment, you’ve thought this through, and I know you’ll do what’s best."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 400012,
         "fields": {
             "question": "question_4andahalf_supremecourt",
@@ -1549,22 +1491,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_4andahalf_supremecourt",
             "description": "I don't want any damn story about this in the press. Let's go with Gilbert S. Merritt, that Carter appointee on the Sixth Circuit. I think he can bring some Republicans in the Senate on our side, and it could generate some goodwill. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 40002,
-        "fields": {
-            "question": "question_4_waco",
-            "description": "When I was Governor of Arkansas, we dealt with a CSA militia. All it took was a simple blockade, and they surrendered without any bloodshed. So here's my deal; what’s wrong with waiting them out? We’ve got time, and I’ll take patience over tragedy any day."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 40003,
-        "fields": {
-            "question": "question_4_waco",
-            "description": "Woah, hold on for a second. Did I hear CS gas has been authorized? And with children still inside that building? I won’t stand for it. You go back and tell them the gas is off the table, no exceptions, no circumstances. Our boys are trained for this."
         }
     },
     {
@@ -10249,16 +10175,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1118,
-        "fields": {
-            "answer": 40003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.0211211751
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1122,
         "fields": {
             "answer": 90001,
@@ -10415,16 +10331,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1161,
-        "fields": {
-            "answer": 40001,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01
         }
     },
     {
@@ -10599,16 +10505,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1231,
-        "fields": {
-            "answer": 40002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.001
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1240,
         "fields": {
             "answer": 70002,
@@ -10715,86 +10611,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12278,
-        "fields": {
-            "answer": 10002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.08421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12279,
-        "fields": {
-            "answer": 10001,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.08421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12280,
-        "fields": {
-            "answer": 10003,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.08421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12282,
-        "fields": {
-            "answer": 10004,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.0842154331675
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12278,
-        "fields": {
-            "answer": 10002,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.087812156
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12279,
-        "fields": {
-            "answer": 10001,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.087812154
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12280,
-        "fields": {
-            "answer": 10003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.087812155
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12282,
-        "fields": {
-            "answer": 10004,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.087812157
         }
     },
     {
@@ -10975,46 +10791,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12278,
-        "fields": {
-            "answer": 10002,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.0249421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12279,
-        "fields": {
-            "answer": 10001,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.0249421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12280,
-        "fields": {
-            "answer": 10003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.0249421543265
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12282,
-        "fields": {
-            "answer": 10004,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.024942154331675
         }
     },
     {
@@ -11395,86 +11171,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.001
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12654,
-        "fields": {
-            "answer": 40001,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": 0.001
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12654,
-        "fields": {
-            "answer": 40001,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.0025
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12654,
-        "fields": {
-            "answer": 40001,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.0995
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12654,
-        "fields": {
-            "answer": 40002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.0995
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12654,
-        "fields": {
-            "answer": 40003,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.0995
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12655,
-        "fields": {
-            "answer": 40002,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12656,
-        "fields": {
-            "answer": 40002,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12657,
-        "fields": {
-            "answer": 40003,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.00333
         }
     },
     {
@@ -20913,36 +20609,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 771,
-        "fields": {
-            "answer": 10001,
-            "issue": 27,
-            "issue_score": 0.2,
-            "issue_importance": 1
-        }
-    },
-    {
-	"model": "campaign_trail.answer_score_issue",
-        "pk": 771,
-        "fields": {
-            "answer": 10004,
-            "issue": 26,
-            "issue_score": -0.1,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 772,
-        "fields": {
-            "answer": 10002,
-            "issue": 30,
-            "issue_score": 0.05,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 15004.5,
@@ -21199,16 +20865,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": -0.125,
             "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 12281,
-        "fields": {
-            "answer": 10003,
-            "issue": 30,
-            "issue_score": -0.2,
-            "issue_importance": 2
         }
     },
     {
@@ -45388,24 +45044,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 708,
-        "fields": {
-            "answer": 40001,
-            "candidate": 77,
-            "answer_feedback": "Amid the chaos of the gas attack, the Davidians apparently start a fire that engulfs the entire building. You’re informed that twenty-eight children have perished, and you bury your face in your hands. You’re left grappling with the weight of guilt."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 709,
-        "fields": {
-            "answer": 40002,
-            "candidate": 77,
-            "answer_feedback": "Months drag by, and nearly all of the Davidians eventually surrender to authorities. Only Koresh’s most devoted followers remain by his side. When the hostage team’s patience finally runs out, those followers perish with him."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 709,
         "fields": {
             "answer": 400012,
@@ -45447,15 +45085,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 400015,
             "candidate": 77,
             "answer_feedback": "You knew it was risky to go with Mayor Hubbell, but you couldn't have imagined how bad the whiplash would be. He’s being pulled into the Whitewater abyss, and his entire reputation, his very being, is being slowly melted away. You quickly realize there's no way he's getting confirmed, and you drop him as fast as possible and end up appointing Janie Shores. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 710,
-        "fields": {
-            "answer": 40003,
-            "candidate": 77,
-            "answer_feedback": "The brutal room-to-room combat is suddenly interrupted by a fire. Who started it remains unclear, but what is known, and painfully visible, are ATF and FBI agents fleeing the flames while Branch Davidians gun them down, their world collapsing in fire and chaos. The media has a field day with the images."
         }
     },
     {
@@ -45744,42 +45373,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 170004,
             "candidate": 77,
             "answer_feedback": "Lake and his plan are accepted by all sides despite muted Serbian protests. On December 14th, 1995, the Dayton Agreement is signed, bringing an end to the war in the Balkans and boosting both your popularity at home and America’s standing abroad. Good going, Slick."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12240,
-        "fields": {
-            "answer": 10001,
-            "candidate": 77,
-            "answer_feedback": "Very Kennedyesque of you. If you keep your promises, and stay above Washington fighting, the American people will remember you in the same way."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12243,
-        "fields": {
-            "answer": 10002,
-            "candidate": 77,
-            "answer_feedback": " ''And so today, we pledge to end the era of deadlock and drift. A new season of American renewal is upon us.'' "
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12244,
-        "fields": {
-            "answer": 10003,
-            "candidate": 77,
-            "answer_feedback": "The old world of the Soviet giant is gone, and as the clock ticks closer to the new millennium, it’s clear that you are the leader destined to guide America into the future, at least for now."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12246,
-        "fields": {
-            "answer": 10004,
-            "candidate": 77,
-            "answer_feedback": "You salute President Bush, and the stage, and crowd erupts in applause. Later, you discover a letter he left behind in the Oval Office, written just for you, and, it's more touching than you would've expected. It reads…"
         }
     },
     {
@@ -49827,8 +49420,8 @@ cyoAdventure = function(a) {
         );
         
     }
-    if (e.question_number+1 == 15) {
-    if (e.player_answers.includes(10003)) {
+    if (e.question_number+1 == 13) {
+    if ((e.player_answers.includes(20001) || e.player_answers.includes(20002)) && e.player_answers.includes(80003)) {
     
         question_insert("question_9_nafta", {
             "model": "campaign_trail.question",
@@ -49870,7 +49463,7 @@ cyoAdventure = function(a) {
         });
     }
 }
-    if (e.question_number+1 == 11) {
+    if (e.question_number+1 == 9) {
     if (LEGWin >= 1) {
     question_insert("question_8_somalia", 
             {
@@ -49897,7 +49490,7 @@ cyoAdventure = function(a) {
     );
     }
     }
-    if (e.question_number+1 == 14) {
+    if (e.question_number+1 == 12) {
         if (ReichPoints >= 3) {
             question_insert("budget_3",  
                     {
@@ -49924,7 +49517,7 @@ cyoAdventure = function(a) {
                 );
             }
     }
-    if (e.question_number+1 == 16) {
+    if (e.question_number+1 == 14) {
     if (e.player_answers.includes(30003)) {
     if (e.player_answers.includes(88001.5)) {
         question_insert("insert_yeltsin_friendly", 
@@ -50144,9 +49737,9 @@ cyoAdventure = function(a) {
 }
 }
 }
-    if (e.question_number+1 == 5) {
+    if (e.question_number+1 == 3) {
     if (e.player_answers.includes(30001)) {
-        question_insert("question_4_waco", 
+        question_insert("question_3_deficit", 
             {
                 "model": "campaign_trail.question",
                 "pk": "budget_1_reich",
@@ -50158,7 +49751,7 @@ cyoAdventure = function(a) {
             }
         );
     } else if (e.player_answers.includes(30002)) {
-        question_insert("question_4_waco", 
+        question_insert("question_3_deficit", 
             {
                 "model": "campaign_trail.question",
                 "pk": "budget_1_bentsen",
@@ -50170,7 +49763,7 @@ cyoAdventure = function(a) {
             }
         );
     } else if (e.player_answers.includes(30003)) {
-        question_insert("question_4_waco", 
+        question_insert("question_3_deficit", 
             {
                 "model": "campaign_trail.question",
                 "pk": "budget_1_normal",
@@ -50213,7 +49806,7 @@ cyoAdventure = function(a) {
         );
     }
     }
-    if (e.question_number+1 == 21) {
+    if (e.question_number+1 == 19) {
         let oslo_question_1 = {
             "model": "campaign_trail.question",
             "pk": "oslo_question_1",
@@ -50270,7 +49863,7 @@ cyoAdventure = function(a) {
         }
         }
     }
-    if (e.question_number+1 == 21) {
+    if (e.question_number+1 == 20) {
         if (DisasterMidterms == 1) {
         question_insert("oslo_question_1", 
                 {
@@ -50392,7 +49985,7 @@ cyoAdventure = function(a) {
         }
         console.log(PublicSupport);
 	//Healthcare Vote inserter
-    if (e.question_number+1 == 17) {
+    if (e.question_number+1 == 16) {
 	let win_healthcare_vote_temp = {
 		"model": "campaign_trail.question",
 		"pk": "healthcare_vote_win",
@@ -50451,7 +50044,7 @@ else if (PublicSupport >= 15 && e.player_answers.includes(75001.5)) { PublicSupp
     question_insert("question_10_foreign_intervention",fail_healthcare_vote_temp);
 }
 }
-if (e.question_number+1 == 28) {
+if (e.question_number+1 == 26) {
 	let dnc_dean_badpell_badhillary = {
         "model": "campaign_trail.question",
         "pk": "dnc_dean_badpell_badhillary",
@@ -50832,7 +50425,7 @@ if (e.question_number+1 == 28) {
     }
 }
 }
-if (e.question_number+1 == 29) {
+if (e.question_number+1 == 27) {
 	let doma_normal = {
 		 "model": "campaign_trail.question",
         "pk": "question_18_defense_of_marriage",
@@ -50921,7 +50514,7 @@ if (e.question_number+1 == 29) {
         question_insert("dnc_landrieu_goodpell_goodhillary",doma_normal);
 }
 }
-     if (e.question_number+1 == 30){
+     if (e.question_number+1 == 28){
     let ques_19_alt = {
   "model": "campaign_trail.question",
         "pk": "question_19_alt",
@@ -50950,23 +50543,6 @@ if (e.question_number+1 == 29) {
     question_insert("question_ques_18_alt_win",question_19_pr_and_wo_act);
      }
      }
-// Inauguration CYOA
-if (ans == 10001) {
-    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises "bold and dramatic change"', "https://i.imgur.com/qiMob6P.png");  
-    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");
-}
-if (ans == 10002) {
-    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises to end "deadlock and drift"', "https://i.imgur.com/6AsVjB7.png");  
-    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-}
-if (ans == 10003) {
-    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, promises heavy foreign policy focus', "https://i.imgur.com/lvaTwmQ.png");  
-    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png"); 
-}
-if (ans == 10004) {
-    updateHeadlineWithImage("#headline0", 'Clinton officially sworn in, pledges bipartisanship and unity', "https://i.imgur.com/rb0Ohqt.png");  
-    updateHeadlineWithImage("#headline1", 'Clinton picks Janet Reno for Attorney General', "https://i.imgur.com/DeQq05T.png");  
-}
 //WTC Bombing CYOA
    if (ans ==  20001){
    PublicSupport += 2;
@@ -51105,16 +50681,6 @@ if (ans == 10004) {
     if (ans == 250002) {
     CasesSettled += 1;
     PublicSupport -= 1;
-    }
-    //Waco CYOA
-    if (ans == 40001){
-    PublicSupport -= 1;
-    }
-     if (ans == 40003){
-    PublicSupport -= 2;
-    }
-     if (ans == 40002){
-    PublicSupport += 1;
     }
     //Supreme Court CYOA
     if (ans == 400013){
@@ -51898,7 +51464,7 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
     campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#800080";
 }
-if (e.question_number+1 == 20){
+if (e.question_number+1 == 18){
     if (GotHealthcare == 1) {
     if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
     if (PublicSupport < 17) {
@@ -51982,7 +51548,7 @@ if (e.question_number+1 == 20){
     }
     }
     }
-    if (e.question_number+1 == 38){
+    if (e.question_number+1 == 36){
     if (OsloPoints >= 3) {
         question_insert("debate_dole", 
             {
@@ -52300,7 +51866,7 @@ if (e.question_number+1 == 20){
                 );
     }
 }
-    if (e.question_number+1 == 32){
+    if (e.question_number+1 == 30){
     let oslo_3 = {
         "model": "campaign_trail.question",
         "pk": "oslo_3",
@@ -52338,7 +51904,7 @@ if (e.question_number+1 == 20){
         question_insert("question_21_iraq_airstrikes",oslo_3);
     }
     }
-    if (e.question_number+1 == 24){
+    if (e.question_number+1 == 23){
         if (e.player_answers.includes(80004) && (e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5))) {
         CommieReturn += 1;
         ctsAchievement("Красный Призрак");
@@ -52456,7 +52022,7 @@ if (e.question_number+1 == 20){
         if (e.question_number+1 == 33){
         
         }
-        if (e.question_number+1 == 27){
+        if (e.question_number+1 == 25){
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     bushMentum();
     if (CommieReturn == 1){
