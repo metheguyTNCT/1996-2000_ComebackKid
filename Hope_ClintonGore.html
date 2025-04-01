@@ -52019,9 +52019,6 @@ if (e.question_number+1 == 18){
                     );
             }
         }
-        if (e.question_number+1 == 33){
-        
-        }
         if (e.question_number+1 == 25){
     if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     bushMentum();
@@ -52156,6 +52153,129 @@ if (e.question_number+1 == 18){
     
                 }
       ctsAchievement("Repeat Offender");
+            } else if (e.player_answers.includes(900015551) && e.player_answers.includes(88021.5)) {
+                forbesMentum();
+                question_insert("question_20_internet", 
+                    {
+                        
+                         "model": "campaign_trail.question",
+            "pk": "candidate_intro_forbes",
+            "fields": {
+                "priority": 0,
+                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
+                "likelihood": 1
+            }
+                        }
+                    
+                    );
+                    question_insert("oslo_4", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "campaign_1_forbes",
+            "fields": {
+                "priority": 0,
+                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience -- transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
+                "likelihood": 1
+            }
+        }
+        );
+
+        question_insert("campaign_1_forbes", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "campaign_2_forbes",
+                "fields": {
+                    "priority": 0,
+                    "description": "Steve Forbes is just an odd little man. A populist millionaire, an outsider that touts a standard insider platform, a single issue candidate touting a single issue that fires up no one -- all the while being a profoundly awkward man. Weighing up the options to attack him, you almost feel bad for him.",
+                    "likelihood": 1
+                }
+            }
+            );
+            question_insert("campaign_2_forbes", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "campaign_3_forbes",
+                "fields": {
+                    "priority": 0,
+                    "description": "Forbes is a dollar store Perot, down to having far less money than the tech magnate. But what he lacks in charisma and money he makes up for in passion, furiously hitting rally after rally while Perot runs a lackadaisical, disinterested campaign. In Perot’s strongest areas, Forbes seems ready to excel. How will you adapt?",
+                    "likelihood": 1
+                }
+            }
+            );
+            if (CommieReturn == 1) {
+                question_insert("campaign_3_forbes", 
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "debate_forbes_commies",
+                        "fields": {
+                            "priority": 0,
+                            "description": "For a media guy, Forbes sure is an unusual personality. You observe him practicing gesticulation while Jim Leher reads the rules of the debate, and trying to hide a smirk. By most people’s expectations, this will be a stomp. But that means Forbes will be benefiting from low expectations. Tread carefully, Slick -- a strong Forbes performance could be a fiasco. ",
+                            "likelihood": 1
+                        }
+                    }
+                    );
+            } else {
+                    question_insert("campaign_3_forbes", 
+                    {
+                        "model": "campaign_trail.question",
+                        "pk": "debate_forbes",
+                        "fields": {
+                            "priority": 0,
+                            "description": "For a media guy, Forbes sure is an unusual personality. You observe him practicing gesticulation while Jim Leher reads the rules of the debate, and trying to hide a smirk. By most people’s expectations, this will be a stomp. But that means Forbes will be benefiting from low expectations. Tread carefully, Slick -- a strong Forbes performance could be a fiasco. ",
+                            "likelihood": 1
+                        }
+                    }
+                    );
+            }
+            
+        } else if (FPWin <= 1) {
+            powellMentum();
+            question_insert("question_20_internet", 
+            {
+               
+    "model": "campaign_trail.question",
+    "pk": "candidate_intro_powell",
+    "fields": {
+    "priority": 0,
+    "description": "You glare at the TV unblinking as King Collin is coronated. With the backing of Bob Dole and George Bush, Powell gives a stiff speech on how his experience in the Gulf War leaves him ready to deal with the crisis you’ve left abroad and at home. With a bone thrown to the right wing through a reticent Don Nickles, you know only one thing for certain; this must be an ugly brawl.",
+    "likelihood": 1
+    }
+                }
+            
+            );
+            question_insert("oslo_4", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_1_powell",
+        "fields": {
+            "priority": 0,
+            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
+            "likelihood": 1
+        }
+    }
+    );
+            question_insert("campaign_2_powell", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "campaign_3_powell",
+            "fields": {
+                "priority": 0,
+                "description": "It eats away at you, reading the polls. There’s a real chance to show up Jimmy Carter and really sweep the South one last time for the Democrats. But it’s obvious why there’s such a chance, you can pretend it’s abortion and affirmative action all you like, but you know why. All your cynical instincts are telling you to push this forward -- will you?",
+                "likelihood": 1
+            }
+        }
+        );
+        question_insert("campaign_3_powell", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "debate_powell",
+            "fields": {
+                "priority": 0,
+                "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous. A lot more than during the ‘92 debates. What’s your tactic to handle him?",
+                "likelihood": 1
+            }
+        }
+        );
      } else if (Ideology == 0 || Ideology >= -2 && Ideology <= -1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
@@ -52489,7 +52609,7 @@ if (e.question_number+1 == 18){
                             );
                         // Gramm Inserters 
                         
-                     } else if (DisasterMidterms == 1) {
+                     } else if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
                         grammMentum();
                       question_insert("question_20_internet", 
                         {
@@ -52547,85 +52667,8 @@ if (e.question_number+1 == 18){
                                 }
                             }
                             );
-                //Forbes inserters
-                  } else if (RepublicanRevolution == 1) {
-                forbesMentum();
-                question_insert("question_20_internet", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
                         }
-                    
-                    );
-                    question_insert("oslo_4", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience -- transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-        }
-        );
-
-        question_insert("campaign_1_forbes", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "campaign_2_forbes",
-                "fields": {
-                    "priority": 0,
-                    "description": "Steve Forbes is just an odd little man. A populist millionaire, an outsider that touts a standard insider platform, a single issue candidate touting a single issue that fires up no one -- all the while being a profoundly awkward man. Weighing up the options to attack him, you almost feel bad for him.",
-                    "likelihood": 1
-                }
-            }
-            );
-            question_insert("campaign_2_forbes", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "campaign_3_forbes",
-                "fields": {
-                    "priority": 0,
-                    "description": "Forbes is a dollar store Perot, down to having far less money than the tech magnate. But what he lacks in charisma and money he makes up for in passion, furiously hitting rally after rally while Perot runs a lackadaisical, disinterested campaign. In Perot’s strongest areas, Forbes seems ready to excel. How will you adapt?",
-                    "likelihood": 1
-                }
-            }
-            );
-            if (CommieReturn == 1) {
-                question_insert("campaign_3_forbes", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "debate_forbes_commies",
-                        "fields": {
-                            "priority": 0,
-                            "description": "For a media guy, Forbes sure is an unusual personality. You observe him practicing gesticulation while Jim Leher reads the rules of the debate, and trying to hide a smirk. By most people’s expectations, this will be a stomp. But that means Forbes will be benefiting from low expectations. Tread carefully, Slick -- a strong Forbes performance could be a fiasco. ",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-            } else {
-                    question_insert("campaign_3_forbes", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "debate_forbes",
-                        "fields": {
-                            "priority": 0,
-                            "description": "For a media guy, Forbes sure is an unusual personality. You observe him practicing gesticulation while Jim Leher reads the rules of the debate, and trying to hide a smirk. By most people’s expectations, this will be a stomp. But that means Forbes will be benefiting from low expectations. Tread carefully, Slick -- a strong Forbes performance could be a fiasco. ",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-            }
-                        }
-                    } else if (Ideology <= -4){
-                //Specter Inserters
-                if (SlimGOPCongress == 1 || RepublicanRevolution == 1) {
+                    } else if (Ideology <= -4) {
                 specterMentum();
             question_insert("question_20_internet", 
                 {
@@ -52683,57 +52726,7 @@ if (e.question_number+1 == 18){
                     }
                 }
                 );
-                } else if (DisasterMidterms == 1) {
-                                    powellMentum();
-            question_insert("question_20_internet", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV unblinking as King Collin is coronated. With the backing of Bob Dole and George Bush, Powell gives a stiff speech on how his experience in the Gulf War leaves him ready to deal with the crisis you’ve left abroad and at home. With a bone thrown to the right wing through a reticent Don Nickles, you know only one thing for certain; this must be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("oslo_4", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-    }
-    );
-            question_insert("campaign_2_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_3_powell",
-            "fields": {
-                "priority": 0,
-                "description": "It eats away at you, reading the polls. There’s a real chance to show up Jimmy Carter and really sweep the South one last time for the Democrats. But it’s obvious why there’s such a chance, you can pretend it’s abortion and affirmative action all you like, but you know why. All your cynical instincts are telling you to push this forward -- will you?",
-                "likelihood": 1
             }
-        }
-        );
-        question_insert("campaign_3_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "debate_powell",
-            "fields": {
-                "priority": 0,
-                "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous. A lot more than during the ‘92 debates. What’s your tactic to handle him?",
-                "likelihood": 1
-            }
-        }
-        );
-                }
-                // Forbes Inserters
-            } 
         }
 let vpName = "Monica Lewinsky Error";
 vpTable = {
