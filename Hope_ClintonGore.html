@@ -9745,7 +9745,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 80,
             "state": 203,
-            "state_multiplier": 0.568
+            "state_multiplier": 0.658
         }
     },
     {
@@ -10180,7 +10180,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 90001,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.0951
+            "global_multiplier": 0.0751
         }
     },
     {
@@ -10200,7 +10200,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 900015551,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.07331191919751575
+            "global_multiplier": 0.05331191919751575
         }
     },
     {
@@ -11360,7 +11360,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 90001,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.00648547
+            "global_multiplier": 0.01648547
         }
     },
     {
@@ -11370,7 +11370,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 900015551,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.021612121
+            "global_multiplier": 0.031612121
         }
     },
     {
@@ -51935,8 +51935,35 @@ if (e.question_number+1 == 18){
                   
                   );
         } else {
-        if (e.player_answers.includes(80001) || e.player_answers.includes(80002) || e.player_answers.includes(80004)) {
+        if (e.player_answers.includes(80003) && e.player_answers.includes(85002.5)) {
             question_insert("question_16.5_jones_case", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+              question_insert("balanced_budget", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+        } else {
+                question_insert("question_16.5_jones_case", 
                 {
                    
           "model": "campaign_trail.question",
@@ -51962,33 +51989,6 @@ if (e.question_number+1 == 18){
                         }
                     
                     );
-        } else {
-            question_insert("question_16.5_jones_case", 
-                  {
-                     
-                    "model": "campaign_trail.question",
-                    "pk": "question_17_yugoslavia_win",
-                    "fields": {
-                        "priority": 3,
-                        "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                        "likelihood": 1
-                    }
-                      }
-                  
-                  );
-                question_insert("balanced_budget", 
-                  {
-                     
-                    "model": "campaign_trail.question",
-                    "pk": "question_17_yugoslavia_win",
-                    "fields": {
-                        "priority": 3,
-                        "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                        "likelihood": 1
-                    }
-                      }
-                  
-                  );
         }
         }
         }
