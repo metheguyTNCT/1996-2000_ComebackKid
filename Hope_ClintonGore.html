@@ -53965,14 +53965,6 @@ const candidates = [
         strategy: 'Don\'t play into the culture war talk, make the election about actual issues.'
     },
     {
-        name: 'Steve Forbes',
-        image: 'https://i.imgur.com/y6q3197.png',
-        description: 'The eccentric Editor-In-Chief of his grandfather\'s magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a "Flat Tax", which although in itself is very popular, he doesn\'t talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn\'t giving.',
-        pros: 'Flat Tax promise is very popular. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
-        cons: 'Almost no other policies besides Flat Tax. Very limited political and governmental experience. Very uncharismatic, comes off as robotic and non-humanoid at some points.',
-        strategy: 'Question him on issues besides Flat Tax, Tie him to oligarchs, and emphasize your experience as President.'
-    },
-    {
         name: 'Lamar Alexander',
         image: 'https://i.imgur.com/NCUN4Qf.png',
         description: 'Populist, but not on Pat\'s level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he\'ll need to paint himself as a new slice of conservatism.',
@@ -54345,7 +54337,6 @@ function changeOpponentsTab() {
 } if (DisasterMidterms == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Steve Forbes");
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Arlen Specter");
     addCandidate({
@@ -54356,6 +54347,15 @@ function changeOpponentsTab() {
         cons: 'Weak in the south, pro-choice which might not sit well with some Republicans.',
         strategy: 'Attempt to make it seem as if he has no legs of his own to stand on, and no personal conviction.'
     });
+} if (e.player_answers.includes(900015551) && e.player_answers.includes(88021.5)) {
+    addCandidate({
+        name: 'Steve Forbes',
+        image: 'https://i.imgur.com/y6q3197.png',
+        description: 'The eccentric Editor-In-Chief of his grandfather\'s magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a "Flat Tax", which although in itself is very popular, he doesn\'t talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn\'t giving.',
+        pros: 'Flat Tax promise is very popular. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
+        cons: 'Almost no other policies besides Flat Tax. Very limited political and governmental experience. Very uncharismatic, comes off as robotic and non-humanoid at some points.',
+        strategy: 'Question him on issues besides Flat Tax, Tie him to oligarchs, and emphasize your experience as President.'
+    });
 } if (RepublicanRevolution == 1) {
     deleteCandidateButton("Phil Gramm");
     deleteCandidateButton("Pat Buchanan");
@@ -54363,11 +54363,9 @@ function changeOpponentsTab() {
     deleteCandidateButton("Lamar Alexander");
 } if (SlimGOPCongress == 1) {
     deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Steve Forbes");
     deleteCandidateButton("Pete Wilson");
     deleteCandidateButton("Phil Gramm");
 } if (DoleNom == 1) {
-    deleteCandidateButton("Steve Forbes");
     deleteCandidateButton("Arlen Specter");
 } if (BuchananNom == 1) {
     deleteCandidateButton("Lamar Alexander");
@@ -54393,7 +54391,6 @@ function changeOpponentsTab() {
 } if (BushNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Steve Forbes");
     deleteCandidateButton("Pete Wilson");
     deleteCandidateButton("Arlen Specter");
     deleteCandidateButton("Colin Powell");
