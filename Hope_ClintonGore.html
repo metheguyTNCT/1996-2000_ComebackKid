@@ -394,24 +394,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "midterm_minor_gop_win_bush",
-        "fields": {
-            "priority": 0,
-            "description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You rebounded so well that Governor Richards even won her fight against George W. Bush. The House is unexpectedly competitive, and you retained control of the Senate-a combination that bodes well for passing your agenda and gives you the freedom to make some daring moves until ’96. What’s your plan from here?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "midterm_minor_gop_win_cuomo",
-        "fields": {
-            "priority": 0,
-            "description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You rebounded so well that Governor Cuomo even won his fight against George Pataki. The House is unexpectedly competitive, and you retained control of the Senate, a combination that bodes well for passing your agenda and gives you the freedom to take some daring moves until ’96. What’s your plan from here?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "midterm_gop_sweep",
         "fields": {
             "priority": 0,
@@ -2281,38 +2263,6 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "midterm_gop_sweep",
             "description": "Let’s try playing both sides, while not pivoting to any side, either. We’ve got an agenda, and that agenda is bipartisan, uncontroversial, and effective. This has been a blow, and we need to keep both sides pleased so we don't lose either. Let’s call for unity and for a good, proactive Congress."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 25011.5,
-        "fields": {
-            "question": "midterm_minor_gop_win_bush",
-            "description": "Woah, that’s great news for us. We gotta get to action nonetheless, the House’s still Republican, after all, let’s contact Gingrich and Dole, tell them we’re willing to work together, and make sure Congress is on our side. We agree with the Republicans in a few issues, and keeping things cordial will be good for our chances. We gotta talk to ‘em. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 25012.5,
-        "fields": {
-            "question": "midterm_minor_gop_win_bush",
-            "description": "We’re gonna be passing stuff now, big leagues. We promised significant change, and we’re gonna give it to America. These people, they voted for me because they wanted change, they wanted hope, and that’s what we’re going to give, our best we can, these people deserve it, and we’re gonna give them the change they asked for."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 25014.5,
-        "fields": {
-            "question": "midterm_minor_gop_win_cuomo",
-            "description": "Woah, that’s great news for us. We gotta get to action nonetheless, the House’s still Republican, after all, let’s contact Gingrich and Dole, tell them we’re willing to work together, and make sure Congress is on our side. We agree with the Republicans in a few issues, and keeping things cordial will be good for our chances. We gotta talk to ‘em. "
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 25015.5,
-        "fields": {
-            "question": "midterm_minor_gop_win_cuomo",
-            "description": "We’re gonna be passing stuff now, big leagues. We promised significant change, and we’re gonna give it to America. These people, they voted for me because they wanted change, they wanted hope, and that’s what we’re going to give, our best we can, these people deserve it, and we’re gonna give them the change they asked for."
         }
     },
     {
@@ -11235,56 +11185,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": -0.011
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12526,
-        "fields": {
-            "answer": 25011.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.012
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12529,
-        "fields": {
-            "answer": 25012.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.00991
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12533,
-        "fields": {
-            "answer": 25013.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.011
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12536,
-        "fields": {
-            "answer": 25014.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.012
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12539,
-        "fields": {
-            "answer": 25015.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.00991
         }
     },
     {
@@ -23219,26 +23119,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": -0.1,
             "issue_importance": 2
-        }
-    },
-    {
-	"model": "campaign_trail.answer_score_issue",
-        "pk": 12804,
-        "fields": {
-            "answer": 25012.5,
-            "issue": 28,
-            "issue_score": 0.26,
-            "issue_importance": 0.5
-        }
-    },
-    {
-	"model": "campaign_trail.answer_score_issue",
-        "pk": 12804,
-        "fields": {
-            "answer": 25015.5,
-            "issue": 28,
-            "issue_score": 0.26,
-            "issue_importance": 0.5
         }
     },
     {
@@ -46254,15 +46134,6 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12525,
-        "fields": {
-            "answer": 25011.5,
-            "candidate": 77,
-            "answer_feedback": "Although this is a good strategy if you're hoping to keep good relations with Congress, people were hoping for more here, they wanted change, and that doesn't seem that’s what you're giving them.\n"
-        }
-    },
-    {
       "model": "campaign_trail.answer_feedback",
       "pk": 12581,
       "fields": {
@@ -46278,42 +46149,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 220006,
             "candidate": 77,
             "answer_feedback": "As soon as the address ends, you breathe a sign a relief. Buckle up Slick, this is gonna be a tough few months."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12528,
-        "fields": {
-            "answer": 25012.5,
-            "candidate": 77,
-            "answer_feedback": "This provocative vision for change, similar to the likes of President Roosevelt, is surprisingly effective appealing to those folks who voted for you. This is seen as a win, and making that loud and clear is good for your appeal.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12532,
-        "fields": {
-            "answer": 25013.5,
-            "candidate": 77,
-            "answer_feedback": "The base is fired up. The Senators and the Congress people are encouraged to band together, yet the Republicans barely break a sweat. Only time will tell how this goes, but your confident.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12535,
-        "fields": {
-            "answer": 25014.5,
-            "candidate": 77,
-            "answer_feedback": "Although this is a good strategy if you're hoping to keep good relations with Congress, people were hoping for more here, they wanted change, and that doesn't seem that’s what you're giving them.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12538,
-        "fields": {
-            "answer": 25015.5,
-            "candidate": 77,
-            "answer_feedback": " This provocative vision for change, similar to the likes of President Roosevelt, is surprisingly effective appealing to those folks who voted for you. This is seen as a win, and making that loud and clear is good for your appeal.\n"
         }
     },
     {
@@ -50422,12 +50257,8 @@ cyoAdventure = function(a) {
         if (SlimGOPCongress == 1) {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
         question_insert("midterm_minor_gop_win_none",oslo_question_1_slimgop_start);
-        question_insert("midterm_minor_gop_win_bush",oslo_question_1_slimgop_start);
-        question_insert("midterm_minor_gop_win_cuomo",oslo_question_1_slimgop_start);
         } else {
             question_insert("midterm_minor_gop_win_none",oslo_question_1_slimgop);
-            question_insert("midterm_minor_gop_win_bush",oslo_question_1_slimgop);
-            question_insert("midterm_minor_gop_win_cuomo",oslo_question_1_slimgop);
         }
         } else {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
@@ -50611,10 +50442,8 @@ cyoAdventure = function(a) {
         question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
 else if (PublicSupport >= 15 && e.player_answers.includes(75001.5)) { PublicSupport +=
-    console.log("Kennedy healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
 } else if (PublicSupport >= 15 && e.player_answers.includes(65004.5)) {
-    console.log("Hillary healthcare vote triggered.");
     question_insert("question_10_foreign_intervention", win_healthcare_vote_hillary_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("question_10_foreign_intervention",refuse_healthcare_vote_temp);
@@ -52104,40 +51933,7 @@ if (e.question_number+1 == 20){
             );
             ctsAchievement("Counterrevolution");
     }
-    }
-     else if (e.player_answers.includes(40002) && (e.player_answers.includes(110004) || e.player_answers.includes(110003) ||e.player_answers.includes(110002))){
-        ctsAchievement("Counterrevolution");
-            DemCongress -= 1;
-            SlimGOPCongress += 1;
-            Legacy += 1;
-            question_insert ("question_11_midterm_prep", 
-				{
-					"model": "campaign_trail.question",
-					"pk": "midterm_minor_gop_win_bush",
-					"fields": {
-						"priority": 0,
-						"description": "Well, this is interesting. Much to the chagrin of the Republicans, you have had a surprisingly strong performance in the midterms, compared to the polls which showed a much worse scenario for your party, winning key races such as the Texas gubernational race. You have made the House surprisingly close, and kept the Senate, something which will be favorable to your agenda’s passing, and makes you freer to do some daring moves until ‘96. What’s your plan from now on?",
-						"likelihood": 1
-					}
-				}
-            );
-        } else if (e.player_answers.includes(20001) &&  e.player_answers.includes(110002)){
-            ctsAchievement("Counterrevolution");
-            DemCongress -= 1;
-            SlimGOPCongress += 1;
-            Legacy += 1;
-            question_insert ("question_11_midterm_prep", 
-				{
-					"model": "campaign_trail.question",
-					"pk": "midterm_minor_gop_win_cuomo",
-					"fields": {
-						"priority": 0,
-						"description": "Well, this is interesting. Much to the chagrin of the Republicans, you have had a surprisingly strong performance in the midterms, compared to the polls which showed a much worse scenario for your party, winning key races such as the New York gubernational race. You have made the House surprisingly close, and kept the Senate, something which will be favorable to your agenda’s passing, and makes you freer to do some daring moves until ‘96. What’s your plan from now on?",
-						"likelihood": 1
-					}
-				}
-            );
-        } else {
+    } else {
             ctsAchievement("Counterrevolution");
             DemCongress -= 1;
             SlimGOPCongress += 1;
@@ -52157,7 +51953,7 @@ if (e.question_number+1 == 20){
     } else if (GotHealthcare == 0) {
         if (PublicSupport <= 8){
 			DemCongress -= 1;
-            DisasterMidterms+= 1;
+            DisasterMidterms += 1;
 			question_insert ("question_11_midterm_prep", 
 				{
 					"model": "campaign_trail.question",
@@ -52182,8 +51978,7 @@ if (e.question_number+1 == 20){
                     "likelihood": 1
                 }
             }
-        );    
-        console.log("Republican Revolution")
+        );
     }
     }
     }
@@ -54436,146 +54231,13 @@ newButton.innerHTML = 'Personal Computer';
 
 // Attach the click event listener
 newButton.addEventListener('click', function () {
-        macBackground();
+    openHeadquarter();
 });
 
 // Insert the new button next to the reference button
 refButton.insertAdjacentElement('afterend', newButton);
 }
 
-let netscapePic; // Global variable for headquarters image
-let minsweeperPic; // Global variable for minsweeper image
-let closeMacButton;
-let loopingSound; // Declare loopingSound globally
-function macBackground() {
-    openHeadquarter();
-
-    // Select the target element
-    let targetElement = document.querySelector("#game_window");
-    if (!targetElement) {
-        console.error("Target element not found.");
-        return;
-    }
-
-    // Load sound but do not play initially
-    let loopingSound = new Audio('https://audio.jukehost.co.uk/e19IDfLbWvkktOmCzyC4s54Aj8g75CZI');
-    loopingSound.loop = true;
-    loopingSound.volume = 0.5;
-
-    // Create and set up a background container inside the target element
-    let bgContainer = document.createElement('div');
-    bgContainer.id = 'bgContainer';
-    bgContainer.style.position = 'absolute';
-    bgContainer.style.top = '0';
-    bgContainer.style.left = '0';
-    bgContainer.style.width = '100%';
-    bgContainer.style.height = '100%';
-    bgContainer.style.backgroundImage = 'url(https://i.imgur.com/gpdpc72.png)';
-    bgContainer.style.backgroundSize = 'cover';
-    bgContainer.style.backgroundPosition = 'center';
-    bgContainer.style.zIndex = '999';
-    targetElement.appendChild(bgContainer);
-    // Create the draggable picture element for Headquarters
-    netscapePic = document.createElement('img');
-    netscapePic.src = 'https://i.imgur.com/hbT1unU.png';
-    netscapePic.style.position = 'absolute';
-    netscapePic.style.right = '20px';
-    netscapePic.style.top = '40%';
-    netscapePic.style.transform = 'translateY(-50%)';
-    netscapePic.style.cursor = 'pointer';
-    netscapePic.style.zIndex = '1000';
-    targetElement.appendChild(netscapePic);
-
-    // Add click event to trigger openHeadquarters function
-    netscapePic.addEventListener('click', openHeadquarter);
-
-    // Create the draggable picture element for Minesweeper
-    minsweeperPic = document.createElement('img');
-    minsweeperPic.src = 'https://i.imgur.com/WHvQ8KI.png';
-    minsweeperPic.style.position = 'absolute';
-    minsweeperPic.style.left = '20px';
-    minsweeperPic.style.top = '40%';
-    minsweeperPic.style.transform = 'translateY(-50%)';
-    minsweeperPic.style.cursor = 'pointer';
-    minsweeperPic.style.zIndex = '1000';
-    targetElement.appendChild(minsweeperPic);
-
-    // Add click event to trigger Minesweeper window
-    minsweeperPic.addEventListener('click', openMinesweeper);
-
-    // Create a checkbox for sound settings
-    let soundContainer = document.createElement('div');
-    soundContainer.style.position = 'absolute';
-    soundContainer.style.bottom = '10px';
-    soundContainer.style.left = '10px';
-    soundContainer.style.background = 'linear-gradient(to right, #1e3c72, #2a5298)';
-    soundContainer.style.color = 'white';
-    soundContainer.style.padding = '5px 10px';
-    soundContainer.style.borderRadius = '5px';
-    soundContainer.style.zIndex = '1001';
-
-    let soundCheckbox = document.createElement('input');
-    soundCheckbox.type = 'checkbox';
-    soundCheckbox.id = 'soundToggle';
-    soundCheckbox.checked = false; // Default to OFF
-
-    let soundLabel = document.createElement('label');
-    soundLabel.htmlFor = 'soundToggle';
-    soundLabel.textContent = ' Enable Menu Music';
-    soundLabel.style.marginLeft = '5px';
-
-    // Toggle sound setting
-    soundCheckbox.addEventListener('change', function () {
-        if (soundCheckbox.checked) {
-            loopingSound.play();
-            audio.pause();
-        } else {
-            loopingSound.pause();
-            audio.play();
-            loopingSound.currentTime = 0; // Reset sound
-        }
-    });
-
-    soundContainer.appendChild(soundCheckbox);
-    soundContainer.appendChild(soundLabel);
-    targetElement.appendChild(soundContainer);
-
-    // Create the "Close Mac" button
-    closeMacButton = document.createElement('button');
-    closeMacButton.textContent = 'Close Mac';
-    closeMacButton.style.position = 'absolute';
-    closeMacButton.style.top = '10px';
-    closeMacButton.style.left = '10px';
-    closeMacButton.style.zIndex = '1001';
-    targetElement.appendChild(closeMacButton);
-
-    // hide them until you press exitbutton
-    netscapePic.style.display = 'none';
-    minsweeperPic.style.display = 'none';
-    closeMacButton.style.display = 'none';
-
-    // Add event listener to the "Close Mac" button
-    closeMacButton.addEventListener('click', function() {
-            bgContainer.style.display = 'none';
-            netscapePic.style.display = 'none';
-            minsweeperPic.style.display = 'none';
-            closeMacButton.style.display = 'none';
-            soundContainer.style.display = 'none';
-
-            // Ensure hqDiv and mainDiv exist before trying to hide them
-            let hqDiv = document.getElementById('hqDiv');
-            let mainDiv = document.getElementById('mainDiv');
-
-            if (hqDiv) hqDiv.style.display = 'none';
-            if (mainDiv) mainDiv.style.display = 'none';
-
-            // Stop and reset sound completely
-            loopingSound.pause();
-            audio.play();
-            loopingSound.currentTime = 0;
-            soundCheckbox.checked = false; // Uncheck the box
-        } );
-}
 // Declare globally to initialize only once
 let cnnContent;
 let hqContent;
@@ -55357,9 +55019,6 @@ function openHeadquarter() {
         console.error("Game window not found!");
         return;
     }
-    if (netscapePic) netscapePic.style.display = 'none';
-    if (minsweeperPic) minsweeperPic.style.display = 'none';
-    if (closeMacButton) closeMacButton.style.display = 'none';
     hqDiv = document.createElement('div');
     hqDiv.id = 'headquarter';
     hqDiv.style.position = 'absolute';
@@ -55412,9 +55071,6 @@ function openHeadquarter() {
             const section = document.getElementById(id);
             if (section) section.style.display = 'none';
         });
-        if (netscapePic) netscapePic.style.display = 'block';
-        if (minsweeperPic) minsweeperPic.style.display = 'block';
-        if (closeMacButton) closeMacButton.style.display = 'block';
         hqDiv.remove();
     };
 
