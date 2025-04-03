@@ -54694,17 +54694,27 @@ function changeOpponentsTab() {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pete Wilson");
     deleteCandidateButton("Phil Gramm");
+    addCandidate({
+        name: 'Dan Quayle',
+        image: 'https://i.imgur.com/KZhSlBk.png',
+        description: 'He may be no Jack Kennedy, but he is looking like an increasingly likely contender for 1996. If he figures out how to turn his reputation around, watch out.',
+        pros: 'Young, excites Religious Right',
+        cons: 'Near-constant gaffes, ideas far outside the mainstream',
+        strategy: 'Paint him as unfit for office, seize on every misstatement he makes'
+    });
 } if (DoleNom == 1) {
     deleteCandidateButton("Arlen Specter");
 } if (BuchananNom == 1) {
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Dan Quayle");
 } if (LamarNom == 1) {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Arlen Specter");
 } if (SpecterNom == 1) {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Lamar Alexander");
+    deleteCandidateButton("Dan Quayle");
 } if (ForbesNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Arlen Specter");
