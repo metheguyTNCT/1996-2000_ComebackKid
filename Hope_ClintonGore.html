@@ -2968,6 +2968,30 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+	"model": "campaign_trail.answer",
+        "pk": 36001.531,
+        "fields": {
+            "question": "debate_bono",
+            "description": "I want to thank the great people of Nevada for their hospitality, and Congressman Bono. I know a lot gets said during a campaign, but during these last four years, we've had stable, confident leadership in the White House. More work remains to be done, but the American people can rest easy knowing they have a steady hand in the Oval Office."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 36002.531,
+        "fields": {
+            "question": "debate_bono",
+            "description": "My friends here in Nevada, and my fellow Americans across this great nation, it is not with joy that I say the man standing next to me is a puppet for forces on the hard right, folks like Newt Gingrich, Pat Buchanan, and even bizarre groups like the Church of Scientology. This is not the kind of leadership America can trust right now."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 36003.531,
+        "fields": {
+            "question": "debate_bono",
+            "description": "Where were we four years ago, America? We had rising unemployment, fear on our streets, and a deep uneasiness at the kitchen table. Families were hurting, and Washington was spinning its wheels. But thanks to your efforts, and the hard work we’ve done together, things are getting better, steadily, surely, day by day. We’re not finished yet, but we are headed in the right direction."
+        }
+    },
+    {
         "model": "campaign_trail.answer",
         "pk": 36002.5,
         "fields": {
@@ -3821,7 +3845,7 @@ campaignTrail_temp.answers_json = [
         "pk": 86010.522,
         "fields": {
             "question": "campaign_3_bono",
-            "description": "I know the folks up in the Midwest are upset about NAFTA, but the fact of the matter is, Perot is unserious, and I don't think Sonny Bono even understands how the economy works. Let's plan some visits over there.  "
+            "description": "I know the folks up in the Midwest are upset about NAFTA, but the fact of the matter is, Perot is unserious, and I don't think Sonny Bono even understands how the economy works, let alone trade policy. Let's plan some visits over there.  "
         }
     },
     {
@@ -9745,7 +9769,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 80,
             "state": 203,
-            "state_multiplier": 0.568
+            "state_multiplier": 0.5361
         }
     },
     {
@@ -12101,6 +12125,56 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.04
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.531,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0051
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36003.531,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0171
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36003.531,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.00896
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36002.531,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0114
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36002.531,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0164
         }
     },
     {
@@ -19990,7 +20064,7 @@ campaignTrail_temp.answer_score_global_json = [
              "answer": 88005.5,
              "candidate": 77,
              "affected_candidate": 80,
-             "global_multiplier": 0.0696
+             "global_multiplier": 0.0712
          }
      },
      {
@@ -20000,7 +20074,7 @@ campaignTrail_temp.answer_score_global_json = [
              "answer": 88005.5,
              "candidate": 77,
              "affected_candidate": 79,
-             "global_multiplier": -0.0766
+             "global_multiplier": -0.0778
          }
      },
      {
@@ -46141,6 +46215,33 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.531,
+            "candidate": 77,
+            "answer_feedback": "''Who slipped a chill pill in your water, Mr. President?'' the press jokes. But as you speak with calm ease and a faint, knowing smile, the tension in the room begins to soften. Even the press corps, once restless, leans in a little closer. Whether this approach will disarm Bono’s theatrics or backfire remains to be seen. Still, in this moment, you feel steady. You feel just aright."
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36002.531,
+            "candidate": 77,
+            "answer_feedback": "This is undoubtedly an aggressive line to take. Bono’s ties to the Church of Scientology have been whispered about since his campaign began, with the litigious church quickly threatening lawsuits against critics. After your live denunciation, Sea Org members began protesting your events, heckling your speeches, and occasionally clashing with the Secret Service -- all while Bono plays dumb and talks about religious freedom."
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36003.531,
+            "candidate": 77,
+            "answer_feedback": "And just like that... it seems you had won the debate. The fact of the matter is that, yes, most Americans do agree the economy is working better, and working better for them and their families, than it was in 1992. Whatever semantics about tax policy or morality Bono tries to bounce off that, your words will sit immortal in the short-term memory of voters, and it’s clear you had a good night."
+        }
+    },
+    {
         "model": "campaign_trail.answer_feedback",
         "pk": 12673,
         "fields": {
@@ -52347,7 +52448,7 @@ if (e.question_number+1 == 18){
                       "pk": "campaign_3_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "You’ve talked about the issues that affect the nation more widely, but you shouldn't forget the work needed on the states that will decide us the election. Whatever Dole’s gonna to do, you’ll have to strike your own where it matters.",
+                          "description": "You’ve talked about the issues that affect the nation more broadly, but it’s clear Sonny Bono is focusing his efforts on a few select regions. If you want to beat him, you’ll have to make your own mark across the map. How do you plan to respond and compete in the battlegrounds of America? ",
                           "likelihood": 1
                       }
                 }
@@ -52355,10 +52456,10 @@ if (e.question_number+1 == 18){
                  question_insert("campaign_3_bono", 
                 {
                            "model": "campaign_trail.question",
-                "pk": "debate_dole",
+                "pk": "debate_bono",
                 "fields": {
                     "priority": 0,
-                    "description": "You’re at Hartford, Connecticut. To your right is Senator Dole, the poor old soul. As he’s closing his opening statement, you think, why did he run? Doesn’t he see the polls? This must be one of the most lopsided elections ever, to be on the receiving end of it for all to see? Perhaps it doesn’t matter to him, maybe he sees something you don’t? If so, then you have to stop him here. For his own good, send him to retirement.\n",
+                    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you. It's your turn, Mr. President. ",
                     "likelihood": 1
                 }
                 }
