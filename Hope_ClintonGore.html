@@ -51364,9 +51364,6 @@ if (e.question_number+1 == 27) {
     if (ans == 250001 || ans == 250003) {
     PublicSupport -= 2;
     }
-    if (ans == 250004) {
-    PublicSupport += 1;
-    }
     if (ans == 250002) {
     CasesSettled += 1;
     PublicSupport -= 1;
@@ -51610,7 +51607,6 @@ if (e.question_number+1 == 27) {
     //Government Shutdown CYOA
     if (ans == 150001){
     PublicSupport += 1;
-    Legacy += 1;
     }
     if (ans == 150002){
     PublicSupport -= 1;
@@ -51654,7 +51650,6 @@ if (e.question_number+1 == 27) {
     if (ans == 170001 || ans == 170004) {
     PublicSupport += 1;
     FPWin += 1;
-    Legacy += 1;
     }
     if (ans == 170002 || ans == 170005){
     PublicSupport -= 1;
@@ -51667,6 +51662,7 @@ if (e.question_number+1 == 27) {
     if (ans == 170006){
     PublicSupport += 2;
     FPWin += 1;
+    Legacy += 1;
     ctsAchievement("Color Revolution Theory");
     }
     //DOMA CYOA
