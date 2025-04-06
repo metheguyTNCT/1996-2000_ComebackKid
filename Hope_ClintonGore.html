@@ -11010,7 +11010,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 100002,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.0115
+            "global_multiplier": 0.01175
         }
     },
     {
@@ -51428,6 +51428,9 @@ if (e.question_number+1 == 27) {
    }
    if (ans == 100002) {
     FPWin += 1;
+   }
+    if (ans == 1000021) {
+    FPWin -= 1;
    }
     if (ans == 100003) {
     PublicSupport += 1;
