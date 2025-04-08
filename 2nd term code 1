@@ -946,7 +946,83 @@ function addDynamicCSS() {
 
 
 addDynamicCSS();
+const startScreenUpdater = setInterval(function() {
+  const selectElement = document.getElementById('running_mate_id');
+  if (!selectElement) return; // if not found yet, skip this loop
 
+  if (!localStorage.getItem("LEBRON")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '87') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("CURRY")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '88') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("DURANT")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '89') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("WESTBROOK")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '90') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("HARDEN")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '91') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("LILLARD")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '92') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("JORDAN")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '93') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("KOBE")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '94') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("ALI")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '95') {
+        selectElement.remove(i);
+      }
+    }
+  }
+  if (!localStorage.getItem("CLINTON")) {
+    for (let i = selectElement.options.length - 1; i >= 0; i--) {
+      if (selectElement.options[i].value === '96') {
+        selectElement.remove(i);
+      }
+    }
+  }
+
+  clearInterval(startScreenUpdater); // done, stop checking
+}, 10); // slightly more forgiving than 1ms
 tooltipList = [
 // Personal people
 {searchString: "John F. Kennedy", explanationText: "<img src=https://i.imgur.com/kzOOLfE.png> My Hero"},
