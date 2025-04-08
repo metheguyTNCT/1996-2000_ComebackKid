@@ -328,29 +328,6 @@ campaignTrail_temp.candidate_json = [
 },
 {
   "model": "campaign_trail.candidate",
-  "pk": 90,
-  "fields": {
-      "first_name": "Dan",
-      "last_name": "Quayle",
-      "election": 9,
-      "party": "Republican",
-      "state": "Indiana",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/wMo8Xfr.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Potatoe</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
   "pk": 91,
   "fields": {
       "first_name": "John",
@@ -368,52 +345,6 @@ campaignTrail_temp.candidate_json = [
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
       "description_as_running_mate": "<p>Congressman of Ohio</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
-  "pk": 92,
-  "fields": {
-      "first_name": "Jack",
-      "last_name": "Kemp",
-      "election": 9,
-      "party": "Republican",
-      "state": "New York",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/XkMW48y.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Bills QB turned politician</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
-  "pk": 93,
-  "fields": {
-      "first_name": "Newt",
-      "last_name": "Gingrich",
-      "election": 9,
-      "party": "Republican",
-      "state": "Georgia",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/Ik35Pst.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Speaker of the House</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -657,34 +588,10 @@ campaignTrail_temp.running_mate_json = [
 },
 {
   "model": "campaign_trail.running_mate",
-  "pk": 57,
-  "fields": {
-      "candidate": 78,
-      "running_mate": 90
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
   "pk": 58,
   "fields": {
       "candidate": 78,
       "running_mate": 91
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
-  "pk": 59,
-  "fields": {
-      "candidate": 78,
-      "running_mate": 92
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
-  "pk": 60,
-  "fields": {
-      "candidate": 78,
-      "running_mate": 93
   }
 },
 {
@@ -971,30 +878,9 @@ const startScreenUpdater = setInterval(function() {
       }
     }
   }
-  if (!localStorage.getItem("WESTBROOK")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '90') {
-        selectElement.remove(i);
-      }
-    }
-  }
   if (!localStorage.getItem("HARDEN")) {
     for (let i = selectElement.options.length - 1; i >= 0; i--) {
       if (selectElement.options[i].value === '91') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("LILLARD")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '92') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("JORDAN")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '93') {
         selectElement.remove(i);
       }
     }
