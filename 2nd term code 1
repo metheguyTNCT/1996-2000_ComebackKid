@@ -104,7 +104,7 @@ campaignTrail_temp.candidate_json = [
           "last_name": "Reform Party",
           "election": 9,
           "party": "Reform",
-          "state": "Virginia",
+          "state": "Nationwide",
           "priority": 4,
           "description": "Hopefuls looking to reform America",
           "color_hex": "#800080",
@@ -252,7 +252,7 @@ campaignTrail_temp.candidate_json = [
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Texas governor hopeful</p>",
+      "description_as_running_mate": "<p>Texas governor</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -436,7 +436,7 @@ campaignTrail_temp.candidate_json = [
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>New York Governor hopeful</p>",
+      "description_as_running_mate": "<p>New York Governor</p>",
       "candidate_score": 0,
       "running_mate": true
   }
@@ -455,7 +455,7 @@ campaignTrail_temp.candidate_json = [
       "color_hex": "#CD0B0A",
       "secondary_color_hex": "#DC5B5A",
       "is_active": 0,
-      "image_url": "https://i.imgur.com/h2sOQZU.png",
+      "image_url": "https://i.imgur.com/zbHuxxJ.png",
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
@@ -806,7 +806,7 @@ campaignTrail_temp.temp_election_list = [
       "id": 9,
       "year": 2000,
       "is_premium": 0,
-      "display_year": "HOPE 2"
+      "display_year": "TOO CLOSE TO CALL"
   }
 ]
 
@@ -834,11 +834,11 @@ jet_data = {
 
 
 
-quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt Gingrich", "<q> There is no them; there's only us.</q> - Bill Clinton", "<q>War has rules, mud wrestling has rules — politics has no rules.​</q> - Ross Perot", "<q>Old guys can still do fun things.​</q> - George Bush", "<q>If Al Gore invented the internet, I invented spell check.​</q> - Dan Quayle", "<q>The economy has produced 6.1 million jobs since I became president, and if Michael Jordan comes back to the Bulls, it will be 6,100,001 jobs.</q> - Bill Clinton", "<q> Bill Clinton's foreign policy experience stems mainly from having breakfast at the International House of Pancakes.</q> - Pat Buchanan", "<q>If you're sick and tired of the politics of cynicism and polls and principles, come and join this campaign.​</q> - George W. Bush", "<q>We are in it, now we must win it.​</q> - John McCain", "<q>I didn't think it was wrong; I thought it was a neat idea.</q> - Oliver North"]
+quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt Gingrich", "<q>War has rules, mud wrestling has rules — politics has no rules.​</q> - Ross Perot", "<q>If Al Gore invented the internet, I invented spell check.​</q> - Dan Quayle", "<q> Bill Clinton's foreign policy experience stems mainly from having breakfast at the International House of Pancakes.</q> - Pat Buchanan", "<q>If you're sick and tired of the politics of cynicism and polls and principles, come and join this campaign.​</q> - George W. Bush", "<q>We are in it, now we must win it.​</q> - John McCain", "<q>I didn't think it was wrong; I thought it was a neat idea.</q> - Oliver North"]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
 
 
-corrr=`\n<h2>HOPE 2</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+corrr=`\n<h2>TOO CLOSE TO CALL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
 
 
@@ -1237,21 +1237,21 @@ function setupRandomizeButton() {
   
   
     const song1 = new Song(
-    "Don't Stop",
-    "Fleetwood Mac",
-    "https://audio.jukehost.co.uk/TmLgh4fOUUg0XL5ld4SABZc0DlUOsp36"
+    "Walking on the Sun",
+    "Smash Mouth",
+    "https://files.catbox.moe/jgcx50.mp3"
   );
   
   const song2 = new Song(
-    "For Once In My Life",
-    "Stevie Wonder",
-    "https://audio.jukehost.co.uk/JJZCEsKd9jgmEsE4N11eAE0OGcpJESFn"
+    "Airbag",
+    "Radiohead",
+    "https://files.catbox.moe/z5a3qc.mp3"
   );
 
   const song3 = new Song(
-  "Uptown Girl",
-  "Billy Joel",
-  "https://audio.jukehost.co.uk/LpRATLUtWycgf6dpnk9d8DBuy3uXEu2H"
+  "Sleep Now in the Fire",
+  "Rage Against the Machine",
+  "https://audio.jukehost.co.uk/qozzcT2pN8to9iZLd5rrOoXVLIXF24mo"
   );
 
   const song4 = new Song(
