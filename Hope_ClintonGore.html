@@ -2208,6 +2208,14 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+	"model": "campaign_trail.answer",
+        "pk": 2500911.5,
+        "fields": {
+            "question": "midterm_gop_sweep",
+            "description": "Enough games. Panetta’s a friend of mine, and he can stay in the White House, but we’ve got to bring on Dick Morris, and make it official. I want him as my chief of staff, and I want him in every single fucking meeting. This is dead serious, and he knows just what to do. And, yes, he gets the say over everyone of those liberal bastards we have in the cabinet."
+        }
+    },
+    {
         "model": "campaign_trail.answer",
         "pk": 25017.5,
         "fields": {
@@ -8228,7 +8236,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 183,
-            "state_multiplier": 0.756676336336
+            "state_multiplier": 0.751676336336
         }
     },
     {
@@ -8687,7 +8695,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 183,
-            "state_multiplier": 1.24998898997898921121611285
+            "state_multiplier": 1.2599878898997898921121611285
         }
     },
     {
@@ -13445,12 +13453,52 @@ campaignTrail_temp.answer_score_global_json = [
 },
 {
     "model": "campaign_trail.answer_score_global",
+    "pk": 12703,
+    "fields": {
+        "answer": 25008.5,
+        "candidate": 77,
+        "affected_candidate": 78,
+        "global_multiplier": 0.0125
+    }
+},
+{
+    "model": "campaign_trail.answer_score_global",
     "pk": 12705,
     "fields": {
         "answer": 25009.5,
         "candidate": 77,
         "affected_candidate": 77,
         "global_multiplier": -0.02
+    }
+},
+    {
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12705,
+    "fields": {
+        "answer": 2500911.5,
+        "candidate": 77,
+        "affected_candidate": 77,
+        "global_multiplier": -0.0268
+    }
+},
+    {
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12705,
+    "fields": {
+        "answer": 2500911.5,
+        "candidate": 77,
+        "affected_candidate": 78,
+        "global_multiplier": -0.0121
+    }
+},
+    {
+    "model": "campaign_trail.answer_score_global",
+    "pk": 12705,
+    "fields": {
+        "answer": 2500911.5,
+        "candidate": 77,
+        "affected_candidate": 79,
+        "global_multiplier": 0.02
     }
 },
     {
@@ -21014,6 +21062,46 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 110003,
             "issue": 29,
             "issue_score": -0.1,
+            "issue_importance": 0.5
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 2500911.5,
+            "issue": 28,
+            "issue_score": -0.4,
+            "issue_importance": 1.0
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 25008.5,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 0.75
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 25007.5,
+            "issue": 28,
+            "issue_score": -0.15,
+            "issue_importance": 0.5
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 25009.5,
+            "issue": 28,
+            "issue_score": -0.05,
             "issue_importance": 0.5
         }
     },
@@ -44977,6 +45065,182 @@ campaignTrail_temp.answer_score_state_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 228,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0233
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 228,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0233
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0333
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 219,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0287
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.012
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.013
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0051
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0061
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 193,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0095
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 193,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0033
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0095
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0095
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 191,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0287
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12837,
+        "fields": {
+            "answer": 2500911.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0287
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_state",
         "pk": 12838,
         "fields": {
@@ -47295,7 +47559,7 @@ campaignTrail_temp.answer_feedback_json = [
     "fields": {
         "answer": 25007.5,
         "candidate": 77,
-        "answer_feedback": "Congressional Republicans aren't surprised, but pleased. This is nonetheless a blow for your administration, though, and no kind of damage control will be able to negate that."
+        "answer_feedback": "Congressional Republicans aren’t surprised, but they’re pleased, and plenty of photos will be taken of you, Senator Dole, and Satan himself sitting in the Oval Office. However you spin it, this is still a blow to your administration, and no kind of damage control will be able to undo that."
     }
 },
 {
@@ -47304,7 +47568,7 @@ campaignTrail_temp.answer_feedback_json = [
     "fields": {
         "answer": 25008.5,
         "candidate": 77,
-        "answer_feedback": "Very uncharacteristic, and even more ineffective. Their sweeping majorities aren't going to turn for you because you spoke eloquently, this lowers your chances of passing more, while not being particularly popular, either. "
+        "answer_feedback": "Very uncharacteristic, and even more ineffective. The sweeping majorities of the Grand Old Party aren’t going to turn for you just because you spoke eloquently. This lowers your chances of passing more, while not being particularly popular, either. "
     }
 },
 {
@@ -47313,7 +47577,16 @@ campaignTrail_temp.answer_feedback_json = [
     "fields": {
         "answer": 25009.5,
         "candidate": 77,
-        "answer_feedback": "You’ve effectively pleased both sides here. Gingrich is pleased you're willing to work with him, and your more liberal supporters are happy that you haven’t given up on enacting what you were promised to from the start."
+        "answer_feedback": "You’ve effectively pleased both sides here. Gingrich is happy you’re willing to work with him, and your more liberal supporters are relieved you haven’t abandoned what you promised from the start. But like most things that sound simple, it really isn’t. The truth is, your brand is starting to fade into the background of Washington."
+    }
+},
+    {
+    "model": "campaign_trail.answer_feedback",
+    "pk": 12704,
+    "fields": {
+        "answer": 2500911.5,
+        "candidate": 77,
+        "answer_feedback": "The press calls it your night of the long knives. Mother Jones runs ''Judas in the West Wing.'' The Cabinet’s furious, but Morris is in now, and you’re tightening the ship. Tie straight, voice steady, you talk school discipline, personal responsibility, and cleaning up TV. Even Gingrich and Dole, for all their disdain, can’t quite keep up. For the first time in months, your numbers inch upward."
     }
 },
     {
