@@ -2212,7 +2212,7 @@ campaignTrail_temp.answers_json = [
         "pk": 2500911.5,
         "fields": {
             "question": "midterm_gop_sweep",
-            "description": "Enough games. Panetta’s a friend of mine, and he can stay in the White House, but we’ve got to bring on Dick Morris, and make it official. I want him as my chief of staff, and I want him in every single fucking meeting. This is dead serious, and he knows just what to do. And, yes, he gets the say over everyone of those liberal bastards we have in the cabinet."
+            "description": "Enough games. Panetta’s a friend of mine, and he can stay in the White House, but we’ve got to bring on Dick Morris, and make it official. I want him as my chief of staff, and I want him in every single meeting. This is dead serious, and he knows just what to do. And, yes, he gets the say over everyone of those liberals we have in the Cabinet."
         }
     },
     {
@@ -13488,7 +13488,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 2500911.5,
         "candidate": 77,
         "affected_candidate": 78,
-        "global_multiplier": -0.0121
+        "global_multiplier": -0.0129
     }
 },
     {
@@ -13498,7 +13498,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 2500911.5,
         "candidate": 77,
         "affected_candidate": 79,
-        "global_multiplier": 0.02
+        "global_multiplier": 0.022
     }
 },
     {
@@ -51852,6 +51852,10 @@ if (e.question_number+1 == 27) {
     //Supreme Court CYOA
     if (ans == 400013){
     Ideology += 2;
+    }
+    //Supreme Court CYOA
+    if (ans == 2500911.5){
+    Ideology -= 1;
     }
     if (ans == 4000131){
     Ideology -= 1;
