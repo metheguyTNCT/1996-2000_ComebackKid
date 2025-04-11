@@ -1190,7 +1190,7 @@ if(!campaignTrail_temp.loaded1){
     var gamemodElem = document.getElementById('game_type_id');
   
     if(initialButton) { // reset theme at main menu
-      document.getElementById("header").src = "https://i.imgur.com/o3dxdIc.png";
+      document.getElementById("header").src = "https://i.imgur.com/W1EFaSn.png";
       document.forms["election_year"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Act I, Scene One</span>"
       document.getElementById("election_id_button").textContent = "\"Hello?\"";
       if(c && c != 77){
