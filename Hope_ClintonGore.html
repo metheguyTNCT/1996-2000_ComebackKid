@@ -475,6 +475,15 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+	"model": "campaign_trail.question",
+        "pk": "candidate_intro_cheney",
+        "fields": {
+            "priority": 0,
+            "description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that smirking fox, has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead -- America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: freshman governor of Tennessee and C-list actor Fred Thompson. What a joke. Still, you'll need to respond. ",
+            "likelihood": 1
+        }
+    },
+    {
         "model": "campaign_trail.question",
         "pk": "candidate_intro_wilson",
         "fields": {
@@ -2336,6 +2345,38 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+	"model": "campaign_trail.answer",
+        "pk": 3501010.5,
+        "fields": {
+            "question": "candidate_intro_cheney",
+            "description": "I respect Secretary Cheney’s experience, and all those who served, but the time he spent in the Ford and Bush administrations was a different era, my fellow Americans. We are moving, and we are moving fast, into the 21st century. Now isn’t the time to turn back."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 35010.5112,
+        "fields": {
+            "question": "candidate_intro_cheney",
+            "description": "Dick Cheney is out of step with his own party. Now listen, I respect his backbone on some of these social issues, but the coalition he’s carrying? They’re at odds with most Americans when it comes to fairness, decency, and the kind of diversity that makes this country strong. "
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 35010.51122,
+        "fields": {
+            "question": "candidate_intro_cheney",
+            "description": "Where were we four years ago today? I remember a country, strong, but struggling in some big ways. Today? We're on the move, working, and making tomorrow a brighter day. A vote for Dick Cheney is a vote for economic chaos, and for big tobacco, and the same old special interests that helped get us in that mess to begin with. "
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 35010.511223,
+        "fields": {
+            "question": "candidate_intro_cheney",
+            "description": "You don’t have to take my word for it, just look at his record. When Dick Cheney was in Congress, he voted against Head Start, against Meals on Wheels, against the Martin Luther King holiday. That’s not compassion, my friends. That’s not leadership. That’s not where America is headed. "
+        }
+    },
+    {
         "model": "campaign_trail.answer",
         "pk": 35011.5,
         "fields": {
@@ -2349,6 +2390,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "candidate_intro_specter",
             "description": "The world is the safest it’s been since the end of the Cold War, and that’s because of the incredible work of me, Hillary, Al and Secretary Christopher. If Senator Specter wants to try and say that’s not true, then I want to hear it."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 3501212.5,
+        "fields": {
+            "question": "candidate_intro_specter",
+            "description": "Wherever Specter goes, there’s chaos. He stays calm, sure—but look in his eyes, my friends, and you won’t find principle, you’ll find ambition. Blind, misplaced ambition. That’s not the kind of politics we need. That’s not the kind of politics that works."
         }
     },
     {
@@ -8749,7 +8798,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 189,
-            "state_multiplier": 1.09111211149989988987654321
+            "state_multiplier": 1.09678987649989988987654321
         }
     },
     {
@@ -17038,7 +17087,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 35012.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.022
+            "global_multiplier": -0.017
         }
     },
     {
@@ -17048,7 +17097,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 35012.5,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.025
+            "global_multiplier": 0.023
         }
     },
     {
@@ -17059,6 +17108,36 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.03
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12754,
+        "fields": {
+            "answer": 3501212.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.027
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12755,
+        "fields": {
+            "answer": 3501212.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.031
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12756,
+        "fields": {
+            "answer": 3501212.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.025
         }
     },
     {
@@ -41677,6 +41756,237 @@ campaignTrail_temp.answer_score_state_json = [
             }
         },
         {
+	    "model": "campaign_trail.answer_score_state",
+            "pk": 12757,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 203,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12758,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 195,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12759,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 205,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12760,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 184,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12761,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 198,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12762,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 204,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12763,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 181,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12764,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 189,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12765,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 190,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12766,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 222,
+                "candidate": 77,
+                "affected_candidate": 77,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12767,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 226,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12768,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 188,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12769,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 210,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12770,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 187,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12771,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 199,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12772,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 209,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.04
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12773,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 218,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.05
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12774,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 215,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.05
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12775,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 202,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.05
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12776,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 194,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.05
+            }
+        },
+        {
+            "model": "campaign_trail.answer_score_state",
+            "pk": 12777,
+            "fields": {
+                "answer": 3501212.5,
+                "state": 230,
+                "candidate": 77,
+                "affected_candidate": 78,
+                "state_multiplier": 0.05
+            }
+        },
+        {
             "model": "campaign_trail.answer_score_state",
             "pk": 12785,
             "fields": {
@@ -47410,6 +47720,33 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35010.5112,
+            "candidate": 77,
+            "answer_feedback": "You're keeping it subtle, but the political press knows what you mean. During his long-shot primary bid, Cheney gave written interviews nodding to a more ''nuanced'' viewpoint on certain social issues, specifically, ''the dignity of privacy.'' Nothing revolutionary, but enough to distance him from the fury of the Limbaugh-Gingrich wing. "
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35010.51122,
+            "candidate": 77,
+            "answer_feedback": "It’s certainly true that Cheney, the short-time CEO of defense industry titan Halliburton, who stepped down just before launching his long-shot bid for the presidency, has deep ties to big business and special interests. Still, some of your advisors are left scratching their heads at the unrepentant partisanship of your stance here.  "
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35010.511223,
+            "candidate": 77,
+            "answer_feedback": "While Cheney is no firebrand, it’s undeniable that during his time as an elected official from deep-red Wyoming, he cultivated a record likely further to the right than most Americans realize, especially given how relatively moderate he’s positioned himself during this cycle. Calling attention to that isn't a bad idea.  "
+        }
+    },
+    {
         "model": "campaign_trail.answer_feedback",
         "pk": 12716,
         "fields": {
@@ -48842,6 +49179,15 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 3501010.5,
+            "candidate": 77,
+            "answer_feedback": "Dick Cheney can be described a lot of ways, but boisterous, or even mocking, is not one of them. You seem to be joining him in taking a calm, measured tone in this contest. Let’s hope the American people appreciate it, eh? "
+        }
+    },
+    {
         "model": "campaign_trail.answer_feedback",
         "pk": 12727,
         "fields": {
@@ -48857,6 +49203,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 35012.5,
             "candidate": 77,
             "answer_feedback": "‘’We have an administration that calls appeasement with rogue powers like North Korea and China global safety, and that’s simply not true. We need to implement much harsher penalties on these states, including a removal of China’s most favoured nation status.’’ To your chagrin, he unites his coalition, even Pat Buchanan comments that Specter has a ‘’pragmatic’’ view on foreign relations."
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12753,
+        "fields": {
+            "answer": 3501212.5,
+            "candidate": 77,
+            "answer_feedback": "''We have a President in the Oval Office today who attacks, he attacks, and he attacks, and he attacks. And you know what, my friends? I wish him luck. I’m gonna keep shaking hands, and getting to know the people of this country a little better.'' Jesus Christ, Specter is such a weasel. So above it all. And the Republicans are going along with it. Spineless, stupid bastards."
         }
     },
     {
@@ -50482,6 +50837,7 @@ var DoleNom = 0
 var GrammNom = 0
 var BuchananNom = 0
 var SpecterNom = 0
+var CheneyNom = 0
 var BonoNom = 0
 var LamarNom = 0
 var WilsonNom = 0
@@ -52517,7 +52873,7 @@ document.head.appendChild(customStyling);
     function doleMentum() {
         DoleNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E03C35";
@@ -52527,7 +52883,7 @@ document.head.appendChild(customStyling);
     function bonoMentum() {
         BonoNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bono";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A9211D";
@@ -52552,7 +52908,7 @@ document.head.appendChild(customStyling);
     function lamarMentum() {
         LamarNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B22329";
@@ -52562,7 +52918,7 @@ document.head.appendChild(customStyling);
     function specterMentum() {
             SpecterNom += 1;
             campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
             campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
             campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
             campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C55653";
@@ -52571,12 +52927,24 @@ document.head.appendChild(customStyling);
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.2
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = 0.1
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.3
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.2
+    }
+    function CheneyMentum() {
+            CheneyNom += 1;
+            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
+            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#D91039";
+            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
+            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.12
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.3
     }
     function grammMentum() {
         GrammNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
@@ -52586,7 +52954,7 @@ document.head.appendChild(customStyling);
 function wilsonMentum() {
     WilsonNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
 campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
 campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F8657B";
@@ -52598,7 +52966,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
 function forbesMentum() {
     ForbesNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Forbes";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9A142C";
@@ -52608,7 +52976,7 @@ function forbesMentum() {
 function powellMentum() {
     PowellNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
-    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B81468";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#BD1251";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Buchanan";
@@ -52624,7 +52992,7 @@ function powellMentum() {
 function bushMentum() {
     BushNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/1tw9fG2.jpeg";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#136FC1";
@@ -53575,6 +53943,65 @@ if (e.question_number+1 == 18){
                 }
                 }
                 );
+    } else if (Ideology <= -4 && SlimGOPCongress == 1) {
+                                CheneyMentum();
+                            question_insert("question_20_internet", 
+                            {
+                               
+                "model": "campaign_trail.question",
+                "pk": "candidate_intro_cheney",
+                "fields": {
+                "priority": 0,
+                "description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that smirking fox, has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead -- America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: freshman governor of Tennessee and C-list actor Fred Thompson. What a joke. Still, you'll need to respond. ",
+                "likelihood": 1
+                }
+                                }
+                            
+                            );
+                            question_insert("oslo_4", 
+                {
+                           "model": "campaign_trail.question",
+                      "pk": "campaign_1_cheney",
+                      "fields": {
+                          "priority": 0,
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
+                          "likelihood": 1
+                      }
+                }
+                );
+                              question_insert("campaign_1_cheney", 
+                {
+                      "model": "campaign_trail.question",
+                      "pk": "campaign_2_cheney",
+                      "fields": {
+                          "priority": 0,
+                          "description": "The rise of Sonny Bono was nominally on the back of your carbon tax, but it doesn't take an expert to see he's tapping into a much deeper conservative discontent. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already tried by his Republican opponents during the bitter, and long primary race. How do you want to stop this guy?",
+                          "likelihood": 1
+                      }
+                }
+                );
+                                question_insert("campaign_2_cheney", 
+                {
+                      "model": "campaign_trail.question",
+                      "pk": "campaign_3_cheney",
+                      "fields": {
+                          "priority": 0,
+                          "description": "As of late, you've been focusing on the big picture, but it’s clear Sonny Bono is pin-pointing his campaign efforts, and focusing on a few select regions. If you want to beat him, you’ll have to make your own mark across the map. What regions in particular do you want to commit your focus to? ",
+                          "likelihood": 1
+                      }
+                }
+                );
+                 question_insert("campaign_3_cheney", 
+                {
+                           "model": "campaign_trail.question",
+                "pk": "debate_cheney",
+                "fields": {
+                    "priority": 0,
+                    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you. It's your turn, Slick. ",
+                    "likelihood": 1
+                }
+                }
+                );
      } else if (Ideology == 0 || Ideology >= -3 && Ideology <= -1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
@@ -53968,6 +54395,7 @@ if (e.question_number+1 == 18){
                             );
                         }
                     } else if (Ideology <= -4) {
+		    } if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
                 specterMentum();
             question_insert("question_20_internet", 
                 {
@@ -54042,6 +54470,7 @@ vpTable = {
     "Colin Powell" : "Don Nickles",
     "George Bush" : "George Allen",
     "Sonny Bono" : "Richard Lugar",
+    "Dick Cheney" : "Fred Thompson",
 
     "Ralph Nader" : "Winona LaDuke",
     "H. Ross Perot" : "Pat Choate",
