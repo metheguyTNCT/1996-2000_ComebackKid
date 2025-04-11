@@ -1,5 +1,31 @@
-campaignTrail_temp.election_json = [
+if(!campaignTrail_temp.loaded1){
+  campaignTrail_temp.global_parameter_json = [
   {
+      "model": "campaign_trail.global_parameter",
+      "pk": 1,
+      "fields": {
+          "vote_variable": 1.125,
+          "max_swing": 0.12,
+          "start_point": 0.94,
+          "candidate_issue_weight": 10,
+          "running_mate_issue_weight": 3,
+          "issue_stance_1_max": -0.71,
+          "issue_stance_2_max": -0.3,
+          "issue_stance_3_max": -0.125,
+          "issue_stance_4_max": 0.125,
+          "issue_stance_5_max": 0.3,
+          "issue_stance_6_max": 0.71,
+          "global_variance": 0.01,
+          "state_variance": 0.005,
+          "question_count": 50,
+          "default_map_color_hex": "#C9C9C9",
+          "no_state_map_color_hex": "#999999"
+      }
+  }
+  ]
+  
+  campaignTrail_temp.election_json = [
+    {
       "model": "campaign_trail.election",
       "pk": 9,
       "fields": {
@@ -15,19 +41,327 @@ campaignTrail_temp.election_json = [
           "display_year": "2000"
       }
   }
-]
-
-campaignTrail_temp.modBoxTheme = {
-  "header_color": "#5d84f2",
-  "header_text_color": "#000000",
-  "description_text_color": "#000000",
-  "description_background_color": "#ffffff",
-  "main_color": "#5d84f2",
-  "secondary_color": "#ffffff",
-  "ui_text_color": "#000000"
-}
-campaignTrail_temp.candidate_json = [
-  {
+  ]
+  
+  campaignTrail_temp.difficulty_level_json = JSON.parse("[{\"model\": \"campaign_trail.difficulty_level\", \"pk\": 1, \"fields\": {\"name\": \"Beginner\", \"multiplier\": 1.05}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 2, \"fields\": {\"name\": \"Normal\", \"multiplier\": 0.97}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 3, \"fields\": {\"name\": \"Difficult\", \"multiplier\": 0.92}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 4, \"fields\": {\"name\": \"Challenge\", \"multiplier\": 0.90}}]");
+  
+  campaignTrail_temp.modBoxTheme = {
+    "header_color": "#2D4443",
+    "header_image_url": "https://i.imgur.com/qkNzdKZ.png",
+    "header_text_color": "#ffffff",
+    "description_text_color": "#000000",
+    "description_background_color": "#ffffff",
+    "main_color": "#2D4443",
+    "secondary_color": "#1F1D19",
+    "ui_text_color": "#FFFFFF"
+  }
+  
+  campaignTrail_temp.temp_election_list = [
+    {
+        "id": 9,
+        "year": 2000,
+        "is_premium": 0,
+        "display_year": "TOO CLOSE TO CALL"
+    }
+  ]
+  
+  campaignTrail_temp.credits = "<button onclick='credits()'>The 𝐖. Team</button>"
+  
+  let savedX = null;
+  let savedY = null;
+  
+  credits = function() {
+    let questions = document.querySelector(".inner_window_question");
+  
+      // Check if the menu already exists
+      let popOutMenu = document.getElementById('popOutMenu');
+      if (!popOutMenu) {
+          // Create the pop-out menu container
+          popOutMenu = document.createElement('div');
+          popOutMenu.id = 'popOutMenu';
+          popOutMenu.style.position = 'absolute'; // Change to absolute for relative positioning
+          popOutMenu.style.width = '430px';
+          popOutMenu.style.padding = '15px';
+          popOutMenu.style.backgroundColor = '#fff';
+          popOutMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+          popOutMenu.style.border = '1px solid #ccc';
+          popOutMenu.style.zIndex = '1000';
+          popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/sjCE31d.png")';
+          popOutMenu.style.backgroundSize = 'cover';
+          popOutMenu.style.backgroundPosition = 'bottom';
+          popOutMenu.style.alignItems = 'center';     
+  
+          // Create the menu title
+          const menuTitle = document.createElement('h1');
+          menuTitle.innerText = 'File';
+          menuTitle.style.textAlign = 'center';
+              menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+              menuTitle.style.color = '#B62C1A';
+              menuTitle.style.textShadow = '2px 2px 3px #000000';
+          menuTitle.style.top = '-04px';   
+          menuTitle.style.position = 'relative';
+          menuTitle.style.marginTop = '-04px'; 
+          menuTitle.style.marginBottom = '-04px'; 
+          menuTitle.style.lineHeight = '0.7';
+          // menuTitle.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+          menuTitle.style.padding = '2px';            
+          menuTitle.style.borderRadius = '1px';    
+          menuTitle.style.display = 'block';     
+          menuTitle.style.fontSize = '24px';
+          // menuTitle.style.outline = '1px solid #0F0E0C';
+          popOutMenu.appendChild(menuTitle);
+  
+          const pests = document.createElement('h2');
+          pests.innerText = 'Codefront';
+              pests.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+              pests.style.color = '#B62C1A';
+              pests.style.textShadow = '2px 2px 3px #000000';
+              pests.style.fontSize = '24px';
+          pests.style.textAlign = 'right';
+          pests.style.position = 'relative';
+          pests.style.marginTop = '-4px'; 
+          pests.style.lineHeight = '0.7';
+          // pests.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+          pests.style.padding = '2px';            
+          pests.style.borderRadius = '1px';       
+          pests.style.display = 'block';    
+          // pests.style.outline = '1px solid #0F0E0C';
+          popOutMenu.appendChild(pests);
+          
+          const pestssubtxt = document.createElement('h3');
+          pestssubtxt.innerText = 'Those who handled the coding for this project.';
+              pestssubtxt.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+              pestssubtxt.style.color = '#B62C1A';
+              pestssubtxt.style.textShadow = '2px 2px 3px #000000';
+              pestssubtxt.style.fontSize = '13px';
+          pestssubtxt.style.marginBottom = '-04px'; 
+          pestssubtxt.style.textAlign = 'right';
+          pestssubtxt.style.top = '-04px';   
+          pestssubtxt.style.position = 'relative';
+          pestssubtxt.style.marginTop = '-04px'; 
+          pestssubtxt.style.lineHeight = '0.7';
+          // pestssubtxt.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+          // pestssubtxt.style.padding = '2px';            
+          // pestssubtxt.style.borderRadius = '1px';    
+          pestssubtxt.style.display = 'block';    
+          // pestssubtxt.style.outline = '1px solid #0F0E0C';
+          pestssubtxt.style.marginTop = '-8px';
+          popOutMenu.appendChild(pestssubtxt);
+  
+          // Create the menu list
+          const menuListA = document.createElement('ul');
+          menuListA.style.listStyle = 'none';
+          menuListA.style.padding = '0';
+          menuListA.style.maxHeight = '140px'; 
+          menuListA.style.overflowY = 'auto'; 
+  
+          // Add menu items from the array
+          creditListA.forEach(item => {
+              const menuItem = document.createElement('div');
+              menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/6xxWTMg.png")';
+              menuItem.style.display = 'flex';
+              menuItem.style.alignItems = 'flex-start';
+              menuItem.style.marginBottom = '10px';
+              menuItem.style.padding = '3px';            
+              menuItem.style.borderRadius = '3px';     
+              menuItem.style.outline = '1px solid #0F0E0C';
+  
+              const photo = document.createElement('img');
+              photo.src = item.photo;
+              photo.style.border = "1px solid #C9C9C9"; 
+              photo.style.padding = "1px"; 
+              photo.style.width = '100px';
+              photo.style.height = '100px';
+              photo.style.marginRight = '10px';
+  
+              const textAndButton = document.createElement('div');
+  
+              const text = document.createElement('p');
+              text.style.fontSize = "13px"; 
+              text.innerHTML = item.text; 
+              text.style.margin = '0';
+  
+              textAndButton.appendChild(text);
+              menuItem.appendChild(photo);
+              menuItem.appendChild(textAndButton);
+  
+              menuListA.appendChild(menuItem);
+          });
+          popOutMenu.appendChild(menuListA);
+  
+          const enemies = document.createElement('h2');
+          enemies.innerText = 'Writingfront';
+              enemies.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+              enemies.style.color = '#B62C1A';
+              enemies.style.textShadow = '2px 2px 3px #000000';
+          enemies.style.fontSize = '24px';
+          enemies.style.textAlign = 'left';
+          enemies.style.top = '0px';   
+          enemies.style.position = 'relative';
+          enemies.style.marginTop = '6px'; 
+          enemies.style.lineHeight = '0.7';
+          // enemies.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+          enemies.style.padding = '2px';            
+          enemies.style.borderRadius = '1px';    
+          enemies.style.display = 'block';    
+          // enemies.style.outline = '1px solid #0F0E0C';
+          popOutMenu.appendChild(enemies);
+          const enemiessubtxt = document.createElement('h3');
+          enemiessubtxt.innerText = 'Those who wrote for this project.';
+              enemiessubtxt.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+              enemiessubtxt.style.color = '#B62C1A';
+              enemiessubtxt.style.textShadow = '2px 2px 3px #000000';
+              enemiessubtxt.style.fontSize = '13px';
+          enemiessubtxt.style.textAlign = 'left';
+          enemiessubtxt.style.top = '-04px';   
+          enemiessubtxt.style.position = 'relative';
+          enemiessubtxt.style.marginTop = '-04px'; 
+          enemiessubtxt.style.lineHeight = '0.7';
+          // enemiessubtxt.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+          enemiessubtxt.style.padding = '2px';            
+          enemiessubtxt.style.borderRadius = '1px';    
+          enemiessubtxt.style.display = 'block';    
+          // enemiessubtxt.style.outline = '1px solid #0F0E0C';
+          enemiessubtxt.style.marginTop = '-8px';
+          enemiessubtxt.style.marginBottom = '-04px'; 
+          popOutMenu.appendChild(enemiessubtxt);
+          
+          // Create the menu list
+          const menuListB = document.createElement('ul');
+          menuListB.style.listStyle = 'none';
+          menuListB.style.padding = '0';
+          menuListB.style.maxHeight = '310px'; 
+          menuListB.style.overflowY = 'auto'; 
+  
+          // Add menu items from the array
+          creditListB.forEach(item => {
+              const menuItem = document.createElement('div');
+              menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/jjKgAwb.png")';
+              menuItem.style.display = 'flex';
+              menuItem.style.alignItems = 'flex-start';
+              menuItem.style.marginBottom = '10px';
+              menuItem.style.backgroundColor = 'rgba(128, 142, 142, 0.5)'; 
+              menuItem.style.padding = '3px';            
+              menuItem.style.borderRadius = '3px';     
+              menuItem.style.outline = '1px solid #0F0E0C';
+  
+              const photo = document.createElement('img');
+              photo.src = item.photo;
+              photo.style.border = "1px solid #C9C9C9"; 
+              photo.style.padding = "1px"; 
+              photo.style.width = '100px';
+              photo.style.height = '100px';
+              photo.style.marginRight = '10px';
+  
+              const textAndButton = document.createElement('div');
+  
+              const text = document.createElement('p');
+              text.style.fontSize = "13px"; 
+              text.innerHTML = item.text; 
+              text.style.margin = '0';
+  
+              textAndButton.appendChild(text);
+              menuItem.appendChild(photo);
+              menuItem.appendChild(textAndButton);
+  
+              menuListB.appendChild(menuItem);
+          });
+          popOutMenu.appendChild(menuListB);        
+  
+          const closeButton = document.createElement('button');
+          closeButton.innerText = 'Close';
+          closeButton.onclick = closeCredits;
+          popOutMenu.appendChild(closeButton);
+  
+          document.body.appendChild(popOutMenu);
+  
+          makeDraggable(popOutMenu);
+      } 
+  
+      if (savedX !== null && savedY !== null) {
+          popOutMenu.style.left = savedX + 'px';
+          popOutMenu.style.top = savedY + 'px';
+      }
+      else {
+          const buttonRect = event.target.getBoundingClientRect();
+          popOutMenu.style.left = buttonRect.right + 382 + 'px'; // Offset X
+          popOutMenu.style.top = buttonRect.top - 406 + 'px'; // Offset Y
+          savedX = popOutMenu.getBoundingClientRect().left;
+          savedY = popOutMenu.getBoundingClientRect().top;
+      }
+  
+      // Display the menu
+      popOutMenu.style.display = 'block';
+    // credits = ["Coding: Mangolith", "Writing: Mangolith, QuoProQuid, Ettingermentum, CTA, Neo, Atom_Heart_Mother, StockdaleForTCT, River"]
+    // text = "CREDITS:\n\n"
+    // for (i in credits) {
+    //     text += credits[i] + "\n"
+    // }
+    // alert(text)
+  }
+  function closeCredits() {
+    const popOutMenu = document.getElementById('popOutMenu');
+    if (popOutMenu) {
+        savedX = popOutMenu.getBoundingClientRect().left;
+        savedY = popOutMenu.getBoundingClientRect().top;
+  
+        popOutMenu.remove();
+    }
+  }
+  function makeDraggable(element) {
+      let isDragging = false;
+      let offsetX, offsetY;
+  
+      element.onmousedown = function(event) {
+          isDragging = true;
+          offsetX = event.clientX - element.getBoundingClientRect().left;
+          offsetY = event.clientY - element.getBoundingClientRect().top;
+  
+          document.onmousemove = function(event) {
+              if (isDragging) {
+                  const newX = event.clientX - offsetX;
+                  const newY = event.clientY - offsetY;
+  
+                  // Update the position of the element
+                  element.style.left = newX + 'px';
+                  element.style.top = newY + 'px';
+  
+                  // Save the position in global variables
+                  savedX = newX;
+                  savedY = newY;
+              }
+          };
+  
+          document.onmouseup = function() {
+              isDragging = false;
+              document.onmousemove = null;
+              document.onmouseup = null;
+          };
+      };
+  }
+  
+  const creditListA = [ 
+      { photo: 'https://i.imgur.com/8slrhyZ.png', text: '<b>Mangolith</b><br><b>CLASS: <span style="color: #8f1204;">F</b></span><br>', button: 'Defer', id: 'MANGO_A'},
+  ]
+  const creditListB = [ 
+      { photo: 'https://i.imgur.com/4jUjdBF.png', text: '<b>QuoProQuid</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>', button: 'Defer', id: 'QUO_A'},
+      { photo: 'https://i.imgur.com/9BG8sNI.png', text: '<b>Neo</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'NEO_A'},
+      { photo: 'https://i.imgur.com/xFc9GM4.png', text: '<b>CTA</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'CTA_A'},
+      { photo: 'https://i.imgur.com/W171JPz.png', text: '<b>Ettingermentum</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ETTINGERMENTUM_A'},
+      { photo: 'https://i.imgur.com/DDNKTeK.png', text: '<b>Atom_Heart_Mother</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ATOMHEART_A'},
+      { photo: 'https://i.imgur.com/q65bK0A.png', text: '<b>StockdaleForTCT</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'STOCKDALE_A'},
+      { photo: 'https://i.imgur.com/dVVbMnO.png', text: '<b>River</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'RIVER_A'},
+      { photo: 'https://i.imgur.com/SE6OXzj.png', text: '<b>Bonbishka</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'BONBISHKA_A'},
+      { photo: 'https://i.imgur.com/CGUIcAG.png', text: '<b>RouteVenus</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ROUTEVENUS_A'},
+  ]
+  
+  RecReading=true
+  e.altcolors=false
+  e.kennedyPic = "https://i.imgur.com/7Tljgem.png"
+  e.difficultychosen= 0
+  
+  campaignTrail_temp.candidate_json = [
+    {
       "model": "campaign_trail.candidate",
       "pk": 77,
       "fields": {
@@ -73,7 +407,7 @@ campaignTrail_temp.candidate_json = [
           "running_mate": false
       }
   },
-  {
+    {
       "model": "campaign_trail.candidate",
       "pk": 79,
       "fields": {
@@ -579,11 +913,10 @@ campaignTrail_temp.candidate_json = [
       "running_mate": true
   }
 }
-]
-
-
-campaignTrail_temp.running_mate_json = [
-  {
+  ]
+  
+  campaignTrail_temp.running_mate_json = [
+    {
       "model": "campaign_trail.running_mate",
       "pk": 48,
       "fields": {
@@ -743,40 +1076,10 @@ campaignTrail_temp.running_mate_json = [
       "running_mate": 100
   }
 }
-]
-
-
-campaignTrail_temp.credits = "the HopeTeam"
-
-
-campaignTrail_temp.global_parameter_json = [
-  {
-      "model": "campaign_trail.global_parameter",
-      "pk": 1,
-      "fields": {
-          "vote_variable": 1.125,
-          "max_swing": 0.12,
-          "start_point": 0.94,
-          "candidate_issue_weight": 10,
-          "running_mate_issue_weight": 3,
-          "issue_stance_1_max": -0.71,
-          "issue_stance_2_max": -0.3,
-          "issue_stance_3_max": -0.125,
-          "issue_stance_4_max": 0.125,
-          "issue_stance_5_max": 0.3,
-          "issue_stance_6_max": 0.71,
-          "global_variance": 0.01,
-          "state_variance": 0.005,
-          "question_count": 50,
-          "default_map_color_hex": "#C9C9C9",
-          "no_state_map_color_hex": "#999999"
-      }
-  }
-]
-
-
-campaignTrail_temp.opponents_default_json = [
-  {
+  ]
+  
+  campaignTrail_temp.opponents_default_json = [
+    {
       "election": 9,
       "candidates": [
           77,
@@ -785,11 +1088,10 @@ campaignTrail_temp.opponents_default_json = [
           80
       ]
   }
-]
-
-
-campaignTrail_temp.opponents_weighted_json = [
-  {
+  ]
+  
+  campaignTrail_temp.opponents_weighted_json = [
+    {
       "election": 9,
       "candidates": [
           77,
@@ -798,316 +1100,327 @@ campaignTrail_temp.opponents_weighted_json = [
           80
       ]
   }
-]
-
-
-campaignTrail_temp.temp_election_list = [
-  {
-      "id": 9,
-      "year": 2000,
-      "is_premium": 0,
-      "display_year": "TOO CLOSE TO CALL"
-  }
-]
-
-
-jet_data = {
-  "headerColor": "#5687fb",
-  "windowColor": "#ffffff",
-  "containerColor": "#ffffff",
-  "innerWindowColor": "#5987F8",
-  "bannerImageUrl": "https://i.imgur.com/wqfz0az.png",
-  "backgroundImageUrl": "https://i.imgur.com/qQ0B4wr.jpeg",
-  "endingTextColor": "#000000",
-  "customQuote": "",
-  "gameTitle": "HOPE 2"
-}
-
-
-//#startcode
-
-
-
-
-//#startcode
-
-
-
-
-quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt Gingrich", "<q>War has rules, mud wrestling has rules — politics has no rules.​</q> - Ross Perot", "<q>If Al Gore invented the internet, I invented spell check.​</q> - Dan Quayle", "<q> Bill Clinton's foreign policy experience stems mainly from having breakfast at the International House of Pancakes.</q> - Pat Buchanan", "<q>If you're sick and tired of the politics of cynicism and polls and principles, come and join this campaign.​</q> - George W. Bush", "<q>We are in it, now we must win it.​</q> - John McCain", "<q>I didn't think it was wrong; I thought it was a neat idea.</q> - Oliver North"]
-customquote = quotes[Math.floor((Math.random() * quotes.length))]
-
-
-corrr=`\n<h2>TOO CLOSE TO CALL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
-
-
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ffffff";
-
-
-$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/IMupOWE.png)"
-
-
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#5987F8"
-
-
-$("#game_window")[0].style.backgroundSize = "cover"; 
-
-
-document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
-
-
-$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
-
-
-$(".container")[0].style.backgroundColor = "#ffffff";
-
-
-document.getElementById("header").src = "https://i.imgur.com/wqfz0az.png";
-
-
-document.body.background = "https://i.imgur.com/qdLCZsr.png";
-
-
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
-
-
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
-document.head.innerHTML +=`
-<style>
-.game_header {
-background-color: #5687fb;
-}
-.campaign_trail_start_emphasis {
-background-color: #5687FB;
-}
-.inner_window_question h3 {
-background-color: #DDE7FE;
-}
-.overlay_window h3 {
-background-color: #DDE7FE;
-}
-</style>`
-
-// Tooltips
-function addDynamicCSS() {
-  var css = `
-      .inner_window_question h3 .mytooltip{
-          background-color: lightskyblue;
-      }
-
-      .mytooltip {
-          position: relative;
-          display: inline-block;
-          cursor: pointer;
-          background-color: lightblue;
-      }
-
-      .mytooltip .mytooltiptext {
-          width: 240px;
-          background-color: lightblue;
-          color: black;
-          text-align: center;
-          border-radius: 6px;
-          padding: 10px;
-          position: absolute;
-          z-index: 99;
-          bottom: 20%;
-          left: 20%;
-          margin-left: -90px;
-          opacity: 0;
-          transition: opacity 0.3s;
-          border: 1px solid black;
-          pointer-events: none;
-          font-size: 13px !important;
-          line-height: 1.5em !important;
-          font-weight: normal !important;
-          font-style: normal !important;
-      }
-
-      .mytooltip .mytooltiptext img {
-          max-width: 240px;
-          height: auto;
-      }
-
-      .mytooltip:hover .mytooltiptext {
-          opacity: 1;
-          transition-delay: 0.5s;
-      }
-  `;
-
-  var styleElem = document.createElement('style');
-  styleElem.type = 'text/css';
+  ]
   
-  styleElem.appendChild(document.createTextNode(css));
+  jet_data = {
+    "headerColor": "#5687fb",
+    "windowColor": "#ffffff",
+    "containerColor": "#ffffff",
+    "innerWindowColor": "#5987F8",
+    "bannerImageUrl": "https://i.imgur.com/wqfz0az.png",
+    "backgroundImageUrl": "https://i.imgur.com/qQ0B4wr.jpeg",
+    "endingTextColor": "#000000",
+    "customQuote": "",
+    "gameTitle": "HOPE 2"
+  }
   
-  document.head.appendChild(styleElem);
-}
-
-
-addDynamicCSS();
-const startScreenUpdater = setInterval(function() {
-  const selectElement = document.getElementById('running_mate_id');
-  if (!selectElement) return; // if not found yet, skip this loop
-
-  if (!localStorage.getItem("LEBRON")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '87') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("CURRY")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '88') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("DURANT")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '89') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("WESTBROOK")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '90') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("HARDEN")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '91') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("LILLARD")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '92') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("JORDAN")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '93') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("KOBE")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '94') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("ALI")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '95') {
-        selectElement.remove(i);
-      }
-    }
-  }
-  if (!localStorage.getItem("CLINTON")) {
-    for (let i = selectElement.options.length - 1; i >= 0; i--) {
-      if (selectElement.options[i].value === '96') {
-        selectElement.remove(i);
-      }
-    }
-  }
-
-  clearInterval(startScreenUpdater); // done, stop checking
-}, 10); // slightly more forgiving than 1ms
-tooltipList = [
-// Personal people
-{searchString: "John F. Kennedy", explanationText: "<img src=https://i.imgur.com/kzOOLfE.png> My Hero"},
-{searchString: "Hillary", explanationText: "<img src=https://i.imgur.com/A4vCREe.png> My dream and nightmare"},
-{searchString: "Chelsea", explanationText: "<img src=https://i.imgur.com/frve0eg.png> Energy"},
-
-// Scandals
-{searchString: "Travelgate", explanationText: "Several Travel Office staffers were fired, allegedly to make room for personal friends."},
-{searchString: "Troopergate", explanationText: "Arkansas State Troopers allege that they procured women for then-Governor Clinton."},
-{searchString: "Nannygate", explanationText: "Zoë Baird and Kimba Wood, nominees for positions in the Justice Department, were found to have employed illegal immigrants as nannies."},
-{searchString: "haircut", explanationText: "Allegation that Air Force One was delayed for to hours while President Clinton had a haircut."},
-
-
-// Bush letter
-{searchString: "It reads…", explanationText: "<img src=https://i.imgur.com/YvnAPxL.png>"},
-// Administration people
-{searchString: "Mack McLarty", explanationText: "<img src=https://i.imgur.com/TO6N639.jpeg> Childhood buddy, Chief of Staff"},
-{searchString: "Rubin", explanationText: "<img src=https://i.imgur.com/cQV30AW.jpeg> Wall Street banker turned economic advisor"},
-{searchString: "Reich", explanationText: "<img src=https://i.imgur.com/br6TeTG.png> Secretary of Labour, Shorty"},
-{searchString: "Panetta", explanationText: "<img src=https://i.imgur.com/6AvGQVS.jpeg> OMB director/Chief of Staff"},
-{searchString: "Bentsen", explanationText: "<img src=https://i.imgur.com/pTEVdB1.jpeg> He said the thing!"},
-{searchString: "Reno", explanationText: "<img src=https://i.imgur.com/jyrkhGw.jpeg> First female AG, you're welcome"},
-{searchString: "Janet Reno", explanationText: "<img src=https://i.imgur.com/jyrkhGw.jpeg> First female AG, you're welcome"},
-{searchString: "Janet", explanationText: "<img src=https://i.imgur.com/jyrkhGw.jpeg> First female AG, you're welcome"},
-{searchString: "Carville", explanationText: "<img src=https://i.imgur.com/fHU2CSw.jpeg> It's the economy, stupid"},
-{searchString: "James Woolsey", explanationText: "<img src=https://i.imgur.com/jJbdINL.png> CIA Director"},
-{searchString: "Woolsey", explanationText: "<img src=https://i.imgur.com/jJbdINL.png> CIA Director"},
-
-// Political people
-{searchString: "President Bush", explanationText: "<img src=https://i.imgur.com/j08BQZl.png> Respectful predecessor"},
-{searchString: "41", explanationText: "<img src=https://i.imgur.com/j08BQZl.png> Respectful predecessor"},
-{searchString: "Old Man Bush", explanationText: "<img src=https://i.imgur.com/j08BQZl.png> Respectful predecessor"},
-{searchString: "Al", explanationText: "<img src=https://i.imgur.com/sRpuZdK.png> Closest thing to a friend politics ever gave me"},
-{searchString: "Perot", explanationText: "<img src=https://i.imgur.com/qTV7uYB.jpeg> Helped me win"},
-{searchString: "Ross Perot", explanationText: "<img src=https://i.imgur.com/qTV7uYB.jpeg> Helped me win"},
-{searchString: "the Gipper", explanationText: "<img src=https://i.imgur.com/oN0Djq5.jpeg> California Cowboy"},
-{searchString: "Reagan", explanationText: "<img src=https://i.imgur.com/oN0Djq5.jpeg> California Cowboy"},
-{searchString: "Ted Kennedy", explanationText: "<img src=https://i.imgur.com/zfhEjKl.jpeg> The last one"},
-{searchString: "Ted", explanationText: "<img src=https://i.imgur.com/zfhEjKl.jpeg> The last one"},
-{searchString: "Teddy", explanationText: "<img src=https://i.imgur.com/zfhEjKl.jpeg> The last one"},
-{searchString: "Mitchell", explanationText: "<img src=https://i.imgur.com/2uvXU5P.jpeg> The Democrat's leader in the Senate"},
-{searchString: "Foley", explanationText: "<img src=https://i.imgur.com/8ShUjuV.jpeg> Speaker of the House"},
-{searchString: "Newt Gingrich", explanationText: "<img src=https://i.imgur.com/Ei2Sihc.png> Satan Himself"},
-{searchString: "Gingrich", explanationText: "<img src=https://i.imgur.com/Ei2Sihc.png> Satan Himself"},
-{searchString: "Joe Biden", explanationText: "<img src=https://i.imgur.com/C7X5VNk.png> Veteran Senator of Delaware, big on law and order"},
-{searchString: "Jimmy Carter", explanationText: "<img src=https://i.imgur.com/8VNtOLa.jpeg> Former President, current pain in the ass"},
-{searchString: "Carter", explanationText: "<img src=https://i.imgur.com/8VNtOLa.jpeg> Former President, current pain in the ass"},
-
-
-// Legal people
-{searchString: "Kenneth Starr", explanationText: "<img src=https://i.imgur.com/P0FYvBh.jpeg> Whitewater prosecutor, always needs to “figure something out”"},
-{searchString: "Starr", explanationText: "<img src=https://i.imgur.com/P0FYvBh.jpeg> Whitewater prosecutor, always needs to “figure something out”"},
-{searchString: "Fiske", explanationText: "<img src=https://i.imgur.com/FnPb9Cs.jpeg> Dignified proseuctor, pushed out in favor of Ken Starr"},
-{searchString: "Robert Fiske", explanationText: "<img src=https://i.imgur.com/FnPb9Cs.jpeg> Dignified proseuctor, pushed out in favor of Ken Starr"},
-{searchString: "Ruth Bader Ginsburg", explanationText: "<img src=https://i.imgur.com/RdjGCLF.png> United States Court of Appeals for the District of Columbia Circuit Judge"},
-{searchString: "Laurence Tribe", explanationText: "<img src=https://i.imgur.com/eYmJBli.png> Legal scholar"},
-{searchString: "Bruce Babbitt", explanationText: "<img src=https://files.catbox.moe/lue611.png> 1988 Presidential candidate, Governor of Arizona, and your Secretary of the Interior"},
-{searchString: "Webster Hubbell", explanationText: "<img src=https://i.imgur.com/hIKTq8a.png> Former Mayor of Little Rock"},
-{searchString: "Gilbert S. Merritt", explanationText: "<img src=https://i.imgur.com/bpYD7le.png> Chief Judge of the United States Court of Appeals for the Sixth Circuit"},
-{searchString: "Ginsburg", explanationText: "<img src=https://i.imgur.com/RdjGCLF.png> United States Court of Appeals for the District of Columbia Circuit Judge"},
-{searchString: "Babbitt", explanationText: "<img src=https://files.catbox.moe/lue611.png>  1988 Presidential candidate, Governor of Arizona, and your Secretary of the Interior"},
-{searchString: "Hubbell", explanationText: "<img src=https://i.imgur.com/hIKTq8a.png> Former Mayor of Little Rock"},
-{searchString: "Merritt", explanationText: "<img src=https://i.imgur.com/bpYD7le.png> Chief Judge of the United States Court of Appeals for the Sixth Circuit"},
-{searchString: "Janie Shores", explanationText: "<img src=https://i.imgur.com/hLUe3ls.png> Backup plan"},
-{searchString: "Vince Foster", explanationText: "<img src=https://i.imgur.com/y38YzaV.png> The Rock of Gibraltar"},
-{searchString: "Foster", explanationText: "<img src=https://i.imgur.com/y38YzaV.png> The Rock of Gibraltar"},
-
-
-
-// Foreign people
-{searchString: "Yeltsin", explanationText: "<img src=https://i.imgur.com/AJsNeXT.png> Friend or Foe?"},
-{searchString: "Boris Yeltsin", explanationText: "<img src=https://i.imgur.com/AJsNeXT.png> Friend or Foe?"},
-{searchString: "Boris", explanationText: "<img src=https://i.imgur.com/AJsNeXT.png> Friend or Foe?"},
-{searchString: "Kim Il Sung", explanationText: "<img src=https://i.imgur.com/emeK8AL.png> Supreme Leader of North Korea, scum of the Earth"},
-{searchString: "Rwanda", explanationText: "<img src=https://i.imgur.com/2v7euOP.png> Sickening"},
-{searchString: "Raoul Cédras", explanationText: "<img src=https://i.imgur.com/NoVsXTu.jpeg> Dictator of Haiti"},
-{searchString: "Vietnam", explanationText: "<img src=https://i.imgur.com/7SBxDZa.png> Thank God I dodged"},
-];
-  // Select the node that will be observed for mutations
-  const windowsAdvisorTargetNode = document.getElementById("game_window");
+  //#startcode
   
-  // Options for the observer (which mutations to observe)
-  const windowsAdvisorConfig = { attributes: true, childList: true, subtree: true };
+  quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt Gingrich", "<q>War has rules, mud wrestling has rules — politics has no rules.​</q> - Ross Perot", "<q>If Al Gore invented the internet, I invented spell check.​</q> - Dan Quayle", "<q> Bill Clinton's foreign policy experience stems mainly from having breakfast at the International House of Pancakes.</q> - Pat Buchanan", "<q>If you're sick and tired of the politics of cynicism and polls and principles, come and join this campaign.​</q> - George W. Bush", "<q>We are in it, now we must win it.​</q> - John McCain", "<q>I didn't think it was wrong; I thought it was a neat idea.</q> - Oliver North"]
+  customquote = quotes[Math.floor((Math.random() * quotes.length))]
   
-  // Callback function to execute when mutations are observed
+  
+  corrr=`\n<h2>TOO CLOSE TO CALL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
+  
+  
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ffffff";
+  
+  
+  $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/IMupOWE.png)"
+  
+  
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#5987F8"
+  
+  
+  $("#game_window")[0].style.backgroundSize = "cover"; 
+  
+  
+  document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+  
+  
+  $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+  
+  
+  $(".container")[0].style.backgroundColor = "#ffffff";
+  
+  
+  document.getElementById("header").src = "https://i.imgur.com/wqfz0az.png";
+  
+  
+  document.body.background = "https://i.imgur.com/qdLCZsr.png";
+  
+  
+  document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+  
+  
+  document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+  document.head.innerHTML +=`
+  <style>
+  .game_header {
+  background-color: #5687fb;
+  }
+  .campaign_trail_start_emphasis {
+  background-color: #5687FB;
+  }
+  .inner_window_question h3 {
+  background-color: #DDE7FE;
+  }
+  .overlay_window h3 {
+  background-color: #DDE7FE;
+  }
+  </style>`
+  
+  e = campaignTrail_temp
+  
+  var c = 77;
+  var storedChar = 0;
+  const startScreenUpdater = setInterval(function() {
+    const initialButton = document.getElementById("election_id_button");
+    const runningMateButton = document.getElementById("running_mate_id_button");
+    const candidateButton = document.getElementById("candidate_id_button");
+    const finalScreenBB = document.getElementById("opponent_selection_id_back");
+    const difficultySelect = document.getElementById("difficulty_level_id");
+    const finalScreenID = document.getElementById("opponent_selection_id_button");
+    const modeSelection = document.getElementById("opponent_selection_description_window");
+    const window = document.getElementById("inner_window_4");
+    const gamemode = document.getElementById("game_options");
+    const candbackb = document.getElementById("candidate_id_back");
+    var selectElement = document.getElementById('running_mate_id');
+    var gamemodElem = document.getElementById('game_type_id');
+  
+    if(initialButton) { // reset theme at main menu
+      document.getElementById("header").src = "https://i.imgur.com/o3dxdIc.png";
+      document.forms["election_year"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Act I, Scene One</span>"
+      document.getElementById("election_id_button").textContent = "\"Hello?\"";
+      if(c && c != 77){
+        c = 77;
+        storedChar = 99;
+      }
+    }
+    if(runningMateButton) { // skip VP for Republican
+      if (!localStorage.getItem("LEBRON")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '87') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("CURRY")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '88') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("DURANT")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '89') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("WESTBROOK")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '90') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("HARDEN")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '91') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("LILLARD")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '92') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("JORDAN")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '93') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("KOBE")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '94') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("ALI")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '95') {
+            selectElement.remove(i);
+          }
+        }
+      }
+      if (!localStorage.getItem("CLINTON")) {
+        for (let i = selectElement.options.length - 1; i >= 0; i--) {
+          if (selectElement.options[i].value === '96') {
+            selectElement.remove(i);
+          }
+        }
+      }
+    }
+    if(candidateButton) { // change theme on candidate viewing
+      if(candbackb){
+        candbackb.remove()
+      }
+      c = document.getElementById("candidate_id").value;
+      console.log(c + "   " + storedChar);
+      if(c == 77 && storedChar != 77) {
+        e.ElectionPopup = "Election night is here. Make a wish, Bobby."
+        setTimeout(() => {
+          document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
+          document.getElementById("header").src = "https://i.imgur.com/o3dxdIc.png";
+          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#BB321E;\">Robert Kennedy</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#BB321E; font-size: 17px;\">Bobby Kennedy</b> is the President of the United States and a mass of contradictions. He is an agent of the shadows and a magnetic and hypnotizing performer. He oversaw integration of the South and is a figure of white rage. He is an anti-establishment icon and princeling. A hawkish dove. A radical liberal. A popular loner. He has no great legislative legacy, has founded no great institutions, and yet embodies in himself the possibility of redemptive change.<br><br>⠀⠀⠀⠀The performer playing this role should be able to capture Kennedy’s intensity, his adolescent, self-aggrandizing conviction that he alone must end an inherited war, heal a fractured party, undo his predecessor’s welfare system, and shepherd a nation still trying to decide if it should grow past the traumas of the previous decade or regress to an earlier age. While disguised by a constant, simmering rage, Bobby’s most essential characteristic is a deep loneliness, spurred by a fear that allowing others in will only bring him more hurt.<br><br><i>Ideal performer for this role is a male in their mid 40s in the tenor range.</i><br><br></div>";
+          let descText = "• Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy •"
+          document.documentElement.style.setProperty("--left-space", -1155 + "px");
+          document.documentElement.style.setProperty("--stroke-color", "#BB321E");
+          document.documentElement.style.setProperty("--text-content", `"${descText}"`);
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#5987F8";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+          document.head.innerHTML +=`
+          <style>
+          .game_header {
+          background-color: #5987F8;
+          }
+          .campaign_trail_start_emphasis {
+          background-color: #5987F8;
+          }
+          .inner_window_question h3 {
+          background-color: #DDE7FE;
+          }
+          .overlay_window h3 {
+          background-color: #DDE7FE;
+          }
+          </style>`
+          corrr=`\n<h2>RESURGANCE</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+          storedChar = c;
+        }, 15);
+        if(playlist != gore_playlist){
+          changePlaylist(gore_playlist);
+        }
+      }
+      else if(c == 78 && storedChar != 78) {
+        e.ElectionPopup = "Election night is here. Cross your fingers, Rogers."
+        setTimeout(() => {
+          document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
+          document.getElementById("header").src = "https://i.imgur.com/8i09vEG.png";
+          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#2DA3D7;\">Rogers Morton</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#2DA3D7; font-size: 17px;\">Rogers Morton</b> is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>⠀⠀⠀⠀The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br><i>Ideal performer for this role is a male in their late 50s in the bass-baritone range.</i><br><br></div>";
+          let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
+          document.documentElement.style.setProperty("--left-space", -1086 + "px");
+          document.documentElement.style.setProperty("--stroke-color", "#2DA3D7");
+          document.documentElement.style.setProperty("--text-content", `"${descText}"`);
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#ff4b0f";
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ff4b0f";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#ff4b0f!important;}</style>";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#ff4b0f!important;}</style>";
+          document.head.innerHTML +=`
+          <style>
+          .game_header {
+          background-color: #ff4b0f;
+          }
+          .campaign_trail_start_emphasis {
+          background-color: #ff4b0f;
+          }
+          .inner_window_question h3 {
+          background-color: #DDE7FE;
+          }
+          .overlay_window h3 {
+          background-color: #DDE7FE;
+          }
+          </style>`
+           corrr=`\n<h2>RETRIBUTION</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+          //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
+          storedChar = c;
+        }, 15);
+        if(playlist != w_playlist){
+          changePlaylist(w_playlist);
+        }
+      } else if (c == 80 && storedChar != 80) {
+        setTimeout(() => {
+          document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
+          document.getElementById("header").src = "https://i.imgur.com/8i09vEG.png";
+          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#2DA3D7;\">Rogers Morton</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#2DA3D7; font-size: 17px;\">Rogers Morton</b> is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>⠀⠀⠀⠀The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br><i>Ideal performer for this role is a male in their late 50s in the bass-baritone range.</i><br><br></div>";
+          let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
+          document.documentElement.style.setProperty("--left-space", -1086 + "px");
+          document.documentElement.style.setProperty("--stroke-color", "#2DA3D7");
+          document.documentElement.style.setProperty("--text-content", `"${descText}"`);
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#9500b3";
+          nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#9500b3";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#9500b3!important;}</style>";
+          document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#9500b3!important;}</style>";
+          document.head.innerHTML +=`
+          <style>
+          .game_header {
+          background-color: #9500b3;
+          }
+          .campaign_trail_start_emphasis {
+          background-color: #9500b3;
+          }
+          .inner_window_question h3 {
+          background-color: #DDE7FE;
+          }
+          .overlay_window h3 {
+          background-color: #DDE7FE;
+          }
+          </style>`
+           corrr=`\n<h2>REVIVAL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
+          //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
+          storedChar = c;
+        }, 15);
+        if(playlist != ref_playlist){
+          changePlaylist(ref_playlist);
+        }
+      }
+    }
+    if(finalScreenID) { // delete back button and delete the interval
+  
+      finalScreenBB.remove();
+      const dropdown = document.getElementById("difficulty_level_id");
+  
+      dropdown.addEventListener("input", () => {
+          e.difficultychosen = dropdown.value;
+      });
+  
+      //modeSelection.remove();
+      
+      //window.remove();
+      
+      // const gameplay = document.createElement("div");
+      // gameplay.className("description_window_small");
+      // window.appendChild(gameplay);
+          
+      // if(e.candidate_id == 1001) {
+      // 	const kennedyGameplay = document.createElement("p");
+      // 	const node = document.createTextNode("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+      // 	kennedyGameplay.appendChild(node);
+      // 	document.getElementById("gameplay").appendChild(kennedyGameplay);
+      // }
+      if(e.candidate_id == 78) {
+        if (e.running_mate_id == 86) {
+          var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+          e.candidate_json[id].fields.first_name = "George W."
+          e.candidate_json[id].fields.last_name = "Bush"
+        }
+      }
+      clearInterval(startScreenUpdater);
+    }
+  }, 1);
+  
+  
+  
   const callback = (mutationList, observer) => {
       visitWindow = document.getElementsByClassName("overlay_window")[0];
   
@@ -1234,14 +1547,29 @@ function setupRandomizeButton() {
   
   function setupMusicPlayer() {
     playlist = new Playlist();
+    gore_playlist = new Playlist();
+    w_playlist = new Playlist();
+    ref_playlist = new Playlist();
   
   
-    const song1 = new Song(
+    const song1_Gore = new Song(
     "Walking on the Sun",
     "Smash Mouth",
     "https://files.catbox.moe/jgcx50.mp3"
   );
   
+    const song1_W = new Song(
+    "Minority",
+    "Green Day",
+    "https://audio.jukehost.co.uk/woJTbngnviobVms4C9wTjDN5sgYMv7QT"
+  );
+
+    const song1_REF = new Song(
+    "My Way",
+    "Limp Bizkit",
+    "https://audio.jukehost.co.uk/LU3NI66FG8yE7WAfyZxzxrJA6YQgKqPL"
+  );
+
   const song2 = new Song(
     "Airbag",
     "Radiohead",
@@ -1313,7 +1641,7 @@ const song10 = new Song(
     "https://audio.jukehost.co.uk/SPIHfPTBVrdg3Xe4eW9aAbSCQeBtcbzC"
   );
 
-    playlist.addSong(song1);
+    playlist.addSong(song1_Gore);
     playlist.addSong(song2);
     playlist.addSong(song3);
     playlist.addSong(song4);
@@ -1327,6 +1655,51 @@ const song10 = new Song(
     playlist.addSong(song12);
     playlist.addSong(song13);
     playlist.addSong(song14);
+
+    gore_playlist.addSong(song1_Gore);
+    gore_playlist.addSong(song2);
+    gore_playlist.addSong(song3);
+    gore_playlist.addSong(song4);
+    gore_playlist.addSong(song5);
+    gore_playlist.addSong(song6);
+    gore_playlist.addSong(song7);
+    gore_playlist.addSong(song8);
+    gore_playlist.addSong(song9);
+    gore_playlist.addSong(song10);
+    gore_playlist.addSong(song11);
+    gore_playlist.addSong(song12);
+    gore_playlist.addSong(song13);
+    gore_playlist.addSong(song14);
+
+    w_playlist.addSong(song1_W);
+    w_playlist.addSong(song2);
+    w_playlist.addSong(song3);
+    w_playlist.addSong(song4);
+    w_playlist.addSong(song5);
+    w_playlist.addSong(song6);
+    w_playlist.addSong(song7);
+    w_playlist.addSong(song8);
+    w_playlist.addSong(song9);
+    w_playlist.addSong(song10);
+    w_playlist.addSong(song11);
+    w_playlist.addSong(song12);
+    w_playlist.addSong(song13);
+    w_playlist.addSong(song14);
+
+    ref_playlist.addSong(song1_REF);
+    ref_playlist.addSong(song2);
+    ref_playlist.addSong(song3);
+    ref_playlist.addSong(song4);
+    ref_playlist.addSong(song5);
+    ref_playlist.addSong(song6);
+    ref_playlist.addSong(song7);
+    ref_playlist.addSong(song8);
+    ref_playlist.addSong(song9);
+    ref_playlist.addSong(song10);
+    ref_playlist.addSong(song11);
+    ref_playlist.addSong(song12);
+    ref_playlist.addSong(song13);
+    ref_playlist.addSong(song14);
   
     const playerContainer = document.createElement("div");
     playerContainer.id = "player";
@@ -1693,109 +2066,67 @@ playerContainer.appendChild(controlsContainer);
   const gameWindow_player = document.getElementById("game_window");
   //use this function directly or put it in an event listener to start the music on the press of a certain button
   setupMusicPlayer();
+  changePlaylist(gore_playlist);
   setupRandomizeButton();
-  document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css">'
-  document.head.innerHTML += `<link
-    rel="stylesheet"
-    href="https://jetsimon.com/public/crt.css"
-  >`
-  
-  document.body.classList.add("crt");
-  
-  document.head.innerHTML += `<link
-    rel="stylesheet"
-    href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css"
-  >`
-  
-  document.head.innerHTML += `<style>
-  h3 {
-      font-size:1.17em!important;
-  }
-  
-  label {
-      font-size:1em!important;
-  }
-  </style>`
-  
-  document.head.innerHTML += `<link
-    rel="stylesheet"
-    href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css"
-  >`
-  
-  document.head.innerHTML += `<style>
-  h3 {
-      font-size:1.17em!important;
-  }
-  
-  label {
-      font-size:1em!important;
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif!important;
-  }
-  </style>`
-  let crtStyle = document.createElement('style');
-document.head.appendChild(crtStyle);
-let crtOn = true;
-var setCRTLines = (enabled) => {
-  crtStyle.innerText = enabled ? "" : ".crt::before {background: none;}";
-}
-footer = $(".footer")[0]
-var button = document.createElement("button") // <button onclick="changeBanner()" style="font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;">Change banner</button>
-button.style = `font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;`
-button.innerHTML = "Toggle CRT Lines"
-footer.insertBefore(button, footer.firstChild);
-button.addEventListener("click", () => {crtOn = !crtOn; setCRTLines(crtOn)});
-
-RecReading=true
-e.collect_results=true;
-campaignTrail_temp.achievements = {
-  "King of the Hill" : {
-    "image" : "https://i.imgur.com/pfwpjjG.png",
-    "description" : "Face off against Newt Gingrich in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Mistakes Were Made" : {
-    "image" : "https://i.imgur.com/nqlp2Rc.png",
-    "description" : "Face off against Oliver North in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Standing Firm" : {
-    "image" : "https://i.imgur.com/SE0GihM.png",
-    "description" : "Face off against Dan Quayle in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Hail Mary" : {
-    "image" : "https://i.imgur.com/aVtHRtu.png",
-    "description" : "Face off against Jack Kemp in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Welcome to Fear City" : {
-    "image" : "https://i.imgur.com/J3Om7ph.png",
-    "description" : "Face off against George Pataki in 2000.",
-    "cannotBeCheated" : true
-  },
-  "The Mailman's Son" : {
-    "image" : "https://i.imgur.com/pWhfrX2.png",
-    "description" : "Face off against John Kasich in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Straight Talk" : {
-    "image" : "https://i.imgur.com/RcSJtE8.png",
-    "description" : "Face off against John McCain in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Misunderestimated" : {
-    "image" : "https://i.imgur.com/6Yqnhyr.png",
-    "description" : "Face off against George W. Bush in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Two for the Price of One" : {
-    "image" : "https://i.imgur.com/XR1lbAm.png",
-    "description" : "Face off against Elizabeth Dole in 2000.",
-    "cannotBeCheated" : true
-  },
-  "Fortunate Son" : {
-    "image" : "https://i.imgur.com/N1JEMKk.png",
-    "description" : "Face off against Jeb Bush in 2000.",
-    "cannotBeCheated" : true
-  }
-  }
+    }
+    var changeGameDisp = (hide) => {
+      disp = "";
+      if (hide) {
+        disp = "none";
+      }
+      document.getElementsByClassName("inner_window_w_desc")[0].style.display = disp
+    };
+    RecReading=true
+    e.collect_results=true;
+    campaignTrail_temp.achievements = {
+      "King of the Hill" : {
+        "image" : "https://i.imgur.com/pfwpjjG.png",
+        "description" : "Face off against Newt Gingrich in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Mistakes Were Made" : {
+        "image" : "https://i.imgur.com/nqlp2Rc.png",
+        "description" : "Face off against Oliver North in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Standing Firm" : {
+        "image" : "https://i.imgur.com/SE0GihM.png",
+        "description" : "Face off against Dan Quayle in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Hail Mary" : {
+        "image" : "https://i.imgur.com/aVtHRtu.png",
+        "description" : "Face off against Jack Kemp in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Welcome to Fear City" : {
+        "image" : "https://i.imgur.com/J3Om7ph.png",
+        "description" : "Face off against George Pataki in 2000.",
+        "cannotBeCheated" : true
+      },
+      "The Mailman's Son" : {
+        "image" : "https://i.imgur.com/pWhfrX2.png",
+        "description" : "Face off against John Kasich in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Straight Talk" : {
+        "image" : "https://i.imgur.com/RcSJtE8.png",
+        "description" : "Face off against John McCain in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Misunderestimated" : {
+        "image" : "https://i.imgur.com/6Yqnhyr.png",
+        "description" : "Face off against George W. Bush in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Two for the Price of One" : {
+        "image" : "https://i.imgur.com/XR1lbAm.png",
+        "description" : "Face off against Elizabeth Dole in 2000.",
+        "cannotBeCheated" : true
+      },
+      "Fortunate Son" : {
+        "image" : "https://i.imgur.com/N1JEMKk.png",
+        "description" : "Face off against Jeb Bush in 2000.",
+        "cannotBeCheated" : true
+      }
+      }
