@@ -1280,7 +1280,7 @@ if(!campaignTrail_temp.loaded1){
         e.ElectionPopup = "Election night is here. Make a wish, Bobby."
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
-          document.getElementById("header").src = "https://i.imgur.com/o3dxdIc.png";
+          document.getElementById("header").src = "https://i.imgur.com/b3z3raS.png";
           document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#BB321E;\">Robert Kennedy</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#BB321E; font-size: 17px;\">Bobby Kennedy</b> is the President of the United States and a mass of contradictions. He is an agent of the shadows and a magnetic and hypnotizing performer. He oversaw integration of the South and is a figure of white rage. He is an anti-establishment icon and princeling. A hawkish dove. A radical liberal. A popular loner. He has no great legislative legacy, has founded no great institutions, and yet embodies in himself the possibility of redemptive change.<br><br>⠀⠀⠀⠀The performer playing this role should be able to capture Kennedy’s intensity, his adolescent, self-aggrandizing conviction that he alone must end an inherited war, heal a fractured party, undo his predecessor’s welfare system, and shepherd a nation still trying to decide if it should grow past the traumas of the previous decade or regress to an earlier age. While disguised by a constant, simmering rage, Bobby’s most essential characteristic is a deep loneliness, spurred by a fear that allowing others in will only bring him more hurt.<br><br><i>Ideal performer for this role is a male in their mid 40s in the tenor range.</i><br><br></div>";
           let descText = "• Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy • Robert Kennedy •"
           document.documentElement.style.setProperty("--left-space", -1155 + "px");
@@ -1567,7 +1567,7 @@ function setupRandomizeButton() {
     const song1_REF = new Song(
     "My Way",
     "Limp Bizkit",
-    "https://audio.jukehost.co.uk/LU3NI66FG8yE7WAfyZxzxrJA6YQgKqPL"
+    "https://audio.jukehost.co.uk/dmNfY27YqhZpgBzKXJWBRGUnXlFluJBF"
   );
 
   const song2_Gore = new Song(
