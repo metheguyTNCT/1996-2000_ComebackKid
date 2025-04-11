@@ -1316,7 +1316,7 @@ if(!campaignTrail_temp.loaded1){
         e.ElectionPopup = "Election night is here. Cross your fingers, Rogers."
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
-          document.getElementById("header").src = "https://i.imgur.com/8i09vEG.png";
+          document.getElementById("header").src = "https://i.imgur.com/n9qFMjg.png";
           document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#2DA3D7;\">Rogers Morton</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#2DA3D7; font-size: 17px;\">Rogers Morton</b> is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>⠀⠀⠀⠀The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br><i>Ideal performer for this role is a male in their late 50s in the bass-baritone range.</i><br><br></div>";
           let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
           document.documentElement.style.setProperty("--left-space", -1086 + "px");
@@ -1553,16 +1553,16 @@ function setupRandomizeButton() {
   
   
     const song1_Gore = new Song(
-    "Walking on the Sun",
-    "Smash Mouth",
-    "https://files.catbox.moe/jgcx50.mp3"
+    "My Name Is",
+    "Eminem",
+    "https://audio.jukehost.co.uk/lomFeBO1wvPB5c50xHYVqg1azkw68hGj"
   );
   
     const song1_W = new Song(
-    "Minority",
-    "Green Day",
-    "https://audio.jukehost.co.uk/woJTbngnviobVms4C9wTjDN5sgYMv7QT"
-  );
+      "Walking on the Sun",
+      "Smash Mouth",
+      "https://files.catbox.moe/jgcx50.mp3"
+    );
 
     const song1_REF = new Song(
     "My Way",
@@ -1570,38 +1570,88 @@ function setupRandomizeButton() {
     "https://audio.jukehost.co.uk/LU3NI66FG8yE7WAfyZxzxrJA6YQgKqPL"
   );
 
-  const song2 = new Song(
+  const song2_Gore = new Song(
     "Airbag",
     "Radiohead",
     "https://files.catbox.moe/z5a3qc.mp3"
   );
 
-  const song3 = new Song(
+  const song2_W = new Song(
+    "My City Was Gone",
+    "Pretenders",
+    "https://audio.jukehost.co.uk/F04qKdt2FDN9WxSjZQ1Y416as4d2VrFD"
+  );
+
+  const song2_REF = new Song(
+    "Crazy",
+    "Willie Nelson",
+    "https://audio.jukehost.co.uk/vCxOIayI1GJp3jrr16Edpdnrj2eQRcTY"
+  );
+
+  const song3_Gore = new Song(
+    "The Future",
+    "Leonard Cohen",
+    "https://audio.jukehost.co.uk/ditU7bH9e2CYjmPg5ZuFheXfT2M31PQj"
+    );
+
+  const song3_W = new Song(
   "Sleep Now in the Fire",
   "Rage Against the Machine",
   "https://audio.jukehost.co.uk/qozzcT2pN8to9iZLd5rrOoXVLIXF24mo"
   );
 
+  const song3_REF = new Song(
+    "Born In The U.S.A",
+    "Bruce Springsteen",
+    "https://audio.jukehost.co.uk/1nbU0jWxAHQIdHU0eXkNYACY2YOw61n9"
+    );
+    
   const song4 = new Song(
     "Best Imitation Of Myself",
     "Ben Folds Five",
     "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
   );
+  const song4_W = new Song(
+    "Paradise By The Dashboard Light",
+    "Meat Loaf",
+    "https://audio.jukehost.co.uk/30ysZumO82CY4tJkOpXzkKmfPSyzW7y3"
+  );
+  
   const song5 = new Song(
     "You Make Loving Fun",
     "Fleetwood Mac",
     "https://audio.jukehost.co.uk/lEeD3Y8rRhxnn7eJgYMHxeBGwJ3LYh3j"
     );
-    const song6 = new Song(
+
+  const song5_W = new Song(
+    "I Won't Back Down",
+    "Tom Petty",
+    "https://audio.jukehost.co.uk/Q4sIcCkSyYv5V2BtLqUM7mgTwc62jmZy"
+    );
+
+  const song6 = new Song(
     "Virtual Insanity",
     "Jamiroquai",
     "https://audio.jukehost.co.uk/R1rX5dSAQ0ViwsOpYBqtgNDoMQJH6NLd"
   );
+  const song6_W = new Song(
+    "Strange Things",
+    "Randy Newman",
+    "https://audio.jukehost.co.uk/6Xp7Hju9fMNAn1CfrTbnD2YPJ4KDh0ra"
+  );
+
   const song7 = new Song(
   "The Tide Is High",
   "Blondie",
   "https://audio.jukehost.co.uk/qwqHeIcXB49bna2klqPTGhVZYZYe2tkw"
 );
+
+const song7_W = new Song(
+  "What's My Age Again?",
+  "Blink-182",
+  "https://audio.jukehost.co.uk/oJkRIDtgUPQY2T4UtfMieOlk1ke8PMhl"
+);
+
   const song8 = new Song(
   "Baby One More TIme",
   "Britney Spears",
@@ -1642,8 +1692,8 @@ const song10 = new Song(
   );
 
     playlist.addSong(song1_Gore);
-    playlist.addSong(song2);
-    playlist.addSong(song3);
+    playlist.addSong(song2_Gore);
+    playlist.addSong(song3_Gore);
     playlist.addSong(song4);
     playlist.addSong(song5);
     playlist.addSong(song6);
@@ -1657,8 +1707,8 @@ const song10 = new Song(
     playlist.addSong(song14);
 
     gore_playlist.addSong(song1_Gore);
-    gore_playlist.addSong(song2);
-    gore_playlist.addSong(song3);
+    gore_playlist.addSong(song2_Gore);
+    gore_playlist.addSong(song3_Gore);
     gore_playlist.addSong(song4);
     gore_playlist.addSong(song5);
     gore_playlist.addSong(song6);
@@ -1672,12 +1722,12 @@ const song10 = new Song(
     gore_playlist.addSong(song14);
 
     w_playlist.addSong(song1_W);
-    w_playlist.addSong(song2);
-    w_playlist.addSong(song3);
-    w_playlist.addSong(song4);
-    w_playlist.addSong(song5);
-    w_playlist.addSong(song6);
-    w_playlist.addSong(song7);
+    w_playlist.addSong(song2_W);
+    w_playlist.addSong(song3_W);
+    w_playlist.addSong(song4_W);
+    w_playlist.addSong(song5_W);
+    w_playlist.addSong(song6_W);
+    w_playlist.addSong(song7_W);
     w_playlist.addSong(song8);
     w_playlist.addSong(song9);
     w_playlist.addSong(song10);
@@ -1687,8 +1737,8 @@ const song10 = new Song(
     w_playlist.addSong(song14);
 
     ref_playlist.addSong(song1_REF);
-    ref_playlist.addSong(song2);
-    ref_playlist.addSong(song3);
+    ref_playlist.addSong(song2_REF);
+    ref_playlist.addSong(song3_REF);
     ref_playlist.addSong(song4);
     ref_playlist.addSong(song5);
     ref_playlist.addSong(song6);
