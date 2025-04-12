@@ -745,6 +745,15 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+	"model": "campaign_trail.question",
+        "pk": "campaign_1_cheney",
+        "fields": {
+            "priority": 0,
+            "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging -- and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans. It’s time to hit back, and find a message, Slick.",
+            "likelihood": 1
+        }
+    },
+    {
         "model": "campaign_trail.question",
         "pk": "campaign_2_dole",
         "fields": {
@@ -3844,6 +3853,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "campaign_1_dole",
             "description": "Get Dick Morris back. What people want, what they understand, are numbers, action, real, actual, tangible results. Let’s return to that image of common-sense pragmatism, far from the extremes on either side."
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 86001.5115,
+        "fields": {
+            "question": "campaign_1_cheney",
+            "description": "You know what, fellas? Let’s take it easy. Dick Cheney... well, he’s got some chops, sure, but he’s not gonna give us much trouble. What we need to keep doing is making the case that over these last four years, we’ve had a government that’s been capable of getting things done, and an economy that’s been stable, and strong.  "
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 86001.51151,
+        "fields": {
+            "question": "campaign_1_cheney",
+            "description": "The stakes don't exactly look super high to the average American, but why shouldn't they be? Dick Cheney learned everything he knows about economic management during his time at the Bush White House -- a time in our nation's history when working families were working more, for less. A vote for Clinton-Gore in ’96 is a vote for continued, lasting change.  "
+        }
+    },
+    {
+	"model": "campaign_trail.answer",
+        "pk": 86001.511512,
+        "fields": {
+            "question": "campaign_1_cheney",
+            "description": "Let’s counter their bluster. Secretary Cheney talks about nothing with as much vigor as our standing in the world, so why don’t we? Despite what the mopey Republicans say, we’ve made smart, forward-looking reforms to our military, leaving it better than it was four years ago, bloated, outdated, not working. America is safer today.  "
         }
     },
     {
@@ -13838,6 +13871,96 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.5115,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.011
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.5115,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0065
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.5115,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0185
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.51151,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.51151,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.511512,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.511512,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.014
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.511512,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.018
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86001.511512,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0045
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_global",
         "pk": 12272,
         "fields": {
@@ -21218,6 +21341,36 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 110003,
             "issue": 29,
             "issue_score": -0.1,
+            "issue_importance": 0.5
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 86001.51151,
+            "issue": 28,
+            "issue_score": 0.125,
+            "issue_importance": 0.5
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 86001.511512,
+            "issue": 30,
+            "issue_score": -0.1,
+            "issue_importance": 0.5
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 86001.5115,
+            "issue": 28,
+            "issue_score": -0.05,
             "issue_importance": 0.5
         }
     },
@@ -48115,6 +48268,33 @@ campaignTrail_temp.answer_feedback_json = [
 	"model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
+            "answer": 86001.5115,
+            "candidate": 77,
+            "answer_feedback": "You seem to be taking some cues from the tortoise in that old fable -- but the bigger question is, with Secretary Cheney and the GOP marching along at a similarly leisurely pace, who the hell is the hare in this story? Mr. Perot? "
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.51151,
+            "candidate": 77,
+            "answer_feedback": "This is the sort of broadly liberal messaging that could either backfire or help turn out young folks in droves for your ticket. Dick Morris and others on your staff are iffy about the plan, but they don’t matter, do they? You and the Vice President both feel more than comfortable with it. "
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.511512,
+            "candidate": 77,
+            "answer_feedback": "The crux of Cheney’s argument against you has largely centered around foreign policy, painting you as a fun-loving but lazy President, too distracted by your friends in the press or stuck in the mud to care about the changing post–Cold War world. This message aims to hit back, and, by extension, punch Cheney squarely in the nose. Will it work? "
+        }
+    },
+    {
+	"model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
             "answer": 86002.511,
             "candidate": 77,
             "answer_feedback": "These sorts of battles regarding Bono's personal life were certainly litigated during the Republican primary contests, but still, ignoring them seems like it would be a silly mistake. Advertisements are filmed, printed, and distributed, and subtle hints in your speeches regarding personal integrity are included. It's time to brand this bastard. "
@@ -54488,7 +54668,7 @@ if (e.question_number+1 == 18){
       "pk": "campaign_1_cheney",
       "fields": {
           "priority": 0,
-          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
+          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging -- and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans. It’s time to hit back, and find a message, Slick. ",
           "likelihood": 1
       }
 }
