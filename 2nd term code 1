@@ -434,17 +434,17 @@ if(!campaignTrail_temp.loaded1){
       "model": "campaign_trail.candidate",
       "pk": 80,
       "fields": {
-          "first_name": "The",
-          "last_name": "Reform Party",
+          "first_name": "Ross",
+          "last_name": "Perot",
           "election": 9,
           "party": "Reform",
-          "state": "Nationwide",
+          "state": "Texas",
           "priority": 4,
           "description": "Hopefuls looking to reform America",
           "color_hex": "#800080",
           "secondary_color_hex": "#FFFFC0",
           "is_active": 1,
-          "image_url": "https://i.imgur.com/H7eej5P.png",
+          "image_url": "https://i.imgur.com/Dm10Eba.png",
           "electoral_victory_message": "Never happening",
           "electoral_loss_message": "Expected",
           "no_electoral_majority_message": "",
@@ -800,29 +800,6 @@ if(!campaignTrail_temp.loaded1){
 },
 {
   "model": "campaign_trail.candidate",
-  "pk": 96,
-  "fields": {
-      "first_name": "Ross",
-      "last_name": "Perot",
-      "election": 9,
-      "party": "Republican?",
-      "state": "Texas",
-      "priority": 11,
-      "description": "''",
-      "color_hex": "#CD0B0A",
-      "secondary_color_hex": "#DC5B5A",
-      "is_active": 0,
-      "image_url": "https://i.imgur.com/Dm10Eba.png",
-      "electoral_victory_message": "''",
-      "electoral_loss_message": "''",
-      "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Radical short guy</p>",
-      "candidate_score": 0,
-      "running_mate": true
-  }
-},
-{
-  "model": "campaign_trail.candidate",
   "pk": 97,
   "fields": {
       "first_name": "The",
@@ -1034,14 +1011,6 @@ if(!campaignTrail_temp.loaded1){
   "fields": {
       "candidate": 78,
       "running_mate": 95
-  }
-},
-{
-  "model": "campaign_trail.running_mate",
-  "pk": 63,
-  "fields": {
-      "candidate": 78,
-      "running_mate": 96
   }
 },
 {
@@ -1267,13 +1236,6 @@ if(!campaignTrail_temp.loaded1){
           }
         }
       }
-      if (!localStorage.getItem("CLINTON")) {
-        for (let i = selectElement.options.length - 1; i >= 0; i--) {
-          if (selectElement.options[i].value === '96') {
-            selectElement.remove(i);
-          }
-        }
-      }
     }
     if(candidateButton) { // change theme on candidate viewing
       if(candbackb){
@@ -1354,7 +1316,7 @@ if(!campaignTrail_temp.loaded1){
       } else if (c == 80 && storedChar != 80) {
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
-          document.getElementById("header").src = "https://i.imgur.com/8i09vEG.png";
+          document.getElementById("header").src = "https://i.imgur.com/OREUmu8.png";
           document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#2DA3D7;\">Rogers Morton</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#2DA3D7; font-size: 17px;\">Rogers Morton</b> is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>⠀⠀⠀⠀The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br><i>Ideal performer for this role is a male in their late 50s in the bass-baritone range.</i><br><br></div>";
           let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
           document.documentElement.style.setProperty("--left-space", -1086 + "px");
