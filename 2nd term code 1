@@ -1173,6 +1173,11 @@ if(!campaignTrail_temp.loaded1){
         runningMateButton.click();
         observer.disconnect()
       }
+      if(e.candidate_id == 80) {
+        console.log("clicked");
+        runningMateButton.click();
+        observer.disconnect()
+      }
       if (!localStorage.getItem("LEBRON")) {
         for (let i = selectElement.options.length - 1; i >= 0; i--) {
           if (selectElement.options[i].value === '87') {
@@ -1317,7 +1322,7 @@ if(!campaignTrail_temp.loaded1){
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
           document.getElementById("header").src = "https://i.imgur.com/OREUmu8.png";
-          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"color:#2DA3D7;\">Rogers Morton</p><span style=\"font-size:14px;\">⠀<br><span>⠀⠀⠀⠀<b style=\"color:#2DA3D7; font-size: 17px;\">Rogers Morton</b> is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>⠀⠀⠀⠀The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br><i>Ideal performer for this role is a male in their late 50s in the bass-baritone range.</i><br><br></div>";
+          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"font-size:14px;\">⠀<br><span>A movement that shook the two-party system to its core, started by a man who was angry as hell and wouldn't take it anymore. He laid the foundation for real change. He pushed out a reluctant Texas businessman to be the perfect spokesperson, and win nearly 20% of the national vote. His idea snowballed into the Ventura governorship. All of this success, and the very idea of ''Reform'' can be traced back to Jack Gargan, but even he knows it could all go away unless the party undergoes a <b style=\"color:#8f06cf; font-size: 17px;\">Revival</b>.<br><br>Being the Chairman of the Reform National Comitte, the decision of not just who, but what the future of Reform is lies almost exclusively in his hands. As such, Gargan's chief goal is the ensure that the final stand against the two-party ''democracy'' not only survives the election, but is a viable and respected party for years after his own demise. He may not have Perot running anymore, but what he does have is passion. <br><br></div>";
           let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
           document.documentElement.style.setProperty("--left-space", -1086 + "px");
           document.documentElement.style.setProperty("--stroke-color", "#2DA3D7");
