@@ -1150,6 +1150,7 @@ if(!campaignTrail_temp.loaded1){
     const initialButton = document.getElementById("election_id_button");
     const runningMateButton = document.getElementById("running_mate_id_button");
     const candidateButton = document.getElementById("candidate_id_button");
+    const veepBB = document.getElementById("running_mate_id_back");
     const finalScreenBB = document.getElementById("opponent_selection_id_back");
     const difficultySelect = document.getElementById("difficulty_level_id");
     const finalScreenID = document.getElementById("opponent_selection_id_button");
@@ -1189,9 +1190,8 @@ if(!campaignTrail_temp.loaded1){
         runningMateButton.click();
         observer.disconnect()
       }
-      if (v == 81 && storedVeep != 81) {
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "The Republicans";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "";
+      if (e.candidate_id == 77) {
+        veepBB.remove();
       }
       if (v == 86 && storedVeep != 86) {
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
