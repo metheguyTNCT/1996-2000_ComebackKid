@@ -376,6 +376,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "midterm_minor_gop_win_reich",
+        "fields": {
+            "priority": 0,
+            "description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You've made the House unexpectedly competitive while holding onto the Senate, a situation that bodes well for passing your agenda and gives you the freedom to make some daring moves until ’96. What’s your plan from here?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "midterm_gop_sweep",
         "fields": {
             "priority": 0,
@@ -2283,7 +2292,7 @@ campaignTrail_temp.answers_json = [
         "pk": 25017.5,
         "fields": {
             "question": "midterm_minor_gop_win_none",
-            "description": "Woah, that’s great news for us. We gotta get to action nonetheless, the House’s still Republican, after all, let’s contact Gingrich and Dole, tell them we’re willing to work together, and make sure Congress is on our side. We agree with the Republicans in a few issues, and keeping things cordial will be good for our chances. We gotta talk to ‘em. "
+            "description": "Woah, that’s great news for us. We gotta get to action nonetheless, the House’s still Republican, after all, let’s contact Gingrich and Dole, tell them we’re willing to work together, and make sure Congress is on our side. Let's give them something to claim victory, I'm sure they'll bite and we'll look bipartisan."
         }
     },
     {
@@ -2291,7 +2300,39 @@ campaignTrail_temp.answers_json = [
         "pk": 25018.5,
         "fields": {
             "question": "midterm_minor_gop_win_none",
-            "description": "We’re gonna be passing stuff now, big leagues. We promised significant change, and we’re gonna give it to America. These people, they voted for me because they wanted change, they wanted hope, and that’s what we’re going to give, our best we can, these people deserve it, and we’re gonna give them the change they asked for."
+            "description": "We’re gonna be passing stuff now, big leagues. Let's start our work on bills limiting the influence of those companies that have been addicting the population to smoking for a century without ever asking for much of anything. The smoking case is the main thing blaring in the news right now, and I just know the people will love seeing a few CEOs shake."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 25019.5,
+        "fields": {
+            "question": "midterm_minor_gop_win_none",
+            "description": "While we're still in control, let's not cook our support just yet. Gore has been pushing for us to do yet more for the environment, especially in question of renewable energy. We're not going to stop the subsidies to oil overnight, but the start of the shift need to begin. Let's enrobe it with new technologies as well to avoid most complaints."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 25020.5,
+        "fields": {
+            "question": "midterm_minor_gop_win_reich",
+            "description": "Woah, that’s great news for us. We gotta get to action nonetheless, the House’s still Republican, after all, let’s contact Gingrich and Dole, tell them we’re willing to work together, and make sure Congress is on our side. Let's give them something to claim victory, I'm sure they'll bite and we'll look bipartisan."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 25021.5,
+        "fields": {
+            "question": "midterm_minor_gop_win_reich",
+            "description": "We’re gonna be passing stuff now, big leagues. Let's start our work on bills limiting the influence of those companies that have been addicting the population to smoking for a century without ever asking for much of anything. The smoking case is the main thing blaring in the news right now, and I just know the people will love seeing a few CEOs shake."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 25022.5,
+        "fields": {
+            "question": "midterm_minor_gop_win_reich",
+            "description": "While we're still in control, let's not cook our support just yet. Gore has been pushing for us to do yet more for the environment, especially in question of renewable energy. We're not going to stop the subsidies to oil overnight, but the start of the shift need to begin. Let's enrobe it with new technologies as well to avoid most complaints."
         }
     },	
     {
@@ -11272,22 +11313,102 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12508,
+        "pk": 12701,
         "fields": {
             "answer": 25017.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.015
+            "global_multiplier": 0.0145
         }
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12511,
+        "pk": 12702,
+        "fields": {
+            "answer": 25017.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0133
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 25017.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0245
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12717,
         "fields": {
             "answer": 25018.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.00991
+            "global_multiplier": 0.0223
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12738,
+        "fields": {
+            "answer": 25019.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0189
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12742,
+        "fields": {
+            "answer": 25020.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0145
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12743,
+        "fields": {
+            "answer": 25020.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0133
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12744,
+        "fields": {
+            "answer": 25020.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0245
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12747,
+        "fields": {
+            "answer": 25021.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0223
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12758,
+        "fields": {
+            "answer": 25022.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0189
         }
     },
     {
@@ -23655,13 +23776,43 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
-        "pk": 12804,
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12720,
         "fields": {
             "answer": 25018.5,
             "issue": 28,
-            "issue_score": 0.26,
-            "issue_importance": 0.5
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12731,
+        "fields": {
+            "answer": 25019.5,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 25021.5,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12759,
+        "fields": {
+            "answer": 25022.5,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 2
         }
     },
     {
@@ -46670,6 +46821,292 @@ campaignTrail_temp.answer_score_state_json = [
              "state_multiplier": -0.04
          }
      },
+     {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12721,
+        "fields": {
+            "answer": 25018.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12722,
+        "fields": {
+            "answer": 25018.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12723,
+        "fields": {
+            "answer": 25018.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12724,
+        "fields": {
+            "answer": 25018.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12725,
+        "fields": {
+            "answer": 25018.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12726,
+        "fields": {
+            "answer": 25018.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12727,
+        "fields": {
+            "answer": 25018.5,
+            "state": 204,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12732,
+        "fields": {
+            "answer": 25019.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12733,
+        "fields": {
+            "answer": 25019.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12734,
+        "fields": {
+            "answer": 25019.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12735,
+        "fields": {
+            "answer": 25019.5,
+            "state": 194,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12736,
+        "fields": {
+            "answer": 25019.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12737,
+        "fields": {
+            "answer": 25019.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 25021.5,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12750,
+        "fields": {
+            "answer": 25021.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12751,
+        "fields": {
+            "answer": 25021.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12752,
+        "fields": {
+            "answer": 25021.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12753,
+        "fields": {
+            "answer": 25021.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12754,
+        "fields": {
+            "answer": 25021.5,
+            "state": 181,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12755,
+        "fields": {
+            "answer": 25021.5,
+            "state": 204,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12760,
+        "fields": {
+            "answer": 25022.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12761,
+        "fields": {
+            "answer": 25022.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12762,
+        "fields": {
+            "answer": 25022.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12763,
+        "fields": {
+            "answer": 25022.5,
+            "state": 194,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12764,
+        "fields": {
+            "answer": 25022.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12765,
+        "fields": {
+            "answer": 25022.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0122
+        }
+    }
 ]
 
 campaignTrail_temp.answer_feedback_json = [
@@ -47373,24 +47810,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 25016.5,
             "candidate": 77,
             "answer_feedback": "The base is fired up. The Senators and House members are encouraged to band together, but the Republicans barely break a sweat. Only time will tell how this plays out -- but for now, you're confident."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12507,
-        "fields": {
-            "answer": 25017.5,
-            "candidate": 77,
-            "answer_feedback": "Although this is a good strategy if you're hoping to keep good relations with Congress, people were hoping for more here, they wanted change, and that doesn't seem that’s what you're giving them.\n"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12510,
-        "fields": {
-            "answer": 25018.5,
-            "candidate": 77,
-            "answer_feedback": " This provocative vision for change, echoing the likes of President Roosevelt, is surprisingly effective in appealing to the folks who voted for you. It’s seen as a win, and making that loud and clear only helps your appeal."
         }
     },
     {
@@ -51056,6 +51475,60 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "As discussion on reworking the entire student loan system may take years, there was one quick decision that was undertook. You forgave all student loans that have been contracted since more than 3 years. The right is calling it reckless and yet you feel like those student stuck in debt will be in yours now."
         }
+    },
+        {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12700,
+        "fields": {
+            "answer": 25017.5,
+            "candidate": 77,
+            "answer_feedback": "As the question of deficit remained on every lip, and you wouldn't allow Republicans to do anything drastic, some small cuts for small and medium business would be signed. Senators across the aisle would say it's their greatest achievement and nobody would remember it 4 years later."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12716,
+        "fields": {
+            "answer": 25018.5,
+            "candidate": 77,
+            "answer_feedback": "$365 Billion in damages will be payed back to all 50 states in the next few years by big Tobacco. With the new restriction, it may be a fatal blow to their industry. In a massively ironic move, you seen Jesse Jackson and Al Sharpton come in the defense of Big Tabaco. It's true after all, they are a major financial contributor to the NAACP, it didn't make their hypocrisy any less searing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12729,
+        "fields": {
+            "answer": 25019.5,
+            "candidate": 77,
+            "answer_feedback": "Gore would go to the Senate, pushing out a slew of different restrictions for cars, policies for investment in solar and wind power as well as support for automation. You would hear less complaints from politicians than blue collar workers that already hated NAFTA and saw it as just another ''kick in the nuts.''"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12741,
+        "fields": {
+            "answer": 25020.5,
+            "candidate": 77,
+            "answer_feedback": "As the question of deficit remained on every lip, and you wouldn't allow Republicans to do anything drastic, some small cuts for small and medium business would be signed. Senators across the aisle would say it's their greatest achievement and nobody would remember it 4 years later."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12746,
+        "fields": {
+            "answer": 25021.5,
+            "candidate": 77,
+            "answer_feedback": "$365 Billion in damages will be payed back to all 50 states in the next few years by big Tobacco. With the new restriction, it may be a fatal blow to their industry. In a massively ironic move, you seen Jesse Jackson and Al Sharpton come in the defense of Big Tabaco. It's true after all, they are a major financial contributor to the NAACP, it didn't make their hypocrisy any less searing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12757,
+        "fields": {
+            "answer": 25022.5,
+            "candidate": 77,
+            "answer_feedback": "It would be a uphill battle agains the line of budget hawks, however, once everything is said is done, the preparation for the new millennium will be made and, so without workers feeling like they got fleeced in the transition."
+        }
     }
 ]
 
@@ -51635,8 +52108,10 @@ cyoAdventure = function(a) {
         if (SlimGOPCongress == 1) {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
         question_insert("midterm_minor_gop_win_none",oslo_question_1_slimgop_start);
+        question_insert("midterm_minor_gop_win_reich",oslo_question_1_slimgop_start);
         } else {
             question_insert("midterm_minor_gop_win_none",oslo_question_1_slimgop);
+            question_insert("midterm_minor_gop_win_reich",oslo_question_1_slimgop);
         }
         } else {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
@@ -52257,7 +52732,7 @@ if (e.question_number+1 == 27) {
         }
 	} 
     if (e.player_answers.includes(60002) || e.player_answers.includes(60001)) {
-    if (SlimGOPCongress == 1 && LEGWin >= 3) {
+    if (SlimGOPCongress == 1 && LEGWin >= 5) {
         question_insert("dnc_dean_badpell_badhillary",ques_18_alt_win);
         question_insert("dnc_dean_badpell_decenthillary",ques_18_alt_win);
         question_insert("dnc_dean_badpell_goodhillary",ques_18_alt_win);
@@ -52872,6 +53347,18 @@ PublicSupport += 1;
     PublicSupport += 2;
     FPWin -= 1;
     }
+    // Midterm Result CYOA
+    if (ans == 25017.5 || 25020.5) {
+    Ideology -= 1;
+    }
+    if (ans == 25018.5 || 25021.5) {
+    Ideology += 1;
+    Legacy += 1;
+    }
+    if (ans == 25019.5 || 25022.5) {
+    Ideology += 1;
+    Legacy += 1;
+    }
     //Oslo CYOA
     if (ans == 89000.5 || ans == 89003.5) {
     PublicSupport -= 1;
@@ -53333,6 +53820,22 @@ if (e.question_number+1 == 18){
             }
         ); 
     } else {
+    if (e.player_answers.includes(88021.5)) {
+            DemCongress -= 1;
+            SlimGOPCongress += 1;
+            Legacy += 1;
+			question_insert ("question_11_midterm_prep", 
+            {
+				"model": "campaign_trail.question",
+				"pk": "midterm_minor_gop_win_reich",
+				"fields": {
+					"priority": 0,
+					"description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You've made the House unexpectedly competitive while holding onto the Senate, a situation that bodes well for passing your agenda and gives you the freedom to make some daring moves until ’96. What’s your plan from here?",
+					"likelihood": 1
+					}
+				}
+            );
+        } else {
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
@@ -53347,10 +53850,26 @@ if (e.question_number+1 == 18){
 					}
 				}
             );
+        }
             ctsAchievement("Counterrevolution");
     }
     } else {
-            ctsAchievement("Counterrevolution");
+    if (e.player_answers.includes(88021.5)) {
+            DemCongress -= 1;
+            SlimGOPCongress += 1;
+            Legacy += 1;
+			question_insert ("question_11_midterm_prep", 
+            {
+				"model": "campaign_trail.question",
+				"pk": "midterm_minor_gop_win_reich",
+				"fields": {
+					"priority": 0,
+					"description": "Well, this is interesting. Much to the Republicans' chagrin, your performance in the midterms was surprisingly strong, far better than the polls predicted. You've made the House unexpectedly competitive while holding onto the Senate, a situation that bodes well for passing your agenda and gives you the freedom to make some daring moves until ’96. What’s your plan from here?",
+					"likelihood": 1
+					}
+				}
+            );
+        } else {
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
@@ -53365,7 +53884,9 @@ if (e.question_number+1 == 18){
 					}
 				}
             );
-		}
+        }
+            ctsAchievement("Counterrevolution");
+    }
     } else if (GotHealthcare == 0) {
         if (PublicSupport <= 8){
 			DemCongress -= 1;
