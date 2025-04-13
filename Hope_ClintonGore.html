@@ -57127,7 +57127,7 @@ if (Ideology === 0) {
     ideologyText.textContent = "Blue Dog";
 } else if (Ideology >= 1 && Ideology <= 5) {
     ideologyText.textContent = "New Deal Democrat";
-} else if (Ideology >= 6 && Ideology <= 13) {
+} else if (Ideology >= 6) {
     ideologyText.textContent = "Progressive";
 } else {
     ideologyText.textContent = "Undefined";
@@ -57313,6 +57313,7 @@ function changeOpponentsTab() {
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Arlen Specter");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("David Duke");
 } if (LamarNom == 1) {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Arlen Specter");
@@ -57338,6 +57339,7 @@ function changeOpponentsTab() {
     deleteCandidateButton("Pete Wilson");
     deleteCandidateButton("Colin Powell");
     deleteCandidateButton("Sonny Bono");
+    deleteCandidateButton("David Duke");
 } if (PowellNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
@@ -57372,6 +57374,17 @@ function changeOpponentsTab() {
     });
 } if (FPWin >= 0) {
     deleteCandidateButton("Colin Powell");
+} if (Ideology >= 6) {
+    addCandidate({
+        name: 'David Duke',
+        image: 'https://files.catbox.moe/ct6q8c.png',
+        description: 'The Grand Wizard of the Ku Klux Klan himself, You\'d think he was finished after his failed governor run in 1991. The simple fact that even a portion of Republicans are considering electing him is very concerning.',
+        pros: 'As Anti-establishment as can be. Will use all the mud that there is in grand speeches.',
+        cons: 'Near Null Appeal to anyone that isn\'t as much of a maniac as he is.',
+        strategy: 'Focus on the fact he as no real plans outside of vague proposal. Don\'t chastise Republicans at large, make it about him.'
+    });
+} if (Ideology <= 5) {
+    deleteCandidateButton("David Duke");
 }
 }
 
