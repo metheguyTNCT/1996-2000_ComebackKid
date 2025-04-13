@@ -43679,4 +43679,1397 @@ campaignTrail_temp.jet_data = [{
     "ending_data": {}
 }
 ]
+campaignTrail_temp.cyoa = true
+var buttonGFX = '<img src=\"https://i.imgur.com/so1GE0F.png\" style=\"width: 18px; height: 18px; vertical-align: middle;\">';
+var opposition = 0
+var backlash = 0
+var economy = 0
+var vietnam = 0
+var rfkSou = 0
+var thresholdCand = 2
+var FBIRFK = 0
+cyoAdventure = function(a) {
+refreshRS()
+}
+let firstPlace = null
+let secondPlace = null
 
+var rockefeller_var = 0
+var goldwater_var = 0
+var percy_var = 0
+var lindsay_var = 0
+var agnew_var = 0
+var reagan_var = 0
+var yorty_var = 0
+var nixon_var = 0
+var hughes_var = 0
+
+var moveup = 0
+
+var rockefeller_active = 1
+var goldwater_active = 1
+var percy_active = 1
+var lindsay_active = 1
+var agnew_active = 1
+var reagan_active = 1
+
+var nixon_active = 0
+var hughes_active = 0
+var yorty_active = 0
+
+var hughes_enabled = 0
+var yorty_enabled = 0
+
+let opponents = {
+  rockefeller: rockefeller_var,
+  goldwater: goldwater_var,
+  percy: percy_var,
+  lindsay: lindsay_var,
+  agnew: agnew_var,
+  reagan: reagan_var,
+  yorty: yorty_var,
+  nixon: nixon_var,
+  hughes: hughes_var
+};
+
+var reagan_interviewed = 0
+var contestedConvention = 0
+
+let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
+
+function updateCandidates(type, amt){
+  if(type == "backlash" && amt>0){
+      if(agnew_active == 1){
+          opponents.agnew += amt
+      }
+      if(reagan_active == 1){
+          opponents.reagan += 1
+      }
+  }
+  if(type == "backlash" && amt<0){
+      if(percy_active == 1){
+          opponents.percy += 1
+      }
+      if(lindsay_active == 1){
+          opponents.lindsay += 1.5
+      }
+      // minus
+      if(agnew_active == 1){
+          opponents.agnew -= 1
+      }
+  }
+  if(type == "oppo" && amt>0){
+      if(rockefeller_active == 1){
+          opponents.rockefeller += (amt/1.5)
+      }
+      if(percy_active == 1){
+          opponents.percy += (amt/2)
+      }
+  }
+  if(type == "oppo" && amt<0){
+      if(goldwater_active == 1){
+          opponents.goldwater -= amt
+      }
+      if(reagan_active == 1){
+          opponents.reagan += 1
+      }
+  }
+  if(type == "vn" && amt>0){
+      if(rockefeller_active == 1){
+          opponents.rockefeller += 0.5
+      }
+  }
+  if(type == "ach" && amt>0){
+      if(rockefeller_active == 1){
+          opponents.rockefeller += 0.5
+      }
+      if(percy_active == 1){
+          opponents.percy += 0.5
+      }
+      if(goldwater_active == 1){
+          opponents.goldwater += 0.5
+      }
+  }
+  if(type == "ach" && amt<0){
+      if(rockefeller_active == 1){
+          opponents.rockefeller -= 0.5
+      }
+      if(percy_active == 1){
+          opponents.percy -= 0.5
+      }
+      if(goldwater_active == 1){
+          opponents.goldwater -= 0.5
+      }
+  }
+  if(type == "econ" && amt>0){
+      if(rockefeller_active == 1){
+          opponents.rockefeller += (amt/2)
+      }
+  }
+  if(type == "econ" && amt<0){
+      if(goldwater_active == 1){
+          opponents.goldwater += 1
+      }
+      if(reagan_active == 1){
+          opponents.reagan -= (amt/2)
+      }
+  }
+  if(type == "sou" && amt>0){
+      if(lindsay_active == 1){
+          opponents.lindsay += 0.5
+      }
+  }
+  else if(type == "sou" && amt<0){
+      if(reagan_active == 1){
+          opponents.reagan += 0.5
+      }
+  }
+
+
+  sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
+  sortedOpponents.forEach(([name, value]) => {
+      console.log(`${name}: ${value}`);
+  });
+  menuItemsA.length = 0;
+  sortedOpponents.forEach(([name, value]) => {
+      if (name == 'percy' && percy_active == 1) {
+          menuItemsA.push(BuchananObject); 
+      }
+      else if (name == 'rockefeller' && rockefeller_active == 1) { 
+          menuItemsA.push(HagelinObject); 
+      }
+      else if (name == 'goldwater' && goldwater_active == 1) { 
+          menuItemsA.push(TrumpObject); 
+      }
+      else if (name == 'agnew' && agnew_active == 1) { 
+          menuItemsA.push(PaulObject); 
+      }
+      else if (name == 'lindsay' && lindsay_active == 1) { 
+          menuItemsA.push(BeatyObject); 
+      }
+      else if (name == 'reagan' && reagan_active == 1) { 
+          menuItemsA.push(AndersonObject); 
+      }
+      else if (name == 'nixon' && nixon_active == 1) { 
+          menuItemsA.push(NixonObject); 
+      }
+      else if (name == 'yorty' && yorty_active == 1) { 
+          menuItemsA.push(YortyObject); 
+      }
+      else if (name == 'hughes' && hughes_active == 1) { 
+          menuItemsA.push(HughesObject); 
+      }
+  });
+  refreshRS()
+}
+async function handleFooter() {
+  var gameWindow = document.getElementById('game_window');
+  addHeadquarterButton()
+  var existingFooter = document.getElementById('new_footer');
+  if (existingFooter) {
+      return;
+  }
+
+  var new_footer = document.createElement("div");
+  new_footer.id = "new_footer";
+  new_footer.style.display = "flex";
+  new_footer.style.justifyContent = "center";
+  new_footer.style.alignItems = "center";
+
+  gameWindow.appendChild(new_footer);
+};
+async function handleMutations(mutationsList, observer) {
+  if (observerRunning) return;
+  observerRunning = true;
+  observer.disconnect();
+  await handleFooter();
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  observerRunning = false;
+}
+let processedNodes = new Set();
+let observerRunning = false;
+
+var element = document.getElementById('controlElement');
+if (!element) {
+let singleObserver = new MutationObserver(handleMutations);
+singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+var controlElement = document.createElement('div');
+controlElement.style.display = 'none';
+controlElement.id = 'controlElement';
+document.body.appendChild(controlElement);
+}
+
+function closeSurrogates() {
+  const popOutMenu = document.getElementById('popOutMenu');
+  if (popOutMenu) {
+      popOutMenu.remove();
+  }
+  closeSurrogateFlag = 1;
+}
+function refreshSurrogates() {
+  const popOutMenu = document.getElementById('popOutMenu');
+  if (popOutMenu) {
+      popOutMenu.remove();
+      openSurrogates();
+  }
+}
+function addHeadquarterButton() {
+  // Check if the button already exists
+  if (document.getElementById('headquarter_button')) {
+      return;
+  }
+
+  // Find the reference button by its ID
+  const refButton = document.getElementById('view_electoral_map');
+  if (!refButton) {
+      return;
+  }
+
+  // Create a new button element
+  const newButton = document.createElement('button');
+
+  newButton.id = 'headquarter_button';
+
+  newButton.style.marginLeft = '1.5em';
+
+  newButton.innerHTML = `${buttonGFX}`;
+
+  // newButton.style.backgroundColor = 'transparent'; // Or your desired color
+  // newButton.style.boxShadow = 'none';
+  // newButton.style.border = 'none'; // Optional: To remove border changes on hover
+  // newButton.addEventListener('mouseover', () => {
+  //     newButton.style.backgroundColor = 'transparent'; // Keep it consistent
+  //     newButton.style.boxShadow = 'none';
+  // });
+  // newButton.addEventListener('mouseout', () => {
+  //     newButton.style.backgroundColor = 'transparent'; // Keep it consistent
+  //     newButton.style.boxShadow = 'none';
+  // });
+
+  // Attach the click event listener
+  newButton.addEventListener('click', openRS);
+
+  // Insert the new button next to the reference button
+  refButton.insertAdjacentElement('afterend', newButton);
+}
+function openSurrogates() {
+  //makeMortonRM()
+  // Check if the menu already exists
+  let popOutMenu = document.getElementById('popOutMenu');
+  if (!popOutMenu) {
+
+      // Create the pop-out menu container
+      popOutMenu = document.createElement('div');
+      popOutMenu.id = 'popOutMenu';
+      popOutMenu.style.position = 'absolute'; 
+      popOutMenu.style.backgroundColor = 'rgba(223, 223, 217, 1)'; 
+      popOutMenu.style.boxShadow = 'none';
+      popOutMenu.style.width = '958px';
+      popOutMenu.style.height = '581px';
+      popOutMenu.style.border = 'none'; 
+      popOutMenu.style.zIndex = '1000';
+      popOutMenu.style.border = '1px solid #C9C9C9'; 
+      popOutMenu.style.outline = '1px solid #C9C9C9';
+      popOutMenu.style.outlineOffset = '1px';  
+      
+      popOutMenu.style.backgroundSize = 'cover';
+      popOutMenu.style.backgroundPosition = 'center';
+      popOutMenu.style.alignItems = 'center';     
+      
+      const topText = document.createElement('div');
+      topText.style.textAlign = 'center';
+      topText.innerHTML = `<h3 style="margin: 0 0 10px 0; text-align: center;"><br>Pick a Winner:</h3>`
+      popOutMenu.appendChild(topText);
+
+      // Create the close button
+      const closeButton = document.createElement('button');
+      closeButton.innerHTML = '<b>Close</b>';
+      closeButton.style.position = "absolute";
+      closeButton.style.transform = "translate(-723px, 0px)"; 
+      closeButton.onclick = closeSurrogates;
+      //popOutMenu.appendChild(closeButton);
+
+      document.body.appendChild(popOutMenu);
+
+      overviewtxt = ""; // Initialize an empty string to hold the text
+
+      // Create the menu list
+      const menuListA = document.createElement('ul');
+      menuListA.style.listStyle = 'none';
+      menuListA.style.padding = '0';
+      menuListA.style.maxHeight = '534px';
+      menuListA.style.overflowX = 'hidden'; 
+      menuListA.style.overflowY = 'auto'; 
+
+      // Add menu items from the array
+      menuItemsA.forEach(item => {
+          const menuItem = document.createElement('div');
+          menuItem.style.display = 'flex';
+          menuItem.style.alignItems = 'flex-start';
+          menuItem.style.backgroundImage = 'url("https://i.imgur.com/SjUkovL.png")'; 
+          menuItem.style.width = '958px';
+          menuItem.style.height = '402px';
+          menuItem.style.paddingLeft = '10px'; 
+          menuItem.style.marginBottom = '10px'; 
+
+          const selectCandidate = document.createElement('button');
+          selectCandidate.innerHTML = '<b>Give A Call</b>';
+          selectCandidate.style.backgroundColor = '#201E19'; 
+          selectCandidate.style.color = '#2699CD';
+          if(e.altcolors){
+              selectCandidate.style.color = '#BC331F';
+          }
+          selectCandidate.style.width = '284px';  
+          selectCandidate.style.height = '37px';  
+          selectCandidate.style.borderRadius = '7px';  
+          selectCandidate.style.border = '2px solid #201E19';
+          selectCandidate.style.position = 'relative';
+          selectCandidate.style.marginTop = '10px';
+          selectCandidate.style.marginLeft = '10px';
+          selectCandidate.addEventListener('click', item.action);
+          menuItem.appendChild(selectCandidate);
+
+          const photo = document.createElement('img');
+          photo.src = item.photo;
+          photo.style.border = '1px solid #C9C9C9'; 
+          photo.style.outline = '1px solid #C9C9C9';
+          photo.style.outlineOffset = '1px';  
+          photo.style.padding = "1px"; 
+          photo.style.width = '255px';
+          photo.style.height = '302px';
+          photo.style.marginRight = '10px';
+          photo.style.position = 'relative'; 
+          photo.style.marginTop = '70px'; 
+          photo.style.marginLeft = '-279px'; 
+
+          const textAndButton = document.createElement('div');
+
+          const box = document.createElement('div');
+          box.style.width = '615px'; 
+          box.style.height = '284px'; 
+          box.style.border = '1px solid #C9C9C9'; 
+          box.style.outline = '1px solid #C9C9C9';
+          box.style.outlineOffset = '1px';  
+          box.style.backgroundColor = 'rgba(255, 255, 255, 1)'; 
+          box.style.padding = '10px';
+          box.style.textAlign = 'left';
+          box.innerHTML = item.bio;;
+          box.style.position = 'relative'; 
+          box.style.marginTop = '70px'; 
+          box.style.marginLeft = '15px';             
+
+          menuItem.appendChild(photo);
+          menuItem.appendChild(box);
+
+          menuListA.appendChild(menuItem);
+      });
+      popOutMenu.appendChild(menuListA);
+  }
+
+  // Calculate the position of the button and set the menu position
+  //const buttonRect = event.target.getBoundingClientRect();
+  popOutMenu.style.left = "1px";
+  popOutMenu.style.top = "1px";
+
+  // Display the menu
+  let questions = document.getElementById("game_window");
+  questions.appendChild(popOutMenu);
+  //popOutMenu.style.display = 'block';
+
+  // changeGameDisp(true);
+  
+  // gameWindow.appendChild(popOutMenu);
+
+  // const cheatIndicator = document.getElementById('cheatIndicator');
+  // if (cheatIndicator) {
+  //     if(sortedOpponents[0][0] == "rockefeller"){
+  //         selectRockefeller()
+  //     }
+  //     else if(sortedOpponents[0][0] == "percy"){
+  //         selectPercy()
+  //     }
+  //     else if(sortedOpponents[0][0] == "goldwater"){
+  //         selectGoldwater()
+  //     }
+  //     else if(sortedOpponents[0][0] == "agnew"){
+  //         selectAgnew()
+  //     }
+  //     else if(sortedOpponents[0][0] == "lindsay"){
+  //         selectLindsay()
+  //     }
+  //     else if(sortedOpponents[0][0] == "reagan"){
+  //         selectReagan()
+  //     }
+  // }
+}
+
+var nominating = 0
+
+function selectRockefeller(){
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/KSZQdX3.png';
+    campaignTrail_temp.candidate_last_name = 'Rockefeller';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Nelson"
+    e.candidate_json[id].fields.last_name = "Rockefeller" 
+    e.candidate_json[id].fields.color_hex = "#605f85" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#a6626b" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/sj9mawH.gif"
+    
+    runningmaterole = "Governor";
+    runningmatefullname = "Nelson Rockefeller";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150001, \"fields\": {\"candidate\": 81, \"running_mate\": 50001}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150009, \"fields\": {\"candidate\": 81, \"running_mate\": 50009}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.rockefeller > 2){
+            pictureDict[8] = "https://i.imgur.com/zp9r6uR.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10035);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/O7I4bR9.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10040);
+        }
+    }
+    republican = "rockefeller";
+    if(e.noCounter == 18){
+        if(opponents.rockefeller > 4){    
+            menuItemsA = [];  
+            menuItemsA.push(HagelinObject);          
+            campaignTrail_temp.questions_json[18] = tunnel(10391);
+            percy_active = 0
+            rockefeller_active = 1
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  
+  function selectPercy() {
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/9D4xPxL.png';
+    campaignTrail_temp.candidate_last_name = 'Percy';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Chuck"
+    e.candidate_json[id].fields.last_name = "Percy" 
+    e.candidate_json[id].fields.color_hex = "#6a8891" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#912a3b" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/r9g9PUM.gif"
+    
+    runningmaterole = "Senator";
+    runningmatefullname = "Chuck Percy";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150002, \"fields\": {\"candidate\": 81, \"running_mate\": 50002}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150009, \"fields\": {\"candidate\": 81, \"running_mate\": 50009}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.percy > 2){
+            pictureDict[8] = "https://i.imgur.com/has3MeF.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10025);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/6dKxrgY.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10030);
+        }
+    }
+    republican = "percy";
+    if(e.noCounter == 18){
+        if(opponents.percy > 4){
+            menuItemsA = [];  
+            menuItemsA.push(BuchananObject);  
+            percy_active = 1
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+            campaignTrail_temp.questions_json[18] = tunnel(10385);
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  function selectGoldwater() {
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/QHt8PmY.png';
+    campaignTrail_temp.candidate_last_name = 'Goldwater';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Barry"
+    e.candidate_json[id].fields.last_name = "Goldwater" 
+    e.candidate_json[id].fields.color_hex = "#1b3b54" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#99311D" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/2IY5okn.gif"
+    
+    runningmaterole = "Senator";
+    runningmatefullname = "Barry Goldwater";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150001, \"fields\": {\"candidate\": 81, \"running_mate\": 50001}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 50006}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.goldwater > 2){
+            pictureDict[8] = "https://i.imgur.com/VkTtIKe.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10045);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/fl8gxyP.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10050);
+        }
+    }
+    republican = "goldwater";
+    if(e.noCounter == 18){
+        if(opponents.goldwater > 4){
+            menuItemsA = [];  
+            menuItemsA.push(TrumpObject);  
+            campaignTrail_temp.questions_json[18] = tunnel(10388);
+            lastMinSel = 1
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 1
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  function selectLindsay() {
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/kgwlK8K.png';
+    campaignTrail_temp.candidate_last_name = 'Lindsay';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "John"
+    e.candidate_json[id].fields.last_name = "Lindsay" 
+    e.candidate_json[id].fields.color_hex = "#306085" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#911834" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/Fbp4zul.gif"
+  
+    runningmaterole = "Mayor";
+    runningmatefullname = "John Lindsay";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150009, \"fields\": {\"candidate\": 81, \"running_mate\": 50009}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}},  {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150009, \"fields\": {\"candidate\": 81, \"running_mate\": 50009}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.lindsay > 2){
+            pictureDict[8] = "https://i.imgur.com/Fp3obzQ.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10065);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/lZscmDt.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10070);
+        }
+    }
+    republican = "lindsay";
+    if(e.noCounter == 18){
+        if(opponents.lindsay > 4){
+            menuItemsA = [];  
+            menuItemsA.push(BeatyObject);  
+            campaignTrail_temp.questions_json[18] = tunnel(10394);
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 1
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  function selectAgnew() {
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/btM3ooK.png';
+    campaignTrail_temp.candidate_last_name = 'Agnew';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Spiro"
+    e.candidate_json[id].fields.last_name = "Agnew" 
+    e.candidate_json[id].fields.color_hex = "#445d70"
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#874740" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/9xEvaMu.gif"
+    
+    runningmaterole = "Governor";
+    runningmatefullname = "Ted Agnew";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150010, \"fields\": {\"candidate\": 81, \"running_mate\": 50010}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150004, \"fields\": {\"candidate\": 81, \"running_mate\": 50004}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 50006}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.agnew > 2){
+            pictureDict[8] = "https://i.imgur.com/dwIP4Jt.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10075);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/Z9d6hXB.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10080);
+        }
+    }
+    republican = "agnew";
+    if(e.noCounter == 18){
+        if(opponents.agnew > 4){
+            menuItemsA = [];  
+            menuItemsA.push(PaulObject);  
+            campaignTrail_temp.questions_json[18] = tunnel(10397);
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 1
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  function selectReagan() {
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/Lhi97y3.png';
+    campaignTrail_temp.candidate_last_name = 'Reagan';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Ronald"
+    e.candidate_json[id].fields.last_name = "Reagan"  
+    e.candidate_json[id].fields.color_hex = "#40475c" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#802626" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/SLbq0qR.gif"
+  
+    runningmaterole = "Governor";
+    runningmatefullname = "Ronald Reagan";
+  
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 50006}}]");
+    
+    if(e.noCounter == 8){
+        if(opponents.reagan > 2){
+            pictureDict[8] = "https://i.imgur.com/qVV4kIF.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10055);
+        }
+        else{
+            pictureDict[8] = "https://i.imgur.com/h9sCW8o.png"
+            campaignTrail_temp.questions_json[8] = tunnel(10060);
+        }
+    }
+    republican = "reagan";
+    if(e.noCounter == 18){
+        if(opponents.reagan > 4){
+            menuItemsA = [];  
+            menuItemsA.push(AndersonObject);  
+            campaignTrail_temp.questions_json[18] = tunnel(10400);
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 1
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+  
+            ctsAchievement("Hated by Aeolos<br>⠀");
+        }
+        else{
+            pictureDict[18] = "https://i.imgur.com/tHOybWR.png"
+            campaignTrail_temp.questions_json[18] = tunnel(10866);
+            republican = "noone";
+            percy_active = 0
+            rockefeller_active = 0
+            goldwater_active = 0
+            agnew_active = 0
+            lindsay_active = 0
+            reagan_active = 0
+            hughes_active = 0
+            yorty_active = 0
+            nixon_active = 0
+        }
+    }
+    closeSurrogates()
+  }
+  function nancyPOV(){
+    savedRMIMAGE = e.running_mate_image_url;
+    savedRMROLE = runningmaterole;
+    savedRMNAME = runningmatefullname;
+    campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/cDHJf1m.png';
+    candidaterole = "First Lady";
+    candidatefullname = "Nancy Reagan";
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/MZgUn4x.png';
+    runningmaterole = "Socialite";
+    runningmatefullname = "Jerry Zipkin";
+  }
+  function revertNancyPOV(){
+    campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/Lhi97y3.png';
+    candidaterole = "Governor";
+    candidatefullname = "Ronald Reagan";
+    campaignTrail_temp.running_mate_image_url = savedRMIMAGE;
+    runningmaterole = savedRMROLE;
+    runningmatefullname = savedRMNAME;
+  }
+  
+  function selectYorty(){
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/Q2mrIvU.png';
+    campaignTrail_temp.candidate_last_name = 'Yorty';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Sam"
+    e.candidate_json[id].fields.last_name = "Yorty"  
+    e.candidate_json[id].fields.color_hex = "#94767d" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#8f5950" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/ZdXeNUh.gif"
+  
+    runningmaterole = "Mayor";
+    runningmatefullname = "Sam Yorty";
+  
+    
+    if(e.noCounter == 18){
+        menuItemsA = [];  
+        menuItemsA.push(YortyObject);  
+        campaignTrail_temp.questions_json[18] = tunnel(10406);
+        pictureDict[18] = "https://i.imgur.com/3JuDbIj.png"
+        percy_active = 0
+        rockefeller_active = 0
+        goldwater_active = 0
+        agnew_active = 0
+        lindsay_active = 0
+        reagan_active = 0
+        hughes_active = 0
+        yorty_active = 1
+        nixon_active = 0
+    }
+    republican = "yorty";
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150007, \"fields\": {\"candidate\": 81, \"running_mate\": 50008}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150002, \"fields\": {\"candidate\": 81, \"running_mate\": 50002}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 50006}}]");
+    closeSurrogates()
+  }
+  function selectNixon(){
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/CfubOif.png';
+    campaignTrail_temp.candidate_last_name = 'Nixon';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Richard"
+    e.candidate_json[id].fields.last_name = "Nixon"  
+    e.candidate_json[id].fields.color_hex = "#991c1c" 
+    // var id = e.candidate_json.map(p=>p.pk).indexOf(80)
+    // e.candidate_json[id].fields.color_hex = "#487B91" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#42496b" 
+        // var id = e.candidate_json.map(p=>p.pk).indexOf(80)
+        // e.candidate_json[id].fields.color_hex = "#a13333" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/igUZyBH.gif"
+    
+    runningmaterole = "Former Vice President";
+    runningmatefullname = "Richard Nixon";
+  
+    if(contestedConvention == 1){
+        campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150012, \"fields\": {\"candidate\": 81, \"running_mate\": 50012}}]")
+    }
+    else{
+        campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150007, \"fields\": {\"candidate\": 81, \"running_mate\": 50007}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 81, \"running_mate\": 50003}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 81, \"running_mate\": 50005}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150002, \"fields\": {\"candidate\": 81, \"running_mate\": 50002}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 50006}}]");
+    }
+    
+    republican = "nixon";
+    percy_active = 0
+    rockefeller_active = 0
+    goldwater_active = 0
+    agnew_active = 0
+    lindsay_active = 0
+    reagan_active = 0
+    hughes_active = 0
+    yorty_active = 0
+    nixon_active = 1
+    closeSurrogates()
+  }   
+  function selectHughes(){
+    campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/hbY5A06.png';
+    campaignTrail_temp.candidate_last_name = 'Hughes';
+        
+    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    e.candidate_json[id].fields.first_name = "Howard"
+    e.candidate_json[id].fields.last_name = "Hughes"  
+    e.candidate_json[id].fields.color_hex = "#646e7d" 
+    if(e.altcolors){
+        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        e.candidate_json[id].fields.color_hex = "#823849" 
+    }
+    campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/rTXOujU.gif"
+  
+    
+    if(e.noCounter == 18){
+        menuItemsA = [];  
+        menuItemsA.push(HughesObject);  
+        campaignTrail_temp.questions_json[18] = tunnel(10411);
+        pictureDict[18] = "https://i.imgur.com/2QJWe4V.png"
+        percy_active = 0
+        rockefeller_active = 0
+        goldwater_active = 0
+        agnew_active = 0
+        lindsay_active = 0
+        reagan_active = 0
+        hughes_active = 1
+        yorty_active = 0
+        nixon_active = 0
+    }
+    republican = "hughes";
+    closeSurrogates()
+  }
+
+let GENERICObject = { id: 'GENERCI', photo: 'XXX', bio: 'XXX' };
+
+let BuchananObject = { id: 'BUCHANAN_C', photo: 'https://i.imgur.com/ZFmDHuF.png', np: 'https://i.imgur.com/ZFmDHuF.png', rs: 'Percy benefits from a united party that\'d tolerate him at the head. Quelling of societal troubles bodes well for him.', bio: '<b><li>Name: Chuck Percy</li><li>Party: Republican</li><li>Home State: Illinois</li></b><br>Throughout history, there have been few men considered presidential timber since the beginning of their careers. Senator Chuck Percy is one of them. The charismatic Midwestern moderate has quickly risen through the ranks of his party, going from Senator to potential president within less than two years. His name propelled so high that his endorsement of Governor Rockefeller in 1968 was said to have counterbalanced Eisenhower\'s endorsement of Nixon.<br><br>His place within the Republican party now cemented, many see a chance for the Illinois senator to fill the intense void left after Nixon\'s defeat. Many of his flaws now gone or turned positive, from his connection to the Rockefeller wing of the party to his lack of experience. Many say it\'s only a matter of will for him to become the nominee.', action: selectPercy};
+let HagelinObject = { id: 'HAGELIN_C', photo: 'https://i.imgur.com/kgdQlH2.png', np: 'https://i.imgur.com/kgdQlH2.png', rs: 'Rockefeller benefits from a unified caucus and an improved economic outlook.', bio: '<b><li>Name: Nelson Rockefeller</li><li>Party: Republican</li><li>Home State: New York</li></b><br>Nelson Rockefeller stands before a familiar crowd. Yet again has his party rejected him, yet again has their man lost, and yet again, four years later, does he stand before them preaching his credentials for the Republican nomination. This time, they whisper, he has a chance. After all, this race is what the New York governor was born for—a chance for Rocky to flare his supposed competence to an increasingly demoralized public. With that, Governor Rockefeller hopes he can turn his electoral power in New York into a national swing against the Democrats.<br><br>His standing is a double-edged sword. Despite his good polling against President Kennedy, even getting the nomination may be a struggle. He has a history of being rejected in favor of other, weaker candidates due to his stances. It\'s more than clear he must unite his party before he can unite his country.', action: selectRockefeller };
+let TrumpObject = { id: 'TRUMP_C', photo: 'https://i.imgur.com/vb9M43i.png', np: 'https://i.imgur.com/vb9M43i.png', rs: 'Goldwater benefits from major societal upheaval, economic misfortune, and an exploitable caucus.', bio: '<b><li>Name: Barry Goldwater</li><li>Party: Republican</li><li>Home State: Arizona</li></b><br>The public vindication of Barry Goldwater will be studied for decades to come. The newly-dubbed \'Prophet from Phoenix\' was left for political dead eight years ago after his obliteration by Lyndon Johnson. And since then, every Republican to run for president, save for Ronald Reagan, has distanced themselves from the stances that brought him down. Times have changed, and the throes of the Kennedy administration offer an almost awe-inspiring chance for something unprecedented. <br><br>Of course, there are concerns. Senator Goldwater has grown older and wiser, but could he prevent the same pitfalls that made his first campaign such a pain? Many in the party are also concerned that the GOP needs a popular winner, not a vindicated loser.', action: selectGoldwater };
+
+let BeatyObject = { id: 'BEATY_C', photo: 'https://i.imgur.com/scyEpme.png', np: 'https://i.imgur.com/scyEpme.png', rs: 'Lindsay benefits from a harmonious society and Kennedy getting closer to the south.', bio: '<b><li>Name: John Lindsay</li><li>Party: Republican</li><li>Home State: New York</li></b><br>Mayor John Lindsay is a stranger in his own home. Not a mainstream moderate like Percy or Rockefeller, or even a candidate with a particularly strong and loving base like Goldwater—Mayor Lindsay\'s political capital is about as bankrupt as the city he runs. Not to say he has nothing to his name. His radiant charisma is almost as potent as Kennedy\'s, and there is no doubt, if nominated, he could break into the president\'s shattering coalition.<br><br>With little substance other than his face and a keen ability to swoon people in conversation, the idea of a Lindsay nomination brings a grimace to party insiders. Is it really worth beating Kennedy if you\'re just replacing him with a cruel parody?', action: selectLindsay };
+let PaulObject = { id: 'PAUL_C', photo: 'https://i.imgur.com/08EPP3R.png', np: 'https://i.imgur.com/08EPP3R.png', rs: 'Agnew benefits from any public backlash.', bio: '<b><li>Name: Ted Agnew</li><li>Party: Republican</li><li>Home State: Maryland</li></b><br>Four years ago, America met Ted Agnew, and they haven\'t been able to get rid of him since. The Governor of Maryland is an enigma. His career on the national stage started with a beatdown against a segregationist Baltimore contractor, which allowed Agnew to win the large majority of the popular vote, including the majority of black voters. For the next two years, he would find himself crowned Rockefeller\'s strongest supporter. In 1968, as Rocky lost and splintered with Agnew, and Nixon donned the loudmouth his running mate, Agnew got his voice out to the people. Conservatives would never forget it.<br><br>Basking in the spotlight despite being in the single digits according to Gallup, Agnew and his men believe he\'s prime to fill the vacuum left behind after Nixon. Spiro is a shady man, however, and he will need to pray his skeletons don\'t fall out of the closet.', action: selectAgnew };
+let AndersonObject = { id: 'ANDERSON_C', photo: 'https://i.imgur.com/IKtgL4X.png', np: 'https://i.imgur.com/IKtgL4X.png', rs: 'Reagan benefits from a lousy economy, widespread rage, and an abandoned south.', bio: '<b><li>Name: Ronald Reagan</li><li>Party: Republican</li><li>Home State: California</li></b><br>In the span of a few years, Ronald Reagan went from a B-list actor to a C-list politician, but it didn\'t have to be this bad. Four years ago, he set upon a primary campaign that nearly brought him to the nomination despite being nothing more than a vague repeat of Goldwater in \'64. There was little reason to think that he wouldn\'t be a frontrunner for the nomination in 1972, but lo and behold, the task of governing has been herculean for Reagan—and his once middling approval rating has fallen to terrible all-time lows.<br><br>Beating Treasury Secretary Jesse Unruh for a second term as Governor of California in 1970—Reagan has been tasked with sailing a sinking ship while also planning his next inevitable foray into national politics. Still considered a somebody, Reagan is in the fight for his political survival, and many wonder if a successful primary campaign is the only way to save his career.', action: selectReagan };
+
+let YortyObject = { id: 'YORTY_C', photo: 'https://i.imgur.com/08CvMOz.png', np: 'https://i.imgur.com/OYgbd5S.png', rs: 'Yorty is waiting in the wings, hoping to ride whatever storm he can.', bio: '<b><li>Name: Sam Yorty</li><li>Party: Republican</li><li>Home State: California</li></b><br>Among the men who made their opposition to the Kennedy administration known after every single action taken by the president—Mayor Sam Yorty is on his level. His vanity and personal revulsion of Bobby Kennedy has been strong enough to throw him to the other side of the political aisle. Fueled by a nearly decade-long feud, he\'ll do anything to see the man who has meddled with him so much get voted out of a job.<br><br>That won\'t make it easy. Yorty isn\'t a man with many friends—his combative nature and unpredictable fits of rage have made Mayor Sam a contentious name across both parties.', action: selectYorty };
+let NixonObject = { id: 'NIXON_C', photo: 'https://i.imgur.com/HXm4X1v.png', np: 'https://i.imgur.com/QzknUMM.png', rs: 'After 2 losses, there\'s truly nothing Nixon can\'t work with.', bio: '<b><li>Name: Richard Nixon</li><li>Party: Republican</li><li>Home State: New York</li></b><br>Who else but Nixon? It seems so natural, the rage and desperation of a party that has once again clinched defeat from the hands of victory, personified in the man who embodies anger and misery. The policy doesn\'t matter much, and neither does the personality. Richard Nixon, a lost, hollow man without a soul or heart, only seeks to lash out at another Kennedy who ruined his life. There will be no more pre-planned photoshoots of Nixon holding babies or working the crowds. It is only Nixon and Kennedy.<br><br>There is, of course, some concern that allowing Nixon to use the Republican Party as a vessel for his personal issues—again—may end up a bad omen for the conservative movement, but what choice is there? Dick Nixon can fight, and he will try to tear Bobby Kennedy limb from limb, regardless of the cost.', action: selectNixon };
+let HughesObject = { id: 'HUGHES_C', photo: 'https://i.imgur.com/4elQO53.png', np: 'https://i.imgur.com/G3KdfRv.png', rs: 'Hughes supposedly is interested in running and could be a unifying figure if he can be courted.', bio: '<b><li>Name: Howard Hughes</li><li>Party: Republican</li><li>Home State: Nevada</li></b><br>Insane, eccentric, brilliant—all characteristics levied against one Howard R. Hughes. The man who personifies the so-called \'Deep state\' which lurks in the shadows, Hughes is no stranger to the Republican Party—having close ties to former Vice President Richard Nixon. He has had a long career as a pilot, film producer, war profiteer, and professional swamp creature—all of which have led him to this intersection within history.<br><br>The billionaire magnate looks upon Kennedy\'s America and sees ruin. Failure abroad and devastation at home, there is only one man who can be blamed for these troubles, and there is only one man who can save America.', action: selectHughes };
+
+// let PercyVP = { id: 'PERCY_D', photo: 'https://i.imgur.com/Xs4bGCd.png', bio: '<b><li>Name: Chuck Percy</li><li>Party: Republican</li><li>Home State: Illinois</li></b><br>todo', action: vpSelPercy };
+// let PercyVP = { id: 'LINDSAY_D', photo: 'https://i.imgur.com/ay1xuSB.png', bio: '<b><li>Name: John Lindsay</li><li>Party: Republican</li><li>Home State: New York</li></b><br>todo', action: vpSelLindsay };
+// let PercyVP = { id: 'BUSH_D', photo: 'https://i.imgur.com/jM7lpkp.png', bio: '<b><li>Name: George Bush</li><li>Party: Republican</li><li>Home State: Texas</li></b><br>todo', action: vpSelBush };
+// let PercyVP = { id: 'WEINBERGER_D', photo: 'https://i.imgur.com/ytfMkpE.png', bio: '<b><li>Name: Caspar Weinberger</li><li>Party: Republican</li><li>Home State: California</li></b><br>todo', action: vpSelWeinberger };
+// let PercyVP = { id: 'RHODES_D', photo: 'https://i.imgur.com/eEH2LHT.png', bio: '<b><li>Name: Jim Rhodes</li><li>Party: Republican</li><li>Home State: Ohio</li></b><br>todo', action: vpSelRhodes };
+// let PercyVP = { id: 'TOWER_D', photo: 'https://i.imgur.com/TnPPBuW.png', bio: '<b><li>Name: John Tower</li><li>Party: Republican</li><li>Home State: Texas</li></b><br>todo', action: vpSelTower };
+// let PercyVP = { id: 'HATFIELD_D', photo: 'https://i.imgur.com/2oW1R7L.png', bio: '<b><li>Name: Mark Hatfield</li><li>Party: Republican</li><li>Home State: Oregon</li></b><br>todo', action: vpSelHatfield };
+// let PercyVP = { id: 'WALLACE_D', photo: 'https://i.imgur.com/8uNA0Nh.png', bio: '<b><li>Name: George Wallace</li><li>Party: American Independent</li><li>Home State: Alabama</li></b><br>todo', action: vpSelWallace };
+// let PercyVP = { id: 'DOLE_D', photo: 'https://i.imgur.com/wvZjOX8.png', bio: '<b><li>Name: Bob Dole</li><li>Party: Republican</li><li>Home State: Kansas</li></b><br>todo', action: vpSelDole };
+// let PercyVP = { id: 'THURMOND_D', photo: 'https://i.imgur.com/uamNBch.png', bio: '<b><li>Name: Strom Thurmond</li><li>Party: Republican</li><li>Home State: South Carolina</li></b><br>todo', action: vpSelThurmond };
+// let PercyVP = { id: 'DOLE_E', photo: 'https://i.imgur.com/wvZjOX8.png', bio: '<b><li>Name: Bob Dole</li><li>Party: Republican</li><li>Home State: Kansas</li></b><br>todo', action: vpSelDole };
+
+
+var menuItemsA = [ 
+  BuchananObject,
+  HagelinObject,
+  TrumpObject,
+  BeatyObject,
+  PaulObject,
+  AndersonObject
+  // YortyObject, 
+  // NixonObject,
+  // HughesObject
+]
+const menuItemsB = [ 
+]
+
+let closeSurrogateFlag = 0;
+let surrogateUsed = 0;
+
+var surrogates_available = true;
+
+const surrogateReset = setInterval(function() {
+  const pollsButton = document.getElementById("view_electoral_map");
+  const backpollsButton = document.getElementById("resume_questions_button");
+  
+  if(closeSurrogateFlag == 1){
+      if(pollsButton){
+          surrogateUsed = 1;
+          closeSurrogates();
+          pollsButton.click();
+      }
+      if(backpollsButton){
+          backpollsButton.click();
+          closeSurrogateFlag = 0;
+      }
+  }
+}, 0.1);
+const oppositionMap = {
+    "-9": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>caucus</b> is <i><span style="color: #821F14;">disorganized</i></span>. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>caucus</b> is <i><span style="color: #821F14;">disorganized</i></span>. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>caucus</b> is <i><span style="color: #CEA665;">scattered</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>caucus</b> is <i><span style="color: #CEA665;">somewhat</i></span> organized. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>caucus</b> is <i><span style="color: #CEA665;">somewhat</i></span> organized. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">15</span>)`,
+  };
+  const backlashMap = {
+    "-10": `The <b>public</b> <i><span style="color: #821F14;">committed</i></span> to Kennedy. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>public</b> is <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>public</b> is <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>public</b> is <i><span style="color: #CEA665;">ambivalent</i></span> on Kennedy. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>public</b> has been <i><span style="color: #CEA665;">slighted</i></span> by Kennedy. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>public</b> has been <i><span style="color: #CEA665;">slighted</i></span> by Kennedy. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">15</span>)`,
+    "16": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">16</span>)`,
+  };
+  const rfkSouMap = {
+    "-5": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `President <b>Kennedy</b> is <i><span style="color: #821F14;">on poor terms</i></span> with the south. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `President <b>Kennedy</b> is <i><span style="color: #821F14;">on poor terms</i></span> with the south. (<span style="color:#821F14;">-1</span>)`,
+    "0": `President <b>Kennedy</b> is <i><span style="color: #CEA665;">touchy</i></span> with the south. (<span style="color:#CEA665;">0</span>)`,
+    "1": `President <b>Kennedy</b> has been <i><span style="color: #CEA665;">smitted</i></span> by the south. (<span style="color:#CEA665;">1</span>)`,
+    "2": `President <b>Kennedy</b> has been <i><span style="color: #CEA665;">smitted</i></span> by the south. (<span style="color:#CEA665;">2</span>)`,
+    "3": `President <b>Kennedy</b> is <i><span style="color: #1C5B22;">cuddley</i></span> with the south. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `President <b>Kennedy</b> wears <i><span style="color: #1C5B22;">grey</i></span> under that suit. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `President <b>Kennedy</b> wears <i><span style="color: #1C5B22;">grey</i></span> under that suit. (<span style="color:#1C5B22;">5</span>)`
+  };
+  
+  const vietnamMap = {
+    "-3": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">a crisis</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
+    "-2": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">on the verge</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
+    "-1": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">on the verge</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
+    "0": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">deteriorating</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">stalled</i></span>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">creaking</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3":  `The situation in <b>Vietnam</b> is <i><span style="color: #821F14;">progressing</i></span>. (<span style="color:#821F14;">3</span>)`,
+    "4":  `The situation in <b>Vietnam</b> is <i><span style="color: #821F14;">not our concern</i></span>. (<span style="color:#821F14;">4</span>)`,
+  };
+  const economyMap = {
+    "-4": `The <b>economy</b> is in <i><span style="color: #1C5B22;">crisis</i></span>. (<span style="color:#1C5B22;">-4</span>)`,
+    "-3": `The <b>economy</b> is in <i><span style="color: #1C5B22;">crumbling</i></span>. (<span style="color:#1C5B22;">-3</span>)`,
+    "-2": `The <b>economy</b> is <i><span style="color: #1C5B22;">giving way</i></span>. (<span style="color:#1C5B22;">-2</span>)`,
+    "-1": `The <b>economy</b> is <i><span style="color: #CEA665;">buckling</i></span>. (<span style="color:#CEA665;">-1</span>)`,
+    "0": `The <b>economy</b> is <i><span style="color: #CEA665;">stagnant</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>economy</b> is <i><span style="color: #821F14;">succeeding</i></span>. (<span style="color:#821F14;">3</span>)`,
+    "4": `The <b>economy</b> is <i><span style="color: #821F14;">succeeding</i></span>. (<span style="color:#821F14;">4</span>)`,
+  };
+  const FBIRFKMap = {
+    "-1": ``,
+    "0": ``,
+    "1": `Kennedy Allies <i><span style="color: #821F14;">lead</i></span> <b>the FBI</b>.`,
+    "2": `Kennedy Allies <i><span style="color: #821F14;">lead</i></span> <b>the FBI</b>.`,
+    "3": `Kennedy Allies <i><span style="color: #821F14;">lead</i></span> <b>the FBI</b>.`,
+  };
+  
+  let savedX = null;
+  let savedY = null;
+  
+  function openRS() {
+    let questions = document.querySelector(".inner_window_question");
+  
+    // Check if the menu already exists
+    let repMenu = document.getElementById('repMenu');
+    if (!repMenu) {
+        repMenu = document.createElement('div');
+        repMenu.id = 'repMenu';
+        repMenu.style.position = 'absolute'; // Change to absolute for relative positioning
+        repMenu.style.width = '442px';
+        repMenu.style.padding = '9px';
+        repMenu.style.backgroundColor = '#fff';
+        repMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+        repMenu.style.border = '1px solid #ccc';
+        repMenu.style.zIndex = '1000';
+        repMenu.style.background = 'linear-gradient(rgba(33, 31, 27, 0.6), rgba(33, 31, 27, 0.4)), url("https://i.imgur.com/LyxmayZ.png")';
+        repMenu.style.backgroundSize = 'cover';
+        repMenu.style.backgroundPosition = 'top';
+        repMenu.style.alignItems = 'center';     
+  
+        // Create the menu title
+        // const menuTitle = document.createElement('h1');
+        // menuTitle.innerText = 'Shadow Government';
+        // menuTitle.style.textAlign = 'center';
+        // menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+        // menuTitle.style.color = '#2EA3D9';
+        // menuTitle.style.textShadow = '2px 2px 3px #000000';
+        // menuTitle.style.top = '-04px';   
+        // menuTitle.style.position = 'relative';
+        // menuTitle.style.marginTop = '-04px'; 
+        // menuTitle.style.fontSize = '28px';
+        // menuTitle.style.display = 'block';    
+        // menuTitle.style.marginBottom = '-2px';    
+        // repMenu.appendChild(menuTitle);
+  
+        
+        const risingStars = document.createElement('h1');
+        risingStars.innerText = 'The Last Stand';
+        risingStars.style.textAlign = 'left';
+        risingStars.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+        risingStars.style.color = '#a02ed9';
+        risingStars.style.textShadow = '2px 2px 3px #000000';
+        risingStars.style.top = '-04px';   
+        risingStars.style.position = 'relative';
+        risingStars.style.marginTop = '-04px'; 
+        risingStars.style.fontSize = '24px';
+        risingStars.style.display = 'block';    
+        risingStars.style.marginBottom = '-2px';    
+        repMenu.appendChild(risingStars);
+    
+        const repContainer = document.createElement('image_container'); 
+        if (repContainer) {
+            repContainer.innerHTML = ''; // Clear existing images
+            menuItemsA.forEach((item, index) => {
+  
+                const repCand = document.createElement('img');
+                repCand.src = item.np; 
+                repCand.style.width = '105px';
+                repCand.style.height = '105px';
+                repCand.style.padding = '1px';
+                repCand.style.border = '1px solid #ccc';
+                repCand.style.marginBottom = '-1px';
+                repCand.style.cursor = 'pointer';
+                if(index != 3 && index != 7){
+                    repCand.style.marginRight = '2px';
+                }
+  
+                if(item.id == "BUCHANAN_C" && opponents.percy > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+                if(item.id == "HAGELIN_C" && opponents.rockefeller > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+                if(item.id == "TRUMP_C" && opponents.goldwater > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+                if(item.id == "BEATY_C" && opponents.lindsay > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+                if(item.id == "PAUL_C" && opponents.agnew > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+                if(item.id == "ANDERSON_C" && opponents.reagan > thresholdCand){
+                    repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
+                }
+  
+                repCand.addEventListener('click', () => handleImageClick(item));
+  
+                repContainer.appendChild(repCand);
+  
+                repCand.addEventListener('mouseover', () => {
+                    const tooltip = document.createElement('div');
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.backgroundColor = '#333';
+                    tooltip.style.color = '#fff';
+                    tooltip.style.padding = '5px';
+                    tooltip.style.borderRadius = '3px';
+                    tooltip.style.fontSize = '12px';
+                    tooltip.style.zIndex = '1000';
+                    tooltip.style.top = `${repCand.getBoundingClientRect().top + window.scrollY + 20}px`;  // Position below the icon
+                    tooltip.style.left = `${repCand.getBoundingClientRect().left + window.scrollX + 109}px`;
+                    let dynamicValue;
+                    switch (item.id) {
+                        case 'BUCHANAN_C':
+                            dynamicValue = opponents.percy;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'HAGELIN_C':
+                            dynamicValue = opponents.rockefeller;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'TRUMP_C':
+                            dynamicValue = opponents.goldwater;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'PAUL_C':
+                            dynamicValue = opponents.agnew;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'BEATY_C':
+                            dynamicValue = opponents.lindsay;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'ANDERSON_C':
+                            dynamicValue = opponents.reagan;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'NIXON_C':
+                            dynamicValue = opponents.nixon;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'YORTY_C':
+                            dynamicValue = opponents.yorty;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'HUGHES_C':
+                            dynamicValue = opponents.hughes;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        default:
+                            dynamicValue = 'N/A';
+                    }
+                    tooltip.innerHTML = `${item.rs}<br><br>Position: ${dynamicValue}`;
+  
+                    // Append the tooltip to the body
+                    document.body.appendChild(tooltip);
+  
+                    // Remove the tooltip on mouse out
+                    repCand.addEventListener('mouseout', () => {
+                        document.body.removeChild(tooltip);
+                    });
+                });
+            });
+        }
+        repMenu.appendChild(repContainer);
+  
+        // Create the opposition title
+        const containmentTitle = document.createElement('h1');
+        containmentTitle.innerText = 'The Issues';
+        containmentTitle.style.textAlign = 'right';
+        containmentTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+        containmentTitle.style.color = '#a02ed9';
+        containmentTitle.style.textShadow = '2px 2px 3px #000000';
+        containmentTitle.style.position = 'relative';
+        containmentTitle.style.marginTop = '-02px'; 
+        containmentTitle.style.fontSize = '24px';
+        containmentTitle.style.display = 'block';    
+        containmentTitle.style.marginBottom = '-2px';    
+        repMenu.appendChild(containmentTitle);
+  
+        var overviewtxt  = ""
+        
+        if(FBIRFK > 0){
+            eminenceText = `${FBIRFKMap[String(FBIRFK)]}`;
+            overviewtxt += "• "+ `${eminenceText}` + "<br>";
+        }
+  
+        oppositionText = `${oppositionMap[String(opposition)]}`;
+        overviewtxt += "• "+ `${oppositionText}` + "<br>";
+        
+        backlashText = `${backlashMap[String(backlash)]}`;
+        overviewtxt += "• "+ `${backlashText}` + "<br>";
+  
+        rfkSouText = `${rfkSouMap[String(rfkSou)]}`;
+        overviewtxt += "• "+ `${rfkSouText}` + "<br>";
+  
+        vietnamText = `${vietnamMap[String(vietnam)]}`;
+        overviewtxt += "• "+ `${vietnamText}` + "<br>";
+  
+        economyText = `${economyMap[String(economy)]}`;
+        overviewtxt += "• "+ `${economyText}` + "<br>";
+  
+        const ovsubtxt = document.createElement('h3');
+        ovsubtxt.innerHTML = overviewtxt;
+        ovsubtxt.style.textAlign = 'center';
+        ovsubtxt.style.top = '7px';   
+        ovsubtxt.style.position = 'relative';
+        ovsubtxt.style.marginTop = '-04px'; 
+        ovsubtxt.style.lineHeight = '1.1';
+        ovsubtxt.style.background = 'linear-gradient(rgba(219, 208, 208, 0.6), rgba(219, 208, 208, 0.4)), url("https://i.imgur.com/nxW7ufv.png")';
+        ovsubtxt.style.backgroundSize = 'cover';
+        ovsubtxt.style.backgroundPosition = 'center';
+        ovsubtxt.style.padding = '1px';            
+        ovsubtxt.style.display = 'block';    
+        ovsubtxt.style.border = '1px solid #CCCC';
+        ovsubtxt.style.outline = '1px solid transparent';
+        ovsubtxt.style.marginTop = '-8px';
+        ovsubtxt.style.textAlign = 'left';      
+        ovsubtxt.style.paddingLeft = '10px';
+        ovsubtxt.style.listStyleType = 'disc'; 
+        repMenu.appendChild(ovsubtxt);
+  
+        const closeButton = document.createElement('button');
+        closeButton.innerText = 'Close';
+        closeButton.onclick = closeRS;
+        repMenu.appendChild(closeButton);
+  
+        document.body.appendChild(repMenu);
+  
+        makeDraggable(repMenu);
+    } 
+  
+    if (savedX !== null && savedY !== null) {
+        repMenu.style.left = savedX + 'px';
+        repMenu.style.top = savedY + 'px';
+    }
+    else {
+        const buttonRect = event.target.getBoundingClientRect();
+        repMenu.style.left = buttonRect.right + 353 + 'px'; // Offset X
+        repMenu.style.top = buttonRect.top - 292 + 'px'; // Offset Y
+        savedX = repMenu.getBoundingClientRect().left;
+        savedY = repMenu.getBoundingClientRect().top;
+    }
+  
+    // Display the menu
+    repMenu.style.display = 'block';
+  }
+  
+  function closeRS() {
+    const repMenu = document.getElementById('repMenu');
+    if (repMenu) {
+        savedX = repMenu.getBoundingClientRect().left;
+        savedY = repMenu.getBoundingClientRect().top;
+  
+        repMenu.remove();
+    }
+  }
+  
+  function refreshRS() {
+    const repMenu = document.getElementById('repMenu');
+    if (repMenu) {
+        repMenu.remove();
+        openRS();
+    }
+  }
+  
+  function makeDraggable(element) {
+    let isDragging = false;
+    let offsetX, offsetY;
+  
+    element.onmousedown = function(event) {
+        isDragging = true;
+        offsetX = event.clientX - element.getBoundingClientRect().left;
+        offsetY = event.clientY - element.getBoundingClientRect().top;
+  
+        document.onmousemove = function(event) {
+            if (isDragging) {
+                const newX = event.clientX - offsetX;
+                const newY = event.clientY - offsetY;
+  
+                // Update the position of the element
+                element.style.left = newX + 'px';
+                element.style.top = newY + 'px';
+  
+                // Save the position in global variables
+                savedX = newX;
+                savedY = newY;
+            }
+        };
+  
+        document.onmouseup = function() {
+            isDragging = false;
+            document.onmousemove = null;
+            document.onmouseup = null;
+        };
+    };
+  }
