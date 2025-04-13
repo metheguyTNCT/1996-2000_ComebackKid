@@ -1194,8 +1194,9 @@ if(!campaignTrail_temp.loaded1){
         veepBB.remove();
       }
       if (v == 86 && storedVeep != 86) {
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "George W.";
+        var id = e.candidate_json.map(p=>p.pk).indexOf(77)
+            e.candidate_json[id].fields.first_name = "George W."
+            e.candidate_json[id].fields.last_name = "Bush"
       }
       if (!localStorage.getItem("LEBRON")) {
         for (let i = selectElement.options.length - 1; i >= 0; i--) {
