@@ -341,14 +341,14 @@ if(!campaignTrail_temp.loaded1){
   }
   
   const creditListA = [ 
-      { photo: 'https://i.imgur.com/8slrhyZ.png', text: '<b>Mangolith</b><br><b>CLASS: <span style="color: #8f1204;">F</b></span><br>', button: 'Defer', id: 'MANGO_A'},
+      { photo: 'https://i.imgur.com/hrEozmh.jpg', text: '<b>Agreeable</b><br><b>CLASS: <span style="color: #8f1204;">F</b></span><br>', button: 'Defer', id: 'MANGO_A'},
   ]
   const creditListB = [ 
-      { photo: 'https://i.imgur.com/4jUjdBF.png', text: '<b>QuoProQuid</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>', button: 'Defer', id: 'QUO_A'},
-      { photo: 'https://i.imgur.com/9BG8sNI.png', text: '<b>Neo</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'NEO_A'},
-      { photo: 'https://i.imgur.com/xFc9GM4.png', text: '<b>CTA</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'CTA_A'},
-      { photo: 'https://i.imgur.com/W171JPz.png', text: '<b>Ettingermentum</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ETTINGERMENTUM_A'},
-      { photo: 'https://i.imgur.com/DDNKTeK.png', text: '<b>Atom_Heart_Mother</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ATOMHEART_A'},
+      { photo: 'https://www.newcampaigntrail.com/static/sea_to_sea/2020/trump/christie.png', text: '<b>Metheguy</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>', button: 'Defer', id: 'QUO_A'},
+      { photo: 'https://i.imgur.com/lg8kxiX.png', text: '<b>UlricMorningstarG</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'NEO_A'},
+      { photo: 'https://i.imgur.com/z3LPjAl.png', text: '<b>answerisme</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'CTA_A'},
+      { photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96sXiNtPJnt2V6z9afN5ntGANZM-mIpAkfw&s', text: '<b>Halligan</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ETTINGERMENTUM_A'},
+      { photo: 'https://ih1.redbubble.net/image.5074940928.1981/flat,750x1000,075,t.jpg', text: '<b>Naimana</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'ATOMHEART_A'},
       { photo: 'https://i.imgur.com/q65bK0A.png', text: '<b>StockdaleForTCT</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'STOCKDALE_A'},
       { photo: 'https://i.imgur.com/dVVbMnO.png', text: '<b>River</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'RIVER_A'},
       { photo: 'https://i.imgur.com/SE6OXzj.png', text: '<b>Bonbishka</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>', button: 'Defer', id: 'BONBISHKA_A'},
@@ -411,8 +411,8 @@ if(!campaignTrail_temp.loaded1){
       "model": "campaign_trail.candidate",
       "pk": 79,
       "fields": {
-          "first_name": "The",
-          "last_name": "Greens",
+          "first_name": "Ralph",
+          "last_name": "Nader",
           "election": 9,
           "party": "Green",
           "state": "Connecticut",
@@ -1345,7 +1345,7 @@ if(!campaignTrail_temp.loaded1){
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
           document.getElementById("header").src = "https://i.imgur.com/OREUmu8.png";
-          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"font-size:14px;\">⠀<br><span>A movement that shook the two-party system to its core, started by a man who was angry as hell and wouldn't take it anymore. He laid the foundation for real change. He pushed out a reluctant Texas businessman to be the perfect spokesperson, and win nearly 20% of the national vote. His idea snowballed into the Ventura governorship. All of this success, and the very idea of ''Reform'' can be traced back to Jack Gargan, but even he knows it could all go away unless the party undergoes a <b style=\"color:#8f06cf; font-size: 17px;\">Revival</b>.<br><br>Being the Chairman of the Reform National Comitte, the decision of not just who, but what the future of Reform is lies almost exclusively in his hands. As such, Gargan's chief goal is the ensure that the final stand against the two-party ''democracy'' not only survives the election, but is a viable and respected party for years after his own demise. He may not have Perot running anymore, but what he does have is passion. <br><br></div>";
+          document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"font-size:14px;\">⠀<br><span>A movement that shook the two-party system to its core, started by a man who was mad as hell and wouldn't take it anymore. He laid the foundation for real change. He pushed out a reluctant Texas businessman to be the perfect spokesperson, and win nearly 20% of the national vote. His idea snowballed into the Ventura governorship. All of this success, and the very idea of ''Reform'' can be traced back to Jack Gargan, but even he knows it could all go away unless the party undergoes a <b style=\"color:#8f06cf; font-size: 17px;\">Revival</b>.<br><br>Being the Chairman of the Reform National Comitte, the decision of not just who, but what the future of Reform is lies almost exclusively in his hands. As such, Gargan's chief goal is the ensure that the final stand against the two-party ''democracy'' not only survives the election, but is a viable and respected party for years after his own demise. He may not have Perot running anymore, but what he does have is passion. <br><br></div>";
           let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
           document.documentElement.style.setProperty("--left-space", -1086 + "px");
           document.documentElement.style.setProperty("--stroke-color", "#2DA3D7");
