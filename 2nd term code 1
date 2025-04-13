@@ -363,7 +363,7 @@ if(!campaignTrail_temp.loaded1){
   campaignTrail_temp.candidate_json = [
     {
       "model": "campaign_trail.candidate",
-      "pk": 77,
+      "pk": 78,
       "fields": {
           "first_name": "Al",
           "last_name": "Gore",
@@ -386,7 +386,7 @@ if(!campaignTrail_temp.loaded1){
   },
   {
       "model": "campaign_trail.candidate",
-      "pk": 78,
+      "pk": 77,
       "fields": {
           "first_name": "The",
           "last_name": "Republican Party",
@@ -897,7 +897,7 @@ if(!campaignTrail_temp.loaded1){
       "model": "campaign_trail.running_mate",
       "pk": 48,
       "fields": {
-          "candidate": 77,
+          "candidate": 78,
           "running_mate": 81
       }
   },
@@ -905,7 +905,7 @@ if(!campaignTrail_temp.loaded1){
     "model": "campaign_trail.running_mate",
     "pk": 49,
     "fields": {
-        "candidate": 77,
+        "candidate": 78,
         "running_mate": 82
     }
 },
@@ -913,7 +913,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 50,
   "fields": {
-      "candidate": 77,
+      "candidate": 78,
       "running_mate": 83
   }
 },
@@ -921,7 +921,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 51,
   "fields": {
-      "candidate": 77,
+      "candidate": 78,
       "running_mate": 84
   }
 },
@@ -929,7 +929,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 52,
   "fields": {
-      "candidate": 77,
+      "candidate": 78,
       "running_mate": 85
   }
 },
@@ -937,7 +937,7 @@ if(!campaignTrail_temp.loaded1){
       "model": "campaign_trail.running_mate",
       "pk": 53,
       "fields": {
-          "candidate": 78,
+          "candidate": 77,
           "running_mate": 86
       }
   },
@@ -945,7 +945,7 @@ if(!campaignTrail_temp.loaded1){
     "model": "campaign_trail.running_mate",
     "pk": 54,
     "fields": {
-        "candidate": 78,
+        "candidate": 77,
         "running_mate": 87
     }
 },
@@ -953,7 +953,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 55,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 88
   }
 },
@@ -961,7 +961,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 56,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 89
   }
 },
@@ -969,7 +969,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 57,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 90
   }
 },
@@ -977,7 +977,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 58,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 91
   }
 },
@@ -985,7 +985,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 59,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 92
   }
 },
@@ -993,7 +993,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 60,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 93
   }
 },
@@ -1001,7 +1001,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 61,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 94
   }
 },
@@ -1009,7 +1009,7 @@ if(!campaignTrail_temp.loaded1){
   "model": "campaign_trail.running_mate",
   "pk": 62,
   "fields": {
-      "candidate": 78,
+      "candidate": 77,
       "running_mate": 95
   }
 },
@@ -1051,8 +1051,8 @@ if(!campaignTrail_temp.loaded1){
     {
       "election": 9,
       "candidates": [
-          77,
           78,
+          77,
           79,
           80
       ]
@@ -1063,8 +1063,8 @@ if(!campaignTrail_temp.loaded1){
     {
       "election": 9,
       "candidates": [
-          77,
           78,
+          77,
           79,
           80
       ]
@@ -1142,8 +1142,10 @@ if(!campaignTrail_temp.loaded1){
   
   e = campaignTrail_temp
   
-  var c = 77;
+  var c = 78;
+  var v = 86;
   var storedChar = 0;
+  var storedVeep = 0;
   const startScreenUpdater = setInterval(function() {
     const initialButton = document.getElementById("election_id_button");
     const runningMateButton = document.getElementById("running_mate_id_button");
@@ -1162,13 +1164,22 @@ if(!campaignTrail_temp.loaded1){
       document.getElementById("header").src = "https://i.imgur.com/W1EFaSn.png";
       document.forms["election_year"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Act I, Scene One</span>"
       document.getElementById("election_id_button").textContent = "\"Hello?\"";
-      if(c && c != 77){
-        c = 77;
+      if(c && c != 78){
+        c = 78;
         storedChar = 99;
+      }
+      if(v && v != 86){
+        v = 86;
+        storedVeep = 99;
       }
     }
     if(runningMateButton) { // skip VP for Gore
-      if(e.candidate_id == 77) {
+      const runningMateElement = document.getElementById("running_mate_id");
+      if (!runningMateElement) return; // Exit early if the element isn't there
+    
+      const v = runningMateElement.value;
+      console.log(v + "   " + storedVeep);
+      if(e.candidate_id == 78) {
         console.log("clicked");
         runningMateButton.click();
         observer.disconnect()
@@ -1177,6 +1188,11 @@ if(!campaignTrail_temp.loaded1){
         console.log("clicked");
         runningMateButton.click();
         observer.disconnect()
+      }
+      if(v == 86 && storedVeep != 86) {
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "George W.";
+        storedVeep = v;
       }
       if (!localStorage.getItem("LEBRON")) {
         for (let i = selectElement.options.length - 1; i >= 0; i--) {
@@ -1248,7 +1264,7 @@ if(!campaignTrail_temp.loaded1){
       }
       c = document.getElementById("candidate_id").value;
       console.log(c + "   " + storedChar);
-      if(c == 77 && storedChar != 77) {
+      if(c == 78 && storedChar != 78) {
         e.ElectionPopup = "Election night is here. Make a wish, Bobby."
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
@@ -1277,12 +1293,13 @@ if(!campaignTrail_temp.loaded1){
           </style>`
           corrr=`\n<h2>RESURGENCE</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           storedChar = c;
+          storedVeep = v;
         }, 15);
         if(playlist != gore_playlist){
           changePlaylist(gore_playlist);
         }
       }
-      else if(c == 78 && storedChar != 78) {
+      else if(c == 77 && storedChar != 77) {
         e.ElectionPopup = "Election night is here. Cross your fingers, Rogers."
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
@@ -1319,6 +1336,7 @@ if(!campaignTrail_temp.loaded1){
           changePlaylist(w_playlist);
         }
       } else if (c == 80 && storedChar != 80) {
+        storedVeep = v;
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
           document.getElementById("header").src = "https://i.imgur.com/OREUmu8.png";
@@ -1356,7 +1374,6 @@ if(!campaignTrail_temp.loaded1){
       }
     }
     if(finalScreenID) { // delete back button and delete the interval
-  
       finalScreenBB.remove();
       const dropdown = document.getElementById("difficulty_level_id");
   
@@ -1378,13 +1395,6 @@ if(!campaignTrail_temp.loaded1){
       // 	kennedyGameplay.appendChild(node);
       // 	document.getElementById("gameplay").appendChild(kennedyGameplay);
       // }
-      if(e.candidate_id == 78) {
-        if (e.running_mate_id == 86) {
-          var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-          e.candidate_json[id].fields.first_name = "George W."
-          e.candidate_json[id].fields.last_name = "Bush"
-        }
-      }
       clearInterval(startScreenUpdater);
     }
   }, 1);
@@ -2150,3 +2160,203 @@ playerContainer.appendChild(controlsContainer);
         "cannotBeCheated" : true
       }
       }
+      // Tooltips
+function addDynamicCSS() {
+  var css = `
+      .inner_window_question h3 .mytooltip{
+          background-color: lightskyblue;
+      }
+
+      .mytooltip {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          background-color: lightblue;
+      }
+
+      .mytooltip .mytooltiptext {
+          width: 240px;
+          background-color: lightblue;
+          color: black;
+          text-align: center;
+          border-radius: 6px;
+          padding: 10px;
+          position: absolute;
+          z-index: 99;
+          bottom: 20%;
+          left: 20%;
+          margin-left: -90px;
+          opacity: 0;
+          transition: opacity 0.3s;
+          border: 1px solid black;
+          pointer-events: none;
+          font-size: 13px !important;
+          line-height: 1.5em !important;
+          font-weight: normal !important;
+          font-style: normal !important;
+      }
+
+      .mytooltip .mytooltiptext img {
+          max-width: 240px;
+          height: auto;
+      }
+
+      .mytooltip:hover .mytooltiptext {
+          opacity: 1;
+          transition-delay: 0.5s;
+      }
+  `;
+
+  var styleElem = document.createElement('style');
+  styleElem.type = 'text/css';
+  
+  styleElem.appendChild(document.createTextNode(css));
+  
+  document.head.appendChild(styleElem);
+}
+
+
+addDynamicCSS();
+
+tooltipList = [
+// Personal people
+{searchString: "John F. Kennedy", explanationText: "<img src=https://files.catbox.moe/4fecja.png> My Hero"},
+{searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/d5bw4k.png> My dream and nightmare. The smartest person in the room, and sometimes the hardest to love."},
+{searchString: "Chelsea", explanationText: "<img src=https://files.catbox.moe/rrzwd3.png> Energy. Light of my life, and the reason I stay grounded"},
+{searchString: "Socks", explanationText: "<img src=https://files.catbox.moe/5z63q1.png> White House royalty"},
+{searchString: "Monica Lewinsky", explanationText: "<img src=https://files.catbox.moe/jb36hl.png> A psychology graduate, met at the wrong hour. In the wrong room. With the wrong man."},
+{searchString: "Monica", explanationText: "<img src=https://files.catbox.moe/jb36hl.png> A psychology graduate, met at the wrong hour. In the wrong room. With the wrong man."},
+
+// Scandals
+{searchString: "Travelgate", explanationText: "<img src=https://files.catbox.moe/pmd622.png> Several Travel Office staffers were fired, allegedly to make room for personal friends."},
+{searchString: "Troopergate", explanationText: "<img src=https://files.catbox.moe/ycmlcn.png> Arkansas State Troopers allege that they procured women for then-Governor Clinton."},
+{searchString: "Nannygate", explanationText: "<img src=https://files.catbox.moe/z2kdqg.png> Zoë Baird and Kimba Wood, nominees for positions in the Justice Department, were found to have employed illegal immigrants as nannies."},
+{searchString: "haircut", explanationText: "<img src=https://files.catbox.moe/r0fwfj.png> Allegation that Air Force One was delayed for to hours while President Clinton had a haircut."},
+{searchString: "Whitewater", explanationText: "<img src=https://files.catbox.moe/81n3jh.png> Allegations of shady dealings tied to a failed Arkansas real estate venture. "},
+
+
+// Administration people
+{searchString: "Mack McLarty", explanationText: "<img src=https://files.catbox.moe/4mlch0.png> Childhood buddy turned Chief of Staff, a nice man in over his head"},
+{searchString: "Rubin", explanationText: "<img src=https://files.catbox.moe/y5r62q.png> Wall Street banker turned economic advisor"},
+{searchString: "Reich", explanationText: "<img src=https://files.catbox.moe/lfbx6p.png> Secretary of Labour, Shorty"},
+{searchString: "Panetta", explanationText: "<img src=https://files.catbox.moe/8up2kq.png> An iron fist in a velvet glove"},
+{searchString: "Bentsen", explanationText: "<img src=https://files.catbox.moe/1lmiyw.png> He knew Jack Kennedy, he was a friend of his, and you remind him of Jack Kennedy. The veteran Texas senator is one of the biggest names in your cabinet."},
+{searchString: "Reno", explanationText: "<img src=https://files.catbox.moe/vvbl7d.png> First female AG, you're welcome"},
+{searchString: "Janet Reno", explanationText: "<img src=https://files.catbox.moe/vvbl7d.png> First female AG, you're welcome"},
+{searchString: "Janet", explanationText: "<img src=https://files.catbox.moe/vvbl7d.png> First female AG, you're welcome"},
+{searchString: "Carville", explanationText: "<img src=https://files.catbox.moe/qn6jpc.png> It's the economy, stupid"},
+{searchString: "James Woolsey", explanationText: "<img src=https://files.catbox.moe/3uck2z.png> CIA Director"},
+{searchString: "Betsy", explanationText: "<img src=https://files.catbox.moe/ya5dky.png> Current chief-of-staff, former hatchetman. She can play double duty still."},
+{searchString: "Woolsey", explanationText: "<img src=https://files.catbox.moe/3uck2z.png> CIA Director"},
+{searchString: "Perry", explanationText: "<img src=https://files.catbox.moe/tgn9qg.png> Sec. of Defense"},
+{searchString: "Morris", explanationText: "<img src=https://files.catbox.moe/ucwvqg.png> Your private whisperer"},
+{searchString: "Dick Morris", explanationText: "<img src=https://files.catbox.moe/ucwvqg.png> Your private whisperer"},
+{searchString: "Anthony Lake", explanationText: "<img src=https://files.catbox.moe/j2od7e.png> One of the last liberal internationalists, still backing diplomacy in a town run by Reaganites and neocons."},
+{searchString: "Lake", explanationText: "<img src=https://files.catbox.moe/j2od7e.png> One of the last liberal internationalists, still backing diplomacy in a town run by Reaganites and neocons. "},
+
+// Political people
+{searchString: "the Gipper", explanationText: "<img src=https://files.catbox.moe/2mxctj.png> California cowboy. Rode into Washington with a smile, a teleprompter, and rewrote the script of American politics."},
+{searchString: "Reagan", explanationText: "<img src=https://files.catbox.moe/bunzyj.png> California cowboy. Rode into Washington with a smile, a teleprompter, and rewrote the script of American politics."},
+{searchString: "41", explanationText: "<img src=https://files.catbox.moe/v29fxd.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
+{searchString: "Old Man Bush", explanationText: "<img src=https://files.catbox.moe/v29fxd.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
+{searchString: "Ted Kennedy", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
+{searchString: "Ted", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
+{searchString: "Teddy", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
+{searchString: "Mitchell", explanationText: "<img src=https://files.catbox.moe/ya0jbl.png> The Democrat's leader in the Senate"},
+{searchString: "Foley", explanationText: "<img src=https://files.catbox.moe/p9b7gz.png> Speaker of the House"},
+{searchString: "Larry Craig", explanationText: "<img src=https://files.catbox.moe/fhx0vg.png> A Singing Senator from Idaho who isn't and never has been gay"},
+{searchString: "Michael Huffington", explanationText: "<img src=https://files.catbox.moe/py98xl.png> Swinging both ways in California"},
+{searchString: "Chuck Haytaian", explanationText: "<img src=https://files.catbox.moe/ah82of.png> Senator from New Jersey, walking harassment lawsuit"},
+{searchString: "Oliver North", explanationText: "<img src=https://files.catbox.moe/y8b2y5.png> Saving America from itself"},
+{searchString: "Hatch", explanationText: "<img src=https://files.catbox.moe/3qmd92.png> Former chair of the Judiciary. A conservative, but not a bomb-thrower. Carries weight."},
+{searchString: "Orrin Hatch", explanationText: "<img src=https://files.catbox.moe/3qmd92.png> Former chair of the Judiciary. A conservative, but not a bomb-thrower. Carries weight."},
+{searchString: "Al D'Amato", explanationText: "<img src=https://files.catbox.moe/owbw2h.png> Senator Pothole"},
+{searchString: "Newt Gingrich", explanationText: "<img src=https://files.catbox.moe/6r0iky.png> Speaker of the House, Satan in the flesh"},
+{searchString: "Gingrich", explanationText: "<img src=https://files.catbox.moe/6r0iky.png> Speaker of the House, Satan in the flesh"},
+{searchString: "Newt", explanationText: "<img src=https://files.catbox.moe/6r0iky.png> Speaker of the House, Satan in the flesh"},
+{searchString: "Satan", explanationText: "<img src=https://files.catbox.moe/zy9xp4.gif> The devil himself, Gingrich in the flesh"},
+{searchString: "Limbaugh", explanationText: "<img src=https://files.catbox.moe/1mm05p.png> The modern Charles Coughlin, half as eloquent, twice as cruel. When he’s not calling your teenage daughter a dog, he's rallying for your destruction. "},
+{searchString: "Rush Limbaugh", explanationText: "<img src=https://files.catbox.moe/1mm05p.png> The modern Charles Coughlin, half as eloquent, twice as cruel. When he’s not calling your teenage daughter a dog, he's rallying for your destruction. "},
+{searchString: "Joe Biden", explanationText: "<img src=https://files.catbox.moe/cjc70m.png> Veteran Senator of Delaware, big on law and order"},
+{searchString: "Jimmy Carter", explanationText: "<img src=https://files.catbox.moe/4qxyy8.png> Former President, current pain in the ass"},
+{searchString: "Carter", explanationText: "<img src=https://files.catbox.moe/4qxyy8.png> Former President, current pain in the ass"},
+{searchString: "Evan Bayh", explanationText: "<img src=https://files.catbox.moe/gcj6g1.png> Your brand of politics adapted for the Midwestern market"},
+{searchString: "Howard Dean", explanationText: "<img src=https://files.catbox.moe/gb8uke.png> The best thing to come out of Vermont since Ben and Jerry's"},
+{searchString: "Mary Landrieu", explanationText: "<img src=https://files.catbox.moe/5ydy9v.png> A good Christian mother from Louisiana"},
+{searchString: "Danforth", explanationText: "<img src=https://files.catbox.moe/5s2xb6.png> A moral anchor of the GOP, civil, religious, and unshakably moderate "},
+{searchString: "Kerrey", explanationText: "<img src=https://files.catbox.moe/0cidqk.png> Decorated war hero, straight-talker, and prairie pragmatist "},
+{searchString: "Claiborne Pell", explanationText: "<img src=https://files.catbox.moe/37io3l.png> The greatest, least famous war hero"},
+
+
+
+
+
+// Legal people
+{searchString: "Kenneth Starr", explanationText: "<img src=https://files.catbox.moe/2k59l3.png> Whitewater prosecutor, always needs to “figure something out”"},
+{searchString: "Starr", explanationText: "<img src=https://files.catbox.moe/2k59l3.png> Whitewater prosecutor, always needs to “figure something out”"},
+{searchString: "Fiske", explanationText: "<img src=https://files.catbox.moe/icb8w8.png> Dignified proseuctor, pushed out in favor of Ken Starr"},
+{searchString: "Robert Fiske", explanationText: "<img src=https://files.catbox.moe/icb8w8.png> Dignified proseuctor, pushed out in favor of Ken Starr"},
+{searchString: "Ruth Bader Ginsburg", explanationText: "<img src=https://files.catbox.moe/ukarfw.png> United States Court of Appeals for the District of Columbia Circuit Judge"},
+{searchString: "Bruce Babbitt", explanationText: "<img src=https://files.catbox.moe/hc0efu.png> Interior secretary, 1988 candidate, judicial material?"},
+{searchString: "Laurence Tribe", explanationText: "<img src=https://files.catbox.moe/r0fj1c.png> Harvard law professor, liberal lion, and constitutional whisperer."},
+{searchString: "Webster Hubbell", explanationText: "<img src=https://files.catbox.moe/zfeom3.png> Former Mayor of Little Rock. Loyal friend. Quiet fixer."},
+{searchString: "Stephen Breyer", explanationText: "<img src=https://files.catbox.moe/j059ob.png> First Circuit judge. Protégé of Ted, once his chief counsel on Judiciary. The Senate knows him."},
+{searchString: "Ginsburg", explanationText: "<img src=https://files.catbox.moe/ukarfw.png> United States Court of Appeals for the District of Columbia Circuit Judge"},
+{searchString: "Babbitt", explanationText: "<img src=https://files.catbox.moe/hc0efu.png>  Interior secretary, 1988 candidate, judicial material?"},
+{searchString: "Tribe", explanationText: "<img src=https://files.catbox.moe/r0fj1c.png> Harvard law professor, liberal lion, and constitutional whisperer."},
+{searchString: "Hubbell", explanationText: "<img src=https://files.catbox.moe/zfeom3.png> Former Mayor of Little Rock. Loyal friend. Quiet fixer."},
+{searchString: "Breyer", explanationText: "<img src=https://files.catbox.moe/j059ob.png> First Circuit judge. Protégé of Ted, once his chief counsel on Judiciary. The Senate knows him."},
+{searchString: "Janie Shores", explanationText: "<img src=https://files.catbox.moe/xzb9eh.png> Backup plan. Alabama’s first female Supreme Court justice, close to Judiciary titan Senator Heflin."},
+{searchString: "Vince Foster", explanationText: "<img src=https://files.catbox.moe/fagr3l.png> The Rock of Gibraltar"},
+{searchString: "Foster", explanationText: "<img src=https://files.catbox.moe/fagr3l.png> The Rock of Gibraltar"},
+{searchString: "Byron ''Whizzer'' White", explanationText: "<img src=https://files.catbox.moe/jo8wla.png> Appointed by JFK, but never voted like it. Dissented on Roe, backed the death penalty, never once smiled. "},
+
+
+
+// Foreign people
+{searchString: "Yeltsin", explanationText: "<img src=https://files.catbox.moe/5iue9q.png> Elected, erratic, and armed. Friend or Foe?"},
+{searchString: "Boris Yeltsin", explanationText: "<img src=https://files.catbox.moe/5iue9q.png> Elected, erratic, and armed. Friend or Foe?"},
+{searchString: "Castro", explanationText: "<img src=https://files.catbox.moe/0e1ktt.png> A revolutionary, a dictator, and a headache that won’t go away. "},
+{searchString: "Boris", explanationText: "<img src=https://files.catbox.moe/5iue9q.png> Elected, erratic, and armed. Friend or Foe?"},
+{searchString: "Kim Il Sung", explanationText: "<img src=https://files.catbox.moe/hhb51g.png> Supreme Leader of North Korea, scum of the Earth, father of the dynasty, architect of starvation, and a relic of Stalin's world"},
+{searchString: "Slobodan Milosevic", explanationText: "<img src=https://files.catbox.moe/q8fxay.png> The last communist dictator in Europe, and would-be peacemaker turned war criminal."},
+{searchString: "Milosevic", explanationText: "<img src=https://files.catbox.moe/q8fxay.png> The last communist dictator in Europe, and would-be peacemaker turned war criminal."},
+{searchString: "Saddam Hussein", explanationText: "<img src=https://files.catbox.moe/qats12.png> President of Iraq, Ba'athist strongman, butcher of the Kurds, and a modern-day Mussolini with oil wells and palaces. "},
+{searchString: "Saddam", explanationText: "<img src=https://files.catbox.moe/qats12.png> President of Iraq, Ba'athist strongman, butcher of the Kurds, and a modern-day Mussolini with oil wells and palaces."},
+{searchString: "Gennady Zyuganov", explanationText: "<img src=https://files.catbox.moe/eg8lxn.png> The other path. Gorbachev or Stalin?"},
+{searchString: "Rwanda", explanationText: "<img src=https://files.catbox.moe/t6m418.png> A genocide is underway. Hundreds of thousands of Tutsis are being hunted and slaughtered by Hutu extremists. Sickening."},
+{searchString: "Raoul Cédras", explanationText: "<img src=https://files.catbox.moe/cgqnw6.png> Dictator of Haiti, trained in Georgia, backed by the CIA, and now blamed for every corpse that washes up in the Caribbean."},
+{searchString: "Vietnam", explanationText: "<img src=https://i.imgur.com/7SBxDZa.png> Thank God I dodged"},
+{searchString: "Aidid", explanationText: "<img src=https://files.catbox.moe/bff7p7.png> Somali warlord. Former U.S. ally, Soviet-trained, and now the strongest man in Mogadishu, at the cost of half the country. "},
+{searchString: "President Salinas", explanationText: "<img src=https://files.catbox.moe/3ntwda.png> An actual economist running the country, the possibly illegitimate, pro-NAFTA conservative president of Mexico."},
+{searchString: "Prime Minister Chrétien", explanationText: "<img src=https://files.catbox.moe/uiijah.png> The liberal, French-Canadian Prime Minister of snow and sleet, fluent in speaking from both sides of his mouth."},
+{searchString: "Yitzhak Rabin", explanationText: "<img src=https://files.catbox.moe/klnmr4.png> A soldier fighting for peace"},
+{searchString: "Rabin", explanationText: "<img src=https://files.catbox.moe/klnmr4.png> A soldier fighting for peace"},
+{searchString: "Yasser Arafat", explanationText: "<img src=https://files.catbox.moe/d85z6t.png> The Palestinian Che Guevara"},
+{searchString: "Arafat", explanationText: "<img src=https://files.catbox.moe/d85z6t.png> The Palestinian Che Guevara"},
+{searchString: "Benjamin Netanyahu", explanationText: "<img src=https://files.catbox.moe/lratin.png> Who the fuck does he think he is? Who’s the fucking superpower here?"},
+{searchString: "Netanyahu", explanationText: "<img src=https://files.catbox.moe/lratin.png> Who the fuck does he think he is? Who’s the fucking superpower here?"},
+{searchString: "Shimon Peres", explanationText: "<img src=https://files.catbox.moe/7ebrkk.png> Yitzakh Rabin's greatest friend and rival."},
+{searchString: "Peres", explanationText: "<img src=https://files.catbox.moe/7ebrkk.png> Yitzakh Rabin's greatest friend and rival."},
+{searchString: "Hafez", explanationText: "<img src=https://files.catbox.moe/u7na54.png> The second-worst monster in the Middle East"},
+{searchString: "Hafez Al-Assad", explanationText: "<img src=https://files.catbox.moe/u7na54.png> The second-worst monster in the Middle East"},
+
+
+// Miscellaneous tooltips
+{searchString: "Piss Christ", explanationText: "<img src=https://files.catbox.moe/vwsq4r.png> A photo of a crucifix submerged in the artist’s urine. Meant as a commentary on the commercialization of faith, but in Buchanan’s eyes, proof the White House is funding a war on religion."},
+{searchString: "bizarre laugh", explanationText: "<img src=https://files.catbox.moe/sizudl.png> Is he okay?"},
+{searchString: "It reads…", explanationText: "<img src=https://files.catbox.moe/xsft0k.png>"},
+{searchString: "Dole-Gingrich", explanationText: "<img src=https://files.catbox.moe/rf4an7.png> The ticket"},
+{searchString: "ISS", explanationText: "<img src=https://files.catbox.moe/vdwhqp.png> A science project in orbit, if Congress lets it live. A Cold War handshake held together by duct tape, dreams, and $100 billion."},
+{searchString: "International Space Station", explanationText: "<img src=https://files.catbox.moe/vdwhqp.png> A science project in orbit, if Congress lets it live. A Cold War handshake held together by duct tape, dreams, and $100 billion."},
+{searchString: "Texas Super Collider", explanationText: "<img src=https://files.catbox.moe/ebapto.png> Half a hole in Texas, meant to unlock the universe. Billions spent, tunnels carved—but will Congress finish the job or pull the plug?"},
+{searchString: "Cabinet", explanationText: "<img src=https://files.catbox.moe/v6y4zu.png> Your loyal (or not so loyal) circle of top advisors, Secretaries, and staff who carry out your administration’s agenda. Or undermine it."},
+{searchString: "fourth fucking marriage", explanationText: "<img src=https://files.catbox.moe/kbsqd3.png> 3 girls and a Cher."},
+{searchString: "heart of Chicago", explanationText: "<img src=https://files.catbox.moe/9rtl3i.png> Host of the '96 DNC, where you'll be crowned, in front of the world. "},
+{searchString: "inauguration", explanationText: "<img src=https://files.catbox.moe/n8lhdg.png> The moment it began. Cold wind, warm crowd. Fleetwood Mac in your ears, hope in the air, and the Baby Boomer dream on your shoulders."},
+{searchString: "red scare", explanationText: "<img src=https://files.catbox.moe/w7leau.png> The national debt "},
+{searchString: "Aid to Families with Dependent Children (AFDC)", explanationText: "<img src=https://files.catbox.moe/4svci9.png> The current welfare system, conservatives hate it, moderates are losing patience. "},
+{searchString: "Lyndon LaRouche", explanationText: "<img src=https://files.catbox.moe/gjmky1.png> Somewhere between Kafka and cable access. A convicted felon who thinks the Queen of England runs the drug trade. "},
+{searchString: "fever dreams", explanationText: "<img src=https://files.catbox.moe/n24bax.png> Best-selling VHS, The Clinton Chronicles accuses you of drug smuggling, adultery, and murder."},
+
+];
