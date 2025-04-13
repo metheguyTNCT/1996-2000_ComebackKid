@@ -1076,7 +1076,7 @@ if(!campaignTrail_temp.loaded1){
     "windowColor": "#ffffff",
     "containerColor": "#ffffff",
     "innerWindowColor": "#5987F8",
-    "bannerImageUrl": "https://i.imgur.com/wqfz0az.png",
+    "bannerImageUrl": "https://i.imgur.com/b3z3raS.png",
     "backgroundImageUrl": "https://i.imgur.com/qQ0B4wr.jpeg",
     "endingTextColor": "#000000",
     "customQuote": "",
@@ -1114,7 +1114,7 @@ if(!campaignTrail_temp.loaded1){
   $(".container")[0].style.backgroundColor = "#ffffff";
   
   
-  document.getElementById("header").src = "https://i.imgur.com/wqfz0az.png";
+  document.getElementById("header").src = "https://i.imgur.com/b3z3raS.png";
   
   
   document.body.background = "https://i.imgur.com/qdLCZsr.png";
@@ -1189,10 +1189,13 @@ if(!campaignTrail_temp.loaded1){
         runningMateButton.click();
         observer.disconnect()
       }
-      if(v == 86 && storedVeep != 86) {
+      if (v == 81 && storedVeep != 81) {
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "The Republicans";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "";
+      }
+      if (v == 86 && storedVeep != 86) {
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "George W.";
-        storedVeep = v;
       }
       if (!localStorage.getItem("LEBRON")) {
         for (let i = selectElement.options.length - 1; i >= 0; i--) {
@@ -1331,6 +1334,7 @@ if(!campaignTrail_temp.loaded1){
            corrr=`\n<h2>RETRIBUTION</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
           storedChar = c;
+          storedVeep = 99;
         }, 15);
         if(playlist != w_playlist){
           changePlaylist(w_playlist);
@@ -1530,147 +1534,147 @@ function setupRandomizeButton() {
     gore_playlist = new Playlist();
     w_playlist = new Playlist();
     ref_playlist = new Playlist();
-  
-  
+    
+    
     const song1_Gore = new Song(
     "My Name Is",
     "Eminem",
     "https://audio.jukehost.co.uk/lomFeBO1wvPB5c50xHYVqg1azkw68hGj"
-  );
-  
+    );
+    
     const song1_W = new Song(
       "Walking on the Sun",
       "Smash Mouth",
       "https://files.catbox.moe/jgcx50.mp3"
     );
-
+    
     const song1_REF = new Song(
     "My Way",
     "Limp Bizkit",
     "https://audio.jukehost.co.uk/dmNfY27YqhZpgBzKXJWBRGUnXlFluJBF"
-  );
-
-  const song2_Gore = new Song(
+    );
+    
+    const song2_Gore = new Song(
     "Airbag",
     "Radiohead",
     "https://files.catbox.moe/z5a3qc.mp3"
-  );
-
-  const song2_W = new Song(
+    );
+    
+    const song2_W = new Song(
     "My City Was Gone",
     "Pretenders",
     "https://audio.jukehost.co.uk/F04qKdt2FDN9WxSjZQ1Y416as4d2VrFD"
-  );
-
-  const song2_REF = new Song(
+    );
+    
+    const song2_REF = new Song(
     "Crazy",
     "Willie Nelson",
     "https://audio.jukehost.co.uk/vCxOIayI1GJp3jrr16Edpdnrj2eQRcTY"
-  );
-
-  const song3_Gore = new Song(
+    );
+    
+    const song3_Gore = new Song(
     "The Future",
     "Leonard Cohen",
     "https://audio.jukehost.co.uk/ditU7bH9e2CYjmPg5ZuFheXfT2M31PQj"
     );
-
-  const song3_W = new Song(
-  "Sleep Now in the Fire",
-  "Rage Against the Machine",
-  "https://audio.jukehost.co.uk/qozzcT2pN8to9iZLd5rrOoXVLIXF24mo"
-  );
-
-  const song3_REF = new Song(
+    
+    const song3_W = new Song(
+    "Sleep Now in the Fire",
+    "Rage Against the Machine",
+    "https://audio.jukehost.co.uk/qozzcT2pN8to9iZLd5rrOoXVLIXF24mo"
+    );
+    
+    const song3_REF = new Song(
     "Born In The U.S.A",
     "Bruce Springsteen",
     "https://audio.jukehost.co.uk/1nbU0jWxAHQIdHU0eXkNYACY2YOw61n9"
     );
     
-  const song4 = new Song(
+    const song4 = new Song(
     "Best Imitation Of Myself",
     "Ben Folds Five",
     "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
-  );
-  const song4_W = new Song(
+    );
+    const song4_W = new Song(
     "Paradise By The Dashboard Light",
     "Meat Loaf",
     "https://audio.jukehost.co.uk/30ysZumO82CY4tJkOpXzkKmfPSyzW7y3"
-  );
-  
-  const song5 = new Song(
+    );
+    
+    const song5 = new Song(
     "You Make Loving Fun",
     "Fleetwood Mac",
     "https://audio.jukehost.co.uk/lEeD3Y8rRhxnn7eJgYMHxeBGwJ3LYh3j"
     );
-
-  const song5_W = new Song(
+    
+    const song5_W = new Song(
     "I Won't Back Down",
     "Tom Petty",
     "https://audio.jukehost.co.uk/Q4sIcCkSyYv5V2BtLqUM7mgTwc62jmZy"
     );
-
-  const song6 = new Song(
+    
+    const song6 = new Song(
     "Virtual Insanity",
     "Jamiroquai",
     "https://audio.jukehost.co.uk/R1rX5dSAQ0ViwsOpYBqtgNDoMQJH6NLd"
-  );
-  const song6_W = new Song(
+    );
+    const song6_W = new Song(
     "Strange Things",
     "Randy Newman",
     "https://audio.jukehost.co.uk/6Xp7Hju9fMNAn1CfrTbnD2YPJ4KDh0ra"
-  );
-
-  const song7 = new Song(
-  "The Tide Is High",
-  "Blondie",
-  "https://audio.jukehost.co.uk/qwqHeIcXB49bna2klqPTGhVZYZYe2tkw"
-);
-
-const song7_W = new Song(
-  "What's My Age Again?",
-  "Blink-182",
-  "https://audio.jukehost.co.uk/oJkRIDtgUPQY2T4UtfMieOlk1ke8PMhl"
-);
-
-  const song8 = new Song(
-  "Baby One More TIme",
-  "Britney Spears",
-  "https://audio.jukehost.co.uk/zwORXIkn2msfNZMMxiSpJoxs5We9QDLK"
-);
-const song9 = new Song(
+    );
+    
+    const song7 = new Song(
+    "The Tide Is High",
+    "Blondie",
+    "https://audio.jukehost.co.uk/qwqHeIcXB49bna2klqPTGhVZYZYe2tkw"
+    );
+    
+    const song7_W = new Song(
+    "What's My Age Again?",
+    "Blink-182",
+    "https://audio.jukehost.co.uk/oJkRIDtgUPQY2T4UtfMieOlk1ke8PMhl"
+    );
+    
+    const song8 = new Song(
+    "Baby One More TIme",
+    "Britney Spears",
+    "https://audio.jukehost.co.uk/zwORXIkn2msfNZMMxiSpJoxs5We9QDLK"
+    );
+    const song9 = new Song(
     "Head Over Heels",
     "Tears For Fears",
     "https://audio.jukehost.co.uk/KRmeeqbqR4gzyZAoBXl1tKliIRHSLYPm"
-  );
-const song10 = new Song(
-"Billie Jean",
-"Michael Jackson",
-"https://audio.jukehost.co.uk/9hxcQaSNvaWM9BLKYHIZvIjoqN7K5gsa"
-);
-
-  const song11 = new Song(
-  "That's Life",
-  "Frank Sinatra",
-  "https://audio.jukehost.co.uk/ypWPTyFDQKqwcFlfQpS36eTfhvwv26L5"
-);
-
-  const song12 = new Song(
-  "Go Your Own Way",
-  "Fleetwood Mac",
-  "https://audio.jukehost.co.uk/1VK4UhrKRBbbd5kozuyW2WQBm2eWmUxr"
-  );
-  const song13 = new Song(
-  "A Song For You",
-  "Leon Russell",
-  "https://audio.jukehost.co.uk/10sbgg4yzHdGQFz241gS8du6rVFLZOVf"
-  );
-
-  const song14 = new Song(
+    );
+    const song10 = new Song(
+    "Billie Jean",
+    "Michael Jackson",
+    "https://audio.jukehost.co.uk/9hxcQaSNvaWM9BLKYHIZvIjoqN7K5gsa"
+    );
+    
+    const song11 = new Song(
+    "That's Life",
+    "Frank Sinatra",
+    "https://audio.jukehost.co.uk/ypWPTyFDQKqwcFlfQpS36eTfhvwv26L5"
+    );
+    
+    const song12 = new Song(
+    "Go Your Own Way",
+    "Fleetwood Mac",
+    "https://audio.jukehost.co.uk/1VK4UhrKRBbbd5kozuyW2WQBm2eWmUxr"
+    );
+    const song13 = new Song(
+    "A Song For You",
+    "Leon Russell",
+    "https://audio.jukehost.co.uk/10sbgg4yzHdGQFz241gS8du6rVFLZOVf"
+    );
+    
+    const song14 = new Song(
     "Everything You Know Is Wrong",
     "Weird Al Yankovic",
     "https://audio.jukehost.co.uk/SPIHfPTBVrdg3Xe4eW9aAbSCQeBtcbzC"
-  );
-
+    );
+    
     playlist.addSong(song1_Gore);
     playlist.addSong(song2_Gore);
     playlist.addSong(song3_Gore);
@@ -1685,7 +1689,7 @@ const song10 = new Song(
     playlist.addSong(song12);
     playlist.addSong(song13);
     playlist.addSong(song14);
-
+    
     gore_playlist.addSong(song1_Gore);
     gore_playlist.addSong(song2_Gore);
     gore_playlist.addSong(song3_Gore);
@@ -1700,7 +1704,7 @@ const song10 = new Song(
     gore_playlist.addSong(song12);
     gore_playlist.addSong(song13);
     gore_playlist.addSong(song14);
-
+    
     w_playlist.addSong(song1_W);
     w_playlist.addSong(song2_W);
     w_playlist.addSong(song3_W);
@@ -1715,7 +1719,7 @@ const song10 = new Song(
     w_playlist.addSong(song12);
     w_playlist.addSong(song13);
     w_playlist.addSong(song14);
-
+    
     ref_playlist.addSong(song1_REF);
     ref_playlist.addSong(song2_REF);
     ref_playlist.addSong(song3_REF);
@@ -2041,10 +2045,72 @@ playerContainer.appendChild(controlsContainer);
     margin-top: 3px;
     }
   
-    #song-info {
-      width: 100%;
-    padding:5px;
-    }
+#screen {
+  width: 80%;
+  height: 40%;
+  background-color: #e8ffe8;
+  margin: 30px auto;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: black;
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+  position: relative;
+}
+
+#song-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scrollContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: hidden; /* Hide the overflowed content */
+  position: relative;
+}
+
+#song-info {
+  display: flex;
+  align-items: center; /* Vertically center the text */
+}
+
+#title, #artist {
+  margin: 0;
+  font-size: 16px; /* Set a base font-size */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide content overflow */
+  text-overflow: ellipsis; /* Show ellipsis when content is too long */
+  text-align: center; /* Center align the text */
+  display: inline-block; /* Ensures the text stays as an inline element */
+  padding: 0 7px; /* Optional: Space between title and artist */
+}
+
+/* Define the scrolling animation */
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
+#scrollContainer {
+  animation: scrollText 10s linear infinite; /* Apply scrolling animation to the entire container */
+}
+
+
+
   
     #controls-container {
       display: flex;
