@@ -43734,11 +43734,11 @@ campaignTrail_temp.questions_json = [
   ]
   campaignTrail_temp.cyoa = true
   var buttonGFX = '<img src=\"https://i.imgur.com/so1GE0F.png\" style=\"width: 18px; height: 18px; vertical-align: middle;\">';
-  var opposition = 0
-  var backlash = 0
-  var economy = 0
-  var vietnam = 0
-  var rfkSou = 0
+  var respect = 0
+  var reac = 0
+  var pop = 0
+  var lib = 0
+  var prog = 0
   var thresholdCand = 2
   var FBIRFK = 0
   cyoAdventure = function(a) {
@@ -43797,7 +43797,7 @@ campaignTrail_temp.questions_json = [
   let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
   
   function updateCandidates(type, amt){
-  if(type == "backlash" && amt>0){
+  if(type == "reac" && amt>0){
       if(agnew_active == 1){
           opponents.agnew += amt
       }
@@ -43805,7 +43805,7 @@ campaignTrail_temp.questions_json = [
           opponents.reagan += 1
       }
   }
-  if(type == "backlash" && amt<0){
+  if(type == "reac" && amt<0){
       if(percy_active == 1){
           opponents.percy += 1
       }
@@ -44743,96 +44743,149 @@ campaignTrail_temp.questions_json = [
       }
   }
   }, 0.1);
-  const oppositionMap = {
-    "-9": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-9</span>)`,
-    "-8": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-8</span>)`,
-    "-7": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-7</span>)`,
-    "-6": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-6</span>)`,
-    "-5": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-5</span>)`,
-    "-4": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-4</span>)`,
-    "-3": `The <b>caucus</b> <i><span style="color: #821F14;">in mutiny</i></span>. (<span style="color:#821F14;">-3</span>)`,
-    "-2": `The <b>caucus</b> is <i><span style="color: #821F14;">disorganized</i></span>. (<span style="color:#821F14;">-2</span>)`,
-    "-1": `The <b>caucus</b> is <i><span style="color: #821F14;">disorganized</i></span>. (<span style="color:#821F14;">-1</span>)`,
-    "0": `The <b>caucus</b> is <i><span style="color: #CEA665;">scattered</i></span>. (<span style="color:#CEA665;">0</span>)`,
-    "1": `The <b>caucus</b> is <i><span style="color: #CEA665;">somewhat</i></span> organized. (<span style="color:#CEA665;">1</span>)`,
-    "2": `The <b>caucus</b> is <i><span style="color: #CEA665;">somewhat</i></span> organized. (<span style="color:#CEA665;">2</span>)`,
-    "3": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">3</span>)`,
-    "4": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">4</span>)`,
-    "5": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">5</span>)`,
-    "6": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">6</span>)`,
-    "7": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">7</span>)`,
-    "8": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">8</span>)`,
-    "9": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">9</span>)`,
-    "10": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">10</span>)`,
-    "11": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">11</span>)`,
-    "12": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">12</span>)`,
-    "13": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">13</span>)`,
-    "14": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">14</span>)`,
-    "15": `The <b>caucus</b> is <i><span style="color: #1C5B22;">lined up</i></span>. (<span style="color:#1C5B22;">15</span>)`,
+  const respectMap = {
+    "-9": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `Reform <b>is</b> <i><span style="color: #821F14;">seen as a joke</i></span>. (<span style="color:#821F14;">-1</span>)`,
+    "0":  `<b>Reform</b> is seen as <i><span style="color: #CEA665;">fringe</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `<b>Reform</b> is seen as <i><span style="color: #CEA665;">a viable 3rd party</i></span>. organized. (<span style="color:#CEA665;">1</span>)`,
+    "2": `<b>Reform</b> is seen as <i><span style="color: #CEA665;">a viable 3rd party</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `<b>Reform</b> is seen as <i><span style="color: #1C5B22;">America's 3rd party</i></span>. (<span style="color:#1C5B22;">15</span>)`,
   };
-  const backlashMap = {
-    "-10": `The <b>public</b> <i><span style="color: #821F14;">committed</i></span> to Kennedy. (<span style="color:#821F14;">-10</span>)`,
-    "-9": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-9</span>)`,
-    "-8": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-8</span>)`,
-    "-7": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-7</span>)`,
-    "-6": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-6</span>)`,
-    "-5": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-5</span>)`,
-    "-4": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-4</span>)`,
-    "-3": `The <b>public</b> <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-3</span>)`,
-    "-2": `The <b>public</b> is <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-2</span>)`,
-    "-1": `The <b>public</b> is <i><span style="color: #821F14;">fawning</i></span> over Kennedy. (<span style="color:#821F14;">-1</span>)`,
-    "0": `The <b>public</b> is <i><span style="color: #CEA665;">ambivalent</i></span> on Kennedy. (<span style="color:#CEA665;">0</span>)`,
-    "1": `The <b>public</b> has been <i><span style="color: #CEA665;">slighted</i></span> by Kennedy. (<span style="color:#CEA665;">1</span>)`,
-    "2": `The <b>public</b> has been <i><span style="color: #CEA665;">slighted</i></span> by Kennedy. (<span style="color:#CEA665;">2</span>)`,
-    "3": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">3</span>)`,
-    "4": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">4</span>)`,
-    "5": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">5</span>)`,
-    "6": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">6</span>)`,
-    "7": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">7</span>)`,
-    "8": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">8</span>)`,
-    "9": `The <b>public</b> is <i><span style="color: #1C5B22;">enraged</i></span>. (<span style="color:#1C5B22;">9</span>)`,
-    "10": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">10</span>)`,
-    "11": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">11</span>)`,
-    "12": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">12</span>)`,
-    "13": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">13</span>)`,
-    "14": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">14</span>)`,
-    "15": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">15</span>)`,
-    "16": `The <b>public</b> is <i><span style="color: #1C5B22;">mad as hell</i></span>. (<span style="color:#1C5B22;">16</span>)`,
+  const reacMap = {
+    "-10": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>Reactionaries</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>Reactionaries</b> have <i><span style="color: #CEA665;">little influence</i></span> in the party. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>Reactionaries</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>Reactionaries</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>Reactionaries</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">15</span>)`,
+    "16": `The <b>Reactionaries</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">16</span>)`,
   };
-  const rfkSouMap = {
-    "-5": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-5</span>)`,
-    "-4": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-4</span>)`,
-    "-3": `President <b>Kennedy</b> <i><span style="color: #821F14;">hates</i></span> the south. (<span style="color:#821F14;">-3</span>)`,
-    "-2": `President <b>Kennedy</b> is <i><span style="color: #821F14;">on poor terms</i></span> with the south. (<span style="color:#821F14;">-2</span>)`,
-    "-1": `President <b>Kennedy</b> is <i><span style="color: #821F14;">on poor terms</i></span> with the south. (<span style="color:#821F14;">-1</span>)`,
-    "0": `President <b>Kennedy</b> is <i><span style="color: #CEA665;">touchy</i></span> with the south. (<span style="color:#CEA665;">0</span>)`,
-    "1": `President <b>Kennedy</b> has been <i><span style="color: #CEA665;">smitted</i></span> by the south. (<span style="color:#CEA665;">1</span>)`,
-    "2": `President <b>Kennedy</b> has been <i><span style="color: #CEA665;">smitted</i></span> by the south. (<span style="color:#CEA665;">2</span>)`,
-    "3": `President <b>Kennedy</b> is <i><span style="color: #1C5B22;">cuddley</i></span> with the south. (<span style="color:#1C5B22;">3</span>)`,
-    "4": `President <b>Kennedy</b> wears <i><span style="color: #1C5B22;">grey</i></span> under that suit. (<span style="color:#1C5B22;">4</span>)`,
-    "5": `President <b>Kennedy</b> wears <i><span style="color: #1C5B22;">grey</i></span> under that suit. (<span style="color:#1C5B22;">5</span>)`
+  const progMap = {
+    "-10": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>Progressives</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>Progressives</b> have <i><span style="color: #CEA665;">little influence</i></span> in the party. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>Progressives</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>Progressives</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>Progressives</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">15</span>)`,
+    "16": `The <b>Progressives</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">16</span>)`,
   };
   
-  const vietnamMap = {
-    "-3": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">a crisis</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
-    "-2": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">on the verge</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
-    "-1": `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">on the verge</i></span>. (<span style="color:#1C5B22;">-1</span>)`,
-    "0": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">deteriorating</i></span>. (<span style="color:#CEA665;">0</span>)`,
-    "1": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">stalled</i></span>. (<span style="color:#CEA665;">1</span>)`,
-    "2": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">creaking</i></span>. (<span style="color:#CEA665;">2</span>)`,
-    "3":  `The situation in <b>Vietnam</b> is <i><span style="color: #821F14;">progressing</i></span>. (<span style="color:#821F14;">3</span>)`,
-    "4":  `The situation in <b>Vietnam</b> is <i><span style="color: #821F14;">not our concern</i></span>. (<span style="color:#821F14;">4</span>)`,
+  const libMap = {
+    "-10": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>Libertarians</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>Libertarians</b> have <i><span style="color: #CEA665;">little influence</i></span> in the party. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>Libertarians</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>Libertarians</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>Libertarians</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">15</span>)`,
+    "16": `The <b>Libertarians</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">16</span>)`,
   };
-  const economyMap = {
-    "-4": `The <b>economy</b> is in <i><span style="color: #1C5B22;">crisis</i></span>. (<span style="color:#1C5B22;">-4</span>)`,
-    "-3": `The <b>economy</b> is in <i><span style="color: #1C5B22;">crumbling</i></span>. (<span style="color:#1C5B22;">-3</span>)`,
-    "-2": `The <b>economy</b> is <i><span style="color: #1C5B22;">giving way</i></span>. (<span style="color:#1C5B22;">-2</span>)`,
-    "-1": `The <b>economy</b> is <i><span style="color: #CEA665;">buckling</i></span>. (<span style="color:#CEA665;">-1</span>)`,
-    "0": `The <b>economy</b> is <i><span style="color: #CEA665;">stagnant</i></span>. (<span style="color:#CEA665;">0</span>)`,
-    "1": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">1</span>)`,
-    "2": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">2</span>)`,
-    "3": `The <b>economy</b> is <i><span style="color: #821F14;">succeeding</i></span>. (<span style="color:#821F14;">3</span>)`,
-    "4": `The <b>economy</b> is <i><span style="color: #821F14;">succeeding</i></span>. (<span style="color:#821F14;">4</span>)`,
+  const popMap = {
+    "-10": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>Populists</b> have <i><span style="color: #821F14;">next-to-no influence</i></span> in the party. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>Populists</b> have <i><span style="color: #CEA665;">little influence</i></span> in the party. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>Populists</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>Populists</b> have <i><span style="color: #CEA665;">some influence</i></span> in the party. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>Populists</b> have <i><span style="color: #1C5B22;">unquestioned influence</i></span> in the party. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">14</span>)`,
+    "15": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">15</span>)`,
+    "16": `The <b>Populists</b> are <i><span style="color: #1C5B22;">deep-rooted</i></span> within the party. (<span style="color:#1C5B22;">16</span>)`,
   };
   const FBIRFKMap = {
     "-1": ``,
@@ -45001,7 +45054,7 @@ campaignTrail_temp.questions_json = [
         }
         repMenu.appendChild(repContainer);
   
-        // Create the opposition title
+        // Create the respect title
         const containmentTitle = document.createElement('h1');
         containmentTitle.innerText = 'The Issues';
         containmentTitle.style.textAlign = 'right';
@@ -45022,20 +45075,20 @@ campaignTrail_temp.questions_json = [
             overviewtxt += "• "+ `${eminenceText}` + "<br>";
         }
   
-        oppositionText = `${oppositionMap[String(opposition)]}`;
-        overviewtxt += "• "+ `${oppositionText}` + "<br>";
+        respectText = `${respectMap[String(respect)]}`;
+        overviewtxt += "• "+ `${respectText}` + "<br>";
         
-        backlashText = `${backlashMap[String(backlash)]}`;
-        overviewtxt += "• "+ `${backlashText}` + "<br>";
+        reacText = `${reacMap[String(reac)]}`;
+        overviewtxt += "• "+ `${reacText}` + "<br>";
   
-        rfkSouText = `${rfkSouMap[String(rfkSou)]}`;
-        overviewtxt += "• "+ `${rfkSouText}` + "<br>";
+        progText = `${progMap[String(prog)]}`;
+        overviewtxt += "• "+ `${progText}` + "<br>";
   
-        vietnamText = `${vietnamMap[String(vietnam)]}`;
-        overviewtxt += "• "+ `${vietnamText}` + "<br>";
+        libText = `${libMap[String(lib)]}`;
+        overviewtxt += "• "+ `${libText}` + "<br>";
   
-        economyText = `${economyMap[String(economy)]}`;
-        overviewtxt += "• "+ `${economyText}` + "<br>";
+        popText = `${popMap[String(pop)]}`;
+        overviewtxt += "• "+ `${popText}` + "<br>";
   
         const ovsubtxt = document.createElement('h3');
         ovsubtxt.innerHTML = overviewtxt;
