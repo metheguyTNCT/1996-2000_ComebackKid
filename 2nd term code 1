@@ -1085,7 +1085,7 @@ if(!campaignTrail_temp.loaded1){
   
   //#startcode
   
-  quotes = ["<q>People like me are what stand between us and Auschwitz.</q> - Newt Gingrich", "<q>War has rules, mud wrestling has rules — politics has no rules.​</q> - Ross Perot", "<q>If Al Gore invented the internet, I invented spell check.​</q> - Dan Quayle", "<q> Bill Clinton's foreign policy experience stems mainly from having breakfast at the International House of Pancakes.</q> - Pat Buchanan", "<q>If you're sick and tired of the politics of cynicism and polls and principles, come and join this campaign.​</q> - George W. Bush", "<q>We are in it, now we must win it.​</q> - John McCain", "<q>I didn't think it was wrong; I thought it was a neat idea.</q> - Oliver North"]
+  quotes = [""]
   customquote = quotes[Math.floor((Math.random() * quotes.length))]
   
   
@@ -1093,13 +1093,7 @@ if(!campaignTrail_temp.loaded1){
   nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
   
   
-  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ffffff";
-  
-  
-  $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/IMupOWE.png)"
-  
-  
-  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#5987F8"
+  nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#c2c2c2";
   
   
   $("#game_window")[0].style.backgroundSize = "cover"; 
@@ -1121,29 +1115,38 @@ if(!campaignTrail_temp.loaded1){
   
   
   document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
-  
-  
-  document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
-  document.head.innerHTML +=`
-  <style>
-  .game_header {
-  background-color: #5687fb;
-  }
-  .campaign_trail_start_emphasis {
-  background-color: #5687FB;
-  }
-  .inner_window_question h3 {
-  background-color: #DDE7FE;
-  }
-  .overlay_window h3 {
-  background-color: #DDE7FE;
-  }
-  </style>`
   document.head.innerHTML += `<link
   rel="stylesheet"
   href="https://unpkg.com/xp.css"
  >`
  document.head.innerHTML += `<style>
+ .game_header {
+     background: linear-gradient(to bottom, #000080);
+     height: 50px; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
+ }
+ .game_header h2 {
+     font-size: 32px;
+     font-weight: bold;
+     font-family: Tahoma, Arial, sans-serif;
+     
+     background: linear-gradient(to bottom, #ffffff, #d0e4f7);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: #ffffff; /* Set text to visible color */
+
+     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+ }
+ #inner_window_4 h3 {
+   color: #FFFFFF;
+ }
+ .inner_inner_window h3 {
+   background-color: #E8EFFF;
+   background: linear-gradient(to bottom, #C1C7E5, #CCD1E8, #E2E5F0);
+ }
+ 
  #closeButton {
          background: none;
          border: none;
@@ -1314,17 +1317,13 @@ body {display:flex!important;}
           document.head.innerHTML +=`
           <style>
           .game_header {
-          background-color: #5987F8;
-          }
-          .campaign_trail_start_emphasis {
-          background-color: #5987F8;
-          }
-          .inner_window_question h3 {
-          background-color: #DDE7FE;
-          }
-          .overlay_window h3 {
-          background-color: #DDE7FE;
-          }
+     background: linear-gradient(to bottom, #5987F8 0%, #5987F8 100%);;
+     height: 50px; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
+ }
           </style>`
           corrr=`\n<h2>RESURGENCE</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           storedChar = c;
@@ -1350,18 +1349,14 @@ body {display:flex!important;}
           document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#ff4b0f!important;}</style>";
           document.head.innerHTML +=`
           <style>
-          .game_header {
-          background-color: #ff4b0f;
-          }
-          .campaign_trail_start_emphasis {
-          background-color: #ff4b0f;
-          }
-          .inner_window_question h3 {
-          background-color: #DDE7FE;
-          }
-          .overlay_window h3 {
-          background-color: #DDE7FE;
-          }
+.game_header {
+     background: linear-gradient(to bottom, #ff4b0f 0%, #ff4b0f 100%);;
+     height: 50px; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
+ }
           </style>`
            corrr=`\n<h2>RETRIBUTION</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
@@ -1387,18 +1382,14 @@ body {display:flex!important;}
           document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#9500b3!important;}</style>";
           document.head.innerHTML +=`
           <style>
-          .game_header {
-          background-color: #9500b3;
-          }
-          .campaign_trail_start_emphasis {
-          background-color: #9500b3;
-          }
-          .inner_window_question h3 {
-          background-color: #DDE7FE;
-          }
-          .overlay_window h3 {
-          background-color: #DDE7FE;
-          }
+                    .game_header {
+     background: linear-gradient(to bottom, #9500b3 0%, #9500b3 100%);;
+     height: 50px; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
+ }
           </style>`
            corrr=`\n<h2>REVIVAL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
