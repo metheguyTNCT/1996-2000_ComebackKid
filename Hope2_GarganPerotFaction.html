@@ -43689,8 +43689,15 @@ var rfkSou = 0
 var thresholdCand = 2
 var FBIRFK = 0
 cyoAdventure = function(a) {
+ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+if (ans == 3413) {
+        setTimeout(function(){
+            openSurrogates();
+        }, 10);
+}
 refreshRS()
 }
+
 let firstPlace = null
 let secondPlace = null
 
@@ -43731,7 +43738,6 @@ let opponents = {
   nixon: nixon_var,
   hughes: hughes_var
 };
-
 var reagan_interviewed = 0
 var contestedConvention = 0
 
@@ -44109,12 +44115,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/KSZQdX3.png';
     campaignTrail_temp.candidate_last_name = 'Rockefeller';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Nelson"
     e.candidate_json[id].fields.last_name = "Rockefeller" 
     e.candidate_json[id].fields.color_hex = "#605f85" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#a6626b" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/sj9mawH.gif"
@@ -44174,12 +44180,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/9D4xPxL.png';
     campaignTrail_temp.candidate_last_name = 'Percy';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Chuck"
     e.candidate_json[id].fields.last_name = "Percy" 
     e.candidate_json[id].fields.color_hex = "#6a8891" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#912a3b" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/r9g9PUM.gif"
@@ -44238,12 +44244,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/QHt8PmY.png';
     campaignTrail_temp.candidate_last_name = 'Goldwater';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Barry"
     e.candidate_json[id].fields.last_name = "Goldwater" 
     e.candidate_json[id].fields.color_hex = "#1b3b54" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#99311D" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/2IY5okn.gif"
@@ -44303,12 +44309,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/kgwlK8K.png';
     campaignTrail_temp.candidate_last_name = 'Lindsay';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "John"
     e.candidate_json[id].fields.last_name = "Lindsay" 
     e.candidate_json[id].fields.color_hex = "#306085" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#911834" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/Fbp4zul.gif"
@@ -44367,12 +44373,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/btM3ooK.png';
     campaignTrail_temp.candidate_last_name = 'Agnew';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Spiro"
     e.candidate_json[id].fields.last_name = "Agnew" 
     e.candidate_json[id].fields.color_hex = "#445d70"
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#874740" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/9xEvaMu.gif"
@@ -44431,12 +44437,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/Lhi97y3.png';
     campaignTrail_temp.candidate_last_name = 'Reagan';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Ronald"
     e.candidate_json[id].fields.last_name = "Reagan"  
     e.candidate_json[id].fields.color_hex = "#40475c" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#802626" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/SLbq0qR.gif"
@@ -44515,12 +44521,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/Q2mrIvU.png';
     campaignTrail_temp.candidate_last_name = 'Yorty';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Sam"
     e.candidate_json[id].fields.last_name = "Yorty"  
     e.candidate_json[id].fields.color_hex = "#94767d" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#8f5950" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/ZdXeNUh.gif"
@@ -44552,14 +44558,14 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/CfubOif.png';
     campaignTrail_temp.candidate_last_name = 'Nixon';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Richard"
     e.candidate_json[id].fields.last_name = "Nixon"  
     e.candidate_json[id].fields.color_hex = "#991c1c" 
     // var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     // e.candidate_json[id].fields.color_hex = "#487B91" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#42496b" 
         // var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         // e.candidate_json[id].fields.color_hex = "#a13333" 
@@ -44592,12 +44598,12 @@ function selectRockefeller(){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/hbY5A06.png';
     campaignTrail_temp.candidate_last_name = 'Hughes';
         
-    var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+    var id = e.candidate_json.map(p=>p.pk).indexOf(80)
     e.candidate_json[id].fields.first_name = "Howard"
     e.candidate_json[id].fields.last_name = "Hughes"  
     e.candidate_json[id].fields.color_hex = "#646e7d" 
     if(e.altcolors){
-        var id = e.candidate_json.map(p=>p.pk).indexOf(81)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.color_hex = "#823849" 
     }
     campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/rTXOujU.gif"
@@ -44985,7 +44991,7 @@ const oppositionMap = {
         ovsubtxt.style.position = 'relative';
         ovsubtxt.style.marginTop = '-04px'; 
         ovsubtxt.style.lineHeight = '1.1';
-        ovsubtxt.style.background = 'linear-gradient(rgba(219, 208, 208, 0.6), rgba(219, 208, 208, 0.4)), url("https://i.imgur.com/nxW7ufv.png")';
+        ovsubtxt.style.background = 'linear-gradient(rgb(87, 0, 164))';
         ovsubtxt.style.backgroundSize = 'cover';
         ovsubtxt.style.backgroundPosition = 'center';
         ovsubtxt.style.padding = '1px';            
