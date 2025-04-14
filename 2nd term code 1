@@ -1552,7 +1552,7 @@ function setupRandomizeButton() {
     const song1_REF = new Song(
     "My Way",
     "Limp Bizkit",
-    "https://audio.jukehost.co.uk/dmNfY27YqhZpgBzKXJWBRGUnXlFluJBF"
+    "https://audio.jukehost.co.uk/QKezC0DBKNqVRFSFlhYu4vZe2tUfLJhN"
     );
     
     const song2_Gore = new Song(
