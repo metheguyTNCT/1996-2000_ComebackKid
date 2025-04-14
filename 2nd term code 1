@@ -1139,7 +1139,40 @@ if(!campaignTrail_temp.loaded1){
   background-color: #DDE7FE;
   }
   </style>`
-  
+  document.head.innerHTML += `<link
+  rel="stylesheet"
+  href="https://unpkg.com/xp.css"
+ >`
+ document.head.innerHTML += `<style>
+ #closeButton {
+         background: none;
+         border: none;
+         outline: none;
+         padding: 0;
+         cursor: pointer;
+     }
+
+     /* Override xp.css focus and hover styles */
+     #closeButton:focus,
+     #closeButton:active,
+     #closeButton:hover {
+         outline: none;
+         box-shadow: none;
+         border: none;
+     }
+
+ h3 {
+   font-size:1.17em!important;
+ }
+
+ label {
+   font-size:1em!important;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif!important;
+ }
+body {display:flex!important;}
+
+#game_window{max-width:1000px;}
+ </style>`
   e = campaignTrail_temp
   
   var c = 78;
@@ -1163,8 +1196,6 @@ if(!campaignTrail_temp.loaded1){
   
     if(initialButton) { // reset theme at main menu
       document.getElementById("header").src = "https://i.imgur.com/W1EFaSn.png";
-      document.forms["election_year"].querySelector("h3").innerHTML = "<span style=\"color:#BB311C; text-shadow: 2px 2px rgb(0, 0, 0);\">Act I, Scene One</span>"
-      document.getElementById("election_id_button").textContent = "\"Hello?\"";
       if(c && c != 78){
         c = 78;
         storedChar = 99;
