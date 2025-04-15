@@ -1707,7 +1707,7 @@ campaignTrail_temp.answers_json = [
         "pk": 900015551,
         "fields": {
             "question": "question_9_altnafta",
-            "description": "Whoa, not so fast! I want NAFTA to work for the American worker, not just for multinational corporations and monopoly men. I want to go back to the table and secure a strong set of five additional side agreements: for labor, the environment, and basic fairness. Then we’ll get it through the Senate and hold a signing ceremony, preferably in that order. Call it the NAFTA Bill of Rights, if you like."
+            "description": "My fellow Americans, this accord I hold in my hands has the power to change the life of every person on this continent. I’ve always said an agreement like this is a net positive, for blue-collar workers, business owners, and everyday consumers alike. But something this big, with ramifications stretching decades down the road, demands care. So I’m asking for your patience. We’ve got to get it right, because only then can it reach its full potential."
         }
     },
 	{
@@ -1972,6 +1972,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_18_defense_of_marriage",
             "description": "Those kooks call me Slick Willy, you know? I’ll work this issue, slow-walk it through Congress, stall the debates, and let the heat die down. Sometimes the best move isn’t to charge ahead, it’s to wait for the right moment to let things settle."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 1800015,
+        "fields": {
+            "question": "question_18_defense_of_marriage",
+            "description": "I think there’s no real reason we should keep up this fight, considering the polls are clear on its support, just like with the partial abortion ban. In fact, let’s sign onto both. If that’s what the people want, we’ll push it through."
         }
     },
     {
@@ -12119,7 +12127,47 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 180001,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.007
+            "global_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12736,
+        "fields": {
+            "answer": 1800015,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12736,
+        "fields": {
+            "answer": 1800015,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12736,
+        "fields": {
+            "answer": 1800015,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.032
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12736,
+        "fields": {
+            "answer": 180001,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.016
         }
     },
     {
@@ -12129,7 +12177,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 180002,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.03
+            "global_multiplier": -0.021
         }
     },
     {
@@ -12139,7 +12187,27 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 180002,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.031
+            "global_multiplier": 0.0333
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12739,
+        "fields": {
+            "answer": 180002,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.026
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12739,
+        "fields": {
+            "answer": 180003,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.013
         }
     },
     {
@@ -12159,7 +12227,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 180003,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.0133
+            "global_multiplier": 0.0153
         }
     },
     {
@@ -22292,7 +22360,17 @@ campaignTrail_temp.answer_score_issue_json = [
         "fields": {
             "answer": 180001,
             "issue": 28,
-            "issue_score": -0.5,
+            "issue_score": -0.38,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12737,
+        "fields": {
+            "answer": 1800015,
+            "issue": 28,
+            "issue_score": -0.68,
             "issue_importance": 2
         }
     },
@@ -47894,7 +47972,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 900015551,
             "candidate": 77,
-            "answer_feedback": "Following the news, centrists and conservative Democrats across the nation are left a bit shocked, while many labor unions and liberal Democrats have woken up this morning with broad, if nervous, grins, Robert Reich included. Apparently, President Salinas is borderline furious, and the new Prime Minister Chrétien, while more diplomatic, is equally annoyed. Looks like you're heading back into the trenches."
+            "answer_feedback": "Jean Chrétien gave you an absolutely livid phone call right after your intervention, while Perot is on the news saying you're finally starting to understand what's going on. Now, you’ve got to go back through all the minutiae with him and Salinas, trying to push a ''Bill of Rights for Workers'', something that might just keep companies from simply shipping jobs down across the border. The other two leaders talk big, but you're the superpower here. They’ll fall in line eventually."
         }
     },
     {
@@ -48273,6 +48351,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 180001,
             "candidate": 77,
             "answer_feedback": "Here’s hoping this pays off. If you’re trying to appeal to moderates and conservatives, it’s best to swallow your pride and sign the bill. Most Americans don’t support expanding, or changing, the traditional definition of marriage."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12735,
+        "fields": {
+            "answer": 1800015,
+            "candidate": 77,
+            "answer_feedback": "And so you do. It may be the first time the New York Times and Kennedy wail on you, while Fox News and Gingrich heap fawning praise. Women seeking an abortion better act fast in those first three months, after the fifteenth week, they’re out of luck. Hillary’s been giving you cold looks lately. It’s hard, sometimes, doing what the people want."
         }
     },
     {
