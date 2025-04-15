@@ -515,7 +515,7 @@ campaignTrail_temp.questions_json = [
         "pk": "campaign_2_bono",
         "fields": {
             "priority": 0,
-            "description": "The rise of Sonny Bono was nominally on the back of your carbon tax, but it doesn't take an expert to see he's tapping into a much deeper conservative discontent. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already tried by his Republican opponents during the bitter, and long primary race. How do you want to stop this guy?",
+            "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper — a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document detailing his scandals and inconsistencies, most of them already dragged out by his Republican rivals during the long, bitter primary slog. The press barely blinked then, but this is the big-time now. How do you want to stop this guy?",
             "likelihood": 1
         }
     },
@@ -754,11 +754,20 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
-	"model": "campaign_trail.question",
+	      "model": "campaign_trail.question",
         "pk": "campaign_1_cheney",
         "fields": {
             "priority": 0,
             "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick.",
+            "likelihood": 1
+        }
+    },
+    {
+    	  "model": "campaign_trail.question",
+        "pk": "campaign_2_cheney",
+        "fields": {
+            "priority": 0,
+            "description": "Dick Cheney is eager to hammer you on character, dragging Hillary and the whole administration with it. But unlike most Republicans who try it, Secretary Cheney has a clean record. At least personally. Still, your team found one thing: his eldest daughter. She’s a lesbian. D.C. insiders know. A few of his nuttier primary opponents even floated it. But it hasn’t quite hit the public square, not yet, anyway. Do you want to go there?",
             "likelihood": 1
         }
     },
@@ -3897,7 +3906,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86001.5115,
         "fields": {
             "question": "campaign_1_cheney",
@@ -3905,7 +3914,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86001.51151,
         "fields": {
             "question": "campaign_1_cheney",
@@ -3913,7 +3922,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86001.511512,
         "fields": {
             "question": "campaign_1_cheney",
@@ -3921,7 +3930,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86001.522,
         "fields": {
             "question": "campaign_1_bono",
@@ -3998,6 +4007,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "campaign_2_dole",
             "description": "Let’s strike at the heart of the issue, remind them of 1991. The Republicans have done so little to help them; that hasn’t changed a bit. Really hammer in the fact that it was 41 who signed and started NAFTA, not me. They don’t back the average worker."
+        }
+    },
+    {
+    	  "model": "campaign_trail.answer",
+        "pk": 86001.5115199,
+        "fields": {
+            "question": "campaign_2_cheney",
+            "description": "You fucking bet we’re going there. Not because we have a problem with gays or lesbians, but because his own right-wing base is crazy enough to care. How can he stand by while the party he represents prides itself on open, ugly bigotry?  "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86001.51151991,
+        "fields": {
+            "question": "campaign_2_cheney",
+            "description": "I—I can’t let us do that. Call it off… The right-wing press has been awful to Chelsea. I’m not doing the same thing to another man’s daughter. Let’s keep it simple: Dick Cheney was the CEO of Halliburton, a defense contractor, just months ago. And now he wants to be President?  "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86001.51151992,
+        "fields": {
+            "question": "campaign_2_cheney",
+            "description": "I don't want to go that far. But we all know Cheney's heart is in trouble — his actual heart. Ask anyone from the Bush administration, or anyone he served with in Congress, he’s got a weak damn heart. And I just don’t think he could handle this job. I want the American people to understand that too.  "
         }
     },
     {
@@ -8936,7 +8969,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 192,
-            "state_multiplier": 1.1363456789987654321
+            "state_multiplier": 1.145998456789987654321
         }
     },
     {
@@ -9224,7 +9257,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 224,
-            "state_multiplier": 1.21998998798989898
+            "state_multiplier": 1.22898998798989898
         }
     },
     {
@@ -9287,7 +9320,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 231,
-            "state_multiplier": 1.22999899989998
+            "state_multiplier": 1.23899899989998
         }
     },
     {
@@ -13952,6 +13985,36 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
+    	  "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.5115199,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.51151991,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.007
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86001.51151992,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0025
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_global",
         "pk": 12795,
         "fields": {
@@ -14002,7 +14065,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 1240,
         "fields": {
             "answer": 85027.5,
@@ -14012,7 +14075,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 1240,
         "fields": {
             "answer": 85027.5,
@@ -14022,7 +14085,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12700,
         "fields": {
             "answer": 86001.5115,
@@ -14042,7 +14105,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86001.5115,
@@ -14052,7 +14115,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12700,
         "fields": {
             "answer": 86001.51151,
@@ -14072,7 +14135,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12700,
         "fields": {
             "answer": 86001.511512,
@@ -14092,7 +14155,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86001.511512,
@@ -14102,7 +14165,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86001.511512,
@@ -14142,7 +14205,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86001.511,
@@ -14152,7 +14215,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86002.511,
@@ -14162,7 +14225,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12701,
         "fields": {
             "answer": 86003.511,
@@ -14172,7 +14235,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12700,
         "fields": {
             "answer": 86002.511,
@@ -14192,7 +14255,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12700,
         "fields": {
             "answer": 86003.511,
@@ -21486,7 +21549,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 110003,
@@ -21496,7 +21559,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 86001.51151,
@@ -21506,7 +21569,17 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 772,
+        "fields": {
+            "answer": 86001.5115199,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 0.5
+        }
+    },
+    {
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 86001.511512,
@@ -21516,7 +21589,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 86001.5115,
@@ -21526,7 +21599,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 2500911.5,
@@ -21536,7 +21609,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 25008.5,
@@ -21546,7 +21619,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 25007.5,
@@ -21556,7 +21629,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 25009.5,
@@ -21566,7 +21639,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 110002,
@@ -21576,7 +21649,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 110004,
@@ -21586,7 +21659,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 110001,
@@ -21596,7 +21669,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 15007.5,
@@ -21606,7 +21679,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 772,
         "fields": {
             "answer": 85018.5,
@@ -21656,7 +21729,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 857,
         "fields": {
             "answer": 36090.5,
@@ -21696,7 +21769,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 1006,
         "fields": {
             "answer": 900015551,
@@ -21816,7 +21889,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+	      "model": "campaign_trail.answer_score_issue",
         "pk": 1026,
         "fields": {
             "answer": 1135006.5,
@@ -21846,7 +21919,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 12271,
         "fields": {
             "answer": 70001,
@@ -21856,7 +21929,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 12271,
         "fields": {
             "answer": 85026.5,
@@ -48901,7 +48974,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
             "answer": 86001.5115,
@@ -48910,7 +48983,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+	      "model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
             "answer": 86001.51151,
@@ -48919,7 +48992,34 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+    	  "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.5115199,
+            "candidate": 77,
+            "answer_feedback": "Damn. If you thought the former Secretary of Defense didn’t like you before — you haven’t seen anything yet. Cheney, normally composed and spare with words, looked visibly cold in a live CNN interview. ''There’s no bottom with these people,'' he said, voice very low, ''Dragging my family into this? That’s not politics. That’s a smear job. And it tells you everything you need to know about what kind of White House they’re trying to run.'' "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.51151992,
+            "candidate": 77,
+            "answer_feedback": "You’d think it’d be a home run. But as most Americans have gotten to know Cheney, shaking hands with that quiet smirk across this great country, they’ve seen a man not much older than you, just with a bit less hair. And most folks figure he’s reasonably able, healthy, and strong. This doesn't stick.  "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86001.51151991,
+            "candidate": 77,
+            "answer_feedback": "This story continues to swirl, and Cheney knows it. The bulldog also knows you didn’t go after it. Apparently, he even tried to get in touch with you directly—sent a letter, never reached you. Still, it’s clear he wasn’t expecting you to lay off like this. You’re a better man than people think, Slick. "
+        }
+    },
+    {
+	      "model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
             "answer": 86001.511512,
@@ -48928,7 +49028,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+	      "model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
             "answer": 86002.511,
@@ -48937,7 +49037,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12703,
         "fields": {
             "answer": 86003.511,
@@ -48946,7 +49046,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12708,
         "fields": {
             "answer": 86002.522,
@@ -48973,7 +49073,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12712,
         "fields": {
             "answer": 86003.522,
@@ -48991,7 +49091,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12717,
         "fields": {
             "answer": 86004.522,
@@ -49045,7 +49145,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12744,
         "fields": {
             "answer": 86009.522,
@@ -49063,7 +49163,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12763,
         "fields": {
             "answer": 86010.522,
@@ -49072,7 +49172,7 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+      	"model": "campaign_trail.answer_feedback",
         "pk": 12763,
         "fields": {
             "answer": 86011.522,
@@ -54913,7 +55013,7 @@ if (e.question_number+1 == 18){
                       "pk": "campaign_2_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "The rise of Sonny Bono was nominally on the back of your carbon tax, but it doesn't take an expert to see he's tapping into a much deeper conservative discontent. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already tried by his Republican opponents during the bitter, and long primary race. How do you want to stop this guy?",
+                          "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper—a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already aired by his Republican rivals during the long, bitter primary slog. The press barely blinked then, and voters didn’t seem to mind. Now he's polling within striking distance. How do you want to stop this guy?",
                           "likelihood": 1
                       }
                 }
@@ -55400,7 +55500,7 @@ if (e.question_number+1 == 18){
 "pk": "candidate_intro_cheney",
 "fields": {
 "priority": 0,
-"description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that smirking fox, has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead — America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: the moderate, strong-jawed Governor of Pennsylvania, Tom Ridge. What a joke. Still, you'll need to respond. ",
+"description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that damn bulldog has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead — America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: the moderate, strong-jawed Governor of Pennsylvania, Tom Ridge. What a joke. Still, you'll need to respond. ",
 "likelihood": 1
 }
                 }
@@ -55423,7 +55523,7 @@ if (e.question_number+1 == 18){
       "pk": "campaign_2_cheney",
       "fields": {
           "priority": 0,
-          "description": "The rise of Sonny Bono was nominally on the back of your carbon tax, but it doesn't take an expert to see he's tapping into a much deeper conservative discontent. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already tried by his Republican opponents during the bitter, and long primary race. How do you want to stop this guy?",
+          "description": "Dick Cheney is eager to hammer you on character, dragging Hillary and the whole administration with it. But unlike most Republicans who try it, Secretary Cheney has a clean record. At least personally. Still, your team found one thing: his eldest daughter. She’s a lesbian. D.C. insiders know. A few of his nuttier primary opponents even floated it. But it hasn’t quite hit the public square, not yet, anyway. Do you want to go there?",
           "likelihood": 1
       }
 }
