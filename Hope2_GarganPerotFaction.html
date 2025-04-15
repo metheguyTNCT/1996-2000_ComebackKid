@@ -43733,6 +43733,435 @@ campaignTrail_temp.questions_json = [
   }
   ]
   campaignTrail_temp.cyoa = true
+
+//// VP and Candidate Swapper, credit to Astro (grrrr even tho i discovered this grrrr grrrr grrrr grrr)
+var changeGameDisp = (hide) => {
+    disp = "";
+    if (hide) {
+        disp = "none";
+    }
+    Array.from(gameWindow.children).forEach(f=>{
+        if(!f.classList.contains("game_header") && (f.id != "main_content_area" || !$("#campaign_sign")[0])) 
+            f.style.display = disp
+    });
+    };
+
+e.vpSwitcher = () => {
+    let potential_running_mate_pks = e.running_mate_json
+        .filter(f => f.fields.candidate === e.candidate_id)
+        .map(f => f.fields.running_mate);
+
+    let pot_run_mat = potential_running_mate_pks
+        .map(f => e.candidate_json.find(_f => _f.pk === f))
+        .filter(Boolean);
+
+    let running_mate_options = ``;
+    pot_run_mat.forEach(f => {
+        running_mate_options += `<option value="${f.pk}">${f.fields.first_name} ${f.fields.last_name}</option>\n`;
+    });
+
+    let vp_html = `
+        <div id="running_mate_form">
+            <form name="running mate">
+                <p></p>
+                <h3>Please select your running mate:</h3> 
+                <select name="running_mate_id" id="running_mate_id">
+                    ${running_mate_options}
+                </select>
+                <p></p>
+            </form>
+        </div>
+        <div class="person_description_window" id="running_mate_description_window">
+            <div class="person_image" id="running_mate_image"> 
+                <img src="${pot_run_mat[0].fields.image_url}" width="210" height="250"> 
+            </div>
+            <div class="person_summary" id="running_mate_summary">
+                <ul>
+                    <li>Name: ${pot_run_mat[0].fields.first_name} ${pot_run_mat[0].fields.last_name}</li>
+                    <li>Party: ${pot_run_mat[0].fields.party}</li>
+                    <li>Home State: ${pot_run_mat[0].fields.state}</li>
+                </ul>
+                ${pot_run_mat[0].fields.description_as_running_mate}
+            </div>
+        </div>
+        <p> 
+            <button class="person_button" id="running_mate_id_button">Continue</button> 
+        </p>
+    `
+
+    let vp_screen = document.createElement("div");
+    vp_screen.classList.add("inner_window_w_desc");
+    vp_screen.id = "inner_window_4";
+    vp_screen.innerHTML = vp_html;
+
+    changeGameDisp(true);
+    gameWindow.appendChild(vp_screen);
+
+    // Update description dynamically when dropdown selection changes
+    $("#running_mate_id").change((_e) => {
+        _e.preventDefault();
+    
+        let value = Number($("#running_mate_id").val());
+        let i = potential_running_mate_pks.findIndex(f=>f === value);
+
+        let screen_html = `
+            <div class="person_image" id="running_mate_image"> 
+                <img src="${pot_run_mat[i].fields.image_url}" width="210" height="250"> 
+            </div>
+            <div class="person_summary" id="running_mate_summary">
+                <ul>
+                    <li>Name: ${pot_run_mat[i].fields.first_name} ${pot_run_mat[i].fields.last_name}</li>
+                    <li>Party: ${pot_run_mat[i].fields.party}</li>
+                    <li>Home State: ${pot_run_mat[i].fields.state}</li>
+                </ul>
+                ${pot_run_mat[i].fields.description_as_running_mate}
+            </div>
+        `;
+        $("#running_mate_description_window").html(screen_html);
+
+
+        let selectedRunningMate = pot_run_mat[i];
+
+    });
+
+    // Confirm selection and store relevant information
+    $("#running_mate_id_button").click((_e) => {
+        _e.preventDefault();
+
+        let selectedValue = Number($("#running_mate_id").val());
+        let selectedIndex = potential_running_mate_pks.findIndex(f => f === selectedValue);
+
+        if (selectedIndex >= 0) {
+            // Save the selected running mate details
+            let selectedRunningMate = pot_run_mat[selectedIndex];
+
+
+            if (selectedRunningMate.pk === 50002) { // Percy-Lindsay
+                if(republican == "percy"){
+                    campaignTrail_temp.questions_json[21] = tunnel(10425);
+                    pictureDict[21] = "https://i.imgur.com/HGoT70H.png"
+
+
+                    campaignTrail_temp.questions_json[24] = tunnel(10434);
+                    pictureDict[24] = "https://i.imgur.com/X1g11Jx.png"
+                    campaignTrail_temp.questions_json[25] = tunnel(10443);
+                    pictureDict[25] = "https://i.imgur.com/ZvBLv4v.png"
+                }
+            } 
+            if (selectedRunningMate.pk === 50006) { // Reagan-Tower
+                if(republican == "reagan" && vietnam >= 2){
+                    campaignTrail_temp.questions_json[22] = tunnel(12484);
+                    pictureDict[22] = "https://i.imgur.com/PYW5Eou.png"
+                    campaignTrail_temp.questions_json[23] = tunnel(12490);
+                    pictureDict[23] = "https://i.imgur.com/UKtAEbc.png"
+                }
+            } 
+            if (selectedRunningMate.pk === 50007) { // Nixon-Hatfield
+                campaignTrail_temp.questions_json[24] = tunnel(11256);
+                pictureDict[24] = "https://i.imgur.com/vcvMZYz.png"
+
+                if(bumpkin == "Wallace"){
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(46)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-0.8+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(47)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-0.8+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(48)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-0.8+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(49)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-0.8+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(50)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-0.8+wallaceveep);
+                }
+                else{
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(46)
+                    e.candidate_issue_score_json[id].fields.issue_score = -0.98;
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(47)
+                    e.candidate_issue_score_json[id].fields.issue_score = -0.98;
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(48)
+                    e.candidate_issue_score_json[id].fields.issue_score = -0.98;
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(49)
+                    e.candidate_issue_score_json[id].fields.issue_score = -0.98;
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(50)
+                    e.candidate_issue_score_json[id].fields.issue_score = -0.98;
+                }
+            }
+            if(selectedRunningMate.pk === 50012){ // Nixon-Thurmond
+                if(bumpkin == "Wallace"){
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(46)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-1.05+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(47)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-1.05+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(48)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-1.05+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(49)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-1.05+wallaceveep);
+                    var id = e.candidate_issue_score_json.map(p=>p.pk).indexOf(50)
+                    e.candidate_issue_score_json[id].fields.issue_score = (-1.05+wallaceveep);
+                }
+                else{
+                    bumpkinChange("Unpledged")
+                }
+            }
+            if(selectedRunningMate.pk === 50008){ // Yorty-Wallace 
+                campaignTrail_temp.questions_json[24] = tunnel(12104); // Normal Q24 with Wallace, another crash
+                pictureDict[24] = "https://i.imgur.com/tfQjJny.png"
+
+                if(eminence >= 1){
+                    campaignTrail_temp.questions_json[24] = tunnel(12110); // Can't drop out
+                    pictureDict[24] = "https://i.imgur.com/UMbQWPI.png"
+                }
+                if(vietnam >= 2){
+                    campaignTrail_temp.questions_json[24] = tunnel(12341); // No Vietnam Answer
+                }
+            }
+
+            runningmaterole = selectedRunningMate.fields.role;
+            runningmatefullname = selectedRunningMate.fields.fullname;
+
+            e.running_mate_image_url = selectedRunningMate.fields.image_url;
+            e.selected_running_mate = {
+                first_name: selectedRunningMate.fields.first_name,
+                last_name: selectedRunningMate.fields.last_name,
+                party: selectedRunningMate.fields.party,
+                state: selectedRunningMate.fields.state,
+                description: selectedRunningMate.fields.description_as_running_mate,
+                image_url: selectedRunningMate.fields.image_url
+            };
+
+            
+            if(selectedRunningMate.pk === 50001){ // Percy Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(480) // Illinois
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(479) // Indiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(476) // Kentucky
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(468) // Missouri
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(390) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(367) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(373) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                if(republican == "rockefeller"){
+                    var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(381) // Georgia
+                    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                    var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(351) // South Carolina
+                    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                    var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(347) // Utah
+                    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.11;
+                    var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(340) // Wyoming
+                    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.11;
+                    var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(379) // Idaho
+                    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.11;
+                }
+            }
+            if(selectedRunningMate.pk === 50002){ // Lindsay Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(461) // New York
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(486) // Connecticut
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(464) // New Hampshire
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(448) // Vermont
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(390) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(367) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(373) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(381) // Georgia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(351) // South Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(347) // Utah
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(340) // Wyoming
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(379) // Idaho
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+            }
+            if(selectedRunningMate.pk === 50003){ // Bush Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(450) // Texas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(457) // Oklahoma
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(487) // Colorado
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(462) // New Mexico
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(393) // West Virginia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+            }
+            if(selectedRunningMate.pk === 50004){ // Weinberger Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(488) // California
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(473) // Maryland
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(446) // Washington
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(439) // Arizona
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(411) // New Mexico
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(416) // Montana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.04;
+            }
+            if(selectedRunningMate.pk === 50005){ // Rhodes Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(458) // Ohio
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(478) // Iowa
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(420) // Michigan
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(392) // Wisconsin
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+            }
+            if(selectedRunningMate.pk === 50006){ // Tower Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(450) // Texas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(475) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(489) // Arkansas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(469) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(492) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(453) // South Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(410) // New York
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.04;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(404) // Pennsylvania
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(412) // New Jersey
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.04;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(422) // Maryland
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(437) // California
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+            }
+            if(selectedRunningMate.pk === 50007){ // Hatfield Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(456) // Oregon
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.04;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(485) // Delaware
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.04;
+                // Debuff
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(390) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(367) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(373) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(381) // Georgia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(351) // South Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.02;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(347) // Utah
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(340) // Wyoming
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(379) // Idaho
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.05;
+            }
+            if(selectedRunningMate.pk === 50008){ // Wallace Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(450) // Texas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.06;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(475) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(489) // Arkansas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(469) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(492) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.13;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(453) // South Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(460) // North Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(451) // Tennessee
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.09;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(410) // New York
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(404) // Pennsylvania
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(412) // New Jersey
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(422) // Maryland
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(437) // California
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+            }
+            if(selectedRunningMate.pk === 50009 || selectedRunningMate.pk === 50010 ){ // Dole Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(477) // Kansas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(476) // Kentucky
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.01;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(469) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(460) // North Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.03;
+            }
+            if(selectedRunningMate.pk === 50012){ // Thurmond Running Mate 
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(450) // Texas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(475) // Louisiana
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.12;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(489) // Arkansas
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.12;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(469) // Mississippi
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.12;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(492) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.12;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(453) // South Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(460) // North Carolina
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(451) // Tennessee
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.07;
+                // Debuffs
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(410) // New York
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(404) // Pennsylvania
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(412) // New Jersey
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(422) // Maryland
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+                var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(437) // California
+                e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.08;
+            }
+
+            console.log("Selected Running Mate:", e.selected_running_mate);
+        }
+
+        _e.preventDefault();
+        closeSurrogateFlag = 1
+        repVP = pot_run_mat[selectedIndex].fields.fullname;
+        vpTable["Chuck Percy"] = repVP;
+        vpTable["Nelson Rockefeller"] = repVP;
+        vpTable["Barry Goldwater"] = repVP;
+        vpTable["Spiro Agnew"] = repVP;
+        vpTable["John Lindsay"] = repVP;
+        vpTable["Ronald Reagan"] = repVP;
+        vpTable["Richard Nixon"] = repVP;
+        vpTable["Sam Yorty"] = repVP;
+        vpTable["Howard Hughes"] = repVP;
+
+        $("#inner_window_4").remove();
+        changeGameDisp(false);
+    });
+};
   var buttonGFX = '<img src=\"https://i.imgur.com/so1GE0F.png\" style=\"width: 18px; height: 18px; vertical-align: middle;\">';
   var respect = 0
   var reac = 0
@@ -43743,6 +44172,10 @@ campaignTrail_temp.questions_json = [
   var FBIRFK = 0
   cyoAdventure = function(a) {
   ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+  if (ans == 3416) {
+      campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 150003, \"fields\": {\"candidate\": 80, \"running_mate\": 87}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150005, \"fields\": {\"candidate\": 80, \"running_mate\": 88}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 150006, \"fields\": {\"candidate\": 81, \"running_mate\": 89}}]");
+  window.setTimeout(e.vpSwitcher, 20)
+}
   if (ans == 3413) {
         setTimeout(function(){
             openSurrogates();
