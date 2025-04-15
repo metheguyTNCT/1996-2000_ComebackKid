@@ -1422,6 +1422,17 @@ body {display:flex!important;}
       // 	kennedyGameplay.appendChild(node);
       // 	document.getElementById("gameplay").appendChild(kennedyGameplay);
       // }
+
+      if(e.candidate_id == 78) {
+        var op = e.candidate_json.map(p=>p.pk).indexOf(77)
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Bill"
+        e.candidate_json[id].fields.last_name = "Clinton"
+
+        e.candidate_json[op].fields.first_name = ""
+        e.candidate_json[op].fields.last_name = "Right-Wing Conspiracy"
+      }
+
       clearInterval(startScreenUpdater);
     }
   }, 1);
