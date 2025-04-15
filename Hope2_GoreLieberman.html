@@ -36290,3 +36290,25 @@ if (!element) {
 
 const gameWindowNode = document.getElementById("game_window");
 const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
+
+const electionObserver = new MutationObserver((mutations, electionObserverInstance) => {
+    for (let mutation of mutations) {
+        if (mutation.type === "childList") {
+            const electionElement = document.getElementById("election_night_buttons");
+            if (electionElement) {
+                const electionPlaylist = new Playlist();
+                const electionSong = new Song(
+                    "2000: Election Night on CNN",
+                    "",
+                    "https://audio.jukehost.co.uk/pVb41IiUTG67eHmGAIUc31s7jUonWWjf"
+                );
+                electionPlaylist.addSong(electionSong);
+                changePlaylist(electionPlaylist);
+                electionObserverInstance.disconnect(); 
+                break;
+            }
+        }
+    }
+});
+
+electionObserver.observe(document.body, { childList: true, subtree: true });
