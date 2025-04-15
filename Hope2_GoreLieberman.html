@@ -35773,7 +35773,6 @@ let RubinCand = { photo: 'https://i.imgur.com/5AsjS6L.png', name: 'Robert Rubin'
 
 let BidenFake = { photo: 'https://i.imgur.com/Xd2LJwR.png', name: 'Joe Biden', text: 'The runaway winner of the Larry King primary. Putting aside his wacko foreign policy, Biden spends more time on the Sunday morning shows than anywhere in Iowa, making his route to the nomination completely unviable.', button: 'Defer', id: 'BIDEN_A'}
 let ClarkFake = { photo: 'https://i.imgur.com/MFKV6J4.png', name: 'Wesley Clark', text: 'As the battle lines form across the globe, many Democrats are eyeing the turncoat partisan Wesley Clark. Arguing that he actually knows how to handle these wars you\'re starting, resigned Democrats line up behind him.', button: 'Defer', id: 'CLARK_B'}
-let McCainFake = { photo: 'https://i.imgur.com/m9VE97K.png', name: 'John McCain', text: 'Even though he\'s still a Republican, the endless buzz around the growing rift between you and your one time rival can\'t be laid to bed. Something is coming, you\'re just unsure what.', button: 'Defer', id: 'MCCAIN_A'}
 let KerryFake = { photo: 'https://i.imgur.com/f3tz2xf.png', name: 'John Kerry', text: 'First he was for the war, now he\'s against it. John Kerry has a promising record but has been all but buried by more promising candidates on the party\'s left. He\'s just not the man for the moment.', button: 'Defer', id: 'KERRY_A'}
 let DeanFake = { photo: 'https://i.imgur.com/mAkGwJF.png', name: 'Howard Dean', text: 'As much as Rove wishes he were the runaway favorite, anti-war candidates are a dime a dozen this primary. The little known governor just is unable to compete with the big stars.', button: 'Defer', id: 'DEAN_A'}
 let GephardtFake = { photo: 'https://i.imgur.com/VGjs49j.png', name: 'Dick Gephardt', text: 'You give them an inch, they take a mile. Given the gavel, Gephardt now seeks the Presidency. This naked ambition is a turn off to primary voters who view him as too friendly with you Administration to satiate his hopes to lead the next one.', button: 'Defer', id: 'GEPHARDT_B'}
@@ -35781,12 +35780,17 @@ let DaschleFake = { photo: 'https://i.imgur.com/nuzea0l.png', name: 'Tom Daschle
 let KucinichFake = { photo: 'https://i.imgur.com/xqUeqU3.png', name: 'Dennis Kucinich', text: 'More of a popular oddity than candidate, Dennis Kucinich is well aware the Democrats won\'t allow him to be the nominee. While he directs blame at the establishment, the voters are just as much of a factor.', button: 'Defer', id: 'KUCINICH_A'}
 
 const menuItemsA = [
-    { photo: 'https://i.imgur.com/EqFrWEp.png', name: 'Al Gore', text: 'The former Vice President and presumptive front runner doesn\'t spend his days fantasizing about another run against you. However a major shake-up to the nation\'s international standing may make him view it as a necessity.', button: 'Defer', id: 'GORE_A'},
-    { photo: 'https://i.imgur.com/GoQ31CM.png', name: 'Hillary Clinton', text: 'Senator Clinton has publicly ruled out a run for the White House, though a divided field and wavering agenda may lure her into the race.', button: 'Defer', id: 'CLINTON_A'},
-    { photo: 'https://i.imgur.com/8htsKVH.png', name: 'Paul Wellstone', text: 'Having dabbled in Presidential politics before, its not entirely clear if Wellstone will make the full dive this time around. Coming out of far-left field, he could really only be seen as an equal if he could mobilize some untapped liberal momentum.', button: 'Defer', id: 'WELLSTONE_A'},
-    { photo: 'https://i.imgur.com/gWtLUFP.png', name: 'John Edwards', text: 'Sweeter than sugar, yet meaner than all hell. Senator Edwards is going to hop into this race if its the last thing he does. To get there, he must be clear the field of stronger challengers while also being able to make it out with his career.', button: 'Defer', id: 'EDWARDS_A'},
-    { photo: 'https://i.imgur.com/f8CySbx.png', name: 'Al Sharpton', text: 'Sharpton is not running for the Presidency, he\'s running for the fame, only hoping to take the position Reverend Jackson once had among Democrats. If a coalition is to unite behind him, the party must be in a sorry state.', button: 'Defer', id: 'SHARPTON_A'},
-    { photo: 'https://i.imgur.com/TNFfuLa.png', name: 'Joe Lieberman', text: 'Cheney\'s favorite Democrat is more than ready to serve as controlled opposition, his only condition is that this remain a fair fight. Lieberman\'s chances at facing you are minimal, requiring all other viable challengers to forgo the race.', button: 'Defer', id: 'LIEBERMAN_A'}
+    { photo: 'https://i.imgur.com/hMv6hV8.png', name: 'Paul Wellstone', text: 'The former Vice President and presumptive front runner doesn\'t spend his days fantasizing about another run against you. However a major shake-up to the nation\'s international standing may make him view it as a necessity.', button: 'Defer', id: 'WELLSTONE_A'},
+    { photo: 'https://i.imgur.com/xRaIeGe.png', name: 'Jesse Jackson', text: 'Senator Clinton has publicly ruled out a run for the White House, though a divided field and wavering agenda may lure her into the race.', button: 'Defer', id: 'JACKSON_A'},
+    { photo: 'https://i.imgur.com/aYDkUJe.png', name: 'Ted Turner', text: 'Having dabbled in Presidential politics before, its not entirely clear if Wellstone will make the full dive this time around. Coming out of far-left field, he could really only be seen as an equal if he could mobilize some untapped liberal momentum.', button: 'Defer', id: 'TURNER_A'},
+    { photo: 'https://i.imgur.com/fcruOel.png', name: 'Bob Kerrey', text: 'Sweeter than sugar, yet meaner than all hell. Senator Edwards is going to hop into this race if its the last thing he does. To get there, he must be clear the field of stronger challengers while also being able to make it out with his career.', button: 'Defer', id: 'KERREY_A'},
+]
+
+const menuItemsB = [
+    { photo: 'https://i.imgur.com/5frw1XR.png', name: 'George W. Bush', text: 'The former Vice President and presumptive front runner doesn\'t spend his days fantasizing about another run against you. However a major shake-up to the nation\'s international standing may make him view it as a necessity.', button: 'Defer', id: 'BUSH_A'},
+    { photo: 'https://i.imgur.com/RDyyKRV.png', name: 'John McCain', text: 'Senator Clinton has publicly ruled out a run for the White House, though a divided field and wavering agenda may lure her into the race.', button: 'Defer', id: 'MCCAIN_A'},
+    { photo: 'https://i.imgur.com/qzslihh.png', name: 'Alan Keyes', text: 'Having dabbled in Presidential politics before, its not entirely clear if Wellstone will make the full dive this time around. Coming out of far-left field, he could really only be seen as an equal if he could mobilize some untapped liberal momentum.', button: 'Defer', id: 'KEYES_A'},
+    { photo: 'https://i.imgur.com/F1nNSev.png', name: 'Elizabeth Dole', text: 'Sweeter than sugar, yet meaner than all hell. Senator Edwards is going to hop into this race if its the last thing he does. To get there, he must be clear the field of stronger challengers while also being able to make it out with his career.', button: 'Defer', id: 'DOLE_A'},
 ]
 
 
@@ -35794,100 +35798,69 @@ let savedX = null;
 let savedY = null;
 
 const WinsMap = {
-    "-2": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b>wins</b>. (<span style="color:#A84343;">1</span>)`,
-    "2": `Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b>wins</b>. (<span style="color:#A84343;">2</span>)`,
-    "3": `Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b>wins</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b>wins</b>. (<span style="color:#E0CD6D;">4</span>)`,
-    "5": `Bush-Cheney have had <i><span style="color: #92C47D;">tons</i></span> of <b>wins</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-2": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#A84343;">-2</span>)`,
+    "-1": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#A84343;">-1</span>)`,
+    "0": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#A84343;">0</span>)`,
+    "1": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#A84343;">1</span>)`,
+    "2": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#A84343;">2</span>)`,
+    "3": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#E0CD6D;">3</span>)`,
+    "4": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#E0CD6D;">4</span>)`,
+    "5": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #92C47D;">tons</i></span> of <b>wins</b>. (<span style="color:#92C47D;">5</span>)`,
+    "6": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#92C47D;">6</span>)`,
+    "7": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#92C47D;">7</span>)`,
+    "8": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#92C47D;">8</span>)`,
+    "9": `<span style="color: blue; text-decoration: underline;">Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">wins</b>. (<span style="color:#92C47D;">9</span>)`,
 };
 const ConRepMap = {
-    "-5": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `Bush has <i><span style="color: #E0CD6D;">weak</i></span> <b>congressional relations</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `Bush has <i><span style="color: #E0CD6D;">tolerable</i></span> <b>congressional relations</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `Bush has <i><span style="color: #92C47D;">strong</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">3</span>)`,
-    "4": `Bush has <i><span style="color: #92C47D;">strong</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-5": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">-5</span>)`,
+    "-4": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">-4</span>)`,
+    "-3": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">-3</span>)`,
+    "-2": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">-2</span>)`,
+    "-1": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">-1</span>)`,
+    "0": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#A84343;">0</span>)`,
+    "1": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #E0CD6D;">weak</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#E0CD6D;">1</span>)`,
+    "2": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #E0CD6D;">tolerable</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#E0CD6D;">2</span>)`,
+    "3": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">3</span>)`,
+    "4": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">4</span>)`,
+    "5": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">5</span>)`,
+    "6": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">6</span>)`,
+    "7": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">7</span>)`,
+    "8": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">8</span>)`,
+    "9": `<span style="color: blue; text-decoration: underline;">Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">congressional relations</b>. (<span style="color:#92C47D;">9</span>)`,
 };
 const CredMap = {
-    "-5": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `The Administration has <i><span style="color: #E0CD6D;">little</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-5": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">-5</span>)`,
+    "-4": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">-4</span>)`,
+    "-3": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">-3</span>)`,
+    "-2": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">-2</span>)`,
+    "-1": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">-1</span>)`,
+    "0": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#A84343;">0</span>)`,
+    "1": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #E0CD6D;">little</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#E0CD6D;">1</span>)`,
+    "2": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#E0CD6D;">2</span>)`,
+    "3": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#E0CD6D;">3</span>)`,
+    "4": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">4</span>)`,
+    "5": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">5</span>)`,
+    "6": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">6</span>)`,
+    "7": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">7</span>)`,
+    "8": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">8</span>)`,
+    "9": `<span style="color: blue; text-decoration: underline;">The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b><span style="color: blue; text-decoration: underline;">credibility</b>. (<span style="color:#92C47D;">9</span>)`,
 };
 const JingoMap = {
-    "-5": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `The Country has <i><span style="color: #E0CD6D;">little</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `The Country has <i><span style="color: #E0CD6D;">some</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `The Country has <i><span style="color: #E0CD6D;">some</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `The Country has a <i><span style="color: #92C47D;">strong</i></span> <b>appetite for war</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">9</span>)`,
-};
-
-var pictureDict = {
-    0: "https://i.imgur.com/6KMHk8z.png",
-    1: "https://i.imgur.com/iOPnTj8.png",
-    2: "https://i.imgur.com/NtZcX0q.png",
-    3: "https://i.imgur.com/R8NfbL3.png",
-    4: "https://i.imgur.com/soRInjS.png",
-    5: "https://i.imgur.com/498jXAJ.png",
-    6: "https://i.imgur.com/mRmmldd.png",
-    7: "https://i.imgur.com/SKyZD8f.png",
-    8: "https://i.imgur.com/LHx5Qby.png",
-    9: "https://i.imgur.com/7zhdoNC.png",
-    10: "https://i.imgur.com/sDoXxQq.png",
-    11: "https://i.imgur.com/GcGxDCc.png",
-    12: "https://i.imgur.com/CwV7GIC.png",
-    13: "https://i.imgur.com/Q9jTdxd.png",
-    14: "https://i.imgur.com/sbovkoO.png",
-    15: "https://i.imgur.com/ejNQtcm.png",
-    16: "https://i.imgur.com/GVfQRqB.png",
-    17: "https://i.imgur.com/6KMHk8z.png",
-    18: "https://i.imgur.com/Futg8y7.png",
-    19: "https://i.imgur.com/6KMHk8z.png",
-    20: "https://i.imgur.com/npqu45I.png",
-    21: "https://i.imgur.com/yvGgo8O.png", 
-    22: "https://i.imgur.com/tDX5Sj8.png",
-    23: "https://i.imgur.com/6KMHk8z.png",
-    24: "https://i.imgur.com/6KMHk8z.png", 
-    25: "https://i.imgur.com/pbQEt1G.png",
-    26: "https://i.imgur.com/6KMHk8z.png",
-    27: "https://i.imgur.com/BIlOEqt.png",
+    "-5": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">-5</span>)`,
+    "-4": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">-4</span>)`,
+    "-3": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">-3</span>)`,
+    "-2": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">-2</span>)`,
+    "-1": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">-1</span>)`,
+    "0": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #A84343;">no</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#A84343;">0</span>)`,
+    "1": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #E0CD6D;">little</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#E0CD6D;">1</span>)`,
+    "2": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #E0CD6D;">some</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#E0CD6D;">2</span>)`,
+    "3": `<span style="color: blue; text-decoration: underline;">The Country has <i><span style="color: #E0CD6D;">some</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#E0CD6D;">3</span>)`,
+    "4": `<span style="color: blue; text-decoration: underline;">The Country has a <i><span style="color: #92C47D;">strong</i></span> <b><span style="color: blue; text-decoration: underline;">appetite for war</b>. (<span style="color:#92C47D;">4</span>)`,
+    "5": `<span style="color: blue; text-decoration: underline;">The Country <i><span style="color: #92C47D;">craves</i></span> <b><span style="color: blue; text-decoration: underline;">war</b>. (<span style="color:#92C47D;">5</span>)`,
+    "6": `<span style="color: blue; text-decoration: underline;">The Country <i><span style="color: #92C47D;">craves</i></span> <b><span style="color: blue; text-decoration: underline;">war</b>. (<span style="color:#92C47D;">6</span>)`,
+    "7": `<span style="color: blue; text-decoration: underline;">The Country <i><span style="color: #92C47D;">craves</i></span> <b><span style="color: blue; text-decoration: underline;">war</b>. (<span style="color:#92C47D;">7</span>)`,
+    "8": `<span style="color: blue; text-decoration: underline;">The Country <i><span style="color: #92C47D;">craves</i></span> <b><span style="color: blue; text-decoration: underline;">war</b>. (<span style="color:#92C47D;">8</span>)`,
+    "9": `<span style="color: blue; text-decoration: underline;">The Country <i><span style="color: #92C47D;">craves</i></span> <b><span style="color: blue; text-decoration: underline;">war</b>. (<span style="color:#92C47D;">9</span>)`,
 };
 
 function openSurrogates() {
@@ -35904,27 +35877,82 @@ function openSurrogates() {
         popOutMenu.style.backgroundColor = '#fff';
         popOutMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         popOutMenu.style.zIndex = '1000';
-        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/CZhluri.png")';
+        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/XCL7ZTI.png")';
         popOutMenu.style.backgroundSize = 'cover';
         popOutMenu.style.backgroundPosition = 'center';
         popOutMenu.style.alignItems = 'center';     
 
-        const qpic = document.createElement('img');
-        if(WorldWarThree == 1){
-            qpic.src = "https://i.imgur.com/w3SfWSk.png";
+// You can now adjust this space or styling as needed.
+
+const tabBar = document.createElement('div');
+tabBar.style.display = 'flex';               // Flexbox to align horizontally
+tabBar.style.flexDirection = 'row';          // Explicit horizontal direction
+tabBar.style.whiteSpace = 'nowrap';          // Prevent wrapping
+tabBar.style.position = 'absolute';
+tabBar.style.left = '15px';
+tabBar.style.top = '286px';
+tabBar.style.marginRight = '100px';
+tabBar.style.fontSize = '16px';
+tabBar.style.zIndex = '1001';
+
+const tabs = [
+    { label: "Primary Opponents", id: "primaryTab" },
+    { label: "GOP Bench", id: "opponentsTab" }
+];
+
+const tabElements = {};
+
+// Create tab elements with additional space and styling
+tabs.forEach(tab => {
+    const tabEl = document.createElement('span');
+    tabEl.textContent = tab.label;
+    tabEl.style.cursor = 'pointer';
+    tabEl.style.color = '#003366';
+    tabEl.style.textDecoration = 'none'; // will apply underline manually
+    tabEl.style.paddingBottom = '2px';
+    tabEl.style.marginRight = '275px';  // Space between the words
+
+    if (tab.id === 'primaryTab') {
+        tabEl.style.marginRight = '50px'; // move it to the right
+    } else if (tab.id === 'opponentsTab') {
+        tabEl.style.marginLeft = '150px'; // move it a bit left
+    }
+
+    // Styling on hover
+    tabEl.addEventListener('mouseenter', () => {
+        if (tabEl !== activeTab) tabEl.style.textDecoration = 'underline';
+    });
+    tabEl.addEventListener('mouseleave', () => {
+        if (tabEl !== activeTab) tabEl.style.textDecoration = 'none';
+    });
+
+    // Click logic
+    tabEl.addEventListener('click', () => {
+        // Show/hide relevant content
+        if (tab.id === 'primaryTab') {
+            menuListA.style.display = 'block';
+            menuListB.style.display = 'none';
+        } else if (tab.id === 'opponentsTab') {
+            menuListA.style.display = 'none';
+            menuListB.style.display = 'block';
         }
-        if(e.noCounter == 28){
-            qpic.src = "https://i.imgur.com/9YJRBAm.png";
-        }
-        else{
-            qpic.src = pictureDict[e.noCounter];
-        }
-        qpic.style.width = '135px';
-        qpic.style.height = '152px';
-        qpic.style.position = "absolute";
-        qpic.style.top = "116px";  
-        qpic.style.left = "288px"; 
-        popOutMenu.appendChild(qpic);
+
+        // Active underline style
+        Object.values(tabElements).forEach(el => el.style.textDecoration = 'none');
+        tabEl.style.textDecoration = 'underline';
+        activeTab = tabEl;
+    });
+
+    tabElements[tab.id] = tabEl;
+    tabBar.appendChild(tabEl);
+});
+
+// Initially, apply underline to the "Overview" tab
+let activeTab = tabElements['primaryTab']; // Default selection
+activeTab.style.textDecoration = 'underline';
+
+// Add the tab bar to the popOutMenu
+popOutMenu.appendChild(tabBar);
 
         //<b><span style="color: #D9321E;">
         var overviewtxt  = ""
@@ -35947,28 +35975,28 @@ function openSurrogates() {
             overviewtxt += "• "+  `Social Security <i><span style="color: #92C47D;">has been reformed</i></span>.` + "<br>";
         }
         if((e.player_answers.includes(8979)||e.player_answers.includes(9119))){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>Afghanistan</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Afghanistan</b>.` + "<br>";
         }
         if((e.player_answers.includes(9296) || e.player_answers.includes(14488) || e.player_answers.includes(14493))){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>Iraq</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Iraq</b>.` + "<br>";
         }
         if(ThirdWar == 3){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>North Korea</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">North Korea</b>.` + "<br>";
         }
         if(ThirdWar == 1){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>Iran</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Iran</b>.` + "<br>";
         }
         if(ThirdWar == 4){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>Venezuela</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Venezuela</b>.` + "<br>";
         }
         if(ThirdWar == 2){
-            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b>Syria</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #A84343;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Syria</b>.` + "<br>";
         }
         if(WorldWarThree == 1 && e.player_answers.includes(14373)){
-            overviewtxt += "• "+  `The Country <i><span style="color: #4d0f0f;">is at war with</i></span> <b>China</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #4d0f0f;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">China</b>.` + "<br>";
         }
         if(WorldWarThree == 1 && (e.player_answers.includes(14481)) && quickstats[0] >= 270){
-            overviewtxt += "• "+  `The Country <i><span style="color: #4d0f0f;">is at war with</i></span> <b>Russia</b>.` + "<br>";
+            overviewtxt += "• "+  `The Country <i><span style="color: #4d0f0f;">is at war with</i></span> <b><span style="color: blue; text-decoration: underline;">Russia</b>.` + "<br>";
         }
 
         const ovsubtxt = document.createElement('p');
@@ -35995,7 +36023,7 @@ function openSurrogates() {
             const menuItem = document.createElement('div');
             menuItem.style.display = 'flex';
             menuItem.style.alignItems = 'flex-start';
-            if (item.id == "BIDEN_A" || item.id == "CLARK_B" || item.id == "MCCAIN_A" || item.id == "KERRY_A" || item.id == "DEAN_A" || item.id == "GEPHARDT_B" || item.id == "DASCHLE_A" || item.id == "KUCINICH_A") { // fake candidate
+            if (item.id == "BIDEN_A" || item.id == "CLARK_B" || item.id == "KERRY_A" || item.id == "DEAN_A" || item.id == "GEPHARDT_B" || item.id == "DASCHLE_A" || item.id == "KUCINICH_A") { // fake candidate
                 menuItem.style.backgroundImage = 'url("https://i.imgur.com/BSUjwAQ.png")';
             } else {
                 menuItem.style.backgroundImage = 'url("https://i.imgur.com/LGaEu23.png")';
@@ -36048,6 +36076,74 @@ function openSurrogates() {
             menuListA.appendChild(menuItem);
         });
         popOutMenu.appendChild(menuListA);
+
+        const menuListB = document.createElement('ul');
+        menuListB.style.listStyle = 'none';
+        menuListB.style.position = "absolute";
+        menuListB.style.top = "295px";  
+        menuListB.style.right = "12px"; 
+        menuListB.style.padding = '0';
+        menuListB.style.maxHeight = '199px'; 
+        menuListB.style.overflowY = 'auto'; 
+
+        // Add menu items from the array
+        menuItemsB.forEach(item => {
+            const menuItem = document.createElement('div');
+            menuItem.style.display = 'flex';
+            menuItem.style.alignItems = 'flex-start';
+            if (item.id == "BIDEN_A" || item.id == "CLARK_B" || item.id == "KERRY_A" || item.id == "DEAN_A" || item.id == "GEPHARDT_B" || item.id == "DASCHLE_A" || item.id == "KUCINICH_A") { // fake candidate
+                menuItem.style.backgroundImage = 'url("https://i.imgur.com/BSUjwAQ.png")';
+            } else {
+                menuItem.style.backgroundImage = 'url("https://i.imgur.com/LGaEu23.png")';
+            }
+            menuItem.style.marginBottom = '1px';
+            menuItem.style.width = '438px';
+            menuItem.style.height = '90px';
+            menuItem.style.backgroundColor = 'rgba(128, 142, 142, 0.5)'; 
+
+            const photo = document.createElement('img');
+            photo.src = item.photo;
+            photo.style.border = "1px solid #000000"; 
+            photo.style.padding = "1px"; 
+            photo.style.width = '85px';
+            photo.style.height = '85px';
+            photo.style.marginRight = '10px';
+
+            const textAndButton = document.createElement('div');
+
+            const name = document.createElement('p');
+            name.style.fontSize = "15px"; 
+            name.style.color = "#006699"; 
+            name.innerHTML = item.name; 
+            name.style.fontFamily = "Arial, sans-serif"; 
+            name.style.textRendering = "optimizeSpeed"; 
+            name.style.webkitFontSmoothing = "none"; 
+            name.style.mozOsxFontSmoothing = "none"; 
+            name.style.fontWeight = "450"; 
+            name.style.position = "absolute";  
+            name.style.marginLeft = "4px";    
+            name.style.marginTop = "5px";    
+            textAndButton.appendChild(name);
+
+            const text = document.createElement('p');
+            text.style.fontSize = "12px"; 
+            text.innerHTML = item.text; 
+            text.style.fontFamily = "Arial, sans-serif"; 
+            text.style.textRendering = "optimizeSpeed"; 
+            text.style.webkitFontSmoothing = "none"; 
+            text.style.mozOsxFontSmoothing = "none"; 
+            text.style.fontWeight = "450"; 
+            text.style.position = "absolute"; 
+            text.style.marginLeft = "-7px";    
+            text.style.marginTop = "29px";    
+
+            textAndButton.appendChild(text);
+            menuItem.appendChild(photo);
+            menuItem.appendChild(textAndButton);
+
+            menuListB.appendChild(menuItem);
+        });
+        popOutMenu.appendChild(menuListB);
 
         const closeButton = document.createElement('button');
         closeButton.id = "closeButton"; 
