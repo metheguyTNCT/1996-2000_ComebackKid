@@ -1370,7 +1370,7 @@ body {display:flex!important;}
         storedVeep = v;
         setTimeout(() => {
           document.forms["candidate"].querySelector("h3").innerHTML = "<span style=\"color:#2DA3D7; text-shadow: 2px 2px rgb(0, 0, 0);\">Please select your character:</span>"
-          document.getElementById("header").src = "https://i.imgur.com/MyRbIoB.png";
+          document.getElementById("header").src = "https://i.imgur.com/PAHrNwj.jpeg";
           document.getElementById("candidate_summary").innerHTML = "<p class=\"descstats\" style=\"font-size:14px;\">⠀<br><span>A movement that shook the two-party system to its core, started by a man who was mad as hell and wouldn't take it anymore. He laid the foundation for real change. He pushed out a reluctant Texas businessman to be the perfect spokesperson, and win nearly 20% of the national vote. His idea snowballed into the Ventura governorship. All of this success, and the very idea of ''Reform'' can be traced back to Jack Gargan, but even he knows it could all go away unless the party undergoes a <b style=\"color:#8f06cf; font-size: 15px;\">Revival</b>.<br><br>Being the Chairman of the Reform National Comitte, the decision of not just who, but what the future of Reform is lies almost exclusively in his hands. As such, Gargan's chief goal is the ensure that the final stand against the two-party ''democracy'' not only survives the election, but is a viable and respected party for years after his own demise. He may not have Perot running anymore, but what he does have is passion. <br><br></div>";
           let descText = "• Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton • Rogers Morton •"
           document.documentElement.style.setProperty("--left-space", -1086 + "px");
@@ -2319,9 +2319,9 @@ function addDynamicCSS() {
 addDynamicCSS();
 
 tooltipList = [
-// Personal people
-{searchString: "John F. Kennedy", explanationText: "<img src=https://files.catbox.moe/4fecja.png> My Hero"},
-{searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/d5bw4k.png> My dream and nightmare. The smartest person in the room, and sometimes the hardest to love."},
+// Republican 
+{searchString: "Gary Bauer", explanationText: "<img src=https://i.imgur.com/nRBKlhs.png> Who?"},
+{searchString: "Bauer", explanationText: "<img src=https://i.imgur.com/nRBKlhs.png> Who?."},
 {searchString: "Chelsea", explanationText: "<img src=https://files.catbox.moe/rrzwd3.png> Energy. Light of my life, and the reason I stay grounded"},
 {searchString: "Socks", explanationText: "<img src=https://files.catbox.moe/5z63q1.png> White House royalty"},
 {searchString: "Monica Lewinsky", explanationText: "<img src=https://files.catbox.moe/jb36hl.png> A psychology graduate, met at the wrong hour. In the wrong room. With the wrong man."},
