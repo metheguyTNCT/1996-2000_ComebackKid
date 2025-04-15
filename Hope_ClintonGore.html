@@ -3866,7 +3866,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86001.511,
         "fields": {
             "question": "campaign_2_bono",
@@ -3874,7 +3874,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+      	"model": "campaign_trail.answer",
         "pk": 86002.511,
         "fields": {
             "question": "campaign_2_bono",
@@ -3882,11 +3882,19 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86003.511,
         "fields": {
             "question": "campaign_2_bono",
             "description": "This battle has already been fought and won. Bono is their nominee. I have no problem pointing out that I have the experience to do the job and he doesn't, but I don't want to dive back into negative, ugly personal politics. "
+        }
+    },
+    {
+    	  "model": "campaign_trail.answer",
+        "pk": 86003.51123,
+        "fields": {
+            "question": "campaign_2_bono",
+            "description": "You know, those right-wingers dug into every part of Bono’s life, except his own daughter. She’s a lesbian. I respect that. But does his base? How does Congressman Bono square that with the crowd he’s playing to?  "
         }
     },
     {
@@ -14276,6 +14284,26 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 12700,
+        "fields": {
+            "answer": 86003.51123,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12701,
+        "fields": {
+            "answer": 86003.51123,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 12305,
         "fields": {
             "answer": 85026.5,
@@ -22679,7 +22707,7 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+	      "model": "campaign_trail.answer_score_issue",
         "pk": 12708,
         "fields": {
             "answer": 86002.511,
@@ -22689,7 +22717,17 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_issue",
+    	  "model": "campaign_trail.answer_score_issue",
+        "pk": 12708,
+        "fields": {
+            "answer": 86003.51123,
+            "issue": 28,
+            "issue_score": 0.25,
+            "issue_importance": 0.5
+        }
+    },
+    {
+      	"model": "campaign_trail.answer_score_issue",
         "pk": 12708,
         "fields": {
             "answer": 86001.511,
@@ -26902,7 +26940,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 185,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.068
+            "state_multiplier": 0.078
         }
     },
     {
@@ -27001,7 +27039,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 185,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.068
+            "state_multiplier": 0.078
         }
     },
     {
@@ -27199,7 +27237,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 185,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.068
+            "state_multiplier": 0.078
         }
     },
     {
@@ -27265,7 +27303,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 185,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.068
+            "state_multiplier": 0.078
         }
     },
     {
@@ -49043,6 +49081,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 86003.511,
             "candidate": 77,
             "answer_feedback": "While Sonny Bono does seem to have a bit of a Teflon thing going, totally ignoring the obvious scent of scandal in his history, and the sort of business he was in prior to politics — feels like an obvious mistake to many on your campaign staff. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 86003.51123,
+            "candidate": 77,
+            "answer_feedback": "With a smile in tow, Sonny Bono was asked about his daughter’s sexuality. He replied simply, ''I love my daughter. I love this country. I’m not here to judge anybody. We’ve got our differences on policy, sure, but I’ll fight for folks—gay folks, Black folks, any folks—to have a few more bucks in their pocket and a few less taxes to pay. That’s what I’m about.'' "
         }
     },
     {
