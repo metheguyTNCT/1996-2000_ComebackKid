@@ -1636,9 +1636,9 @@ function setupRandomizeButton() {
     );
     
     const song5 = new Song(
-    "You Make Loving Fun",
-    "Fleetwood Mac",
-    "https://audio.jukehost.co.uk/lEeD3Y8rRhxnn7eJgYMHxeBGwJ3LYh3j"
+    "I Can See A Liar",
+    "Oasis",
+    "https://audio.jukehost.co.uk/V9souvwKkKabYMHDtaVn3NKyPcW42sW8"
     );
     
     const song5_W = new Song(
