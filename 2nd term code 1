@@ -1624,17 +1624,24 @@ function setupRandomizeButton() {
     "https://audio.jukehost.co.uk/1nbU0jWxAHQIdHU0eXkNYACY2YOw61n9"
     );
     
-    const song4 = new Song(
-    "Best Imitation Of Myself",
+    const song4_Gore = new Song(
+    "Underground",
     "Ben Folds Five",
-    "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
+    "https://audio.jukehost.co.uk/72JQKSbz7R0rWYCumPitIxZxaDqHqfmT"
     );
+
     const song4_W = new Song(
     "Paradise By The Dashboard Light",
     "Meat Loaf",
     "https://audio.jukehost.co.uk/30ysZumO82CY4tJkOpXzkKmfPSyzW7y3"
     );
     
+    const song4 = new Song(
+    "Best Imitation Of Myself",
+    "Ben Folds Five",
+    "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
+    );
+
     const song5 = new Song(
     "I Can See A Liar",
     "Oasis",
@@ -1712,7 +1719,7 @@ function setupRandomizeButton() {
     playlist.addSong(song1_Gore);
     playlist.addSong(song2_Gore);
     playlist.addSong(song3_Gore);
-    playlist.addSong(song4);
+    playlist.addSong(song4_Gore);
     playlist.addSong(song5);
     playlist.addSong(song6);
     playlist.addSong(song7);
