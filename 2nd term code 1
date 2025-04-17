@@ -1734,7 +1734,7 @@ function setupRandomizeButton() {
     gore_playlist.addSong(song1_Gore);
     gore_playlist.addSong(song2_Gore);
     gore_playlist.addSong(song3_Gore);
-    gore_playlist.addSong(song4);
+    gore_playlist.addSong(song4_Gore);
     gore_playlist.addSong(song5);
     gore_playlist.addSong(song6);
     gore_playlist.addSong(song7);
