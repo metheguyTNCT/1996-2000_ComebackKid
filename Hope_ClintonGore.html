@@ -9336,7 +9336,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 231,
-            "state_multiplier": 1.24899899989998
+            "state_multiplier": 1.2588799899989998
         }
     },
     {
@@ -24924,7 +24924,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 231,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0675
+            "state_multiplier": -0.0475
         }
     },
     {
@@ -25034,7 +25034,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 192,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.05
+            "state_multiplier": -0.01
         }
     },
     {
@@ -49357,7 +49357,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 240001,
             "candidate": 77,
-            "answer_feedback": "cg96.com launches on the World Wide Web on July 10, 1996, and becomes an instant hit with online voters. This unexpected boon boosts your campaign and strengthens your appeal among more educated voters who own a computer — even Sock's get a mention! "
+            "answer_feedback": "cg96.com launches on the World Wide Web on July 10, 1996, and becomes an instant hit with online voters. This unexpected boon boosts your campaign and strengthens your appeal among more educated voters who own a computer — even Socks get a mention! "
         }
     },
     {
@@ -59074,6 +59074,62 @@ function getTooltips(str) {
 
     // Filter out overlaps
     for (let i = 0; i < matches.length - 1; ) {
+        if (matches[i + 1].start < matches[i].end) {
+            matches.splice(i + 1, 1); // Remove the next match since it overlaps
+        } else {
+            i++; // Move to next match
+        }
+    }
+
+    return matches;
+}
+function applyTooltips(str) {
+    const matches = getTooltips(str);
+    let result = '';
+    let lastIndex = 0;
+
+    matches.forEach(match => {
+        const tooltip = tooltipList[match.tooltipIndex];
+        result += str.slice(lastIndex, match.start);
+        result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+        lastIndex = match.end;
+    });
+
+    result += str.slice(lastIndex); // Add the remainder of the original string
+    return result;
+}
+
+function applyTooltipsToObject(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+            obj[key] = applyTooltips(obj[key]);
+        } else if (typeof obj[key] === 'object') {
+            applyTooltipsToObject(obj[key]); // Recursive call
+        }
+    }
+}
+function modifytooltip(searchstring, newtooltip) {
+    for (let x in tooltipList) {
+        if (tooltipList[x]["searchString"] == searchstring) {
+            tooltipList[x]["explanationText"] = newtooltip;
+        };
+    }
+}
+applyTooltipsToObject(campaignTrail_temp.questions_json);
+applyTooltipsToObject(campaignTrail_temp.answers_json);
+applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
+  function question_insert(insertafter_pk,question) {
+      let foundpk = false;
+      for (x in campaignTrail_temp.questions_json) {
+          if (campaignTrail_temp.questions_json[x]["pk"] == insertafter_pk && foundpk == false) {
+              campaignTrail_temp.questions_json.splice(Number(x)+1,0,question);
+              foundpk = true;
+          }
+      }
+      if (foundpk == false) {
+          console.log("PK not found! "+insertafter_pk);
+      }
+    }
         if (matches[i + 1].start < matches[i].end) {
             matches.splice(i + 1, 1); // Remove the next match since it overlaps
         } else {
