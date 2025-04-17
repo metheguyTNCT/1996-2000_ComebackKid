@@ -1133,14 +1133,12 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
 background: linear-gradient(180deg, #C3D5FD 0%, #b3c9fb 50%, #d7e8ff 100%);
 border: 1px solid #9bbafc;
 box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25);
-font-weight: 410;
 padding: 2px 4px;
 }
 .overlay_window h3 {
 background: linear-gradient(180deg, #C3D5FD 0%, #b3c9fb 50%, #d7e8ff 100%);
 border: 1px solid #9bbafc;
 box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25);
-font-weight: 410;
 padding: 2px 4px;
 }
 #menu_container {
