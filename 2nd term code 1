@@ -1472,6 +1472,41 @@ body {display:flex!important;}
      justify-content: center;
      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
  }
+       #map_container {
+  background: 
+    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
+  background-blend-mode: soft-light;
+  border: 2px double #b3c8f2;
+
+  box-shadow:
+    inset 0 1px 2px rgba(120, 150, 255, 0.1),
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #c4d8fc,
+    2px 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 3px;
+  border-radius: 0;
+}
+  #menu_container {
+background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
+border: 1px solid #466fda;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+  #overall_result_container {
+background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
+border: 1px solid #466fda;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#state_info h3 {
+background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
+border: 1px solid #466fda;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#overall_result h3 {
+background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
+border: 1px solid #466fda;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
           </style>`
           corrr=`\n<h2>RESURGENCE</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           storedChar = c;
@@ -1505,6 +1540,41 @@ body {display:flex!important;}
      justify-content: center;
      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
  }
+       #map_container {
+  background: 
+    linear-gradient(145deg, #fffaf9 0%, #fbeee9 40%, #fbe2db 80%, #fff8f5 100%),
+    linear-gradient(to bottom, #ffffff 0%, #fcf4f0 100%);
+  background-blend-mode: soft-light;
+  border: 2px double #f2b4b3;
+
+  box-shadow:
+    inset 0 1px 2px rgba(120, 150, 255, 0.1),
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #fccdc4,
+    2px 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 3px;
+  border-radius: 0;
+}
+  #menu_container {
+background: linear-gradient(to bottom, #f96959 0%, #f76950 50%, #fa6e5c 100%);
+border: 1px solid #da5f46;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+  #overall_result_container {
+background: linear-gradient(to bottom, #f96959 0%, #f76950 50%, #fa6e5c 100%);
+border: 1px solid #da5f46;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#state_info h3 {
+background: linear-gradient(to bottom, #f96959 0%, #f76950 50%, #fa6e5c 100%);
+border: 1px solid #da5f46;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#overall_result h3 {
+background: linear-gradient(to bottom, #f96959 0%, #f76950 50%, #fa6e5c 100%);
+border: 1px solid #da5f46;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
           </style>`
            corrr=`\n<h2>RETRIBUTION</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
@@ -1538,6 +1608,41 @@ body {display:flex!important;}
      justify-content: center;
      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.4);
  }
+            #map_container {
+  background: 
+    linear-gradient(145deg, #fcf9ff 0%, #f1e9fb 40%, #f2dbfb 80%, #fdf5ff 100%),
+    linear-gradient(to bottom, #ffffff 0%, #faf0fc 100%);
+  background-blend-mode: soft-light;
+  border: 2px double #d8b3f2;
+
+  box-shadow:
+    inset 0 1px 2px rgba(120, 150, 255, 0.1),
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #e8c4fc,
+    2px 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 3px;
+  border-radius: 0;
+}
+  #menu_container {
+background: linear-gradient(to bottom, #c159f9 0%, #ba50f7 50%, #c55cfa 100%);
+border: 1px solid #b046da;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+  #overall_result_container {
+background: linear-gradient(to bottom, #c159f9 0%, #ba50f7 50%, #c55cfa 100%);
+border: 1px solid #b046da;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#state_info h3 {
+background: linear-gradient(to bottom, #c159f9 0%, #ba50f7 50%, #c55cfa 100%);
+border: 1px solid #b046da;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
+#overall_result h3 {
+background: linear-gradient(to bottom, #c159f9 0%, #ba50f7 50%, #c55cfa 100%);
+border: 1px solid #b046da;
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+}
           </style>`
            corrr=`\n<h2>REVIVAL</h2><font id='wittyquote' size='3' color='white'><em>`+customquote+`</em></font>`
           //document.getElementById("candidate_summary").innerHTML = "<ul><li>Role: Rogers Morton</li><li>Attributes: Male, Later 50s</li><li>Voice: Bass-Baritone </li></ul>Rogers Morton is the Chairman of the Republican National Committee. While he is physically imposing—standing six foot and eight inches tall—he is always trying to make himself smaller, more marginal. He does not want to be the central player in this drama of American politics. He yearns for a place outside the spotlight, in a supporting role, the chorus, or—better yet—as a mere spectator. <br><br>The performer playing this role should capture Morton’s geniality, his excessive deference for others. Highly expressive and almost childlike in his earnestness, Morton wants to fulfill his obligations to the flagging party that Nixon put him in charge of. This desire, in turn, allows him to rationalize various unsavory and dubious actions. Beneath his Boy Scout demeanor, Rogers’s most essential characteristics are his desire to be well-liked and a deep fear that people only tolerate him because he is useful.<br><br></div>";
