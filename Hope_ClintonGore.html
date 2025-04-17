@@ -72,7 +72,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_5_healthcare_task_force",
         "fields": {
             "priority": 2,
-            "description": "It’s like living in a museum. You sit back in the Oval, pale winter light hangs in the windows, and stare at the portraits of your predecessors. It’s charming, but you need to get to work. The inauguration was just a few days ago, and already the sheer weight of the job is settling in. America’s healthcare system yearns for reform, and you’ve got a chance to deliver. A question lingers on your mind, however: Who should lead the charge?",
+            "description": "It’s like living in a museum. You sit back in the Oval, staring at the portraits of your predecessors. It’s charming, but you need to get to work. The inauguration was just a few days ago, and already the sheer weight of the job is settling in. America’s healthcare system yearns for reform, and you’ve got a chance to deliver. A question lingers on your mind, however: Who should lead the charge?",
             "likelihood": 1
         }
     },
@@ -8625,7 +8625,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 203,
-            "state_multiplier": 1.3833293125899812399812398931241
+            "state_multiplier": 1.3881123125899812399812398931241
         }
     },
     {
@@ -8760,7 +8760,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 218,
-            "state_multiplier": 1.19199811112119395995
+            "state_multiplier": 1.1999899989811112119395995
         }
     },
     {
@@ -9336,7 +9336,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 231,
-            "state_multiplier": 1.2588799899989998
+            "state_multiplier": 1.24899899989998
         }
     },
     {
@@ -10467,7 +10467,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 90001,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.07612451
+            "global_multiplier": 0.07712451
         }
     },
     {
@@ -10487,7 +10487,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 900015551,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.04872451
+            "global_multiplier": 0.04972451
         }
     },
     {
@@ -24924,7 +24924,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 231,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0475
+            "state_multiplier": -0.0175
         }
     },
     {
@@ -25034,7 +25034,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 192,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.01
+            "state_multiplier": -0.05
         }
     },
     {
@@ -25111,7 +25111,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 223,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": 0.06811212345
+            "state_multiplier": 0.06922912345
         }
     },
     {
@@ -25859,7 +25859,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 231,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0565
+            "state_multiplier": -0.0065
         }
     },
     {
@@ -26046,7 +26046,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 223,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": 0.05682912345
+            "state_multiplier": 0.05782912345
         }
     },
     {
@@ -59074,62 +59074,6 @@ function getTooltips(str) {
 
     // Filter out overlaps
     for (let i = 0; i < matches.length - 1; ) {
-        if (matches[i + 1].start < matches[i].end) {
-            matches.splice(i + 1, 1); // Remove the next match since it overlaps
-        } else {
-            i++; // Move to next match
-        }
-    }
-
-    return matches;
-}
-function applyTooltips(str) {
-    const matches = getTooltips(str);
-    let result = '';
-    let lastIndex = 0;
-
-    matches.forEach(match => {
-        const tooltip = tooltipList[match.tooltipIndex];
-        result += str.slice(lastIndex, match.start);
-        result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
-        lastIndex = match.end;
-    });
-
-    result += str.slice(lastIndex); // Add the remainder of the original string
-    return result;
-}
-
-function applyTooltipsToObject(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] === 'string') {
-            obj[key] = applyTooltips(obj[key]);
-        } else if (typeof obj[key] === 'object') {
-            applyTooltipsToObject(obj[key]); // Recursive call
-        }
-    }
-}
-function modifytooltip(searchstring, newtooltip) {
-    for (let x in tooltipList) {
-        if (tooltipList[x]["searchString"] == searchstring) {
-            tooltipList[x]["explanationText"] = newtooltip;
-        };
-    }
-}
-applyTooltipsToObject(campaignTrail_temp.questions_json);
-applyTooltipsToObject(campaignTrail_temp.answers_json);
-applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
-  function question_insert(insertafter_pk,question) {
-      let foundpk = false;
-      for (x in campaignTrail_temp.questions_json) {
-          if (campaignTrail_temp.questions_json[x]["pk"] == insertafter_pk && foundpk == false) {
-              campaignTrail_temp.questions_json.splice(Number(x)+1,0,question);
-              foundpk = true;
-          }
-      }
-      if (foundpk == false) {
-          console.log("PK not found! "+insertafter_pk);
-      }
-    }
         if (matches[i + 1].start < matches[i].end) {
             matches.splice(i + 1, 1); // Remove the next match since it overlaps
         } else {
