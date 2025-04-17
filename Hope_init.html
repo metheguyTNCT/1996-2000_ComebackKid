@@ -542,9 +542,23 @@ background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
 border: 1px solid #466fda;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
 }
+@keyframes windowPop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.window {
+  animation: windowPop 0.17s ease-out;
+}
 .mytooltip:hover .mytooltiptext {
 opacity: 1;
-transition-delay: 0.5s;
+transition-delay: 0.6s;
 </style>`
 
 styling = document.createElement("style");
