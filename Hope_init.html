@@ -391,6 +391,7 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
     linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
+  animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
           }
           .inner_window_sign_display {
   background: 
@@ -439,6 +440,7 @@ box-shadow:
   inset 0 -1px 0 rgba(100, 130, 255, 0.1);
 padding: 2px 4px;
 text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
 }
 .overlay_window h3 {
 background: linear-gradient(180deg, #c3d5fd 0%, #b3c9fb 20%, #a6bbf7 40%, #bcd2fc 60%, #d1e3ff 80%, #e1f1ff 100%);
@@ -1434,6 +1436,91 @@ button.addEventListener("click", () => {crtOn = !crtOn; setCRTLines(crtOn)});
 
 RecReading=true
 e.collect_results=true;
+document.head.innerHTML += `
+<style>
+/* BASIC STRUCTURE */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #f4f4f4;
+  border: 2px outset #ccc;
+  margin: 0 6px 0 2px;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow:
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #888;
+  position: relative;
+  cursor: pointer;
+}
+
+/* DOT (MOCK PHYSICAL BUTTON FEEL) */
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background: black;
+  border-radius: 0;
+  box-shadow:
+    inset 0 0 1px #000;
+}
+
+/* "CLICKED IN" FEEL */
+input[type="radio"]:active {
+  border: 2px inset #999;
+  box-shadow:
+    inset 1px 1px 0 #bbb,
+    inset -1px -1px 0 #666;
+}
+
+/* LEGENDARY WIN95-LIKE TEXT */
+label {
+  font-family: "MS Sans Serif", Geneva, sans-serif;
+  font-size: 13px;
+  color: black;
+}
+input[type="radio"]:checked {
+  transform: translateY(1px);
+}
+input[type="radio"]:hover {
+  box-shadow:
+    0 0 0 1px #aaa,
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #888;
+}
+.radio-bezel {
+  padding: 4px;
+  border: 2px solid #c0c0c0;
+  background: linear-gradient(to bottom, #e0e0e0, #c8c8c8);
+  box-shadow:
+    inset 1px 1px #ffffff,
+    inset -1px -1px #808080;
+  display: inline-block;
+  margin: 2px;
+}
+body {
+cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur109.cur'), auto;
+-webkit-font-smoothing: none;
+-moz-osx-font-smoothing: grayscale;
+font-smooth: never;
+text-rendering: optimizeSpeed;
+}
+.window {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.window.done {
+  opacity: 1;
+  transform: scale(1);
+}
+</style>
+`;
 campaignTrail_temp.achievements = {
     "The Difference is Leadership" : {
         "image" : "https://i.imgur.com/CCldK88.png",
