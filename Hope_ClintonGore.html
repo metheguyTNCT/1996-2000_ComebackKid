@@ -529,6 +529,15 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+    	"model": "campaign_trail.question",
+        "pk": "campaign_3_cheney",
+        "fields": {
+            "priority": 0,
+            "description": "You’ve been talking to packed union halls, suburban rec centers, small-town school gyms, Black churches, VFW halls, police groups, classrooms—anyone, anywhere who’ll have you. Just running down the clock. But Dick Cheney’s not running that kind of race. He’s quiet, methodical, brutal. His people have zeroed in on a hard, narrow path: Missouri, Tennessee, Colorado, Ohio. No one else matters. So, what’s your next move?",
+            "likelihood": 1
+        }
+    },
+    {
 	"model": "campaign_trail.question",
         "pk": "debate_bono",
         "fields": {
@@ -4066,7 +4075,7 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+	      "model": "campaign_trail.answer",
         "pk": 86009.522,
         "fields": {
             "question": "campaign_3_bono",
@@ -4074,7 +4083,31 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
-	"model": "campaign_trail.answer",
+    	  "model": "campaign_trail.answer",
+        "pk": 86009.5221,
+        "fields": {
+            "question": "campaign_3_cheney",
+            "description": "Cheney, that stubborn bulldog, let’s meet him where he is. Clear my schedule for the next week. I want to shadow his stops. If he’s in the suburbs outside St. Louis on Tuesday, I want to be there Wednesday. Same venues, if possible. This guy’s a joke. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86009.5222,
+        "fields": {
+            "question": "campaign_3_cheney",
+            "description": "I don't think he's going to pull off any of those states, frankly. But let's invest in the Blue Wall, so even if pigs fly and he wins them, we still hold the White House. I want to start outside Detroit and sweep through the Great Lakes, town by town, city by city.  "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86009.5223,
+        "fields": {
+            "question": "campaign_3_cheney",
+            "description": "Let him have his narrow map. We’re running a national campaign, not a county clerk race. I want to keep showing up in places they’ve written off, California, New Mexico, even a little time outside New Orleans. If he’s betting it all on four states, let’s make him sweat in all fifty.  "
+        }
+    },
+    {
+	      "model": "campaign_trail.answer",
         "pk": 86010.522,
         "fields": {
             "question": "campaign_3_bono",
@@ -14991,7 +15024,47 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+    	"model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86009.522,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.011
+        }
+    },
+    {
+    	"model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86009.5221,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.009991
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86009.5222,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.009991
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86009.5223,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.009991
+        }
+    },
+    {
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86010.522,
@@ -15001,7 +15074,17 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+    	  "model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86010.522,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.011
+        }
+    },
+    {
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86011.522,
@@ -15011,7 +15094,17 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
+        "pk": 12776,
+        "fields": {
+            "answer": 86011.522,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.011
+        }
+    },
+    {
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86067.5,
@@ -15021,7 +15114,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+	      "model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86068.5,
@@ -15031,7 +15124,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86066.5,
@@ -15041,7 +15134,7 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
+      	"model": "campaign_trail.answer_score_global",
         "pk": 12776,
         "fields": {
             "answer": 86067.5,
@@ -36731,7 +36824,7 @@ campaignTrail_temp.answer_score_state_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_state",
+	      "model": "campaign_trail.answer_score_state",
         "pk": 12746,
         "fields": {
             "answer": 86009.522,
@@ -37259,6 +37352,94 @@ campaignTrail_temp.answer_score_state_json = [
         }
     },
     {
+    	  "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 205,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 205,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00095
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 222,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12748,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.017525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5221,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
+        }
+    },
+    {
         "model": "campaign_trail.answer_score_state",
         "pk": 12785,
         "fields": {
@@ -37355,6 +37536,116 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 205,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00036
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00036
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00036
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 222,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12748,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.017525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5222,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
         }
     },
     {
@@ -37498,6 +37789,116 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 205,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 198,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00049
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00046
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12746,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 211,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00046
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 222,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12747,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12748,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0085
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.017525
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12749,
+        "fields": {
+            "answer": 86009.5223,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.007525
         }
     },
     {
@@ -50187,6 +50588,33 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 12744,
+        "fields": {
+            "answer": 86009.5221,
+            "candidate": 77,
+            "answer_feedback": "You’re really getting annoyed now, aren’t you, Slick? But you got your way, and for the next week, you’re echoing his campaign stops, one by one. According to his people, it just shows ''how scared the President really is.'' But they don’t know a damn thing, do they? Not about how you fight. Not about how you win."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12744,
+        "fields": {
+            "answer": 86009.5222,
+            "candidate": 77,
+            "answer_feedback": "It’s no secret that some in your campaign are feeling a little iffy about your numbers with unionized workers, particularly in the Midwest. The polls don’t show you slipping, not really, but the press is more than happy to run with some half-baked narrative. Let them. You’ll show ’em."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12744,
+        "fields": {
+            "answer": 86009.5223,
+            "candidate": 77,
+            "answer_feedback": "This is the way you’ve been handling the race so far, and changing tactics midway through could prove to be a mistake. Besides, there are plenty of Democratic senators, congressmen, and nominees across the country who’d love to hold a rally with their president, and you’re making their dreams come true."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 12763,
         "fields": {
             "answer": 86010.5,
@@ -56566,7 +56994,7 @@ if (e.question_number+1 == 18){
       "pk": "campaign_3_cheney",
       "fields": {
           "priority": 0,
-          "description": "As of late, you've been focusing on the big picture, but it’s clear Sonny Bono is pin-pointing his campaign efforts, and focusing on a few select regions. If you want to beat him, you’ll have to make your own mark across the map. What regions in particular do you want to commit your focus to? ",
+          "description": "You’ve been talking to packed union halls, suburban rec centers, small-town school gyms, Black churches, VFW halls, police groups, classrooms—anyone, anywhere who’ll have you. Just running down the clock. But Dick Cheney’s not running that kind of race. He’s quiet, methodical, brutal. His people have zeroed in on a hard, narrow path: Missouri, Tennessee, Colorado, Ohio. No one else matters. So, what’s your next move? ",
           "likelihood": 1
       }
 }
