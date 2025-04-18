@@ -2478,7 +2478,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3501010.577,
         "fields": {
             "question": "candidate_intro_sundog",
-            "description": "Are you kidding? This is the best possible news we could’ve hoped for. Honestly, I figured they’d take it from him at the Convention. know things haven’t gone great so far in this race, and sure, the polls have us down, but Donald’s nomination? This is a gift from god. Let’s hit him hard. The man doesn’t even have one-fifth the experience it takes to be President."
+            "description": "Are you kidding? This is the best possible news we could’ve hoped for. Honestly, I figured they’d take it from him at the Convention. I know things haven’t gone great so far in this race, and sure, the polls have us down, but Donald’s nomination? This is a gift from god. Let’s hit him hard. The man doesn’t even have one-fifth the experience it takes to be President."
         }
     },
     {
@@ -8886,7 +8886,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 223,
-            "state_multiplier": 0.888765149989984998812
+            "state_multiplier": 0.89918765149989984998812
         }
     },
     {
@@ -21148,7 +21148,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 88020.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.035
+            "global_multiplier": -0.0352124
         }
     },
     {
@@ -21158,7 +21158,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 88020.5,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": 0.03
+            "global_multiplier": 0.0312124
         }
     },
     {
@@ -21168,7 +21168,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 88020.5,
             "candidate": 77,
             "affected_candidate": 80,
-            "global_multiplier": 0.04
+            "global_multiplier": 0.0412124
         }
     },
     {
@@ -25442,7 +25442,40 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 223,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": 0.06922912345
+            "state_multiplier": 0.074922912345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 900015551,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.02151
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 900015551,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.0134922912345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 900015551,
+            "state": 223,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.0074922912345
         }
     },
     {
@@ -25651,7 +25684,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.063398989895975
+            "state_multiplier": -0.0581398989895975
         }
     },
     {
@@ -25750,7 +25783,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 195,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.1151
+            "state_multiplier": -0.088712
         }
     },
     {
@@ -25761,7 +25794,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 195,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.05665
+            "state_multiplier": -0.051871
         }
     },
     {
@@ -26586,7 +26619,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.1358987
+            "state_multiplier": -0.12989898989874663224112345
         }
     },
     {
@@ -26597,7 +26630,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 226,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": -0.0322
+            "state_multiplier": -0.0322898989874663224112345
         }
     },
     {
@@ -55612,6 +55645,9 @@ if (e.question_number+1 == 27) {
     Ideology += 2;
     }
     if (ans == 88020.5){
+    sundog += 2;
+    }
+    if (ans == 85028.5){
     sundog += 1;
     }
     if (ans == 110003){
