@@ -2515,9 +2515,69 @@ playerContainer.appendChild(controlsContainer);
         "cannotBeCheated" : true
       },
       "DNR" : {
-        "image" : "https://i.imgur.com/XR1lbAm.png",
+        "image" : "https://i.imgur.com/rNhrH8E.png",
         "description" : "Win against Elizabeth Dole.",
         "cannotBeCheated" : true
+      },
+      "King of the Hill" : {
+        "image" : "https://i.imgur.com/d0REN5S.png",
+        "description" : "Win as Newt Gingrich.",
+        "cannotBeCheated" : true
+      },
+      "The Boy Scout from Hell" : {
+        "image" : "https://i.imgur.com/FjYCSV4.png",
+        "description" : "Win as Oliver North.",
+        "cannotBeCheated" : true
+      },
+      "Standing Firm" : {
+        "image" : "https://i.imgur.com/WFrADWd.png",
+        "description" : "Win as Dan Quayle.",
+        "cannotBeCheated" : true
+      },
+      "Hail Mary" : {
+        "image" : "https://i.imgur.com/9HB4skk.png",
+        "description" : "Win as Jack Kemp.",
+        "cannotBeCheated" : true
+      },
+      "Gangbusters" : {
+        "image" : "https://i.imgur.com/w6L8FvM.png",
+        "description" : "Win as Rudy Giuliani.",
+        "cannotBeCheated" : true
+           },
+      "America's Wake-up Call" : {
+        "image" : "https://i.imgur.com/lSgO73y.png",
+        "description" : "Win as Alan Keyes.",
+        "cannotBeCheated" : true
+      },
+      "Can't Think of a Name for This One" : {
+        "image" : "https://i.imgur.com/ebpjvMW.png",
+        "description" : "Win as George Pataki.",
+        "cannotBeCheated" : true
+      },
+      "The Mailman's Son" : {
+        "image" : "https://i.imgur.com/cXy3PVR.png",
+        "description" : "Win as John Kasich.",
+        "cannotBeCheated" : true
+      },
+      "Misunderestimated" : {
+        "image" : "https://i.imgur.com/BSBCy8U.png",
+        "description" : "Win as George W. Bush.",
+        "cannotBeCheated" : true
+       },
+      "Straight Talk" : {
+        "image" : "https://i.imgur.com/8qDcoTp.png",
+        "description" : "Win as John McCain.",
+        "cannotBeCheated" : true
+      },
+      "Fortunate Son" : {
+        "image" : "https://i.imgur.com/NdyYtBR.png",
+        "description" : "Win as Jeb Bush.",
+        "cannotBeCheated" : true
+      },
+      "Two for the Price of One" : {
+        "image" : "https://i.imgur.com/rzDUbyZ.png",
+        "description" : "Win as Elizabeth Dole.",
+        "cannotBeCheated" : true      
       }
       }
       // Tooltips
