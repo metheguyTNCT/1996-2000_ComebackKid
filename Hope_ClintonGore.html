@@ -56841,6 +56841,19 @@ if (e.question_number+1 == 18){
                     }
                 
                 );
+                                question_insert("debate_cheney", 
+                {
+                   
+                    "model": "campaign_trail.question",
+                    "pk": "oslo_5_win",
+                    "fields": {
+                        "priority": 0,
+                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
+                        "likelihood": 1
+                    }
+                    }
+                
+                );
 
     } else {
         question_insert("debate_dole", 
@@ -57012,6 +57025,20 @@ if (e.question_number+1 == 18){
                     }
                 
                 );
+
+                question_insert("debate_cheney", 
+                    {
+                       
+                        "model": "campaign_trail.question",
+                        "pk": "oslo_5",
+                        "fields": {
+                            "priority": 0,
+                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
+                            "likelihood": 1
+                        }
+                        }
+                    
+                    );
     }
 }
     if (e.question_number+1 == 30){
