@@ -60305,6 +60305,17 @@ function changeOpponentsTab() {
     });
 } if (Ideology <= 5) {
     deleteCandidateButton("David Duke");
+} if (e.player_answers.includes(400015)) {
+    addCandidate({
+        name: 'William Rehnquist',
+        image: 'https://files.catbox.moe/7wquou.jpg',
+        description: 'The Hubbell fiasco has raise the the worry of corruption in your administration. So much so, that some GOP operatives are seriously considering propelling a draft for current Chief Justice of the Supreme Court, William Hubbs Rehnquist. The man who administered your oath a few months ago. ',
+        pros: 'As Chief Justice, he would bring the GOP an aura of legitimacy they haven\'t enjoyed since the Iran-Contra days. He\'s also seen as a grand force of anti-corruption, and appears apolitical to the uninformed.',
+        cons: 'A Deeply partisan conservative judge. Believes in contagious homosexuality. Although deeply insulted by the Hubbell fiasco. He harbors no ambition to bring these feelings into the field of presidential politics. Which spells dooms for those previously mentioned operatives.',
+        strategy: 'Dredge up his backward views and rulings on abortion, equal protection, and the Fourteenth Amendment to Delegitimize his court. Take advantage of his eventual resignation by replacing his spot with a deeply loyal administration ally.'
+    });
+} if (e.player_answers.includes(88016.5) || e.player_answers.includes(88017.5) || e.player_answers.includes(88018.5) || e.player_answers.includes(88019.5) || e.player_answers.includes(88020.5) || e.player_answers.includes(88021.5) || e.player_answers.includes(88022.5) || e.player_answers.includes(88023.5) || e.player_answers.includes(88024.5)) {
+    deleteCandidateButton("William Rehnquist");
 }
 }
 
