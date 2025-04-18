@@ -354,11 +354,14 @@ document.getElementById("header").src = "https://files.catbox.moe/t43ts8.png";
 document.body.background = "https://files.catbox.moe/jhcip6.png";
 
 
+// ✅ Add Windows XP CSS library first
+document.head.innerHTML += `<link rel="stylesheet" href="https://unpkg.com/98.css@0.1.16">`;
+
+// ✅ Then add your overrides
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
 
-
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
-document.head.innerHTML +=`
+// ✅ Followed by the large CSS injection block
+document.head.innerHTML += `
 <style>
 .game_header {
 background: linear-gradient(to bottom, #5687fb 0%, #4e81f9 50%, #5a8bfc 100%);
@@ -1407,7 +1410,7 @@ playerContainer.appendChild(controlsContainer);
   
   document.head.innerHTML += `<link
     rel="stylesheet"
-    href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css"
+    href="https://github.com/nostalgic-css/NES.css"
   >`
   
   document.head.innerHTML += `<style>
@@ -1452,24 +1455,6 @@ RecReading=true
 e.collect_results=true;
 document.head.innerHTML += `
 <style>
-/* BASIC STRUCTURE */
-input[type="radio"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
-  background: #f4f4f4;
-  border: 2px outset #ccc;
-  margin: 0 6px 0 2px;
-  display: inline-block;
-  vertical-align: middle;
-  box-shadow:
-    inset 1px 1px 0 #fff,
-    inset -1px -1px 0 #888;
-  position: relative;
-  cursor: pointer;
-}
-
 /* DOT (MOCK PHYSICAL BUTTON FEEL) */
 input[type="radio"]:checked::before {
   content: "";
