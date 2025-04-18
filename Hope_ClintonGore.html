@@ -53351,6 +53351,7 @@ var WilsonNom = 0
 var ForbesNom = 0
 var PowellNom = 0
 var BushNom = 0
+var sundog = 0
 cyoAdventure = function(a) {
     initializeContent();
     update_EV_dict();
@@ -54591,6 +54592,7 @@ if (e.question_number+1 == 27) {
    if (ans == 30002){
     PublicSupport += 1;
     Ideology -= 1;
+    sundog += 1;
     }
     if (ans == 30001){
     PublicSupport -= 1;
@@ -54659,6 +54661,7 @@ if (e.question_number+1 == 27) {
     PublicSupport += 1;
     Ideology -= 1;
     ReichPoints += 2;
+    sundog += 1;
     }
     // Budget vote CYOA
     if (ans == 88016.5){
@@ -54713,6 +54716,16 @@ if (e.question_number+1 == 27) {
     if (ans == 250002) {
     CasesSettled += 1;
     PublicSupport -= 1;
+    sundog += 1;
+    }
+    if (ans == 88010.5) {
+    sundog += 1;
+    }
+    if (ans == 65003.5) {
+    sundog += 1;
+    }
+    if (ans == 65001.5) {
+    sundog += 1;
     }
     //Supreme Court CYOA
     if (ans == 400013){
@@ -54721,12 +54734,15 @@ if (e.question_number+1 == 27) {
     //Supreme Court CYOA
     if (ans == 2500911.5){
     Ideology -= 1;
+    sundog -= 1;
     }
     if (ans == 4000131){
     Ideology -= 1;
+    sundog += 1;
     }
     if (ans == 400015){
     PublicSupport -= 1;
+    sundog += 1;
     }
     //Healthcare Pick
     if (ans == 50001) {
@@ -54748,6 +54764,23 @@ if (e.question_number+1 == 27) {
     //Crime CYOA
     if (ans == 70002){
     Ideology += 2;
+    }
+    if (ans == 88020.5){
+    sundog += 1;
+    }
+    if (ans == 110003){
+    sundog += 1;
+    }
+    if (ans == 25007.5){
+    sundog += 1;
+    }
+    //hidden god 
+    if (ans == 85007.5){
+    sundog += 1;
+    }
+    //hidden god 
+    if (ans == 85003.5){
+    sundog += 1;
     }
     if (ans == 70001 || ans == 85026.5){
     Ideology -= 2;
@@ -54783,6 +54816,7 @@ if (e.question_number+1 == 27) {
     PublicSupport += 1;
     LEGWin += 1; 
     FPWin += 1;
+    sundog += 2;
     }
    if (ans == 900015551){
     PublicSupport += 1;
@@ -54790,10 +54824,12 @@ if (e.question_number+1 == 27) {
     Legacy += 1;
     FPWin -= 1;
     Ideology += 1;
+    sundog -= 5;
     }
   //Russia CYOA (START III SUCCEEDS)
      if (ans == 85001.5){
     PublicSupport += 1;
+    sundog += 2;
    FPWin += 1;
    }
     if (ans == 85002.5){
@@ -54811,6 +54847,7 @@ if (e.question_number+1 == 27) {
   //Russia CYOA (START III FAILS)
     if (ans == 85005.5){
     PublicSupport += 1;
+    sundog += 1;
    FPWin += 1;
    }
     if (ans == 85006.5){
@@ -54835,6 +54872,7 @@ if (e.question_number+1 == 27) {
     PublicSupport -= 1;
     FPWin -= 1;
     Ideology += 1;
+    sundog += 2;
    }
    if (ans == 100002) {
     FPWin += 1;
@@ -54848,6 +54886,7 @@ if (e.question_number+1 == 27) {
    }
     if (ans == 100004) {
     PublicSupport -= 1;
+    sundog += 1;
     FPWin += 1;
    }
    //Healthcare Vote CYOA (Succeeds)
@@ -54939,6 +54978,7 @@ if (e.question_number+1 == 27) {
     if (ans == 15001.5){
     PublicSupport -= 3;
     LEGWin -= 1;
+    sundog += 2;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 15002.5 || ans == 15005.5 || ans == 15008.5) {
@@ -54973,6 +55013,18 @@ if (e.question_number+1 == 27) {
     PublicSupport -= 1;
     LEGWin -= 1;
     }
+    if (ans == 50002){
+    sundog += 1;
+    }
+    if (ans == 20002){
+    sundog += 1;
+    }
+    if (ans == 80002){
+    sundog += 1;
+    }
+    if (ans == 88003.5){
+    sundog += 1;
+    }
     //Government Shutdown Huge CYOA
     if (ans == 150004){
     PublicSupport -= 2;
@@ -54982,10 +55034,12 @@ if (e.question_number+1 == 27) {
     PublicSupport -= 3;
     LEGWin -= 2;
     Ideology += 1;
+    sundog += 1;
     }
     if (ans == 150006){
     PublicSupport -= 1;
     Ideology -= 1;
+    sundog += 2;
     }
     if (ans == 150007){
     PublicSupport -= 2;
@@ -55011,9 +55065,34 @@ if (e.question_number+1 == 27) {
     PublicSupport -= 1;
     FPWin -= 1;
     }
+    if (ans == 15002.5){
+    sundog += 2;
+    }
+    if (ans == 15008.5){
+    sundog += 2;
+    }
+    if (ans == 15005.5){
+    sundog += 2;
+    }
+    if (ans == 230001){
+    sundog += 1;
+    }
     if (ans == 170003) {
     PublicSupport -= 2;
     FPWin -= 1;
+    sundog += 2;
+    }
+    if (ans == 170006) {
+    PublicSupport -= 2;
+    FPWin -= 1;
+    sundog += 2;
+    }
+    if (ans == 70003) {
+    sundog += 1;
+    PublicSupport -= 1;
+    }
+    if (ans == 60003) {
+    sundog += 1;
     }
     if (ans == 170006){
     PublicSupport += 2;
@@ -55409,9 +55488,20 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bono";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#97351D";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C74E47";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
+    }
+    function SundogMentum() {
+        SundogNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "fggggggggsdgsdd";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A56254";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/t8ad8s.png";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "afafsfsafasfsf";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.7
     }
     function patMentum() {
         BuchananNom += 1;
@@ -55470,7 +55560,7 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9353E";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B0363D";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
@@ -57010,6 +57100,58 @@ if (e.question_number+1 == 18){
 }
 }
 );
+} else if (sundog == 24) {
+    SundogMentum();
+question_insert("question_20_internet", 
+{
+  "model": "campaign_trail.question",
+  "pk": "candidate_intro_sundog",
+  "fields": {
+    "priority": 0,
+    "description": "You're sitting at home, watching this year's RNC in San Diego. And there he is, Donald J. Trump. The casino mogul, the tabloid king, the man whose name is stitched onto more buildings than most Senators have passed bills. The circus ringleader has done it. He looks like a prizefighter. ''We don’t win anymore. Japan, China—they kill us. The border? Disaster. NAFTA? Total disaster. These politicians? No clue, no talent, no guts. It’s a joke.'' He points to his running mate, the positively evangelical former Senator, Bill Armstrong. The crowd roars. Flags wave. Time to take this guy down. ",
+    "likelihood": 1
+  }
+});
+question_insert("oslo_4", 
+{
+  "model": "campaign_trail.question",
+  "pk": "campaign_1_sundog",
+  "fields": {
+    "priority": 0,
+    "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick.",
+    "likelihood": 1
+  }
+});
+question_insert("campaign_1_sundog", 
+{
+  "model": "campaign_trail.question",
+  "pk": "campaign_2_sundog",
+  "fields": {
+    "priority": 0,
+    "description": "Dick Cheney is eager to hammer you on character, dragging Hillary and the whole administration with it. But unlike most Republicans who try it, Secretary Cheney has a clean record. At least personally. Still, your team found one thing: his eldest daughter. She’s a lesbian. D.C. insiders know. A few of his nuttier primary opponents even floated it. But it hasn’t quite hit the public square, not yet, anyway. Do you want to go there?",
+    "likelihood": 1
+  }
+});
+question_insert("campaign_2_sundog", 
+{
+  "model": "campaign_trail.question",
+  "pk": "campaign_3_sundog",
+  "fields": {
+    "priority": 0,
+    "description": "You’ve been talking to packed union halls, suburban rec centers, small-town school gyms, Black churches, VFW halls, police groups, classrooms—anyone, anywhere who’ll have you. Just running down the clock. But Dick Cheney’s not running that kind of race. He’s quiet, methodical, brutal. His people have zeroed in on a hard, narrow path: Missouri, Tennessee, Colorado, Ohio. No one else matters. So, what’s your next move?",
+    "likelihood": 1
+  }
+});
+question_insert("campaign_3_sundog", 
+{
+  "model": "campaign_trail.question",
+  "pk": "debate_sundog",
+  "fields": {
+    "priority": 0,
+    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you. It's your turn, Slick.",
+    "likelihood": 1
+  }
+});
             }
         }
     }
