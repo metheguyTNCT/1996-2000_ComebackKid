@@ -2469,54 +2469,54 @@ playerContainer.appendChild(controlsContainer);
     RecReading=true
     e.collect_results=true;
     campaignTrail_temp.achievements = {
-      "King of the Hill" : {
-        "image" : "https://i.imgur.com/pfwpjjG.png",
-        "description" : "Face off against Newt Gingrich in 2000.",
+      "Do It My Way" : {
+        "image" : "https://i.imgur.com/YbCqe3u.png",
+        "description" : "Win against Newt Gingrich.",
         "cannotBeCheated" : true
       },
       "Mistakes Were Made" : {
-        "image" : "https://i.imgur.com/nqlp2Rc.png",
-        "description" : "Face off against Oliver North in 2000.",
+        "image" : "https://i.imgur.com/VSS7W4t.png",
+        "description" : "Win against Oliver North.",
         "cannotBeCheated" : true
       },
-      "Standing Firm" : {
-        "image" : "https://i.imgur.com/SE0GihM.png",
-        "description" : "Face off against Dan Quayle in 2000.",
+      "What A Waste It Is" : {
+        "image" : "https://i.imgur.com/kMaj7qi.png",
+        "description" : "Win against Dan Quayle.",
         "cannotBeCheated" : true
       },
-      "Hail Mary" : {
-        "image" : "https://i.imgur.com/aVtHRtu.png",
-        "description" : "Face off against Jack Kemp in 2000.",
+      "Fumble" : {
+        "image" : "https://i.imgur.com/Tonwi97.png",
+        "description" : "Win against Jack Kemp.",
+        "cannotBeCheated" : true
+           },
+      "Next Time Try Decaf" : {
+        "image" : "https://i.imgur.com/t97SYst.png",
+        "description" : "Win against Alan Keyes.",
         "cannotBeCheated" : true
       },
       "Welcome to Fear City" : {
-        "image" : "https://i.imgur.com/J3Om7ph.png",
-        "description" : "Face off against George Pataki in 2000.",
+        "image" : "https://i.imgur.com/OywFUxJ.png",
+        "description" : "Win against George Pataki.",
         "cannotBeCheated" : true
       },
-      "The Mailman's Son" : {
-        "image" : "https://i.imgur.com/pWhfrX2.png",
-        "description" : "Face off against John Kasich in 2000.",
+      "Axeman" : {
+        "image" : "https://i.imgur.com/KofrCQh.png",
+        "description" : "Win against John Kasich.",
         "cannotBeCheated" : true
       },
-      "Straight Talk" : {
-        "image" : "https://i.imgur.com/RcSJtE8.png",
-        "description" : "Face off against John McCain in 2000.",
+      "That One" : {
+        "image" : "https://i.imgur.com/pr82fZ0.png",
+        "description" : "Win against John McCain.",
         "cannotBeCheated" : true
       },
-      "Misunderestimated" : {
-        "image" : "https://i.imgur.com/6Yqnhyr.png",
-        "description" : "Face off against George W. Bush in 2000.",
+      "Strikeout" : {
+        "image" : "https://i.imgur.com/AeQYUvz.png",
+        "description" : "Win against George W. Bush.",
         "cannotBeCheated" : true
       },
-      "Two for the Price of One" : {
+      "DNR" : {
         "image" : "https://i.imgur.com/XR1lbAm.png",
-        "description" : "Face off against Elizabeth Dole in 2000.",
-        "cannotBeCheated" : true
-      },
-      "Fortunate Son" : {
-        "image" : "https://i.imgur.com/N1JEMKk.png",
-        "description" : "Face off against Jeb Bush in 2000.",
+        "description" : "Win against Elizabeth Dole.",
         "cannotBeCheated" : true
       }
       }
