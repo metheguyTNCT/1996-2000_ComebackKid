@@ -2478,7 +2478,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3501010.577,
         "fields": {
             "question": "candidate_intro_sundog",
-            "description": "Are you kidding? This is the best possible news we could’ve hoped for. Honestly, I figured they’d take it from him at the Convention. I know things haven’t gone great so far in this race, and sure, the polls have us down, but Donald’s nomination? This is a gift from god. Let’s hit him hard. The man doesn’t even have one-fifth the experience it takes to be President."
+            "description": "Are you kidding? This is the best possible news we could’ve hoped for. Honestly, I figured they’d take it from him at the Convention. I know things haven’t gone great so far in this race, and sure, the polls have us down, but Ross Perot, he might have had a few good weeks in early '92, but most folks know he's a joke, we'll just remind them. "
         }
     },
     {
@@ -8679,7 +8679,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 200,
-            "state_multiplier": 0.991129999899998
+            "state_multiplier": 0.996129999899998
         }
     },
     {
@@ -8706,7 +8706,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 203,
-            "state_multiplier": 1.318112112325899812399812398931241
+            "state_multiplier": 1.329412112325899812399812398931241
         }
     },
     {
@@ -8931,7 +8931,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 228,
-            "state_multiplier": 2.3353422
+            "state_multiplier": 2.3453422
         }
     },
     {
@@ -9138,7 +9138,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 200,
-            "state_multiplier": 0.8259898989
+            "state_multiplier": 0.8219898989
         }
     },
     {
@@ -9165,7 +9165,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 203,
-            "state_multiplier": 1.09989982124989898199999995
+            "state_multiplier": 1.10189982124989898199999995
         }
     },
     {
@@ -10083,7 +10083,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 80,
             "state": 203,
-            "state_multiplier": 0.4461
+            "state_multiplier": 0.4261
         }
     },
     {
@@ -10548,7 +10548,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 90001,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.06712451
+            "global_multiplier": 0.074212451
         }
     },
     {
@@ -10568,7 +10568,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 900015551,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.03972451
+            "global_multiplier": 0.04872451
         }
     },
     {
@@ -25714,7 +25714,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0581398989895975
+            "state_multiplier": -0.0621398989895975
         }
     },
     {
@@ -26649,7 +26649,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 203,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.12989898989874663224112345
+            "state_multiplier": -0.12319898989874663224112345
         }
     },
     {
@@ -50345,7 +50345,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85002.5,
             "candidate": 77,
-            "answer_feedback": " You were right in your instinct, Slick. After a stretch of late nights and quiet negotiation, your signature joins Boris’s on the START III treaty, merely ink on paper, maybe, but backed by real friendship and a growing bond between two peoples. The headlines might chase the muck, but history will remember this day, the slow, deliberate steps toward a safer, nuclear-free world you’re walking together. "
+            "answer_feedback": "You were right in your instinct, Slick. After a stretch of late nights and quiet negotiations, your signature joins Boris’s on the START III treaty, mere ink on paper, perhaps, but backed by real friendship and a growing bond between two peoples. The headlines might still chase the muck, but history will remember this day, the slow, deliberate steps toward a safer, nuclear-free world you’re walking together. "
         }
     },
     {
@@ -50381,7 +50381,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85006.5,
             "candidate": 77,
-            "answer_feedback": "''I could agree to new START, yes — but with what I see from your policy, I cannot sign in good faith.'' Darn. You knew it might fall apart, but hearing it out loud still stings. The groundwork was there: honest dialogue, long nights, cautious optimism. But not every seed takes root. Still, it didn’t undo what came before. START II holds, and denuclearization of the former SSRs continues. Maybe next time, Billy."
+            "answer_feedback": "''I could agree to a new START, yes-but with what I see from your policy, I cannot sign in clear mind.'' Darn. You knew it might fall apart, but hearing it out loud still stings. The groundwork was there: honest dialogue, long nights, cautious optimism. But not every seed takes root. Still, it doesn’t undo what came before. START II holds, and the denuclearization of the former SSRs continues. Maybe next time, Billy."
         }
     },
     {
@@ -55843,7 +55843,7 @@ if (e.question_number+1 == 27) {
     Legacy += 1;
     FPWin -= 1;
     Ideology += 1;
-    sundog -= 10;
+    sundog -= 11;
     }
   //Russia CYOA (START III SUCCEEDS)
      if (ans == 85001.5){
@@ -56517,19 +56517,19 @@ document.head.appendChild(customStyling);
     }
     function SundogMentum() {
         SundogNom += 1;
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Paul";
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Trump";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A56254";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ron";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9E0E36";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/erlprg.png";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Donald";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "H. Ross";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.7
     }
     function patMentum() {
         BuchananNom += 1;
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#630A0A";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#750303";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/hBmckvd.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Patrick";
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Weld";
@@ -56547,7 +56547,7 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B22329";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#AD322E";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
     }
@@ -56571,7 +56571,7 @@ document.head.appendChild(customStyling);
             campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
             campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
             campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
-            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#D92532";
+            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#570004";
             campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
             campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.12
@@ -56583,7 +56583,7 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B0363D";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9F3939";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
 }
@@ -56631,8 +56631,8 @@ function bushMentum() {
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
-    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#136FC1";
-    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#CC0A10";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#1C4E80";
+    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#D23A2E";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
 }
@@ -57314,7 +57314,7 @@ if (e.question_number+1 == 18){
             }
         }
         if (e.question_number+1 == 25){
-            if (sundog >= 25) {
+            if (sundog >= 21) {
                 SundogMentum();
             question_insert("question_20_internet", 
             {
@@ -57322,7 +57322,7 @@ if (e.question_number+1 == 18){
               "pk": "candidate_intro_sundog",
               "fields": {
                 "priority": 0,
-                "description": "You're sitting at home, watching this year's RNC in San Diego. And there he is, Donald J. Trump. The casino mogul, the tabloid king, the man whose name is stitched onto more buildings than most Senators have passed bills. The circus ringleader has done it. He looks like a prizefighter. ''We don’t win anymore. Japan, China—they kill us. The border? Disaster. NAFTA? Total disaster. These politicians? No clue, no talent, no guts. It’s a joke.'' He points to his running mate, the positively evangelical former Senator, Bill Armstrong. The crowd roars like idiots. Time to handle this.  ",
+                "description": "My God. He’s done it. Ross Perot has finished the Republican primary season with a plurality—not a majority—but with concessions in hand, runner-up Bob Dole has cut a deal, effectively on behalf of the entire party. Now, the billionaire Bonaparte stands before the delegates in San Diego, shouting: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I’m Ross Perot. Built my company from nuthin’, ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess.'' How do we stop this circus?",
                 "likelihood": 1
               }
             });
@@ -58221,7 +58221,7 @@ vpTable = {
     "George Bush" : "George Allen",
     "Sonny Bono" : "Richard Lugar",
     "Dick Cheney" : "Tom Ridge",
-    "Donald Trump" : "Bill Armstrong",
+    "Ross Perot" : "Larry Pressler",
 
     "Ralph Nader" : "Winona LaDuke",
     "H. Ross Perot" : "Pat Choate",
