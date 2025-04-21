@@ -8841,7 +8841,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 218,
-            "state_multiplier": 1.205129899989811112119395995
+            "state_multiplier": 1.209129899989811112119395995
         }
     },
     {
@@ -9300,7 +9300,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 218,
-            "state_multiplier": 1.0579899889925199899898232126
+            "state_multiplier": 1.0572799889925199899898232126
         }
     },
     {
@@ -57424,12 +57424,13 @@ if (e.question_number+1 == 27) {
    }
    //Healthcare Vote CYOA (Succeeds)
    if (ans == 15004.5){
-    PublicSupport += 3;
+    PublicSupport += 2;
     LEGWin += 2;
-    Legacy += 2;
+    Legacy += 1;
     GotHealthcare += 1;
     Ideology += 1;
     Wins += 1;
+    sundog -= 2;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 10001){
@@ -57490,12 +57491,12 @@ if (e.question_number+1 == 27) {
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
     }
     if (ans == 15007.5){
-    LEGWin += 1;
+    LEGWin += 2;
     GotHealthcare += 1;
     Ideology += 1;
     Wins += 1;
     ctsAchievement("I Do");
-    sundog -= 1;
+    sundog -= 2;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 85018.5){
@@ -57505,7 +57506,7 @@ if (e.question_number+1 == 27) {
     GotHealthcare += 1;
     Ideology += 3;
     Wins += 2;
-    sundog -= 1;
+    sundog -= 2;
     ctsAchievement("The Work Goes On");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
