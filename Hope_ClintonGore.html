@@ -6465,7 +6465,7 @@ campaignTrail_temp.state_issue_score_json = [
         "fields": {
             "state": 183,
             "issue": 28,
-            "state_issue_score": -0.085,
+            "state_issue_score": -0.11112,
             "weight": 1
         }
     },
@@ -7335,7 +7335,7 @@ campaignTrail_temp.state_issue_score_json = [
         "fields": {
             "state": 205,
             "issue": 27,
-            "state_issue_score": -0.085,
+            "state_issue_score": -0.11112,
             "weight": 1
         }
     },
@@ -14114,7 +14114,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35020.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.085
+        "global_multiplier": -0.11112
     }
 },
 {
@@ -14144,7 +14144,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35021.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.085
+        "global_multiplier": -0.11112
     }
 },
 {
@@ -14204,7 +14204,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35022.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.085
+        "global_multiplier": -0.11112
     }
 },
 {
@@ -35170,6 +35170,50 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "state_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12586,
+        "fields": {
+            "answer": 35020.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.2921
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12586,
+        "fields": {
+            "answer": 35021.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.2921
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12586,
+        "fields": {
+            "answer": 350212.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.2921
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12586,
+        "fields": {
+            "answer": 35022.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.2921
         }
     },
     {
@@ -60488,14 +60532,17 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
 }
 function forbesMentum() {
     ForbesNom += 1;
-    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Lamm";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/0lbf5h.png";
+    campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
+    campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#36395B";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Forbes";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#85283A";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/rE6zjln.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Steve";
     campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#101DB3";
+    e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.3
+    e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 27)[0].fields.issue_score = -0.6
 }
 function powellMentum() {
     PowellNom += 1;
