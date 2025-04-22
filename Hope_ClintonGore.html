@@ -9324,7 +9324,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 210,
-            "state_multiplier": 0.9925113112121112198998998
+            "state_multiplier": 0.98998998998
         }
     },
     {
@@ -13914,7 +13914,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35017.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.399989998
+        "global_multiplier": -0.39989989998
     }
 },
 {
@@ -13944,7 +13944,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35018.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.399989998
+        "global_multiplier": -0.39989989998
     }
 },
 {
@@ -13974,7 +13974,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35019.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.399989998
+        "global_multiplier": -0.39989989998
     }
 },
 {
@@ -14004,7 +14004,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 3501919.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.399989998
+        "global_multiplier": -0.39989989998
     }
 },
 {
@@ -14234,7 +14234,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35004.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.47498765
+        "global_multiplier": -0.47249988765
     }
 },
 {
@@ -14264,7 +14264,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35005.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.47498765
+        "global_multiplier": -0.47249988765
     }
 },
 {
@@ -14294,7 +14294,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35006.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.47498765
+        "global_multiplier": -0.47249988765
     }
 },
 {
@@ -14324,7 +14324,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 1135006.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.47498765
+        "global_multiplier": -0.47249988765
     }
 },
 {
@@ -63616,7 +63616,16 @@ function updateInternationalStanding() {
 }
 
 function changeOpponentsTab() {
-    if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
+    if (sundog >= 20) {
+    addCandidate({
+        name: 'Ross Perot',
+        image: 'https://i.imgur.com/Gx7JESH.png',
+        description: 'Henry Ross Perot is not supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush\'s loss, he is against NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee.',
+        pros: 'Outsider appeal. Support from his 1992 campaign. Can reach across the isle. Has southern charm.',
+        cons: 'He won\'t campaign. Hated by half of the Republican Party. He doesn\'t want to be the nominee. He was never actually a Republican.',
+        strategy: 'Attack him for some of his gaffes during his 1992 campaign, while also making it seem like he doesn\'t want to be president, and hope that he doesn\'t bring up NAFTA too much.'
+    });
+ } if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     addCandidate({
         name: 'George Bush',
         image: 'https://files.catbox.moe/bpqyak.png',
@@ -63672,23 +63681,47 @@ function changeOpponentsTab() {
         cons: 'Near-constant gaffes, ideas far outside the mainstream',
         strategy: 'Paint him as unfit for office, seize on every misstatement he makes'
     });
+    addCandidate({
+        name: 'George W. Bush',
+        image: 'https://i.imgur.com/RZ49Joi.png',
+        description: 'As people continue to compare you to your predecessor, people have been clamoring for the old man own son to take you on. Their call is in the minority but while he\'s of the same blood, he\'s not of the same cloth as 41.',
+        pros: 'Quite fresh, the Bush name, Affable personality, very popular with evangelist.',
+        cons: 'Gaffe prone, the Bush name, little experience.',
+        strategy: 'Make it about his policy proposal. Be allusive with how you tie him to his father while highlighting is wackier belief.'
+    });
+    addCandidate({
+        name: 'Dick Cheney',
+        image: 'https://i.imgur.com/XxW3Fdq.png',
+        description: 'Never has someone with so much experience in politics been as dull as Dick Cheney. Serving as Chief of Staff, House Minority Whip, and Secretary of Defense, Cheney has done a lot in the almost thirty years Dick has been in politics, yet, Cheney still lacks the same name recognition other Republican politicians have.',
+        pros: 'Foreign policy experience. Worked close with every Republican president since Ford.',
+        cons: 'Boring. Lacks name recognition. Has done nothing politically relevant since Bush left office.',
+        strategy: 'Make him seem uncharismatic, and tie him to the unpopular Bush administration, and focus less on foreign policy and more on your accomplishments as president.'
+    });
 } if (DoleNom == 1) {
     deleteCandidateButton("Arlen Specter");
     deleteCandidateButton("Sonny Bono");
     deleteCandidateButton("Phil Gramm");
+    deleteCandidateButton("Ross Perot");
 } if (BuchananNom == 1) {
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Arlen Specter");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
     deleteCandidateButton("David Duke");
+    deleteCandidateButton("Ross Perot");
 } if (LamarNom == 1) {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Ross Perot");
 } if (SpecterNom == 1) {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
     deleteCandidateButton("Sonny Bono");
+    deleteCandidateButton("Ross Perot");
 } if (ForbesNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
@@ -63699,15 +63732,20 @@ function changeOpponentsTab() {
     deleteCandidateButton("Phil Gramm");
     deleteCandidateButton("Sonny Bono");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
     deleteCandidateButton("David Duke");
+    deleteCandidateButton("Ross Perot");
 } if (WilsonNom == 1) {
     deleteCandidateButton("Phil Gramm");
     deleteCandidateButton("Colin Powell");
+    deleteCandidateButton("Ross Perot");
 } if (GrammNom == 1) {
     deleteCandidateButton("Pete Wilson");
     deleteCandidateButton("Colin Powell");
     deleteCandidateButton("Sonny Bono");
     deleteCandidateButton("David Duke");
+    deleteCandidateButton("Ross Perot");
 } if (PowellNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
@@ -63718,9 +63756,21 @@ function changeOpponentsTab() {
     deleteCandidateButton("Phil Gramm");
     deleteCandidateButton("Sonny Bono");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
+    deleteCandidateButton("Ross Perot");
+} if (CheneyNom == 1) {
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Lamar Alexander");
+    deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("George W. Bush");
+    deleteCandidateButton("Sonny Bono");
+    deleteCandidateButton("Ross Perot");
 } if (BonoNom == 1) {
     deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Arlen Specter");   
+    deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Ross Perot");   
 } if (BushNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Pat Buchanan");
@@ -63731,6 +63781,21 @@ function changeOpponentsTab() {
     deleteCandidateButton("Phil Gramm");
     deleteCandidateButton("Sonny Bono");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
+    deleteCandidateButton("Ross Perot");
+} if (SundogNom == 1) {
+    deleteCandidateButton("Bob Dole");
+    deleteCandidateButton("Pat Buchanan");
+    deleteCandidateButton("Pete Wilson");
+    deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Colin Powell");
+    deleteCandidateButton("Lamar Alexander");
+    deleteCandidateButton("Phil Gramm");
+    deleteCandidateButton("Sonny Bono");
+    deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Dick Cheney");
+    deleteCandidateButton("George W. Bush");
 } if (FPWin <= -1) {
     addCandidate({
         name: 'Colin Powell',
