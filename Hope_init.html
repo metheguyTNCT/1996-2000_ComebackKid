@@ -1063,10 +1063,15 @@ abButton.style.userSelect = "none";
 abButton.style.zIndex = 5;
 
 let usingSecondary = false;
+
 abButton.addEventListener("click", () => {
   usingSecondary = !usingSecondary;
-  const selected = usingSecondary ? secondaryPlaylist : playlist;
-  changePlaylist(selected);
+
+  if (usingSecondary) {
+    changePlaylist(secondaryPlaylist);
+  } else {
+    changePlaylist(primaryPlaylist);
+  }
 });
 
 abButton.addEventListener("mousedown", () => {
