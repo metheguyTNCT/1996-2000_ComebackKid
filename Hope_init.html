@@ -996,8 +996,22 @@ mp3Display.id = "mp3Player"; // Add the ID to the MP3 display
 mp3Display.style.width = "300px";
 playerContainer.id = "player";
 mp3Display.style.height = "100px";
-mp3Display.style.backgroundColor = "black";
-mp3Display.style.borderRadius = "10px";
+mp3Display.style.width = "300px";
+mp3Display.style.height = "100px";
+mp3Display.style.background = "linear-gradient(to bottom, #222 0%, #111 100%)";
+mp3Display.style.borderRadius = "12px";
+mp3Display.style.border = "1px solid #444";
+mp3Display.style.boxShadow = `
+  0 4px 8px rgba(0,0,0,0.6),          /* Outer depth shadow */
+  inset 0 0 6px rgba(255,255,255,0.04), /* Internal gloss reflection */
+  inset 0 -2px 2px rgba(0,0,0,0.5),     /* Inner bottom rim shadow */
+  inset 0 2px 2px rgba(255,255,255,0.05)`; /* Top gloss edge */
+
+mp3Display.style.color = "white";
+mp3Display.style.fontFamily = "Arial, sans-serif";
+mp3Display.style.textAlign = "center";
+mp3Display.style.position = "relative";
+mp3Display.style.overflow = "hidden";
 mp3Display.style.color = "white";
 mp3Display.style.fontFamily = "Arial, sans-serif";
 mp3Display.style.textAlign = "center";
@@ -1118,6 +1132,12 @@ style.textContent = `
   }
 `;
 
+songInfo.style.backgroundImage = "url('https://files.catbox.moe/dfuvrk.png')";
+songInfo.style.backgroundSize = "cover";
+songInfo.style.backgroundRepeat = "repeat";
+songInfo.style.backgroundBlendMode = "multiply";
+songInfo.style.opacity = "0.95"; // faded lil bit
+
 document.head.appendChild(style);
 // Append songInfo to the screen element
 screen.appendChild(songInfo);
@@ -1159,6 +1179,7 @@ prevButton.alt = "Previous";
 prevButton.style.width = "50px";  // Increase the width
 prevButton.style.height = "50px";  // Increase the height
 controls.appendChild(prevButton);
+prevButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
 
 // Create the play/pause button
 const playPauseButton = document.createElement("img");
@@ -1169,6 +1190,7 @@ playPauseButton.alt = "Play/Pause";
 playPauseButton.style.width = "50px";  // Increase the width
 playPauseButton.style.height = "50px";  // Increase the height
 controls.appendChild(playPauseButton);
+playPauseButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
 function addTactileClickEffect(button) {
   button.style.transition = "transform 0.05s ease";
 
@@ -1193,6 +1215,7 @@ nextButton.alt = "Next";
 nextButton.style.width = "50px";  // Increase the widthnextButton.style.height = "50px";  // Increase the height
 nextButton.style.height = "50px";  // Increase the height
 controls.appendChild(nextButton);
+nextButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
 function addTactileClickEffect(button) {
   button.style.transition = "transform 0.05s ease";
 
