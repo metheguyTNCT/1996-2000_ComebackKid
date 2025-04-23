@@ -1134,6 +1134,21 @@ controls.id = "controls";
 controls.style.display = "flex";  // Use flexbox for buttons
 controls.style.flexDirection = "column";  // Stack the buttons vertically
 controls.style.alignItems = "center";  // Center buttons horizontally
+function addTactileClickEffect(button) {
+  button.style.transition = "transform 0.05s ease";
+
+  button.addEventListener("mousedown", () => {
+    button.style.transform = "translateY(1.5px)";
+  });
+
+  button.addEventListener("mouseup", () => {
+    button.style.transform = "translateY(0px)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translateY(0px)";
+  });
+}
 
 // Create the previous button
 const prevButton = document.createElement("img");
@@ -1154,6 +1169,21 @@ playPauseButton.alt = "Play/Pause";
 playPauseButton.style.width = "50px";  // Increase the width
 playPauseButton.style.height = "50px";  // Increase the height
 controls.appendChild(playPauseButton);
+function addTactileClickEffect(button) {
+  button.style.transition = "transform 0.05s ease";
+
+  button.addEventListener("mousedown", () => {
+    button.style.transform = "translateY(1.5px)";
+  });
+
+  button.addEventListener("mouseup", () => {
+    button.style.transform = "translateY(0px)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translateY(0px)";
+  });
+}
 
 // Create the next button
 const nextButton = document.createElement("img");
@@ -1163,7 +1193,26 @@ nextButton.alt = "Next";
 nextButton.style.width = "50px";  // Increase the widthnextButton.style.height = "50px";  // Increase the height
 nextButton.style.height = "50px";  // Increase the height
 controls.appendChild(nextButton);
+function addTactileClickEffect(button) {
+  button.style.transition = "transform 0.05s ease";
 
+  button.addEventListener("mousedown", () => {
+    button.style.transform = "translateY(1.5px)";
+  });
+
+  button.addEventListener("mouseup", () => {
+    button.style.transform = "translateY(0px)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translateY(0px)";
+  });
+}
+
+addTactileClickEffect(prevButton);
+addTactileClickEffect(playPauseButton);
+addTactileClickEffect(nextButton);
+  
 // Append the controls to the controlsContainer
 controlsContainer.appendChild(controls);
 
@@ -1193,6 +1242,21 @@ prevButton.addEventListener("click", function () {
   const audio = document.getElementById("audio");
   audio.src = playlist.getCurrentSong().audioLink;
   audio.play();
+  function addTactileClickEffect(button) {
+  button.style.transition = "transform 0.05s ease";
+
+  button.addEventListener("mousedown", () => {
+    button.style.transform = "translateY(1.5px)";
+  });
+
+  button.addEventListener("mouseup", () => {
+    button.style.transform = "translateY(0px)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translateY(0px)";
+  });
+}
 });
 // Append the controls container to the player container
 playerContainer.appendChild(controlsContainer);
