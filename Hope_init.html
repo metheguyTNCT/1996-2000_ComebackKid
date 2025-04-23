@@ -1542,42 +1542,11 @@ function setupSecondaryPlaylist() {
   secondaryPlaylist.addSong(alt9);
   secondaryPlaylist.addSong(alt10);
 }
-
-function addPlaylistToggleButton() {
-  const toggleButton = document.createElement("button");
-  toggleButton.textContent = "Switch Soundtrack";
-  toggleButton.style.position = "fixed";
-  toggleButton.style.bottom = "100px";
-  toggleButton.style.right = "20px";
-  toggleButton.style.padding = "8px";
-  toggleButton.style.backgroundColor = "#4e81f9";
-  toggleButton.style.color = "#ffffff";
-  toggleButton.style.border = "1px solid #466fda";
-  toggleButton.style.borderRadius = "5px";
-  toggleButton.style.cursor = "pointer";
-  toggleButton.style.fontSize = "11px";
-  toggleButton.style.zIndex = 9999;
-
-  let usingSecondary = false;
-
-  let playlist;
-  let primaryPlaylist;
-  let secondaryPlaylist;
-
-  toggleButton.addEventListener("click", () => {
-    usingSecondary = !usingSecondary;
-    const selected = usingSecondary ? secondaryPlaylist : playlist;
-    changePlaylist(selected);
-  });
-
-  document.body.appendChild(toggleButton);
-}
                 
   const gameWindow_player = document.getElementById("game_window");
   //use this function directly or put it in an event listener to start the music on the press of a certain button
   setupMusicPlayer();
   setupSecondaryPlaylist();
-  addPlaylistToggleButton();
   setupRandomizeButton();
   document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css">'
   document.head.innerHTML += `<link
