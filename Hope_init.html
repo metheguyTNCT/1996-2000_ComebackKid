@@ -915,7 +915,8 @@ function setupRandomizeButton() {
   
   
   function setupMusicPlayer() {
-    playlist = new Playlist();
+    primaryPlaylist = new Playlist();
+  playlist = primaryPlaylist;
   
   
     const song1 = new Song(
