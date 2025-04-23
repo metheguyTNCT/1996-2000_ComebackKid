@@ -1040,6 +1040,44 @@ bottomText.style.fontSize = "14px";
 bottomText.style.fontWeight = "bold";
 mp3Display.appendChild(bottomText);
 
+// Add subtle tactile A/B button on the border of the MP3 display
+const abButton = document.createElement("div");
+abButton.textContent = "A/B";
+abButton.style.position = "absolute";
+abButton.style.top = "76px";          // Aligns with the middle of the LCD
+abButton.style.right = "16px";        // Padding from the edge
+abButton.style.width = "26px";
+abButton.style.height = "14px";
+abButton.style.backgroundColor = "#3a3a3a";
+abButton.style.color = "white";
+abButton.style.border = "1px solid #222";
+abButton.style.borderRadius = "4px";
+abButton.style.boxShadow = "inset 0 -1.5px 2px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.08)";
+abButton.style.fontSize = "9px";
+abButton.style.fontFamily = "monospace";
+abButton.style.display = "flex";
+abButton.style.justifyContent = "center";
+abButton.style.alignItems = "center";
+abButton.style.cursor = "pointer";
+abButton.style.userSelect = "none";
+abButton.style.zIndex = 5;
+
+let usingSecondary = false;
+abButton.addEventListener("click", () => {
+  usingSecondary = !usingSecondary;
+  const selected = usingSecondary ? secondaryPlaylist : playlist;
+  changePlaylist(selected);
+});
+
+abButton.addEventListener("mousedown", () => {
+  abButton.style.transform = "translateY(1px)";
+});
+abButton.addEventListener("mouseup", () => {
+  abButton.style.transform = "translateY(0px)";
+});
+
+mp3Display.appendChild(abButton);
+
 // Add the MP3 display to the display box
 displayBox.appendChild(mp3Display);
 
@@ -1406,10 +1444,52 @@ playerContainer.appendChild(controlsContainer);
   `;
   
   document.head.appendChild(style);
+
+  let secondaryPlaylist;
+
+function setupSecondaryPlaylist() {
+  secondaryPlaylist = new Playlist();
+
+  const alt1 = new Song("Electric Feel", "MGMT", "https://audio.jukehost.co.uk/a_link_here");
+  const alt2 = new Song("Heroes", "David Bowie", "https://audio.jukehost.co.uk/b_link_here");
+  const alt3 = new Song("Reptilia", "The Strokes", "https://audio.jukehost.co.uk/c_link_here");
+
+  secondaryPlaylist.addSong(alt1);
+  secondaryPlaylist.addSong(alt2);
+  secondaryPlaylist.addSong(alt3);
+}
+
+function addPlaylistToggleButton() {
+  const toggleButton = document.createElement("button");
+  toggleButton.textContent = "Switch Soundtrack";
+  toggleButton.style.position = "fixed";
+  toggleButton.style.bottom = "100px";
+  toggleButton.style.right = "20px";
+  toggleButton.style.padding = "8px";
+  toggleButton.style.backgroundColor = "#4e81f9";
+  toggleButton.style.color = "#ffffff";
+  toggleButton.style.border = "1px solid #466fda";
+  toggleButton.style.borderRadius = "5px";
+  toggleButton.style.cursor = "pointer";
+  toggleButton.style.fontSize = "11px";
+  toggleButton.style.zIndex = 9999;
+
+  let usingSecondary = false;
+
+  toggleButton.addEventListener("click", () => {
+    usingSecondary = !usingSecondary;
+    const selected = usingSecondary ? secondaryPlaylist : playlist;
+    changePlaylist(selected);
+  });
+
+  document.body.appendChild(toggleButton);
+}
                 
   const gameWindow_player = document.getElementById("game_window");
   //use this function directly or put it in an event listener to start the music on the press of a certain button
   setupMusicPlayer();
+  setupSecondaryPlaylist();
+  addPlaylistToggleButton();
   setupRandomizeButton();
   document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/naruhina@1.0.0/gtk-4.0/gtk.css">'
   document.head.innerHTML += `<link
