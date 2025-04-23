@@ -1481,6 +1481,10 @@ function addPlaylistToggleButton() {
 
   let usingSecondary = false;
 
+  let playlist;
+  let primaryPlaylist;
+  let secondaryPlaylist;
+
   toggleButton.addEventListener("click", () => {
     usingSecondary = !usingSecondary;
     const selected = usingSecondary ? secondaryPlaylist : playlist;
