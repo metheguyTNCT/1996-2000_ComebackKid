@@ -570,6 +570,29 @@ transition-delay: 0.6s;
 body.crt {
   animation: crtFlicker 1.8s infinite;
 }
+body.crt {
+  position: relative;
+}
+body.crt::after {
+  content: '';
+  pointer-events: none;
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: inherit; /* copy your whole game canvas */
+  mix-blend-mode: screen;
+  transform: translateX(1px) scaleX(1.01);
+  clip-path: inset(0 66.6% 0 0); /* red stripe */
+  opacity: 0.05;
+}
+body.crt::before {
+  content: '';
+  pointer-events: none;
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: inherit;
+  mix-blend-mode: screen;
+  transform: translateX(-1px) scaleX(1.01);
+  clip-path: inset(0 0 0 66.6%); /* blue stripe */
+  opacity: 0.05;
+}
 </style>`
 
 styling = document.createElement("style");
