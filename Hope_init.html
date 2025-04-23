@@ -1620,7 +1620,11 @@ var button = document.createElement("button") // <button onclick="changeBanner()
 button.style = `font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;`
 button.innerHTML = "Toggle CRT Lines"
 footer.insertBefore(button, footer.firstChild);
-button.addEventListener("click", () => {crtOn = !crtOn; setCRTLines(crtOn)});
+button.addEventListener("click", () => {
+  crtOn = !crtOn;
+  setCRTLines(crtOn);
+  document.body.classList.toggle("crt", crtOn);
+});
 
 RecReading=true
 e.collect_results=true;
