@@ -8462,7 +8462,7 @@ campaignTrail_temp.candidate_issue_score_json = [
         "fields": {
             "candidate": 78,
             "issue": 27,
-            "issue_score": -0.1
+            "issue_score": -0.11
         }
     },
     {
@@ -61910,10 +61910,11 @@ function bushMentum() {
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#DE3E37";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0E1BB3";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C6352F";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B178F";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Robert J.";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.36
     }
 if (ans == 210001){
     campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/99s058I.png";
