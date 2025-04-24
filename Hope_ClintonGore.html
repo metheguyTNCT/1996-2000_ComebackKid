@@ -8426,7 +8426,7 @@ campaignTrail_temp.candidate_issue_score_json = [
         "fields": {
             "candidate": 77,
             "issue": 27,
-            "issue_score": 0.2
+            "issue_score": 0.21
         }
     },
     {
@@ -8435,7 +8435,7 @@ campaignTrail_temp.candidate_issue_score_json = [
         "fields": {
             "candidate": 77,
             "issue": 28,
-            "issue_score": 0.2
+            "issue_score": 0.21
         }
     },
     {
@@ -8471,7 +8471,7 @@ campaignTrail_temp.candidate_issue_score_json = [
         "fields": {
             "candidate": 78,
             "issue": 28,
-            "issue_score": -0.5
+            "issue_score": -0.51
         }
     },
     {
@@ -61766,6 +61766,8 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C34B4F";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.14
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
     }
     function SundogMentum() {
         SundogNom += 1;
@@ -61809,6 +61811,7 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#101EB3";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.07
     }
     function specterMentum() {
             SpecterNom += 1;
@@ -61848,6 +61851,7 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#902E28";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.33
 }
 function wilsonMentum() {
     WilsonNom += 1;
@@ -61914,7 +61918,7 @@ function bushMentum() {
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B178F";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Robert J.";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.36
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.24
     }
 if (ans == 210001){
     campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/99s058I.png";
