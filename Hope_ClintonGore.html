@@ -448,6 +448,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "candidate_intro_dark_dole",
+        "fields": {
+            "priority": 0,
+            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his honorable service in the Second World War, and a promise to cut income taxes by 15% across the board. ''Let me be the bridge to an America that too many forget, and too few still honor. Let me be the bridge to a time of discipline, conviction, and moral clarity.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "candidate_intro_buchanan",
         "fields": {
             "priority": 0,
@@ -2415,6 +2424,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "candidate_intro_buchanan",
             "description": "This is a man running to be Commander-in-Chief who thinks we ought to pull out of NATO and the UN. He called World War II a mistake, for crying out loud. This madman is unhinged, possibly the most unqualified Commander-in-Chief in recent memory."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35007.5,
+        "fields": {
+            "question": "candidate_intro_dark_dole",
+            "description": "Although I have great respect for him and his service to our country, Bob Dole is a relic of an bygone era, which we, as a nation, need to move on from. We do not need to build a bridge to the past, we need to build a bridge to the future.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35008.5,
+        "fields": {
+            "question": "candidate_intro_dark_dole",
+            "description": "Dole would have you think he’s a principled bipartisan. That couldn’t be any further from the truth. Dole stands by Gingrich’s uncompromising congress. By the time we're done with him, they'll think Gingrich is his running mate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35009.51,
+        "fields": {
+            "question": "candidate_intro_dark_dole",
+            "description": "Bob Dole? Him? I can’t say I’m worried. I was expecting tougher competition from Steve Forbes or Newt, but Dole? Not worth losing sleep over. We won't even mention him, just talk about our policies."
+        }
+    },
+    {
+	      "model": "campaign_trail.answer",
+        "pk": 3500991.5133,
+        "fields": {
+            "question": "candidate_intro_dark_dole",
+            "description": "I want the folks at home to really think about the first major choice Senator Dole made in this race: his running mate. Dan Lungren is fundamentally unfit, and much further to the right than most folks realize. I want to pinpoint that. "
         }
     },
     {
@@ -13926,6 +13967,36 @@ campaignTrail_temp.answer_score_global_json = [
       }
   },
   {
+      	"model": "campaign_trail.answer_score_global",
+        "pk": 12750,
+        "fields": {
+            "answer": 3500991.5133,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12751,
+        "fields": {
+            "answer": 3500991.5133,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0095
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12752,
+        "fields": {
+            "answer": 3500991.5133,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.023
+        }
+    },
+    {
       "model": "campaign_trail.answer_score_global",
       "pk": 12703,
       "fields": {
@@ -22807,6 +22878,16 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 29,
             "issue_score": 0.4,
             "issue_importance": 1.95
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1006,
+        "fields": {
+            "answer": 3500991.5133,
+            "issue": 28,
+            "issue_score": 0.28,
+            "issue_importance": 0.5
         }
     },
     {
@@ -34192,6 +34273,72 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "state_multiplier": 0.007356
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12754,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12755,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12756,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12757,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12758,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12758,
+        "fields": {
+            "answer": 3500991.5133,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.01
         }
     },
     {
@@ -56364,12 +56511,21 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_feedback",
+	      "model": "campaign_trail.answer_feedback",
         "pk": 12749,
         "fields": {
             "answer": 3500991.51,
             "candidate": 77,
             "answer_feedback": "For as much as people like Bob Dole, your instincts are right, many don’t trust him to say no to the extreme elements of the GOP and, by contrast, trust your vision for the nation and the coming century."
+        }
+    },
+    {
+    	  "model": "campaign_trail.answer_feedback",
+        "pk": 12749,
+        "fields": {
+            "answer": 3500991.5133,
+            "candidate": 77,
+            "answer_feedback": "Dole’s selection of Dan Lungren, the disarmingly direct and likable, but hard-right Attorney General of California, certainly electrified liberals, and focusing on that is apt. But remember: a lot of this is Beltway talk, and it doesn’t really speak to the actual concerns of voters."
         }
     },
     {
@@ -63291,10 +63447,10 @@ if (e.question_number+1 == 18){
                   {
                      
       "model": "campaign_trail.question",
-      "pk": "candidate_intro_dole",
+      "pk": "candidate_intro_dark_dole",
       "fields": {
       "priority": 0,
-      "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his honorable service in the Second World War, and a promise to cut income taxes by 15% across the board. ''Let me be the bridge to an America that only the unknowing call myth. Let me be the bridge to a time of tranquility, faith, and confidence in action.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
+      "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his honorable service in the Second World War, and a promise to cut income taxes by 15% across the board. ''Let me be the bridge to an America that too many forget, and too few still honor. Let me be the bridge to a time of discipline, conviction, and moral clarity.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
       "likelihood": 1
       }
                       }
