@@ -61904,6 +61904,17 @@ function bushMentum() {
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
 }
+    function rdoleMentum() {
+        DoleNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#DE3E37";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0E1BB3";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Robert";
+    }
 if (ans == 210001){
     campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/99s058I.png";
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/99s058I.png';
@@ -63135,6 +63146,66 @@ if (e.question_number+1 == 18){
         // Wilson Inserters 
         
      } else if (DisasterMidterms == 1) {
+    if (e.player_answers.includes(70001) || e.player_answers.includes(85026.5)) {
+                    doleMentum();
+                  question_insert("question_20_internet", 
+                  {
+                     
+      "model": "campaign_trail.question",
+      "pk": "candidate_intro_dole",
+      "fields": {
+      "priority": 0,
+      "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his honorable service in the Second World War, and a promise to cut income taxes by 15% across the board. ''Let me be the bridge to an America that only the unknowing call myth. Let me be the bridge to a time of tranquility, faith, and confidence in action.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
+      "likelihood": 1
+      }
+                      }
+                  
+                  );
+                  question_insert("oslo_4", 
+      {
+                 "model": "campaign_trail.question",
+            "pk": "campaign_1_dole",
+            "fields": {
+                "priority": 0,
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, just what should you remind America of to take back control?",
+                "likelihood": 1
+            }
+      }
+      );
+                    question_insert("campaign_1_dole", 
+      {
+            "model": "campaign_trail.question",
+            "pk": "campaign_2_dole",
+            "fields": {
+                "priority": 0,
+                "description": "Bob Dole’s a really easy target. He’s known to all and yet loved by nearly nobody. He’s been in Washington longer than most voters have been alive, and while there’s respect for his service, there’s a lot of baggage there too. He’s the champion of the GOP in a confused after-Reagan haze. No <i>message</i>, no <i>momentum</i>, no <i>magic</i>. If we’re gonna beat him clean, you’ll need something sharp, something that shatters the whole façade.",
+                "likelihood": 1
+            }
+      }
+      );
+                      question_insert("campaign_2_dole", 
+      {
+            "model": "campaign_trail.question",
+            "pk": "campaign_3_dole",
+            "fields": {
+                "priority": 0,
+                "description": "You’ve talked a lot about the issues that affect the nation broadly, but don’t lose sight of the states that’ll actually decide this election. No matter what Dole throws at us, you’ll have to finish strong where it counts, Ohio, Missouri, Florida, Pennsylvania. That’s where the race is won or lost. Do you have a plan in mind? ",
+                "likelihood": 1
+            }
+      }
+      );
+       question_insert("campaign_3_dole", 
+      {
+                 "model": "campaign_trail.question",
+      "pk": "debate_dole",
+      "fields": {
+          "priority": 0,
+          "description": "You’re in Hartford, Connecticut. To your right stands Senator Dole—the poor old soul. As he wraps up his opening statement, you wonder: why did he run? Doesn’t he see the polls? This has to be one of the most lopsided races in recent memory, and he’s the one taking the punches for all to see. Maybe it doesn’t matter to him. Maybe he sees something you don’t. But if that’s the case, you’ve got to stop him here. For his own good, and for the country’s, send him into retirement.",
+          "likelihood": 1
+      }
+      }
+      );
+    } else {
         wilsonMentum();
       question_insert("question_20_internet", 
         {
@@ -63269,6 +63340,7 @@ if (e.question_number+1 == 18){
         }
         );
     } 
+}
                         } else if (Ideology >= 2) {
                           // Buchanan Inserters
                           if (SlimGOPCongress == 1) {
