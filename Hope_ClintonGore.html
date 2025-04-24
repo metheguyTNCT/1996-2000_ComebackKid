@@ -65973,17 +65973,17 @@ function changeOpponentsTab() {
     if (sundog >= 19) {
         addCandidate({
             name: 'Donald Trump',
-            image: 'https://files.catbox.moe/ud7ckn.png',
-            description: 'Yet another billionaire has tipped their toes into the running, an old... \'buddy\' of yours, he believes. The divorced, recently cucked, failed New York businessman himself, Donald John Trump.',
-            pros: 'Undercuts Perot\'s momentum. Will be a formable opponent... for Perot.',
-            cons: 'Christ, where to begin? He\'s a closeted white supremacist, openly sexist, alleged wife beater and rapist. Not to mention the many failed ventures and investments he\'s collected, as the list would be too long.',
+            image: 'https://files.catbox.moe/85mndx.png',
+            description: 'Yet another billionaire has tipped their toes into the running, an old... buddy of yours. Cripes. A divorcee, a failed businessman, a man loved by millions , Donald John Trump.',
+            pros: 'As great at seducing voters with his ideas as he is \'seducing\' women with... money? An outsider who still seems sincerely Republican. Very charismatic and ready to throw dirt.',
+            cons: 'An inexperienced, openly sexist, alleged domestic abuser. Known to make himself enemies and put on a clown show if the spotlight\'s on him.',
             strategy: 'Find a way to \'pied piper\' his ascent. If successful, you will win. Guaranteed. Let him make an ass of himself. Take the high road and coast to victory without breaking a sweat.'
         });
  } if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
     addCandidate({
         name: 'George W. Bush',
         image: 'https://files.catbox.moe/xsporr.png',
-        description: 'As people continue to compare you to your predecessor, people have been clamoring for the old man own son to take you on. Their call is in the minority but while he\'s of the same blood, he\'s not of the same cloth as 41.',
+        description: 'As people continue to compare you to your predecessor, people have been clamoring for the old man\'s own son to take you on. Their call is in the minority but while he\'s of the same blood, he\'s not of the same cloth as 41.',
         pros: 'Quite fresh, the Bush name, Affable personality, very popular with evangelist.',
         cons: 'Gaffe prone, the Bush name, little experience.',
         strategy: 'Make it about his policy proposal. Be allusive with how you tie him to his father while highlighting is wackier belief.'
@@ -66109,6 +66109,7 @@ function changeOpponentsTab() {
     deleteCandidateButton("Pat Buchanan");
     deleteCandidateButton("Lamar Alexander");
     deleteCandidateButton("Dan Quayle");
+    deleteCandidateButton("Colin Powell");
     deleteCandidateButton("Arlen Specter");
     deleteCandidateButton("George W. Bush");
     deleteCandidateButton("Sonny Bono");
@@ -66116,6 +66117,7 @@ function changeOpponentsTab() {
 } if (BonoNom == 1) {
     deleteCandidateButton("Bob Dole");
     deleteCandidateButton("Arlen Specter");
+    deleteCandidateButton("Colin Powell");
     deleteCandidateButton("Donald Trump");   
 } if (BushNom == 1) {
     deleteCandidateButton("Bob Dole");
@@ -66159,7 +66161,7 @@ function changeOpponentsTab() {
         cons: 'He won\'t campaign. Hated by half of the Republican Party. He doesn\'t want to be the nominee. He was never actually a Republican.',
         strategy: 'Attack him for some of his gaffes during his 1992 campaign, while also making it seem like he doesn\'t want to be president, and hope that he doesn\'t bring up NAFTA too much.'
     });
-} if (FPWin <= -1) {
+} if (FPWin <= -1 && e.question_number+1 <= 24) {
     addCandidate({
         name: 'Colin Powell',
         image: 'https://files.catbox.moe/yck4sj.png',
