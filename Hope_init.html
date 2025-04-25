@@ -584,14 +584,36 @@ body.crt::after {
   opacity: 0.05;
 }
 body.crt::before {
-  content: '';
+  content: "";
   pointer-events: none;
-  position: absolute; top:0; left:0; right:0; bottom:0;
-  background: inherit;
-  mix-blend-mode: screen;
-  transform: translateX(-1px) scaleX(1.01);
-  clip-path: inset(0 0 0 66.6%); /* blue stripe */
-  opacity: 0.05;
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  mix-blend-mode: multiply;
+  z-index: 9999;
+}
+body.crt {
+  border-radius: 8px;
+  overflow: hidden;
+  transform: perspective(800px) rotateX(0.5deg) rotateY(-0.5deg);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.25);
+}
+body.crt::after {
+  box-shadow: 0 0 12px rgba(150, 200, 255, 0.05);
+}
+body.crt::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://files.catbox.moe/npuryl.png') repeat;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: 9999;
 }
 </style>`
 
@@ -700,8 +722,8 @@ tooltipList = [
 // Political people
 {searchString: "the Gipper", explanationText: "<img src=https://files.catbox.moe/bunzyj.png> California cowboy. Rode into Washington with a smile, a teleprompter, and rewrote the script of American politics."},
 {searchString: "Reagan", explanationText: "<img src=https://files.catbox.moe/bunzyj.png> California cowboy. Rode into Washington with a smile, a teleprompter, and rewrote the script of American politics."},
-{searchString: "41", explanationText: "<img src=https://files.catbox.moe/v29fxd.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
-{searchString: "Old Man Bush", explanationText: "<img src=https://files.catbox.moe/v29fxd.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
+{searchString: "41", explanationText: "<img src=https://files.catbox.moe/49jtbc.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
+{searchString: "Old Man Bush", explanationText: "<img src=https://files.catbox.moe/49jtbc.png> CIA hand. UN man. Yale skull. A Cold Warrior to the core, kind, cunning, and out of step with his party by the end."},
 {searchString: "Ted Kennedy", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
 {searchString: "Ted", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
 {searchString: "Teddy", explanationText: "<img src=https://files.catbox.moe/t6dqxt.png> The last one"},
