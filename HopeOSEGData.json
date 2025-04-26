@@ -2691,7 +2691,6 @@
                 {
                     "id": "question_2_wtc_bombing",
                     "description": "A month has passed, and it still feels surreal to be in the White House, to actually be the President. You're starting to get used to it all. As you’re eating lunch, along with a leftover box of chocolates Hillary gave you for Valentine’s Day, Mack McLarty rushes in, his face pale. He creeps over to you and whispers, ''Bill, the World Trade Center has just been bombed.'' Your heart sinks, and you immediately rush into the Situation Room. You hang your head and think of a decision.",
-
                     "answers": [
                         {
                             "id": 5,
@@ -3797,15 +3796,15 @@
         "questionTextColor": "#000000"
     },
     "hasStateVisits": true,
-    "scenarioName": "1996",
+    "scenarioName": "Hope Megadrive",
     "scenarioDescription": "<p>Bill Clinton cannot believe he’s here. Gliding through town halls and across stages nationwide, he shared a modern vision, a ''third way'' forward. By uniting America’s diverse strands, he built a broad coalition that carried him through the wreckage of recession and into the White House, toppling the once-unshakable George Bush. \n</p><p>Now he sits in the same office once held by his hero, John F. Kennedy. He looks out the window and remembers where, and why, he started: <b style=\"color:#4470F5; font-size: 15px;\">Hope</b>. The scandals, the pressure, the questions, they come with the territory. He’s learned that. But he understands the stakes now: to prove he’s not just the boy who made it out of Arkansas, but the man who can lead the free world, and change it.</p>",
     "scenarioImageUrl": "https://files.catbox.moe/y6rfhe.png",
-    "credits": "by Dan Bryan, converted by Jet",
+    "credits": "by the Comeback Kids",
     "music": [
         {
-            "url": "https://audio.jukehost.co.uk/JjXNxLy00Ko2A8GTQ3Xs7T4CQdqvNRgF",
-            "displayName": "Remember The Time  - Michael Jackson",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/Michael_Jackson_-_Remember_the_Time.png"
+            "url": "https://files.catbox.moe/5b1ug3.mp3",
+            "displayName": "Jam  - Michael Jackson",
+            "imageUrl": "https://m.media-amazon.com/images/I/61suRnNcXeL._UF1000,1000_QL80_.jpg"
         },
         {
             "url": "https://audio.jukehost.co.uk/JJZCEsKd9jgmEsE4N11eAE0OGcpJESFn",
@@ -3823,9 +3822,9 @@
             "imageUrl": "https://i.scdn.co/image/ab67616d0000b27392e9684c11fb2385fb61c211"
         },
         {
-            "url": "https://audio.jukehost.co.uk/SPIHfPTBVrdg3Xe4eW9aAbSCQeBtcbzC",
-            "displayName": "Everything You Know Is Wrong  - \"Weird Al\" Yankovic",
-            "imageUrl": "https://images.genius.com/ccb0e0ebaa35420dbf5df55f4da2937a.1000x1000x1.jpg"
+            "url": "https://files.catbox.moe/f5s7on.mp3",
+            "displayName": "Headline News  - \"Weird Al\" Yankovic",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2a/Headlinenews.jpg"
         },
         {
             "url": "https://audio.jukehost.co.uk/ziNY3kRHMeqZ6n7nUalHCf1SGxH8XWJt",
@@ -3843,9 +3842,9 @@
             "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/bb/Oasis%2C_Roll_With_It_single.png"
         },
         {
-            "url": "https://audio.jukehost.co.uk/HcytiFld28Juw5sRD7aPTpObvjAMQqyJ",
-            "displayName": "I Wonder If Heaven Got A Ghetto - 2Pac",
-            "imageUrl": "https://i.scdn.co/image/ab67616d00001e028e0ff34ad21955b6f4da9b86"
+            "url": "https://files.catbox.moe/1qtb44.mp3",
+            "displayName": "ifwhiteamericatoldthetruthforonedayitsworldwouldfallapart - Manic Street Preachers",
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733f8f060e2f4ad634a94ae1df"
         },
         {
             "url": "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN",
