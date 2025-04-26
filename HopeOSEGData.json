@@ -2652,7 +2652,40 @@
                 {
                     "id": "question_5_healthcare_task_force",
                     "description": "It’s like living in a museum. You sit back in the Oval Office, winter morning light resting in the windows, and stare at the portraits of your predecessors. It’s charming—but you need to get to work. The inauguration was just a few days ago, and already the sheer weight of the job is settling in. America’s healthcare system yearns for reform, and you’ve got a chance to deliver. A question lingers on your mind, however: Who should lead the charge?",
-                    "answers": [],
+                    "answers": [
+                        {
+                            "id": 1,
+                            "description": "Well, Hillary, of course. She’s as smart as they come, and she’s been working on these issues her whole life. If anyone can sit down with the moderates, talk to ‘em, and get ‘em on board, it’s her. She’s got the talent, the heart, and the grit to get it done.\n",
+                            "feedback": "She embraces you when you finally tell her the news, her eyes gleaming with delight. She can’t thank you enough for trusting her with the cornerstone of your agenda. She’ll get it done, you can feel it. You know damn well she’s smart and determined enough to pull it off. But what’ll the media say?\n\n",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "description": "Ted Kennedy has spent his life fighting for healthcare, it’s his mission, his legacy. And if anyone has the passion and the influence to bring people together and get the votes we need, it’s Ted.\n",
+                            "feedback": "Kennedy explains he's not compromising. You knew this, you just thought you could persuade him, like you've done with almost everyone. Though he'd be glad to help, he'll stop at nothing to get universal healthcare passed. It's his world on this front, and you're just along for the ride.\n",
+                            "answerEffects": []
+                        },
+                        {
+                            "id": 3,
+                            "description": "I can’t think of a better team to bring this party together than George Mitchell and Tom Foley. If anyone can work side by side to deliver clear, thoughtful healthcare policy, it’s those two.",
+                            "feedback": "Partnering with Mitchell and Foley remains your best shot at producing a workable bill, one that can satisfy all wings of the party, and maybe even bring along a few moderate Republicans. The left might keep hungering for more, but in this climate, it's a lot better than nothing.",
+                            "answerEffects": []
+                        },
+                        {
+                            "id": 4,
+                            "description": "Let’s bring the doctors, the health insurers, and the experts together to lead this effort. If we’re gonna do this right, we need the people who know the system inside and out, and who can help us get it done.",
+                            "feedback": "Al, the Atari Democrats, and the growing Clinton coalition of business and middle-class voters appreciate the approach, because for you, the only real path to reform lies in depoliticizing the issue by anchoring it to the credibility of doctors, science, and research.\n",
+                            "answerEffects": []
+                        }
+                    ],
                     "keepInPlaceIfQuestionsShuffled": false
                 },
                 {
@@ -3601,22 +3634,113 @@
         }
     ],
     "theme": {
-        "backgroundImageUrl": "",
+        "backgroundImageUrl": "https://files.catbox.moe/jhcip6.png",
         "backgroundColor": "",
-        "headerImageUrl": "",
-        "primaryGameWindowColor": "",
-        "secondaryGameWindowColor": "",
+        "headerImageUrl": "https://files.catbox.moe/t43ts8.png",
+        "primaryGameWindowColor": "#5788ed",
+        "secondaryGameWindowColor": "#4e84f4",
         "primaryGameWindowTextColor": "",
-        "secondaryGameWindowTextColor": "",
+        "secondaryGameWindowTextColor": "#ffffff",
         "bottomBannerBackgroundColor": "",
         "bottomBannerTextColor": "",
         "advisorImage": "https://files.catbox.moe/j9lmic.gif",
-        "quote": ""
+        "quote": "",
+        "questionTextColor": "#000000"
     },
-    "hasStateVisits": false,
+    "hasStateVisits": true,
     "scenarioName": "1996",
     "scenarioDescription": "<p>Bill Clinton cannot believe he’s here. Gliding through town halls and across stages nationwide, he shared a modern vision, a ''third way'' forward. By uniting America’s diverse strands, he built a broad coalition that carried him through the wreckage of recession and into the White House, toppling the once-unshakable George Bush. \n</p><p>Now he sits in the same office once held by his hero, John F. Kennedy. He looks out the window and remembers where, and why, he started: <b style=\"color:#4470F5; font-size: 15px;\">Hope</b>. The scandals, the pressure, the questions, they come with the territory. He’s learned that. But he understands the stakes now: to prove he’s not just the boy who made it out of Arkansas, but the man who can lead the free world, and change it.</p>",
     "scenarioImageUrl": "https://files.catbox.moe/y6rfhe.png",
     "credits": "by Dan Bryan, converted by Jet",
-    "music": []
+    "music": [
+        {
+            "url": "https://audio.jukehost.co.uk/JjXNxLy00Ko2A8GTQ3Xs7T4CQdqvNRgF",
+            "displayName": "Remember The Time  - Michael Jackson",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/Michael_Jackson_-_Remember_the_Time.png"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/JJZCEsKd9jgmEsE4N11eAE0OGcpJESFn",
+            "displayName": "For Once In My Life - Stevie Wonder",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3e/Foronceinmylife.jpg"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/88xivB4P8IM6dvEHLISGOvKSFlzqbubM",
+            "displayName": "Uptown Girl  Billy Joel",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/01/Uptown_Girl_joel.jpg"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8",
+            "displayName": "Best Imitation Of Myself - Ben Folds Five",
+            "imageUrl": "https://i.scdn.co/image/ab67616d0000b27392e9684c11fb2385fb61c211"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/SPIHfPTBVrdg3Xe4eW9aAbSCQeBtcbzC",
+            "displayName": "Everything You Know Is Wrong  - \"Weird Al\" Yankovic",
+            "imageUrl": "https://images.genius.com/ccb0e0ebaa35420dbf5df55f4da2937a.1000x1000x1.jpg"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/ziNY3kRHMeqZ6n7nUalHCf1SGxH8XWJt",
+            "displayName": "Canned Heat - Jamiroquai",
+            "imageUrl": "https://i.discogs.com/VkRYYVYuRoajbhIBHcU_dAr2XWMcF053KdcDzC9Wr5E/rs:fit/g:sm/q:90/h:539/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwMDIx/MC0xMzA1NzE4NTA1/LmpwZWc.jpeg"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/kelvRUNlDVvVRo8LCC8EmoUtL6c5TiRD",
+            "displayName": "Black Velvet - Alannah Miles",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Alannah_Myles_Black_Velvet_Cover.jpg"
+        },
+        {
+            "url": " https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD",
+            "displayName": "Roll With It - Oasis",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/bb/Oasis%2C_Roll_With_It_single.png"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/HcytiFld28Juw5sRD7aPTpObvjAMQqyJ",
+            "displayName": "I Wonder If Heaven Got A Ghetto - 2Pac",
+            "imageUrl": "https://i.scdn.co/image/ab67616d00001e028e0ff34ad21955b6f4da9b86"
+        },
+        {
+            "url": "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN",
+            "displayName": "My Iron Lung - Radiohead",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/My_Iron_Lung.jpg/250px-My_Iron_Lung.jpg"
+        }
+    ],
+    "tooltips": [
+        {
+            "key": "Hillary",
+            "value": "<img src=https://files.catbox.moe/d5bw4k.png> My dream and nightmare. The smartest person in the room, and sometimes the hardest to love."
+        },
+        {
+            "key": "Socks",
+            "value": "<img src=https://files.catbox.moe/5z63q1.png> White House royalty"
+        },
+        {
+            "key": "Monica",
+            "value": "<img src=https://files.catbox.moe/jb36hl.png> Met the wrong man in the wrong place at the wrong time."
+        },
+        {
+            "key": "Travelgate",
+            "value": "Several Travel Office staffers were fired, allegedly to make room for personal friends."
+        },
+        {
+            "key": "Troopergate",
+            "value": "Arkansas State Troopers allege that they procured women for then-Governor Clinton"
+        },
+        {
+            "key": "Nannygate",
+            "value": "Zoë Baird and Kimba Wood, nominees for positions in the Justice Department, were found to have employed illegal immigrants as nannies."
+        },
+        {
+            "key": "haircut",
+            "value": "Allegation that Air Force One was delayed for to hours while President Clinton had a haircut."
+        },
+        {
+            "key": "Whitewater",
+            "value": "Allegations of shady dealings tied to a failed Arkansas real estate venture."
+        },
+        {
+            "key": "Mack McLarty",
+            "value": "<img src=https://files.catbox.moe/4mlch0.png> Childhood buddy turned Chief of Staff, a nice man in over his head"
+        }
+    ],
+    "furtherReading": "<h4 style=\\\"margin-top: 0.5em;\\\">Sources</h4><a href=\\\"https://archive.org/details/presidentialfoll00hall\\\" target=”_blank”>Ralph Z. Hallow & Bradley S. O'Leary - Presidential Follies : Those Who Would be President and Those Who Should Think Again!</a></br><a href=\\\"https://www.amazon.com/Gatekeepers-White-Chiefs-Define-Presidency/dp/0804138249\\\" target=”_blank”>Chris Whipple - The Gatekeepers: How the White House Chiefs of Staff Define Every Presidency</a></br><a href=\\\"http://www.amazon.com/exec/obidos/ASIN/032110028X/amhius20-20\\\" target=”_blank”>Larry Sabato - Overtime! The Election 2000 Thriller</a><h4>2000/Second Term Sources</h4><a href=\\\"https://p2000.us/cands.html\\\" target=”_blank”>Democracy in Action 2000</a></br><a href=\\\"https://www.amazon.com/Vast-Conspiracy-Scandal-Brought-President-ebook/dp/B009UAO1KQ\\\" target=”_blank”>Jeffery Toobin - A Vast Conspiracy: The Real Story of the Sex Scandal That Nearly Brought Down a President</a></br><a href=\\\"http://www.amazon.com/exec/obidos/ASIN/B003YFIYWY/amhius20-20\\\" target=”_blank”>The Ralph Nader Reader</a><h4>Links</h4><a href=\\\"http://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=2&psid=3377\\\" target=”_blank”>Digital History - The Disputed Election of 2000</a></br><a href=\\\"http://www.pbs.org/wnet/supremecourt/future/landmark_bush.html\\\" target=”_blank”><em>Bush v. Gore</em></a></br><a href=\\\"http://www.vanityfair.com/news/2004/10/florida-election-2000\\\" target=”_blank”>The Path to Florida</a></br><a href=\\\"http://www.historyplace.com/speeches/gore-concedes.htm\\\" target=”_blank”>Al Gore Concedes the 2000 Election</a>\n"
 }
