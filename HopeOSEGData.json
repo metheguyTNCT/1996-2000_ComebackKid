@@ -34,7 +34,8 @@
             "runningMateIds": [
                 81
             ],
-            "startingGlobalMultiplier": 1
+            "startingGlobalMultiplier": 1,
+            "bannerImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Clinton_Gore_96.svg/1920px-Clinton_Gore_96.svg.png"
         },
         {
             "id": 78,
