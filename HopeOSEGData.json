@@ -2695,9 +2695,128 @@
                     "answers": [
                         {
                             "id": 5,
-                            "description": "Answer description here",
-                            "feedback": "Answer feedback here, leave blank for none",
-                            "answerEffects": []
+                            "description": "Good Lord. My thoughts and prayers are with those who lost their lives. Hillary and I will travel to New York City to mourn the victims and pray for their families, while honoring their memory. At this moment, that’s all we can do.",
+                            "feedback": "It’s a somber Saturday evening in New York City. A candlelight vigil surrounds the basement entrance as you join the mourning crowd. You embrace and console the families who lost their fathers, husbands, and friends, promising them that you, and the American people, will never forget this tragic day.'",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.008532
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.181
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.02
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "description": "Jesus Christ. How on earth did they let this happen? This is unacceptable, We need to know who did this. Put out a quick statement so we can start, and let's coordinate with the FBI and Governor Cuomo to determine who was responsible and uncover why this happened.",
+                            "feedback": "Years would pass before Ramzi Yousef and his co-conspirators were caught and arrested for the bombing. While many may have already forgotten the attack, those who lost loved ones that day never will, and you surely won't. Even if there really wasn't, you feel like there was something you could do to prevent this.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.009
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.178
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.6,
+                                    "weight": 0.5
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": -0.6,
+                                    "weight": 0.5
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 29,
+                                    "stateId": 181,
+                                    "amount": -0.6,
+                                    "weight": 0.5
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 30,
+                                    "stateId": 181,
+                                    "amount": -0.15,
+                                    "weight": 1.5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "description": "No one punches us without getting punched back. Once we find out who is responsible, we’ll strike back swiftly and decisively, understood?",
+                            "feedback": "You soon locate the culprits and order an airstrike on the suspected training camp where the attack was planned. There are still questions for many, but the American people are satisfied with your strong response, and the victims can get some form of justice.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.012
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.179
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 30,
+                                    "stateId": 181,
+                                    "amount": -0.3,
+                                    "weight": 2.5
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 30,
+                                    "stateId": 181,
+                                    "amount": 0.075,
+                                    "weight": 1.25
+                                }
+                            ]
                         }
                     ],
                     "keepInPlaceIfQuestionsShuffled": true
@@ -2705,14 +2824,7 @@
                 {
                     "id": "question_3_deficit",
                     "description": "Twelve years of the Gipper and Old Man Bush’s so-called ''fiscal responsibility'' have left America drowning in a new kind of red scare, not communism, but debt. Tax breaks for the wealthy drained the public coffers, and by fiscal year 1992, the nation faced a recession and a $290 billion deficit. Now, your economic team, Bentsen at Treasury, Panetta at OMB, Reich at Labor, and Rubin as economic advisor, clash over the path forward. Bentsen urges deficit reduction to restore investor confidence, while Reich argues for policies to tackle stagnant wages and drive broad consumer spending.",
-                    "answers": [
-                        {
-                            "id": 6,
-                            "description": "Answer description here",
-                            "feedback": "Answer feedback here, leave blank for none",
-                            "answerEffects": []
-                        }
-                    ],
+                    "answers": [],
                     "keepInPlaceIfQuestionsShuffled": true
                 },
                 {
@@ -2739,27 +2851,13 @@
                 {
                     "id": "question_4andahalf_supremecourt",
                     "description": "Justice Byron ''Whizzer'' White is retiring, giving you your first Supreme Court vacancy. A Kennedy appointee, he’s seen as a lapsed liberal, more cautious than strictly ideological. The process is long, the press is restless, names rise and fall, and every choice carries risk. You’ve talked it through with Al, your Cabinet, and others, but the decision is yours.",
-                    "answers": [
-                        {
-                            "id": 7,
-                            "description": "Answer description here",
-                            "feedback": "Answer feedback here, leave blank for none",
-                            "answerEffects": []
-                        }
-                    ],
+                    "answers": [],
                     "keepInPlaceIfQuestionsShuffled": true
                 },
                 {
                     "id": "whitewater_question",
                     "description": "The GOP and the press are desperate for something, anything, to get you on. Travelgate, Troopergate, Nannygate — you can’t even get a haircut without the press crying foul. But no matter the scandal du jour, it always comes back to Whitewater: a years-old land investment deal you and Hillary entered into back in Arkansas that lost money and stirred up questions that never seem to die, questions that feed the fever dreams of your loudest enemies. Something has to be done. But what?",
-                    "answers": [
-                        {
-                            "id": 8,
-                            "description": "Answer description here",
-                            "feedback": "Answer feedback here, leave blank for none",
-                            "answerEffects": []
-                        }
-                    ],
+                    "answers": [],
                     "keepInPlaceIfQuestionsShuffled": true,
                     "enabled": false
                 },
@@ -3009,7 +3107,7 @@
                     "keepInPlaceIfQuestionsShuffled": true,
                     "enabled": false
                 },
-                                {
+                {
                     "id": "question_15_republican_budget",
                     "description": "Since the midterms, the Republicans have carried this smug and cheeky confidence. To Gingrich, Satan himself, the mandate is so overwhelming that he has committed the House to pushing through a set of spending cuts and tax reductions, including cuts to Medicare. And now, they think themselves so grand as to threaten you with a government shutdown if you or your Cabinet overstep on education. This cannot happen. ",
                     "answers": [],
