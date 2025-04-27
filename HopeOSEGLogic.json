@@ -40,6 +40,88 @@ function onAnswerPicked(engine, answerPicked) {
     } else if (engine.getAnswers().includes(10)) {
     engine.setQuestionEnabledById("budget_1_normal", true);
     }
+
+
+// Variable Wall
+
+    //Healthcare Pick
+    if (ans == 2) {
+    Ideology += 1;
+    PublicSupport += 1;
+    }
+    if (ans == 4) {
+    Ideology -= 1;
+    }
+    //WTC Bombing CYOA
+   if (ans ==  5){
+   PublicSupport += 2;
+   }
+   if (ans == 7){
+   FPWin -= 1;
+   Legacy += 1;
+   PublicSupport += 1;
+   }
+   //Economic Plan CYOA
+   if (ans == 8){
+    PublicSupport += 1;
+    Ideology -= 1;
+    sundog += 1;
+    }
+    if (ans == 9){
+    PublicSupport -= 1;
+    Ideology += 1;
+    }
+    if (ans == 10){
+    PublicSupport -= 1;
+    }
+    if (ans == 11){
+    PublicSupport -= 1;
+    LEGWin -= 1;
+    }
+    if (ans == 12){
+    LEGWin += 1;
+    }
+    if (ans == 13){
+    PublicSupport -= 2;
+    LEGWin -= 1;
+    }
+    if (ans == 14){
+    Ideology += 1;
+    LEGWin += 1;
+    sundog += 1;
+    }
+    if (ans == 15){
+    Ideology += 2;
+    PublicSupport -= 1;
+    }
+    if (ans == 16){
+    Ideology += 1;
+    sundog -= 6;
+    }
+    if (ans == 17){
+    Ideology += 2;
+    ReichPoints += 1;
+    }
+    if (ans == 18){
+    Ideology += 2;
+    PublicSupport -= 1;
+    }
+    if (ans == 19){
+    ReichPoints += 2;
+    Ideology -= 1;
+    }
+    //Supreme Court CYOA
+    if (ans == 20){
+    Ideology += 2;
+    }
+    if (ans == 21){
+    Ideology -= 1;
+    sundog += 1;
+    }
+    if (ans == 22){
+    PublicSupport -= 1;
+    sundog += 1;
+    }
 }
 
 function onScenarioStarted(engine) {
