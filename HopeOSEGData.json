@@ -3355,21 +3355,420 @@
                 {
                     "id": "budget_1_normal",
                     "description": "As soon as you spoke of plans to have the deficit divided by the end of your term, everyone dreamt up their own plans on how to go about it. Most Republicans despise the prospect of raising taxes on the rich, and many in our own party are considering the energy tax hike and tax cuts to be too ambitious. It's supposed to be something that will please everyone, and yet, everyone is gritting their teeth.",
-                    "answers": [],
+                    "answers": [
+                        {
+                            "id": 11,
+                            "description": "Let's make it simple: that plan can have tweaks, but no massive changes. We've got a deficit and mountains of debt to recover, as well as an immense burden on the middle class. I've made promises, and I will follow them.",
+                            "feedback": "And so, barely a few month in your presidency, you're already brawling with Congress. You barely relent with slightly lowering the tax on gas and abandoning the cut for the middle bracket to a simple tax credit, but it barely satisfy anyone more. It's not going good.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0125
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0125
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.03
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": 0
+                                }
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "description": "I know that some of them would rather die than increase the tax on the richest in society by a single percentage point, but there are some who can be swayed. If we can build a long-term coalition, we should do so now. We can give way on that energy tax, for example, and offer a smaller middle-class tax cut.",
+                            "feedback": "Once you found yourself open to cutting one part of your plan, the GOP flocked to see what else they could get. You quickly slowed their ambition but by the end, you've got more people on your side than before, including ''small c'' conservatives like Danforth. Looking at it, you may have your promises made reality, technically.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.01
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.01
+                                }
+                            ]
+                        },
+                        {
+                            "id": 13,
+                            "description": "There must be other avenues we could use to seduce them. I know it's pork, but if we can give those representatives and senators a few more wins for their constituents, I'm certain they'll agree to sign on the dotted line. It's always about give and take, after all.",
+                            "feedback": "If it were just two years ago, it might have worked out. However, today, pork is seen extremely unfavorably, and while they don’t make a stir about it, you barely convinced anyone with those. It’s going to be tough to get anything through.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.04
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.01
+                                }
+                            ]
+                        }
+                    ],
                     "keepInPlaceIfQuestionsShuffled": true,
                     "enabled": false
                 },
                 {
                     "id": "budget_1_bentsen",
                     "description": "As soon as you began to speak of large cuts and balancing the budget, people could hear the chainsaw being revved up. Bentsen's grin, shining as clear as a Texas day, signals his plan to reach equilibrium by 1998. However, people are beginning to get cold feet, as some of those cuts, combined with tax hikes, may actually be too great and depress our rebounding growth. Still, who are we to pass such debt on to future generations?",
-                    "answers": [],
+                    "answers": [
+                        {
+                            "id": 14,
+                            "description": "We've got the numbers, I know that. We have a plan and the people to support it, in both parties. Why do we have to hear all their grievances when they clearly represent a deeply minor and unpopular part of America? No compromises have to be made.",
+                            "feedback": "And so the chainsaw cuts and tears. High income tax, up. Corporate tax, up. Fuel tax, up. AMT rate, up. Medicare, down. Social Security, down. Medicaid, down. Now, the wolves are eyeing the great prize of the military with hungry eyes.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.2,
+                                    "weight": 2
+                                }
+                            ]
+                        },
+                        {
+                            "id": 15,
+                            "description": "While I know what I was elected on, that doesn’t mean we should close our eyes to what others might see as good. Some parts are better left untouched, after all. Let’s set up a commission to see what can be cut and what should be kept. A bipartisan commission, of course.",
+                            "feedback": "The commission’s work would have slowed the budget quite a bit if its job wasn’t already cut out for it. It explained how each dollar given to different brackets equaled a different amount of return to the economy. It was simple, it was clear. While the tax increases would continue, most of the plans for welfare cuts were scrapped, focusing on inefficiencies first and foremost.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.05
+                                }
+                            ]
+                        },
+                        {
+                            "id": 16,
+                            "description": "Gore had some proposals we could get through. It’s very novel, but we could tax those big businesses that pollute more than any others. How about taking that plan of fiscal responsibility and using it to push our ecological goals? Either the deficit hawks will show themselves as hypocrites, or we’ll seize a real opportunity for innovation here.",
+                            "feedback": "Pushing this new ''Carbon Tax'' as fiscal responsibility made a lot of Republicans, and even some Democrats, extremely queasy, especially in coal and oil states. You could see how hard Byrd was trying not to make a fool of himself when he spoke of the need not to undercut American business against international competition while being assaulted on the question of the deficit. It's easy to strike when you're not the target, as always.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.0085
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.0712
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0778
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": 0.2
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 231,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 231,
+                                    "amount": 0.005
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 229,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 229,
+                                    "amount": 0.01
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 231,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 218,
+                                    "amount": 0.005
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 193,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 197,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 223,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 211,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 214,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 186,
+                                    "amount": -0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 231,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 229,
+                                    "amount": 0.015
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 218,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 193,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 197,
+                                    "amount": 0.015
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 223,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 211,
+                                    "amount": 0.015
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 214,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 226,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 199,
+                                    "amount": -0.04
+                                }
+                            ]
+                        }
+                    ],
                     "keepInPlaceIfQuestionsShuffled": true,
                     "enabled": false
                 },
                 {
                     "id": "budget_1_reich",
                     "description": "When it began to look like you were becoming one of those ''tax and spend'' Democrats, the shields of the Republican Party and deficit hawks were raised high and strong. To make anything like this come to pass, you'll have to use some ''voodoo magic,'' as Gore said. People are calling it way too ambitious and decrying it as going against basic economics. Yet, you have to get through it",
-                    "answers": [],
+                    "answers": [
+                        {
+                            "id": 17,
+                            "description": "There’s a first thing to do right, we need to secure clear support from everyone in our own party first. It’s too much for any Republican, but if we can speak of urban and rural renewal to those more doubtful states, we might just straddle the line.",
+                            "feedback": "Pork as always? When you first managed to convince Byrd that West Virginia could be renewed, you thought it was going to go smoothly. However, the deficit hawks are powerful, and they’re not liking what they’re seeing. It’s going to be particularly difficult.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0134
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.007
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.3,
+                                    "weight": 2
+                                }
+                            ]
+                        },
+                        {
+                            "id": 18,
+                            "description": "We need to make it about poverty and growth. It’s about giving the opportunity to the average American to be all that they can be. If we can’t have something clear behind closed doors, we need something that’ll apply pressure from the outside.",
+                            "feedback": "In an America that's recovering from Reagan and Bush, you're just speaking of giving more handouts to more people. It's a culture war between people down on their luck and people who don’t see why their dollar should be spent on others. It's one you cannot win.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.01
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.02
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.4,
+                                    "weight": 2
+                                }
+                            ]
+                        },
+                        {
+                            "id": 19,
+                            "description": "I'll have to speak with Reich about it. When I approved his plan, it was more about starting high, then negotiating to something achievable. It's nothing against him, but in its current form, the plan is just not going to work out.",
+                            "feedback": "Reich gritted his teeth but relented, as it was clear the national mood wasn’t for something so ambitious while that one Texas giant was speaking of balancing the budget. As you lower the tax cuts and spending, more people begin to listen, but it’s still a long way out.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.003
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.003
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.1,
+                                    "weight": 2
+                                }
+                            ]
+                        }
+                    ],
                     "keepInPlaceIfQuestionsShuffled": true,
                     "enabled": false
                 },
