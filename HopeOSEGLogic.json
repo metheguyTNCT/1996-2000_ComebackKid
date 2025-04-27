@@ -2,9 +2,38 @@ function createEnding(engine, results) {
 
 }
 
+var FPWin = 0
+var LEGWin = 0
+var Wins = 0
+var Ideology = 0
+var PublicSupport = 8
+var Legacy = 0
+var ReichPoints = 0
+var OsloPoints = 0
+var GotHealthcare = 0
+var DemCongress = 1
+var SlimGOPCongress = 0
+var RepublicanRevolution = 0
+var DisasterMidterms= 0
+var CasesSettled = 0
+var CommieReturn = 0
+var DoleNom = 0
+var GrammNom = 0
+var BuchananNom = 0
+var SpecterNom = 0
+var CheneyNom = 0
+var BonoNom = 0
+var LamarNom = 0
+var WilsonNom = 0
+var ForbesNom = 0
+var PowellNom = 0
+var BushNom = 0
+var SundogNom = 0
+var sundog = 0
+
 function onAnswerPicked(engine, answerPicked) {
     const ans = answerPicked.id;
-    if (ans == 8) {
+    if (engine.getAnswers().includes(8)) {
     engine.setQuestionEnabledById("budget_1_bentsen", true);
     } else if (ans == 9) {
     engine.setQuestionEnabledById("budget_1_reich", true);
