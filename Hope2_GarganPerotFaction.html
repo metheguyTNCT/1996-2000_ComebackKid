@@ -45343,10 +45343,11 @@ e.vpSwitcher = () => {
         repMenu.style.width = '442px';
         repMenu.style.padding = '9px';
         repMenu.style.backgroundColor = '#fff';
-        repMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
-        repMenu.style.border = '1px solid #ccc';
+        repMenu.style.outline = '2px inset #000';
+        repMenu.style.outlineOffset = '-12px';
+        repMenu.style.border = '6px outset #000';
         repMenu.style.zIndex = '1000';
-        repMenu.style.background = 'linear-gradient(rgba(33, 31, 27, 0.6), rgba(33, 31, 27, 0.4)), url("https://i.imgur.com/LyxmayZ.png")';
+        repMenu.style.background = '#FFFFF';
         repMenu.style.backgroundSize = 'cover';
         repMenu.style.backgroundPosition = 'top';
         repMenu.style.alignItems = 'center';     
@@ -45355,7 +45356,7 @@ e.vpSwitcher = () => {
         // const menuTitle = document.createElement('h1');
         // menuTitle.innerText = 'Shadow Government';
         // menuTitle.style.textAlign = 'center';
-        // menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+        // menuTitle.style.fontFamily = '"Times new roman", "Arial"';
         // menuTitle.style.color = '#2EA3D9';
         // menuTitle.style.textShadow = '2px 2px 3px #000000';
         // menuTitle.style.top = '-04px';   
@@ -45367,16 +45368,12 @@ e.vpSwitcher = () => {
         // repMenu.appendChild(menuTitle);
   
         
-        const risingStars = document.createElement('h1');
-        risingStars.innerText = 'The Last Stand';
-        risingStars.style.textAlign = 'left';
-        risingStars.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
-        risingStars.style.color = '#a02ed9';
-        risingStars.style.textShadow = '2px 2px 3px #000000';
+        const risingStars = document.createElement('img');
+        risingStars.src = 'https://i.imgur.com/mLfAeid.png';
+        risingStars.style.height = '80px';
         risingStars.style.top = '-04px';   
         risingStars.style.position = 'relative';
-        risingStars.style.marginTop = '-04px'; 
-        risingStars.style.fontSize = '24px';
+        risingStars.style.marginTop = '2px'; 
         risingStars.style.display = 'block';    
         risingStars.style.marginBottom = '-2px';    
         repMenu.appendChild(risingStars);
@@ -45390,13 +45387,15 @@ e.vpSwitcher = () => {
                 repCand.src = item.np; 
                 repCand.style.width = '105px';
                 repCand.style.height = '105px';
-                repCand.style.padding = '1px';
-                repCand.style.border = '1px solid #ccc';
-                repCand.style.marginBottom = '-1px';
+                repCand.style.borderTop = '2px solid #FFF';
+                repCand.style.borderBottom = '5px solid #FFF';
+                repCand.style.borderLeft = '3px solid #FFF';
+                repCand.style.borderRight = '3px solid #FFF';
+                repCand.style.outline = '2px solid #4E4E4E';
+                repCand.style.boxShadow = '8px 8px 7px #ccc';
+                repCand.style.marginLeft = '8px';
+                repCand.style.marginBottom = '2px';
                 repCand.style.cursor = 'pointer';
-                if(index != 3 && index != 7){
-                    repCand.style.marginRight = '2px';
-                }
   
                 if(item.id == "BUCHANAN_C" && opponents.percy > thresholdCand){
                     repCand.style.boxShadow = '0px 0px 4px 2px rgba(153, 232, 159, 0.75)'; 
@@ -45486,19 +45485,21 @@ e.vpSwitcher = () => {
             });
         }
         repMenu.appendChild(repContainer);
-  
+
         // Create the respect title
-        const containmentTitle = document.createElement('h1');
-        containmentTitle.innerText = 'The Issues';
+        const containmentTitle = document.createElement('img');
+        containmentTitle.src = 'https://i.imgur.com/I9NRo7T.png';
         containmentTitle.style.textAlign = 'right';
-        containmentTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+        containmentTitle.style.fontFamily = '"Times New Roman", "Arial"';
         containmentTitle.style.color = '#a02ed9';
         containmentTitle.style.textShadow = '2px 2px 3px #000000';
         containmentTitle.style.position = 'relative';
         containmentTitle.style.marginTop = '-02px'; 
         containmentTitle.style.fontSize = '24px';
-        containmentTitle.style.display = 'block';    
-        containmentTitle.style.marginBottom = '-2px';    
+        containmentTitle.style.display = 'block'; 
+        containmentTitle.style.marginLeft = 'auto'; 
+        containmentTitle.style.marginBottom = '-2px';   
+        
         repMenu.appendChild(containmentTitle);
   
         var overviewtxt  = ""
@@ -45530,13 +45531,11 @@ e.vpSwitcher = () => {
         ovsubtxt.style.position = 'relative';
         ovsubtxt.style.marginTop = '-04px'; 
         ovsubtxt.style.lineHeight = '1.1';
-        ovsubtxt.style.background = 'linear-gradient(rgb(87, 0, 164))';
+        ovsubtxt.style.background = '#ddeeff';
         ovsubtxt.style.backgroundSize = 'cover';
         ovsubtxt.style.backgroundPosition = 'center';
         ovsubtxt.style.padding = '1px';            
         ovsubtxt.style.display = 'block';    
-        ovsubtxt.style.border = '1px solid #CCCC';
-        ovsubtxt.style.outline = '1px solid transparent';
         ovsubtxt.style.marginTop = '-8px';
         ovsubtxt.style.textAlign = 'left';      
         ovsubtxt.style.paddingLeft = '10px';
