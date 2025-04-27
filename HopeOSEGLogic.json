@@ -35,9 +35,9 @@ function onAnswerPicked(engine, answerPicked) {
     const ans = answerPicked.id;
     if (engine.getAnswers().includes(8)) {
     engine.setQuestionEnabledById("budget_1_bentsen", true);
-    } else if (ans == 9) {
+    } else if (engine.getAnswers().includes(9)) {
     engine.setQuestionEnabledById("budget_1_reich", true);
-    } else if (ans == 10) {
+    } else if (engine.getAnswers().includes(10)) {
     engine.setQuestionEnabledById("budget_1_normal", true);
     }
 }
