@@ -3775,7 +3775,279 @@
                 {
                     "id": "question_4andahalf_supremecourt",
                     "description": "Justice Byron ''Whizzer'' White is retiring, giving you your first Supreme Court vacancy. A Kennedy appointee, he’s seen as a lapsed liberal, more cautious than strictly ideological. The process is long, the press is restless, names rise and fall, and every choice carries risk. You’ve talked it through with Al, your Cabinet, and others, but the decision is yours.",
-                    "answers": [],
+                    "answers": [
+                        {
+                            "id": 20,
+                            "description": "I'm gonna go with Ruth Bader Ginsburg. She's a Carter appointee, and a person that liberals will love. More importantly, she’s the kind of nominee who can win confirmation without a dragged-out fight. The Court needs sharp minds, and she’s one of the sharpest.",
+                            "feedback": "You champion Ginsburg’s nomination, pointing to her experience on the U.S. Court of Appeals for D.C. and her reserved, moderate persona. As the second woman on the Court, she’s historic, but she doesn’t stir up much controversy, aside from some positive, if vague, headlines for your administration. Good, that's just the way you like it.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.003
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": 0.13,
+                                    "weight": 1.7
+                                }
+                            ]
+                        },
+                        {
+                            "id": 21,
+                            "description": "Bruce Babbitt, Secretary of the Interior, former Arizona governor. He’s got the experience, the temperament, and a record that shows he can navigate the law and politics. He’s no stranger to tough fights, and I like that about him.",
+                            "feedback": "Babbitt was one of the first names you came up with. Just a few months ago, he sailed through Senate confirmation as Secretary of the Interior without a hitch. But now, Senators Hatch and Dole aren’t happy about the idea of him on the Court, calling him too political. Still, you have the numbers to push through your former DLC ally, if you’re willing to fight for him.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0015
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": 0.01,
+                                    "weight": 1.7
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 183,
+                                    "amount": 0.01
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 183,
+                                    "amount": -0.001
+                                }
+                            ]
+                        },
+                        {
+                            "id": 22,
+                            "description": "I don’t care what they’re saying. Laurence Tribe is nothing short of a genius, probably the best legal mind of his generation. This decision sets a tone for my presidency; we’re moving forward, not back. The Court should reflect that.",
+                            "feedback": "Though he’s not quite considered a radical, Mr. Tribe, a longtime Harvard professor, is viewed as a liberal pick by both the GOP and the media. You needed to throw them a bone anyway. Al wasn’t a fan, apparently calling Tribe an ‘oddball,’ but you don’t really care, and you don’t have to.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.005
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.009
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.021
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 80,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.021
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": 0.61,
+                                    "weight": 1.7
+                                }
+                            ]
+                        },
+                        {
+                            "id": 23,
+                            "description": "I'm going with Webster Hubbell. I know we had him in mind for Associate Attorney General, and I’m sure Janet wouldn’t mind. He’s someone I can trust, and, you know, he’s a good ol' boy from back home. He’s got the right instincts and the right heart for the job.",
+                            "feedback": "You knew it was risky to go with Mayor Hubbell, but you couldn't have imagined how bad the whiplash would be. He’s being pulled into the Whitewater abyss, and his entire reputation, his very being, is being slowly melted away. You quickly realize there's no way he's getting confirmed, and you drop him as fast as possible and end up appointing Janie Shores.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0251
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.0175
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.0118
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": -0.21,
+                                    "weight": 1.7
+                                }
+                            ]
+                        },
+                        {
+                            "id": 24,
+                            "description": "Judge Stephen Breyer. He’s thoughtful, measured, the kinda guy who understands more than the letter of the law, but how it breathes out there. And look, y’know, he’s the kind of nominee who can make it through the Senate without a bunch of noise. I like that.",
+                            "feedback": "Stephen Breyer had been on your mind for a long while, right near the top of the list. When you finally give him the call, he sounds cool. Earlier, you’d hoped for a little more passion from him — but that calm, that steadiness, it feels right. Hatch quietly recommended him, while Ted Kennedy lobbied, and Breyer looks set to clear the Senate without much trouble.",
+                            "answerEffects": [
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.002
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": -0.0016
+                                },
+                                {
+                                    "answerEffectType": "Global",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.005
+                                },
+                                {
+                                    "answerEffectType": "TctIssue",
+                                    "candidateId": 77,
+                                    "issueId": 28,
+                                    "stateId": 181,
+                                    "amount": -0.05,
+                                    "weight": 1.7
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 212,
+                                    "amount": 0.0075
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 210,
+                                    "amount": -0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 187,
+                                    "amount": -0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 228,
+                                    "amount": -0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 189,
+                                    "amount": -0.0086
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 181,
+                                    "amount": 0.00086
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 204,
+                                    "amount": 0.00086
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 78,
+                                    "issueId": 27,
+                                    "stateId": 212,
+                                    "amount": 0.00051
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 212,
+                                    "amount": 0.00125
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 210,
+                                    "amount": 0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 187,
+                                    "amount": 0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 228,
+                                    "amount": 0.00076
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 79,
+                                    "issueId": 27,
+                                    "stateId": 189,
+                                    "amount": 0.00051
+                                },
+                                {
+                                    "answerEffectType": "State",
+                                    "candidateId": 77,
+                                    "issueId": 27,
+                                    "stateId": 189,
+                                    "amount": 0.00036
+                                }
+                            ]
+                        }
+                    ],
                     "keepInPlaceIfQuestionsShuffled": true
                 },
                 {
