@@ -1,0 +1,20 @@
+function createEnding(engine, results) {
+
+}
+
+function onAnswerPicked(engine, answerPicked) {
+    const ans = answerPicked.id;
+    if (ans == 8) {
+    engine.setQuestionEnabledById("budget_1_bentsen", true);
+    } else if (ans == 9) {
+    engine.setQuestionEnabledById("budget_1_reich", true);
+    } else if (ans == 10) {
+    engine.setQuestionEnabledById("budget_1_normal", true);
+    }
+}
+
+function onScenarioStarted(engine) {
+    
+}
+
+export { createEnding, onAnswerPicked, onScenarioStarted };
