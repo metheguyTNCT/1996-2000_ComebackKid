@@ -1624,7 +1624,7 @@ function setupSecondaryPlaylist() {
   >`
   
   document.body.classList.add("crt");
-          // ——— grain overlay ———
+          // ——— vhs crt whatever overlay ———
 const grainVideo = document.createElement('video');
 Object.assign(grainVideo, {
   src:      'https://files.catbox.moe/4znars.mp4',
@@ -1639,7 +1639,7 @@ Object.assign(grainVideo.style, {
   width:         '100%',
   height:        '100%',
   objectFit:     'cover',            // fill & crop if needed
-  opacity:       '0.0565',             // 6% is subtle yet visible
+  opacity:       '0.06749',             // 6% is subtle yet visible
   pointerEvents: 'none',
   zIndex:        '9998',
   filter:        'brightness(1) contrast(0.5)'  // super-bright tiny specks
