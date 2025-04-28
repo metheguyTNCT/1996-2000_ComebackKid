@@ -1627,21 +1627,22 @@ function setupSecondaryPlaylist() {
           // ——— vhs crt whatever overlay ———
 const grainVideo = document.createElement('video');
 Object.assign(grainVideo, {
-  src:      'https://files.catbox.moe/4znars.mp4',
+  src:      'https://files.catbox.moe/0n5th5.mp4',
   autoplay: true,
   loop:     true,
   muted:    true,
 });
 Object.assign(grainVideo.style, {
-  position:      'absolute',
-  top:           '0',
-  left:          '0',
-  width:         '100%',
-  height:        '100%',
-  objectFit:     'cover',            // fill & crop if needed
-  opacity:       '0.033',             // 6% is subtle yet visible
-  pointerEvents: 'none',
-  zIndex:        '9998',
+  position:        'absolute',
+  top:             '0',
+  left:            '0',
+  width:           '100%',
+  height:          '100%',
+  objectFit:       'cover',
+  opacity:         '0.15',            // dial this down until it’s as subtle as you like
+  pointerEvents:   'none',
+  zIndex:          '9998',
+  mixBlendMode:    'screen'          // ← add this
 });
 
 function updateGrainOverlay() {
