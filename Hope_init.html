@@ -1624,6 +1624,46 @@ function setupSecondaryPlaylist() {
   >`
   
   document.body.classList.add("crt");
+          // ——— grain overlay ———
+const grainVideo = document.createElement('video');
+Object.assign(grainVideo, {
+  src:      'https://files.catbox.moe/4znars.mp4',
+  autoplay: true,
+  loop:     true,
+  muted:    true,
+});
+Object.assign(grainVideo.style, {
+  position:      'absolute',
+  top:           '0',
+  left:          '0',
+  width:         '100%',
+  height:        '100%',
+  objectFit:     'cover',            // fill & crop if needed
+  opacity:       '0.06',             // 6% is subtle yet visible
+  pointerEvents: 'none',
+  zIndex:        '9998',
+  filter:        'brightness(1) contrast(0.5)'  // super-bright tiny specks
+});
+
+function updateGrainOverlay() {
+  if (document.body.classList.contains('crt')) {
+    if (!document.body.contains(grainVideo)) document.body.appendChild(grainVideo);
+  } else {
+    if (document.body.contains(grainVideo)) document.body.removeChild(grainVideo);
+  }
+}
+
+// add it now if CRT is already on
+updateGrainOverlay();
+
+// and hook into your toggle
+// (assuming toggleCRT() is defined just below)
+const originalToggle = toggleCRT;
+toggleCRT = function(){
+  originalToggle();
+  updateGrainOverlay();
+};
+// ————————————————
   
   document.head.innerHTML += `<link
     rel="stylesheet"
@@ -1681,6 +1721,7 @@ button.addEventListener("click", () => {
   crtOn = !crtOn;
   setCRTLines(crtOn);
   document.body.classList.toggle("crt", crtOn);
+  updateGrainOverlay();    // ← ensure the grain video is added/removed
 });
 
 RecReading=true
