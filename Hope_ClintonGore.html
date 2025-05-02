@@ -1572,6 +1572,24 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {
+        "model": "campaign_trail.question",
+        "pk": "crooked_deal_cuts",
+        "fields": {
+            "priority": 0,
+            "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "crooked_deal_nocuts",
+        "fields": {
+            "priority": 0,
+            "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+            "likelihood": 1
+        }
+    },
     
 ]
 
@@ -5978,7 +5996,71 @@ campaignTrail_temp.answers_json = [
             "question": "oslo_5_win",
             "description": "Let the sun rise, light up the morning. The purest of prayers, will not bring him back.\n"
         }
-    }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90001.5,
+        "fields": {
+            "question": "crooked_deal_cuts",
+            "description": "Let's meet with Yeltsin. We have something tight together. I'll propose to help him in his own campaign ending June 96 and he'll help me by not minding our NATO expansion before November 96. He get's to stay president, I get to stay president, Eastern Europe get's into NATO and everyone's happy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90002.5,
+        "fields": {
+            "question": "crooked_deal_cuts",
+            "description": "I think a bold approach would be best, we need not to do some half hearted promise, that's what got us into this mess in the first place. Let's open the NATO Expansion now for Czechia, Slovakia, Hungary and Poland, cutting the grass from under their feet."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90003.5,
+        "fields": {
+            "question": "crooked_deal_cuts",
+            "description": "I do not trust the polls. They say it's going to be a coin flip, yet I just know our numbers are good. We'll carry on the boat and keep the partnership for peace as the holding room it's meant to be until my second term, that's final."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90004.5,
+        "fields": {
+            "question": "crooked_deal_cuts",
+            "description": "There must be someway of assuaging their fear without looking impotent isn't there? If their paranoia is really this strong, I'm certain we can give them some of the weapons that have shown incredible effectiveness against Soviet hardware in 1991."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90005.5,
+        "fields": {
+            "question": "crooked_deal_nocuts",
+            "description": "Let's meet with Yeltsin. We have something tight together. I'll propose to help him in his own campaign ending June 96 and he'll help me by not minding our NATO expansion before November 96. He get's to stay president, I get to stay president, Eastern Europe get's into NATO and everyone's happy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90006.5,
+        "fields": {
+            "question": "crooked_deal_nocuts",
+            "description": "I think a bold approach would be best, we need not to do some half hearted promise, that's what got us into this mess in the first place. Let's open the NATO Expansion now for Czechia, Slovakia, Hungary and Poland, cutting the grass from under their feet."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90007.5,
+        "fields": {
+            "question": "crooked_deal_nocuts",
+            "description": "I do not trust the polls. They say it's going to be a coin flip, yet I just know our numbers are good. We'll carry on the boat and keep the partnership for peace as the holding room it's meant to be until my second term, that's final."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 90008.5,
+        "fields": {
+            "question": "crooked_deal_nocuts",
+            "description": "There must be someway of assuaging their fear without looking impotent isn't there? If their paranoia is really this strong, I'm certain we can give them some of the weapons that have shown incredible effectiveness against Soviet hardware in 1991."
+        }
+    },
 
 ]
 
@@ -23503,6 +23585,66 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": 0.0333
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 90003.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12711,
+        "fields": {
+            "answer": 90002.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0124
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12730,
+        "fields": {
+            "answer": 90004.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0215
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12737,
+        "fields": {
+            "answer": 90006.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0124
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12741,
+        "fields": {
+            "answer": 90007.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12747,
+        "fields": {
+            "answer": 90008.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0111
+        }
     }
 ]
 
@@ -27095,6 +27237,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 240036,
             "issue": 28,
             "issue_score": 0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12709,
+        "fields": {
+            "answer": 90004.5,
+            "issue": 30,
+            "issue_score": -0.345,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12710,
+        "fields": {
+            "answer": 90002.5,
+            "issue": 30,
+            "issue_score": -0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12712,
+        "fields": {
+            "answer": 90001.5,
+            "issue": 30,
+            "issue_score": 0.234,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12734,
+        "fields": {
+            "answer": 90005.5,
+            "issue": 30,
+            "issue_score": 0.234,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12738,
+        "fields": {
+            "answer": 90006.5,
+            "issue": 30,
+            "issue_score": -0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 90008.5,
+            "issue": 30,
+            "issue_score": -0.345,
             "issue_importance": 2
         }
     }
@@ -56801,6 +57003,72 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 77,
             "state_multiplier": -0.0122
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12705,
+        "fields": {
+            "answer": 90003.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12706,
+        "fields": {
+            "answer": 90003.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12707,
+        "fields": {
+            "answer": 90003.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12742,
+        "fields": {
+            "answer": 90007.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12743,
+        "fields": {
+            "answer": 90007.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12744,
+        "fields": {
+            "answer": 90007.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": -0.01
+        }
     }
 ]
 
@@ -61773,6 +62041,78 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "It was an overambitious project that had very little chance of ever passing and yet you pushed it through, pushing out Republican into wanting a two tier system and underfund schools. Hopefully the gains in 1996 will help you pass something more substantial."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 90001.5,
+            "candidate": 77,
+            "answer_feedback": "Yeltsin was more than happy to sign the deal and is hoping such collaboration could continue in his second term while he publicly denounce the expansion. Let's hope this wasn't for nothing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12702,
+        "fields": {
+            "answer": 90002.5,
+            "candidate": 77,
+            "answer_feedback": "This came at great praise from Eastern Europe and more hawkish members of the cabinet. However, Yeltsin is fuming and it's looking like he may just lose his election as he looked impotent against the West. You pray to the Lord this doesn't mean what you think it does."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12703,
+        "fields": {
+            "answer": 90003.5,
+            "candidate": 77,
+            "answer_feedback": "I do not trust the polls. They say it's going to be a coin flip yet I just know our numbers are good. We'll carry on the boat and keep the partnership for peace as the holding room it's meant to be until my second term, that's final."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12708,
+        "fields": {
+            "answer": 90004.5,
+            "candidate": 77,
+            "answer_feedback": "While it could have come without much trouble just a few years back, the vultures are still feasting on the defense budget and stopped anything that would increase it even one iota. Republicans must be laughing as they stop you from giving the military support they would have had their had been in power."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12733,
+        "fields": {
+            "answer": 90005.5,
+            "candidate": 77,
+            "answer_feedback": "Yeltsin was more than happy to sign the deal and is hoping such collaboration could continue in his second term while he publicly denounce the expansion. Let's hope this wasn't for nothing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12736,
+        "fields": {
+            "answer": 90006.5,
+            "candidate": 77,
+            "answer_feedback": "This came at great praise from Eastern Europe and more hawkish members of the cabinet. However, Yeltsin is fuming and it's looking like he may just lose his election as he looked impotent against the West. You pray to the Lord this doesn't mean what you think it does."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12740,
+        "fields": {
+            "answer": 90007.5,
+            "candidate": 77,
+            "answer_feedback": "I do not trust the polls. They say it's going to be a coin flip yet I just know our numbers are good. We'll carry on the boat and keep the partnership for peace as the holding room it's meant to be until my second term, that's final."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12746,
+        "fields": {
+            "answer": 90008.5,
+            "candidate": 77,
+            "answer_feedback": "It does seem like it was their plan all along as they found themselves to be eager buyers. Crazier still, Russia has been finding itself interested in possibly buying some of our hardware following their massive cuts to their military. It's unlikely to actually happen, but maybe Yeltisn is much more impotent than he lets on."
+        }
     }
 ]
 
@@ -62281,7 +62621,33 @@ cyoAdventure = function(a) {
     }
     }
     if (e.question_number+1 == 22) {
-    if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
+    if (DisasterMidterms == 1) {
+    if (e.player_answers.includes(88012.5)) {
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "crooked_deal_nocuts",
+                "fields": {
+                    "priority": 0,
+                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+                    "likelihood": 1
+                }
+            }
+        );
+    } else {
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "crooked_deal_cuts",
+                "fields": {
+                    "priority": 0,
+                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+                    "likelihood": 1
+                }
+            }
+        );
+    }
+    } else if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
         ctsAchievement("Deficit Hawk");
         PublicSupport += 2
         Legacy += 2;
@@ -64838,6 +65204,32 @@ if (e.question_number+1 == 18){
                     }
                 
                 );
+                question_insert("crooked_deal_cuts", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+                question_insert("crooked_deal_nocuts", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
         } else {
                 question_insert("question_16.5_jones_case", 
                 {
@@ -64853,6 +65245,32 @@ if (e.question_number+1 == 18){
                 
                 );
                 question_insert("balanced_budget", 
+                    {
+                       
+              "model": "campaign_trail.question",
+              "pk": "question_17_yugoslavia",
+              "fields": {
+                  "priority": 3,
+                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                  "likelihood": 1
+              }
+                        }
+                    
+                    );
+                question_insert("crooked_deal_cuts", 
+                    {
+                       
+              "model": "campaign_trail.question",
+              "pk": "question_17_yugoslavia",
+              "fields": {
+                  "priority": 3,
+                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                  "likelihood": 1
+              }
+                        }
+                    
+                    );
+                question_insert("crooked_deal_nocuts", 
                     {
                        
               "model": "campaign_trail.question",
