@@ -67107,62 +67107,6 @@ if (e.question_number+1 == 18){
     }
     }
     if (e.question_number+1 == 23){
-        if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
-        CommieReturn += 1;
-        ctsAchievement("Красный Призрак");
-        question_insert("question_16.5_jones_case", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "commie_return_question",
-            "fields": {
-                "priority": 0,
-                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("balanced_budget", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "commie_return_question",
-            "fields": {
-                "priority": 0,
-                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        question_insert("crooked_deal_cuts", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "commie_return_question",
-            "fields": {
-                "priority": 0,
-                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("crooked_deal_nocuts", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "commie_return_question",
-            "fields": {
-                "priority": 0,
-                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        } else {
         if (e.player_answers.includes(80003) && e.player_answers.includes(85002.5)) {
             question_insert("question_16.5_jones_case", 
                 {
@@ -67269,7 +67213,6 @@ if (e.question_number+1 == 18){
                         }
                     
                     );
-        }
         }
         }
         if (e.question_number+1 == 35 && BuchananNom == 1){
@@ -67381,27 +67324,36 @@ if (e.question_number+1 == 18){
                 "likelihood": 1
             }
         }
+        let commie_return_question = {
+            "model": "campaign_trail.question",
+            "pk": "commie_return_question",
+            "fields": {
+                "priority": 0,
+                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
+                "likelihood": 1
+            }
+        }
+        if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
+            CommieReturn += 1;
+            ctsAchievement("Красный Призрак");
+            question_insert("question_17_yugoslavia",commie_return_question);
+        } else {
         if (SlimGOPCongress == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("commie_return_question",internet_thirdway_mitigation);
         question_insert("question_17_yugoslavia_win",internet_thirdway_mitigation);
         question_insert("question_17_yugoslavia",internet_thirdway_mitigation);
         } else if (Ideology >= 2) {
-        question_insert("commie_return_question",internet_liberal_mitigation);
         question_insert("question_17_yugoslavia_win",internet_liberal_mitigation);
         question_insert("question_17_yugoslavia",internet_liberal_mitigation);
         } else if (Ideology <= -4) {
-        question_insert("commie_return_question",internet_bluedog_mitigation);
         question_insert("question_17_yugoslavia_win",internet_bluedog_mitigation);
         question_insert("question_17_yugoslavia",internet_bluedog_mitigation);
         }
         } else if (RepublicanRevolution == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("commie_return_question",internet_thirdway_republican_revolution);
         question_insert("question_17_yugoslavia_win",internet_thirdway_republican_revolution);
         question_insert("question_17_yugoslavia",internet_thirdway_republican_revolution);
         } else if (Ideology >= 2) {
-        question_insert("commie_return_question",internet_liberal_republican_revolution);
         question_insert("question_17_yugoslavia_win",internet_liberal_republican_revolution);
         question_insert("question_17_yugoslavia",internet_liberal_republican_revolution);
         } else if (Ideology <= -4) {
@@ -67411,17 +67363,15 @@ if (e.question_number+1 == 18){
         }
         } else if (DisasterMidterms == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("commie_return_question",internet_thirdway_disaster_midterms);
         question_insert("question_17_yugoslavia_win",internet_thirdway_disaster_midterms);
         question_insert("question_17_yugoslavia",internet_thirdway_disaster_midterms);
         } else if (Ideology >= 2) {
-        question_insert("commie_return_question",internet_liberal_disaster_midterms);
         question_insert("question_17_yugoslavia_win",internet_liberal_disaster_midterms);
         question_insert("question_17_yugoslavia",internet_liberal_disaster_midterms);
         } else if (Ideology <= -4) {
-        question_insert("commie_return_question",internet_bluedog_disaster_midterms);
         question_insert("question_17_yugoslavia_win",internet_bluedog_disaster_midterms);
         question_insert("question_17_yugoslavia",internet_bluedog_disaster_midterms);
+        }
         }
         }
         }
@@ -67429,111 +67379,7 @@ if (e.question_number+1 == 18){
             if (CommieReturn == 1) {
             if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
             bushMentum();
-                question_insert("internet_thirdway_mitigation", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-          question_insert("internet_thirdway_republican_revolution", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                  question_insert("internet_thirdway_disaster_midterms", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-          question_insert("internet_liberal_mitigation", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-          question_insert("internet_liberal_republican_revolution", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                  question_insert("internet_liberal_disaster_midterms", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                  question_insert("internet_bluedog_mitigation", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-          question_insert("internet_bluedog_republican_revolution", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                  question_insert("internet_bluedog_disaster_midterms", 
+                  question_insert("commie_return_question", 
                     {
                        
               "model": "campaign_trail.question",
@@ -67635,111 +67481,7 @@ if (e.question_number+1 == 18){
         );
             } else {
                         powellMentum();
-            question_insert("internet_thirdway_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_thirdway_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_thirdway_disaster_midterms", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_disaster_midterms", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_disaster_midterms", 
+            question_insert("commie_return_question", 
             {
                
     "model": "campaign_trail.question",
