@@ -65147,7 +65147,7 @@ if (e.question_number+1 == 18){
     }
     }
     if (e.question_number+1 == 23){
-        if (e.player_answers.includes(80004) && (e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5))) {
+        if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
         CommieReturn += 1;
         ctsAchievement("Красный Призрак");
         question_insert("question_16.5_jones_case", 
@@ -65164,6 +65164,32 @@ if (e.question_number+1 == 18){
                   
                   );
                 question_insert("balanced_budget", 
+                  {
+                     
+            "model": "campaign_trail.question",
+            "pk": "commie_return_question",
+            "fields": {
+                "priority": 0,
+                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
+                "likelihood": 1
+            }
+                      }
+                  
+                  );
+        question_insert("crooked_deal_cuts", 
+                  {
+                     
+            "model": "campaign_trail.question",
+            "pk": "commie_return_question",
+            "fields": {
+                "priority": 0,
+                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
+                "likelihood": 1
+            }
+                      }
+                  
+                  );
+                question_insert("crooked_deal_nocuts", 
                   {
                      
             "model": "campaign_trail.question",
