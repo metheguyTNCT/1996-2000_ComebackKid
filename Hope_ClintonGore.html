@@ -1590,6 +1590,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
+    {
+        "model": "campaign_trail.question",
+        "pk": "soviet_1_transnistria",
+        "fields": {
+            "priority": 0,
+            "description": "Our forces have been on Defcon 3 since the election of Zyuganov at the helm of the Russian Republic. the first few week seemed calm but there have been sudden reports of troop transport into the contested region of Transnistria, currently controlled by a pro Russian communist separatist republic. As he's wishes for the denuclearization of his Neighbor Belarus, Ukraine and Kazakhstan remain, we must act soon before they do acts that cannot be undone.",
+            "likelihood": 1
+        }
+    },
     
 ]
 
@@ -6059,6 +6068,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "crooked_deal_nocuts",
             "description": "There must be someway of assuaging their fear without looking impotent isn't there? If their paranoia is really this strong, I'm certain we can give them some of the weapons that have shown incredible effectiveness against Soviet hardware in 1991."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 91001.5,
+        "fields": {
+            "question": "soviet_1_transnistria",
+            "description": "We'll call on the NATO nations passing on the knowledge of the situation. We must not draw a wind of panic just yet, or it may strike the Russians into acting even more aggressively. For now, we must make clear plans on the situation for all possible escalation to act as one bloc."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 91002.5,
+        "fields": {
+            "question": "soviet_1_transnistria",
+            "description": "Let's contact the UN and present our finding directly. We must show it clear to the world the intent of the Russian Federation. All must come together to stop any nation that would be ready to undercut the accord of Helsinki in a paranoid fear of a plot against them."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 91003.5,
+        "fields": {
+            "question": "soviet_1_transnistria",
+            "description": "We must not panic just yet. It's not because the Russian are that we must too. The red phone is still here for a reason. I'll call him directly, pin him on this. I'll show that we want no conflict but that we are also ready to act if he wish conflict."
         }
     },
 
@@ -23645,6 +23678,36 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 77,
             "global_multiplier": 0.0111
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12756,
+        "fields": {
+            "answer": 91001.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0122
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12757,
+        "fields": {
+            "answer": 91002.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0145
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12758,
+        "fields": {
+            "answer": 91003.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0189
+        }
     }
 ]
 
@@ -27297,6 +27360,26 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 90008.5,
             "issue": 30,
             "issue_score": -0.345,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12759,
+        "fields": {
+            "answer": 91001.5,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12760,
+        "fields": {
+            "answer": 91003.5,
+            "issue": 30,
+            "issue_score": 0.2,
             "issue_importance": 2
         }
     }
@@ -62113,6 +62196,33 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "It does seem like it was their plan all along as they found themselves to be eager buyers. Crazier still, Russia has been finding itself interested in possibly buying some of our hardware following their massive cuts to their military. It's unlikely to actually happen, but maybe Yeltisn is much more impotent than he lets on."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12753,
+        "fields": {
+            "answer": 91001.5,
+            "candidate": 77,
+            "answer_feedback": "The alliance is springing back to life as each nation expresses great concern over the situation developing in Eastern Europe. It's clear that, exception made of Poland, all remain timid on doing any action just yet as the stakes are nuclear. Still, if it comes to this, article 5 remains secure."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12754,
+        "fields": {
+            "answer": 91002.5,
+            "candidate": 77,
+            "answer_feedback": "As Warren Christopher presented the photos of planes, tanks and helicopters appearing with growing frequency each week inside of Transnistria, the international community is starting to wake from it's denial on the situation. Russia in it's stead claim that they have only been undergoing training exercise in what is a sovereign country, while Moldova is now begging us to enter NATO."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12755,
+        "fields": {
+            "answer": 91003.5,
+            "candidate": 77,
+            "answer_feedback": "As you spoke to him on the phone, he seemed strangely calm. He spoke on how all this has been just a constant plot against communism and he's finally rolling things back. You could not convince him to take back his troops, but you did convince him that you could stop your support for arms in the sister republics. Baby steps."
+        }
     }
 ]
 
@@ -63459,6 +63569,20 @@ if (e.question_number+1 == 27) {
             "likelihood": 1
         }
      }
+     let soviet_1_transnistria = {
+        "model": "campaign_trail.question",
+        "pk": "soviet_1_transnistria",
+        "fields": {
+            "priority": 0,
+            "description": "Our forces have been on Defcon 3 since the election of Zyuganov at the helm of the Russian Republic. the first few week seemed calm but there have been sudden reports of troop transport into the contested region of Transnistria, currently controlled by a pro Russian communist separatist republic. As he's wishes for the denuclearization of his Neighbor Belarus, Ukraine and Kazakhstan remain, we must act soon before they do acts that cannot be undone.",
+            "likelihood": 1
+        }
+     }
+     if (CommieReturn == 1) {
+    question_insert("question_18_defense_of_marriage",soviet_1_transnistria);
+    question_insert("question_ques_18_alt_fail",soviet_1_transnistria);
+    question_insert("question_ques_18_alt_win",soviet_1_transnistria);
+     } else {
      if (SlimGOPCongress == 1) {
     question_insert("question_18_defense_of_marriage",ques_19_alt);
     question_insert("question_ques_18_alt_fail",ques_19_alt);
@@ -63467,6 +63591,7 @@ if (e.question_number+1 == 27) {
     question_insert("question_18_defense_of_marriage",question_19_pr_and_wo_act);
     question_insert("question_ques_18_alt_fail",question_19_pr_and_wo_act);
     question_insert("question_ques_18_alt_win",question_19_pr_and_wo_act);
+     }
      }
      }
 //WTC Bombing CYOA
