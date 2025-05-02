@@ -64296,7 +64296,7 @@ cyoAdventure = function(a) {
     }
     }
     if (e.question_number+1 == 22) {
-    if (DisasterMidterms == 1) {
+    if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
     if (e.player_answers.includes(88012.5)) {
         question_insert("oslo_2", 
             {
@@ -67797,8 +67797,7 @@ if (e.question_number+1 == 18){
         }
         );
             }
-            }
-            if (sundog >= 25) {
+        }  else if (sundog >= 25) {
                 SundogMentum();
             question_insert("internet_thirdway_mitigation", 
             {
@@ -68049,7 +68048,6 @@ if (e.question_number+1 == 18){
                       }
                   
                   );
-    }
                           question_insert("oslo_4", 
       {
             "model": "campaign_trail.question",
@@ -69092,8 +69090,8 @@ if (e.question_number+1 == 18){
 }
 );
 }
-        }
-    }
+}
+}
 let vpName = "Monica Lewinsky Error";
 vpTable = {
     "Bill Clinton" : "Al Gore",
@@ -70563,6 +70561,7 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/AKefq29.p
 }
 }
 return construct(0);
+}
 }
 /*
 Welcome to Astro's Variable Headquarters
