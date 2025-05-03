@@ -60473,7 +60473,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86015.5,
             "candidate": 77,
-            "answer_feedback": "Gingrich isn't running for president, and yet he would seem like he was considering how much his smurfy grin is present on your adds. \"The Gingrich that stole Christmas\" is everywhere, and now Oogie Boogie Bush could give him Halloween and Thanksgiving too. The people are terriefied."
+            "answer_feedback": "Gingrich isn't running for President, and yet he would seem like he was considering how much his smurfy grin is present on your adds. \"The Gingrich that stole Christmas\" is everywhere, and now Oogie Boogie Bush could give him Halloween and Thanksgiving too. The people are terriefied."
         }
     },
 
@@ -68140,6 +68140,9 @@ if (e.question_number+1 == 18){
         if (e.question_number+1 == 25){
             if (CommieReturn == 1) {
             if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
+            updateHeadlineWithImage("#headline0", 'Republicans nominate Former President George Bush for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
+            updateHeadlineWithImage("#headline1", 'Gennady Zyuganov elected President of Russia, here\'s what you need to know', "https://i.imgur.com/tEa1cTA.png");
+            updateHeadlineWithImage("#headline2", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
             bushMentum();
                   question_insert("commie_return_question", 
                     {
@@ -68155,6 +68158,9 @@ if (e.question_number+1 == 18){
                     
                     );
             } else {
+            updateHeadlineWithImage("#headline0", 'Republicans nominate General Colin Powell for President in the upcoming 1996 election', "https://i.imgur.com/iKrKIMv.png");
+            updateHeadlineWithImage("#headline1", 'Gennady Zyuganov elected President of Russia, here\'s what you need to know', "https://i.imgur.com/tEa1cTA.png");
+            updateHeadlineWithImage("#headline2", 'Newly-formed \'Reform Party\' nominate Republican Pat Buchanan for President', "https://i.imgur.com/ZkikagQ.png");
                         powellMentum();
             question_insert("commie_return_question", 
             {
@@ -68171,6 +68177,7 @@ if (e.question_number+1 == 18){
             );
             }
         }  else if (sundog >= 25) {
+            updateHeadlineWithImage("#headline0", 'Republicans shock everyone, nominate Ross Perot for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
                 SundogMentum();
             question_insert("internet_thirdway_mitigation", 
             {
@@ -68263,6 +68270,8 @@ if (e.question_number+1 == 18){
               }
             });
     } else if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5)) && CommieReturn == 0) {
+        updateHeadlineWithImage("#headline0", 'Republicans nominate Former President George Bush for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
+        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
     bushMentum();
     question_insert("internet_thirdway_mitigation", 
                   {
@@ -68382,6 +68391,8 @@ if (e.question_number+1 == 18){
                   
                   );
             } else if (e.player_answers.includes(900015551) && (e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5))) {
+                updateHeadlineWithImage("#headline0", 'Republicans nominate Businessman Steve Forbes for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
+                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Richard Lamm for President', "https://i.imgur.com/rL9O2Td.png");
                 forbesMentum();
                 question_insert("internet_thirdway_mitigation", 
                     {
@@ -68502,6 +68513,8 @@ if (e.question_number+1 == 18){
                     );
             
         } else if (FPWin <= -1) {
+            updateHeadlineWithImage("#headline0", 'Republicans nominate General Colin Powell for President in the upcoming 1996 election', "https://i.imgur.com/iKrKIMv.png");
+            updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Republican Pat Buchanan for President', "https://i.imgur.com/ZkikagQ.png");
             powellMentum();
             question_insert("internet_thirdway_mitigation", 
             {
@@ -68621,6 +68634,8 @@ if (e.question_number+1 == 18){
             
             );
     } else if (e.player_answers.includes(88005.5) && RepublicanRevolution == 1) {
+        updateHeadlineWithImage("#headline0", 'The Republican Party just nominated Sonny Bono for President of the United States', "https://i.imgur.com/eKzBh1t.png");
+        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Tim Penny for President', "https://i.imgur.com/29JfKo2.png");
                                 bonoMentum();
                             question_insert("internet_thirdway_mitigation", 
                             {
@@ -68742,6 +68757,8 @@ if (e.question_number+1 == 18){
      } else if (Ideology >= -3 && Ideology <= 1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
+        updateHeadlineWithImage("#headline0", 'Republicans nominate Senate Majority Leader Bob Dole for President in the upcoming 1996 election', "https://i.imgur.com/4Ce9RLf.png");
+        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 doleMentum();
                   question_insert("internet_thirdway_republican_revolution", 
                   {
@@ -68758,6 +68775,8 @@ if (e.question_number+1 == 18){
                   );
       // Alexander Inserters
           } else if (SlimGOPCongress == 1) {
+            updateHeadlineWithImage("#headline0", 'Republicans nominate Former Governor Lamar Alexander for President in the upcoming 1996 election', "https://i.imgur.com/6bIWI3H.png");
+            updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
             lamarMentum();
             question_insert("internet_thirdway_mitigation", 
               {
@@ -68775,6 +68794,8 @@ if (e.question_number+1 == 18){
         
      } else if (DisasterMidterms == 1) {
     if (e.player_answers.includes(70001) || e.player_answers.includes(85026.5)) {
+        updateHeadlineWithImage("#headline0", 'Republicans nominate Senate Majority Leader Bob Dole for President in the upcoming 1996 election', "https://i.imgur.com/4Ce9RLf.png");
+        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                     rdoleMentum();
                   question_insert("internet_thirdway_disaster_midterms", 
                   {
@@ -68790,6 +68811,8 @@ if (e.question_number+1 == 18){
                   
                   );
     } else {
+        updateHeadlineWithImage("#headline0", 'Republicans nominate Governor Pete Wilson for President in the upcoming 1996 election', "https://i.imgur.com/vLT5xgM.png");
+        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
         wilsonMentum();
       question_insert("internet_thirdway_disaster_midterms", 
         {
@@ -68809,6 +68832,8 @@ if (e.question_number+1 == 18){
                         } else if (Ideology >= 2) {
                           // Buchanan Inserters
                           if (SlimGOPCongress == 1) {
+                            updateHeadlineWithImage("#headline0", 'Republicans nominate \'Extremist\' Pat Buchanan for President in the upcoming 1996 election', "https://i.imgur.com/UK73WaG.png");
+                            updateHeadlineWithImage("#headline1", 'WELD WALKS OUT- MA Governor Bolts from Republicans ', "https://i.imgur.com/FnRl26U.png");
                             patMentum();
                             question_insert("internet_liberal_mitigation", 
                               {
@@ -68825,6 +68850,8 @@ if (e.question_number+1 == 18){
                         // Gramm Inserters 
                         
                      } else if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
+                        updateHeadlineWithImage("#headline0", 'Republicans nominate Senator Phil Gramm for President in the upcoming 1996 election', "https://i.imgur.com/iMDqKAh.png");
+                        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                         grammMentum();
                       question_insert("internet_liberal_republican_revolution", 
                         {
@@ -68853,6 +68880,8 @@ if (e.question_number+1 == 18){
                         }
 		    } else if (Ideology <= -4) {
             if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
+                updateHeadlineWithImage("#headline0", 'Republicans nominate Senator Arlen Specter for President in the upcoming 1996 election', "https://i.imgur.com/YnRYHs1.png");
+                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 specterMentum();
             question_insert("internet_bluedog_republican_revolution", 
                 {
@@ -68879,6 +68908,8 @@ if (e.question_number+1 == 18){
             
             );
             } else if (SlimGOPCongress == 1) {
+                updateHeadlineWithImage("#headline0", 'Republicans nominate Former Sec. Defense Dick Cheney for President in the upcoming 1996 election', "https://i.imgur.com/YnRYHs1.png");
+                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 CheneyMentum();
             question_insert("internet_bluedog_mitigation", 
             {
@@ -70635,7 +70666,7 @@ const candidates = [
     {
         name: 'Donald Rumsfeld',
         image: 'https://files.catbox.moe/g456yn.png',
-        description: 'Donald Rumsfeld has been a potential candidate for president since the 1960s, yet, he has never been able to get the momentum needed to run for president. Rumsfeld has always been in the background while whoever he\'s working for gets the attention.',
+        description: 'Donald Rumsfeld has been a potential candidate for President since the 1960s, yet, he has never been able to get the momentum needed to run for President. Rumsfeld has always been in the background while whoever he\'s working for gets the attention.',
         pros: 'Rumsfeld has experience working in the Nixon and Ford administration.',
         cons: 'Not many people know Rumsfeld, the last time he was elected to something was in 1968, he isn\'t relatable to the average American.',
         strategy: 'You should make him seem like he\'s out of touch, while also bringing up how the last time he was somewhat politically relevant was in the 1970s.'
