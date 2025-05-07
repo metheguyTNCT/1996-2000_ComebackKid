@@ -18,14 +18,14 @@ campaignTrail_temp.election_json = [
 ]
 
 campaignTrail_temp.modBoxTheme = {
-  "header_color": "#5d84f2",
+  "header_color": "#004F6E",       // new teal
   "header_image_url": "https://i.imgur.com/1uYPh5Z.jpeg",
   "header_text_color": "#000000",
   "description_text_color": "#000000",
   "description_background_color": "#ffffff",
-  "main_color": "#5d84f2",
-  "secondary_color": "#ffffff",
-  "ui_text_color": "#000000"
+  "main_color": "#004F6E",
+  "secondary_color": "#011521",    // dark backdrop
+  "ui_text_color": "#E5E7EB"
 }
 campaignTrail_temp.candidate_json = [
   {
@@ -298,10 +298,10 @@ credits = function() {
 }
 
 jet_data = {
-  "headerColor": "#5687fb",
-  "windowColor": "#ffffff",
-  "containerColor": "#ffffff",
-  "innerWindowColor": "#5987F8",
+  "headerColor": "#004F6E", 
+  "windowColor": "#011521",
+  "containerColor": "#011521",
+  "innerWindowColor": "#003D58",
   "bannerImageUrl": "https://i.imgur.com/wqfz0az.png",
   "backgroundImageUrl": "https://files.catbox.moe/ol29hp.png",
   "endingTextColor": "#000000",
@@ -325,7 +325,7 @@ customquote = quotes[Math.floor((Math.random() * quotes.length))]
 
 
 corrr = `\n<h2 style="margin-bottom: 4px; color: white; font-weight: bold; text-shadow: 1px 1px 0 #4c6fd1;"><h2 class="typewriter">HOPE</h2><font id='wittyquote' size='3' color='white' style="font-weight: bold; text-shadow: 1px 1px 0 rgba(60, 90, 180, 0.4); letter-spacing: 0.2px;"><em>` + customquote + `</em></font>`;
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#5987F8";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#004F6E";
 
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ffffff";
@@ -334,7 +334,7 @@ nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ffffff";
 $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/IMupOWE.png)"
 
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#5987F8"
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#004F6E"
 
 
 $("#game_window")[0].style.backgroundSize = "cover"; 
@@ -355,20 +355,20 @@ document.getElementById("header").src = "https://files.catbox.moe/t43ts8.png";
 document.body.background = "https://files.catbox.moe/jhcip6.png";
 
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
 
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#5987F8!important;}</style>";
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
 document.head.innerHTML +=`
 <style>
 .game_header {
 background: linear-gradient(to bottom, #5687fb 0%, #4e81f9 50%, #5a8bfc 100%);
-border: 1px solid #466fda;
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
 }
   #map_container {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
   border: 2px double #b3c8f2;
@@ -383,40 +383,40 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
 }
           #opponent_selection_description_window {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
           }
           #inner_window_1 {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
   animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
           }
           .inner_window_sign_display {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
           }
           #candidate_description_window {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
             overflow:hidden;
           }
           #running_mate_description_window {
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
             overflow:hidden;
           }
           #election_description_window{
   background: 
-    linear-gradient(145deg, #f9fbff 0%, #e9f1fb 40%, #dbe8fb 80%, #f5f9ff 100%),
+    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
     linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
           }
@@ -429,12 +429,12 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
           }
 .campaign_trail_start_emphasis {
 background: linear-gradient(to bottom, #5687FB 0%, #4e81f9 50%, #5c8bfc 100%);
-border: 1px solid #466fda;
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
 }
 .inner_window_question h3 {
-background: linear-gradient(180deg, #c3d5fd 0%, #b3c9fb 20%, #a6bbf7 40%, #bcd2fc 60%, #d1e3ff 80%, #e1f1ff 100%);
-border: 1px solid #9bbafc;
+background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
+border: 1px solid #0183AD;
 box-shadow:
   inset 0 0 3px rgba(90, 120, 255, 0.25),
   inset 0 1px 0 rgba(255, 255, 255, 0.3),
@@ -444,8 +444,8 @@ text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
 }
 .overlay_window h3 {
-background: linear-gradient(180deg, #c3d5fd 0%, #b3c9fb 20%, #a6bbf7 40%, #bcd2fc 60%, #d1e3ff 80%, #e1f1ff 100%);
-border: 1px solid #9bbafc;
+background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
+border: 1px solid #0183AD;
 box-shadow:
   inset 0 0 3px rgba(90, 120, 255, 0.25),
   inset 0 1px 0 rgba(255, 255, 255, 0.3),
@@ -455,28 +455,28 @@ text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
 }
 #menu_container {
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
-border: 1px solid #466fda;
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 #overall_result_container {
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
-border: 1px solid #466fda;
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 #state_info h3 {
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
-border: 1px solid #466fda;
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 #overall_result h3 {
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
-border: 1px solid #466fda;
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 .mytooltip .mytooltiptext {
 width: 240px;
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 color: black;
 text-align: center;
 border-radius: 6px;
@@ -488,7 +488,7 @@ left: 20%;
 margin-left: -90px;
 opacity: 0;
 transition: opacity 0.3s;
-border: 1px solid #466fda;
+border: 1px solid #003A4F;
 pointer-events: none;
 font-size: 13px !important;
 line-height: 1.5em !important;
@@ -514,12 +514,12 @@ box-shadow: inset 0 0 6px rgba(60, 110, 255, 0.3), 0 1px 2px rgba(0,0,0,0.1);
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.35);
 }
 .window_frame {
-border: 2px solid #bfcfe9;
-border-top-color: #ffffff;
-border-left-color: #ffffff;
-border-right-color: #7a9ac9;
-border-bottom-color: #7a9ac9;
-background: #d4e0f6;
+border: 2px solid #005B82;
+border-top-color: #0183AD;
+border-left-color: #0183AD;
+border-right-color: #003A4F;
+border-bottom-color: #003A4F;
+background: #024E71;
 }
 .mytooltip:hover .mytooltiptext {
 box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25), 0 0 6px rgba(60, 110, 255, 0.15);
@@ -536,11 +536,11 @@ left: 50%;
 margin-left: -5px;
 border-width: 5px;
 border-style: solid;
-border-color: #5c8bfa transparent transparent transparent;
+border-color: #006d96 transparent transparent transparent;
 }
 #state_result_container {
-background: linear-gradient(to bottom, #5988F9 0%, #507ff7 50%, #5c8bfa 100%);
-border: 1px solid #466fda;
+background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
+border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
 }
 @keyframes windowPop {
