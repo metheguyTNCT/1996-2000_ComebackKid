@@ -70493,6 +70493,10 @@ function createDraggableBox() {
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
     draggableBox.style.lineWidth = '0';
+    if(!(localStorage.getItem("clickedBox"))){
+    alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
+    localStorage.setItem("clickedBox", "true")
+    }
 
     let assemble_html = [
       `<img src="https://i.imgur.com/7YfA8Sz.png">`,
