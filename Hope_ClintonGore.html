@@ -70562,6 +70562,96 @@ searchbar.addEventListener('keydown', (event) => {
   website_handler();
 }
 
+
+const ideologyMap = {
+    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "7": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "8": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "9": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "10": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "11": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+
+}
+
+const legacyMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+
+}
+
+
+const fpwinMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+
+}
+
+const legwinMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+
+}
+
 function website_handler() {
     main_website_candidate_list = [];
 	console.log(current_website);
@@ -70601,6 +70691,11 @@ sortedOpponents.forEach(([name, value]) => {
         main_website_candidate_list.push(wbushObject);
     }
 });
+legacyMap
+const ideologyHTML = ideologyMap[String(Ideology)];
+const legacyHTML = legacyMap[String(Legacy)]; 
+const fpwinMapHTML = fpwinMap[String(FPWin)];
+const legwinMapHTML = legwinMap[String(LEGWin)];
 
         webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
 
@@ -70622,7 +70717,7 @@ sortedOpponents.forEach(([name, value]) => {
 
 
         // Use this to control the headline
-        document.getElementById("headline").innerHTML = "CLINTON ADMIN: Conservative, utterly unremarkable. A peacemaker with majority control in congress.";
+        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, ${legacyHTML}. ${fpwinMapHTML} with ${legwinMapHTML}.`;
     } else {
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
