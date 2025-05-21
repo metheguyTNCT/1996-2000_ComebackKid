@@ -63856,16 +63856,10 @@ var BushNom = 0
 var SundogNom = 0
 var sundog = 0
 cyoAdventure = function(a) {
-    initializeContent();
     update_EV_dict();
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
    //Healthcare Update Inserter
     if (ans === 50001) {
-        updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
-        updateHeadlineWithImage("#headline1", 'Clinton picks Ted Kennedy to run Healthcare Task Force', "https://i.imgur.com/Jh7CTkI.png");
-        updateHeadlineWithImage("#headline9", 'The Cowboys are Super Bowl champions', "https://i.imgur.com/8pXXHTQ.png"); 
-        updateHeadlineWithImage("#headline8", 'Record 90 million viewers tune in to watch Michael Jackson, Oprah Winfrey interview', "https://i.imgur.com/WShTS1j.png"); 
-        updateHeadlineWithImage("#headline10", 'Groundhog Day, starring Bill Murray releases', "https://i.imgur.com/WIrcEKN.pngg"); 
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
         question_insert("whitewater_question", 
         {
@@ -63881,11 +63875,6 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50002) {
-        updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
-        updateHeadlineWithImage("#headline1", 'Clinton picks the First Lady to run Healthcare Task Force', "https://i.imgur.com/7VuN8iG.png"); 
-        updateHeadlineWithImage("#headline9", 'The Cowboys are Super Bowl champions', "https://i.imgur.com/8pXXHTQ.png"); 
-        updateHeadlineWithImage("#headline8", 'Record 90 million viewers tune in to watch Michael Jackson, Oprah Winfrey interview', "https://i.imgur.com/WShTS1j.png"); 
-        updateHeadlineWithImage("#headline10", 'Groundhog Day, starring Bill Murray releases', "https://i.imgur.com/WIrcEKN.pngg"); 
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
         question_insert("whitewater_question", 
         {
@@ -63900,12 +63889,7 @@ cyoAdventure = function(a) {
         );
         
     }
-    if (ans === 50003) {
-    updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
-    updateHeadlineWithImage("#headline1", 'Clinton picks Speaker of the House and Senate Majority Leader to co-run Healthcare Task Force', "https://i.imgur.com/80tNGWb.png");
-    updateHeadlineWithImage("#headline9", 'The Cowboys are Super Bowl champions', "https://i.imgur.com/8pXXHTQ.png"); 
-    updateHeadlineWithImage("#headline8", 'Record 90 million viewers tune in to watch Michael Jackson, Oprah Winfrey interview', "https://i.imgur.com/WShTS1j.png"); 
-    updateHeadlineWithImage("#headline10", 'Groundhog Day, starring Bill Murray releases', "https://i.imgur.com/WIrcEKN.pngg"); 
+    if (ans === 50003) { 
           campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/xnj46k.gif';
         question_insert("whitewater_question", 
         {
@@ -63921,11 +63905,6 @@ cyoAdventure = function(a) {
         
     }
     if (ans === 50004) {
-        updateHeadlineWithImage("#headline0", 'Attack on World Trade Center leaves 6 dead, thousands injured', "https://i.imgur.com/cW6VGqZ.png");  
-        updateHeadlineWithImage("#headline1", 'Clinton picks Doctors and Pharmaceutical experts to run Healthcare Task Force', "https://i.imgur.com/lz215ha.png");
-        updateHeadlineWithImage("#headline9", 'The Cowboys are Super Bowl champions', "https://i.imgur.com/8pXXHTQ.png"); 
-        updateHeadlineWithImage("#headline8", 'Record 90 million viewers tune in to watch Michael Jackson, Oprah Winfrey interview', "https://i.imgur.com/WShTS1j.png"); 
-        updateHeadlineWithImage("#headline10", 'Groundhog Day, starring Bill Murray releases', "https://i.imgur.com/WIrcEKN.pngg"); 
         question_insert("whitewater_question", 
         {
             "model": "campaign_trail.question",
@@ -65363,7 +65342,6 @@ if (e.question_number+1 == 27) {
     sundog -= 1;
     }
     if (ans == 4000131){
-    updateHeadlineWithImage("#headline8", 'Phoenix Suns win the 1993 NBA Finals, preventing a Bulls three-peat', "https://i.imgur.com/J8Mt6Yp.png");
     Ideology -= 1;
     sundog += 1;
     }
@@ -67097,7 +67075,6 @@ if (e.question_number+1 == 18){
     question_insert("soviet_3_conciliatory_nocuts",soviet_4_nowar);
     } else {
     if (e.player_answers.includes(91001.5)) {
-    updateHeadlineWithImage("#headline0", 'The Russian Invasion of Kazakhstan, explained', "https://i.imgur.com/tUhdQDo.png");
     question_insert("soviet_3_conciliatory_masscuts",soviet_4_nato_noun);
     question_insert("soviet_3_conciliatory_semicuts",soviet_4_nato_noun);
     question_insert("soviet_3_conciliatory_nocuts",soviet_4_nato_noun);
@@ -67105,7 +67082,6 @@ if (e.question_number+1 == 18){
     question_insert("soviet_3_nonconciliatory_semicuts",soviet_4_nato_noun);
     question_insert("soviet_3_nonconciliatory_noncuts",soviet_4_nato_noun);
     } else if (e.player_answers.includes(91002.5) && e.player_answers.includes(80003)) {
-        updateHeadlineWithImage("#headline0", 'The Russian Invasion of Kazakhstan, explained', "https://i.imgur.com/tUhdQDo.png");
     question_insert("soviet_3_conciliatory_masscuts",soviet_4_nonato_un);
     question_insert("soviet_3_conciliatory_semicuts",soviet_4_nonato_un);
     question_insert("soviet_3_conciliatory_nocuts",soviet_4_nonato_un);
@@ -67113,7 +67089,6 @@ if (e.question_number+1 == 18){
     question_insert("soviet_3_nonconciliatory_semicuts",soviet_4_nonato_un);
     question_insert("soviet_3_nonconciliatory_noncuts",soviet_4_nonato_un);
     } else {
-        updateHeadlineWithImage("#headline0", 'The Russian Invasion of Kazakhstan, explained', "https://i.imgur.com/tUhdQDo.png");
     question_insert("soviet_3_conciliatory_masscuts",soviet_4_nonato_noun);
     question_insert("soviet_3_conciliatory_semicuts",soviet_4_nonato_noun);
     question_insert("soviet_3_conciliatory_nocuts",soviet_4_nonato_noun);
@@ -67356,7 +67331,6 @@ if (e.question_number+1 == 18){
             }
         }
         if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
-            updateHeadlineWithImage("#headline0", 'Gennady Zyuganov elected President of Russia, here\'s what you need to know', "https://i.imgur.com/tEa1cTA.png");
             CommieReturn += 1;
             ctsAchievement("Красный Призрак");
             question_insert("question_17_yugoslavia",commie_return_question);
@@ -68158,9 +68132,6 @@ if (e.question_number+1 == 18){
         if (e.question_number+1 == 25){
             if (CommieReturn == 1) {
             if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
-            updateHeadlineWithImage("#headline0", 'Republicans nominate Former President George Bush for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
-            updateHeadlineWithImage("#headline1", 'Gennady Zyuganov elected President of Russia, here\'s what you need to know', "https://i.imgur.com/tEa1cTA.png");
-            updateHeadlineWithImage("#headline2", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
             bushMentum();
                   question_insert("commie_return_question", 
                     {
@@ -68176,9 +68147,6 @@ if (e.question_number+1 == 18){
                     
                     );
             } else {
-            updateHeadlineWithImage("#headline0", 'Republicans nominate General Colin Powell for President in the upcoming 1996 election', "https://i.imgur.com/iKrKIMv.png");
-            updateHeadlineWithImage("#headline1", 'Gennady Zyuganov elected President of Russia, here\'s what you need to know', "https://i.imgur.com/tEa1cTA.png");
-            updateHeadlineWithImage("#headline2", 'Newly-formed \'Reform Party\' nominate Republican Pat Buchanan for President', "https://i.imgur.com/ZkikagQ.png");
                         powellMentum();
             question_insert("commie_return_question", 
             {
@@ -68195,7 +68163,6 @@ if (e.question_number+1 == 18){
             );
             }
         }  else if (sundog >= 25) {
-            updateHeadlineWithImage("#headline0", 'Republicans shock everyone, nominate Ross Perot for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
                 SundogMentum();
             question_insert("internet_thirdway_mitigation", 
             {
@@ -68288,8 +68255,6 @@ if (e.question_number+1 == 18){
               }
             });
     } else if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5)) && CommieReturn == 0) {
-        updateHeadlineWithImage("#headline0", 'Republicans nominate Former President George Bush for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
-        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
     bushMentum();
     question_insert("internet_thirdway_mitigation", 
                   {
@@ -68409,8 +68374,6 @@ if (e.question_number+1 == 18){
                   
                   );
             } else if (e.player_answers.includes(900015551) && (e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5))) {
-                updateHeadlineWithImage("#headline0", 'Republicans nominate Businessman Steve Forbes for President in the upcoming 1996 election', "https://i.imgur.com/tHjxRfn.png");
-                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Richard Lamm for President', "https://i.imgur.com/rL9O2Td.png");
                 forbesMentum();
                 question_insert("internet_thirdway_mitigation", 
                     {
@@ -68531,8 +68494,6 @@ if (e.question_number+1 == 18){
                     );
             
         } else if (FPWin <= -1) {
-            updateHeadlineWithImage("#headline0", 'Republicans nominate General Colin Powell for President in the upcoming 1996 election', "https://i.imgur.com/iKrKIMv.png");
-            updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Republican Pat Buchanan for President', "https://i.imgur.com/ZkikagQ.png");
             powellMentum();
             question_insert("internet_thirdway_mitigation", 
             {
@@ -68652,8 +68613,6 @@ if (e.question_number+1 == 18){
             
             );
     } else if (e.player_answers.includes(88005.5) && RepublicanRevolution == 1) {
-        updateHeadlineWithImage("#headline0", 'The Republican Party just nominated Sonny Bono for President of the United States', "https://i.imgur.com/eKzBh1t.png");
-        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Tim Penny for President', "https://i.imgur.com/29JfKo2.png");
                                 bonoMentum();
                             question_insert("internet_thirdway_mitigation", 
                             {
@@ -68775,8 +68734,6 @@ if (e.question_number+1 == 18){
      } else if (Ideology >= -3 && Ideology <= 1)  {
             // Bob Dole Inserters
             if (RepublicanRevolution == 1)  {
-        updateHeadlineWithImage("#headline0", 'Republicans nominate Senate Majority Leader Bob Dole for President in the upcoming 1996 election', "https://i.imgur.com/4Ce9RLf.png");
-        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 doleMentum();
                   question_insert("internet_thirdway_republican_revolution", 
                   {
@@ -68793,8 +68750,6 @@ if (e.question_number+1 == 18){
                   );
       // Alexander Inserters
           } else if (SlimGOPCongress == 1) {
-            updateHeadlineWithImage("#headline0", 'Republicans nominate Former Governor Lamar Alexander for President in the upcoming 1996 election', "https://i.imgur.com/6bIWI3H.png");
-            updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
             lamarMentum();
             question_insert("internet_thirdway_mitigation", 
               {
@@ -68812,8 +68767,6 @@ if (e.question_number+1 == 18){
         
      } else if (DisasterMidterms == 1) {
     if (e.player_answers.includes(70001) || e.player_answers.includes(85026.5)) {
-        updateHeadlineWithImage("#headline0", 'Republicans nominate Senate Majority Leader Bob Dole for President in the upcoming 1996 election', "https://i.imgur.com/4Ce9RLf.png");
-        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                     rdoleMentum();
                   question_insert("internet_thirdway_disaster_midterms", 
                   {
@@ -68829,8 +68782,6 @@ if (e.question_number+1 == 18){
                   
                   );
     } else {
-        updateHeadlineWithImage("#headline0", 'Republicans nominate Governor Pete Wilson for President in the upcoming 1996 election', "https://i.imgur.com/vLT5xgM.png");
-        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
         wilsonMentum();
       question_insert("internet_thirdway_disaster_midterms", 
         {
@@ -68850,8 +68801,6 @@ if (e.question_number+1 == 18){
                         } else if (Ideology >= 2) {
                           // Buchanan Inserters
                           if (SlimGOPCongress == 1) {
-                            updateHeadlineWithImage("#headline0", 'Republicans nominate \'Extremist\' Pat Buchanan for President in the upcoming 1996 election', "https://i.imgur.com/UK73WaG.png");
-                            updateHeadlineWithImage("#headline1", 'WELD WALKS OUT- MA Governor Bolts from Republicans ', "https://i.imgur.com/FnRl26U.png");
                             patMentum();
                             question_insert("internet_liberal_mitigation", 
                               {
@@ -68868,8 +68817,6 @@ if (e.question_number+1 == 18){
                         // Gramm Inserters 
                         
                      } else if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
-                        updateHeadlineWithImage("#headline0", 'Republicans nominate Senator Phil Gramm for President in the upcoming 1996 election', "https://i.imgur.com/iMDqKAh.png");
-                        updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                         grammMentum();
                       question_insert("internet_liberal_republican_revolution", 
                         {
@@ -68898,8 +68845,6 @@ if (e.question_number+1 == 18){
                         }
 		    } else if (Ideology <= -4) {
             if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
-                updateHeadlineWithImage("#headline0", 'Republicans nominate Senator Arlen Specter for President in the upcoming 1996 election', "https://i.imgur.com/YnRYHs1.png");
-                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 specterMentum();
             question_insert("internet_bluedog_republican_revolution", 
                 {
@@ -68926,8 +68871,6 @@ if (e.question_number+1 == 18){
             
             );
             } else if (SlimGOPCongress == 1) {
-                updateHeadlineWithImage("#headline0", 'Republicans nominate Former Sec. Defense Dick Cheney for President in the upcoming 1996 election', "https://i.imgur.com/YnRYHs1.png");
-                updateHeadlineWithImage("#headline1", 'Newly-formed \'Reform Party\' nominate Ross Perot for President', "https://i.imgur.com/M6ie000.png");
                 CheneyMentum();
             question_insert("internet_bluedog_mitigation", 
             {
@@ -70483,1242 +70426,241 @@ newButton.innerHTML = 'Personal Computer';
 
 // Attach the click event listener
 newButton.addEventListener('click', function () {
-    openHeadquarter();
+    createDraggableBox();
 });
 
 // Insert the new button next to the reference button
 refButton.insertAdjacentElement('afterend', newButton);
 }
-
-// Declare globally to initialize only once
-let cnnContent;
-let hqContent;
-questions = document.querySelector(".inner_window_question");
-let hqDiv;
-let mainDiv;
-function initializeContent() {
-    if (!hqContent) {
-        console.log("Creating hqContent for the first time...");
-        hqContent = document.createElement('div');
-    
-          // Full HTML structure with clickable links and dynamic content
-    hqContent.innerHTML = `
-<div style="font-family: 'Times New Roman', Times, serif; background-color: #fff; color: #bfa800; padding: 20px; border: 3px solid #bfa800; width: 70%; margin: 0 auto; text-align: center; font-size: 16px; box-sizing: border-box;">
-    <!-- Shiny gold plate behind the title -->
-    <h1 style="font-size: 24px; margin-bottom: 1em; 
-        background: linear-gradient(135deg, #ffd700, #ffcc00); 
-        padding: 10px; border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        The White House
-    </h1>
-
-    <p style="font-size: 18px; font-weight: bold; margin-bottom: 1em;">Welcome to the Official Website of the White House</p>
-
-    <img src="https://files.catbox.moe/fcjyz0.png" 
-        style="width: 100%; height: auto; margin-bottom: 1em; border: 5px solid #bfa800; border-radius: 10px;">
-
-    <div style="font-size: 18px; margin-bottom: 1em;">
-        <a href="#" id="home" style="color: #bfa800; text-decoration: none;">The Fight At Home</a><br>
-        <a href="#" id="opposition" style="color: #bfa800; text-decoration: none;">The Opposition</a><br>
-        <a href="#" id="legacy" style="color: #bfa800; text-decoration: none;">Ideology & Legacy</a><br>
-    </div>
-
-    <div id="dynamicContent" style="font-size: 18px; margin-top: 20px;">
-        <p id="contentText">Please click a section above to learn more.</p>
-    </div>
-
-    <!-- Main content area -->
-        <div id="homeContent" style="display: none; margin-top: 20px;">
-                <h2>The Various Fights</h2>
-                <div id="clintonChecklist" style="text-align: left; margin-top: 20px;">
-                    <h3>Your Campaign Promises:</h3>
-                    <ul>
-                        <li><input type="checkbox" id="welfare" disabled> Welfare Reform</li>
-                        <li><input type="checkbox" id="deficit" disabled> Deficit Reduction</li>
-                        <li><input type="checkbox" id="healthcare" disabled> Healthcare Reform</li>
-                    </ul>
-                </div>
-<div id="wins" style="text-align: center; margin-top: 20px; border: 3px solid #bfa800; padding: 10px; background-color: #fff;">
-    <h3>The Rundown:</h3>
-    <ul id="winsList">
-        <!-- Dynamic Text -->
-        <li id="win-status">[Dynamic wins]</li>
-        <li id="approvalText">[insert approval text]</p>
-        <li id="dynamicStandingText">[Dynamic text will appear here]</p>
-        <!-- Hidden Wins (Initially Hidden) -->
-        <li id="win-healthcare" style="display: none;">America recieved <span style="color: blue; font-weight: bold;">Moderate Healthcare reform.</span></li>
-        <li id="win-healthcare-ted" style="display: none;">America recieved the <span style="color: green; font-weight: bold;">Healthcare it deserves.</span></li>
-        <li id="win-oslo" style="display: none;">Peace in the Middle East <span style="color: green; font-weight: bold;">secured.</span></li>
-        <li id="win-welfare" style="display: none;">Welfare reform <span style="color: green; font-weight: bold;">secured.</span></li>
-        <li id="win-deficit" style="display: none;">Deficit Reduction <span style="color: green; font-weight: bold;">secured.</span></li>
-        <li id="gay-bill" style="display: none;">You've passed a bill to <span style="color: green; font-weight: bold;">protect Gay Rights</span></li>
-        <li id="gun-bill" style="display: none;">Dangerous guns have been <span style="color: green; font-weight: bold;">taken off the streets.</span></li>
-    </ul>
-</div>
-
-        <div id="congress1993" style="margin-top: 20px;">
-            <h3>The Congressional Landscape</h3>
-            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
-                <div id="houseMajority">
-                    <img id="houseImage" src="" alt="House Majority" 
-                        style="border: 3px solid #bfa800; border-radius: 10px;">
-                    <p id="houseMajorityText"></p>
-                </div>
-                <div id="senateMajority">
-                    <img id="senateImage" src="" alt="Senate Majority" 
-                        style="border: 3px solid #bfa800; border-radius: 10px;">
-                    <p id="senateMajorityText"></p>
-                </div>
-            </div>
-            <div id="congressLeaders" style="margin-top: 20px;">
-                <h4>Leaders:</h4>
-                <div id="houseLeader">
-                    <img id="houseLeaderImage" src="" alt="House Leader" 
-                        style="border: 3px solid #bfa800; border-radius: 10px;">
-                    <p id="houseLeaderText"></p>
-                </div>
-                <div id="senateLeader">
-                    <img id="senateLeaderImage" src="" alt="Senate Leader" 
-                        style="border: 3px solid #bfa800; border-radius: 10px;">
-                    <p id="senateLeaderText"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="legacyContent" style="display: none; margin-top: 20px;">
-        <h2>Ideology & Legacy</h2>
-        <div id="legacyDisplay" style="margin-top: 10px; font-size: 18px; color: #000;">
-            <p>Public Support of the Administration:</p>
-            <p id="PublicSupportText" style="font-weight: bold; margin-top: 5px;">[Dynamic Public Support]</p>
-
-            <p>Your ideology:</p>
-            <p id="ideologyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Ideology]</p>
-
-            <p>Your legacy:</p>
-            <p id="legacyText" style="font-weight: bold; margin-top: 5px;">[Dynamic Legacy]</p>
-        </div>
-    </div>
-
-    <div id="oppositionTabs" style="display: none; margin-top: 20px;">
-        <h2>The Opposition Candidates</h2>
-        <div id="tabs"></div>
-        <div id="tabContent" style="margin-top: 20px; display: flex; justify-content: space-around;">
-            <div id="candidateContent" style="width: 70%; overflow-y: visible; max-height: none;">
-                <div style="border: 5px solid #bfa800; padding: 10px; background-color: #fff; display: inline-block; border-radius: 10px; margin-bottom: 10px;">
-                    <img id="candidateImage" src="" style="width: 100%; max-width: 200px; height: auto;" />
-                </div>
-                <p id="candidateDescription"></p>
-
-                <!-- New sections for Pros, Cons, and Strategy -->
-                <h4>Pros:</h4>
-                <ul>
-                    <li id="candidatePros"></li>
-                </ul>
-                <h4>Cons:</h4>
-                <ul>
-                    <li id="candidateCons"></li>
-                </ul>
-                <h4>Strategy to Beat Them:</h4>
-                <p id="candidateStrategy"></p>
-            </div>
-        </div>
-    </div>
-
-    <p style="font-size: 14px; margin-top: 1.5em; color: #000;">
-        <strong>For more information:</strong><br>
-        The White House | 1600 Pennsylvania Avenue | Washington, DC 20500
-    </p>
-</div>
-`;
-// Function to automatically check a policy checkbox
-function checkPolicy(policyId) {
-    let checkbox = document.getElementById(policyId);
-    if (checkbox) {
-        checkbox.checked = true; // Check the checkbox when the policy is passed
-    }
-}
-    
-        // Candidate data with pros, cons, and strategies
-const candidates = [
-    {
-        name: 'Bob Dole',
-        image: 'https://files.catbox.moe/7x72v6.png',
-        description: 'The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as "His turn." There\'s not much Dole has to do to secure the nomination, but he certainly won\'t be ingnoring his competition.',
-        pros: 'Highly experienced in Washington, and well-respected among almost all factions of the Republicans. Will do well with the old and rural vote.',
-        cons: '73 years old, would be oldest president inaugurated. Almost 0 appeal to young voters. 3X loser, with loses in 1976, 1980, and 1988.',
-        strategy: 'Emphasize your youth, tie Dole to the establishment and unpopular Republicans.'
-    },
-    {
-        name: 'Pat Buchanan',
-        image: 'https://files.catbox.moe/79ynne.png',
-        description: 'The "Culture War"\'s strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan\'s base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November.',
-        pros: 'Populist Rhetoric and Conservative beliefs that may hit the tone with Middle America. Will do solid in traditional Republican states',
-        cons: 'Gaffes, some of his rhetoric bridges on Racism. Little appeal to anyone outside the South and Plain. Will perform horribly everywhere else.',
-        strategy: 'Don\'t play into the culture war talk, make the election about actual issues.'
-    },
-    {
-        name: 'Lamar Alexander',
-        image: 'https://files.catbox.moe/a2b9ku.png',
-        description: 'Populist, but not on Pat\'s level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he\'ll need to paint himself as a new slice of conservatism.',
-        pros: 'Fellow Southern Governor, might take away some of your support. Pragmatic solution maker. Background in education is sure to help with Rural voters.',
-        cons: 'No Charisma or National recognition',
-        strategy: 'Play down to his demographic by speaking more vocally on education, as you could easily sweep them up.'
-    },
-    {
-        name: 'Phil Gramm',
-        image: 'https://files.catbox.moe/vny7wc.png',
-        description: 'If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to "fight the good fight" as the face of the religious right. Although his attempts have failed for the most part, he\'ll need to frame the election as an attack against religion if he wants to be nominated.',
-        pros: 'Strong track record on economic reforms and budget reform. Big on morality.',
-        cons: 'Many personal scandals.',
-        strategy: 'Attempt to avoid any talk over scandals, make Gramm out to be inconsiderate.'
-    },
-    {
-        name: 'Arlen Specter',
-        image: 'https://files.catbox.moe/6gilqb.png',
-        description: 'The moderate in this election, Specter\'s unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration.',
-        pros: 'Appeals to centrists and moderates due to his social positions. Might take votes away from you in the Midwest as well.',
-        cons: 'Many Republicans view him with uncertainty. Party may not be ready to back him.',
-        strategy: 'Emphasize a more moderate image, though reclaiming the Midwest could prove difficult with NAFTA.'
-    },
-    {
-        name: 'Donald Rumsfeld',
-        image: 'https://files.catbox.moe/g456yn.png',
-        description: 'Donald Rumsfeld has been a potential candidate for President since the 1960s, yet, he has never been able to get the momentum needed to run for President. Rumsfeld has always been in the background while whoever he\'s working for gets the attention.',
-        pros: 'Rumsfeld has experience working in the Nixon and Ford administration.',
-        cons: 'Not many people know Rumsfeld, the last time he was elected to something was in 1968, he isn\'t relatable to the average American.',
-        strategy: 'You should make him seem like he\'s out of touch, while also bringing up how the last time he was somewhat politically relevant was in the 1970s.'
-    },
-    {
-    name: 'Richard Lugar',
-        image: 'https://files.catbox.moe/qt64m7.png',
-        description: 'If the Presidency was decided on resume alone, he\'d be a shoo-in, but  as it stands, he\'s going nowhere fast. If he does win, however...',
-        pros: 'Respected by both sides of the aisle, spotless record, foreign policy expertise',
-        cons: 'Deadly dull, distrusted by the base',
-        strategy: 'By and large ignore him, try and fan tensions with the Right'
-    },
-    {
-        name: 'Jack Kemp',
-        image: 'https://files.catbox.moe/r0drdn.png',
-        description: 'A former all-star football player, chief architect of Reaganomics, and former HUD Secretary under George Bush. He has all the boxes checked, but does he run? ',
-        pros: 'Nationally tested, experienced, socially moderate, and has a big grin. ',
-        cons: 'Too scared to throw big punches; tied to the baggage of Reagan/Bush. ',
-        strategy: 'Attack the economic woes of the Bush administration he served. Exploit his shaky relationship with movement conservative '
-    },
-    {
-        name: 'Pete Wilson',
-        image: 'https://files.catbox.moe/egw9mf.png',
-        description: 'Governor of the biggest state in the union, Wilson\'s traction as a candidate is no shock. Building a "tough on crime" image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America "isn\'t safe enough."',
-        pros: 'May make the West Cost competitive, has a decent national image.',
-        cons: 'Policies on Immigration and Proposition 187 may hinder his support.',
-        strategy: 'Present a balanced approach to immigration and focus on economic successes.'
-    }
+// Define this at the top, globally
+current_website="republicanstowatchoutfor.com";
+browser_history = [
+	"republicanstowatchoutfor.com"
 ];
-function updateWinStatus() {
-    let winStatus = document.getElementById("win-status");
-    
-    if (Wins <= 0) {
-        winStatus.innerText = `Your administration has no wins. (${Wins})`;
-    } else if (Wins > 0 && Wins <= 2) {
-        winStatus.innerText = `Your administration has some wins. (${Wins})`;
-    } else if (Wins > 2 && Wins <= 4) {
-        winStatus.innerText = `Your administration has a decent amount of wins. (${Wins})`;
-    } else {
-        winStatus.innerText = `Your administration has a lot of wins. (${Wins})`;
-    }
-}
+history_index=0;
+current_website=browser_history[history_index];
+let draggableBox = null;
+let main_website_candidate_list = [];
 
-// Function to show a win and update the counter
-function showWin(winId) {
-    let winItem = document.getElementById(winId);
-    if (winItem && winItem.style.display === "none") {
-        winItem.style.display = "list-item"; // Make it visible
-        wins++; // Increment the win count
-    }
-}
-// Function to add a new candidate dynamically (only if they don't already exist)
-function addCandidate(candidate) {
-    const tabsContainer = document.getElementById('tabs');
-    if (!tabsContainer) return;
+var dole_var = 0
+var buchanan_var = 0
+var forbes_var = 0
+var alexander_var = 0
+var gramm_var = 0
+var specter_var = 0
+var wilson_var = -99
+var bono_var = -99
+var wbush_var = -99
 
-    // Check if a button with the candidate's name already exists
-    const existingButton = Array.from(tabsContainer.getElementsByTagName('button')).find(
-        btn => btn.textContent.trim().toLowerCase() === candidate.name.trim().toLowerCase()
-    );
+var moveup = 0
 
-    if (existingButton) {
-        console.warn(`Candidate "${candidate.name}" already exists.`);
-        return; // Stop function if candidate button is already there
-    }
+var dole_active = 1
+var buchanan_active = 1
+var forbes_active = 1
+var alexander_active = 1
+var gramm_active = 1
+var specter_active = 1
+var wilson_active = 0
 
-    // Create the new candidate button
-    const newTab = document.createElement('button');
-    newTab.textContent = candidate.name;
-    newTab.style.padding = '10px';
-    newTab.style.margin = '5px';
-    newTab.style.backgroundColor = 'rgb(255, 215, 0)';
-    newTab.style.border = 'none';
-    newTab.style.cursor = 'pointer'; // Optional for better UX  
-    newTab.classList.add('candidate-button'); // Use a consistent class for styling
-    newTab.addEventListener('click', function() {
-        updateOppositionTabs(candidate);
+var bono_active = 0
+var wbush_active = 0
+
+let opponents = {
+    dole: dole_var,
+    buchanan: buchanan_var,
+    forbes: forbes_var,
+    alexander: alexander_var,
+    gramm: gramm_var,
+    specter: specter_var,
+    wilson: wilson_var,
+    bono: bono_var,
+    wbush: wbush_var
+};
+
+let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
+
+function createDraggableBox() {
+  if (!draggableBox || !document.body.contains(draggableBox)) {
+    draggableBox = document.createElement('div');
+    draggableBox.id = 'draggableBox';
+    draggableBox.style.width = '480px';
+    draggableBox.style.height = '321px';
+    draggableBox.style.backgroundColor = 'lightgray';
+    draggableBox.style.border = '0px solid black';
+    draggableBox.style.position = 'absolute';
+    draggableBox.style.top = '20px';
+    draggableBox.style.right = '20px'; // Spawns 20px from the right edge
+    draggableBox.style.padding = '0px';
+    draggableBox.style.lineHeight = '0';
+    draggableBox.style.lineWidth = '0';
+
+    let assemble_html = [
+      `<img src="https://i.imgur.com/7YfA8Sz.png">`,
+      `<img src="https://i.imgur.com/LrPDb01.png">`,
+      `<img id="exitbutton" style="cursor:pointer" onclick="website_close()" src="https://i.imgur.com/7JnjQNJ.png">`,
+      `<img src="https://i.imgur.com/D9exlQl.png">`,
+      `<img src="https://i.imgur.com/72mDXy7.png">`,
+      `<img src="https://i.imgur.com/RwG518j.png">`,
+      `<img id="backbutton" style="cursor:pointer" onclick="website_back()" src="https://i.imgur.com/0DpV7b1.png">`,
+      `<img id="forwardbutton" style="cursor:pointer" onclick="website_forward()" src="https://i.imgur.com/d9YFJZV.png">`,
+      `<img src="https://i.imgur.com/a8YzesX.png">`,
+      `<img src="https://i.imgur.com/q4JJZUg.png">`,
+      `<img src="https://i.imgur.com/6qWRvbv.png">`,
+      `<input id="website_search_bar" value="republicanstowatchoutfor.com" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA';">`,
+      `<img src="https://i.imgur.com/7avUKWj.png">`,
+      `<img src="https://i.imgur.com/tvsN2hl.png">`,
+      `<img src="https://i.imgur.com/92Hi4z5.png">`,
+      `<div id="webpage_html" style="background-color:C0C0C0;width:451px;height:178px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:0;left:0;display:inline-block;"></div>`,
+      `<img src="https://i.imgur.com/acKHWZk.png">`,
+      `<img src="https://i.imgur.com/tjBPapT.png">`
+    ];
+
+    draggableBox.innerHTML = assemble_html.join('');
+
+    let offset = { x: 0, y: 0 };
+    let isDragging = false;
+
+    draggableBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offset.x = e.clientX - draggableBox.offsetLeft;
+      offset.y = e.clientY - draggableBox.offsetTop;
     });
 
-    // Append the button since it does not exist already
-    tabsContainer.appendChild(newTab);
-}
-
-
-// Function to update the displayed candidate info
-function updateOppositionTabs(candidate) {
-    const candidateImage = document.getElementById('candidateImage');
-    const candidateDescription = document.getElementById('candidateDescription');
-    const candidatePros = document.getElementById('candidatePros');
-    const candidateCons = document.getElementById('candidateCons');
-    const candidateStrategy = document.getElementById('candidateStrategy');
-
-    if (!candidateImage || !candidateDescription || !candidatePros || !candidateCons || !candidateStrategy) {
-        console.error('Error: One or more candidate content elements not found.');
-        return;
-    }
-
-    // Ensure candidate object has valid properties before updating
-    candidateImage.src = candidate.image || 'default.jpg'; // Use a fallback image if none provided
-    candidateDescription.textContent = candidate.description || 'No description available.';
-
-    candidatePros.innerHTML = '';
-    if (candidate.pros) {
-        candidate.pros.split('. ').forEach(pro => {
-            if (pro.trim()) {
-                const li = document.createElement('li');
-                li.textContent = pro.trim();
-                candidatePros.appendChild(li);
-            }
-        });
-    }
-
-    candidateCons.innerHTML = '';
-    if (candidate.cons) {
-        candidate.cons.split('. ').forEach(con => {
-            if (con.trim()) {
-                const li = document.createElement('li');
-                li.textContent = con.trim();
-                candidateCons.appendChild(li);
-            }
-        });
-    }
-
-    candidateStrategy.textContent = candidate.strategy || 'No strategy available.';
-}
-
-function deleteCandidateButton(name) {
-    // Get the parent div where the buttons are located
-    const tabsDiv = document.getElementById('tabs');
-    if (!tabsDiv) {
-        console.warn('Tabs div not found!');
-        return;
-    }
-
-    // Find all the candidate buttons in the #tabs div
-    const candidateButtons = tabsDiv.querySelectorAll('button');
-    let found = false;
-
-    // Loop through the buttons and check if the text matches the name
-    candidateButtons.forEach(button => {
-        if (button.textContent.trim().toLowerCase() === name.trim().toLowerCase()) {
-            button.remove(); // Remove the button if it matches
-            found = true;
-        }
-    });
-
-    if (!found) {
-        console.warn(`Candidate button "${name}" not found.`);
-    }
-}
-
-
-function updateCandidateDescription(candidateName, newDescription) {
-    // Find the candidate in the array
-    const candidate = candidates.find(c => c.name === candidateName);
-    if (!candidate) {
-        console.error('Candidate not found!');
-        return;
-    }
-
-    // Update the candidate's description
-    candidate.description = newDescription;
-
-    // Update the DOM to reflect the new description
-    updateOppositionTabs(candidate);
-}
-
-        // Populate the candidate tabs dynamically
-        const tabsContainer = hqContent.querySelector('#tabs');
-        candidates.forEach(candidate => {
-            const tabButton = document.createElement('button');
-            tabButton.textContent = candidate.name;
-            tabButton.style.padding = '10px';
-            tabButton.style.margin = '5px';
-            tabButton.style.backgroundColor = '#ffd700';
-            tabButton.style.border = 'none';
-            tabButton.style.cursor = 'pointer';
-            tabButton.addEventListener('click', function() {
-                loadCandidateContent(candidate);
-            });
-            tabsContainer.appendChild(tabButton);
-        });
-
-            // Function to dynamically update Legacy and Ideology content
-    function updateLegacyPublicSupportAndIdeology() {
-        const legacyText = document.getElementById('legacyText');
-        const PublicSupportText = document.getElementById('PublicSupportText');
-        const ideologyText = document.getElementById('ideologyText');
-
-        // Legacy content
-        if (Legacy >= 10) {
-            legacyText.textContent = "Perfect";
-         } else if (Legacy >= 7 && Legacy <= 9) {
-            legacyText.textContent = "Great";
-        } else if (Legacy >= 4 && Legacy <= 6) {
-            legacyText.textContent = "Good";
-        } else if (Legacy == 3) {
-            legacyText.textContent = "Decent";
-        } else if (Legacy >= 1 && Legacy <= 2) {
-            legacyText.textContent = "Developing";
-        } else {
-            legacyText.textContent = "Minimal";
-        }
-
-        // Public Support content
-        if (PublicSupport >= 20) {
-            PublicSupportText.textContent = "Sky High";
-         } else if (PublicSupport >= 16 && PublicSupport <= 19) {
-            PublicSupportText.textContent = "Very High";
-        } else if (PublicSupport >= 11 && PublicSupport <= 15) {
-            PublicSupportText.textContent = "High";
-        } else if (PublicSupport >= 6 && PublicSupport <= 10) {
-            PublicSupportText.textContent = "Decent";
-        } else if (PublicSupport >= 1 && PublicSupport <= 5) {
-            PublicSupportText.textContent = "Low";
-        } else {
-            PublicSupportText.textContent = "In The Gutter";
-        }
-
-        // Ensure Ideology is a number
-Ideology = Number(Ideology);
-
-// Debugging log to see the value of Ideology
-console.log("Ideology value: ", Ideology);
-
-// Ideology content
-if (Ideology >= -1 && Ideology <= 1) {
-    ideologyText.textContent = "Moderate";
-} else if (Ideology >= -3 && Ideology <= -2) {
-    ideologyText.textContent = "Third Way";
-} else if (Ideology <= -4) {
-    ideologyText.textContent = "Blue Dog";
-} else if (Ideology >= 2 && Ideology <= 6) {
-    ideologyText.textContent = "New Deal Democrat";
-} else if (Ideology >= 7) {
-    ideologyText.textContent = "Progressive";
-} else {
-    ideologyText.textContent = "Undefined";
-}
-    }
-
-    function updateApprovalRating() {
-        // Update dynamic approval text based on LEGWin variable
-    const approvalText = document.getElementById('approvalText');
-    if (LEGWin <= 0) {
-        approvalText.innerText = `You have no congressional wins. (${LEGWin})`;
-    } else if (LEGWin > 0 && LEGWin <= 2) {
-        approvalText.innerText = `You have few congressional wins. (${LEGWin})`;
-    } else if (LEGWin > 2 && LEGWin <= 4) {
-        approvalText.innerText = `You have some congressional wins. (${LEGWin})`;
-    } else {
-        approvalText.innerText = `You have a lot of congressional wins. (${LEGWin})`;
-    }
-
-        // Update the page dynamically based on DemCongress value
-    // Update the page dynamically based on DemCongress value
-    if (DemCongress === 1) {
-        // Democratic Congress
-        // Majority Images and Texts
-        document.getElementById("houseImage").src = "https://i.imgur.com/WunYh6Q.png";
-        document.getElementById("houseMajorityText").innerText = "House Majority: Democratic";
-
-        document.getElementById("senateImage").src = "https://i.imgur.com/KjlKeY3.png";
-        document.getElementById("senateMajorityText").innerText = "Senate Majority: Democratic";
-
-        // Leaders
-        document.getElementById("houseLeaderImage").src = "https://files.catbox.moe/84ivm1.png";
-        document.getElementById("houseLeaderImage").style.width = "261px";
-        document.getElementById("houseLeaderImage").style.height = "342px";
-        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Tom Foley";
-
-        document.getElementById("senateLeaderImage").src = "https://files.catbox.moe/vmksnk.png";
-        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: George Mitchell";
-    } else if (SlimGOPCongress == 1) {
-        // Republican Congress
-        // Majority Images and Texts
-        document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
-        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
-
-        document.getElementById("senateImage").src = "https://i.imgur.com/6Kzu6De.png"; // Replace with actual URL
-        document.getElementById("senateLeaderImage").style.width = "261px";
-        document.getElementById("senateLeaderImage").style.height = "342px";
-        document.getElementById("senateMajorityText").innerText = "Senate Majority: *Democratic (tied)";
-
-        // Leaders
-        document.getElementById("houseLeaderImage").src = "https://files.catbox.moe/mihj76.png"; // Replace with actual URL
-        document.getElementById("houseLeaderImage").style.width = "261px";
-        document.getElementById("houseLeaderImage").style.height = "342px";
-        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
-
-        document.getElementById("senateLeaderImage").src = "https://files.catbox.moe/ozgnmi.png";
-        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Tom Daschle";
-    } else if (DisasterMidterms== 1) {
-        // Republican Congress
-        // Majority Images and Texts
-        document.getElementById("houseImage").src = "https://i.imgur.com/CcgTevZ.png"; // Replace with actual URL
-        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
-
-        document.getElementById("senateImage").src = "https://i.imgur.com/TzWBSFC.png"; // Replace with actual URL
-        document.getElementById("senateLeaderImage").style.width = "261px";
-        document.getElementById("senateLeaderImage").style.height = "342px";
-        document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
-
-        // Leaders
-        document.getElementById("houseLeaderImage").src = "https://files.catbox.moe/mihj76.png"; // Replace with actual URL
-        document.getElementById("houseLeaderImage").style.width = "261px";
-        document.getElementById("houseLeaderImage").style.height = "342px";
-        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
-
-        document.getElementById("senateLeaderImage").src = "https://files.catbox.moe/1i1eud.png"; // Replace with actual URL
-        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
-        updateCandidateDescription('Bob Dole', 'The current Senate Majority Leader and Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as "His turn." There\'s not much Dole has to do to secure the nomination, but he certainly won\'t be ingnoring his competition.');
-    } else {
-        // Republican Congress
-        // Majority Images and Texts
-        document.getElementById("houseImage").src = "https://i.imgur.com/hhN5EAQ.png"; // Replace with actual URL
-        document.getElementById("houseMajorityText").innerText = "House Majority: Republican";
-
-        document.getElementById("senateImage").src = "https://i.imgur.com/Eif6mNc.png"; // Replace with actual URL
-        document.getElementById("senateMajorityText").innerText = "Senate Majority: Republican";
-
-        // Leaders
-        document.getElementById("houseLeaderImage").src = "https://files.catbox.moe/mihj76.png"; // Replace with actual URL
-        document.getElementById("houseLeaderImage").style.width = "261px";
-        document.getElementById("houseLeaderImage").style.height = "342px";
-        document.getElementById("houseLeaderText").innerText = "Speaker of the House: Newt Gingrich";
-
-        document.getElementById("senateLeaderImage").src = "https://files.catbox.moe/1i1eud.png"; // Replace with actual URL
-        document.getElementById("senateLeaderImage").style.width = "261px";
-        document.getElementById("senateLeaderImage").style.height = "342px";
-        document.getElementById("senateLeaderText").innerText = "Senate Majority Leader: Bob Dole";
-        updateCandidateDescription('Bob Dole', 'The current Senate Majority Leader and Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as "His turn." There\'s not much Dole has to do to secure the nomination, but he certainly won\'t be ingnoring his competition.');
-    } if (e.player_answers.includes(15004.5) || e.player_answers.includes(15007.5)) {
-    showWin("win-healthcare");
-    checkPolicy("healthcare");
-    } if (e.player_answers.includes(85018.5)) {
-        showWin("win-healthcare-ted");
-        checkPolicy("healthcare");
-    } if (e.player_answers.includes(85027.5)) {
-        showWin("gun-bill");
-    } if (e.player_answers.includes(85024.5)) {
-        showWin("gay-bill");
-    } if (e.player_answers.includes(88018.5)) {
-        showWin("win-deficit");
-        checkPolicy("deficit");
-    } if (e.player_answers.includes(190001) || e.player_answers.includes(85029.5)) {
-    showWin("win-welfare");
-    checkPolicy("welfare");
-    } if (e.player_answers.includes(89026.5)) {
-    showWin("win-oslo");
-    }
-    };
-   // Function to update dynamic content for "International Standing"
-function updateInternationalStanding() {
-    const standingText = document.getElementById('dynamicStandingText');
-
-    // Example logic for International Standing text
-    if (FPWin <= 0) {
-        standingText.innerText = `Your administration has no foreign wins. (${FPWin})`;
-    } else if (FPWin > 0 && FPWin <= 2) {
-        standingText.innerText = `Your administration has little foreign wins. (${FPWin})`;
-    } else if (FPWin > 2 && FPWin <= 5) {
-        standingText.innerText = `Your administration has some foreign wins. (${FPWin})`;
-    } else if (FPWin > 5 && FPWin <= 7) {
-        standingText.innerText = `Your administration has a good amount of foreign wins. (${FPWin})`;
-    } else {
-        standingText.innerText = `Your administration has many foreign wins. (${FPWin})`;
-    }
-}
-
-function changeOpponentsTab() {
-    if (sundog >= 19) {
-        addCandidate({
-            name: 'Donald Trump',
-            image: 'https://files.catbox.moe/85mndx.png',
-            description: 'Yet another billionaire has tipped their toes into the running, an old... buddy of yours. Cripes. A divorcee, a failed businessman, a man loved by millions , Donald John Trump.',
-            pros: 'As great at seducing voters with his ideas as he is \'seducing\' women with... money? An outsider who still seems sincerely Republican. Very charismatic and ready to throw dirt.',
-            cons: 'An inexperienced, openly sexist, alleged domestic abuser. Known to make himself enemies and put on a clown show if the spotlight\'s on him.',
-            strategy: 'Find a way to \'pied piper\' his ascent. If successful, you will win. Guaranteed. Let him make an ass of himself. Take the high road and coast to victory without breaking a sweat.'
-        });
- } if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
-    addCandidate({
-        name: 'George W. Bush',
-        image: 'https://files.catbox.moe/xsporr.png',
-        description: 'As people continue to compare you to your predecessor, people have been clamoring for the old man\'s own son to take you on. Their call is in the minority but while he\'s of the same blood, he\'s not of the same cloth as 41.',
-        pros: 'Quite fresh, the Bush name, Affable personality, very popular with evangelist.',
-        cons: 'Gaffe prone, the Bush name, little experience.',
-        strategy: 'Make it about his policy proposal. Be allusive with how you tie him to his father while highlighting his wackier beliefs.'
-    });
-} if (DisasterMidterms == 1) {
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Jack Kemp");
-    deleteCandidateButton("Donald Rumsfeld");
-    deleteCandidateButton("Richard Lugar");
-} if (e.player_answers.includes(900015551) && e.player_answers.includes(88021.5)) {
-    addCandidate({
-        name: 'Steve Forbes',
-        image: 'https://files.catbox.moe/fxp4ta.png',
-        description: 'The eccentric Editor-In-Chief of his grandfather\'s magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a "Flat Tax", which although in itself is very popular, he doesn\'t talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn\'t giving.',
-        pros: 'Flat Tax promise is very popular. Outsider promising change. Will do well with the business and the wealthy, as well as Blue Collar workers.',
-        cons: 'Almost no other policies besides Flat Tax. Very limited political and governmental experience. Very uncharismatic, comes off as robotic and non-humanoid at some points.',
-        strategy: 'Question him on issues besides Flat Tax, Tie him to oligarchs, and emphasize your experience as President.'
-    });
-} if (RepublicanRevolution == 1) {
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Jack Kemp");
-    deleteCandidateButton("Donald Rumsfeld");
-    deleteCandidateButton("Richard Lugar");
-    addCandidate({
-        name: 'Sonny Bono',
-        image: 'https://files.catbox.moe/eo0t0x.png',
-        description: 'The former Mayor of Palm Springs, who was swept into Congress with Newt Gingrich apparently has his eyes on the White House — god knows if he\'ll make the plunge.',
-        pros: 'The kind of name recognition that most politicians can only dream of. ',
-        cons: 'Many folks still see him as a dope-smoking, bangs-having 1960s pop star',
-        strategy: 'Focus on his lack of seriousness, scandals and his ties to Newt Gringrich\'s Republican Revolution.'
-    });
-} if (SlimGOPCongress == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Jack Kemp");
-    deleteCandidateButton("Donald Rumsfeld");
-    deleteCandidateButton("Richard Lugar");
-    addCandidate({
-        name: 'Dan Quayle',
-        image: 'https://files.catbox.moe/91qvja.png',
-        description: 'He may be no Jack Kennedy, but he is looking like an increasingly likely contender for 1996. If he figures out how to turn his reputation around, watch out.',
-        pros: 'Young, excites Religious Right',
-        cons: 'Near-constant gaffes, ideas far outside the mainstream',
-        strategy: 'Paint him as unfit for office, seize on every misstatement he makes'
-    });
-    addCandidate({
-        name: 'Dick Cheney',
-        image: 'https://files.catbox.moe/eihh46.png',
-        description: 'Never has someone with so much experience in politics been as dull as Dick Cheney. Serving as Chief of Staff, House Minority Whip, and Secretary of Defense, Cheney has done a lot in the almost thirty years Dick has been in politics, yet, Cheney still lacks the same name recognition other Republican politicians have.',
-        pros: 'Foreign policy experience. Worked close with every Republican president since Ford.',
-        cons: 'Boring. Lacks name recognition. Has done nothing politically relevant since Bush left office.',
-        strategy: 'Make him seem uncharismatic, and tie him to the unpopular Bush administration, and focus less on foreign policy and more on your accomplishments as president.'
-    });
-} if (DoleNom == 1) {
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Donald Trump");
-} if (BuchananNom == 1) {
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("David Duke");
-    deleteCandidateButton("Donald Trump");
-} if (LamarNom == 1) {
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Donald Trump");
-} if (SpecterNom == 1) {
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Donald Trump");
-} if (ForbesNom == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("David Duke");
-    deleteCandidateButton("Donald Trump");
-} if (WilsonNom == 1) {
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Donald Trump");
-} if (GrammNom == 1) {
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("David Duke");
-    deleteCandidateButton("Donald Trump");
-} if (PowellNom == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("Donald Trump");
-} if (CheneyNom == 1) {
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Donald Trump");
-} if (BonoNom == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Donald Trump");   
-} if (BushNom == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("Donald Trump");
-    addCandidate({
-        name: 'George Bush',
-        image: 'https://files.catbox.moe/bpqyak.png',
-        description: 'George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand.',
-        pros: 'Fellow President, which diminishes your "incumbent" advantage. High foreign policy success, which could come in handy if it were the main issue of the campaign.',
-        cons: 'Lost his original re-election bid in a blowout, would have to reinvent himself.',
-        strategy: 'Reminding America of his failiures compared to your successes, and why it would not be smart to go back.'
-    });
-} if (SundogNom == 1) {
-    deleteCandidateButton("Bob Dole");
-    deleteCandidateButton("Pat Buchanan");
-    deleteCandidateButton("Pete Wilson");
-    deleteCandidateButton("Arlen Specter");
-    deleteCandidateButton("Colin Powell");
-    deleteCandidateButton("Lamar Alexander");
-    deleteCandidateButton("Phil Gramm");
-    deleteCandidateButton("Sonny Bono");
-    deleteCandidateButton("Dan Quayle");
-    deleteCandidateButton("Dick Cheney");
-    deleteCandidateButton("George W. Bush");
-    deleteCandidateButton("Donald Trump");
-    addCandidate({
-        name: 'Ross Perot',
-        image: 'https://i.imgur.com/Gx7JESH.png',
-        description: 'Henry Ross Perot is not supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush\'s loss, he is against NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee.',
-        pros: 'Outsider appeal. Support from his 1992 campaign. Can reach across the isle. Has southern charm.',
-        cons: 'He won\'t campaign. Hated by half of the Republican Party. He doesn\'t want to be the nominee. He was never actually a Republican.',
-        strategy: 'Attack him for some of his gaffes during his 1992 campaign, while also making it seem like he doesn\'t want to be president, and hope that he doesn\'t bring up NAFTA too much.'
-    });
-} if (FPWin <= -1 && e.question_number+1 <= 24) {
-    addCandidate({
-        name: 'Colin Powell',
-        image: 'https://files.catbox.moe/yck4sj.png',
-        description: 'Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of "passion for politics", though a severe rebuke of your administration could change his mind.',
-        pros: 'Broad support among Americans, war hero status. Will absoloutely dig at your base of minority support.',
-        cons: 'Weak in the south, pro-choice which might not sit well with some Republicans.',
-        strategy: 'Attempt to make it seem as if he has no legs of his own to stand on, and no personal conviction.'
-    });
-} if (FPWin >= 0 && e.question_number+1 >= 25) {
-    deleteCandidateButton("Colin Powell");
-} if (Ideology >= 6) {
-    addCandidate({
-        name: 'David Duke',
-        image: 'https://files.catbox.moe/6s7o3m.png',
-        description: 'The Grand Wizard of the Ku Klux Klan himself, You\'d think he was finished after his failed governor run in 1991. The simple fact that even a portion of Republicans are considering electing him is very concerning.',
-        pros: 'As Anti-establishment as can be. Will use all the mud that there is in grand speeches.',
-        cons: 'Near Null Appeal to anyone that isn\'t as much of a maniac as he is.',
-        strategy: 'Focus on the fact he as no real plans outside of vague proposal. Don\'t chastise Republicans at large, make it about him.'
-    });
-} if (Ideology <= 5) {
-    deleteCandidateButton("David Duke");
-} if (e.player_answers.includes(400015)) {
-    addCandidate({
-        name: 'William Rehnquist',
-        image: 'https://files.catbox.moe/wiuirj.png',
-        description: 'The Hubbell fiasco has raise the the worry of corruption in your administration. So much so, that some GOP operatives are seriously considering propelling a draft for current Chief Justice of the Supreme Court, William Hubbs Rehnquist. The man who administered your oath a few months ago. ',
-        pros: 'As Chief Justice, he would bring the GOP an aura of legitimacy they haven\'t enjoyed since the Iran-Contra days. He\'s also seen as a grand force of anti-corruption, and appears apolitical to the uninformed.',
-        cons: 'A Deeply partisan conservative judge. Believes in contagious homosexuality. Although deeply insulted by the Hubbell fiasco. He harbors no ambition to bring these feelings into the field of presidential politics. Which spells dooms for those previously mentioned operatives.',
-        strategy: 'Dredge up his backward views and rulings on abortion, equal protection, and the Fourteenth Amendment to Delegitimize his court. Take advantage of his eventual resignation by replacing his spot with a deeply loyal administration ally.'
-    });
-} if (e.player_answers.includes(88016.5) || e.player_answers.includes(88017.5) || e.player_answers.includes(88018.5) || e.player_answers.includes(88019.5) || e.player_answers.includes(88020.5) || e.player_answers.includes(88021.5) || e.player_answers.includes(88022.5) || e.player_answers.includes(88023.5) || e.player_answers.includes(88024.5)) {
-    deleteCandidateButton("William Rehnquist");
-}
-}
-
-// Function to toggle section display
-function toggleSection(sectionId) {
-    const sections = ['homeContent', 'legacyContent', 'oppositionTabs'];
-    sections.forEach(id => {
-        const section = document.getElementById(id);
-        if (id === sectionId) {
-            section.style.display = section.style.display === 'block' ? 'none' : 'block';
-        } else {
-            section.style.display = 'none';
-        }
-    });
-    document.getElementById('contentText').style.display = 'none';
-
-    // Update Legacy, Ideology, and International Standing when respective sections are opened
-    if (sectionId === 'legacyContent') {
-        updateLegacyPublicSupportAndIdeology();
-    } else if (sectionId === 'homeContent') {
-        updateInternationalStanding();
-        updateWinStatus();
-        updateApprovalRating();
-    } else if (sectionId === 'oppositionTabs') {
-        changeOpponentsTab();
-    }
-}
-    
-        // Event listeners for section links
-        hqContent.querySelector('#home').addEventListener('click', function(event) {
-            event.preventDefault();
-            toggleSection('homeContent');
-        });
-    
-        hqContent.querySelector('#opposition').addEventListener('click', function(event) {
-            event.preventDefault();
-            toggleSection('oppositionTabs');
-        });
-    
-        hqContent.querySelector('#legacy').addEventListener('click', function(event) {
-            event.preventDefault();
-            toggleSection('legacyContent');
-        });
-    
-        // Function to load candidate content dynamically
-function loadCandidateContent(candidate) {
-    document.getElementById('candidateImage').src = candidate.image;
-    document.getElementById('candidateDescription').textContent = candidate.description;
-
-    // Populate Pros
-    document.getElementById('candidatePros').textContent = candidate.pros || '[Pros not available]';
-
-    // Populate Cons
-    document.getElementById('candidateCons').textContent = candidate.cons || '[Cons not available]';
-
-    // Populate Strategy
-    document.getElementById('candidateStrategy').textContent = candidate.strategy || '[Strategy not available]';
-}
-    
-        hqContent.id = 'hqContent';
-    } else {
-        console.log("hqContent already exists. Skipping creation.");
-    }        
-    // Initialize 'cnn.com' content
-if (!cnnContent) {
-    console.log("Creating cnnContent for the first time...");
-    
-    cnnContent = document.createElement('div');
-    cnnContent.id = 'cnn1990sContent';
-    cnnContent.style.display = 'none';  // This will hide the content initially
-    cnnContent.innerHTML = `
-    <h1 style="font-family: Arial, sans-serif; color: #333;">CNN</h1>
-<div style="background-color: #ccc; padding: 1em; margin-bottom: 20px; border-radius: 8px;">
-    <h2 style="font-size: 24px; margin-bottom: 5px;">Top Headlines</h2>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-        <li id="headline0" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline0" style="color: #0066cc; text-decoration: none; font-size: 18px;">How will George Bush be remembered?</a>
-            <img src="https://i.imgur.com/zIx7bKP.jpeg" alt="headline1" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline1" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline1" style="color: #0066cc; text-decoration: none; font-size: 18px;">As Inauguration Day draws near, here's what to expect from a Clinton Administration</a>
-            <img src="https://i.imgur.com/0f7T8tP.png" alt="headline2" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline2" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline2" style="color: #0066cc; text-decoration: none; font-size: 18px;">Billboard's Top Songs of 1992</a>
-            <img src="https://i.imgur.com/sK7wulc.png" alt="headline3" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline3" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline3" style="color: #0066cc; text-decoration: none; font-size: 18px;">The dissolution of Czechoslovakia explained</a>
-            <img src="https://i.imgur.com/mQvafh4.png" alt="headline4" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline4" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline4" style="color: #0066cc; text-decoration: none; font-size: 18px;">Bush sends troops to Somalia in "Operation Restore Hope"</a>
-            <img src="https://i.imgur.com/xa27FyI.png" alt="headline5" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-    </ul>
-</div>
-<div style="background-color: #ccc; padding: 1em; margin-bottom: 20px; border-radius: 8px;">
-    <h2 style="font-size: 24px; margin-bottom: 5px;">Technology News</h2>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-        <li id="headline5" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline5" style="color: #0066cc; text-decoration: none; font-size: 18px;">First "Text Message" sent in groundbreaking development</a>
-            <img src="https://i.imgur.com/YR67Dsg.png" alt="headline6" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline6" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline6" style="color: #0066cc; text-decoration: none; font-size: 18px;">IBM reports massive losses in 1992</a>
-            <img src="https://i.imgur.com/HPDzi2A.png" alt="headline7" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline7" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline7" style="color: #0066cc; text-decoration: none; font-size: 18px;">Who's winning the "Console War"?</a>
-            <img src="https://i.imgur.com/OdMqoUn.png" alt="headline8" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-    </ul>
-</div>
-<div style="background-color: #ccc; padding: 1em; border-radius: 8px;">
-    <h2 style="font-size: 24px; margin-bottom: 5px;">Entertainment News</h2>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-        <li id="headline8" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline8" style="color: #0066cc; text-decoration: none; font-size: 18px;">Disney's 'Aladdin' continues to dominate the box office</a>
-            <img src="https://i.imgur.com/5nM0tI2.png" alt="headline9" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline9" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline9" style="color: #0066cc; text-decoration: none; font-size: 18px;">David Letterman is moving to CBS</a>
-            <img src="https://i.imgur.com/WLSNzD7.png" alt="headline10" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-        <li id="headline10" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
-            <a href="#headline10" style="color: #0066cc; text-decoration: none; font-size: 18px;">Upcoming movies for 1993</a>
-            <img src="https://i.imgur.com/JD8kUu7.png" alt="headline11" style="width: 100%; height: auto; margin-top: 10px;">
-        </li>
-    </ul>
-</div>
-`;
-        document.body.appendChild(cnnContent);
-        console.log("cnnContent created and added to the DOM.");
-    } else {
-        console.log("cnnContent already exists. Skipping creation.");
-    }
-}
-function updateHeadlineWithImage(headlineHref, newHeadline, imageUrl) {
-    if (!cnnContent) {
-        console.error("cnnContent is not initialized.");
-        return;
-    }
-
-    // Find the <a> tag with the specific href
-    const headlineLink = cnnContent.querySelector(`a[href="${headlineHref}"]`);
-
-    if (headlineLink) {
-        const headlineElement = headlineLink.closest('li'); // Get the parent <li> element
-        const headlineImage = headlineElement.querySelector('img');
-
-        // Update headline text and image
-        headlineLink.textContent = newHeadline;
-        headlineImage.src = imageUrl;
-        headlineImage.alt = newHeadline;
-        console.log(`Updated headline with href ${headlineHref} with new text and image.`);
-    } else {
-        console.log(`Headline with href ${headlineHref} not found.`);
-    }
-}
-function openHeadquarter() {
-    initializeContent();
-    
-    if (!cnnContent) {
-        console.log("CNN content is still not initialized.");
-    } else {
-        console.log("CNN content is available.");
-    }
-
-    if (questions) questions.style.display = 'none';
-
-    const hqButton = document.getElementById('headquarter_button');
-    if (hqButton) hqButton.remove();
-
-    const gameWindow = document.querySelector("#game_window");
-    if (!gameWindow) {
-        console.error("Game window not found!");
-        return;
-    }
-    hqDiv = document.createElement('div');
-    hqDiv.id = 'headquarter';
-    hqDiv.style.position = 'absolute';
-    hqDiv.style.top = '0';
-    hqDiv.style.left = '0';
-    hqDiv.style.width = '100%';
-    hqDiv.style.height = '100%';
-    hqDiv.style.backgroundColor = '#f4f4f4';
-    hqDiv.style.border = '2px solid #ccc';
-    hqDiv.style.borderRadius = '8px';
-    hqDiv.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-    hqDiv.style.display = 'flex';
-    hqDiv.style.flexDirection = 'column';
-    hqDiv.style.zIndex = '1000';
-    hqDiv.style.cursor = 'move';
-
-    // Fullscreen Toggle Button
-    let fullscreenButton = document.createElement('button');
-    fullscreenButton.textContent = '⛶'; 
-    fullscreenButton.style.position = 'absolute';
-    fullscreenButton.style.top = '10px';
-    fullscreenButton.style.left = '10px';
-    fullscreenButton.style.backgroundColor = '#2d89ef';
-    fullscreenButton.style.color = '#fff';
-    fullscreenButton.style.border = 'none';
-    fullscreenButton.style.padding = '0.25em 0.5em';
-    fullscreenButton.style.borderRadius = '4px';
-    fullscreenButton.style.cursor = 'pointer';
-    fullscreenButton.onclick = function () {
-        if (!document.fullscreenElement) {
-            hqDiv.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
-    };
-    // Close Button
-    let closeButton = document.createElement('button');
-    closeButton.textContent = 'X';
-    closeButton.style.backgroundColor = '#ff5c5c';
-    closeButton.style.color = '#fff';
-    closeButton.style.border = 'none';
-    closeButton.style.padding = '0.25em 0.5em';
-    closeButton.style.cursor = 'pointer';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '10px';
-    closeButton.style.right = '10px';
-    closeButton.onclick = function () {
-        const sections = ['homeContent', 'legacyContent', 'oppositionTabs'];
-        sections.forEach(id => {
-            const section = document.getElementById(id);
-            if (section) section.style.display = 'none';
-        });
-        hqDiv.remove();
-    };
-
-    // Tab Bar
-    let tabBar = document.createElement('div');
-    tabBar.style.display = 'flex';
-    tabBar.style.backgroundColor = '#2d89ef';
-    tabBar.style.color = '#fff';
-    tabBar.style.padding = '0.5em';
-
-    let tab1 = document.createElement('a');
-    tab1.textContent = 'WhiteHouse.gov';
-    tab1.href = '#headquarters';
-    tab1.style.flexGrow = '1';
-    tab1.style.textAlign = 'center';
-    tab1.style.cursor = 'pointer';
-    tab1.style.padding = '0.5em';
-    tab1.style.textDecoration = 'none';
-    tab1.style.color = '#fff';
-    tab1.onclick = () => switchTab('WhiteHouse.gov');
-
-    let tab2 = document.createElement('a');
-    tab2.textContent = 'cnn.com';
-    tab2.href = '#cnn';
-    tab2.style.flexGrow = '1';
-    tab2.style.textAlign = 'center';
-    tab2.style.cursor = 'pointer';
-    tab2.style.padding = '0.5em';
-    tab2.style.textDecoration = 'none';
-    tab2.style.color = '#fff';
-    tab2.onclick = () => switchTab('cnn1990s');
-
-    tabBar.appendChild(tab1);
-    tabBar.appendChild(tab2);
-
-    hqDiv.appendChild(fullscreenButton);
-    hqDiv.appendChild(closeButton);
-    hqDiv.appendChild(tabBar);
-
-    let contentArea = document.createElement('div');
-    contentArea.style.flexGrow = '1';
-    contentArea.style.padding = '1em';
-    contentArea.style.overflowY = 'auto';
-    contentArea.style.backgroundColor = '#fff';
-
-    if (hqContent) contentArea.appendChild(hqContent);
-    if (cnnContent) contentArea.appendChild(cnnContent);
-
-    hqDiv.appendChild(contentArea);
-    gameWindow.appendChild(hqDiv);
-
-    function switchTab(tab) {
-        if (tab === 'WhiteHouse.gov') {
-            if (hqContent) hqContent.style.display = 'block';
-            if (cnnContent) cnnContent.style.display = 'none';
-            tab1.style.backgroundColor = '#0073e6';
-            tab2.style.backgroundColor = '#ddd';
-        } else if (tab === 'cnn1990s') {
-            if (hqContent) hqContent.style.display = 'none';
-            if (cnnContent) cnnContent.style.display = 'block';
-            tab1.style.backgroundColor = '#ddd';
-            tab2.style.backgroundColor = '#0073e6';
-        }
-    }
-
-    window.addEventListener('hashchange', () => {
-        const hash = window.location.hash;
-        if (hash === '#headquarters') {
-            switchTab('WhiteHouse.gov');
-        } else if (hash === '#cnn') {
-            switchTab('cnn1990s');
-        }
-    });
-
-    if (window.location.hash === '#headquarters') {
-        switchTab('WhiteHouse.gov');
-    } else {
-        switchTab('cnn1990s');
-    }
-}
-
-
-    function openMinesweeper() {
-        createWindow(
-            'Retro Minesweeper',
-            '',
-            '',
-            `<iframe src="https://minesweeper.online/" style="width:100%; height:100%; border:none;"></iframe>`
-        );
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        draggableBox.style.left = e.clientX - offset.x + 'px';
+        draggableBox.style.top = e.clientY - offset.y + 'px';
       }
-      function createWindow(title, textContent, imgSrc, customContent = '') {
-        // Create the main window div
-        mainDiv = document.createElement('div');
-        mainDiv.style.position = 'absolute';
-        mainDiv.style.top = '20%'; // Center vertically
-        mainDiv.style.left = '30%'; // Center horizontally
-        mainDiv.style.width = '45%'; // Fixed width
-        mainDiv.style.height = '25%'; // Fixed height
-        mainDiv.style.backgroundColor = '#f4f4f4';
-        mainDiv.style.border = '2px solid #ccc';
-        mainDiv.style.borderRadius = '8px';
-        mainDiv.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-        mainDiv.style.display = 'flex';
-        mainDiv.style.flexDirection = 'column';
-        mainDiv.style.zIndex = '1000';
-    
-        // Create the title bar
-        let titleBar = document.createElement('div');
-        titleBar.style.display = 'flex';
-        titleBar.style.justifyContent = 'space-between';
-        titleBar.style.alignItems = 'center';
-        titleBar.style.backgroundColor = '#2d89ef';
-        titleBar.style.color = '#fff';
-        titleBar.style.padding = '0.5em';
-        titleBar.style.cursor = 'move';
-    
-        let titleText = document.createElement('span');
-        titleText.textContent = title;
-        titleBar.appendChild(titleText);
-    
-        let closeButton = document.createElement('button');
-        closeButton.textContent = 'X';
-        closeButton.style.backgroundColor = '#ff5c5c';
-        closeButton.style.color = '#fff';
-        closeButton.style.border = 'none';
-        closeButton.style.padding = '0.25em 0.5em';
-        closeButton.style.cursor = 'pointer';
-        closeButton.onclick = function () {
-            mainDiv.remove();
-        };
-        titleBar.appendChild(closeButton);
-        mainDiv.appendChild(titleBar);
-    
-        // Content area
-        let contentArea = document.createElement('div');
-        contentArea.style.flexGrow = '1';
-        contentArea.style.padding = '1em';
-        contentArea.style.overflowY = 'auto';
-    
-        if (textContent) {
-          let contentText = document.createElement('p');
-          contentText.textContent = textContent;
-          contentArea.appendChild(contentText);
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    document.body.appendChild(draggableBox);
+    searchbar = document.getElementById('website_search_bar');
+
+searchbar.addEventListener('keydown', (event) => {
+	if (event.key === 'Enter') {
+    	searched_term = searchbar.value.toLowerCase();
+        //console.log(searched_term);
+        if (browser_history[browser_history.length - 1] == searched_term) {
+        	print("Same website.");
+        } else {
+        	browser_history = browser_history.slice(0,history_index+1)
+        	browser_history.push(searched_term);
+            history_index += 1;
+            //console.log(browser_history);
+            current_website=browser_history[history_index];
+            document.getElementById("website_search_bar").value = browser_history[history_index];
+            //console.log(history_index);
+            website_handler()
         }
-    
-        if (imgSrc) {
-          let contentImg = document.createElement('img');
-          contentImg.src = imgSrc;
-          contentImg.style.width = '100px';
-          contentImg.style.marginTop = '1em';
-          contentImg.style.border = '1px solid #ccc';
-          contentArea.appendChild(contentImg);
+    }
+})
+  }
+  website_handler();
+}
+
+function website_handler() {
+    main_website_candidate_list = [];
+	console.log(current_website);
+    lower_url=current_website.toLowerCase();
+	if (lower_url=="republicanstowatchoutfor.com") {
+
+let doleObject = {img: "https://i.imgur.com/kiFRIGz.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
+let buchananObject = {img: "https://i.imgur.com/vHJy7Bh.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
+let forbesObject = {img: "https://i.imgur.com/B7q8vBm.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
+let alexanderObject = {img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TENNESSEE GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
+let grammObject = {img: "https://i.imgur.com/OHUNpQN.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
+let specterObject = {img: "https://i.imgur.com/6KJKhUw.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
+let wilsonObject = {img: "https://i.imgur.com/TPioQhq.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
+
+let bonoObject = {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."};
+let wbushObject = {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son..."};
+
+
+sortedOpponents.forEach(([name, value]) => {
+    if (name === 'dole' && dole_active == 1) {
+        main_website_candidate_list.push(doleObject);
+    } else if (name === 'buchanan' && buchanan_active == 1) {
+        main_website_candidate_list.push(buchananObject);
+    } else if (name === 'forbes' && forbes_active == 1) {
+        main_website_candidate_list.push(forbesObject);
+    } else if (name === 'alexander' && alexander_active == 1) {
+        main_website_candidate_list.push(alexanderObject);
+    } else if (name === 'gramm' && gramm_active == 1) {
+        main_website_candidate_list.push(grammObject);
+    } else if (name === 'specter' && specter_active == 1) {
+        main_website_candidate_list.push(specterObject);
+    } else if (name === 'wilson' && wilson_active == 1) {
+        main_website_candidate_list.push(wilsonObject);
+    } else if (name === 'bono' && bono_active == 1) {
+        main_website_candidate_list.push(bonoObject);
+    } else if (name === 'wbush' && wbush_active == 1) {
+        main_website_candidate_list.push(wbushObject);
+    }
+});
+
+        webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
+
+
+        for (let x in main_website_candidate_list) {
+            webpage_html+=`<div id="candidate-entry" style="background-color:C0C0C0;width:213px;height:92px;vertical-align:top;top:0;left:0;display:inline-block;padding:4px;"><img src="${main_website_candidate_list[x]["img"]}"><div style="width:121px;height:92px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:0;left:0;display:inline-block; font-family:'Times New Roman', Times, serif;">
+            <p style="font-size:1em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0em;">
+            ${main_website_candidate_list[x]["name"]}
+            </p>
+            <p style="font-size:0.6em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0.3em;">
+            <strong>${main_website_candidate_list[x]["title"]}</strong>
+            </p>
+            <p style="font-size:0.6em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0em;">
+            ${main_website_candidate_list[x]["description"]}
+            </p></div></div>`;
         }
-    
-        if (customContent) {
-          contentArea.innerHTML = customContent;
-        }
-    
-        mainDiv.appendChild(contentArea);
-        document.body.appendChild(mainDiv);
-    
-        // Drag functionality
-        let isDragging = false;
-        let offsetX, offsetY;
-    
-        titleBar.addEventListener('mousedown', (e) => {
-          isDragging = true;
-          offsetX = e.clientX - mainDiv.getBoundingClientRect().left;
-          offsetY = e.clientY - mainDiv.getBoundingClientRect().top;
-        });
-    
-        document.addEventListener('mousemove', (e) => {
-          if (isDragging) {
-            mainDiv.style.left = `${e.clientX - offsetX}px`;
-            mainDiv.style.top = `${e.clientY - offsetY}px`;
-          }
-        });
-    
-        document.addEventListener('mouseup', () => {
-          isDragging = false;
-        });
-      }
-    
-      function makeDraggable(element) {
-        let isDragging = false;
-        let offsetX, offsetY;
-    
-        element.addEventListener('mousedown', (e) => {
-          isDragging = true;
-          offsetX = e.clientX - element.getBoundingClientRect().left;
-          offsetY = e.clientY - element.getBoundingClientRect().top;
-        });
-    
-        window.addEventListener('mousemove', (e) => {
-          if (isDragging) {
-            element.style.left = `${e.clientX - offsetX}px`;
-            element.style.top = `${e.clientY - offsetY}px`;
-          }
-        });
-    
-        window.addEventListener('mouseup', () => {
-          isDragging = false;
-        });
-      }
+
+        document.getElementById("webpage_html").innerHTML = webpage_html;
+
+
+        // Use this to control the headline
+        document.getElementById("headline").innerHTML = "CLINTON ADMIN: Conservative, utterly unremarkable. A peacemaker with majority control in congress.";
+    } else {
+    	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
+    }
+}
+
+window.website_back = function() {
+  if (browser_history[history_index - 1] != null) {
+    console.log("Backward");
+    history_index -= 1;
+  } else {
+    console.log("No history available backward");
+  }
+  document.getElementById("website_search_bar").value = browser_history[history_index];
+  current_website = browser_history[history_index];
+  website_handler();
+};
+
+window.website_forward = function() {
+  if (browser_history[history_index + 1] != null) {
+    console.log("Forward");
+    history_index += 1;
+  } else {
+    console.log("No history available forward");
+  }
+  document.getElementById("website_search_bar").value = browser_history[history_index];
+  current_website = browser_history[history_index];
+  website_handler();
+};
+
+window.website_close = function () {
+  if (draggableBox && document.body.contains(draggableBox)) {
+    draggableBox.remove();
+    draggableBox = null;
+    console.log("Closed");
+  }
+};
+console.log(main_website_candidate_list);
+
 function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
     observerRunning = true;
