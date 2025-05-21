@@ -70448,9 +70448,12 @@ var forbes_var = 0
 var alexander_var = 0
 var gramm_var = 0
 var specter_var = 0
-var wilson_var = -99
+var wilson_var = 0
+var powell_var = -99
 var bono_var = -99
 var wbush_var = -99
+var perot_var = -99
+var bush_var = -99
 
 var moveup = 0
 
@@ -70460,10 +70463,13 @@ var forbes_active = 1
 var alexander_active = 1
 var gramm_active = 1
 var specter_active = 1
-var wilson_active = 0
+var wilson_active = 1
+var powell_active = 0
 
 var bono_active = 0
 var wbush_active = 0
+var perot_active = 0
+var bush_active = 0
 
 let opponents = {
     dole: dole_var,
@@ -70473,8 +70479,11 @@ let opponents = {
     gramm: gramm_var,
     specter: specter_var,
     wilson: wilson_var,
+    powell: powell_var,
     bono: bono_var,
-    wbush: wbush_var
+    wbush: wbush_var,
+    perot: perot_var,
+    bush: bush_var
 };
 
 let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
@@ -70665,13 +70674,16 @@ function website_handler() {
 let doleObject = {img: "https://i.imgur.com/kiFRIGz.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
 let buchananObject = {img: "https://i.imgur.com/vHJy7Bh.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
 let forbesObject = {img: "https://i.imgur.com/B7q8vBm.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
-let alexanderObject = {img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TENNESSEE GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
+let alexanderObject = {img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
 let grammObject = {img: "https://i.imgur.com/OHUNpQN.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
 let specterObject = {img: "https://i.imgur.com/6KJKhUw.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
 let wilsonObject = {img: "https://i.imgur.com/TPioQhq.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
 
+let powellObject = {img: "https://i.imgur.com/22cM2W9.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
 let bonoObject = {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."};
-let wbushObject = {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son..."};
+let wbushObject = {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son to take you on. Their call is in the minority but while he's of the same blood, he's not of the same cloth as 41."};
+let perotObject = {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."};
+let bushObject = {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."};
 
 
 sortedOpponents.forEach(([name, value]) => {
@@ -70689,10 +70701,16 @@ sortedOpponents.forEach(([name, value]) => {
         main_website_candidate_list.push(specterObject);
     } else if (name === 'wilson' && wilson_active == 1) {
         main_website_candidate_list.push(wilsonObject);
+    } else if (name === 'powell' && powell_active == 1) {
+        main_website_candidate_list.push(powellObject);
     } else if (name === 'bono' && bono_active == 1) {
         main_website_candidate_list.push(bonoObject);
     } else if (name === 'wbush' && wbush_active == 1) {
         main_website_candidate_list.push(wbushObject);
+    } else if (name === 'perot' && perot_active == 1) {
+        main_website_candidate_list.push(perotObject);
+    } else if (name === 'bush' && bush_active == 1) {
+        main_website_candidate_list.push(bushObject);
     }
 });
 legacyMap
