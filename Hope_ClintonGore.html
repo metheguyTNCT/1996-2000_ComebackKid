@@ -151,6 +151,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "question_9_nafta",
+        "fields": {
+            "priority": 2,
+            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "question_10_foreign_intervention",
         "fields": {
             "priority": 3,
@@ -1389,15 +1398,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "As people begin to look at the numbers, they appear staggering over the past four years. The deficit has always been down, down, down, and down. And suddenly, you cannot quite believe it — you see, for the first time, green numbers next to the chart as it crosses the line back into positive. 1996 is predicted to be a budget surplus!",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "question_9_nafta",
-        "fields": {
-            "priority": 2,
-            "description": "It’s finally time to sign the North American Free Trade Agreement, a landmark bipartisan deal designed to lower tariffs and eliminate trade barriers between the United States, Mexico, and Canada.  Besides a little pushback from Perot and the Midwest, the agreement sees almost universal approval. You're taking some credit from 41 as well, who really got the ground running for this, so that's a plus. The ink on the agreement feels heavier than paper, it carries the weight of the entire continent.",
             "likelihood": 1
         }
     },
@@ -67554,7 +67554,13 @@ document.head.appendChild(customStyling);
     if (ans == 220004){
     PublicSupport += 2;
     }
-    function doleMentum() {
+function determineRepublican(){
+    republicanChange(sortedOpponents[0][0])
+}
+
+    function republicanChange(candidateName){
+    republican = candidateName
+    if(candidateName == "dole"){
         DoleNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
@@ -67564,40 +67570,9 @@ document.head.appendChild(customStyling);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#092C9C";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
-    }
-    function bonoMentum() {
-        BonoNom += 1;
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Penny";
-        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#63827E";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/igvfgk.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Timothy";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0A2D9C";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bono";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C34B4F";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.14
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
-      	e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.2
-    }
-    function SundogMentum() {
-        SundogNom += 1;
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Paul";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/5gurvc.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ron";
-        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#d2a825";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9D1439";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Ross";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.2
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.2
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.89
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.51
-    }
-    function patMentum() {
-        BuchananNom += 1;
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_dole");
+    } else if (candidateName == "buchanan") {
+            BuchananNom += 1;
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#3A040D";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/hBmckvd.png";
@@ -67611,74 +67586,9 @@ document.head.appendChild(customStyling);
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.9
 	      e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = 0.15
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = 0.65
-    }
-    function lamarMentum() {
-        LamarNom += 1;
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A73E2E";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.06
-    }
-    function specterMentum() {
-            SpecterNom += 1;
-            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
-            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A60D29";
-            campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0A2E9C";
-            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
-            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.12
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.085
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.1
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
-    }
-    function CheneyMentum() {
-            CheneyNom += 1;
-            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
-            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#6B0B05";
-            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
-            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
-            campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B309C";
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
-    }
-    function grammMentum() {
-        GrammNom += 1;
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#902E28";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.71
-}
-function wilsonMentum() {
-    WilsonNom += 1;
-    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
-    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#092C9C";
-campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
-campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F7657A";
-campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
-campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
-e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.07
-e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.64
-}
-function forbesMentum() {
-    ForbesNom += 1;
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_buchanan");
+    } else if (candidateName == "forbes") {
+            ForbesNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Lamm";
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/0lbf5h.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
@@ -67691,9 +67601,61 @@ function forbesMentum() {
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.22
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 27)[0].fields.issue_score = -0.3
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.65
-}
-function powellMentum() {
-    PowellNom += 1;
+    campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_forbes");
+    } else if (candidateName == "alexander") {
+            LamarNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Alexander";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A73E2E";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.06
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_alexander");
+    } else if (candidateName == "gramm") {
+            GrammNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Gramm";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#902E28";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.71
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_gramm");
+    } else if (candidateName == "specter") {
+                SpecterNom += 1;
+            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Specter";
+            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A60D29";
+            campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0A2E9C";
+            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
+            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.12
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.085
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.1
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
+            campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_specter");
+    } else if (candidateName == "wilson") {
+        WilsonNom += 1;
+    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+    campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#092C9C";
+campaignTrail_temp.candidate_json[1]["fields"].last_name = "Wilson";
+campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F7657A";
+campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
+campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.07
+e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.64
+campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_wilson");
+    } else if (candidateName == "powell") {
+        PowellNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9126B";
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
@@ -67708,9 +67670,40 @@ function powellMentum() {
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.9
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.9
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 30)[0].fields.issue_score = 0.65
-}
-function bushMentum() {
-    BushNom += 1;
+    campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_powell");
+    } else if (candidateName == "bono") {
+            BonoNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Penny";
+        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#63827E";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/igvfgk.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Timothy";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0A2D9C";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bono";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C34B4F";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.14
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
+      	e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.2
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_bono");
+    } else if (candidateName == "perot") {
+            SundogNom += 1;
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Paul";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/5gurvc.png";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ron";
+        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#d2a825";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B2E9C";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9D1439";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Ross";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.2
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.2
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.89
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.51
+        campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_sundog");
+    } else if (candidateName == "bush") {
+        BushNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
     campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
@@ -67720,7 +67713,23 @@ function bushMentum() {
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.39
-}
+    tunnel("candidate_intro_hw_commies");
+    }
+    }
+    function CheneyMentum() {
+            CheneyNom += 1;
+            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+            campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
+            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#6B0B05";
+            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
+            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
+            campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B309C";
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
+            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
+            tunnel("candidate_intro_cheney");
+    }
     function rdoleMentum() {
         DoleNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
