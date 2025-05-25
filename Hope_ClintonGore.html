@@ -65482,6 +65482,9 @@ function updateCandidates(type, amt){
             if(dole_active == 1){
                 opponents.dole += 1
             }
+            if(bono_active == 1) {
+            opponents.bono += (-0.4*amt)
+            }
             // subs
         } if(type == "ideo" && amt>0){ // Liberal Billy
             // adds
@@ -65764,16 +65767,6 @@ cyoAdventure = function(a) {
     powell_active = 1
     moveup = 1
     opponents.powell = 3
-    }
-    if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
-    bono_active = 1
-    moveup = 1
-    opponents.bono = 4
-    }
-    if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85026.5) || e.player_answers.includes(70001))) {
-    bono_active = 1
-    moveup = 1
-    opponents.bono = 3
     }
     if (e.player_answers.includes(30003)) {
     if (e.player_answers.includes(88001.5)) {
@@ -68030,6 +68023,10 @@ if (e.question_number+1 == 27) {
     opponents.forbes += 2
     updateCandidates("junk", 0)
     }
+    if (ans == 150002) {
+    opponents.bono += 2
+    updateCandidates("junk", 0)
+    }
    //Healthcare Vote CYOA (Succeeds)
    if (ans == 15004.5){
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
@@ -68551,6 +68548,16 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
 }
 if (e.question_number+1 == 18){
+    if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
+    bono_active = 1
+    moveup = 1
+    opponents.bono = 4
+    }
+    if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85026.5) || e.player_answers.includes(70001))) {
+    bono_active = 1
+    moveup = 1
+    opponents.bono = 3
+    }
     if (GotHealthcare == 1) {
     if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
     if ((e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5)) && e.player_answers.includes(85027.5)) {
