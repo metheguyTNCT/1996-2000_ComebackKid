@@ -65334,7 +65334,6 @@ var FPWin = 0
 var LEGWin = 0
 var Wins = 0
 var Ideology = 0
-var PublicSupport = 8
 var Legacy = 0
 var ReichPoints = 0
 var OsloPoints = 0
@@ -65358,9 +65357,291 @@ var PowellNom = 0
 var BushNom = 0
 var SundogNom = 0
 var sundog = 0
+// Define this at the top, globally
+current_website="republicanstowatchoutfor.com";
+browser_history = [
+	"republicanstowatchoutfor.com"
+];
+history_index=0;
+current_website=browser_history[history_index];
+let draggableBox = null;
+
+var dole_var = 0
+var buchanan_var = 0
+var forbes_var = 0
+var alexander_var = 0
+var gramm_var = 0
+var specter_var = 0
+var wilson_var = 0
+var powell_var = -99
+var bono_var = -99
+var wbush_var = -99
+var perot_var = -99
+var bush_var = -99
+
+var moveup = 0
+
+var dole_active = 1
+var buchanan_active = 1
+var forbes_active = 1
+var alexander_active = 1
+var gramm_active = 1
+var specter_active = 1
+var wilson_active = 1
+var powell_active = 0
+
+var bono_active = 0
+var wbush_active = 0
+var perot_active = 0
+var bush_active = 0
+
+let opponents = {
+    dole: dole_var,
+    buchanan: buchanan_var,
+    forbes: forbes_var,
+    alexander: alexander_var,
+    gramm: gramm_var,
+    specter: specter_var,
+    wilson: wilson_var,
+    powell: powell_var,
+    bono: bono_var,
+    wbush: wbush_var,
+    perot: perot_var,
+    bush: bush_var
+};
+
+let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
+
+let doleObject = {img: "https://i.imgur.com/kiFRIGz.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
+let buchananObject = {img: "https://i.imgur.com/vHJy7Bh.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
+let forbesObject = {img: "https://i.imgur.com/B7q8vBm.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
+let alexanderObject = {img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
+let grammObject = {img: "https://i.imgur.com/OHUNpQN.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
+let specterObject = {img: "https://i.imgur.com/6KJKhUw.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
+let wilsonObject = {img: "https://i.imgur.com/TPioQhq.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
+
+let powellObject = {img: "https://i.imgur.com/22cM2W9.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
+let bonoObject = {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."};
+let wbushObject = {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son to take you on. Their call is in the minority but while he's of the same blood, he's not of the same cloth as 41."};
+let perotObject = {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."};
+let bushObject = {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."};
+function updateCandidates(type, amt){
+    console.log(`\n=== updateCandidates called with type: ${type}, amt: ${amt} ===`);
+    if(e.noCounter < 25){
+        if(type == "fopo" && amt>0){ // Good FoPo for Billy
+            // adds
+            if(buchanan_active == 1){
+                opponents.buchanan += (0.4*amt)
+            }
+            // subs
+            if(powell_active == 1){
+                opponents.powell -= 1
+            }
+            if (specter_active == 1) {
+            opponents.specter -= (0.3*amt)
+            }
+        }
+        if(type == "fopo" && amt<0){ // Bad FoPo for Billy
+            // adds
+            if(powell_active == 1){
+                opponents.powell += (-1.5*amt)
+            }
+            if (specter_active == 1) {
+            opponents.specter += (-0.3*amt)
+            }
+            if (bush_active == 1) {
+            opponents.specter += (-0.6*amt)
+            }
+            // subs
+        } if(type == "cong" && amt>0){ // Good Cong for Billy
+            // adds
+            if(buchanan_active == 1){
+                opponents.buchanan += 0.1
+            }
+            if(forbes_active == 1){
+                opponents.forbes += 0.2
+            }
+            // subs
+            if(dole_active == 1){
+                opponents.dole -= (0.5*amt)
+            }
+            if(specter_active == 1){
+                opponents.specter -= (0.2*amt)
+            }
+            if(gramm_active == 1){
+                opponents.gramm -= (0.2*amt)
+            }
+        } if(type == "cong" && amt<0){ // Bad Cong for Billy
+            // adds
+            if(gramm_active == 1){
+                opponents.gramm += (-0.5*amt)
+            }
+            if(specter_active == 1){
+                opponents.specter += (-0.3*amt)
+            }
+            if(dole_active == 1){
+                opponents.dole += 1
+            }
+            // subs
+        } if(type == "ideo" && amt>0){ // Liberal Billy
+            // adds
+            if(gramm_active == 1){
+                opponents.gramm += (0.3*amt)
+            }
+            if(alexander_active == 1){
+                opponents.alexander += (0.2*amt)
+            }
+            // subs
+            if(specter_active == 1){
+                opponents.specter -= (0.4*amt)
+            }
+        } if(type == "ideo" && amt<0){ // Conservative Billy
+            // adds
+            if(specter_active == 1){
+                opponents.specter += (-0.3*amt)
+            }
+            if(powell_active == 1){
+                opponents.powell += (-0.2*amt)
+            }
+        }
+
+        sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
+        sortedOpponents.forEach(([name, value]) => {
+            console.log(`${name}: ${value}`);
+        });
+
+        main_website_candidate_list.length = 0;
+sortedOpponents.forEach(([name, value]) => {
+    if (name === 'dole' && dole_active == 1) {
+        main_website_candidate_list.push(doleObject);
+    } else if (name === 'buchanan' && buchanan_active == 1) {
+        main_website_candidate_list.push(buchananObject);
+    } else if (name === 'forbes' && forbes_active == 1) {
+        main_website_candidate_list.push(forbesObject);
+    } else if (name === 'alexander' && alexander_active == 1) {
+        main_website_candidate_list.push(alexanderObject);
+    } else if (name === 'gramm' && gramm_active == 1) {
+        main_website_candidate_list.push(grammObject);
+    } else if (name === 'specter' && specter_active == 1) {
+        main_website_candidate_list.push(specterObject);
+    } else if (name === 'wilson' && wilson_active == 1) {
+        main_website_candidate_list.push(wilsonObject);
+    } else if (name === 'powell' && powell_active == 1) {
+        main_website_candidate_list.push(powellObject);
+    } else if (name === 'bono' && bono_active == 1) {
+        main_website_candidate_list.push(bonoObject);
+    } else if (name === 'wbush' && wbush_active == 1) {
+        main_website_candidate_list.push(wbushObject);
+    } else if (name === 'perot' && perot_active == 1) {
+        main_website_candidate_list.push(perotObject);
+    } else if (name === 'bush' && bush_active == 1) {
+        main_website_candidate_list.push(bushObject);
+    }
+});
+
+}
+
+refreshSurrogates();
+}
+
+const ideologyMap = {
+    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
+    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
+    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
+    "7": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "8": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "9": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "10": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "11": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+
+}
+
+const legacyMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+
+}
+
+
+const fpwinMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+
+}
+
+const legwinMap = {
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+
+}
+
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+} 
+e.noCounter = 0;
+
 cyoAdventure = function(a) {
     update_EV_dict();
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
+    e.noCounter += 1
    //Healthcare Update Inserter
     if (ans === 50001) {
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
@@ -65474,6 +65755,26 @@ cyoAdventure = function(a) {
     }
     }
     if (e.question_number+1 == 14) {
+    if ((!e.player_answers.includes(88011.5) && !e.player_answers.includes(60003)) && FPWin <= -2) {
+    powell_active = 1
+    moveup = 1
+    opponents.powell = 4
+    }
+    if ((!e.player_answers.includes(88011.5) && !e.player_answers.includes(60003)) && FPWin <= -1) {
+    powell_active = 1
+    moveup = 1
+    opponents.powell = 3
+    }
+    if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
+    bono_active = 1
+    moveup = 1
+    opponents.bono = 4
+    }
+    if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85026.5) || e.player_answers.includes(70001))) {
+    bono_active = 1
+    moveup = 1
+    opponents.bono = 3
+    }
     if (e.player_answers.includes(30003)) {
     if (e.player_answers.includes(88001.5)) {
         question_insert("insert_yeltsin_friendly", 
@@ -65732,63 +66033,116 @@ cyoAdventure = function(a) {
         );
     }
     }
-    if (e.question_number+1 == 22) {
-    if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
-    if (e.player_answers.includes(88012.5)) {
-        question_insert("oslo_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "crooked_deal_nocuts",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
-                    "likelihood": 1
-                }
+    if (e.question_number+1 == 19) { // ELIMINATING CANDIDATES
+        if (sortedOpponents[6][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
             }
-        );
-    } else {
-        question_insert("oslo_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "crooked_deal_cuts",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
-                    "likelihood": 1
-                }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
             }
-        );
-    }
-    } else if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
-        ctsAchievement("Deficit Hawk");
-        PublicSupport += 2
-        Legacy += 2;
-        question_insert("oslo_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "balanced_budget",
-                "fields": {
-                    "priority": 0,
-                    "description": "As people begin to look at the numbers, they appear staggering over the past four years. The deficit has always been down, down, down, and down. And suddenly, you cannot quite believe it — you see, for the first time, green numbers next to the chart as it crosses the line back into positive. 1996 is predicted to be a budget surplus!",
-                    "likelihood": 1
-                }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
             }
-        );
-    } else {
-        question_insert("oslo_2", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "question_16.5_jones_case",
-                "fields": {
-                    "priority": 0,
-                    "description": "It’s been a week since you lapsed — with a young intern you never should’ve gotten involved with — and the world still turns. The staff still moves. The press still smiles. Hillary still stands. That’s what matters. But your thoughts won’t quiet. What were you thinking? How could you cheat on your wife, a woman who’s stood by you all these years? Don’t play dumb. This isn’t the first time. You’re still tangled up in the Paula Jones case, hoping the Supreme Court doesn’t take it up. Settling might make it all go away, but it’d look like guilt. So... what now?",
-                    "likelihood": 1
-                }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[6][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
             }
-        );
-    }
-    }
-    if (e.question_number+1 == 19) {
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[6][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[6][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[6][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[6][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[6][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[6][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[6][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
         let oslo_question_1 = {
             "model": "campaign_trail.question",
             "pk": "oslo_question_1",
@@ -65847,7 +66201,116 @@ cyoAdventure = function(a) {
         }
         }
     }
-    if (e.question_number+1 == 20) {
+        if (e.question_number+1 == 20) {
+        if (sortedOpponents[5+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[5+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
         if (DisasterMidterms == 1) {
         question_insert("oslo_question_1", 
                 {
@@ -65967,7 +66430,819 @@ cyoAdventure = function(a) {
             );
         }
         }
-        console.log(PublicSupport);
+    if (e.question_number+1 == 21) {
+    if (sortedOpponents[4+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
+    }
+        if (e.question_number+1 == 22) {
+        if (sortedOpponents[3+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[3+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
+    if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
+    if (e.player_answers.includes(88012.5)) {
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "crooked_deal_nocuts",
+                "fields": {
+                    "priority": 0,
+                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+                    "likelihood": 1
+                }
+            }
+        );
+    } else {
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "crooked_deal_cuts",
+                "fields": {
+                    "priority": 0,
+                    "description": "As the situation seems dire, Gingrich taking control of our term in expectation of making you a one term president, the latest news are especially concerning. After our refusal to hasten their entrance in NATO even after some forged document of Yeltsin and cuckoo claims of starting a nuclear weapon program, they've turned to republicans to achieve the security they desperately crave. Considering the prevalence of polish migrants in the Midwest, they may just kill our chances of reelection out of spite.",
+                    "likelihood": 1
+                }
+            }
+        );
+    }
+    } else if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
+        ctsAchievement("Deficit Hawk");
+        Legacy += 2;
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "balanced_budget",
+                "fields": {
+                    "priority": 0,
+                    "description": "As people begin to look at the numbers, they appear staggering over the past four years. The deficit has always been down, down, down, and down. And suddenly, you cannot quite believe it — you see, for the first time, green numbers next to the chart as it crosses the line back into positive. 1996 is predicted to be a budget surplus!",
+                    "likelihood": 1
+                }
+            }
+        );
+    } else {
+        question_insert("oslo_2", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "question_16.5_jones_case",
+                "fields": {
+                    "priority": 0,
+                    "description": "It’s been a week since you lapsed — with a young intern you never should’ve gotten involved with — and the world still turns. The staff still moves. The press still smiles. Hillary still stands. That’s what matters. But your thoughts won’t quiet. What were you thinking? How could you cheat on your wife, a woman who’s stood by you all these years? Don’t play dumb. This isn’t the first time. You’re still tangled up in the Paula Jones case, hoping the Supreme Court doesn’t take it up. Settling might make it all go away, but it’d look like guilt. So... what now?",
+                    "likelihood": 1
+                }
+            }
+        );
+    }
+    }
+        if (e.question_number+1 == 23){
+        if (sortedOpponents[2+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
+        if (e.player_answers.includes(80003) && e.player_answers.includes(85002.5)) {
+            question_insert("question_16.5_jones_case", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+              question_insert("balanced_budget", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+                question_insert("crooked_deal_cuts", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+                question_insert("crooked_deal_nocuts", 
+                {
+                   
+                  "model": "campaign_trail.question",
+                  "pk": "question_17_yugoslavia_win",
+                  "fields": {
+                      "priority": 3,
+                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                      "likelihood": 1
+                  }
+                    }
+                
+                );
+        } else {
+                question_insert("question_16.5_jones_case", 
+                {
+                   
+          "model": "campaign_trail.question",
+          "pk": "question_17_yugoslavia",
+          "fields": {
+              "priority": 3,
+              "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+              "likelihood": 1
+          }
+                    }
+                
+                );
+                question_insert("balanced_budget", 
+                    {
+                       
+              "model": "campaign_trail.question",
+              "pk": "question_17_yugoslavia",
+              "fields": {
+                  "priority": 3,
+                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                  "likelihood": 1
+              }
+                        }
+                    
+                    );
+                question_insert("crooked_deal_cuts", 
+                    {
+                       
+              "model": "campaign_trail.question",
+              "pk": "question_17_yugoslavia",
+              "fields": {
+                  "priority": 3,
+                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                  "likelihood": 1
+              }
+                        }
+                    
+                    );
+                question_insert("crooked_deal_nocuts", 
+                    {
+                       
+              "model": "campaign_trail.question",
+              "pk": "question_17_yugoslavia",
+              "fields": {
+                  "priority": 3,
+                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
+                  "likelihood": 1
+              }
+                        }
+                    
+                    );
+        }
+        }
+        if (e.question_number+1 == 24){
+            if (sortedOpponents[1+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.perot += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.dole/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        updateCandidates("junk", 0)
+        let internet_thirdway_mitigation = {
+            "model": "campaign_trail.question",
+            "pk": "internet_thirdway_mitigation",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_thirdway_republican_revolution = {
+            "model": "campaign_trail.question",
+            "pk": "internet_thirdway_republican_revolution",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_thirdway_disaster_midterms = {
+            "model": "campaign_trail.question",
+            "pk": "internet_thirdway_disaster_midterms",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_liberal_mitigation = {
+            "model": "campaign_trail.question",
+            "pk": "internet_liberal_mitigation",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_liberal_republican_revolution = {
+            "model": "campaign_trail.question",
+            "pk": "internet_liberal_republican_revolution",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_liberal_disaster_midterms = {
+            "model": "campaign_trail.question",
+            "pk": "internet_liberal_disaster_midterms",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_bluedog_mitigation = {
+            "model": "campaign_trail.question",
+            "pk": "internet_bluedog_mitigation",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_bluedog_republican_revolution = {
+            "model": "campaign_trail.question",
+            "pk": "internet_bluedog_republican_revolution",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let internet_bluedog_disaster_midterms = {
+            "model": "campaign_trail.question",
+            "pk": "internet_bluedog_disaster_midterms",
+            "fields": {
+                "priority": 0,
+                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
+                "likelihood": 1
+            }
+        }
+        let commie_return_question = {
+            "model": "campaign_trail.question",
+            "pk": "commie_return_question",
+            "fields": {
+                "priority": 0,
+                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
+                "likelihood": 1
+            }
+        }
+        if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
+            CommieReturn += 1;
+            if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
+            bush_active = 1
+            moveup = 1
+            opponents.bush = 10
+            if (dole_active == 1) {
+            dole_active = 0
+            opponents.dole = -10
+            }
+            if (buchanan_active == 1) {
+            buchanan_active = 0
+            opponents.buchanan = -10
+            }
+            if (forbes_active == 1) {
+            forbes_active = 0
+            opponents.forbes = -10
+            }
+            if (alexander_active == 1) {
+            alexander_active = 0
+            opponents.alexander = -10
+            }
+            if (gramm_active == 1) {
+            gramm_active = 0
+            opponents.gramm = -10
+            }
+            if (specter_active == 1) {
+            specter_active = 0
+            opponents.specter = -10
+            }
+            if (wilson_active == 1) {
+            wilson_active = 0
+            opponents.wilson = -10
+            }
+            if (powell_active == 1) {
+            powell_active = 0
+            opponents.powell = -10
+            }
+            if (bono_active == 1) {
+            bono_active = 0
+            opponents.bono = -10
+            }
+            } else {
+            powell_active = 1
+            moveup = 1
+            opponents.powell = 10
+            if (dole_active == 1) {
+            dole_active = 0
+            opponents.dole = -10
+            }
+            if (buchanan_active == 1) {
+            buchanan_active = 0
+            opponents.buchanan = -10
+            }
+            if (forbes_active == 1) {
+            forbes_active = 0
+            opponents.forbes = -10
+            }
+            if (alexander_active == 1) {
+            alexander_active = 0
+            opponents.alexander = -10
+            }
+            if (gramm_active == 1) {
+            gramm_active = 0
+            opponents.gramm = -10
+            }
+            if (specter_active == 1) {
+            specter_active = 0
+            opponents.specter = -10
+            }
+            if (wilson_active == 1) {
+            wilson_active = 0
+            opponents.wilson = -10
+            }
+            if (bono_active == 1) {
+            bono_active = 0
+            opponents.bono = -10
+            }
+            }
+            ctsAchievement("Красный Призрак");
+            updateCandidates("junk", 0)
+            question_insert("question_17_yugoslavia",commie_return_question);
+        } else {
+        if (SlimGOPCongress == 1) {
+        if (Ideology >= -3 && Ideology <= 1) {
+        question_insert("question_17_yugoslavia_win",internet_thirdway_mitigation);
+        question_insert("question_17_yugoslavia",internet_thirdway_mitigation);
+        } else if (Ideology >= 2) {
+        question_insert("question_17_yugoslavia_win",internet_liberal_mitigation);
+        question_insert("question_17_yugoslavia",internet_liberal_mitigation);
+        } else if (Ideology <= -4) {
+        question_insert("question_17_yugoslavia_win",internet_bluedog_mitigation);
+        question_insert("question_17_yugoslavia",internet_bluedog_mitigation);
+        }
+        } else if (RepublicanRevolution == 1) {
+        if (Ideology >= -3 && Ideology <= 1) {
+        question_insert("question_17_yugoslavia_win",internet_thirdway_republican_revolution);
+        question_insert("question_17_yugoslavia",internet_thirdway_republican_revolution);
+        } else if (Ideology >= 2) {
+        question_insert("question_17_yugoslavia_win",internet_liberal_republican_revolution);
+        question_insert("question_17_yugoslavia",internet_liberal_republican_revolution);
+        } else if (Ideology <= -4) {
+        question_insert("commie_return_question",internet_bluedog_republican_revolution);
+        question_insert("question_17_yugoslavia_win",internet_bluedog_republican_revolution);
+        question_insert("question_17_yugoslavia",internet_bluedog_republican_revolution);
+        }
+        } else if (DisasterMidterms == 1) {
+        if (Ideology >= -3 && Ideology <= 1) {
+        question_insert("question_17_yugoslavia_win",internet_thirdway_disaster_midterms);
+        question_insert("question_17_yugoslavia",internet_thirdway_disaster_midterms);
+        } else if (Ideology >= 2) {
+        question_insert("question_17_yugoslavia_win",internet_liberal_disaster_midterms);
+        question_insert("question_17_yugoslavia",internet_liberal_disaster_midterms);
+        } else if (Ideology <= -4) {
+        question_insert("question_17_yugoslavia_win",internet_bluedog_disaster_midterms);
+        question_insert("question_17_yugoslavia",internet_bluedog_disaster_midterms);
+        }
+        }
+        }
+        }
 	//Healthcare Vote inserter
     if (e.question_number+1 == 16) {
 	let win_healthcare_vote_temp = {
@@ -66018,9 +67293,9 @@ cyoAdventure = function(a) {
     if (e.player_answers.includes(55003.5)) {
         question_insert("question_10_foreign_intervention",win_healthcare_vote_temp);
     }
-else if (PublicSupport >= 15 && e.player_answers.includes(75001.5)) {
+else if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88008.5) || e.player_answers.includes(88001.5)) && (e.player_answers.includes(88009.5) || e.player_answers.includes(88010.5)) && e.player_answers.includes(75001.5)) {
     question_insert("question_10_foreign_intervention", win_healthcare_vote_kennedy_temp);
-} else if (PublicSupport >= 15 && e.player_answers.includes(65004.5)) {
+} else if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88008.5) || e.player_answers.includes(88001.5)) && (e.player_answers.includes(88009.5) || e.player_answers.includes(88010.5)) && e.player_answers.includes(65004.5)) {
     question_insert("question_10_foreign_intervention", win_healthcare_vote_hillary_temp);
 } else if (e.player_answers.includes(55004.5) || e.player_answers.includes(55005.5) ||e.player_answers.includes(55006.5)) {
     question_insert("question_10_foreign_intervention",refuse_healthcare_vote_temp);
@@ -66640,341 +67915,123 @@ if (e.question_number+1 == 27) {
     question_insert("question_19_alt",question_21_iraq_airstrikes);
     }
     }
-//WTC Bombing CYOA
-   if (ans ==  20001){
-   PublicSupport += 2;
-   }
-   if (ans == 20003){
-   FPWin -= 1;
-   Legacy += 1;
-   PublicSupport += 1;
-   }
-   //Economic Plan CYOA
-   if (ans == 30002){
-    PublicSupport += 1;
-    Ideology -= 1;
-    sundog += 1;
-    }
-    if (ans == 30001){
-    PublicSupport -= 1;
-    Ideology += 1;
-    }
-    if (ans == 30003){
-    PublicSupport -= 1;
-    }
-    if (ans == 88000.5){
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 88001.5){
-    LEGWin += 1;
-    }
-    if (ans == 88002.5){
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    }
-    if (ans == 88004.5){
-    Ideology += 1;
-    LEGWin += 1;
-    sundog += 1;
-    }
-    if (ans == 88003.5){
-    Ideology += 2;
-    PublicSupport -= 1;
-    }
-    if (ans == 88005.5){
-    Ideology += 1;
-    sundog -= 6;
-    }
-    if (ans == 88006.5){
-    Ideology += 2;
-    ReichPoints += 1;
-    }
-    if (ans == 88007.5){
-    Ideology += 2;
-    PublicSupport -= 1;
-    }
-    if (ans == 88008.5){
-    ReichPoints += 2;
-    Ideology -= 1;
-    }
-    if (ans == 88009.5){
-    PublicSupport -= 1;
-    Ideology += 1;
-    }
-    if (ans == 88010.5){
-    PublicSupport -= 2;
-    ReichPoints += 2;
-    LEGWin += 1;
-    }
-    if (ans == 88011.5){
-    ReichPoints += 1;
-    }
-    if (ans == 88012.5){
+// FoPo
+    if (ans == 88012.5 || ans == 80003 || ans == 90001 || ans == 900015553 || ans == 85001.5 || ans == 85002.5 || ans == 85003.5 || ans == 85005.5 || ans == 85006.5 || ans == 85007.5 || ans == 100001 || ans == 100002 || ans == 100004 || ans == 170001 || ans == 170004 || ans == 170006 || ans == 200001 || ans == 89006.5 || ans == 89009.5 || ans == 89012.5){
     FPWin += 1;
+    updateCandidates("fopo", 1)
     }
-    if (ans == 88013.5){
-    PublicSupport += 1;
+    if (ans == 20003 || ans == 80001 || ans == 80002 || ans == 80004 || ans == 900015551 || ans == 900015552 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 200003 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5) {
+    FPWin -= 1;
+    updateCandidates("fopo", -1)
+    }
+    if (ans == 89017.5 || ans == 89020.5) {
+    FPWin -= 2;
+    updateCandidates("fopo", -2)
+    }
+// Cong
+   if (ans == 88001.5 || ans == 88004.5 || ans == 88010.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 88021.5 || ans == 70001 || ans == 85026.5 || ans == 85027.5 || ans == 90001 || ans == 900015553 || ans == 900015551 || ans == 85018.5 || ans == 15006.5 || ans == 25003.5 || ans == 150002 || ans == 180001 || ans == 85024.5 || ans == 190001 || ans == 85029.5 || ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5) {
+   LEGWin += 1;
+   updateCandidates("cong", 1)
+   }
+   if (ans == 15004.5 || ans == 15007.5) {
+   LEGWin += 2;
+   updateCandidates("cong", 2)
+   }
+   if (ans == 88000.5 || ans == 88002.5 || ans == 88016.5 || ans == 88020.5 || ans == 15001.5 || ans == 15003.5 || ans == 25001.5 || ans == 150003 || ans == 150004 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240003 || ans == 89000.5 || ans == 89003.5 || ans == 89002.5 || ans == 89008.5) {
+   LEGWin -= 1;
+   updateCandidates("cong", -1)
+   }
+   if (ans == 88022.5 || ans == 150005 || ans == 150007) {
+   LEGWin -= 2;
+   updateCandidates("cong", -2)
+   }
+// Ideo
+   if (ans == 30001 || ans == 88004.5 || ans == 88005.5 || ans == 88009.5 || ans == 88014.5 || ans == 88019.5 || ans == 50001 || ans == 60002 || ans == 900015551 || ans == 900015552 || ans == 10000244 || ans == 15004.5 || ans == 15007.5 || ans == 150005 || ans == 85020.5 || ans == 85023.5 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240001 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5 || ans == 89012.5) {
+   Ideology += 1;
+   updateCandidates("ideo", 1)
+   }
+   if (ans == 88003.5 || ans == 88006.5 || ans == 88007.5 || ans == 88023.5 || ans == 400013 || ans == 70002 || ans == 85027.5) {
+   Ideology += 2;
+   updateCandidates("ideo", 2)
+   }
+   if (ans == 88021.5 || ans == 88022.5 || ans == 85018.5) {
+   Ideology += 3;
+   updateCandidates("ideo", 3)
+   }
+   if (ans == 30002 || ans == 88008.5 || ans == 88015.5 || ans == 88018.5 || ans == 2500911.5 || ans == 4000131 || ans == 50004 || ans == 60003 || ans == 150002 || ans == 150006 || ans == 180001 || ans == 85022.5 || ans == 85025.5 || ans == 190001 || ans == 85029.5 || ans == 240002 || ans == 240004 || ans == 25017.5 || ans == 25020.5) {
+   Ideology -= 1;
+   updateCandidates("ideo", -1) 
+   }
+   if (ans == 70001 || ans == 85026.5 || ans == 85021.5 || ans == 85024.5) {
+   Ideology -= 2;
+   updateCandidates("ideo", -2) 
+   }
+// Legacy 
+   if (ans == 20003 || ans == 85027.5 || ans == 900015551 || ans == 15004.5 || ans == 170006 || ans == 85024.5 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5) {
+   Legacy += 1;
+   updateCandidates("junk", 0)
+   }
+   if (ans == 89026.5) {
+   Legacy += 2;
+   updateCandidates("junk", 0)
+   }
+   if (ans == 85018.5) {
+   Legacy += 3;
+   updateCandidates("junk", 0)
+   }
+// ReichPoints
+   if (ans == 88006.5 || ans == 88011.5 || ans == 88013.5) {
     ReichPoints += 1;
-    }
-    if (ans == 88014.5){
-    Ideology += 1;
-    }
-    if (ans == 88015.5){
-    PublicSupport += 1;
-    Ideology -= 1;
+    updateCandidates("junk", 0)
+   }
+   if (ans == 88008.5 || ans == 88010.5 || ans == 88015.5) {
     ReichPoints += 2;
-    sundog += 1;
-    }
-    // Budget vote CYOA
-    if (ans == 88016.5){
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    }
+    updateCandidates("junk", 0)
+   }
+// OsloPoints
+   if (ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5 || ans == 89012.5 || ans == 89013.5 || ans == 89023.5) {
+   OsloPoints += 1
+   updateCandidates("junk", 0)
+   }
     if (ans == 88017.5){
-    PublicSupport += 2;
-    LEGWin += 1;
-    sundog -= 2;
     ctsAchievement("No Lie");
     }
-    if (ans == 88018.5){
-    PublicSupport += 1;
-    Ideology -= 1;
-    LEGWin += 1;
-    sundog -= 2;
-    }
-    if (ans == 88019.5){
-    PublicSupport += 3;
-    Ideology += 1;
-    LEGWin += 1;
-    }
     if (ans == 88020.5){
-    PublicSupport -= 3;
-    LEGWin -= 1;
     ctsAchievement("Chainsaw Man");
-    Legacy -= 3
     }
     if (ans == 88021.5){
-    PublicSupport += 3;
-    Ideology += 3;
-    LEGWin += 1;
-    Wins += 1;
-    sundog -= 3;
     ctsAchievement("Renewal");
     }
-    if (ans == 88022.5){
-    PublicSupport -= 3;
-    Ideology += 3;
-    LEGWin -= 2;
-    sundog += 1;
-    }
-    if (ans == 88023.5){
-    PublicSupport += 1;
-    Ideology += 2;
-    }
-    // WhiteWater CYOA
-    if (ans == 250001 || ans == 250003) {
-    PublicSupport -= 2;
-    }
-    if (ans == 250002) {
-    CasesSettled += 1;
-    PublicSupport -= 1;
-    sundog += 1;
-    }
-    if (ans == 88010.5) {
-    sundog += 1;
-    }
-    if (ans == 65003.5) {
-    sundog += 1;
-    }
-    if (ans == 65001.5) {
-    sundog += 1;
-    }
-    //Supreme Court CYOA
-    if (ans == 400013){
-    Ideology += 2;
-    }
-    //Supreme Court CYOA
-    if (ans == 2500911.5){
-    Ideology -= 1;
-    sundog -= 1;
-    }
-    if (ans == 4000131){
-    Ideology -= 1;
-    sundog += 1;
-    }
-    if (ans == 400015){
-    PublicSupport -= 1;
-    sundog += 1;
-    }
-    //Healthcare Pick
-    if (ans == 50001) {
-    Ideology += 1;
-    PublicSupport += 1;
-    }
-    if (ans == 50004) {
-    Ideology -= 1;
-    }
-    //DADT CYOA
-    if (ans == 60002){
-    PublicSupport -= 1;
-    Ideology += 1;
-    }
-    if (ans == 60003){
-    PublicSupport -= 1;
-    Ideology -= 1;
-    }
-    //Crime CYOA
-    if (ans == 70002){
-    Ideology += 2;
-    }
-    if (ans == 88020.5){
-    sundog += 2;
-    }
-    if (ans == 85028.5){
-    sundog += 1;
-    }
-    if (ans == 110003){
-    sundog += 1;
-    }
-    if (ans == 25007.5){
-    sundog += 1;
-    }
-    //hidden god 
-    if (ans == 85007.5){
-    sundog += 1;
-    }
-    //hidden god 
-    if (ans == 85003.5){
-    sundog += 1;
-    }
-    if (ans == 70001 || ans == 85026.5){
-    Ideology -= 2;
-    LEGWin += 1;
-    PublicSupport += 1;
-    }
     if (ans == 85027.5){
-    Ideology += 2;
-    Legacy += 1;
-    PublicSupport += 1;
-    LEGWin += 1;
-    Wins += 1;
     ctsAchievement("Orange Tips Only");
     }
-    //Somalia CYOA
-    if (ans == 80001){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   sundog -= 1;
-   }
-      if (ans == 80002){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   }
-      if (ans == 80003){
-   FPWin += 1;
-   }
-      if (ans == 80004){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   }
-   //NAFTA CYOA
-   if (ans == 90001 || ans == 900015553){
-    PublicSupport += 1;
-    LEGWin += 1; 
-    FPWin += 1;
-    sundog += 6;
+    // Candidate Stuff
+    if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 88020.5){
+    opponents.dole += 2
+    updateCandidates("junk", 0)
     }
-   if (ans == 900015551){
-    PublicSupport += 1;
-    LEGWin += 1;
-    Legacy += 1;
-    FPWin -= 1;
-    Ideology += 1;
-    sundog -= 12;
+    if (ans == 88021.5 || ans == 85027.5 || ans == 85018.5) {
+    opponents.buchanan += 2
+    updateCandidates("junk", 0)
     }
-    if (ans == 900015552){
-    PublicSupport -= 1;
-    FPWin -= 1;
-    Ideology += 1;
-    sundog -= 12;
+    if (ans == 250003 || ans == 25017.5 || ans == 25018.5 || ans == 25019.5 || ans == 25020.5 || ans == 25021.5 || ans == 25022.5) {
+    opponents.alexander += 2
+    updateCandidates("junk", 0)
     }
-  //Russia CYOA (START III SUCCEEDS)
-     if (ans == 85001.5){
-    PublicSupport += 1;
-    sundog += 2;
-   FPWin += 1;
-   }
-    if (ans == 85002.5){
-    PublicSupport += 1;
-   FPWin += 1;
-   }
-    if (ans == 85003.5){
-    PublicSupport += 1;
-   FPWin += 1;
-   }
-    if (ans == 85004.5){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   }
-    if (ans == 88024.5){
-    sundog += 2;
-    PublicSupport -= 1;
-   }
-  //Russia CYOA (START III FAILS)
-    if (ans == 85005.5){
-    PublicSupport += 1;
-    sundog += 1;
-   FPWin += 1;
-   }
-    if (ans == 85006.5){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   }
-    if (ans == 85007.5){
-    PublicSupport += 1;
-   FPWin += 1;
-   }
-    if (ans == 85008.5){
-    PublicSupport -= 1;
-   FPWin -= 1;
-   }
-   // Foreign Agenda CYOA
-   if (ans == 100001) {
-    PublicSupport += 1;
-    FPWin += 1;
-   }
-   // Foreign Agenda CYOA
-   if (ans == 10000244) {
-    PublicSupport -= 1;
-    FPWin -= 1;
-    Ideology += 1;
-    sundog += 2;
-   }
-   if (ans == 100002) {
-    FPWin += 1;
-   }
-    if (ans == 1000021) {
-    FPWin -= 1;
-   }
-    if (ans == 100003) {
-    PublicSupport += 1;
-    FPWin -= 1;
-   }
-    if (ans == 100004) {
-    PublicSupport -= 1;
-    sundog += 1;
-    FPWin += 1;
-   }
+    if (ans == 400015 || ans == 250001 || ans == 70002 || ans == 70003 || ans == 85028.5) {
+    opponents.wilson += 2
+    updateCandidates("junk", 0)
+    }
+    if (ans == 60002 || ans == 250002 || ans == 250002 || ans == 88020.5 || ans == 88022.5) {
+    opponents.gramm += 2
+    updateCandidates("junk", 0)
+    }
+    if (ans == 900015551 || ans == 88020.5 || ans == 88022.5) {
+    opponents.forbes += 2
+    updateCandidates("junk", 0)
+    }
    //Healthcare Vote CYOA (Succeeds)
    if (ans == 15004.5){
-    PublicSupport += 2;
-    LEGWin += 2;
-    Legacy += 1;
-    GotHealthcare += 1;
-    Ideology += 1;
-    Wins += 1;
-    sundog -= 3;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 10001){
@@ -67035,291 +68092,25 @@ if (e.question_number+1 == 27) {
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
     }
     if (ans == 15007.5){
-    LEGWin += 2;
-    GotHealthcare += 1;
-    Ideology += 1;
-    Wins += 1;
     ctsAchievement("I Do");
-    sundog -= 3;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 85018.5){
-    PublicSupport += 5;
-    LEGWin += 1;
-    Legacy += 3;
-    GotHealthcare += 1;
-    Ideology += 3;
-    Wins += 2;
-    sundog -= 3;
     ctsAchievement("The Work Goes On");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     //Healthcare Vote CYOA (Fails)
     if (ans == 15001.5){
-    PublicSupport -= 3;
-    LEGWin -= 1;
-    sundog += 2;
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 15002.5 || ans == 15005.5 || ans == 15008.5) {
-        PublicSupport -= 2;
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
-        }
-    if (ans == 15003.5) {
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    }
-    if (ans == 15006.5) {
-        PublicSupport -= 1;
-        LEGWin += 1;
-        }
-    // midterms stuff
-    if (ans == 25003.5) {
-    LEGWin += 1;
-    }
-    if (ans == 25001.5) {
-    LEGWin -= 1;
-    }
-    //Government Shutdown CYOA
-    if (ans == 150001){
-    PublicSupport += 1;
-    }
-    if (ans == 150002){
-    PublicSupport -= 1;
-    LEGWin += 1;
-    Ideology -= 1;
-    }
-    if (ans == 150003){
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 50002){
-    sundog += 1;
-    }
-    if (ans == 20002){
-    sundog += 1;
-    }
-    if (ans == 80002){
-    sundog += 1;
-    }
-    if (ans == 88003.5){
-    sundog += 1;
-    }
-    //Government Shutdown Huge CYOA
-    if (ans == 150004){
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    }
-    if (ans == 150005){
-    PublicSupport -= 3;
-    LEGWin -= 2;
-    Ideology += 1;
-    sundog += 1;
-    }
-    if (ans == 150006){
-    PublicSupport -= 1;
-    Ideology -= 1;
-    sundog += 2;
-    }
-    if (ans == 150007){
-    PublicSupport -= 2;
-    LEGWin -= 2;
-    sundog -= 3;
-    }
-    //Paula Jones CYOA
-    if (ans == 230002){
-    PublicSupport -= 1;
-    }
-    if (ans == 230003){
-    PublicSupport -= 2;
-    CasesSettled += 1;
-    }
-    if (CasesSettled == 2) {
-    ctsAchievement("Great Negotiator");
-    }
-    //End of the Bosnian War CYOA
-    if (ans == 170001 || ans == 170004) {
-    PublicSupport += 1;
-    FPWin += 1;
-    }
-    if (ans == 170002 || ans == 170005){
-    PublicSupport -= 1;
-    FPWin -= 1;
-    }
-    if (ans == 15002.5){
-    sundog += 2;
-    }
-    if (ans == 15008.5){
-    sundog += 2;
-    }
-    if (ans == 15005.5){
-    sundog += 2;
-    }
-    if (ans == 230001){
-    sundog += 1;
-    }
-    if (ans == 170003) {
-    PublicSupport -= 2;
-    FPWin -= 1;
-    sundog += 2;
-    }
-    if (ans == 170006) {
-    PublicSupport -= 2;
-    FPWin -= 1;
-    sundog += 2;
-    }
-    if (ans == 70003) {
-    sundog += 1;
-    PublicSupport -= 1;
-    }
-    if (ans == 60003) {
-    sundog += 1;
     }
     if (ans == 170006){
-    PublicSupport += 2;
-    FPWin += 1;
-    Legacy += 1;
     ctsAchievement("Color Revolution Theory");
     }
-    //DOMA CYOA
-    if (ans == 180001){
-    LEGWin += 1;
-    Ideology -= 1;
-    sundog -= 1;
-    }
-    //Gay Rights CYOA
-    if (ans == 85020.5 || ans == 85023.5){
-    PublicSupport -= 1;
-    Ideology += 1;
-    }
-    if (ans == 85022.5 || ans == 85025.5){
-    PublicSupport += 1;
-    Ideology -= 1;
-    }
-    if (ans == 85021.5){
-    PublicSupport -= 3;
-    Ideology -= 2;
-    }
     if (ans == 85024.5){
-    PublicSupport += 1;
-    Ideology -= 2;
-    LEGWin += 1;
-    Legacy += 1;
-    Wins += 1;
     ctsAchievement("Out and Proud");
-    }
-    if (ans == 180002){
-PublicSupport -= 2;
-    LEGWin -= 1;
-    Ideology += 1;
-    }
-    //PRWOA CYOA
-    if (ans == 190001){
-PublicSupport += 1;
-    LEGWin += 1;
-    Ideology -= 1;
-    }
-    if (ans == 190002){
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    Ideology += 1;
-    }
-    //PRWOA alt CYOA
-    if (ans == 85029.5){
-    PublicSupport += 2;
-    LEGWin += 1;
-    Ideology -= 1;
-    }
-    if (ans == 85030.5){
-    PublicSupport -= 2;
-    LEGWin -= 1;
-    Ideology += 1;
-    }
-    //Internet CYOA
-    if (ans == 240001){
-    PublicSupport += 2;
-    Ideology += 1;
-    }
-    if (ans == 240002){
-    PublicSupport -= 1;
-    Ideology -= 1;
-    }
-    if (ans == 240003){
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 240004){
-    PublicSupport += 1;
-    Ideology -= 1;
-    }
-    //Desert Strike CYOA
-    if (ans == 200001){
-    PublicSupport += 1;
-    FPWin += 1;
-    }
-    if (ans == 200002){
-    PublicSupport -= 1;
-    FPWin -= 1;
-    }
-    if (ans == 200003){
-    PublicSupport += 2;
-    FPWin -= 1;
-    }
-    // Midterm Result CYOA
-    if (ans == 25017.5 || ans == 25020.5) {
-    Ideology -= 1;
-    }
-    if (ans == 25018.5 || ans == 25021.5) {
-    Ideology += 1;
-    Legacy += 1;
-    }
-    if (ans == 25019.5 || ans == 25022.5) {
-    Ideology += 1;
-    Legacy += 1;
-    }
-    //Oslo CYOA
-    if (ans == 89000.5 || ans == 89003.5) {
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    FPWin -= 1;
-    }
-    if (ans == 89006.5 || ans == 89009.5) {
-    OsloPoints += 1;
-    PublicSupport += 1;
-    LEGWin += 1;
-    FPWin += 1;
-    }
-    if (ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5) {
-    PublicSupport -= 1;
-    FPWin -= 1;
-    }
-    if (ans == 89002.5 || ans == 89008.5) {
-    PublicSupport -= 1;
-    LEGWin -= 1;
-    }
-    if (ans == 89005.5 || ans == 89011.5) {
-    PublicSupport += 1;
-    LEGWin += 1;
-    OsloPoints += 1;    
-    }
-    if (ans == 89012.5) {
-    Ideology += 1;
-    FPWin += 1;
-    OsloPoints += 1;    
-    }
-    if (ans == 89013.5) {
-    OsloPoints += 1;    
-    }
-    if (ans == 89015.5 || ans == 89018.5 || ans == 89021.5) {
-    PublicSupport -= 1;    
-    }
-    if (ans == 89016.5 || ans == 89019.5 || ans == 89022.5) {
-    PublicSupport -= 1;
-    FPWin -= 1;    
-    }
-    if (ans == 89017.5) {
-    PublicSupport -= 2;
-    FPWin -= 2;    
     }
     if (ans == 110001) {
 const customStyling = document.createElement("style");
@@ -67533,26 +68324,8 @@ customStyling.innerHTML = `
 `;
 document.head.appendChild(customStyling);
     }
-    if (ans == 89020.5) {
-    PublicSupport -= 1;
-    FPWin -= 2;    
-    }
-    if (ans == 89023.5) {
-    PublicSupport += 1;
-    OsloPoints += 1;    
-    }
     if (ans == 89026.5) {
-    PublicSupport += 2;
-    Legacy += 2; 
-    Wins += 2; 
     ctsAchievement("Shir LaShalom"); 
-    }
-    //State of the Union Adress CYOA
-    if (ans == 220002){
-    PublicSupport += 3;
-    }
-    if (ans == 220004){
-    PublicSupport += 2;
     }
 function determineRepublican(){
     republicanChange(sortedOpponents[0][0])
@@ -67713,7 +68486,7 @@ campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_wilson");
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.39
-    tunnel("candidate_intro_hw_commies");
+    campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_hw_commies");
     }
     }
     function CheneyMentum() {
@@ -67728,7 +68501,7 @@ campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_wilson");
             campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B309C";
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
-            tunnel("candidate_intro_cheney");
+            campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_cheney");
     }
     function rdoleMentum() {
         DoleNom += 1;
@@ -67780,26 +68553,13 @@ if (ans == 210003){
 if (e.question_number+1 == 18){
     if (GotHealthcare == 1) {
     if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
-    if (PublicSupport < 17) {
-            DemCongress -= 1;
-            RepublicanRevolution += 1;
-            Legacy += 1;
-			question_insert ("question_11_midterm_prep", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "midterm_gop_revolution",
-                "fields": {
-                    "priority": 0,
-                    "description": "Well, we’ve got some bad news. It’s a disaster. The Republicans have obtained sweeping gains in the midterms, to a level where several big name Democrats, including Speaker Foley, were unable to win re-election, as the election was a sweeping rebuke of your presidency, as even the heir-apparent to the Speakership, Newt Gingrich, dubbing this a ''Republican Revolution.'' You’ve got to do some damage control here.",
-                    "likelihood": 1
-                }
-            }
-        ); 
-    } else {
-    if (e.player_answers.includes(88021.5)) {
+    if ((e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5)) && e.player_answers.includes(85027.5)) {
+        if (e.player_answers.includes(88021.5)) {
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
+            opponents.dole = -10
+            dole_active = 0
 			question_insert ("question_11_midterm_prep", 
             {
 				"model": "campaign_trail.question",
@@ -67815,6 +68575,8 @@ if (e.question_number+1 == 18){
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
+            opponents.dole = -10
+            dole_active = 0
 			question_insert ("question_11_midterm_prep", 
             {
 				"model": "campaign_trail.question",
@@ -67828,12 +68590,29 @@ if (e.question_number+1 == 18){
             );
         }
             ctsAchievement("Counterrevolution");
+    } else {
+                DemCongress -= 1;
+            RepublicanRevolution += 1;
+            Legacy += 1;
+			question_insert ("question_11_midterm_prep", 
+            {
+                "model": "campaign_trail.question",
+                "pk": "midterm_gop_revolution",
+                "fields": {
+                    "priority": 0,
+                    "description": "Well, we’ve got some bad news. It’s a disaster. The Republicans have obtained sweeping gains in the midterms, to a level where several big name Democrats, including Speaker Foley, were unable to win re-election, as the election was a sweeping rebuke of your presidency, as even the heir-apparent to the Speakership, Newt Gingrich, dubbing this a ''Republican Revolution.'' You’ve got to do some damage control here.",
+                    "likelihood": 1
+                }
+            }
+        ); 
     }
     } else {
     if (e.player_answers.includes(88021.5)) {
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
+            opponents.dole = -10
+            dole_active = 0
 			question_insert ("question_11_midterm_prep", 
             {
 				"model": "campaign_trail.question",
@@ -67849,6 +68628,8 @@ if (e.question_number+1 == 18){
             DemCongress -= 1;
             SlimGOPCongress += 1;
             Legacy += 1;
+            opponents.dole = -10
+            dole_active = 0
 			question_insert ("question_11_midterm_prep", 
             {
 				"model": "campaign_trail.question",
@@ -67864,7 +68645,7 @@ if (e.question_number+1 == 18){
             ctsAchievement("Counterrevolution");
     }
     } else if (GotHealthcare == 0) {
-        if (PublicSupport <= 8){
+        if (e.player_answers.includes(88020.5) || e.player_answers.includes(88022.5)){
 			DemCongress -= 1;
             DisasterMidterms += 1;
 			question_insert ("question_11_midterm_prep", 
@@ -68374,6 +69155,19 @@ if (e.question_number+1 == 18){
     }
 }
 }
+if (e.question_number+1 == 37) {
+let question_22_1996_election = {
+        "model": "campaign_trail.question",
+        "pk": "question_22_1996_election",
+        "fields": {
+            "priority": -1,
+            "description": "It’s the morning of November 4th, 1996. You can’t stop thinking about how far you’ve come since 1978. Once a bright, young Attorney General hoping to become your state’s governor—now, you’re running for re-election as President, standing in the very spot 41 stood when he lost to you. You’ve imagined the relief of reliving that winning feeling, but the sting of loss, the tears you shed back in 1980, still lingers. With that in mind, what will be your final message to the American people as they head to the polls tomorrow?",
+            "likelihood": 1
+        }
+    }
+question_insert("oslo_5", question_22_1996_election)
+question_insert("oslo_5_win", question_22_1996_election)
+}
     if (e.question_number+1 == 30){
     let oslo_3 = {
         "model": "campaign_trail.question",
@@ -68576,115 +69370,6 @@ if (e.question_number+1 == 18){
     question_insert("oslo_3",oslo_4);
     }
     }
-    if (e.question_number+1 == 23){
-        if (e.player_answers.includes(80003) && e.player_answers.includes(85002.5)) {
-            question_insert("question_16.5_jones_case", 
-                {
-                   
-                  "model": "campaign_trail.question",
-                  "pk": "question_17_yugoslavia_win",
-                  "fields": {
-                      "priority": 3,
-                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                      "likelihood": 1
-                  }
-                    }
-                
-                );
-              question_insert("balanced_budget", 
-                {
-                   
-                  "model": "campaign_trail.question",
-                  "pk": "question_17_yugoslavia_win",
-                  "fields": {
-                      "priority": 3,
-                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                      "likelihood": 1
-                  }
-                    }
-                
-                );
-                question_insert("crooked_deal_cuts", 
-                {
-                   
-                  "model": "campaign_trail.question",
-                  "pk": "question_17_yugoslavia_win",
-                  "fields": {
-                      "priority": 3,
-                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                      "likelihood": 1
-                  }
-                    }
-                
-                );
-                question_insert("crooked_deal_nocuts", 
-                {
-                   
-                  "model": "campaign_trail.question",
-                  "pk": "question_17_yugoslavia_win",
-                  "fields": {
-                      "priority": 3,
-                      "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                      "likelihood": 1
-                  }
-                    }
-                
-                );
-        } else {
-                question_insert("question_16.5_jones_case", 
-                {
-                   
-          "model": "campaign_trail.question",
-          "pk": "question_17_yugoslavia",
-          "fields": {
-              "priority": 3,
-              "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-              "likelihood": 1
-          }
-                    }
-                
-                );
-                question_insert("balanced_budget", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "question_17_yugoslavia",
-              "fields": {
-                  "priority": 3,
-                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                question_insert("crooked_deal_cuts", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "question_17_yugoslavia",
-              "fields": {
-                  "priority": 3,
-                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-                question_insert("crooked_deal_nocuts", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "question_17_yugoslavia",
-              "fields": {
-                  "priority": 3,
-                  "description": "The Bosnian War has left 101,000 Bosniaks, Croats, and Serbs dead. Despite our aid to Bosnia and Croatia through covert bombing operations, the war shows no sign of ending. But a plan is being formulated by Anthony Lake to promote peace and stability via an Inter-Entity Boundary Line, which would keep the nation unified while separating the various ethnic groups into their own territories. The final decision comes down to you: do you want to pursue negotiations or continue the bombings?.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-        }
-        }
         if (e.question_number+1 == 35 && BuchananNom == 1){
             if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
                 question_insert("campaign_3_buchanan", 
@@ -68711,139 +69396,6 @@ if (e.question_number+1 == 18){
                     }
                     );
             }
-        }
-        if (e.question_number+1 == 24){
-        let internet_thirdway_mitigation = {
-            "model": "campaign_trail.question",
-            "pk": "internet_thirdway_mitigation",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_thirdway_republican_revolution = {
-            "model": "campaign_trail.question",
-            "pk": "internet_thirdway_republican_revolution",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_thirdway_disaster_midterms = {
-            "model": "campaign_trail.question",
-            "pk": "internet_thirdway_disaster_midterms",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_liberal_mitigation = {
-            "model": "campaign_trail.question",
-            "pk": "internet_liberal_mitigation",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_liberal_republican_revolution = {
-            "model": "campaign_trail.question",
-            "pk": "internet_liberal_republican_revolution",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_liberal_disaster_midterms = {
-            "model": "campaign_trail.question",
-            "pk": "internet_liberal_disaster_midterms",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_bluedog_mitigation = {
-            "model": "campaign_trail.question",
-            "pk": "internet_bluedog_mitigation",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_bluedog_republican_revolution = {
-            "model": "campaign_trail.question",
-            "pk": "internet_bluedog_republican_revolution",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let internet_bluedog_disaster_midterms = {
-            "model": "campaign_trail.question",
-            "pk": "internet_bluedog_disaster_midterms",
-            "fields": {
-                "priority": 0,
-                "description": "As the American public begins to transition technologies, a new way of expressing ideologies and opinions has arisen in the form of the Internet. While the Internet is still a relatively new commercial item for many Americans, you see the potential, and sneer at it. The fools say it's a fad, but to many, its rise and eventual domination of our very lives isn’t up for debate. A new tool to be used for your aims. A world where reason prevails over the noise, where the truth drowns out the cynics. But we are so, so far from that. What are your plans to address it?",
-                "likelihood": 1
-            }
-        }
-        let commie_return_question = {
-            "model": "campaign_trail.question",
-            "pk": "commie_return_question",
-            "fields": {
-                "priority": 0,
-                "description": "You felt as if you shouldn't have woken up from your bed today. The reds, the damn reds are back in Russia! You could have swore Yeltsin was making a mountain of a mole hill, but here it was, right in front of your eyes, the worst possible surprise you could have. Just after the Republican national convention, here they gain the best possible reason as to why they should come back as your term as given Moscow back to the commies! We have to do something!",
-                "likelihood": 1
-            }
-        }
-        if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
-            CommieReturn += 1;
-            ctsAchievement("Красный Призрак");
-            question_insert("question_17_yugoslavia",commie_return_question);
-        } else {
-        if (SlimGOPCongress == 1) {
-        if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("question_17_yugoslavia_win",internet_thirdway_mitigation);
-        question_insert("question_17_yugoslavia",internet_thirdway_mitigation);
-        } else if (Ideology >= 2) {
-        question_insert("question_17_yugoslavia_win",internet_liberal_mitigation);
-        question_insert("question_17_yugoslavia",internet_liberal_mitigation);
-        } else if (Ideology <= -4) {
-        question_insert("question_17_yugoslavia_win",internet_bluedog_mitigation);
-        question_insert("question_17_yugoslavia",internet_bluedog_mitigation);
-        }
-        } else if (RepublicanRevolution == 1) {
-        if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("question_17_yugoslavia_win",internet_thirdway_republican_revolution);
-        question_insert("question_17_yugoslavia",internet_thirdway_republican_revolution);
-        } else if (Ideology >= 2) {
-        question_insert("question_17_yugoslavia_win",internet_liberal_republican_revolution);
-        question_insert("question_17_yugoslavia",internet_liberal_republican_revolution);
-        } else if (Ideology <= -4) {
-        question_insert("commie_return_question",internet_bluedog_republican_revolution);
-        question_insert("question_17_yugoslavia_win",internet_bluedog_republican_revolution);
-        question_insert("question_17_yugoslavia",internet_bluedog_republican_revolution);
-        }
-        } else if (DisasterMidterms == 1) {
-        if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("question_17_yugoslavia_win",internet_thirdway_disaster_midterms);
-        question_insert("question_17_yugoslavia",internet_thirdway_disaster_midterms);
-        } else if (Ideology >= 2) {
-        question_insert("question_17_yugoslavia_win",internet_liberal_disaster_midterms);
-        question_insert("question_17_yugoslavia",internet_liberal_disaster_midterms);
-        } else if (Ideology <= -4) {
-        question_insert("question_17_yugoslavia_win",internet_bluedog_disaster_midterms);
-        question_insert("question_17_yugoslavia",internet_bluedog_disaster_midterms);
-        }
-        }
-        }
         }
         if (e.question_number+1 == 32) {
         if (CommieReturn == 1) {
@@ -69602,764 +70154,9 @@ if (e.question_number+1 == 18){
         }
         }
         }
-        if (e.question_number+1 == 25){
-            if (CommieReturn == 1) {
-            if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
-            bushMentum();
-                  question_insert("commie_return_question", 
-                    {
-                       
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_hw_commies",
-              "fields": {
-                  "priority": 0,
-                  "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                  "likelihood": 1
-              }
-                        }
-                    
-                    );
-            } else {
-                        powellMentum();
-            question_insert("commie_return_question", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            }
-        }  else if (sundog >= 25) {
-                SundogMentum();
-            question_insert("internet_thirdway_mitigation", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_thirdway_republican_revolution", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_thirdway_disaster_midterms", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_liberal_mitigation", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_liberal_republican_revolution", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_liberal_disaster_midterms", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_bluedog_mitigation", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_bluedog_republican_revolution", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-            question_insert("internet_bluedog_disaster_midterms", 
-            {
-              "model": "campaign_trail.question",
-              "pk": "candidate_intro_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "My God, he’s done it. Ross Perot has clinched the Republican nomination after a contested primary season and a backroom deal with party elders. Now, with his new running mate, Governor Frank Keating, by his side, the billionaire populist shouts to the delegates in San Diego: ''This country’s broke, folks, and it’s time we fix it. Not next year. Not next decade. Right now. I want to promise the American people: I ain’t beholden to nobody. The politicians, bless their hearts, got us into this mess, and we’ve got to get out.'' How do we stop this circus?",
-                "likelihood": 1
-              }
-            });
-    } else if (e.player_answers.includes(20003) && (e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5)) && CommieReturn == 0) {
-    bushMentum();
-    question_insert("internet_thirdway_mitigation", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        question_insert("internet_thirdway_republican_revolution", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("internet_thirdway_disaster_midterms", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        question_insert("internet_liberal_mitigation", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        question_insert("internet_liberal_republican_revolution", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("internet_liberal_disaster_midterms", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("internet_bluedog_mitigation", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-        question_insert("internet_bluedog_republican_revolution", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-                question_insert("internet_bluedog_disaster_midterms", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "candidate_intro_hw",
-            "fields": {
-                "priority": 0,
-                "description": "When you sat down to watch the RNC in San Diego, you still couldn't quite believe it as the now twice drafted former President walked on stage, as the crowd cheers, ''41, and 43!'' Alongside his running mate, Governor George Allen of Virginia, Bush rips your administration for ''setting American prestige back 100 years'' and that we ''ought to return to a kinder, gentler tomorrow, and one that we'd want our children to live in.'' It's time to put an old dog to pasture.",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-            } else if (e.player_answers.includes(900015551) && (e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5))) {
-                forbesMentum();
-                question_insert("internet_thirdway_mitigation", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_thirdway_republican_revolution", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_thirdway_disaster_midterms", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                                    question_insert("internet_liberal_mitigation", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_liberal_republican_revolution", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_liberal_disaster_midterms", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_bluedog_mitigation", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_bluedog_republican_revolution", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-                    question_insert("internet_bluedog_disaster_midterms", 
-                    {
-                        
-                         "model": "campaign_trail.question",
-            "pk": "candidate_intro_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "If you hear the words ''flat tax'' again, you just might scream. At the San Diego Convention Centre, Editor-In-Chief Steve Forbes delivers an idiosyncratically stiff in delivery and frenzied in substance speech about special interests, lobbyists and tax codes. Chained to Governor John Engler to hopefully keep him grounded, he's promising a national renewal with a shiny new tax code. How are you going to deal with this single issue candidate?",
-                "likelihood": 1
-            }
-                        }
-                    
-                    );
-            
-        } else if (FPWin <= -1) {
-            powellMentum();
-            question_insert("internet_thirdway_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_thirdway_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_thirdway_disaster_midterms", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_liberal_disaster_midterms", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_mitigation", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_republican_revolution", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-            question_insert("internet_bluedog_disaster_midterms", 
-            {
-               
-    "model": "campaign_trail.question",
-    "pk": "candidate_intro_powell",
-    "fields": {
-    "priority": 0,
-    "description": "You glare at the TV, unblinking, as King Colin is coronated. With the backing of Bob Dole and George Bush, Powell delivers a stiff speech, arguing that his command in the Gulf has prepared him for the crises you've left abroad and at home. A bone is thrown to the right wing, through a reticent Don Nickles. One thing is certain: this is going to be an ugly brawl.",
-    "likelihood": 1
-    }
-                }
-            
-            );
-    } else if (e.player_answers.includes(88005.5) && RepublicanRevolution == 1) {
-                                bonoMentum();
-                            question_insert("internet_thirdway_mitigation", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_thirdway_republican_revolution", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_thirdway_disaster_midterms", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_liberal_mitigation", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_liberal_republican_revolution", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_liberal_disaster_midterms", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_bluedog_mitigation", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_bluedog_republican_revolution", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-                            question_insert("internet_bluedog_disaster_midterms", 
-                            {
-                               
-                "model": "campaign_trail.question",
-                "pk": "candidate_intro_bono",
-                "fields": {
-                "priority": 0,
-                "description": "In sunshiny San Diego, pop star-turned-politician Congressman Sonny Bono takes the stage with his signature smile, as his running mate Richard Lugar claps from the stands. He cracks a joke about not having seen crowds this big since the 1970s. He then starts slamming the ''unfair, unfit, and totally out-to-lunch'' tax code, with special venom reserved for the ''barbaric carbon tax, designed by people who’ve never pumped gas in their lives.'' You can’t believe that people actually fell for this bullshit. ",
-                "likelihood": 1
-                }
-                                }
-                            
-                            );
-     } else if (Ideology >= -3 && Ideology <= 1)  {
-            // Bob Dole Inserters
-            if (RepublicanRevolution == 1)  {
-                doleMentum();
-                  question_insert("internet_thirdway_republican_revolution", 
-                  {
-                     
-      "model": "campaign_trail.question",
-      "pk": "candidate_intro_dole",
-      "fields": {
-      "priority": 0,
-      "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his service in the Second World War, and a promise to cut income taxes by 15% across the board. With Jack Kemp now standing beside him, he declares, ''Let me be the bridge to an America that only the unknowing call myth. Let me be the bridge to a time of tranquility, faith, and confidence in action.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
-      "likelihood": 1
-      }
-                      }
-                  
-                  );
-      // Alexander Inserters
-          } else if (SlimGOPCongress == 1) {
-            lamarMentum();
-            question_insert("internet_thirdway_mitigation", 
-              {
-                  "model": "campaign_trail.question",
-              "pk": "candidate_intro_alexander",
-              "fields": {
-                  "priority": 3,
-                  "description": "Live from sunny San Diego, the RNC convenes to celebrate its champion. Lamar Alexander approaches the podium, and despite his meek stage presence he boldly proclaims: ''It’s time to send the congressional gerontocracy home,'' he declares, promising ''conservative change.'' He’s selling himself as the fresh face of the GOP, but you know better. This is a man who’s spent decades in the political machine. How do we make sure voters see through the act and send Lamar back to Nashville? ",
-                  "likelihood": 1
-              }
-                  }
-              
-              );
-        // Wilson Inserters 
-        
-     } else if (DisasterMidterms == 1) {
-    if (e.player_answers.includes(70001) || e.player_answers.includes(85026.5)) {
-                    rdoleMentum();
-                  question_insert("internet_thirdway_disaster_midterms", 
-                  {
-                     
-      "model": "campaign_trail.question",
-      "pk": "candidate_intro_dark_dole",
-      "fields": {
-      "priority": 0,
-      "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his service in the Second World War, and a promise to cut income taxes by 15% across the board. With Dan Lungren now formally by his side, he declares, ''Let me be the bridge to an America that too many forget, and too few still honor. Let me be the bridge to a time of discipline, conviction, and moral clarity.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
-      "likelihood": 1
-      }
-                      }
-                  
-                  );
-    } else {
-        wilsonMentum();
-      question_insert("internet_thirdway_disaster_midterms", 
-        {
-            
-             "model": "campaign_trail.question",
-    "pk": "candidate_intro_wilson",
-    "fields": {
-        "priority": 0,
-        "description": "At the RNC in sunny San Diego, Pete Wilson takes the stage. Judd Gregg nods along as he drives home the message on immigration, presenting himself as an outsider ready to shake up Washington. Channeling another California governor, he promises to put an end to your so-called ''culture of entitlement.''. We need to fire back.\n",
-        "likelihood": 1
-    }
-            }
-        
-        );
-    } 
-}
-                        } else if (Ideology >= 2) {
-                          // Buchanan Inserters
-                          if (SlimGOPCongress == 1) {
-                            patMentum();
-                            question_insert("internet_liberal_mitigation", 
-                              {
-                                 "model": "campaign_trail.question",
-            "pk": "candidate_intro_buchanan",
-            "fields": {
-                "priority": 0,
-                "description": "Jesus Chirst. Pat Buchnan pulled it off. Calling your victory in 1992 ''national suicide’’, he’s accusing you having destroyed this nation and it’s christian values. ''What was immoral and shameful — promiscuity, abortion, homosexuality, suicide — Bill Clinton has made praiseworthy. A dying christian faith creates a dying people, and rest assured we are dying.'' With a smiling and nodding Bill Bennett has his running mate, you understand the importance of this election. Pat Buchanan must be destroyed. The nation can’t survive anything less. ",
-                "likelihood": 1
-            }
-                                  }
-                              
-                              );
-                        // Gramm Inserters 
-                        
-                     } else if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
-                        grammMentum();
-                      question_insert("internet_liberal_republican_revolution", 
-                        {
-                            "model": "campaign_trail.question",
-                "pk": "candidate_intro_gramm",
-                "fields": {
-                    "priority": 0,
-                    "description": "Hooray for big money politics — Senator Phil Gramm, the bombastic, and hard right Texan Senator with the massive war chest, prevailed over the less well-funded candidates. Hand in hand with Governor Tommy Thompson of Wisconsin, they weep for a nation filled with crime, red tape and children born out of wedlock and promise to win a final battle against your far left liberalism. How are you going to dispatch dumb and dumber here?",
-                    "likelihood": 1
-                }
-                            }
-                        
-                        );
-                        question_insert("internet_liberal_disaster_midterms", 
-                        {
-                            "model": "campaign_trail.question",
-                "pk": "candidate_intro_gramm",
-                "fields": {
-                    "priority": 0,
-                    "description": "Hooray for big money politics — Senator Phil Gramm, the bombastic, and hard right Texan Senator with the massive war chest, prevailed over the less well-funded candidates. Hand in hand with Governor Tommy Thompson of Wisconsin, they weep for a nation filled with crime, red tape and children born out of wedlock and promise to win a final battle against your far left liberalism. How are you going to dispatch dumb and dumber here?",
-                    "likelihood": 1
-                }
-                            }
-                        
-                        );
-                        }
-		    } else if (Ideology <= -4) {
-            if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
-                specterMentum();
-            question_insert("internet_bluedog_republican_revolution", 
-                {
-                    "model": "campaign_trail.question",
-                    "pk": "candidate_intro_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "At home, you watch the RNC with a smirk as the new odd couple takes the stage. Arlen Specter pleads with the ''intolerant right'', likely aimed at a petulant, boycotting Pat Buchanan, to help stop an ''incompetent left.'' That would be you. The desperate appeal is followed by his running mate, Jesse Helms, who accuses you of ''making the nation weaker abroad and at home.'' How will you answer this modern Molotov-Ribbentrop pact? ",
-                        "likelihood": 1
-                    }
-                }
-            
-            );
-            question_insert("internet_bluedog_disaster_midterms", 
-                {
-                    "model": "campaign_trail.question",
-                    "pk": "candidate_intro_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "At home, you watch the RNC with a smirk as the new odd couple takes the stage. Arlen Specter pleads with the ''intolerant right'', likely aimed at a petulant, boycotting Pat Buchanan, to help stop an ''incompetent left.'' That would be you. The desperate appeal is followed by his running mate, Jesse Helms, who accuses you of ''making the nation weaker abroad and at home.'' How will you answer this modern Molotov-Ribbentrop pact? ",
-                        "likelihood": 1
-                    }
-                }
-            
-            );
-            } else if (SlimGOPCongress == 1) {
-                CheneyMentum();
-            question_insert("internet_bluedog_mitigation", 
-            {
-               
-"model": "campaign_trail.question",
-"pk": "candidate_intro_cheney",
-"fields": {
-"priority": 0,
-"description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that damn bulldog has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead — America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: the moderate, strong-jawed Governor of Pennsylvania, Tom Ridge. What a joke. Still, you'll need to respond. ",
-"likelihood": 1
-}
-                }
-            
-            );
-}
-}
+if (e.question_number+1 == 25){
+updateCandidates("junk", 0)
+determineRepublican()
 }
 let vpName = "Monica Lewinsky Error";
 vpTable = {
@@ -71905,61 +71702,22 @@ newButton.addEventListener('click', function () {
 // Insert the new button next to the reference button
 refButton.insertAdjacentElement('afterend', newButton);
 }
-// Define this at the top, globally
-current_website="republicanstowatchoutfor.com";
-browser_history = [
-	"republicanstowatchoutfor.com"
+const main_website_candidate_list = [
+{img: "https://i.imgur.com/kiFRIGz.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."},
+{img: "https://i.imgur.com/vHJy7Bh.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."},
+{img: "https://i.imgur.com/B7q8vBm.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."},
+{img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."},
+{img: "https://i.imgur.com/OHUNpQN.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."},
+{img: "https://i.imgur.com/6KJKhUw.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."},
+{img: "https://i.imgur.com/TPioQhq.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"}
+
+// {img: "https://i.imgur.com/22cM2W9.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."},
+// {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."},
+// {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son to take you on. Their call is in the minority but while he's of the same blood, he's not of the same cloth as 41."},
+// {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."},
+// {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."},
+
 ];
-history_index=0;
-current_website=browser_history[history_index];
-let draggableBox = null;
-let main_website_candidate_list = [];
-
-var dole_var = 0
-var buchanan_var = 0
-var forbes_var = 0
-var alexander_var = 0
-var gramm_var = 0
-var specter_var = 0
-var wilson_var = 0
-var powell_var = -99
-var bono_var = -99
-var wbush_var = -99
-var perot_var = -99
-var bush_var = -99
-
-var moveup = 0
-
-var dole_active = 1
-var buchanan_active = 1
-var forbes_active = 1
-var alexander_active = 1
-var gramm_active = 1
-var specter_active = 1
-var wilson_active = 1
-var powell_active = 0
-
-var bono_active = 0
-var wbush_active = 0
-var perot_active = 0
-var bush_active = 0
-
-let opponents = {
-    dole: dole_var,
-    buchanan: buchanan_var,
-    forbes: forbes_var,
-    alexander: alexander_var,
-    gramm: gramm_var,
-    specter: specter_var,
-    wilson: wilson_var,
-    powell: powell_var,
-    bono: bono_var,
-    wbush: wbush_var,
-    perot: perot_var,
-    bush: bush_var
-};
-
-let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
 
 function createDraggableBox() {
   if (!draggableBox || !document.body.contains(draggableBox)) {
@@ -72044,149 +71802,14 @@ searchbar.addEventListener('keydown', (event) => {
         }
     }
 })
+website_handler();
   }
-  website_handler();
-}
-
-
-const ideologyMap = {
-    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "7": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "8": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "9": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "10": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "11": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-
-}
-
-const legacyMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-
-}
-
-
-const fpwinMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-
-}
-
-const legwinMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-
 }
 
 function website_handler() {
-    main_website_candidate_list = [];
 	console.log(current_website);
     lower_url=current_website.toLowerCase();
 	if (lower_url=="republicanstowatchoutfor.com") {
-
-let doleObject = {img: "https://i.imgur.com/kiFRIGz.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
-let buchananObject = {img: "https://i.imgur.com/vHJy7Bh.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
-let forbesObject = {img: "https://i.imgur.com/B7q8vBm.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
-let alexanderObject = {img: "https://i.imgur.com/8Br5q0N.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is ver similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
-let grammObject = {img: "https://i.imgur.com/OHUNpQN.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
-let specterObject = {img: "https://i.imgur.com/6KJKhUw.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
-let wilsonObject = {img: "https://i.imgur.com/TPioQhq.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
-
-let powellObject = {img: "https://i.imgur.com/22cM2W9.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
-let bonoObject = {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."};
-let wbushObject = {img: "https://i.imgur.com/x9Qhlo8.png",name: "George W. Bush",title: "TEXAS GOVERNOR",description: "As people continue to compare you to your predecessor, people have been clamoring for the old man's own son to take you on. Their call is in the minority but while he's of the same blood, he's not of the same cloth as 41."};
-let perotObject = {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."};
-let bushObject = {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."};
-
-
-sortedOpponents.forEach(([name, value]) => {
-    if (name === 'dole' && dole_active == 1) {
-        main_website_candidate_list.push(doleObject);
-    } else if (name === 'buchanan' && buchanan_active == 1) {
-        main_website_candidate_list.push(buchananObject);
-    } else if (name === 'forbes' && forbes_active == 1) {
-        main_website_candidate_list.push(forbesObject);
-    } else if (name === 'alexander' && alexander_active == 1) {
-        main_website_candidate_list.push(alexanderObject);
-    } else if (name === 'gramm' && gramm_active == 1) {
-        main_website_candidate_list.push(grammObject);
-    } else if (name === 'specter' && specter_active == 1) {
-        main_website_candidate_list.push(specterObject);
-    } else if (name === 'wilson' && wilson_active == 1) {
-        main_website_candidate_list.push(wilsonObject);
-    } else if (name === 'powell' && powell_active == 1) {
-        main_website_candidate_list.push(powellObject);
-    } else if (name === 'bono' && bono_active == 1) {
-        main_website_candidate_list.push(bonoObject);
-    } else if (name === 'wbush' && wbush_active == 1) {
-        main_website_candidate_list.push(wbushObject);
-    } else if (name === 'perot' && perot_active == 1) {
-        main_website_candidate_list.push(perotObject);
-    } else if (name === 'bush' && bush_active == 1) {
-        main_website_candidate_list.push(bushObject);
-    }
-});
-legacyMap
 const ideologyHTML = ideologyMap[String(Ideology)];
 const legacyHTML = legacyMap[String(Legacy)]; 
 const fpwinMapHTML = fpwinMap[String(FPWin)];
@@ -72250,6 +71873,15 @@ window.website_close = function () {
   }
 };
 console.log(main_website_candidate_list);
+
+function refreshSurrogates() {
+    const draggableBox = document.getElementById('draggableBox');
+    if (draggableBox) {
+        draggableBox.remove();
+        createDraggableBox();
+        website_handler();
+    }
+}
 
 function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
