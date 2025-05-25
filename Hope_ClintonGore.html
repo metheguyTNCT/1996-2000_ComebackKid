@@ -66050,7 +66050,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[6][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66089,7 +66089,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -66218,7 +66218,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[5+moveup][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66257,7 +66257,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -66447,7 +66447,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[4+moveup][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66486,7 +66486,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -66558,7 +66558,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[3+moveup][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66597,7 +66597,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -66722,7 +66722,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[2+moveup][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66761,7 +66761,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -66940,7 +66940,7 @@ cyoAdventure = function(a) {
         if (sortedOpponents[1+moveup][0] == "buchanan") {
             buchanan_active = 0 
             if(wilson_active == 1){
-            opponents.perot += (opponents.buchanan/2)
+            opponents.wilson += (opponents.buchanan/2)
             }
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
@@ -66979,7 +66979,7 @@ cyoAdventure = function(a) {
             opponents.dole += (opponents.gramm)
             }
             else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.dole/3)
+            opponents.buchanan += (opponents.gramm/3)
             }
             opponents.gramm = -10
         }
@@ -70154,6 +70154,118 @@ question_insert("oslo_5_win", question_22_1996_election)
         }
         }
         }
+if(e.noCounter == 24 && moveup == 1){
+        moveup = 0
+if (sortedOpponents[1+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.wilson += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(perot_active == 1) {
+            opponents.perot += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gramm/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "powell") {
+            powell_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.powell/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.powell/2)
+            }
+            else if(bono_active == 1) {
+            opponents.bono += (opponents.powell/3)
+            }
+            opponents.powell = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+    updateCandidates("junk", 0)
+}
 if (e.question_number+1 == 25){
 updateCandidates("junk", 0)
 determineRepublican()
