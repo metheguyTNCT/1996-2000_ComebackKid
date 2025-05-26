@@ -1,35 +1,4 @@
 
-e = campaignTrail_temp;
-campaignTrail_temp.cyoa = true;
-const customStyling = document.createElement("style");
-customStyling.innerHTML = `
-#campaign_sign {
-    background-image: url("https://files.catbox.moe/tw3cik.png");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
   border-color: #C9C9C9;
 }
 #state_info {
@@ -71938,14 +71907,63 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 
 
         for (let x in main_website_candidate_list) {
-            webpage_html+=`<div id="candidate-entry" style="background-color:C0C0C0;width:213px;height:92px;vertical-align:top;top:0;left:0;display:inline-block;padding:4px;"><img src="${main_website_candidate_list[x]["img"]}"><div style="width:121px;height:92px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:0;left:0;display:inline-block; font-family:'Times New Roman', Times, serif;">
-            <p style="font-size:1em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0em;">
-            ${main_website_candidate_list[x]["name"]}
+            webpage_html+=`<div id="candidate-entry" style="
+            background-color:C0C0C0;
+            width:213px;
+            height:92px;
+            vertical-align:top;
+            top:0;
+            left:0;
+            display:inline-block;
+            padding:4px;
+            ">
+
+            <img src="${main_website_candidate_list[x]["img"]}"><div style="
+            width:121px;
+            height:92px;
+            vertical-align:top;
+            overflow-y:scroll;
+            scrollbar-width:none;
+            top:0;
+            left:0;
+            display:inline-block;
+            ">
+
+            <p style="
+            font-size: 14.4px;
+            font-style: italic;
+            font-family: arial;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0em;
+            ">
+            <b>${main_website_candidate_list[x]["name"]}</b>
             </p>
-            <p style="font-size:0.6em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0.3em;">
+            
+            <p style="
+            font-size:9.6px;
+            font-family: times new roman;
+            text-transform: uppercase;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0.3em;
+            ">
             <strong>${main_website_candidate_list[x]["title"]}</strong>
             </p>
-            <p style="font-size:0.6em;overflow-wrap:break-word;line-height:1em;margin-inline-start: 3px;margin-inline-end:0px;margin-block: 0em;">
+
+            <p style="
+            font-size:9.6px;
+            font-family: times new roman;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0em;
+            ">
             ${main_website_candidate_list[x]["description"]}
             </p></div></div>`;
         }
