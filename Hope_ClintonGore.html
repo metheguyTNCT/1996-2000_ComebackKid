@@ -68547,7 +68547,7 @@ if (ans == 210003){
     campaignTrail_temp.candidate_json[2]["fields"].last_name = "Nader";
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
 }
-if (e.question_number+1 == 18){
+if (e.question_number+1 == 18){ // Midterms
     if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
     bono_active = 1
     moveup = 1
@@ -68558,9 +68558,8 @@ if (e.question_number+1 == 18){
     moveup = 1
     opponents.bono = 3
     }
-    if (GotHealthcare == 1) {
-    if (e.player_answers.includes(50003) || e.player_answers.includes(50002)) {
-    if ((e.player_answers.includes(88021.5) || e.player_answers.includes(88023.5)) && e.player_answers.includes(85027.5)) {
+    if (e.player_answers.includes(15004.5) || e.player_answers.includes(15007.5)) {
+    if (Legacy >= 4) {
         if (e.player_answers.includes(88021.5)) {
             DemCongress -= 1;
             SlimGOPCongress += 1;
@@ -68613,7 +68612,7 @@ if (e.question_number+1 == 18){
             }
         ); 
     }
-    } else {
+    } else if (e.player_answers.includes(85018.5)) {
     if (e.player_answers.includes(88021.5)) {
             DemCongress -= 1;
             SlimGOPCongress += 1;
@@ -68650,8 +68649,7 @@ if (e.question_number+1 == 18){
             );
         }
             ctsAchievement("Counterrevolution");
-    }
-    } else if (GotHealthcare == 0) {
+    } else {
         if (e.player_answers.includes(88020.5) || e.player_answers.includes(88022.5)){
 			DemCongress -= 1;
             DisasterMidterms += 1;
