@@ -72002,6 +72002,30 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, ${legacyHTML}. ${fpwinMapHTML} with ${legwinMapHTML}.`;
+    } else if (lower_url=="clintongore.com") {
+        let webpage_html = ''; // always start fresh
+            webpage_html+=`<div style="
+                background: linear-gradient(to right, #003366 50%, #ff0000 50%);
+                width:451px;
+                height:278px;
+                vertical-align:top;
+                top:0;
+                left:0;
+                display:inline-block;
+                padding:4px;
+                            ">
+            
+            <h1> 
+                <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="margin-left: 96px; margin-right: 0;">
+           <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
+            <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
+            <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
+            </div>
+                <h3> <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; margin-top: -15px;">
+            </h3>
+            </div>
+            `;
+            document.getElementById("webpage_html").innerHTML = webpage_html;
     } else {
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
