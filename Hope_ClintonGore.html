@@ -68342,6 +68342,7 @@ function determineRepublican(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
         campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_dole");
     } else if (candidateName == "buchanan") {
+    updateHistoricalData(newVpTableHistorical, newHistHexcolour, newHistName, newHistEV, newHistPV, newHistPVP);
             BuchananNom += 1;
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Buchanan";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#3A040D";
@@ -68358,6 +68359,7 @@ function determineRepublican(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = 0.65
         campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_buchanan");
     } else if (candidateName == "forbes") {
+    updateHistoricalData(newVpTableHistorical3, newHistHexcolour3, newHistName3, newHistEV3, newHistPV3, newHistPVP3);
             ForbesNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Lamm";
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/0lbf5h.png";
@@ -68373,6 +68375,7 @@ function determineRepublican(){
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.65
     campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_forbes");
     } else if (candidateName == "alexander") {
+    updateHistoricalData(newVpTableHistorical3, newHistHexcolour3, newHistName3, newHistEV3, newHistPV3, newHistPVP3);
             LamarNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
@@ -68385,6 +68388,7 @@ function determineRepublican(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.06
         campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_alexander");
     } else if (candidateName == "gramm") {
+    updateHistoricalData(newVpTableHistorical4, newHistHexcolour4, newHistName4, newHistEV4, newHistPV4, newHistPVP4);
             GrammNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
@@ -68397,6 +68401,7 @@ function determineRepublican(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.71
         campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_gramm");
     } else if (candidateName == "specter") {
+    updateHistoricalData(newVpTableHistorical5, newHistHexcolour5, newHistName5, newHistEV5, newHistPV5, newHistPVP5);
                 SpecterNom += 1;
             campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
             campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
@@ -68412,6 +68417,7 @@ function determineRepublican(){
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
             campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_specter");
     } else if (candidateName == "wilson") {
+    updateHistoricalData(newVpTableHistorical6, newHistHexcolour6, newHistName6, newHistEV6, newHistPV6, newHistPVP6);
         WilsonNom += 1;
     campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
     campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
@@ -68425,6 +68431,7 @@ e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.
 e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.64
 campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_wilson");
     } else if (candidateName == "powell") {
+    updateHistoricalData(newVpTableHistorical7, newHistHexcolour7, newHistName7, newHistEV7, newHistPV7, newHistPVP7);
         PowellNom += 1;
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Powell";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#B9126B";
@@ -68442,6 +68449,7 @@ campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_wilson");
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 30)[0].fields.issue_score = 0.65
     campaignTrail_temp.questions_json[25] = tunnel("candidate_intro_powell");
     } else if (candidateName == "bono") {
+    updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
             BonoNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Penny";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#63827E";
@@ -70315,28 +70323,123 @@ vpTable = {
     "Richard Lamm" : "Ed Zschau",
     "Timothy Penny" : "Russ Verney",
 }
+
+// Dole VP Table
 vpTableHistorical = {
     "Bill Clinton" : "Al Gore",
     "Bob Dole" : "Jack Kemp",
     "H. Ross Perot" : "Pat Choate",
     "Ralph Nader" : "Winona LaDuke",
 }
-HistHexcolour=["#08299B","#DE3E37","#800080","#00C100"];
-HistName=["Bill Clinton","Bob Dole","H. Ross Perot","Ralph Nader"];
-HistEV=[379,159,0,0];
-HistPV=["47,402,357","39,198,755","8,085,402","685,297"];
-HistPVP=["49.2%","40.7%","8.4%","0.7%"];
+HistHexcolour = ["#092C9C","#DE3E37","#800080","#00C100"];
+HistName = ["Bill Clinton","Bob Dole","H. Ross Perot","Ralph Nader"];
+HistEV = [379,159,0,0];
+HistPV = ["47,402,357","39,198,755","8,085,402","685,297"];
+HistPVP = ["49.2%","40.7%","8.4%","0.7%"];
 
+// Buchanan VP Table
 newVpTableHistorical = {
-    "George W. Bush" : "Dick Cheney",
-    "Al Gore" : "Joe Lieberman",
-    "Ralph Nader" : "Winona LaDuke", 
+    "Bill Clinton" : "Al Gore",
+    "Pat Buchanan" : "Bill Bennett",
+    "William Weld" : "Dominic Cortese",
+    "Ralph Nader" : "Winona LaDuke",
 };
-newHistHexcolour=["#BF0D3E","#45818E","#00C100"];
-newHistName=["George W. Bush","Al Gore","Ralph Nader"];
-newHistEV=[271,266,0];
-newHistPV=["50,456,002","50,999,897","2,882,955"];
-newHistPVP=["47.9%","48.4%","2.7%"];
+newHistHexcolour = ["#0B2F9C","#3A040D","#EAB3A6","#00C100"];
+newHistName = ["Bill Clinton","Pat Buchanan","William Weld","Ralph Nader"];
+newHistEV = [433,105,0,0];
+newHistPV = ["51,604,591","35,815,126","8,761,227","673,940"];
+newHistPVP = ["53.6%","37.2%","9.1%","0.7%"];
+
+// Forbes VP Table
+newVpTableHistorical2 = {
+    "Bill Clinton" : "Al Gore",
+    "Steve Forbes" : "John Engler",
+    "Richard Lamm" : "Ed Zschau",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour2 = ["#0B2E9C","#85283A","#36395B","#00C100"];
+newHistName2 = ["Bill Clinton","Steve Forbes","Richard Lamm","Ralph Nader"];
+newHistEV2 = [347,191,0,0];
+newHistPV2 = ["46,983,284","41,784,314","6,931,960","577,663"];
+newHistPVP2 = ["48.8%","43.4%","7.2%","0.6%"];
+
+// Alexander VP Table
+newVpTableHistorical3 = {
+    "Bill Clinton" : "Al Gore",
+    "Lamar Alexander" : "Connie Mack III",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour3 = ["#0B2E9C","#A73E2E","#800080","#00C100"];
+newHistName3 = ["Bill Clinton","Lamar Alexander","H. Ross Perot","Ralph Nader"];
+newHistEV3 = [303,235,0,0];
+newHistPV3 = ["45,057,740","42,458,255","7,894,732","866,495"];
+newHistPVP3 = ["46.8%","44.1%","8.2%","0.9%"];
+
+// Gramm VP Table
+newVpTableHistorical4 = {
+    "Bill Clinton" : "Al Gore",
+    "Phil Gramm" : "Tommy Thompson",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour4 = ["#0B2E9C","#902E28","#800080","#00C100"];
+newHistName4 = ["Bill Clinton","Phil Gramm","H. Ross Perot","Ralph Nader"];
+newHistEV4 = [342,192,4,0];
+newHistPV4 = ["45,539,126","40,147,601","9,820,276","770,217"];
+newHistPVP4 = ["47.3%","41.7%","10.2%","0.8%"];
+
+// Specter VP Table
+newVpTableHistorical5 = {
+    "Bill Clinton" : "Al Gore",
+    "Arlen Specter" : "Jesse Helms",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour5 = ["#0A2E9C","#A60D29","#800080","#00C100"];
+newHistName5 = ["Bill Clinton","Arlen Specter","H. Ross Perot","Ralph Nader"];
+newHistEV5 = [292,246,0,0];
+newHistPV5 = ["44,576,354","42,458,255","8,568,672","673,940"];
+newHistPVP5 = ["46.3%","44.1%","8.9%","0.7%"];
+
+// Wilson VP Table
+newVpTableHistorical6 = {
+    "Bill Clinton" : "Al Gore",
+    "Pete Wilson" : "Judd Gregg",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour6 = ["#092C9C","#F7657A","#800080","#00C100"];
+newHistName6 = ["Bill Clinton","Pete Wilson","H. Ross Perot","Ralph Nader"];
+newHistEV6 = [302,236,0,0];
+newHistPV6 = ["45,057,740","42,169,423","8,376,118","673,940"];
+newHistPVP6 = ["46.8%","43.8%","8.7%","0.7%"];
+
+// Powell VP Table
+newVpTableHistorical7 = {
+    "Colin Powell" : "Don Nickles",
+    "Bill Clinton" : "Al Gore",
+    "Patrick Buchanan" : "Alan Keyes",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour7 = ["#B9126B","#0A2E9C","#c7b10a","#00C100"];
+newHistName7 = ["Colin Powell","Bill Clinton","Patrick Buchanan","Ralph Nader"];
+newHistEV7 = [365,173,0,0];
+newHistPV7 = ["49,486,492","40,917,819","4,910,138","962,772"];
+newHistPVP7 = ["51.4%","42.5%","5.1%","1.0%"];
+
+// Bono VP Table
+newVpTableHistorical8 = {
+    "Bill Clinton" : "Al Gore",
+    "Sonny Bono" : "Richard Lugar",
+    "Timothy Penny" : "Russ Verney",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour8 = ["#0A2D9C","#C34B4F","#63827E","#00C100"];
+newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ralph Nader"];
+newHistEV8 = [366,172,0,0];
+newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
+newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
 			    
 function onGameWindowChangeCandidates() {
     const resultsTableHolder = document.getElementById("overall_details_container");
