@@ -70295,219 +70295,6 @@ if (e.question_number+1 == 25){
 updateCandidates("junk", 0)
 determineRepublican()
 }
-let vpName = "Monica Lewinsky Error";
-vpTable = {
-    "Bill Clinton" : "Al Gore",
-    "Al Gore" : vpName,
-
-    "Bob Dole" : "Jack Kemp",
-    "Robert J. Dole" : "Dan Lungren",
-    "Pat Buchanan" : "Bill Bennett",
-    "Steve Forbes" : "John Engler",
-    "Lamar Alexander" : "Connie Mack III",
-    "Phil Gramm" : "Tommy Thompson",
-    "Arlen Specter" : "Jesse Helms",
-    "Pete Wilson" : "Judd Gregg",
-    "Colin Powell" : "Don Nickles",
-    "Sonny Bono" : "Richard Lugar",
-    "George W. Bush" : "Jim Edgar",
-    "Ross Perot" : "Frank Keating",
-    "George Bush" : "George Allen",
-    "Dick Cheney" : "Tom Ridge",
-
-    "Ralph Nader" : "Winona LaDuke",
-    "H. Ross Perot" : "Pat Choate",
-    "William Weld" : "Dominic Cortese",
-    "Patrick Buchanan" : "Alan Keyes",
-    "Ron Paul" : "David Stockman",
-    "Richard Lamm" : "Ed Zschau",
-    "Timothy Penny" : "Russ Verney",
-}
-
-// Dole VP Table
-vpTableHistorical = {
-    "Bill Clinton" : "Al Gore",
-    "Bob Dole" : "Jack Kemp",
-    "H. Ross Perot" : "Pat Choate",
-    "Ralph Nader" : "Winona LaDuke",
-}
-HistHexcolour = ["#092C9C","#DE3E37","#800080","#00C100"];
-HistName = ["Bill Clinton","Bob Dole","H. Ross Perot","Ralph Nader"];
-HistEV = [379,159,0,0];
-HistPV = ["47,402,357","39,198,755","8,085,402","685,297"];
-HistPVP = ["49.2%","40.7%","8.4%","0.7%"];
-
-// Buchanan VP Table
-newVpTableHistorical = {
-    "Bill Clinton" : "Al Gore",
-    "Pat Buchanan" : "Bill Bennett",
-    "William Weld" : "Dominic Cortese",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour = ["#0B2F9C","#3A040D","#EAB3A6","#00C100"];
-newHistName = ["Bill Clinton","Pat Buchanan","William Weld","Ralph Nader"];
-newHistEV = [433,105,0,0];
-newHistPV = ["51,604,591","35,815,126","8,761,227","673,940"];
-newHistPVP = ["53.6%","37.2%","9.1%","0.7%"];
-
-// Forbes VP Table
-newVpTableHistorical2 = {
-    "Bill Clinton" : "Al Gore",
-    "Steve Forbes" : "John Engler",
-    "Richard Lamm" : "Ed Zschau",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour2 = ["#0B2E9C","#85283A","#36395B","#00C100"];
-newHistName2 = ["Bill Clinton","Steve Forbes","Richard Lamm","Ralph Nader"];
-newHistEV2 = [347,191,0,0];
-newHistPV2 = ["46,983,284","41,784,314","6,931,960","577,663"];
-newHistPVP2 = ["48.8%","43.4%","7.2%","0.6%"];
-
-// Alexander VP Table
-newVpTableHistorical3 = {
-    "Bill Clinton" : "Al Gore",
-    "Lamar Alexander" : "Connie Mack III",
-    "H. Ross Perot" : "Pat Choate",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour3 = ["#0B2E9C","#A73E2E","#800080","#00C100"];
-newHistName3 = ["Bill Clinton","Lamar Alexander","H. Ross Perot","Ralph Nader"];
-newHistEV3 = [303,235,0,0];
-newHistPV3 = ["45,057,740","42,458,255","7,894,732","866,495"];
-newHistPVP3 = ["46.8%","44.1%","8.2%","0.9%"];
-
-// Gramm VP Table
-newVpTableHistorical4 = {
-    "Bill Clinton" : "Al Gore",
-    "Phil Gramm" : "Tommy Thompson",
-    "H. Ross Perot" : "Pat Choate",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour4 = ["#0B2E9C","#902E28","#800080","#00C100"];
-newHistName4 = ["Bill Clinton","Phil Gramm","H. Ross Perot","Ralph Nader"];
-newHistEV4 = [342,192,4,0];
-newHistPV4 = ["45,539,126","40,147,601","9,820,276","770,217"];
-newHistPVP4 = ["47.3%","41.7%","10.2%","0.8%"];
-
-// Specter VP Table
-newVpTableHistorical5 = {
-    "Bill Clinton" : "Al Gore",
-    "Arlen Specter" : "Jesse Helms",
-    "H. Ross Perot" : "Pat Choate",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour5 = ["#0A2E9C","#A60D29","#800080","#00C100"];
-newHistName5 = ["Bill Clinton","Arlen Specter","H. Ross Perot","Ralph Nader"];
-newHistEV5 = [292,246,0,0];
-newHistPV5 = ["44,576,354","42,458,255","8,568,672","673,940"];
-newHistPVP5 = ["46.3%","44.1%","8.9%","0.7%"];
-
-// Wilson VP Table
-newVpTableHistorical6 = {
-    "Bill Clinton" : "Al Gore",
-    "Pete Wilson" : "Judd Gregg",
-    "H. Ross Perot" : "Pat Choate",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour6 = ["#092C9C","#F7657A","#800080","#00C100"];
-newHistName6 = ["Bill Clinton","Pete Wilson","H. Ross Perot","Ralph Nader"];
-newHistEV6 = [302,236,0,0];
-newHistPV6 = ["45,057,740","42,169,423","8,376,118","673,940"];
-newHistPVP6 = ["46.8%","43.8%","8.7%","0.7%"];
-
-// Powell VP Table
-newVpTableHistorical7 = {
-    "Colin Powell" : "Don Nickles",
-    "Bill Clinton" : "Al Gore",
-    "Patrick Buchanan" : "Alan Keyes",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour7 = ["#B9126B","#0A2E9C","#c7b10a","#00C100"];
-newHistName7 = ["Colin Powell","Bill Clinton","Patrick Buchanan","Ralph Nader"];
-newHistEV7 = [365,173,0,0];
-newHistPV7 = ["49,486,492","40,917,819","4,910,138","962,772"];
-newHistPVP7 = ["51.4%","42.5%","5.1%","1.0%"];
-
-// Bono VP Table
-newVpTableHistorical8 = {
-    "Bill Clinton" : "Al Gore",
-    "Sonny Bono" : "Richard Lugar",
-    "Timothy Penny" : "Russ Verney",
-    "Ralph Nader" : "Winona LaDuke",
-};
-newHistHexcolour8 = ["#0A2D9C","#C34B4F","#63827E","#00C100"];
-newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ralph Nader"];
-newHistEV8 = [366,172,0,0];
-newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
-newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
-			    
-function onGameWindowChangeCandidates() {
-    const resultsTableHolder = document.getElementById("overall_details_container");
-
-    if (!resultsTableHolder || resultsTableHolder.classList.contains("done")) {
-        return;
-    }
-
-    resultsTableHolder.classList.add("done");
-
-    const resultsTable = resultsTableHolder.childNodes[3].childNodes[3].children[0];
-
-    for (let i = 0; i < resultsTable.children.length; i++) {
-        const row = resultsTable.children[i];
-        let name = row.firstChild.innerText;
-        row.insertCell(1);
-        if (name) {
-            name = name.replaceAll("-", "").trim();
-        }
-
-        if (i == 0) {
-            row.children[1].innerHTML = `<span style="font-weight:bold">Running Mate</span>`;
-        } else {
-            row.children[1].innerHTML = vpTable[name];
-        }
-    }
-
-    const resultsTableHistorical = resultsTableHolder.childNodes[5].childNodes[3].children[0];
-
-    for (let i = 0; i < resultsTableHistorical.children.length; i++) {
-        const row = resultsTableHistorical.children[i];
-        let name = row.childNodes[1].innerText;
-        row.insertCell(1);
-        if (name) {
-            name = name.replaceAll("-", "").trim();
-        }
-
-        if (i == 0) {
-            row.children[1].innerHTML = `<span style="font-weight:bold">Running Mate</span>`;
-        } else {
-            row.children[1].innerHTML = vpTableHistorical[name];
-        }
-    }
-
-    // Add CSS to increase row spacing
-    const styleElem = document.createElement('style');
-    styleElem.textContent = `
-        #overall_details_container table tr {
-            line-height: 1.5; /* Adjust line height as needed */
-        }
-    `;
-    document.head.appendChild(styleElem);
-}
-
-const gameWindowNode = document.getElementById("game_window");
-const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
-
-const candidateObserver = new MutationObserver(onGameWindowChangeCandidates);
-candidateObserver.observe(gameWindowNode, candidateWatcherConfig);
-
-function updateHistoricalData(newVpTable, newHexColors, newNames, newEvs, newPvs, newPvps) {
-    vpTableHistorical = newVpTable;
-    HistHexcolour = newHexColors;
-    HistName = newNames;
-    HistEV = newEvs;
-    HistPV = newPvs;
-    HistPVP = newPvps;
-}
 
 // constructs endings based on header and pages
 construct = (a = 1) => {
@@ -72194,6 +71981,220 @@ function refreshSurrogates() {
         createDraggableBox();
         website_handler();
     }
+}
+
+let vpName = "Monica Lewinsky Error";
+vpTable = {
+    "Bill Clinton" : "Al Gore",
+    "Al Gore" : vpName,
+
+    "Bob Dole" : "Jack Kemp",
+    "Robert J. Dole" : "Dan Lungren",
+    "Pat Buchanan" : "Bill Bennett",
+    "Steve Forbes" : "John Engler",
+    "Lamar Alexander" : "Connie Mack III",
+    "Phil Gramm" : "Tommy Thompson",
+    "Arlen Specter" : "Jesse Helms",
+    "Pete Wilson" : "Judd Gregg",
+    "Colin Powell" : "Don Nickles",
+    "Sonny Bono" : "Richard Lugar",
+    "George W. Bush" : "Jim Edgar",
+    "Ross Perot" : "Frank Keating",
+    "George Bush" : "George Allen",
+    "Dick Cheney" : "Tom Ridge",
+
+    "Ralph Nader" : "Winona LaDuke",
+    "H. Ross Perot" : "Pat Choate",
+    "William Weld" : "Dominic Cortese",
+    "Patrick Buchanan" : "Alan Keyes",
+    "Ron Paul" : "David Stockman",
+    "Richard Lamm" : "Ed Zschau",
+    "Timothy Penny" : "Russ Verney",
+}
+
+// Dole VP Table
+vpTableHistorical = {
+    "Bill Clinton" : "Al Gore",
+    "Bob Dole" : "Jack Kemp",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+}
+HistHexcolour = ["#092C9C","#DE3E37","#800080","#00C100"];
+HistName = ["Bill Clinton","Bob Dole","H. Ross Perot","Ralph Nader"];
+HistEV = [379,159,0,0];
+HistPV = ["47,402,357","39,198,755","8,085,402","685,297"];
+HistPVP = ["49.2%","40.7%","8.4%","0.7%"];
+
+// Buchanan VP Table
+newVpTableHistorical = {
+    "Bill Clinton" : "Al Gore",
+    "Pat Buchanan" : "Bill Bennett",
+    "William Weld" : "Dominic Cortese",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour = ["#0B2F9C","#3A040D","#EAB3A6","#00C100"];
+newHistName = ["Bill Clinton","Pat Buchanan","William Weld","Ralph Nader"];
+newHistEV = [433,105,0,0];
+newHistPV = ["51,604,591","35,815,126","8,761,227","673,940"];
+newHistPVP = ["53.6%","37.2%","9.1%","0.7%"];
+
+// Forbes VP Table
+newVpTableHistorical2 = {
+    "Bill Clinton" : "Al Gore",
+    "Steve Forbes" : "John Engler",
+    "Richard Lamm" : "Ed Zschau",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour2 = ["#0B2E9C","#85283A","#36395B","#00C100"];
+newHistName2 = ["Bill Clinton","Steve Forbes","Richard Lamm","Ralph Nader"];
+newHistEV2 = [347,191,0,0];
+newHistPV2 = ["46,983,284","41,784,314","6,931,960","577,663"];
+newHistPVP2 = ["48.8%","43.4%","7.2%","0.6%"];
+
+// Alexander VP Table
+newVpTableHistorical3 = {
+    "Bill Clinton" : "Al Gore",
+    "Lamar Alexander" : "Connie Mack III",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour3 = ["#0B2E9C","#A73E2E","#800080","#00C100"];
+newHistName3 = ["Bill Clinton","Lamar Alexander","H. Ross Perot","Ralph Nader"];
+newHistEV3 = [303,235,0,0];
+newHistPV3 = ["45,057,740","42,458,255","7,894,732","866,495"];
+newHistPVP3 = ["46.8%","44.1%","8.2%","0.9%"];
+
+// Gramm VP Table
+newVpTableHistorical4 = {
+    "Bill Clinton" : "Al Gore",
+    "Phil Gramm" : "Tommy Thompson",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour4 = ["#0B2E9C","#902E28","#800080","#00C100"];
+newHistName4 = ["Bill Clinton","Phil Gramm","H. Ross Perot","Ralph Nader"];
+newHistEV4 = [342,192,4,0];
+newHistPV4 = ["45,539,126","40,147,601","9,820,276","770,217"];
+newHistPVP4 = ["47.3%","41.7%","10.2%","0.8%"];
+
+// Specter VP Table
+newVpTableHistorical5 = {
+    "Bill Clinton" : "Al Gore",
+    "Arlen Specter" : "Jesse Helms",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour5 = ["#0A2E9C","#A60D29","#800080","#00C100"];
+newHistName5 = ["Bill Clinton","Arlen Specter","H. Ross Perot","Ralph Nader"];
+newHistEV5 = [292,246,0,0];
+newHistPV5 = ["44,576,354","42,458,255","8,568,672","673,940"];
+newHistPVP5 = ["46.3%","44.1%","8.9%","0.7%"];
+
+// Wilson VP Table
+newVpTableHistorical6 = {
+    "Bill Clinton" : "Al Gore",
+    "Pete Wilson" : "Judd Gregg",
+    "H. Ross Perot" : "Pat Choate",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour6 = ["#092C9C","#F7657A","#800080","#00C100"];
+newHistName6 = ["Bill Clinton","Pete Wilson","H. Ross Perot","Ralph Nader"];
+newHistEV6 = [302,236,0,0];
+newHistPV6 = ["45,057,740","42,169,423","8,376,118","673,940"];
+newHistPVP6 = ["46.8%","43.8%","8.7%","0.7%"];
+
+// Powell VP Table
+newVpTableHistorical7 = {
+    "Colin Powell" : "Don Nickles",
+    "Bill Clinton" : "Al Gore",
+    "Patrick Buchanan" : "Alan Keyes",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour7 = ["#B9126B","#0A2E9C","#c7b10a","#00C100"];
+newHistName7 = ["Colin Powell","Bill Clinton","Patrick Buchanan","Ralph Nader"];
+newHistEV7 = [365,173,0,0];
+newHistPV7 = ["49,486,492","40,917,819","4,910,138","962,772"];
+newHistPVP7 = ["51.4%","42.5%","5.1%","1.0%"];
+
+// Bono VP Table
+newVpTableHistorical8 = {
+    "Bill Clinton" : "Al Gore",
+    "Sonny Bono" : "Richard Lugar",
+    "Timothy Penny" : "Russ Verney",
+    "Ralph Nader" : "Winona LaDuke",
+};
+newHistHexcolour8 = ["#0A2D9C","#C34B4F","#63827E","#00C100"];
+newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ralph Nader"];
+newHistEV8 = [366,172,0,0];
+newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
+newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
+			    
+function onGameWindowChangeCandidates() {
+    const resultsTableHolder = document.getElementById("overall_details_container");
+
+    if (!resultsTableHolder || resultsTableHolder.classList.contains("done")) {
+        return;
+    }
+
+    resultsTableHolder.classList.add("done");
+
+    const resultsTable = resultsTableHolder.childNodes[3].childNodes[3].children[0];
+
+    for (let i = 0; i < resultsTable.children.length; i++) {
+        const row = resultsTable.children[i];
+        let name = row.firstChild.innerText;
+        row.insertCell(1);
+        if (name) {
+            name = name.replaceAll("-", "").trim();
+        }
+
+        if (i == 0) {
+            row.children[1].innerHTML = `<span style="font-weight:bold">Running Mate</span>`;
+        } else {
+            row.children[1].innerHTML = vpTable[name];
+        }
+    }
+
+    const resultsTableHistorical = resultsTableHolder.childNodes[5].childNodes[3].children[0];
+
+    for (let i = 0; i < resultsTableHistorical.children.length; i++) {
+        const row = resultsTableHistorical.children[i];
+        let name = row.childNodes[1].innerText;
+        row.insertCell(1);
+        if (name) {
+            name = name.replaceAll("-", "").trim();
+        }
+
+        if (i == 0) {
+            row.children[1].innerHTML = `<span style="font-weight:bold">Running Mate</span>`;
+        } else {
+            row.children[1].innerHTML = vpTableHistorical[name];
+        }
+    }
+
+    // Add CSS to increase row spacing
+    const styleElem = document.createElement('style');
+    styleElem.textContent = `
+        #overall_details_container table tr {
+            line-height: 1.5; /* Adjust line height as needed */
+        }
+    `;
+    document.head.appendChild(styleElem);
+}
+
+const gameWindowNode = document.getElementById("game_window");
+const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
+
+const candidateObserver = new MutationObserver(onGameWindowChangeCandidates);
+candidateObserver.observe(gameWindowNode, candidateWatcherConfig);
+
+function updateHistoricalData(newVpTable, newHexColors, newNames, newEvs, newPvs, newPvps) {
+    vpTableHistorical = newVpTable;
+    HistHexcolour = newHexColors;
+    HistName = newNames;
+    HistEV = newEvs;
+    HistPV = newPvs;
+    HistPVP = newPvps;
 }
 
 function handleMutations(mutationsList, observer) {
