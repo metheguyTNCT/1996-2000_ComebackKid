@@ -749,7 +749,9 @@ tooltipList = [
 {searchString: "Kerrey", explanationText: "<img src=https://files.catbox.moe/0cidqk.png> Decorated war hero, straight-talker, and prairie pragmatist "},
 {searchString: "Claiborne Pell", explanationText: "<img src=https://files.catbox.moe/37io3l.png> The greatest, least famous war hero"},
 {searchString: "Moynihan", explanationText: "<img src=https://files.catbox.moe/159ugh.png> The foremost authority on welfare and a perennial thorn in your side."},
-
+{searchString: "Gephardt", explanationText: "<img src=https://files.catbox.moe/vnw31w.png>House Minority Leader and political hack par excellence."},
+{searchString: "John Chafee", explanationText: "<img src=https://files.catbox.moe/aai1d0.png>House Minority Leader and political hack par excellence."},
+            
 
 
 
@@ -825,7 +827,20 @@ tooltipList = [
 {searchString: "Lyndon LaRouche", explanationText: "<img src=https://files.catbox.moe/gjmky1.png> Somewhere between Kafka and cable access. A convicted felon who thinks the Queen of England runs the drug trade. "},
 {searchString: "fever dreams", explanationText: "<img src=https://files.catbox.moe/mrzh3m.png> Best-selling VHS, The Clinton Chronicles accuses you of drug smuggling, adultery, and murder."},
 {searchString: "Gore–Chernomyrdin", explanationText: "<img src=https://files.catbox.moe/2gzprl.png> U.S.–Russia task force to promote cooperation in energy, trade, science, and a multitude of other issues."},
+{searchString: "Clinton thumb", explanationText: "<img src=https://files.catbox.moe/hd14a9.png>Your characteristic hand gesture."},
+{searchString: "1980", explanationText: "<img src=https://files.catbox.moe/ttgm52.png>Thanks to Carter, you were defeated for re-election as Governor by Frank White."},
 
+
+// Healthcare plans
+{searchString: "a deal that would save the plan", explanationText: "<img src=https://files.catbox.moe/rlvih0.jpg> A flexible plan requiring many companies to buy insurance for their employees in exchange for subsidies, as well as an expansion of Medicaid for the poor. Would reduce the number of uninsured in America by a quarter."},
+{searchString: "The alternative was at the same time more liberal and moderate", explanationText: "<img src=https://files.catbox.moe/4wnw46.png> An expandable plan requiring most companies to buy insurance for their employees in exchange for subsidies for smaller enterprises as well as a federaly negotiated rates on fees and discount on prescription. Will reach universal coverage in 1998."},
+{searchString: "the complete transformation", explanationText: "<img src=https://files.catbox.moe/icb8w8.png> Requires all Americans to buy insurance, with subsidies for low income households."},
+{searchString: "you think the bill is as good as it will be while having general support", explanationText: "The bill requires all Americans to buy insurance with subsidies for low income households with voluntary pooling rules. As part of the cost are taken from corporations directly, the plan remains low in cost."},
+{searchString: "ripped out everything that made the bill anything worthwhile", explanationText: "The HEART plan requires all Americans to buy Insurance with subsidies for low income households with voluntary pooling rules. As all costs are assumed by the government, the subsidies are constantly in question."},
+{searchString: "Mitchell's plan", explanationText: "<img src=https://files.catbox.moe/ep27nx.png> Plan requiring all companies to buy insurance for their employees, reducing the number of the uninsured to less than a million while being tied to the budget."},
+{searchString: "Hillarycare", explanationText: "<img src=https://files.catbox.moe/tezgr1.webp> Plan requiring all companies to buy Insurance for their employees in exchange for subsidies."},
+            
+            
 ];
   // Select the node that will be observed for mutations
   const windowsAdvisorTargetNode = document.getElementById("game_window");
@@ -970,15 +985,15 @@ function setupRandomizeButton() {
   );
   
   const song2 = new Song(
-    "Stay (Faraway, So Close!)",
-    "U2",
-    "https://audio.jukehost.co.uk/rN5nt2BnxsrhpPVw7SpJgeIEvHBUbhbn"
+  "Roll With It",
+  "Oasis",
+  "https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD"
   );
 
   const song3 = new Song(
-  "Lounge Act",
+  "Come As You Are",
   "Nirvana",
-  "https://files.catbox.moe/d6ighi.mp3"
+  "https://files.catbox.moe/xia5u1.mp3"
   );
 
   const song4 = new Song(
@@ -987,35 +1002,21 @@ function setupRandomizeButton() {
     "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
   );
   const song5 = new Song(
-  "Run-Around",
-  "Blues Traveler",
-  "https://files.catbox.moe/516s0w.mp3"
+  "King For a Day",
+  "Jamiroquai",
+  "https://files.catbox.moe/8l1dp1.mp3"
 );
     const song6 = new Song(
-    "Canned Heat",
-    "Jamiroquai",
-    "https://audio.jukehost.co.uk/iRBNcpiMDuKxlCJRgbXvbD6kwA9SaVJx"
+  "My Iron Lung",
+  "Radiohead",
+  "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN"
   );
   const song7 = new Song(
   "Black Velvet",
   "Alannah Myles",
   "https://audio.jukehost.co.uk/kelvRUNlDVvVRo8LCC8EmoUtL6c5TiRD"
 );
-  const song8 = new Song(
-  "Roll With It",
-  "Oasis",
-  "https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD"
-);
-  const song9 = new Song(
-  "So Many Tears",
-  "2Pac",
-  "https://audio.jukehost.co.uk/7ztAooR1ieAZFn1Su0baxa6m5lr55wLt"
-  );
-  const song10 = new Song(
-  "My Iron Lung",
-  "Radiohead",
-  "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN"
-);
+
 
     playlist.addSong(song1);
     playlist.addSong(song2);
@@ -1024,9 +1025,7 @@ function setupRandomizeButton() {
     playlist.addSong(song5);
     playlist.addSong(song6);
     playlist.addSong(song7);
-    playlist.addSong(song8);
-    playlist.addSong(song9);
-    playlist.addSong(song10);
+
   
     const playerContainer = document.createElement("div");
     playerContainer.id = "player";
