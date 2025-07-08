@@ -72335,6 +72335,30 @@ cyoAdventure = function(a) {
     }
     if (e.question_number+1 == 7) { // Whitewater
     if (e.player_answers.includes(60001)) {
+    if (e.player_answers.includes(92005.5) || e.player_answers.includes(92006.5) || e.player_answers.includes(92007.5)) {
+    question_insert("question_5_bosnia", 
+            {
+      "model": "campaign_trail.question",
+      "pk": "question_8_whitewater_reno",
+      "fields": {
+          "priority": 0,
+          "description": "It seems like the controversies keep on pilling further. Now, it's Whitewater rearing it's ugly head after you thought it would have left you when you depated from Arkansas. Suddenly, according to the known serial liar Hale, you're the bad guy and came with your big muscles to force a loan out of him to get into an unprofitable venture. It's pure insanity, but here we are, you must do something.",
+          "likelihood": 1
+      }
+            }
+        );
+    question_insert("question_5_bosnia_intervention", 
+            {
+        "model": "campaign_trail.question",
+      "pk": "question_8_whitewater_reno",
+      "fields": {
+          "priority": 0,
+          "description": "It seems like the controversies keep on pilling further. Now, it's Whitewater rearing it's ugly head after you thought it would have left you when you depated from Arkansas. Suddenly, according to the known serial liar Hale, you're the bad guy and came with your big muscles to force a loan out of him to get into an unprofitable venture. It's pure insanity, but here we are, you must do something.",
+          "likelihood": 1
+      }
+            }
+        );
+    } else {
         question_insert("question_5_bosnia", 
             {
         "model": "campaign_trail.question",
@@ -72357,6 +72381,7 @@ cyoAdventure = function(a) {
         }
             }
         );
+    }
     } else {
             question_insert("question_5_bosnia", 
             {
@@ -76793,7 +76818,7 @@ if (e.question_number+1 == 27) {
     FPWin += 2;
     updateCandidates("fopo", 1)
     }
-    if (ans == 80001 || ans == 80002 || ans == 80004 || ans == 900015551 || ans == 900015552 || ans == 10010.5 || ans == 10014.5 || ans == 10016.5 || ans == 10017.5 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 200003 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5 || ans == 10021.5 || ans == 10027.5) {
+    if (ans == 80001 || ans == 80002 || ans == 80004 || ans == 900015551 || ans == 900015552 || ans == 10010.5 || ans == 10014.5 || ans == 10016.5 || ans == 10017.5 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 200003 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5 || ans == 10021.5 || ans == 10022.5) {
     FPWin -= 1;
     updateCandidates("fopo", -1)
     }
@@ -77325,485 +77350,6 @@ if (e.question_number+1 == 18){ // Midterms
     }
     }
     }
-    if (e.question_number+1 == 36){
-    let soviet_5_nonato_noun = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_nonato_noun",
-        "fields": {
-            "priority": 0,
-            "description": "The threads of T-80's continue to roll down and down. Even with their dismal performance, especially in logistics, the Russian army reached the Capital. It's becoming clear that the country will collapse very soon. People will blame you for this. All you can do is limit the damage.\n",
-            "likelihood": 1
-        }
-    }
-    let soviet_5_nato_noun = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_nato_noun",
-        "fields": {
-            "priority": 0,
-            "description": "The threads of T-80's continue to roll down and down. Even with their dismal performance, especially in logistics, the Russian army reached the Capital. It's becoming clear that the country will collapse very soon. People will blame you for this. All you can do is limit the damage.\n",
-            "likelihood": 1
-        }
-    }
-    let soviet_5_nonato_un = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_nonato_un",
-        "fields": {
-            "priority": 0,
-            "description": "The threads of T-80's continue to roll down and down. Even with their dismal performance, especially in logistics, the Russian army reached the Capital. It's becoming clear that the country will collapse very soon. People will blame you for this. All you can do is limit the damage.\n",
-            "likelihood": 1
-        }
-    }
-    let soviet_5_wonwar = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_wonwar",
-        "fields": {
-            "priority": 0,
-            "description": "No one expected it. Not even yourself. Yet here we are. Photos of fields of T80's and T72's strutting the semi desert of Kazakhstan in the same way they did in Kuwait, Abrams standing proud against them. People know, it was thank to you that Kazakhstan was saved. The war is not over yet but they've begun their counter offensive and Zyuganov is giving underhanded signs to reach for negotiations.",
-            "likelihood": 1
-        }
-    }
-    let soviet_5_wonwar_nato = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_wonwar_nato",
-        "fields": {
-            "priority": 0,
-            "description": "No one expected it. Not even yourself. Yet here we are. Photos of fields of T80's and T72's strutting the semi desert of Kazakhstan in the same way they did in Kuwait, Abrams standing proud against them. People know, it was thank to you that Kazakhstan was saved. The war is not over yet but they've begun their counter offensive and Zyuganov is giving underhanded signs to reach for negotiations.",
-            "likelihood": 1
-        }
-    }
-    let soviet_5_startIII = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_5_startIII",
-        "fields": {
-            "priority": 0,
-            "description": "As the fears of nuclear war have been renewed, it would feel sureal when you would shake that man hand to make Start III a reality. Your warhead would both be limited to only 3000 while Mirv's would become a thing of the past. You've come the closest it could be to midnight and yet it would be with a wide grin that Gennady would shake your hand to peace.",
-            "likelihood": 1
-        }
-    }
-    if (CommieReturn == 1) {
-    if (e.player_answers.includes(91033.5)) {
-    question_insert("debate_bush_commies",soviet_5_startIII);
-    question_insert("debate_powell",soviet_5_startIII);
-    } else if (e.player_answers.includes(91014.5) || e.player_answers.includes(91023.5)) {
-    if (e.player_answers.includes(91027.5) || e.player_answers.includes(91031.5)) {
-    question_insert("debate_bush_commies",soviet_5_wonwar_nato);
-    question_insert("debate_powell",soviet_5_wonwar_nato);
-    } else {
-    question_insert("debate_bush_commies",soviet_5_wonwar);
-    question_insert("debate_powell",soviet_5_wonwar);
-    }
-    } else {
-    if (e.player_answers.includes(91027.5) || e.player_answers.includes(91031.5)) {
-    question_insert("debate_bush_commies",soviet_5_nato_noun);
-    question_insert("debate_powell",soviet_5_nato_noun);
-    } else if (e.player_answers.includes(91002.5)) {
-    question_insert("debate_bush_commies",soviet_5_nonato_un);
-    question_insert("debate_powell",soviet_5_nonato_un);
-    } else {
-    question_insert("debate_bush_commies",soviet_5_nonato_noun);
-    question_insert("debate_powell",soviet_5_nonato_noun);
-    }
-    }
-    } else {
-    if (OsloPoints >= 3) {
-        question_insert("debate_dole", 
-            {
-               
-                "model": "campaign_trail.question",
-                "pk": "oslo_5_win",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                    "likelihood": 1
-                }
-                }
-            
-            );
-            question_insert("debate_alexander", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_buchanan", 
-                    {
-                       
-                        "model": "campaign_trail.question",
-                        "pk": "oslo_5_win",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                            "likelihood": 1
-                        }
-                        }
-                    
-                    );
-                    question_insert("debate_buchanan_alt", 
-                        {
-                           
-                            "model": "campaign_trail.question",
-                            "pk": "oslo_5_win",
-                            "fields": {
-                                "priority": 0,
-                                "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                                "likelihood": 1
-                            }
-                            }
-                        
-                        );
-            question_insert("debate_wilson", 
-            {
-               
-                "model": "campaign_trail.question",
-                "pk": "oslo_5_win",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                    "likelihood": 1
-                }
-                }
-            
-            );
-            question_insert("debate_forbes", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_forbes_commies", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_gramm", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_specter", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-             question_insert("debate_powell", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_bush", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_bush_commies", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_bono", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                                question_insert("debate_cheney", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5_win",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-
-                question_insert("debate_sundog", 
-                    {
-                       
-                        "model": "campaign_trail.question",
-                        "pk": "oslo_5_win",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                            "likelihood": 1
-                        }
-                        }
-                    
-                    );
-
-    } else {
-        question_insert("debate_dole", 
-            {
-               
-                "model": "campaign_trail.question",
-                "pk": "oslo_5",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                    "likelihood": 1
-                }
-                }
-            
-            );
-            question_insert("debate_alexander", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_buchanan", 
-                    {
-                       
-                        "model": "campaign_trail.question",
-                        "pk": "oslo_5",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                            "likelihood": 1
-                        }
-                        }
-                    
-                    );
-                    question_insert("debate_buchanan_alt", 
-                        {
-                           
-                            "model": "campaign_trail.question",
-                            "pk": "oslo_5",
-                            "fields": {
-                                "priority": 0,
-                                "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                                "likelihood": 1
-                            }
-                            }
-                        
-                        );
-            question_insert("debate_wilson", 
-            {
-               
-                "model": "campaign_trail.question",
-                "pk": "oslo_5",
-                "fields": {
-                    "priority": 0,
-                    "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                    "likelihood": 1
-                }
-                }
-            
-            );
-            question_insert("debate_forbes", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_forbes_commies", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-                question_insert("debate_gramm", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_specter", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-             question_insert("debate_powell", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_bush", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_bush_commies", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-            question_insert("debate_bono", 
-                {
-                   
-                    "model": "campaign_trail.question",
-                    "pk": "oslo_5",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                        "likelihood": 1
-                    }
-                    }
-                
-                );
-
-                question_insert("debate_cheney", 
-                    {
-                       
-                        "model": "campaign_trail.question",
-                        "pk": "oslo_5",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                            "likelihood": 1
-                        }
-                        }
-                    
-                    );
-
-                    question_insert("debate_sundog", 
-                    {
-                       
-                        "model": "campaign_trail.question",
-                        "pk": "oslo_5",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-                            "likelihood": 1
-                        }
-                        }
-                    
-                    );
-    }
-}
-}
 if (e.question_number+1 == 32) {
 let question_22_1996_election = {
         "model": "campaign_trail.question",
@@ -77895,6 +77441,7 @@ let question_22_1996_election = {
     } else {
 question_insert("debate_dole",question_22_1996_election);
 question_insert("debate_buchanan",question_22_1996_election);
+question_insert("debate_buchanan_alt",question_22_1996_election);
 question_insert("debate_forbes",question_22_1996_election);
 question_insert("debate_alexander",question_22_1996_election);
 question_insert("debate_gramm",question_22_1996_election);
