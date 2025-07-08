@@ -243,7 +243,7 @@ campaignTrail_temp.global_parameter_json = [
           "issue_stance_6_max": 0.71,
           "global_variance": 0.01,
           "state_variance": 0.005,
-          "question_count": 38,
+          "question_count": 33,
           "default_map_color_hex": "#C5C1C4",
           "no_state_map_color_hex": "#999599"
       }
@@ -989,33 +989,29 @@ function setupRandomizeButton() {
     "Michael Jackson",
     "https://audio.jukehost.co.uk/JjXNxLy00Ko2A8GTQ3Xs7T4CQdqvNRgF"
   );
-    const song2 = new Song(
+  const song2 = new Song(
+    "If I Like It, I Do It",
+  "Jamiroquai",
+  "https://audio.jukehost.co.uk/pmA6w3xNc1KSvZZ68NWyleCM2QDz3xqq"
+  );
+    const song3 = new Song(
   "Basket Case",
   "Green Day",
   "https://audio.jukehost.co.uk/WHSxE7Ap3Cv0nkZtNdNHrtDT5tJmoiSH"
 );
-  const song3 = new Song(
-  "Lounge Act",
-  "Nirvana",
-  "https://files.catbox.moe/d6ighi.mp3"
-  );
 
   const song4 = new Song(
     "Best Imitation Of Myself",
     "Ben Folds Five",
     "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
   );
-    const song5 = new Song(
-    "If I Like It, I Do It",
-  "Jamiroquai",
-  "https://audio.jukehost.co.uk/pmA6w3xNc1KSvZZ68NWyleCM2QDz3xqq"
-  );
-  const song6 = new Song(
+  
+  const song5 = new Song(
   "Roll With It",
   "Oasis",
   "https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD"
 );
-  const song7 = new Song(
+  const song6 = new Song(
   "My Iron Lung",
   "Radiohead",
   "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN"
@@ -1027,7 +1023,6 @@ function setupRandomizeButton() {
     playlist.addSong(song4);
     playlist.addSong(song5);
     playlist.addSong(song6);
-    playlist.addSong(song7);
 
   
     const playerContainer = document.createElement("div");
