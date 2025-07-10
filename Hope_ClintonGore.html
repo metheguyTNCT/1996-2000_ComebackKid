@@ -6539,7 +6539,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88016.5,
         "fields": {
             "question": "budget_normal_fail",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6547,7 +6547,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88017.5,
         "fields": {
             "question": "budget_normal_win",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6555,7 +6555,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88018.5,
         "fields": {
             "question": "budget_bentsen_deficit",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6563,7 +6563,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88019.5,
         "fields": {
             "question": "budget_bentsen_balance",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6571,7 +6571,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88020.5,
         "fields": {
             "question": "budget_bentsen_cuts",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6579,7 +6579,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88021.5,
         "fields": {
             "question": "budget_reich_ambition_win",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6587,7 +6587,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88022.5,
         "fields": {
             "question": "budget_reich_ambition_fail",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6595,7 +6595,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88023.5,
         "fields": {
             "question": "budget_reich_unambition_win",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -6603,7 +6603,7 @@ campaignTrail_temp.answers_json = [
         "pk": 88024.5,
         "fields": {
             "question": "budget_reich_unambition_fail",
-            "description": "It's the economy, stupid!\n"
+            "description": "Let's push it through.\n"
         }
     },
     {
@@ -72817,7 +72817,6 @@ if (e.question_number+1 == 14) { // Budget III
     }
 } else if (e.player_answers.includes(30001)) {
     if (e.player_answers.includes(88006.5) || e.player_answers.includes(88007.5)) {
-        if (ReichPoints >= 3) {
         question_insert("question_14_bosnia_all", 
             {
                 "model": "campaign_trail.question",
@@ -72884,32 +72883,7 @@ if (e.question_number+1 == 14) { // Budget III
                 }
             }
         );
-    } else {
-            question_insert("question_14_russia_startiii", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "budget_reich_ambition_fail",
-                "fields": {
-                    "priority": 0,
-                    "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-                    "likelihood": 1
-                }
-            }
-        );
-        question_insert("question_14_russia", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "budget_reich_ambition_fail",
-                "fields": {
-                    "priority": 0,
-                    "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-                    "likelihood": 1
-                }
-            }
-        );
-    }
 } else if (e.player_answers.includes(88008.5)) {
-            if (ReichPoints >= 3) {
         question_insert("question_14_bosnia_all", 
             {
                 "model": "campaign_trail.question",
@@ -72976,74 +72950,6 @@ if (e.question_number+1 == 14) { // Budget III
                 }
             }
         );
-    } else {
-        question_insert("question_14_bosnia_all", 
-            {
-        "model": "campaign_trail.question",
-        "pk": "budget_reich_unambition_fail",
-        "fields": {
-            "priority": 0,
-            "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-            "likelihood": 1
-        }
-            }
-        );
-        question_insert("question_14_bosnia_russia", 
-            {
-        "model": "campaign_trail.question",
-        "pk": "budget_reich_unambition_fail",
-        "fields": {
-            "priority": 0,
-            "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-            "likelihood": 1
-        }
-            }
-        );
-        question_insert("question_14_bosnia_norussia", 
-            {
-        "model": "campaign_trail.question",
-        "pk": "budget_reich_unambition_fail",
-        "fields": {
-            "priority": 0,
-            "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-            "likelihood": 1
-        }
-            }
-        );
-        question_insert("question_14_bosnia_none", 
-            {
-        "model": "campaign_trail.question",
-        "pk": "budget_reich_unambition_fail",
-        "fields": {
-            "priority": 0,
-            "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-            "likelihood": 1
-        }
-            }
-        );
-            question_insert("question_14_russia_startiii", 
-            {
-        "model": "campaign_trail.question",
-        "pk": "budget_reich_unambition_fail",
-        "fields": {
-            "priority": 0,
-            "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-            "likelihood": 1
-        }
-            }
-        );
-        question_insert("question_14_russia", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "budget_reich_unambition_fail",
-                "fields": {
-                    "priority": 0,
-                    "description": "That budget was a slog to get through but here we are now! It's finally going to be voted on. You have more than the majority of congressmen needed to pass it but the last few month have made it very clear that this doesn't mean much as those cross party coalition pushing for special interest have made themselves clear. Now, there's just one way to see.",
-                    "likelihood": 1
-                }
-            }
-        );
-    }
 }
 }
 }
