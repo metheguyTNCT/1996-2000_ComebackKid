@@ -631,7 +631,7 @@ campaignTrail_temp.questions_json = [
         "pk": "candidate_intro_gingrich",
         "fields": {
             "priority": 3,
-            "description": "The moment we've all been waiting for, the Grand Reveal at the Republican National Convention. You've been so focused on your duties as President that you haven’t kept track of the race. The last time you checked, Steve Forbes was leading by a wide margin. Then he emerges... Newt Gingrich, practically vibrating with energy as he stands before the Republican delegates, speaking of a new direction for America.  ",
+            "description": "It's as if you can feel the heat from San Diego oozing out of your television as you watch the RNC coverage. Newt Gingrich, in all his imperial gaudiness, has turned the convention into a television spectacle, with stage lighting and all. Practically vibrating with energy, Gingrich stands before the Republican delegates, speaking of a 'New Contract with America', and slamming your administration as corrupt and slimy. The irony. You need to hit back.  ",
              "likelihood": 1
         }
     },
@@ -4458,7 +4458,15 @@ campaignTrail_temp.answers_json = [
         "pk": 35086.5,
         "fields": {
             "question": "candidate_intro_gingrich",
-            "description": "Is this a goddamn joke? We are going to wipe the floor with this asshole. At every turn, we’ll expose the hypocrisy and the kind of boyish cruelty that the Speaker embodies. This is absolutely not the kind of man who should be leading our nation into the 21st century. .  "
+            "description": "Is this a goddamn joke? We are going to wipe the floor with this asshole. At every turn, we’ll expose the hypocrisy and the kind of boyish cruelty that the Speaker embodies. This is absolutely not the kind of man who should be leading our nation into the 21st century. I don't care what he said in San Diego. "
+        }
+    },
+    {
+    	  "model": "campaign_trail.answer",
+        "pk": 350877.5,
+        "fields": {
+            "question": "candidate_intro_gingrich",
+            "description": "Mr. Gingrich sure knows how to wear a mask. Let me tell you straight, when I’ve been alone negotiating with Newt, he’s been more than willing to sell out any ally, any cause, any idea, just for a win. And believe me, I’ve been there to act as a guardrail against his insanity, but if he somehow wins, I won’t be."
         }
     },
     {
@@ -4466,7 +4474,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35087.5,
         "fields": {
             "question": "candidate_intro_gingrich",
-            "description": "It's time to step in front of the American people. We need to stand tall and defend our record of progress, while inviting those who supported Bush to join us. The Republican Party may represent the past, but the Democratic Party is the way forward, a party for the future, with a vision that unites us all in building a stronger, fairer America. "
+            "description": "Newt Gingrich doesn’t care about you. He’d be willing to shut down the government and put thousands of good people out of work, all out of some misguided, power-hungry ambition to become President. I call on everyone, Republican, Democrat, and Independent, to reject this for what it is."
         }
     },
     {
@@ -23995,6 +24003,16 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": -0.0151
+        }
+    },
+    {
+	    "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 350877.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.007
         }
     },
     {
@@ -64344,7 +64362,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 190,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.02398
+            "state_multiplier": 0.0412398
         }
     },
     {
@@ -64355,7 +64373,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 190,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.02398
+            "state_multiplier": 0.0412398
         }
     },
     {
@@ -64366,7 +64384,18 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 190,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.02398
+            "state_multiplier": 0.0412398
+        }
+    },
+        {
+		"model": "campaign_trail.answer_score_state",
+        "pk": 12300,
+        "fields": {
+            "answer": 350877.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0412398
         }
     },
         {
@@ -65214,7 +65243,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 60001,
             "candidate": 77,
-            "answer_feedback": "Despite an almost manic protest from Belega, you pressed her nomination--and whether you have an eye for taking risks, or pure luck, it worked. 65% of likely voters support your decision for AG, and she gets confirmed. The next morning, on-air Limbaugh goes red in the face ranting about how \"the President is giving power to a Playboy bunny girl succubus\". People are listening, and not just that, praising you."
+            "answer_feedback": "Despite an almost manic protest from Belega, you pressed her nomination--and whether you have an eye for taking risks, or pure luck, it worked. 65% of likely voters support your decision for AG, and she gets confirmed. The next morning, on-air Limbaugh goes red in the face ranting about how \"the President is giving power to a Playboy bunny girl succubus\". The charge is salacious, moralistic, and... it's sticking. People are listening."
         }
     },
     {
@@ -70849,7 +70878,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 91042.5,
             "candidate": 77,
-            "answer_feedback": "The two of you would joke some on how the situation could have gone much differently. He told you he hoped you would stay president so the NATO deal with the soviet union would be restored. You didn't have much courage to contradict him in the moment. It would be a problem for future you."
+            "answer_feedback": "The two of you shared a few jokes about how the situation could have gone much differently. He told you he hoped you’d remain president so the NATO deal with the Soviet Union could be restored. You didn’t have the courage to contradict him in the moment, it would be a problem for future you."
         }
     },
     {
@@ -70859,6 +70888,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 35087.5,
             "candidate": 77,
             "answer_feedback": "Speaker Gingrich is traveling across the country, painting a divisive, almost hateful picture of America. His campaign is certainly capturing the press's attention, while you stick to your message, pretty strictly. "
+        }
+    },
+    {
+	    "model": "campaign_trail.answer_feedback",
+        "pk": 12713,
+        "fields": {
+            "answer": 350877.5,
+            "candidate": 77,
+            "answer_feedback": "You seem intent on bursting Newt's bubble and exposing the machinations behind his actions. To most of his supporters, though, they either shrug it off or wear it with pride, their man is a bit unhinged, and... they like it. What the hell has he done to politics in this country? You sigh and go back to working on your campaign, you will beat him."
         }
     },
     {
