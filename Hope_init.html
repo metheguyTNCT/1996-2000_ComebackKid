@@ -618,6 +618,30 @@ body.crt::after {
   pointer-events: none;
   z-index: 9999;
 }
+function setBackgroundByResolution() {
+    // Get screen resolution
+    const screenWidth = screen.width;
+    const screenHeight = screen.height;
+    
+    // Check if resolution is 1440p (2560x1440)
+    if (screenWidth === 2560 && screenHeight === 1440) {
+        document.body.background = "example.png";
+    }
+    // Check if resolution is 1080p (1920x1080)
+    else if (screenWidth === 1920 && screenHeight === 1080) {
+        document.body.background = "example.png";
+    }
+    // Fallback for other resolutions
+    else {
+        document.body.background = "example.png; // Default to 1080p background
+    }
+}
+
+setBackgroundByResolution();
+
+window.addEventListener('resize', function() {
+    setTimeout(setBackgroundByResolution, 100);
+});
 #inner_window_question {
   width: 80%;
   max-width: 1000px;
