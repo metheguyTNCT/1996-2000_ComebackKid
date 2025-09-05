@@ -77287,6 +77287,7 @@ campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_wilson");
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Dole";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C6352F";
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#072A84";
+        campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Nader";
         campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#00C100";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
@@ -77322,11 +77323,6 @@ if (ans == 210003){
     campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/99s058I.png';
     campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/D388COc.png';
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
-}
- //Ross Perot and Ralph Nader CYOA
-    if (ans == 240001 || 240002 || 240003 || 240004){
-    campaignTrail_temp.candidate_json[2]["fields"].last_name = "Nader";
-    campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ralph";
 }
 if (e.question_number+1 == 18){ // Midterms
     if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
