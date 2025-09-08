@@ -862,6 +862,24 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "Your team dumps a stack of papers on the table: the splashy HarperCollins book deal, an ethics-investigation cloud, the orphanages-for-welfare-children push, the shutdowns, his futurist moon-base talk, and K Street ties. You can press hypocrisy, cruelty, or instability, but one angle has to stick. Where do you strike, and how hard?  ",
+             "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "campaign_1_buchanan",
         "fields": {
             "priority": 0,
@@ -5668,6 +5686,62 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "campaign_1_buchanan",
             "description": "If Buchanan is so fascinated by what homosexuals do in their bedroom, he can investigate that on his own time. Meanwhile, I’ve focused on delivering for the American people, wages are up, and employment is higher. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86035.511,
+        "fields": {
+            "question": "campaign_1_gingrich",
+            "description": "Two can play this game. I’m more than happy to hold town halls across this great country, meet voters, shake hands, answer questions, and speak plainly about the economic growth we’ve seen over the last four years. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 186035.511,
+        "fields": {
+            "question": "campaign_2_gingrich",
+            "description": "I want to zero in on the zaniness. This is a man who, by 2010, hopes to be living on the moon, straight out of a sci-fi movie. On the other hand, I want to get everyone who needs it a good-paying job and make our economy work. Let’s be real."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 1860355.511,
+        "fields": {
+            "question": "campaign_2_gingrich",
+            "description": "Newt Gingrich has a problem with women. Look at the way he described Governor Whitman when he was running against her in the primary. Look at the way he has talked about female reporters. This is a man straight out of 1951. I think anyone with a brain can see this guy for what he is: a sexist."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 18603551.511,
+        "fields": {
+            "question": "campaign_2_gingrich",
+            "description": "I’ve said it before, and I’ll say it again: this is a man who will do anything for money. I don’t want to speak to the process the House is going through with its investigation into the Speaker, but I am concerned, deeply concerned, that a man like this could be President."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 18603551.5112,
+        "fields": {
+            "question": "campaign_2_gingrich",
+            "description": "Speaker Gingrich doesn’t care about you. He cares about himself. He plans... for himself. He acts... for himself. Everything he does is... for himself. I want the American people to act for themselves, and reject this sort of politics."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86035.512,
+        "fields": {
+            "question": "campaign_1_gingrich",
+            "description": "Fuck it. I know it’s messy, and we could get some bad press, but I want to bus supporters into wherever his next bullshit summit is being held and make sure their voices are heard. The people deserve to hear the truth. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86035.513,
+        "fields": {
+            "question": "campaign_1_gingrich",
+            "description": "We already held our conventions; I don’t know what the hell Newt thinks he’s doing. Who cares? Let’s keep the ship steady and keep going, if he wants press coverage, he can have it."
         }
     },
     {
@@ -19535,6 +19609,86 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 86035.511,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 186035.511,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.006623
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 1860355.511,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01121
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 18603551.511,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01234
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 18603551.5112,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.00434
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 86035.512,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 86035.513,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0081
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 86035.513,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0031
         }
     },
     {
@@ -67832,6 +67986,69 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 86035.5,
             "candidate": 77,
             "answer_feedback": "Buchanan’s promise of further tax cuts will have their appeals, but to him that’s secondary when compared to saving the west. You just seem like the more grounded, relatable candidate, and that goes far. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 86035.511,
+            "candidate": 77,
+            "answer_feedback": "You’ve always been comfortable in a town hall setting, and while you have no trouble filling a small room and regaling the crowd, in comparison to the rock concert like summits that Gingrich is holding, you seem a bit infantilized. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 186035.511,
+            "candidate": 77,
+            "answer_feedback": "While his supporters, and indeed the Speaker himself, frame his plans for further space exploration as the natural continuation of the Kennedy legacy, many, including some of his former primary opponents, view it as silly and unserious. It seems only natural to join the choir. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 1860355.511,
+            "candidate": 77,
+            "answer_feedback": "While Newt isn’t exactly known for being a Teddy Bear, his tone regarding women in particular was indeed criticized during the primary season and earlier during his Speakership. Given the fact that he has a huge deficit with women voters, making sure it stays that way is smart. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 18603551.511,
+            "candidate": 77,
+            "answer_feedback": "Newt is quick to meet your allegations with a knowing and devilish grin. Of course he’s corrupt. He practically has buckets of coins pouring out of his bulbous, inflamed skin pores. But to many partisan Republicans, this sort of attack is nothing but pure irony, and it doesn’t seem to be slowing his supporters down, in fact, quite the opposite. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 18603551.5112,
+            "candidate": 77,
+            "answer_feedback": "While the Speaker isn’t known for his kindness, his core supporters feel a kinship with him and see him, in many ways, as their martyr, their voice, and their retribution. Words like this, coming from the man they hate the most — you — don’t seem to be changing their minds at all, except perhaps making them even more committed to the Gingrich cause. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 86035.512,
+            "candidate": 77,
+            "answer_feedback": "At Gingrich’s next summit, this one on national security, droves of Democratic protesters flooded into the venue, initially wearing Gingrich shirts and hats. Soon, like a Trojan Horse, they ripped off their disguises, held up Clinton–Gore ’96 signs, and heckled the Speaker. While they were removed from the venue, you still captured the attention of the press corps."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 86035.513,
+            "candidate": 77,
+            "answer_feedback": "Slow and steady wins the race, eh? With your hefty advantage over Newt among women voters, and, in fact, most self-described moderates and independents, running a safe campaign seems like a sound move. That said, Newt is anything if not tricky, and you know he’s always looking for an opening to turn the tables."
         }
     },
     {
