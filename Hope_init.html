@@ -1889,6 +1889,25 @@ text-rendering: optimizeSpeed;
 .inner_window_w_desc {
   border: none;
 }
+#question_form label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 1px;
+  border-bottom: 2px solid transparent;
+}
+
+#question_form input[type="radio"]:checked + label {
+  background: linear-gradient(180deg, #e9f7fb 0%, #d7eef7 100%);
+  border-bottom-color:#0183AD;
+}
+
+#question_form input[type="radio"] + label:hover,
+#question_form input[type="radio"] + label:focus {
+  font-size: 14px;
+  font-weight: 400;
+  background: linear-gradient(180deg, #f3fafc 0%, #e9f7fb 100%);
+}
 .overlay_window {
   height: auto;
 </style>
