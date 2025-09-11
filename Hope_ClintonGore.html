@@ -1339,6 +1339,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "debate_gingrich",
+        "fields": {
+            "priority": 0,
+            "description": "Verbally sparring with Newt Gingrich has become your least favorite pastime over the last year. Perhaps it was worth it, if only to prepare you for this. Beneath the bright lights of the Mahaffey Theater in St. Petersburg, Florida, you shake hands as the televised debate begins, with a dozen different ways to pick apart the Speaker’s record bubbling up in your mind. Where to begin?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "debate_alexander",
         "fields": {
             "priority": 0,
@@ -4682,6 +4691,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "debate_dole",
             "description": "You know, me and Dole agree when it comes to drug problem. It's that, we have a different approach to it. But let me remind you that my family has suffered from drug abuse. I know what it’s like to watch someone you love nearly lose their life, and that’s why I hate drugs, Senator."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36001.5642,
+        "fields": {
+            "question": "debate_gingrich",
+            "description": "I’m fine just keeping it civil and winning on the merits. While Newt’s busy still trumpeting his New Contract on America, I offer a New Covenant. The era of big government is over— true, but we can’t go back to the era of fending for ourselves, as the Speaker’s Congress seems so determined to do."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36001.5643,
+        "fields": {
+            "question": "debate_gingrich",
+            "description": "Look at his approval ratings, we don’t have to play nice! The fact of the matter is that the Speaker turned his petty grievance over a perceived slight into a long, drawn-out shutdown that accomplished nothing but furloughing hundreds of thousands of government workers, blocking veterans’ benefits applications, and halting toxic waste cleanups."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36001.5644,
+        "fields": {
+            "question": "debate_gingrich",
+            "description": "Gingrich and gridlock are a packaged deal, and that’s no accident. The Speaker has fanned the flames of polarization and division at every turn in his quest for power. Just look at the memo he wrote for GOPAC! Giving guidance to call Democrats nasty names may be good for outrage politics, but it does nothing to improve people’s jobs and schools."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36001.5645,
+        "fields": {
+            "question": "debate_gingrich",
+            "description": "Look, I’m far from perfect, but it is really rich to get daily lectures on ethics and corruption from a man with so many skeletons of his own to point out. If he wants the election to be about character, that’s a fight I think I can win."
         }
     },
     {
@@ -12069,7 +12110,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 183,
-            "state_multiplier": 0.78791211211676336336
+            "state_multiplier": 0.79212345678987654321
         }
     },
     {
@@ -12528,7 +12569,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 183,
-            "state_multiplier": 1.25898987412351878898997898921121611285
+            "state_multiplier": 1.25358987412351878898997898921121611285
         }
     },
     {
@@ -16722,6 +16763,86 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.0095
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5642,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0145
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5642,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5644,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01776
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5644,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5645,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.031
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5645,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5643,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.5643,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
         }
     },
     {
@@ -29907,6 +30028,56 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 30,
             "issue_score": -0.06,
             "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12672,
+        "fields": {
+            "answer": 36001.5642,
+            "issue": 28,
+            "issue_score": -0.1,
+            "issue_importance": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12672,
+        "fields": {
+            "answer": 36001.5643,
+            "issue": 28,
+            "issue_score": 0.2,
+            "issue_importance": 1.0
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12672,
+        "fields": {
+            "answer": 36001.5644,
+            "issue": 28,
+            "issue_score": 0.35,
+            "issue_importance": 1.0
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12672,
+        "fields": {
+            "answer": 36001.5645,
+            "issue": 28,
+            "issue_score": 0.125,
+            "issue_importance": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12672,
+        "fields": {
+            "answer": 36001.5642,
+            "issue": 27,
+            "issue_score": -0.1,
+            "issue_importance": 0.5
         }
     },
     {
@@ -68113,6 +68284,42 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 36001.5,
             "candidate": 77,
             "answer_feedback": "Bringing up your half-brother Roger’s struggle with addiction is a perfect way to show you have a genuine, personal connection to the issue at hand. You speak briefly but earnestly about how it shaped your views on rehabilitation and the need for compassion alongside accountability. Dole, in comparison, sticks to abstract talking points and looks completely out of touch. It is safe to say that you won this debate handedly."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.5642,
+            "candidate": 77,
+            "answer_feedback": "Perhaps eager to escape his reputation as a partisan firebrand, Newt catches your drift and plays along. A friendly discussion reminiscent of your Claremont N.H. town hall together last year ensues, making for a rare moment of productive conversation between the two candidates. Not a bad look for either of you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.5643,
+            "candidate": 77,
+            "answer_feedback": "This is a no-brainer. Re-litigating the unpopular government shutdowns forces Gingrich into an awkward position of defending them as proof that the new Republican majority is ''serious about their beliefs'' while simultaneously backpeddling on the issue of his oft-mocked supposed plane ''snubbing'' by you."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.5645,
+            "candidate": 77,
+            "answer_feedback": "He plays the wounded dog, calling your jabs ''destructive, vicious, negative'' and every other bad adjective he’s able to list off, but it doesn’t change the fact that it’s been public knowledge since the ‘80s that he cheated on and divorced his first wife while she was in the hospital with uterine cancer."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.5644,
+            "candidate": 77,
+            "answer_feedback": "Newt deflects, bringing up the alarmist ads you ran about his budget proposals’ cuts to Medicare and Medicaid during the shutdowns to call you the ''real fearmonger.'' You fire back that everything in them was truthful, and the point is lost."
         }
     },
     {
