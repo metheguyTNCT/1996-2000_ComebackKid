@@ -471,27 +471,7 @@ background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
-.mytooltip .mytooltiptext {
-width: 240px;
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-color: black;
-text-align: center;
-border-radius: 6px;
-padding: 10px;
-position: absolute;
-z-index: 99;
-bottom: 20%;
-left: 20%;
-margin-left: -90px;
-opacity: 0;
-transition: opacity 0.3s;
-border: 1px solid #003A4F;
-pointer-events: none;
-font-size: 13px !important;
-line-height: 1.5em !important;
-font-weight: normal !important;
-font-style: normal !important;
-}
+
 .inner_window_question h3,
 .overlay_window h3 {
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
@@ -669,12 +649,18 @@ function addDynamicCSS() {
           position: relative;
           display: inline-block;
           cursor: pointer;
-          background-color: lightblue;
+          text-decoration: underline;
+          color: blue;
+      }
+
+      
+      .mytooltip:hover {
+          color: purple;
       }
 
       .mytooltip .mytooltiptext {
-          width: 240px;
-          background-color: lightblue;
+         width: 240px;
+          background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
           color: black;
           text-align: center;
           border-radius: 6px;
@@ -686,7 +672,7 @@ function addDynamicCSS() {
           margin-left: -90px;
           opacity: 0;
           transition: opacity 0.3s;
-          border: 1px solid black;
+          border: 1px solid #003A4F;
           pointer-events: none;
           font-size: 13px !important;
           line-height: 1.5em !important;
@@ -1713,7 +1699,8 @@ Object.assign(grainVideo.style, {
   opacity:         '0.051',            // dial this down until it’s as subtle as you like
   pointerEvents:   'none',
   zIndex:          '9998',
-  mixBlendMode:    'screen'          // ← add this
+  mixBlendMode:    'screen',          // ← add this
+  filter:          'blur(3px)'
 });
 
 function updateGrainOverlay() {
