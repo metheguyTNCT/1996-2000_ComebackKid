@@ -358,6 +358,17 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
 document.head.innerHTML +=`
 <style>
+.mytooltip:hover .mytooltiptext {
+opacity: 1;
+transition-delay: 0.6s;
+  @keyframes crtFlicker {
+  0%   { opacity: 1; }
+  5%   { opacity: 0.9; }
+  10%  { opacity: 1; }
+  15%  { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
 .game_header {
 background: linear-gradient(to bottom, #004f6e 0%, #005b82 50%, #006d96 100%);
 border: 1px solid #003A4F;
@@ -498,23 +509,7 @@ border-right-color: #003A4F;
 border-bottom-color: #003A4F;
 background: #024E71;
 }
-.mytooltip:hover .mytooltiptext {
-box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25), 0 0 6px rgba(60, 110, 255, 0.15);
-}
-.mytooltip .mytooltiptext img {
-max-width: 240px;
-height: auto;
-}
-.mytooltip .mytooltiptext::after {
-content: "";
-position: absolute;
-top: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #006d96 transparent transparent transparent;
-}
+
 #state_result_container {
 background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 border: 1px solid #003A4F;
@@ -538,16 +533,6 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 
 .window {
   animation: windowPop 0.34s ease-out;
-}
-.mytooltip:hover .mytooltiptext {
-opacity: 1;
-transition-delay: 0.6s;
-  @keyframes crtFlicker {
-  0%   { opacity: 1; }
-  5%   { opacity: 0.9; }
-  10%  { opacity: 1; }
-  15%  { opacity: 0.95; }
-  100% { opacity: 1; }
 }
 
 body.crt {
@@ -639,11 +624,10 @@ body {
 `
 
 // Tooltips
+
+
 function addDynamicCSS() {
   var css = `
-      .inner_window_question h3 .mytooltip{
-          background-color: lightskyblue;
-      }
 
       .mytooltip {
           position: relative;
@@ -652,18 +636,31 @@ function addDynamicCSS() {
           text-decoration: underline;
           color: blue;
       }
+     .mytooltip .mytooltiptext::before {
+      content: "Tooltip - Microsoft Internet Explorer"; /* The text to display */
+      top: -20px;
+      left: 0px;
+      outline: solid 2px #C0C0C0; 
+      text-shadow: none;
+      text-align: left;
+      position: absolute;
+      padding-right: 35px;
+      padding-left: 4px;
 
-      
+      color: white;
+      background: linear-gradient(90deg,navy,#1084d0); /* Match the background to "cut out" the border */
+      font-weight: bold;
+    }
       .mytooltip:hover {
           color: purple;
       }
 
       .mytooltip .mytooltiptext {
-         width: 240px;
+         max-width: 240px;
           background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-          color: black;
+          color: #d8fffd;
+          text-shadow: 1px 1px 2px #313b44;
           text-align: center;
-          border-radius: 6px;
           padding: 10px;
           position: absolute;
           z-index: 99;
@@ -671,8 +668,13 @@ function addDynamicCSS() {
           left: 20%;
           margin-left: -90px;
           opacity: 0;
+          overflow: visible;
           transition: opacity 0.3s;
-          border: 1px solid #003A4F;
+          border-top: 20px solid #000;
+          border-left: 1px inset #000;
+          border-right: 1px inset #000;
+          border-bottom: 1px inset #000;
+          outline: outset 3px #C0C0C0;  
           pointer-events: none;
           font-size: 13px !important;
           line-height: 1.5em !important;
@@ -688,6 +690,7 @@ function addDynamicCSS() {
       .mytooltip:hover .mytooltiptext {
           opacity: 1;
           transition-delay: 0.5s;
+          box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25), 0 0 6px rgba(60, 110, 255, 0.15);
       }
   `;
 
