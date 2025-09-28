@@ -84590,7 +84590,7 @@ history_index=0;
 current_website=browser_history[history_index];
 let draggableBox = null;
 
-var dole_var = 2
+var dole_var = 1
 var buchanan_var = 0
 var forbes_var = 0
 var alexander_var = 0
@@ -84638,7 +84638,7 @@ let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
 
 let doleObject = {img: "https://i.imgur.com/JLuk6Z4.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
 let buchananObject = {img: "https://i.imgur.com/cp1bMKR.png",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
-let forbesObject = {img: "https://i.imgur.com/WtdoPuB.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
+let forbesObject = {img: "https://i.imgur.com/WtdoPuB.png",name: "Steve Forbes",title: "BUSINESSMAN",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
 let alexanderObject = {img: "https://i.imgur.com/GwSYKte.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is very similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
 let grammObject = {img: "https://i.imgur.com/t8plVPA.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
 let specterObject = {img: "https://i.imgur.com/v0PbV2H.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
@@ -84775,91 +84775,91 @@ refreshSurrogates();
 }
 
 const ideologyMap = {
-    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>`,
-    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>`,
-    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>`,
-    "7": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "8": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "9": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "10": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
-    "11": `<i><span style="color:rgb(35, 165, 212);">Progressive Democrat</i></span>`,
+    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-1</span>)`,
+    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136)">0</span>)`,
+    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">1</span>)`,
+    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">2</span>)`,
+    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">3</span>)`,
+    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">4</span>)`,
+    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">5</span>)`,
+    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">6</span>)`,
+    "7": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">7</span>)`,
+    "8": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">8</span>)`,
+    "9": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">9</span>)`,
+    "10": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">10</span>)`,
+    "11": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">11</span>)`,
 
 }
 
 const legacyMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>`,
+    "-6": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">-1</span>)`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Utterly Unremarkable</i></span>. (<span style="color:rgb(213, 10, 10);">0</span>)`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>. (<span style="color:rgb(218, 255, 133);">1</span>)`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>. (<span style="color:rgb(218, 255, 133);">2</span>)`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Gaining Ground</i></span>. (<span style="color:rgb(218, 255, 133);">3</span>)`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>. (<span style="color:rgb(16, 129, 234);">4</span>)`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>. (<span style="color:rgb(16, 129, 234);">5</span>)`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>. (<span style="color:rgb(16, 129, 234);">6</span>)`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Cementing National Memory</i></span>. (<span style="color:rgb(16, 129, 234);">7</span>)`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>. (<span style="color:rgb(3, 148, 46);">8</span>)`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>. (<span style="color:rgb(3, 148, 46);">9</span>)`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>. (<span style="color:rgb(3, 148, 46);">10</span>)`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">Going Down In History</i></span>. (<span style="color:rgb(3, 148, 46);">11</span>)`,
 
 }
 
 
 const fpwinMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>`,
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(213, 10, 10);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(213, 10, 10);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(213, 10, 10);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(213, 10, 10);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">-1</span>)`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">0</span>)`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>. (<span style="color:rgb(218, 255, 133);">1</span>)`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>. (<span style="color:rgb(218, 255, 133);">2</span>)`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">Finishing the Job Abroad</i></span>. (<span style="color:rgb(218, 255, 133);">3</span>)`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">4</span>)`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">5</span>)`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">6</span>)`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">7</span>)`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">8</span>)`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">9</span>)`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">10</span>)`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">11</span>)`,
 
 }
 
 const legwinMap = {
-    "-6": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-5": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-4": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>`,
-    "1": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "2": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "3": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>`,
+    "-6": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(213, 10, 10);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(213, 10, 10);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(213, 10, 10);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(213, 10, 10);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">-1</span>)`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">0</span>)`,
+    "1": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>. (<span style="color:rgb(218, 255, 133);">1</span>)`,
+    "2": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>. (<span style="color:rgb(218, 255, 133);">2</span>)`,
+    "3": `<i><span style="color:rgb(218, 255, 133);">A Few Washington Wins</i></span>. (<span style="color:rgb(218, 255, 133);">3</span>)`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">4</span>)`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">5</span>)`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">6</span>)`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">7</span>)`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">8</span>)`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">9</span>)`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">10</span>)`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">11</span>)`,
 
 }
 
@@ -94983,17 +94983,17 @@ refButton.insertAdjacentElement('afterend', newButton);
 }
 const main_website_candidate_list = [
 {img: "https://i.imgur.com/JLuk6Z4.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."},
-{img: "https://i.imgur.com/cp1bMKR.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."},
-{img: "https://i.imgur.com/WtdoPuB.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."},
+{img: "https://i.imgur.com/cp1bMKR.png",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."},
+{img: "https://i.imgur.com/WtdoPuB.png",name: "Steve Forbes",title: "BUSINESSMAN",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."},
 {img: "https://i.imgur.com/GwSYKte.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is very similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."},
 {img: "https://i.imgur.com/t8plVPA.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."},
 {img: "https://i.imgur.com/v0PbV2H.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."},
-{img: "https://i.imgur.com/DvJ3WdF.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"}
+{img: "https://i.imgur.com/DvJ3WdF.png",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"}
 
 // {img: "https://i.imgur.com/22cM2W9.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."},
 // {img: "https://i.imgur.com/awIQiBI.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House  —  God knows if he'll make the plunge."},
 // {img: "https://i.imgur.com/loKKTOb.png",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your opposite number in the House, your dismal performance in the midterms has brought him in the race. However, it's not likely he'll get much farther than that."},
-// {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."},
+// {img: "https://i.imgur.com/xvc3p9M.png",name: "Bill Weld",title: "GOVERNOR OF MASSACHUSETTS",description: "Desperate times call for desperate measures. Hand picked by higher ups, Bill Weld is the perfect choice to restore trust in the party, much to the contempt of every conservative. But what other choice do they have?"},
 // {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."},
 
 ];
