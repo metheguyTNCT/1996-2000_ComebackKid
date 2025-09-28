@@ -2086,10 +2086,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_16_healthcareH",
+        "pk": "question_16_welfareMPS",
         "fields": {
             "priority": 0,
-            "description": "It all came at once. The opposition, who had been running on fumes since their defeat have found just what to rally against. This plan is everything they hate. Big government, a small business crusher, completely incomprehensible to the average American. The narrative is being lost as the shields have been raised, we need to do something before everything gets crushed.",
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
             "likelihood": 1
         }
     },
@@ -2387,15 +2387,6 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "With Moynihan behind you, you had much less leeway in what you and Mitchell could achieve, because Moynihan was against anything that looked like unilateralism. Still, you weren’t going to drop everything you had just because he asked you politely. He would have to learn that, no matter how much respect people had for him, there were red lines.",
-            "likelihood": 1
-        }
-    },
-        {
-        "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
-        "fields": {
-            "priority": 0,
-            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
             "likelihood": 1
         }
     },
@@ -84542,7 +84533,7 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "You went in with boxing gloves under the table, and thankfully you didn't have to use them. In the end, you were satisfied by your changes but the media only repeated how 95% of the text was not changed from the first proposal. You've been mocked as the one man unable to win a bet with a pair of aces."
         }
-    }
+    },
 ]
 
 
@@ -84609,7 +84600,7 @@ var wilson_var = 0
 var powell_var = -99
 var bono_var = -99
 var gingrich_var = -99
-var perot_var = -99
+var weld_var = -99
 var bush_var = -99
 
 var moveup = 0
@@ -84625,7 +84616,7 @@ var powell_active = 0
 
 var bono_active = 0
 var gingrich_active = 0
-var perot_active = 0
+var weld_active = 0
 var bush_active = 0
 
 let opponents = {
@@ -84639,24 +84630,24 @@ let opponents = {
     powell: powell_var,
     bono: bono_var,
     gingrich: gingrich_var,
-    perot: perot_var,
+    weld: weld_var,
     bush: bush_var
 };
 
 let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
 
 let doleObject = {img: "https://i.imgur.com/JLuk6Z4.png",name: "Bob Dole",title: "KANSAS SENATOR",description: "The former Senate Majority Leader and current Kansas Senator is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' There's not much Dole has to do to secure the nomination, but he certainly won't be ingnoring his competition."};
-let buchananObject = {img: "https://i.imgur.com/cp1bMKR.png",name: "Pat Buchanan",title: "FMR. COMMS DIRECTOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
+let buchananObject = {img: "https://i.imgur.com/cp1bMKR.png",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
 let forbesObject = {img: "https://i.imgur.com/WtdoPuB.png",name: "Steve Forbes",title: "FORBES MAG. EIC",description: "The eccentric Editor-In-Chief of his grandfather's magazine, Forbes is a borderline one issue candidate. His bread and butter is the call for a ''Flat Tax'', which although in itself is very popular, he doesn't talk about other policies. In order to get the nomination, Forbes needs to promise the change a liberal administration isn't giving."};
 let alexanderObject = {img: "https://i.imgur.com/GwSYKte.png",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Populist, but not on Pat's level, Lamar is very similar, politically speaking, to yourself. The former Governor and Secretary of Education has a lot of the same base as you, and finds himself in a similar position to you four short years ago. If Lamar wants to be the new face of the party, he'll need to paint himself as a new slice of conservatism."};
 let grammObject = {img: "https://i.imgur.com/t8plVPA.png",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."};
 let specterObject = {img: "https://i.imgur.com/v0PbV2H.png",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
-let wilsonObject = {img: "https://i.imgur.com/DvJ3WdF.png",name: "Pete Wilson",title: "CALIFORNIA GOVERNOR",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
+let wilsonObject = {img: "https://i.imgur.com/DvJ3WdF.png",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"};
 
 let powellObject = {img: "https://i.imgur.com/cp0lPS0.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
 let bonoObject = {img: "https://i.imgur.com/Y8ylOGM.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House -- God knows if he'll make the plunge."};
 let gingrichObject = {img: "https://i.imgur.com/31SzvKh.png",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your opposite number in the House, your dismal performance in the midterms has brought him in the race. However, it's not likely he'll get much farther than that."};
-let perotObject = {img: "https://i.imgur.com/bBaZkEq.png",name: "Ross Perot",title: "BUSINESSMAN",description: "'Ross Perot isn't supposed to be here. His third party campaign in 1992 caused many Republicans to blame him for Bush's loss, he's anti-NAFTA which most Republicans support, and he was planning to retire from politics this year, but with a strong draft campaign, it seems like Ross Perot might actually be the Republican nominee."};
+let weldObject = {img: "https://i.imgur.com/xvc3p9M.png",name: "Bill Weld",title: "GOVERNOR OF MASSACHUSETTS",description: "Desperate times call for desperate measures. Hand picked by higher ups, Bill Weld is the perfect choice to restore trust in the party, much to the contempt of every conservative. But what other choice do they have?"};
 let bushObject = {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."};
 function updateCandidates(type, amt){
     console.log(`\n=== updateCandidates called with type: ${type}, amt: ${amt} ===`);
@@ -84771,8 +84762,8 @@ sortedOpponents.forEach(([name, value]) => {
         main_website_candidate_list.push(bonoObject);
     } else if (name === 'gingrich' && gingrich_active == 1) {
         main_website_candidate_list.push(gingrichObject);
-    } else if (name === 'perot' && perot_active == 1) {
-        main_website_candidate_list.push(perotObject);
+    } else if (name === 'weld' && weld_active == 1) {
+        main_website_candidate_list.push(weldobject);
     } else if (name === 'bush' && bush_active == 1) {
         main_website_candidate_list.push(bushObject);
     }
@@ -85183,7 +85174,7 @@ question_insert("question_2_nannygate",
     }
     }
     }
-    if (e.question_number+1 == 10) { // Healthcare/Welfare I
+    if (e.question_number+1 == 10) { // Healthcare/Welfare II
     if (e.player_answers.includes(50004)) {
     question_insert("question_10_nafta", 
             {
@@ -86462,7 +86453,302 @@ question_insert("question_14_bosnia_all",
 }
 }
 }
-if (e.question_number+1 == 15) { // Healthcare III
+if (e.question_number+1 == 15) { // Healthcare/Welfare III
+if (e.player_answers.includes(50004)) {
+if (e.player_answers.includes(51002.5)) {
+question_insert("budget_2_normal_comp_con", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_comp_lib", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp_con", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp_lib", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_comp", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_bentsen_commission", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_bentsen_cuts", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_bentsen_carbon", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_greenspan_noscan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_nogreenspan_noscan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_greenspan_scan_welfare", 
+       {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_nogreenspan_scan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareMPS",
+        "fields": {
+            "priority": 0,
+            "description": "Asking for everyone's opinion is the ideal way of exposing problems. However, it's also the perfect way to getting bogged down on how to actually solve the problem. Ideas on Welfare are reaching such a velocity of transformation that they have become vapor, figments in the air impossible to catch. You need a path forward. Something all can agree on.",
+            "likelihood": 1
+        }
+            }
+        );
+} else {
+if (e.player_answers.includes(30001)) {
+question_insert("budget_2_reich_greenspan_noscan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_reich",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_nogreenspan_noscan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_reich",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_greenspan_scan_welfare", 
+        {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_reich",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_reich_nogreenspan_scan_welfare", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_reich",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+} if (e.player_answers.includes(30002)) {
+question_insert("budget_2_bentsen_commission", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_bentsen",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_bentsen_cuts", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_bentsen",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_bentsen_carbon", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_bentsen",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+} else {
+question_insert("budget_2_normal_comp_con", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_comp_lib", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp_con", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp_lib", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_comp", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+question_insert("budget_2_normal_uncomp", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_16_welfareTP_none",
+        "fields": {
+            "priority": 0,
+            "description": "The \"New Democrat\" branding is certainly what propelled you to The White House. It's both something that helped woo the populists interested in Perot as well as branding you the Technocratic problem solver middle-class folks love. However, as you fulfill your dream of Welfare, that sword needs to be sharpened. Only clear and concise messaging will allow you to dominate Congress. No one can both have a ear to the ground and see the wider picture up an ivory tower.",
+            "likelihood": 1
+        }
+            }
+        );
+}
+}
+} else {
 if (e.player_answers.includes(50006)) {
 question_insert("budget_2_normal_comp_con", 
             {
@@ -86886,6 +87172,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         );
 }
 }
+}
 
     if (e.question_number+1 == 16) { // Guns
     if (trust >= 5) {
@@ -86912,6 +87199,50 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
         );
             question_insert("question_16_healthcareMIT", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareMPS", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_none", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_reich", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime_alt",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_bentsen", 
             {
         "model": "campaign_trail.question",
         "pk": "question_7_crime_alt",
@@ -86956,9 +87287,54 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     }
     }
     );
+    question_insert("question_16_welfareMPS", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_none", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_reich", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
+        question_insert("question_16_welfareTP_bentsen", 
+            {
+        "model": "campaign_trail.question",
+        "pk": "question_7_crime",
+        "fields": {
+            "priority": 2,
+            "description": "At this point, it feels like every day brings another mess you’ve inherited from the Bush administration. No wonder you kicked his ass so badly. Crime skyrocketed under Reagan and only got worse under Bush, hitting an all-time high just three years ago. You made it clear to Reno from day one that something had to be done, and now, after months of back-and-forth, she’s pushing for reform. You’re finally weighing your options. What’s your move?",
+            "likelihood": 1
+        }
+            }
+        );
     }
     }
-    if (e.question_number+1 == 17) { // Healthcare IIII
+
+    if (e.question_number+1 == 17) { // Healthcare/Welfare IIII
     if (e.player_answers.includes(50004)) {
     if (e.player_answers.includes(94002.5)) {
     if (trust >= 5) {
@@ -92952,8 +93328,8 @@ if (sortedOpponents[1+moveup][0] == "dole") {
             else if(gramm_active == 1){
             opponents.gramm += (opponents.buchanan/2)
             }
-            else if(perot_active == 1) {
-            opponents.perot += (opponents.buchanan/2)
+            else if(weld_active == 1) {
+            opponents.weld += (opponents.buchanan/2)
             }
             opponents.buchanan = -10
         }
