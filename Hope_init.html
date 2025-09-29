@@ -1126,6 +1126,8 @@ nextButton.addEventListener("click", function () {
   const audio = document.getElementById("audio");
   audio.src = playlist.getCurrentSong().audioLink;
   audio.play();
+      tinyPlay.style.visibility = "visible";
+    tinyPause.style.visibility = "hidden";
 });
 
 prevButton.addEventListener("click", function () {
@@ -1134,6 +1136,8 @@ prevButton.addEventListener("click", function () {
   const audio = document.getElementById("audio");
   audio.src = playlist.getCurrentSong().audioLink;
   audio.play();
+      tinyPlay.style.visibility = "visible";
+    tinyPause.style.visibility = "hidden";
 });
 
   const currentTimeElement = document.createElement("span");
@@ -1547,7 +1551,27 @@ position: relative;
   }
 
 
-  #playPauseButton {
+  #playPauseButton:active {
+    border: 2px outset #17171a;
+  }
+
+  #nextButton:active {
+    border: 2px outset #17171a;
+  }
+
+  #prevButton:active {
+    border: 2px outset #17171a;
+  }
+
+  #volumeUpButton:active {
+    border: 2px outset #17171a;
+  }
+
+  #volumeDownButton:active {
+    border: 2px outset #17171a;
+  }
+
+    #playPauseButton {
     width: 60px;
     height: 48px;
     background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
