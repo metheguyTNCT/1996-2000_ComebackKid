@@ -85154,16 +85154,6 @@ question_insert("question_2_nannygate",
 }
 
 if (e.question_number+1 == 14) { // Budget III
-    if ((!e.player_answers.includes(88011.5) && !e.player_answers.includes(60003.5)) && FPWin <= -2) {
-    powell_active = 1
-    moveup = 1
-    opponents.powell = 4
-    }
-    if ((!e.player_answers.includes(88011.5) && !e.player_answers.includes(60003.5)) && FPWin <= -1) {
-    powell_active = 1
-    moveup = 1
-    opponents.powell = 3
-    }
     if (e.player_answers.includes(30003)) {
 if (e.player_answers.includes(880021.5) || e.player_answers.includes(880025.5) || e.player_answers.includes(880029.5) || e.player_answers.includes(8800233.5)) {
 if ((e.player_answers.includes(88002.5) || e.player_answers.includes(880024.5) || e.player_answers.includes(880028.5)) || e.player_answers.includes(8800232.5)) {
@@ -89883,47 +89873,6 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
         if ((e.player_answers.includes(85004.5)|| e.player_answers.includes(85008.5)) && (e.player_answers.includes(90002.5)|| e.player_answers.includes(90006.5)) && e.player_answers.includes(170003)) {
             CommieReturn += 1;
-            if ((e.player_answers.includes(80002) || e.player_answers.includes(80004)) && e.player_answers.includes(70002) && e.player_answers.includes(60002.5) && (e.player_answers.includes(85004.5) || e.player_answers.includes(85008.5))) {
-            bush_active = 1
-            moveup = 1
-            opponents.bush = 10
-            if (dole_active == 1) {
-            dole_active = 0
-            opponents.dole = -10
-            }
-            if (buchanan_active == 1) {
-            buchanan_active = 0
-            opponents.buchanan = -10
-            }
-            if (forbes_active == 1) {
-            forbes_active = 0
-            opponents.forbes = -10
-            }
-            if (alexander_active == 1) {
-            alexander_active = 0
-            opponents.alexander = -10
-            }
-            if (gramm_active == 1) {
-            gramm_active = 0
-            opponents.gramm = -10
-            }
-            if (specter_active == 1) {
-            specter_active = 0
-            opponents.specter = -10
-            }
-            if (wilson_active == 1) {
-            wilson_active = 0
-            opponents.wilson = -10
-            }
-            if (powell_active == 1) {
-            powell_active = 0
-            opponents.powell = -10
-            }
-            if (bono_active == 1) {
-            bono_active = 0
-            opponents.bono = -10
-            }
-            } else {
             powell_active = 1
             moveup = 1
             opponents.powell = 10
@@ -89955,10 +89904,13 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             wilson_active = 0
             opponents.wilson = -10
             }
-            if (bono_active == 1) {
-            bono_active = 0
-            opponents.bono = -10
+            if (gingrich_active == 1) {
+            wilson_active = 0
+            opponents.wilson = -10
             }
+            if (weld_active == 1) {
+            weld_active = 0
+            opponents.weld = -10
             }
             ctsAchievement("Красный Призрак");
             updateCandidates("junk", 0)
@@ -93060,84 +93012,6 @@ question_insert("debate_buchanan",question_22_1996_election);
         }
         if (e.question_number+1 == 29) {
         if (CommieReturn == 1) {
-        if (BushNom == 1) {
-            question_insert("soviet_4_nowar", 
-                {
-                   
-          "model": "campaign_trail.question",
-          "pk": "campaign_1_bush_commies",
-          "fields": {
-              "priority": 0,
-              "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The Republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
-              "likelihood": 1
-          }
-                    }
-                
-                );
-              question_insert("soviet_4_nonato_noun", 
-                {
-                   
-          "model": "campaign_trail.question",
-          "pk": "campaign_1_bush_commies",
-          "fields": {
-              "priority": 0,
-              "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The Republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
-              "likelihood": 1
-          }
-                    }
-                
-                );
-              question_insert("soviet_4_nato_noun", 
-                {
-                   
-          "model": "campaign_trail.question",
-          "pk": "campaign_1_bush_commies",
-          "fields": {
-              "priority": 0,
-              "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The Republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
-              "likelihood": 1
-          }
-                    }
-                
-                );
-                question_insert("soviet_4_nonato_un", 
-                  {
-                     
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_bush_commies",
-            "fields": {
-                "priority": 0,
-                "description": "It's like we're in the 1980's again. Russia and its new renewed ambitions pushing for the reforming of the union between sister republics in Belarus and Kazakhstan, its rapprochement to China and support for the Regime of Milosevic in Yugoslavia are the only things people are talking about. No one really knows how to deal with it. The Republicans are bringing the man of the CIA that stood both firm and with an open palm to Gorbachev, how could you present yourself as the better candidate?",
-                "likelihood": 1
-            }
-                      }
-                  
-                  );
-      question_insert("campaign_1_bush_commies", 
-    {
-          "model": "campaign_trail.question",
-          "pk": "campaign_2_bush_commies",
-          "fields": {
-              "priority": 0,
-              "description": "Last time, you had a few glaring spots you could keep on bashing. Dan Quayle, the economy, the usual. However today, since your the incumbent and Bush made a way better VP pick in George Allen, we need to find which bullet in which gun will kill the target as Bush won't throw any of his pushes to take you down. Where do you strike?",
-              "likelihood": 1
-          }
-    }
-    );
-    question_insert("campaign_2_bush_commies", 
-      {
-         
-"model": "campaign_trail.question",
-"pk": "debate_bush_commies",
-"fields": {
-    "priority": 0,
-    "description": " It’s time to face Bush head to head, without Perot to steal the show. When you get there, you see him. He's old, creaky, yet the most determined you've seen him. You can tell he's learned from his mistakes. He didn't even bring his watch. It's almost time, what are you gonna focus on?",
-    "likelihood": 1
-}
-          }
-      
-      );
-        } else if (PowellNom == 1) {
                     question_insert("soviet_4_nowar", 
     {
         "model": "campaign_trail.question",
@@ -93204,114 +93078,143 @@ question_insert("debate_buchanan",question_22_1996_election);
             }
         }
         );
-        } 
         } else {
-        if (SundogNom == 1) {
-                    question_insert("question_19_alt", 
+        if (DoleNom == 1) {
+      question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_1_sundog",
-              "fields": {
+            "pk": "campaign_1_dole",
+            "fields": {
                 "priority": 0,
-                "description": "Ross Perot's successful siege of the Republican Party has completely upended the race. Just a few weeks ago, it was widely assumed some generic conseus Republican would secure the nomination at a contested convention, not the billionaire warrior. The latest polls show you riding a nice wave, and your numbers are improving. But the biggest question remains: what should our message be heading into the fall?",
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
                 "likelihood": 1
-              }
+            }
             });
             question_insert("question_19_pr_and_wo_act", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_1_sundog",
-              "fields": {
+            "pk": "campaign_1_dole",
+            "fields": {
                 "priority": 0,
-                "description": "Ross Perot's successful siege of the Republican Party has completely upended the race. Just a few weeks ago, it was widely assumed some generic conseus Republican would secure the nomination at a contested convention, not the billionaire warrior. The latest polls show you riding a nice wave, and your numbers are improving. But the biggest question remains: what should our message be heading into the fall?",
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
                 "likelihood": 1
-              }
+            }
             });
             question_insert("question_29_defense_of_marriage", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_1_sundog",
-              "fields": {
+            "pk": "campaign_1_dole",
+            "fields": {
                 "priority": 0,
-                "description": "Ross Perot's successful siege of the Republican Party has completely upended the race. Just a few weeks ago, it was widely assumed some generic conseus Republican would secure the nomination at a contested convention, not the billionaire warrior. The latest polls show you riding a nice wave, and your numbers are improving. But the biggest question remains: what should our message be heading into the fall?",
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
                 "likelihood": 1
-              }
+            }
             });
             question_insert("question_ques_18_alt_fail", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_1_sundog",
-              "fields": {
+            "pk": "campaign_1_dole",
+            "fields": {
                 "priority": 0,
-                "description": "Ross Perot's successful siege of the Republican Party has completely upended the race. Just a few weeks ago, it was widely assumed some generic conseus Republican would secure the nomination at a contested convention, not the billionaire warrior. The latest polls show you riding a nice wave, and your numbers are improving. But the biggest question remains: what should our message be heading into the fall?",
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
                 "likelihood": 1
-              }
+            }
             });
             question_insert("question_ques_18_alt_win", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_1_sundog",
-              "fields": {
+            "pk": "campaign_1_dole",
+            "fields": {
                 "priority": 0,
-                "description": "Ross Perot's successful siege of the Republican Party has completely upended the race. Just a few weeks ago, it was widely assumed some generic conseus Republican would secure the nomination at a contested convention, not the billionaire warrior. The latest polls show you riding a nice wave, and your numbers are improving. But the biggest question remains: what should our message be heading into the fall?",
+                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
                 "likelihood": 1
-              }
+            }
             });
-            question_insert("campaign_1_sundog", 
+                    question_insert("campaign_1_dole", 
+      {
+            "model": "campaign_trail.question",
+            "pk": "campaign_2_dole",
+            "fields": {
+                "priority": 0,
+                "description": "Bob Dole’s a really easy target. He’s known to all and yet loved by nearly nobody. He’s been in Washington longer than most voters have been alive, and while there’s respect for his service, there’s a lot of baggage there too. He’s the champion of the GOP in a confused after-Reagan haze. No <i>message</i>, no <i>momentum</i>, no <i>magic</i>. If we’re gonna beat him clean, you’ll need something sharp, something that shatters the whole façade.",
+                "likelihood": 1
+            }
+      }
+      );
+       question_insert("campaign_2_dole", 
+      {
+                 "model": "campaign_trail.question",
+      "pk": "debate_dole",
+      "fields": {
+          "priority": 0,
+          "description": "You’re in Hartford, Connecticut. To your right stands Senator Dole—the poor old soul. As he wraps up his opening statement, you wonder: why did he run? Doesn’t he see the polls? This has to be one of the most lopsided races in recent memory, and he’s the one taking the punches for all to see. Maybe it doesn’t matter to him. Maybe he sees something you don’t. But if that’s the case, you’ve got to stop him here. For his own good, and for the country’s, it’s time to send him into retirement.",
+          "likelihood": 1
+      }
+      }
+      );
+} else if (BuchananNom == 1) {
+                 question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
-              "pk": "campaign_2_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "Ross Perot, even back in 1992, was reluctant to wade into character attacks. But since entering Republican politics, he’s been more than willing to shout into microphones, denouncing your ethics: ''I am sick and tired of the lying, shady, slick and donor-poisoned Democrat President!'' Our team has drafted a few ideas for a comeback, but it’s your call whether to greenlight one. What do you say?",
-                "likelihood": 1
-              }
+                        "pk": "campaign_1_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
+                            "likelihood": 1
+                        }
             });
-            question_insert("campaign_2_sundog", 
+            question_insert("question_19_pr_and_wo_act", 
             {
               "model": "campaign_trail.question",
-              "pk": "debate_sundog",
-              "fields": {
-                "priority": 0,
-                "description": "You're in Cleveland, Ohio, under the hot lights of the presidential debate stage. To your right stands the other man who faced Bush four years ago, Ross Perot. He stands stiff, straight as an arrow, eyes narrowed like he's staring down death. ''Let me break it down for you—if Washington could balance a lemonade stand, we wouldn’t be here tonight,'' he snaps, before launching into more of his usual ranting. The moderator turns. ''Mr. President?'' It’s your turn, Slick.",
-                "likelihood": 1
-              }
+                        "pk": "campaign_1_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
+                            "likelihood": 1
+                        }
             });
-        } else if (BushNom == 1) {
-                                  question_insert("oslo_4", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_bush",
-            "fields": {
-                "priority": 0,
-                "description": "Once more, you and Bush find yourselves battling over how to make the economy work. While George carries his own albatross — the fact that the economy was truly awful during his term — he now claims that the ringing endorsements of current economic improvement are actually thanks to Republican input rather than the Democrats’ own. In short, it became a simple zinger: 'The Republicans gather, the Democrats spend.' It’s almost a bold-faced lie, and yet it’s effective.",
-                "likelihood": 1
-            }
-      }
-      );
-                    question_insert("campaign_1_bush", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_bush",
-            "fields": {
-                "priority": 0,
-                "description": "Last time, you had a few glaring spots you could keep on bashing. Dan Quayle, the economy, the usual. However today, since your the incumbent and Bush made a way better VP pick in George Allen, we need to find which bullet in which gun will kill the target as Bush won't throw any of his pushes to take you down. Where do you strike?",
-                "likelihood": 1
-            }
-      }
-      );
-                          question_insert("campaign_2_bush", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "debate_bush",
-            "fields": {
-                "priority": 0,
-                "description": " It’s time to face Bush head to head, without Perot to steal the show. When you get there, you see him. He's old, creaky, yet the most determined you've seen him. You can tell he's learned from his mistakes. He didn't even bring his watch. It's almost time, what are you gonna focus on?",
-                "likelihood": 1
-            }
-      }
-      );
-        } else if (ForbesNom == 1) {
+            question_insert("question_29_defense_of_marriage", 
+            {
+              "model": "campaign_trail.question",
+                        "pk": "campaign_1_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
+                            "likelihood": 1
+                        }
+            });
+            question_insert("question_ques_18_alt_fail", 
+            {
+              "model": "campaign_trail.question",
+                        "pk": "campaign_1_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
+                            "likelihood": 1
+                        }
+            });
+            question_insert("question_ques_18_alt_win", 
+            {
+              "model": "campaign_trail.question",
+                        "pk": "campaign_1_buchanan",
+                        "fields": {
+                            "priority": 0,
+                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
+                            "likelihood": 1
+                        }
+            });
+                      question_insert("campaign_1_buchanan", 
+                        {
+                            "model": "campaign_trail.question",
+                            "pk": "campaign_2_buchanan",
+                            "fields": {
+                                "priority": 0,
+                                "description": "So far, you’ve been mostly reactive to Pat Buchanan’s accusations that you’re a drug-addicted, womanizing pedophile. That’s going to change. You smirk as you read the files on planned attacks, flipping through the pages with a practiced ease. Which one is your favorite?",
+                                "likelihood": 1
+                            }
+                        }
+                        );
+            } else if (ForbesNom == 1) {
                 question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
@@ -93384,301 +93287,7 @@ question_insert("debate_buchanan",question_22_1996_election);
                         }
                     }
                     );
-        } else if (PowellNom == 1) {
-                    question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-            });
-    question_insert("campaign_1_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_powell",
-            "fields": {
-                "priority": 0,
-                "description": "Powell hasn’t been directly engaging in personal attacks, letting Nickles carry his water while he calmly and reasonably explains how you’ve failed on national security. The passive-aggressiveness, the cowardice, is this the war hero? Time to try and strike back.",
-                "likelihood": 1
-            }
-        }
-        );
-        question_insert("campaign_2_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "debate_powell",
-            "fields": {
-                "priority": 0,
-                "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous. A lot more than during the ‘92 debates. What’s your tactic to handle him?",
-                "likelihood": 1
-            }
-        }
-        );
-        } else if (BonoNom == 1) {
-                                  question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-                              question_insert("campaign_1_bono", 
-                {
-                      "model": "campaign_trail.question",
-                      "pk": "campaign_2_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper—a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already aired by his Republican rivals during the long, bitter primary slog. The press barely blinked then, and voters didn’t seem to mind. Now he's polling within striking distance. How do you want to stop this guy?",
-                          "likelihood": 1
-                      }
-                }
-                );
-                 question_insert("campaign_2_bono", 
-                {
-                           "model": "campaign_trail.question",
-                "pk": "debate_bono",
-                "fields": {
-                    "priority": 0,
-                    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you, ''Mr. President?'' It's your turn, Slick. ",
-                    "likelihood": 1
-                }
-                }
-                );
-        } else if (DoleNom == 1) {
-        if ((e.player_answers.includes(70001) || e.player_answers.includes(85026.5)) && DisasterMidterms == 1) {
-      question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-                    question_insert("campaign_1_dole", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Bob Dole’s a really easy target. He’s known to all and yet loved by nearly nobody. He’s been in Washington longer than most voters have been alive, and while there’s respect for his service, there’s a lot of baggage there too. He’s the champion of the GOP in a confused after-Reagan haze. No <i>message</i>, no <i>momentum</i>, no <i>magic</i>. If we’re gonna beat him clean, you’ll need something sharp, something that shatters the whole façade.",
-                "likelihood": 1
-            }
-      }
-      );
-       question_insert("campaign_2_dole", 
-      {
-                 "model": "campaign_trail.question",
-      "pk": "debate_dole",
-      "fields": {
-          "priority": 0,
-          "description": "You’re in Hartford, Connecticut. To your right stands Senator Dole—the poor old soul. As he wraps up his opening statement, you wonder: why did he run? Doesn’t he see the polls? This has to be one of the most lopsided races in recent memory, and he’s the one taking the punches for all to see. Maybe it doesn’t matter to him. Maybe he sees something you don’t. But if that’s the case, you’ve got to stop him here. For his own good, and for the country’s, it’s time to send him into retirement.",
-          "likelihood": 1
-      }
-      }
-      );
-        } else {
-      question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul searching to finally take back the dynamism that had propelled your campaign in 1992. Still, the situation in and out of the country is good, but with Bob Dole positioning himself as the alternative, what should you remind America of to take back control?",
-                "likelihood": 1
-            }
-            });
-                    question_insert("campaign_1_dole", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Bob Dole’s a really easy target. He’s known to all and yet loved by nearly nobody. He’s been in Washington longer than most voters have been alive, and while there’s respect for his service, there’s a lot of baggage there too. He’s the champion of the GOP in a confused after-Reagan haze. No <i>message</i>, no <i>momentum</i>, no <i>magic</i>. If we’re gonna beat him clean, you’ll need something sharp, something that shatters the whole façade.",
-                "likelihood": 1
-            }
-      }
-      );
-       question_insert("campaign_2_dole", 
-      {
-                 "model": "campaign_trail.question",
-      "pk": "debate_dole",
-      "fields": {
-          "priority": 0,
-          "description": "You’re in Hartford, Connecticut. To your right stands Senator Dole—the poor old soul. As he wraps up his opening statement, you wonder: why did he run? Doesn’t he see the polls? This has to be one of the most lopsided races in recent memory, and he’s the one taking the punches for all to see. Maybe it doesn’t matter to him. Maybe he sees something you don’t. But if that’s the case, you’ve got to stop him here. For his own good, and for the country’s, it’s time to send him into retirement.",
-          "likelihood": 1
-      }
-      }
-      );
-        }
-        } else if (LamarNom == 1) {
+} else if (LamarNom == 1) {
                   question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
@@ -93762,142 +93371,7 @@ question_insert("debate_buchanan",question_22_1996_election);
         }
                     }
                     );
-        } else if (WilsonNom == 1) {
-                  question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
-                        "likelihood": 1
-                    }
-            });
-        question_insert("campaign_1_wilson", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_2_wilson",
-        "fields": {
-            "priority": 0,
-            "description": "Pete Wilson would be Lee Atwater’s wet dream if he were in your shoes. There are the obvious points of attack—his broken promise not to run for President being the most glaring—but dig a little deeper, and you’ll find plenty more to work with. The question is: which angle do you take, and how do you make it stick? ",
-            "likelihood": 1
-        }
-    }
-    );
-    question_insert("campaign_2_wilson", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "debate_wilson",
-            "fields": {
-                "priority": 0,
-                "description": "You and Wilson stand across from each other—San Diego may be his home, but it’s your crowd. You shake hands respectfully and meet his empty, beady eyes for a moment before the debate begins. Wilson’s got the momentum, spinning your successes as inadequate and your failures as glaring. How’re you going to shake that narrative, Slick?",
-                "likelihood": 1
-            }
-        }
-        );
-        } else if (BuchananNom == 1) {
-                 question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-                      question_insert("campaign_1_buchanan", 
-                        {
-                            "model": "campaign_trail.question",
-                            "pk": "campaign_2_buchanan",
-                            "fields": {
-                                "priority": 0,
-                                "description": "So far, you’ve been mostly reactive to Pat Buchanan’s accusations that you’re a drug-addicted, womanizing pedophile. That’s going to change. You smirk as you read the files on planned attacks, flipping through the pages with a practiced ease. Which one is your favorite?",
-                                "likelihood": 1
-                            }
-                        }
-                        );
-        } else if (GrammNom == 1) {
+} else if (GrammNom == 1) {
                  question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
@@ -93970,7 +93444,7 @@ question_insert("debate_buchanan",question_22_1996_election);
                                 }
                             }
                             );
-        } else if (SpecterNom == 1) {
+} else if (SpecterNom == 1) {
                  question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
@@ -94043,75 +93517,221 @@ question_insert("debate_buchanan",question_22_1996_election);
                                 }
                             }
                             );
-        } else if (CheneyNom == 1) {
+} else if (WilsonNom == 1) {
+                  question_insert("question_19_alt", 
+            {
+              "model": "campaign_trail.question",
+                    "pk": "campaign_1_wilson",
+                    "fields": {
+                        "priority": 0,
+                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
+                        "likelihood": 1
+                    }
+            });
+            question_insert("question_19_pr_and_wo_act", 
+            {
+              "model": "campaign_trail.question",
+                    "pk": "campaign_1_wilson",
+                    "fields": {
+                        "priority": 0,
+                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
+                        "likelihood": 1
+                    }
+            });
+            question_insert("question_29_defense_of_marriage", 
+            {
+              "model": "campaign_trail.question",
+                    "pk": "campaign_1_wilson",
+                    "fields": {
+                        "priority": 0,
+                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
+                        "likelihood": 1
+                    }
+            });
+            question_insert("question_ques_18_alt_fail", 
+            {
+              "model": "campaign_trail.question",
+                    "pk": "campaign_1_wilson",
+                    "fields": {
+                        "priority": 0,
+                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
+                        "likelihood": 1
+                    }
+            });
+            question_insert("question_ques_18_alt_win", 
+            {
+              "model": "campaign_trail.question",
+                    "pk": "campaign_1_wilson",
+                    "fields": {
+                        "priority": 0,
+                        "description": "When California sneezes, the nation catches a cold. Wilson’s ascendancy throughout the primaries has sharpened the national focus on immigration. Proposition 187, in particular, has thrown your softer image into contrast with his harder-edged rhetoric. With Latino organizers sounding the alarm and swing voters nodding along to Wilson’s message, how do you thread the needle on this issue?",
+                        "likelihood": 1
+                    }
+            });
+        question_insert("campaign_1_wilson", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_wilson",
+        "fields": {
+            "priority": 0,
+            "description": "Pete Wilson would be Lee Atwater’s wet dream if he were in your shoes. There are the obvious points of attack—his broken promise not to run for President being the most glaring—but dig a little deeper, and you’ll find plenty more to work with. The question is: which angle do you take, and how do you make it stick? ",
+            "likelihood": 1
+        }
+    }
+    );
+    question_insert("campaign_2_wilson", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "debate_wilson",
+            "fields": {
+                "priority": 0,
+                "description": "You and Wilson stand across from each other—San Diego may be his home, but it’s your crowd. You shake hands respectfully and meet his empty, beady eyes for a moment before the debate begins. Wilson’s got the momentum, spinning your successes as inadequate and your failures as glaring. How’re you going to shake that narrative, Slick?",
+                "likelihood": 1
+            }
+        }
+        );
+} else if (CheneyNom == 1) {
                 question_insert("question_19_alt", 
             {
               "model": "campaign_trail.question",
-                      "pk": "campaign_1_cheney",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+            });
+            question_insert("question_19_pr_and_wo_act", 
+            {
+              "model": "campaign_trail.question",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+            });
+            question_insert("question_29_defense_of_marriage", 
+            {
+              "model": "campaign_trail.question",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+            });
+            question_insert("question_ques_18_alt_fail", 
+            {
+             "model": "campaign_trail.question",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+            });
+            question_insert("question_ques_18_alt_win", 
+            {
+              "model": "campaign_trail.question",
+        "pk": "campaign_1_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
+             "likelihood": 1
+        }
+            });
+                              question_insert("campaign_1_gingrich", 
+                {
+                      "model": "campaign_trail.question",
+        "pk": "campaign_2_gingrich",
+        "fields": {
+            "priority": 3,
+            "description": "Your team dumps a stack of papers on the table: the splashy HarperCollins book deal, an ethics-investigation cloud, the orphanages-for-welfare-children push, the shutdowns, his futurist moon-base talk, and K Street ties. You can press hypocrisy, cruelty, or instability, but one angle has to stick. Where do you strike, and how hard?  ",
+             "likelihood": 1
+        }
+                }
+                );
+                 question_insert("campaign_2_gingrich", 
+                {
+                           "model": "campaign_trail.question",
+        "pk": "debate_gingrich",
+        "fields": {
+            "priority": 0,
+            "description": "Verbally sparring with Newt Gingrich has become your least favorite pastime over the last year. Perhaps it was worth it, if only to prepare you for this. Beneath the bright lights of the Mahaffey Theater in St. Petersburg, Florida, you shake hands as the televised debate begins, with a dozen different ways to pick apart the Speaker’s record bubbling up in your mind. Where to begin?",
+            "likelihood": 1
+        }
+                }
+                );
+        } else if (BonoNom == 1) {
+                                  question_insert("question_19_alt", 
+            {
+              "model": "campaign_trail.question",
+                      "pk": "campaign_1_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick. ",
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
                           "likelihood": 1
                       }
             });
             question_insert("question_19_pr_and_wo_act", 
             {
               "model": "campaign_trail.question",
-                      "pk": "campaign_1_cheney",
+                      "pk": "campaign_1_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick. ",
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
                           "likelihood": 1
                       }
             });
             question_insert("question_29_defense_of_marriage", 
             {
               "model": "campaign_trail.question",
-                      "pk": "campaign_1_cheney",
+                      "pk": "campaign_1_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick. ",
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
                           "likelihood": 1
                       }
             });
             question_insert("question_ques_18_alt_fail", 
             {
               "model": "campaign_trail.question",
-                      "pk": "campaign_1_cheney",
+                      "pk": "campaign_1_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick. ",
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
                           "likelihood": 1
                       }
             });
             question_insert("question_ques_18_alt_win", 
             {
               "model": "campaign_trail.question",
-                      "pk": "campaign_1_cheney",
+                      "pk": "campaign_1_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Despite the fact that you had, all things considered, a pretty good midterm in 1994, the GOP is still swinging, and swinging hard. You’ve been forced to spend a lot of time, both at the White House and on the campaign trail, defending your initiatives, beliefs, and record from wild, increasingly desperate attacks by Newt Gingrich, who leads a slim majority, and other Republicans, Cheney among them. It’s time to hit back, and find a message, Slick. ",
+                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
                           "likelihood": 1
                       }
             });
-                              question_insert("campaign_1_cheney", 
+                              question_insert("campaign_1_bono", 
                 {
                       "model": "campaign_trail.question",
-                      "pk": "campaign_2_cheney",
+                      "pk": "campaign_2_bono",
                       "fields": {
                           "priority": 0,
-                          "description": "Dick Cheney is eager to hammer you on character, dragging Hillary and the whole administration with it. But unlike most Republicans who try it, Secretary Cheney has a clean record. At least personally. Still, your team found one thing: his eldest daughter. She’s a lesbian. D.C. insiders know. A few of his nuttier primary opponents even floated it. But it hasn’t quite hit the public square, not yet, anyway. Do you want to go there?",
+                          "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper—a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already aired by his Republican rivals during the long, bitter primary slog. The press barely blinked then, and voters didn’t seem to mind. Now he's polling within striking distance. How do you want to stop this guy?",
                           "likelihood": 1
                       }
                 }
                 );
-                 question_insert("campaign_2_cheney", 
+                 question_insert("campaign_2_bono", 
                 {
                            "model": "campaign_trail.question",
-                "pk": "debate_cheney",
+                "pk": "debate_bono",
                 "fields": {
                     "priority": 0,
-                    "description": "You're in Athens, Georgia, on the debate stage. It's your first of the cycle, and to your right stands Secretary Dick Cheney, cool as a cucumber, as per usual. For a moment, you nearly drift off. The egghead drones on and on about something or other, his voice sounds like static. You blink. And just like that, it's your turn, Slick.",
+                    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you, ''Mr. President?'' It's your turn, Slick. ",
                     "likelihood": 1
                 }
                 }
