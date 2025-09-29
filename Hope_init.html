@@ -289,7 +289,7 @@ campaignTrail_temp.temp_election_list = [
 campaignTrail_temp.credits = "<button onclick='credits()'>The Braindead Pilgrims</button>"
 
 credits = function() {
-  credits = [ "Lead: AgreeableMachine91", "Coders: AgreebleMachine91, theanswerisme, Naimina OS,", "Writing: UlricMorningstarG, Halligan Elysium, Cecilia, Waflef, GoodGamer, DalTheFox, theanswerisme, Ronnie, gW3n_b1@D3!", "Assets: Me: The Fellow, SirOrion"]
+  credits = [ "Lead: AgreeableMachine91", "Coders: AgreebleMachine91, theanswerisme, Naimina OS, Ronnie", "Writing: UlricMorningstarG, Halligan Elysium, Cecilia, Waflef, GoodGamer, DalTheFox, theanswerisme, Ronnie, gW3n_b1@D3!", "Assets: Me: The Fellow, SirOrion"]
   text = "CREDITS:\n\n"
   for (i in credits) {
       text += credits[i] + "\n"
@@ -1297,6 +1297,20 @@ abButton.textContent = "A/B";
 
 playerContainer.appendChild(abButton);
 
+// Select the title element
+    const titleTester = document.getElementById('title');
+
+    // Function to update scroll based on title length (including spaces)
+    function updateScrollAnimation() {
+      const titleText = titleElement.textContent; // Get the full text, including spaces
+      const titleLength = titleText.length;        // Count all characters, including spaces
+      const steps = Math.max(5, titleLength);      // Adjust steps based on length
+      titleElement.style.animation = `scroll ${steps * 0.5}s steps(${steps}) infinite`;  // Update animation speed
+    }
+
+    // Call the function to update the animation when the page loads
+    updateScrollAnimation();
+
   // Update the UI when the page loads
   updateUI(playlist);
 }
@@ -1368,8 +1382,6 @@ position: relative;
     background: #73FFE4;
     background: linear-gradient(90deg,rgba(115, 255, 228, 1) 0%, rgba(115, 255, 228, 1) 33%, rgba(237, 221, 83, 0) 33%, rgba(115, 255, 228, 0) 66%, rgba(115, 255, 228, 1) 66%, rgba(115, 255, 228, 1) 100%);
     visibility: hidden;
-    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
-	padding-left: 6px;
   }
 
 
@@ -1380,7 +1392,7 @@ position: relative;
     flex-direction: row;
     gap: 1px;
     align-items: end;
-    padding-left: 6px;
+    padding-right: 6px;
   }
 
   #volume-1 {
@@ -1488,7 +1500,6 @@ position: relative;
     width: auto;
     white-space: nowrap;
     overflow: visible;
-    animation: scroll 10s steps(15) infinite;
     z-index: 0; 
 	top: -2px;
   	position: absolute;
@@ -1497,12 +1508,13 @@ position: relative;
 
 @keyframes scroll {
   0% {
-    transform: translateX(0%); /* Start from the left side of the screen */
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%); /* Scroll to off-screen to the left */
+    transform: translateX(-100%);
   }
 }
+
   p#artist {
     font-family: silkscreen;
     font-size: 13px;
