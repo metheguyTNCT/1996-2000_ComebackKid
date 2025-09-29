@@ -358,6 +358,14 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
 document.head.innerHTML +=`
 <style>
+      @font-face {
+  font-family: digital;
+  src: url(https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/digital);
+}
+    @font-face {
+  font-family: silkscreen;
+  src: url(https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/silkscreen);
+}
 .mytooltip:hover .mytooltiptext {
 opacity: 1;
 transition-delay: 0.6s;
@@ -940,32 +948,49 @@ tooltipList = [
       titleBar.classList.add("title-bar-text")
       titleBar.style.paddingLeft = "3px";
   };
+
   
-  class Song {
-    constructor(title, artist, audioLink) {
-      this.title = title;
-      this.artist = artist;
-      this.audioLink = audioLink;
-    }
-    getTitle() {
-      return this.title;
-    }
-  
-    getArtist() {
-      return this.artist;
-    }
-  
-    getAudioLink() {
-      return this.audioLink;
-    }
+class Song {
+  constructor(title, artist, audioLink, duration) {
+    this.title = title;
+    this.artist = artist;
+    this.audioLink = audioLink;
+    this.duration = duration; // e.g., "4:00"
+    this.durationInSeconds = this.convertDurationToSeconds(duration);
   }
-  
-  // Update the Playlist class
+
+  // Convert the duration string to seconds
+  convertDurationToSeconds(duration) {
+    const [minutes, seconds] = duration.split(":").map(Number);
+    return minutes * 60 + seconds;
+  }
+
+  getTitle() {
+    return this.title;
+  }
+
+  getArtist() {
+    return this.artist;
+  }
+
+  getAudioLink() {
+    return this.audioLink;
+  }
+
+  getDuration() {
+    return this.duration; // Return the duration in "mm:ss" format
+  }
+
+  getDurationInSeconds() {
+    return this.durationInSeconds; // Duration in seconds for calculations
+  }
+}
+
+
 class Playlist {
   constructor() {
     this.songs = [];
     this.currentSongIndex = 0;
-    this.randomizeEnabled = false; // New flag for randomization
   }
 
   addSong(song) {
@@ -977,390 +1002,193 @@ class Playlist {
   }
 
   playNext() {
-    if (this.randomizeEnabled && this.currentSongIndex === 0) {
-      this.randomizeAfterFirst();
-    }
     this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
   }
 
   playPrevious() {
     this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
   }
+}
+window.Playlist=Playlist
+window.Song=Song
 
-  randomizeAfterFirst() {
-    const firstSong = this.songs[0];
-    const restOfSongs = this.songs.slice(1);
-    for (let i = restOfSongs.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [restOfSongs[i], restOfSongs[j]] = [restOfSongs[j], restOfSongs[i]];
-    }
-    this.songs = [firstSong, ...restOfSongs];
-  }
+function changePlaylist(newPlaylist) {
+  playlist = newPlaylist;
+  playlist.currentSongIndex = 0;
+  updateUI(playlist);
+  const audio = document.getElementById("audio");
+  audio.src = playlist.getCurrentSong().audioLink;
+  audio.play();
+}
+window.changePlaylist=changePlaylist
+
+function updateUI(playlist) {
+  const currentSong = playlist.getCurrentSong();
+  var player = document.getElementById("player");
+  player.querySelector("#title").textContent = currentSong.getTitle();
+  player.querySelector("#artist").textContent = currentSong.getArtist();
+
+  // Update the total time
+  const totalTimeElement = document.getElementById("total-time");
+  totalTimeElement.textContent = currentSong.getDuration();
 }
 
-// Add the button to the UI
-function setupRandomizeButton() {
-  const randomizeButton = document.createElement("button");
-  randomizeButton.id = "randomizeButton";
-  randomizeButton.textContent = "Randomize Songs";
 
-  // Style the button to appear near the bottom of the screen
-  randomizeButton.style.position = "fixed";
-  randomizeButton.style.bottom = "20px"; // Adjust the distance from the bottom
-  randomizeButton.style.right = "20px"; // Adjust the distance from the right side
-  randomizeButton.style.padding = "10px 20px";
-  randomizeButton.style.backgroundColor = "#005B82"; // Button color
-  randomizeButton.style.color = "#fff"; // Text color
-  randomizeButton.style.border = "none";
-  randomizeButton.style.borderRadius = "5px";
-  randomizeButton.style.cursor = "pointer";
 
-  randomizeButton.addEventListener("click", function () {
-    playlist.randomizeEnabled = !playlist.randomizeEnabled;
-    alert(
-      playlist.randomizeEnabled
-        ? "Randomization after 'Don't Stop' is enabled."
-        : "Randomization after 'Don't Stop' is disabled."
-    );
-  });
+window.updateUI=updateUI
 
-  // Append the button to the body instead of playerContainer
-  document.body.appendChild(randomizeButton);
-}
 
-  window.Playlist=Playlist
-  window.Song=Song
-  
-  function changePlaylist(newPlaylist) {
-    playlist = newPlaylist;
-    playlist.currentSongIndex = 0;
-    updateUI(playlist);
-    const audio = document.getElementById("audio");
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.play();
-  }
-  window.changePlaylist=changePlaylist
-  
-  function updateUI(playlist) {
-      const currentSong = playlist.getCurrentSong();
-      var player = document.getElementById("player");
-      player.querySelector("#title").textContent = currentSong.getTitle();
-      player.querySelector("#artist").textContent = currentSong.getArtist();
-  }
-  
-  window.updateUI=updateUI
-  
-  
-  function setupMusicPlayer() {
-    primaryPlaylist = new Playlist();
-  playlist = primaryPlaylist;
-  
-  
-    const song1 = new Song(
+function setupMusicPlayer() {
+  playlist = new Playlist();
+
+
+  const song1 = new Song(
     "Remember The Time",
     "Michael Jackson",
-    "https://audio.jukehost.co.uk/JjXNxLy00Ko2A8GTQ3Xs7T4CQdqvNRgF"
+    "https://audio.jukehost.co.uk/JjXNxLy00Ko2A8GTQ3Xs7T4CQdqvNRgF",
+    "4:00"
   );
   const song2 = new Song(
     "If I Like It, I Do It",
-  "Jamiroquai",
-  "https://audio.jukehost.co.uk/pmA6w3xNc1KSvZZ68NWyleCM2QDz3xqq"
+    "Jamiroquai",
+    "https://audio.jukehost.co.uk/pmA6w3xNc1KSvZZ68NWyleCM2QDz3xqq",
+    "4:53"
   );
     const song3 = new Song(
   "Basket Case",
   "Green Day",
-  "https://audio.jukehost.co.uk/WHSxE7Ap3Cv0nkZtNdNHrtDT5tJmoiSH"
+  "https://audio.jukehost.co.uk/WHSxE7Ap3Cv0nkZtNdNHrtDT5tJmoiSH",
+  "3:01"
 );
 
   const song4 = new Song(
     "Best Imitation Of Myself",
     "Ben Folds Five",
-    "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8"
+    "https://audio.jukehost.co.uk/kndnZicFxfNmpFL1oZm1zHfsuQOMt0k8",
+    "2:38"
   );
   
   const song5 = new Song(
   "Roll With It",
   "Oasis",
-  "https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD"
+  "https://audio.jukehost.co.uk/MseP4alzod2Z912OIeQycc9wSvYCUWtD",
+  "3:59"
 );
   const song6 = new Song(
   "My Iron Lung",
   "Radiohead",
-  "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN"
+  "https://audio.jukehost.co.uk/Eo1j0lO1IAfevZYHDFgmWXMcEBCBgVHN",
+  "4:37"
 );
 
-    playlist.addSong(song1);
-    playlist.addSong(song2);
-    playlist.addSong(song3);
-    playlist.addSong(song4);
-    playlist.addSong(song5);
-    playlist.addSong(song6);
+  playlist.addSong(song1);
+  playlist.addSong(song2);
+  playlist.addSong(song3);
+  playlist.addSong(song4);
+  playlist.addSong(song5);
+  playlist.addSong(song6);
 
-  
-    const playerContainer = document.createElement("div");
-    playerContainer.id = "player";
-  
-   const displayBox = document.createElement("div");
-  displayBox.id = "display-box";
-  
-// Create the MP3 display
-const mp3Display = document.createElement("div");
-mp3Display.id = "mp3Player"; // Add the ID to the MP3 display
-mp3Display.style.width = "300px";
-playerContainer.id = "player";
-mp3Display.style.height = "100px";
-mp3Display.style.width = "300px";
-mp3Display.style.height = "100px";
-mp3Display.style.background = "linear-gradient(to bottom, #222 0%, #111 100%)";
-mp3Display.style.borderRadius = "12px";
-mp3Display.style.border = "1px solid #444";
-mp3Display.style.boxShadow = `
-  0 4px 8px rgba(0,0,0,0.6),          /* Outer depth shadow */
-  inset 0 0 6px rgba(255,255,255,0.04), /* Internal gloss reflection */
-  inset 0 -2px 2px rgba(0,0,0,0.5),     /* Inner bottom rim shadow */
-  inset 0 2px 2px rgba(255,255,255,0.05)`; /* Top gloss edge */
+  const playerContainer = document.createElement("div");
+  playerContainer.id = "player";
 
-mp3Display.style.color = "white";
-mp3Display.style.fontFamily = "Arial, sans-serif";
-mp3Display.style.textAlign = "center";
-mp3Display.style.position = "relative";
-mp3Display.style.overflow = "hidden";
-mp3Display.style.color = "white";
-mp3Display.style.fontFamily = "Arial, sans-serif";
-mp3Display.style.textAlign = "center";
-mp3Display.style.position = "relative";
-mp3Display.style.overflow = "hidden";
 
-// Add top text
-const topText = document.createElement("div");
-topText.textContent = "DIGITAL MP3 PLAYER";
-topText.style.position = "absolute";
-topText.style.top = "10px";
-topText.style.left = "0";
-topText.style.right = "0";
-topText.style.fontSize = "14px";
-topText.style.fontWeight = "bold";
-mp3Display.appendChild(topText);
 
-// Add the screen area
-const screen = document.createElement("div");
-screen.style.width = "80%";
-screen.style.height = "40%";
-screen.style.backgroundColor = "#e8ffe8";
-screen.style.margin = "30px auto";
-screen.style.border = "2px solid white";
-screen.style.borderRadius = "5px";
-screen.style.display = "flex";
-screen.style.justifyContent = "center";
-screen.style.alignItems = "center";
-screen.style.fontSize = "16px";
-screen.style.color = "black";
-mp3Display.appendChild(screen);
 
-// Add bottom text
-const bottomText = document.createElement("div");
-bottomText.textContent = "MP3/WMA/REC";
-bottomText.style.position = "absolute";
-bottomText.style.bottom = "10px";
-bottomText.style.left = "0";
-bottomText.style.right = "0";
-bottomText.style.fontSize = "14px";
-bottomText.style.fontWeight = "bold";
-mp3Display.appendChild(bottomText);
+const infoContainer = document.createElement("div");
+infoContainer.id = "info-container";
+playerContainer.appendChild(infoContainer);
 
-// Add subtle tactile A/B button on the border of the MP3 display
-const abButton = document.createElement("div");
-abButton.textContent = "A/B";
-abButton.style.position = "absolute";
-abButton.style.top = "76px";          // Aligns with the middle of the LCD
-abButton.style.right = "16px";        // Padding from the edge
-abButton.style.width = "26px";
-abButton.style.height = "14px";
-abButton.style.backgroundColor = "#3a3a3a";
-abButton.style.color = "white";
-abButton.style.border = "1px solid #222";
-abButton.style.borderRadius = "4px";
-abButton.style.boxShadow = "inset 0 -1.5px 2px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.08)";
-abButton.style.fontSize = "9px";
-abButton.style.fontFamily = "monospace";
-abButton.style.display = "flex";
-abButton.style.justifyContent = "center";
-abButton.style.alignItems = "center";
-abButton.style.cursor = "pointer";
-abButton.style.userSelect = "none";
-abButton.style.zIndex = 5;
+const songInfo = document.createElement("div");
+songInfo.id = "song-info";
+infoContainer.appendChild(songInfo);
 
-let usingSecondary = false;
+const tinyContainer = document.createElement("div"); //this is where all the tiny icons go at the bottom
+tinyContainer.id = "tiny-container";
+infoContainer.appendChild(tinyContainer);
 
-abButton.addEventListener("click", () => {
-  usingSecondary = !usingSecondary;
+const timeContainer = document.createElement("div");
+timeContainer.id = "time-container";
+songInfo.appendChild(timeContainer);
 
-  if (usingSecondary) {
-    changePlaylist(secondaryPlaylist);
-  } else {
-    changePlaylist(primaryPlaylist);
-  }
-});
+const infoText = document.createElement("div");
+infoText.id = "info-text";
+songInfo.appendChild(infoText);
 
-abButton.addEventListener("mousedown", () => {
-  abButton.style.transform = "translateY(1px)";
-});
-abButton.addEventListener("mouseup", () => {
-  abButton.style.transform = "translateY(0px)";
-});
+const titleElement = document.createElement("p");
+titleElement.id = "title";
+titleElement.textContent = "Loading Song Title..."; // Default text before the song starts
+infoText.appendChild(titleElement);
 
-mp3Display.appendChild(abButton);
+const tinyPlay = document.createElement("div"); //this is where all the tiny icons go at the bottom
+tinyPlay.id = "tiny-play";
+tinyContainer.appendChild(tinyPlay);
 
-// Add the MP3 display to the display box
-displayBox.appendChild(mp3Display);
+const tinyPause = document.createElement("div"); //this is where all the tiny icons go at the bottom
+tinyPause.id = "tiny-Pause";
+tinyContainer.appendChild(tinyPause);
 
-// Append displayBox to the main container
-playerContainer.appendChild(displayBox);
+const volumeDisplay = document.createElement("div"); //this is where all the tiny icons go at the bottom
+volumeDisplay.id = "volume-display";
+tinyContainer.appendChild(volumeDisplay);
 
-// Create container for the scrolling elements
-const scrollContainer = document.createElement("div");
-scrollContainer.style.display = "flex"; // Use flexbox to align the elements horizontally
-scrollContainer.style.overflow = "hidden"; // Hide anything that goes out of bounds
-// Finally, append the player container to the body
-document.body.appendChild(playerContainer);
-  const songInfo = document.createElement("div");
-  songInfo.id = "song-info";
-  
-  screen.appendChild(songInfo);
+const volume1 = document.createElement("div"); //this is where all the tiny icons go at the bottom
+volume1.id = "volume-1";
+volumeDisplay.appendChild(volume1);
 
-  songInfo.appendChild(scrollContainer);
-  
-  scrollContainer.style.animation = "scrollText 10s linear infinite"; // Adjust duration to change scroll speed
+const volume2 = document.createElement("div"); //this is where all the tiny icons go at the bottom
+volume2.id = "volume-2";
+volumeDisplay.appendChild(volume2);
 
-  // Add the animation to the document
-const style = document.createElement("style");
-style.textContent = `
-  @keyframes scrollText {
-    0% {
-      transform: translateX(100%); /* Start from the right edge */
-    }
-    100% {
-      transform: translateX(-100%); /* Move to the left edge */
-    }
-  }
-`;
+const volume3 = document.createElement("div"); //this is where all the tiny icons go at the bottom
+volume3.id = "volume-3";
+volumeDisplay.appendChild(volume3);
 
-songInfo.style.backgroundImage = "url('https://files.catbox.moe/dfuvrk.png')";
-songInfo.style.backgroundSize = "cover";
-songInfo.style.backgroundRepeat = "repeat";
-songInfo.style.backgroundBlendMode = "multiply";
-songInfo.style.opacity = "0.95"; // faded lil bit
 
-document.head.appendChild(style);
-// Append songInfo to the screen element
-screen.appendChild(songInfo);
-// Create the controls container
+const artistElement = document.createElement("p");
+artistElement.id = "artist";
+infoText.appendChild(artistElement);
+
+const playIconTiny = document.createElement("div");
+playIconTiny.id = "tiny-p";
+songInfo.appendChild(infoText);
+
+
 const controlsContainer = document.createElement("div");
 controlsContainer.id = "controls-container";
-controlsContainer.style.display = "flex";  // Use flexbox for layout
-controlsContainer.style.flexDirection = "column";  // Stack the buttons vertically
-controlsContainer.style.justifyContent = "center";  // Center the buttons vertically
 
-// Create the controls (previous, play/pause, next)
 const controls = document.createElement("div");
 controls.id = "controls";
-controls.style.display = "flex";  // Use flexbox for buttons
-controls.style.flexDirection = "column";  // Stack the buttons vertically
-controls.style.alignItems = "center";  // Center buttons horizontally
-function addTactileClickEffect(button) {
-  button.style.transition = "transform 0.05s ease";
 
-  button.addEventListener("mousedown", () => {
-    button.style.transform = "translateY(1.5px)";
-  });
-
-  button.addEventListener("mouseup", () => {
-    button.style.transform = "translateY(0px)";
-  });
-
-  button.addEventListener("mouseleave", () => {
-    button.style.transform = "translateY(0px)";
-  });
-}
-
-// Create the previous button
 const prevButton = document.createElement("img");
 prevButton.id = "prevButton";
-prevButton.src = "https://i.imgur.com/WRtZweK.png";
+prevButton.src = "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Previous";
 prevButton.alt = "Previous";
-// Set the width and height to make the button bigger
-prevButton.style.width = "50px";  // Increase the width
-prevButton.style.height = "50px";  // Increase the height
 controls.appendChild(prevButton);
-prevButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
 
-// Create the play/pause button
 const playPauseButton = document.createElement("img");
 playPauseButton.id = "playPauseButton";
-playPauseButton.src = "https://i.imgur.com/OAe5dOF.png";  // Set the default play image
+playPauseButton.src = "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Play%20Pause"; // Set the default play image
 playPauseButton.alt = "Play/Pause";
-// Set the width and height to make the button bigger
-playPauseButton.style.width = "50px";  // Increase the width
-playPauseButton.style.height = "50px";  // Increase the height
 controls.appendChild(playPauseButton);
-playPauseButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
-function addTactileClickEffect(button) {
-  button.style.transition = "transform 0.05s ease";
 
-  button.addEventListener("mousedown", () => {
-    button.style.transform = "translateY(1.5px)";
-  });
-
-  button.addEventListener("mouseup", () => {
-    button.style.transform = "translateY(0px)";
-  });
-
-  button.addEventListener("mouseleave", () => {
-    button.style.transform = "translateY(0px)";
-  });
-}
-
-// Create the next button
 const nextButton = document.createElement("img");
 nextButton.id = "nextButton";
-nextButton.src = "https://i.imgur.com/hQRF36J.png";
+nextButton.src = "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Next";
 nextButton.alt = "Next";
-nextButton.style.width = "50px";  // Increase the widthnextButton.style.height = "50px";  // Increase the height
-nextButton.style.height = "50px";  // Increase the height
 controls.appendChild(nextButton);
-nextButton.style.filter = "drop-shadow(0 1px 1px rgba(255,255,255,0.1)) drop-shadow(0 -1px 1px rgba(0,0,0,0.4))";
-function addTactileClickEffect(button) {
-  button.style.transition = "transform 0.05s ease";
 
-  button.addEventListener("mousedown", () => {
-    button.style.transform = "translateY(1.5px)";
-  });
-
-  button.addEventListener("mouseup", () => {
-    button.style.transform = "translateY(0px)";
-  });
-
-  button.addEventListener("mouseleave", () => {
-    button.style.transform = "translateY(0px)";
-  });
-}
-
-addTactileClickEffect(prevButton);
-addTactileClickEffect(playPauseButton);
-addTactileClickEffect(nextButton);
-  
-// Append the controls to the controlsContainer
 controlsContainer.appendChild(controls);
 
-// Event listeners for play/pause, next, and previous buttons
 playPauseButton.addEventListener("click", function () {
   const audio = document.getElementById("audio");
   if (audio.paused) {
     audio.play();
-    playPauseButton.src = "https://i.imgur.com/OAe5dOF.png";  // Set the pause image
+    tinyPlay.style.visibility = "visible";
+    tinyPause.style.visibility = "hidden";
   } else {
     audio.pause();
-    playPauseButton.src = "https://i.imgur.com/OAe5dOF.png";  // Set the play image
+    tinyPause.style.visibility = "visible";
+    tinyPlay.style.visibility = "hidden";
   }
 });
 
@@ -1378,111 +1206,89 @@ prevButton.addEventListener("click", function () {
   const audio = document.getElementById("audio");
   audio.src = playlist.getCurrentSong().audioLink;
   audio.play();
-  function addTactileClickEffect(button) {
-  button.style.transition = "transform 0.05s ease";
-
-  button.addEventListener("mousedown", () => {
-    button.style.transform = "translateY(1.5px)";
-  });
-
-  button.addEventListener("mouseup", () => {
-    button.style.transform = "translateY(0px)";
-  });
-
-  button.addEventListener("mouseleave", () => {
-    button.style.transform = "translateY(0px)";
-  });
-}
 });
-// Append the controls container to the player container
-playerContainer.appendChild(controlsContainer);
-  const titleElement = document.createElement("p");
-  titleElement.id = "title";
-  titleElement.style.fontWeight = 'normal'; // Make it normal as per previous request
-  titleElement.style.marginRight = "20px"; // Add some space between title and artist
-  songInfo.appendChild(titleElement);
-  scrollContainer.appendChild(titleElement);
-  
-  const artistElement = document.createElement("p");
-  artistElement.id = "artist";
-  songInfo.appendChild(artistElement);
-  scrollContainer.appendChild(artistElement);
-  
-  displayBox.appendChild(mp3Display);
-  playerContainer.appendChild(displayBox);
-  
-    const progressBarContainer = document.createElement("div");
-    progressBarContainer.id = "progress-bar-container";
-  
-    const progressBar = document.createElement("progress");
-    progressBar.type = "range";
-    progressBar.id = "progress-bar";
-    progressBar.value = "0";
-    progressBar.max = "100";
-  
-  
-    progressBarContainer.appendChild(progressBar);
-  
-   const volumeContainer = document.createElement("div");
-    volumeContainer.id = "volume-container";
+
+  const currentTimeElement = document.createElement("span");
+currentTimeElement.id = "current-time";
+currentTimeElement.textContent = "0:00"; // Default starting value
+timeContainer.appendChild(currentTimeElement);
+
+const totalTimeElement = document.createElement("span");
+totalTimeElement.id = "total-time";
+timeContainer.appendChild(totalTimeElement);
+
+  playerContainer.appendChild(controlsContainer);
+
+ const volumeContainer = document.createElement("div");
+	volumeContainer.id = "volume-container";
 
     const volumeUpButton = document.createElement("img");
-    volumeUpButton.style.width = "70px";  // Increase the width
-  volumeUpButton.style.height = "70px";  // Increase the height
     volumeUpButton.id = "volumeUpButton";
-    volumeUpButton.src = "https://i.imgur.com/R4ezatp.png";
-    volumeUpButton.alt = "Volume Up";
+    volumeUpButton.alt = "+";
     volumeContainer.appendChild(volumeUpButton);
 
   const volumeDownButton = document.createElement("img");
-  volumeDownButton.style.width = "70px";  // Increase the width
-  volumeDownButton.style.height = "70px";  // Increase the height
     volumeDownButton.id = "volumeDownButton";
-    volumeDownButton.src = "https://i.imgur.com/6H5k0U1.png";
-    volumeDownButton.alt = "Volume Down";
+    volumeDownButton.alt = "-";
     volumeContainer.appendChild(volumeDownButton);
+  
 
-    playerContainer.appendChild(volumeContainer);
-  
-    gameWindow_player.insertAdjacentElement("afterend", playerContainer);
-  
-  
-    function updateProgressBar() {
-      const audio = document.getElementById("audio");
-      const progress = (audio.currentTime / audio.duration) * 100;
-  
-      try {
-          progressBar.value = progress;
-      } catch (error) {
-      }
-  }
-    progressBar.addEventListener("input", function () {
-      const audio = document.getElementById("audio");
-      const seekTime = (progressBar.value / 100) * audio.duration;
-      audio.currentTime = seekTime;
-    });
-  
-    const audio = document.createElement("audio");
-    audio.id = "audio";
+	controlsContainer.appendChild(volumeContainer);
+
+  gameWindow_player.insertAdjacentElement("afterend", playerContainer);
+
+
+
+function updateTimeDisplay(audio) {
+  const currentTimeElement = document.getElementById("current-time");
+  const totalTimeElement = document.getElementById("total-time");
+
+  // Convert currentTime to mm:ss format
+  const currentMinutes = Math.floor(audio.currentTime / 60);
+  const currentSeconds = Math.floor(audio.currentTime % 60);
+  currentTimeElement.textContent = `${currentMinutes}:${currentSeconds < 10 ? "0" : ""}${currentSeconds}`;
+
+  // Total time (fixed) based on the song's duration
+  const currentSong = playlist.getCurrentSong();
+  totalTimeElement.textContent = currentSong.getDuration();
+}
+
+
+
+
+  const audio = document.createElement("audio");
+  audio.id = "audio";
+  audio.src = playlist.getCurrentSong().audioLink;
+  audio.volume = 1/9;
+
+
+audio.addEventListener("ended", function () {
+    // Play the next song when the current song ends
+    playlist.playNext();
+    updateUI(playlist);
     audio.src = playlist.getCurrentSong().audioLink;
-    audio.volume = 1/9;
-  
-    audio.addEventListener("timeupdate", updateProgressBar);
-    audio.addEventListener("ended", function () {
-      // Play the next song when the current song ends
-      playlist.playNext();
-      updateUI(playlist);
-      audio.src = playlist.getCurrentSong().audioLink;
-      audio.play();
-    });
-  
+    audio.play();
+
+    // Reset the time display when a new song starts
+    updateTimeDisplay(audio);
+});
+
+audio.addEventListener("timeupdate", function () {
+    updateTimeDisplay(audio);
+});
+
       let currentVolume = 6; // Initial volume
+      const volume1Get = document.getElementById("volume1");
+        const volume2Get = document.getElementById("volume2");
+        const volume3Get = document.getElementById("volume3");
+
   
       volumeUpButton.addEventListener("click", function () {
         const audio = document.getElementById("audio");
         if (currentVolume < 20) { // Increased max volume range
             currentVolume++;
             audio.volume = currentVolume / 20; // Adjusted for new range
+            updateVolumeIndicators(); // Call to update visibility
         }
     });
     
@@ -1491,166 +1297,412 @@ playerContainer.appendChild(controlsContainer);
         if (currentVolume > 0) {
             currentVolume--;
             audio.volume = currentVolume / 20; // Adjusted for new range
+            updateVolumeIndicators(); // Call to update visibility
         }
     });
   
-    function updateVolumeDisplay() {
-      volumeDisplay.textContent = currentVolume;
+  function updateVolumeIndicators() {
+    // Update visibility based on currentVolume
+    updateVolume1();
+    updateVolume2();
+    updateVolume3();
+}
+  
+    function updateVolume1() {
+        if (currentVolume > 0) {
+          volume1.style.visibility = "visible";
+        }
+        else {
+          volume1.style.visibility = "hidden";
+        }
+    }
+
+        function updateVolume2() {
+        if (currentVolume > 4) {
+          volume2.style.visibility = "visible";
+        }
+        else {
+          volume2.style.visibility = "hidden";
+        }
+    }
+
+            function updateVolume3 () {
+        if (currentVolume > 8) {
+          volume3.style.visibility = "visible";
+        }
+        else {
+          volume3.style.visibility = "hidden";
+        }
     }
   
      function updateAudioVolume() {
       const audio = document.getElementById("audio");
       audio.volume = currentVolume / 9; // Set volume between 0 and 1
     }
-  
-    document.body.appendChild(audio);
-    audio.play();
-  
-    // Update the UI when the page loads
-    updateUI(playlist);
+
+  document.body.appendChild(audio);
+  audio.play();
+
+  const abButton = document.createElement("div");
+  abButton.id = "ab";
+  abButton.addEventListener("click", () => {
+  usingSecondary = !usingSecondary;
+
+  if (usingSecondary) {
+    changePlaylist(secondaryPlaylist);
+  } else {
+    changePlaylist(primaryPlaylist);
+  }
+});
+
+abButton.addEventListener("mousedown", () => {
+  abButton.style.transform = "translateY(1px)";
+});
+abButton.addEventListener("mouseup", () => {
+  abButton.style.transform = "translateY(0px)";
+});
+abButton.textContent = "A/B";
+
+playerContainer.appendChild(abButton);
+
+  // Update the UI when the page loads
+  updateUI(playlist);
+}
+
+const style = document.createElement("style");
+style.textContent = `
+#player::before {
+    content: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/marantz");
+    background-size: cover; /* Or contain, or specific dimensions */
+    background-repeat: no-repeat;
+position: relative;
+  right: 10px;
+  top: -5px;
+}
+#player {
+	height:191px;
+  background-image: linear-gradient(to bottom right,#535657, #222222);
+  border-radius: 12px;
+  border: 3px solid rgb(68, 68, 68);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+    position: relative;
+  }
+
+  #info-container {
+  height:100px;
+	width:470px;
+  text-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  color: #73ffe4;
+  background-color:#0a0a0a;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+    overflow: hidden; /* Prevent overflow outside the container */
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Space out title and info-text */
+    padding-left: 30px; /* Optional padding to create space between elements */
+  border-radius: 6px;
+  outline: 6px inset #17171a;
+  border: 3px inset #414145;
+
   }
   
-  const style = document.createElement("style");
-  style.textContent = `
-  #player {
-      border: 3px solid #C9C9C9; /* Add your desired border style */
-      display: flex;
-      flex-direction: row;
-    height:191px;
-      background-Image: url("https://i.imgur.com/zaNdCgw.png");
-    }
-  
-    #display-box {
-      display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      width: 100%;
-      height: 100%;
-      position: relative; /* Ensures absolute positioning of child elements work properly */  
-    }
-  
-    #info-container {
-      display: flex;
-      flex-direction: row;
-      height:178px;
-    width:127px;
-    margin-top: 3px;
-    }
-  
-#screen {
-  width: 80%;
-  height: 40%;
-  background-color: #e8ffe8;
-  margin: 30px auto;
-  border: 2px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  color: black;
-  padding: 10px;
-  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
-  position: relative;
-}
+  #tiny-container {
+    height: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    bottom: 0px;
+    right: 10px;
+  position: absolute;
+  overflow: hidden;
+  padding-bottom: 5px;
+  gap: 2px;
+  align-items: end;
+  }
 
-#song-info {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
+  #tiny-play {
+    height: 0px;
+    width: 0px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 9px solid #73ffe4;
+  }
 
-#scrollContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100%;
-  overflow: hidden; /* Hide the overflowed content */
-  position: relative;
-}
+  #tiny-Pause {
+    height: 9px;
+    width: 9px;
+    background: #73FFE4;
+    background: linear-gradient(90deg,rgba(115, 255, 228, 1) 0%, rgba(115, 255, 228, 1) 33%, rgba(237, 221, 83, 0) 33%, rgba(115, 255, 228, 0) 66%, rgba(115, 255, 228, 1) 66%, rgba(115, 255, 228, 1) 100%);
+    visibility: hidden;
+    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  }
 
-#song-info {
-  display: flex;
-  align-items: center; /* Vertically center the text */
-}
 
-#title, #artist {
-  margin: 0;
-  font-size: 16px; /* Set a base font-size */
-  white-space: nowrap; /* Prevent wrapping */
-  overflow: hidden; /* Hide content overflow */
-  text-overflow: ellipsis; /* Show ellipsis when content is too long */
-  text-align: center; /* Center align the text */
-  display: inline-block; /* Ensures the text stays as an inline element */
-  padding: 0 7px; /* Optional: Space between title and artist */
-}
+  #volume-display {
+        height: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    align-items: end;
+    padding-left: 6px;
+  }
 
-/* Define the scrolling animation */
-@keyframes scrollText {
+  #volume-1 {
+    height: 3px;
+    width: 5px;
+    background-color: #73ffe4;
+    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  }
+
+    #volume-2 {
+    height: 6px;
+    width: 5px;
+    background-color: #73ffe4;
+    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  }
+
+    #volume-3 {
+    height: 9px;
+    width: 5px;
+    background-color: #73ffe4;
+    visibility: hidden;
+    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  }
+
+  #info-text {
+    width: 200px; /* Take up the remaining 40% of the space */
+    overflow: visible; /* Allow overflow to be visible */
+    white-space: nowrap; /* Prevent breaking text into multiple lines */
+    display: flex;
+    flex-direction: columm;
+  }
+
+  #time-container {
+    width: 50%;
+    height:100%;
+    padding-top: 30px;
+    position: relative;
+    background-color: #0a0a0a;
+    font-family: digital;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+    gap: 20px;
+        z-index: 1; /* Keeps info-text below the title */
+  }
+  #current-time {
+    width:100px;
+  }
+
+
+  #total-time:{
+    width: 100px;
+
+  }
+
+  #current-time::before {
+    content: "TIME";
+    position: absolute;
+    top: 5px;
+    font-family: "verdana";
+      letter-spacing: 2px;
+          background-color: #0a0a0a;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #total-time::before {
+    content: "TOTAL";
+    position: absolute;
+    top: 5px;
+    font-family: "verdana";
+      letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #song-info::before {
+    content: "TRACK";
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    font-family: "verdana";
+      letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #song-info {
+    width: 100%;
+    text-align: left;
+    height: 80px;
+    font-size: 15px;
+    display: flex;
+    top: -2px;
+    position: relative;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+
+  #title {
+    font-family: digital;
+    text-align:right;
+    font-size: 30px;
+    width: auto;
+    white-space: nowrap;
+    overflow: visible;
+    animation: scroll 10s steps(15) infinite;
+    z-index: 0; 
+  }
+
+
+@keyframes scroll {
   0% {
-    transform: translateX(100%); /* Start off-screen to the right */
+    transform: translateX(0%); /* Start from the left side of the screen */
   }
   100% {
-    transform: translateX(-100%); /* End off-screen to the left */
+    transform: translateX(-100%); /* Scroll to off-screen to the left */
   }
 }
-
-#scrollContainer {
-  animation: scrollText 10s linear infinite; /* Apply scrolling animation to the entire container */
-}
-
-
-
-  
-    #controls-container {
-      display: flex;
-      justify-content: flex-start; /* Aligns buttons to the left */
-      align-items: center;
-      width: 100%;
+  p#artist {
+    font-family: silkscreen;
+    font-size: 13px;
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    float: left;
+    bottom: -20px
   }
-  
-  #controls {
+
+  #controls-container {
     display: flex;
-    align-items: center;  /* Vertically centers the buttons */
-    gap: 10px;             /* Optional: Adds space between buttons */
-}
+    flex-direction: column;
+    justify-content: center;
+    color: #AF9186;
+    font-family: "verdana";
+    font-weight: bold;
+    letter-spacing: 2px;
+    float: right;
+    padding-right: 30px;
+    width: auto;
+  	top: 20%;
+    position: relative;
+    text-align: center;
 
-#controls img {
-    width: 30px;  /* Size of the buttons, you can adjust this */
-    height: 30px;
-    cursor: pointer;
-}
-    #progress-bar-container {
-      width: 100%;
-    }
-  
-    #progress-bar {
-      width: 80%;
-      margin: auto;
-      display: flex;
-      margin-Top: 20px;
-    }
-    #mp3Player {
-      margin-left: 0;  /* Ensure there's no extra margin on the left */
-      margin-right: 250px;
-      align-items: center;
-      /* No need for absolute positioning here */
-      width: 300px;   /* Your preferred width */
-      height: 100px;  /* Your preferred height */
-      background-color: black;
-      border-radius: 10px;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      overflow: hidden;
   }
-    
-  `;
-  
-  document.head.appendChild(style);
+  .is-vertical #volumeSlider {
+  width: 125px;
+}
 
+ #controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    padding-bottom: 30px;
+  }
+
+    #controls::before {
+    content: "BACK PLAY/PAUSE NEXT";
+    position: absolute;
+    top: -20px;
+    font-size: 8px;
+    word-spacing: 29px;
+    text-align: center;
+  }
+
+
+  #playPauseButton {
+    width: 60px;
+    height: 48px;
+    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    border-radius: 4px;
+    border: 2px outset #7a7979;
+    outline: 4px inset #17171a;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+  }
+
+  #nextButton {
+    width: 60px;
+    height: 48px;
+    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    border-radius: 4px;
+    border: 2px outset #7a7979;
+    outline: 4px inset #17171a;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+  }
+
+  #prevButton {
+    width: 60px;
+    height: 48px;
+    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    border-radius: 4px;
+    border: 2px outset #7a7979;
+    outline: 4px inset #17171a;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+  }
+
+  #volume-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    float: right;
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+
+  #volumeUpButton::after {
+    content: "VOLUME UP";
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    font-size: 8px;
+  }
+    #volumeDownButton::after {
+    content: "VOLUME DOWN";
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+    font-size: 8px;
+  }
+
+  #volumeUpButton {
+    height: 20px;
+    width: 100px;
+    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    border-radius: 4px;
+    border: 2px outset #7a7979;
+    outline: 4px inset #17171a;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+  }
+
+  #volumeDownButton {
+    height: 20px;
+    width: 100px;
+    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    border-radius: 4px;
+    border: 2px outset #7a7979;
+    outline: 6px inset #17171a;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
+  }
+
+  #ab {
+    background-color: blue;
+    position: absolute;
+    bottom: 40px;
+    visibility: hidden
+  }
+
+`;
+
+document.head.appendChild(style);
   let secondaryPlaylist;
 
 function setupSecondaryPlaylist() {
@@ -1671,12 +1723,12 @@ function setupSecondaryPlaylist() {
   secondaryPlaylist.addSong(alt5);
   secondaryPlaylist.addSong(alt6);
 }
-                
-  const gameWindow_player = document.getElementById("game_window");
-  //use this function directly or put it in an event listener to start the music on the press of a certain button
-  setupMusicPlayer();
-  setupSecondaryPlaylist();
-  setupRandomizeButton();
+
+const gameWindow_player = document.getElementById("game_window");
+//use this function directly or put it in an event listener to start the music on the press of a certain button
+setupMusicPlayer();
+
+  
   document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/win95-theme@1.1.1/95.css">'
   document.head.innerHTML += `<link
     rel="stylesheet"
