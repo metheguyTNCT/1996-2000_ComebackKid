@@ -92698,7 +92698,7 @@ if (e.question_number+1 == 18) { // Midterms
     opponents.bono = 3
     }
     if (e.player_answers.includes(50004)) {
-    if (e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96008.5)) {
+    if ((e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96008.5)) && scandal <= 0) {
     if (e.player_answers.includes(60001)) {
     if (e.player_answers.includes(30002)) {
         SlimGOPCongress += 1;
@@ -92720,7 +92720,7 @@ if (e.player_answers.includes(30002)) {
     ctsAchievement("Good Feelings");
     }
     }
-    } else if (e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) {
+    } else if ((e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) && scandal <= 0) {
     SlimGOPCongress += 1;
     campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_populist");
     ctsAchievement("Counterrevolution");
@@ -94960,7 +94960,6 @@ e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/WyMbM9u.p
 // Modular slides
 if (e.player_answers.includes(150012) && quickstats[0] >= 270) // Invested in ISS & TSC
 {
-    ctsAchievement("Einstein's Bridge");
     e.pages.push(`<span style="font-size: 32px; ">Homer's Boson</span><br><br>
         <p>⭐ 8/10 Ambitious, but has some failures.<br><br>You know, people always says "The Simpsons' Golden Age" has begun to fade away. There's been a noticeable decline ever since that Skinner episode, and things just haven't been the same since. While it remains as ever a contentious subject among fans, I'll myself will always brandish "The Wizard of Evergreen Terrace" as one of the last great hurrahs of the franchise before it began to fall down.<br><br><br><br>Of course it's not perfect. The commentary on the schizophrenical ways of Congress to sponsor Homer's Backyard Collider, while fun, was forced a bit too much in the "Get it? It's funny because it's true! Don't you see just how good our political commentary is?" way. It already warned us about what the Simpsons were becoming, but there was something more that was being tried that really had potential.<br><br>The Simpsons was always a show in the balance between cynicism and optimism, as the unconventional family broke many conventions of what children could see in modern cartoons. However, those transgressions weren't that novel anymore, so they tried to reach for a message. While the hopes to achieve the impossible would never fade, the fight to get it was what mattered and what made us human.<br><br.Whether it were side plots like Bart trying his best to get an A in sports just to show how he was better than Lisa before switching to doing it for himself, the fact he didn't get his wish with his C+ showed that his work had meant something after all. If the Simpsons had kept that drive, we would have avoided that current complete freeze of all development in the Simpson cannon where nothing changes, that state of undeath we find today.<br><br>In a way, much like how the SSC ended up only helping the discovery of the Higgs Boson instead of being it's progenitor, that episode showed that even the greatest of failures can help us go forward, and that's a lesson we all can learn from.</p>`)
 e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/mcnbbhB.png'})])
