@@ -92654,17 +92654,21 @@ if (e.question_number+1 == 18) { // Midterms
     if (e.player_answers.includes(30002)) {
         SlimGOPCongress += 1;
     campaignTrail_temp.questions_json[18] = tunnel("midterm_good_feelings_wood_bentsen");
+    ctsAchievement("Good Feelings");
     } else {
     campaignTrail_temp.questions_json[18] = tunnel("midterm_good_feelings_wood_reich");
+    ctsAchievement("Good Feelings");
     SlimGOPCongress += 1;
     }
     } else {
 if (e.player_answers.includes(30002)) {
     SlimGOPCongress += 1;
     campaignTrail_temp.questions_json[18] = tunnel("midterm_good_feelings_reno_bentsen");
+    ctsAchievement("Good Feelings");
     } else {
         SlimGOPCongress += 1;
     campaignTrail_temp.questions_json[18] = tunnel("midterm_good_feelings_reno_reich");
+    ctsAchievement("Good Feelings");
     }
     }
     } else if (e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) {
