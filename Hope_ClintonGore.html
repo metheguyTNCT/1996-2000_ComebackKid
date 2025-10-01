@@ -1558,7 +1558,7 @@ campaignTrail_temp.questions_json = [
         "pk": "debate_powell",
         "fields": {
             "priority": 0,
-            "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous. A lot more than during the ‘92 debates. What’s your tactic to handle him?",
+            "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous, a lot more than during the ’92 debates. Under the hot TV lights, the hall quiets and you hear the microphones hum. The press is primed to ask some silly question about integrity or another garbage buzzword. What’s your tactic here?",
             "likelihood": 1
         }
     },
@@ -5446,7 +5446,7 @@ campaignTrail_temp.answers_json = [
         "pk": 36096.5,
         "fields": {
             "question": "debate_powell",
-            "description": "The reason General Powell is so popular is because he does a good impression of being moderate. The American people can’t be fooled; he’s the same anti-gay, pro-trickle down economics candidate as George Bush. His ‘’pragmatism’’ is just a facade to hide that."
+            "description": "General Powell is popular because he does a pretty good impression of a moderate. But the American people can’t be fooled: he’s the same anti-gay, pro–trickle-down economics candidate as George Bush. His ''pragmatism'' is just a facade to hide it."
         }
     },
     {
@@ -5454,7 +5454,15 @@ campaignTrail_temp.answers_json = [
         "pk": 36097.5,
         "fields": {
             "question": "debate_powell",
-            "description": " Like all Republicans, General Powell is going to pretend he’s tough. But being the commander-in-chief at home is a lot harder than leading soldiers in a warzone. He just doesn’t have the experience to keep this nation safe from crime or terrorism."
+            "description": "Like all Republicans, General Powell is going to pretend he’s tough. But being commander in chief at home is a lot harder than leading soldiers in a war zone. He doesn’t have the experience to keep our nation safe from crime or terrorism."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36097.521,
+        "fields": {
+            "question": "debate_powell",
+            "description": "I honor the General’s service, and I won’t drag the uniform, or his service, into politics. But let’s focus on the facts, folks: the world is safer than it’s ever been, the economy is rockin’ and rollin’, and we’ve made our streets safer. Let’s talk about that."
         }
     },
     {
@@ -5462,7 +5470,7 @@ campaignTrail_temp.answers_json = [
         "pk": 36098.5,
         "fields": {
             "question": "debate_powell",
-            "description": "If I pick a fight with Powell, then I’m just encouraging the public to pick sides between the two of us. Just hit people with plans for a second term, and let Powell make his case. At the end of the day, we have a good economy. I have this in the bag."
+            "description": "If I pick a fight with General Powell, I’m just encouraging the public to choose between us. Better to hit folks with second-term plans and let Powell make his case. At the end of the day, we’ve got a good economy. I’ve got this in the bag."
         }
     },
     {
@@ -24925,6 +24933,36 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12648,
+        "fields": {
+            "answer": 36097.521,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12649,
+        "fields": {
+            "answer": 36097.521,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12650,
+        "fields": {
+            "answer": 36097.521,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.031
         }
     },
     {
@@ -80183,7 +80221,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86100.5,
             "candidate": 77,
-            "answer_feedback": "While populism sways crowds, results sway elections. People feel better off now than four years ago, and your tried and proven government seems set for another term."
+            "answer_feedback": "While populism sways crowds, results sway elections. People feel better off now than they did four years ago, and your tried-and-proven government seems set for another term. At least that’s what you keep telling yourself."
         }
     },
     {
@@ -80192,7 +80230,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86101.5,
             "candidate": 77,
-            "answer_feedback": "Your campaign stalks Lamar’s like a shadow, and your crowds put him to shame. As you give a rally in his hometown of Maryville, you forget why you were even worried about your opponent in the first place."
+            "answer_feedback": "Your campaign stalks Lamar’s campaign like a shadow, and your crowds put his to shame. As you hold a rally in his hometown of Maryville, as if to bite your thumb at your rival, you forget why you were ever worried about your opponent in the first place."
         }
     },
     {
@@ -80201,7 +80239,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86102.5,
             "candidate": 77,
-            "answer_feedback": "Pundits are dumbfounded, first by your decision to tour the deep south, and then by the size of the crowds you’re able to bring as you tour from Oklahoma City to Houston, and from Jackson to Montgomery."
+            "answer_feedback": "Pundits, and the national press are dumbfounded, first by your decision to tour the Deep South, then by the sheer size, and energy of the crowds you draw from Oklahoma City to Houston and from Jackson to Montgomery."
         }
     },
     {
@@ -80210,7 +80248,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86103.5,
             "candidate": 77,
-            "answer_feedback": "Many question the wisdom of touring the plains, but just by showing up you become one of the first national democrats to visit in years. As you make noise about farm policy from Denver to Salt Lake City, and from Missoula to Sioux City, you apparently bring out record-breaking crowds despite them all being on the smaller side."
+            "answer_feedback": "Many question the wisdom of touring the Plains, but by showing up you become one of the first National Democrats to visit in years. As you make noise about farm policy from Denver to Salt Lake City, from Missoula to Sioux City, you draw record-breaking crowds for these towns, even if each stop is on the smaller side."
         }
     },
     {
@@ -80363,7 +80401,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 36096.5,
             "candidate": 77,
-            "answer_feedback": "On the night of the debate Powell waves off your attacks, trying to insist he simply doesn’t want gays in the military and a tighter budget. But after the debates, there’s a new energy on the Right. Rush is reinvigorated, gleefully recounting how scared of Powell you seemed. "
+            "answer_feedback": "Soon after the clock starts to tick on debate night, you, very lawyerly, consign him to the worst elements of his party. General Powell waves off your attacks, insisting he simply doesn’t want gays in the military and wants a tighter budget. But after the debate, there’s new energy on the Right. Limbaugh is reinvigorated, gleefully recounting how scared you seemed of Powell."
         }
     },
     {
@@ -80372,7 +80410,16 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 36097.5,
             "candidate": 77,
-            "answer_feedback": "Powell smirks slightly and shakes his head. You’re underestimating state sponsors of terrorism. You’re not doing enough to keep violent crime down. He’s keeping his right flank and the moderates happy, and no snappy comments on experience change that."
+            "answer_feedback": "Soon after you meet and shake your rival's hand, you start an aggressive blitzkrieg against his so-called ''toughness.'' General Powell smirks slightly and shakes his head. He argues you’re underestimating state sponsors of terrorism and not doing enough to keep violent crime down. He’s keeping his right flank and the moderates happy, and no snappy comments about experience will change that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12639,
+        "fields": {
+            "answer": 36097.511,
+            "candidate": 77,
+            "answer_feedback": "You start the debate with your comments about respecting the General’s service, and from there it’s clear you’re trying your best to keep things cool and calm. He soon meets your flattery with some of his own, but you notice he talks less about your service and more about the prestige of your office. He’s as weaselly as any of ’em."
         }
     },
     {
@@ -80381,7 +80428,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 36098.5,
             "candidate": 77,
-            "answer_feedback": "You outline your plans to invest in new business and support the environment. Powell outlines his plans to reform tort and crack down on terror. The typical shrill cries of conservative pundits feel forced when they declare your defeat — like it was on points. They wanted a knockout."
+            "answer_feedback": "As the broadcast begins, you outline your plans to invest in new businesses and support the environment. Powell follows with plans to reform tort law and crack down on terror. You go back and forth for what feels like ten hours… The typical, shrill cries of conservative pundits feel forced as they declare your defeat — as if it were on points. They wanted a knockout."
         }
     },
     {
