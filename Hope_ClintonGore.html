@@ -93339,8 +93339,8 @@ if (e.player_answers.includes(30002)) {
     }
 }
  } else {
-    if (e.player_answers.includes(30001)) {
     if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
+    if (e.player_answers.includes(30001)) {
     if (e.player_answers.includes(88007.5)) {
             SlimGOPCongress += 1;
             Legacy += 1;
@@ -93354,16 +93354,14 @@ if (e.player_answers.includes(30002)) {
             dole_active = 0
             campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_reich");
         }
-    }
-    } else {  
-    if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
+    } else {
             SlimGOPCongress += 1;
             Legacy += 1;
             opponents.dole = -10
             dole_active = 0
             campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_none");
+    }
     } else {
-        
         if (LEGWin <= 1 && scandal >= 2 && backlash <= 1){
             gingrich_active = 1
             moveup = 1
@@ -93376,7 +93374,6 @@ if (e.player_answers.includes(30002)) {
     }
     }
     }
-}
 }
 if (e.question_number+1 == 32) {
 let question_22_1996_election = {
