@@ -93317,7 +93317,27 @@ if (e.player_answers.includes(30002)) {
         SlimGOPCongress += 1;
     campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_all");
     ctsAchievement("Counterrevolution");
-   }
+   } else {
+  if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
+            SlimGOPCongress += 1;
+            Legacy += 1;
+            opponents.dole = -10
+            dole_active = 0
+            campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_none");
+    } else {
+        
+        if (LEGWin <= 1 && scandal >= 2 && backlash <= 1){
+            gingrich_active = 1
+            moveup = 1
+            opponents.gingrich = 4
+            DisasterMidterms += 1;
+            campaignTrail_temp.questions_json[18] = tunnel("midterm_gop_sweep");
+    } else {
+            RepublicanRevolution += 1;
+        campaignTrail_temp.questions_json[18] = tunnel("midterm_gop_revolution");
+    }
+    }
+}
  } else {
     if (e.player_answers.includes(30001)) {
     if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
