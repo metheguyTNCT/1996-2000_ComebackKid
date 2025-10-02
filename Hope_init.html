@@ -35,7 +35,7 @@ campaignTrail_temp.candidate_json = [
           "first_name": "Bill",
           "last_name": "Clinton",
           "election": 9,
-          "party": "Democratic",
+          "party": "Democrat",
           "state": "Arkansas",
           "priority": 1,
           "description": "<p>William Jefferson Clinton came from nowhere. From a drug-devastated household off Park Street in Hope, Arkansas, to the highest office in the land, his journey reads like a Hollywood script. To get here, he has bucked trend and broken tradition, fighting hand-in-hand with Hillary, his political partner and wife. Clinton has been swept into office a ''New Democrat'', selling himself to the American people as the antidote to the liberal losers of days gone by.</p> <p>Having campaigned on bringing change to an ossified Washington establishment, the President is now tasked with fulfilling the new covenant he promised to the country. If he can lead the nation while staying true to his principles, re-election should be easy. But public opinion is fickle — every bit as slippery as his own charm. He can already hear the cogs of the Republican smear machine gurgling to life. Even in these good times, the Big Dog must tread carefully to avoid being dragged into the mire of Washington, where the muck can swallow a man whole. </p>",
@@ -127,7 +127,7 @@ campaignTrail_temp.candidate_json = [
           "first_name": "Al",
           "last_name": "Gore",
           "election": 9,
-          "party": "Democratic",
+          "party": "Democrat",
           "state": "Tennessee",
           "priority": 5,
           "description": "''",
@@ -968,12 +968,31 @@ window.changePlaylist=changePlaylist
 function updateUI(playlist) {
   const currentSong = playlist.getCurrentSong();
   var player = document.getElementById("player");
-  player.querySelector("#title").textContent = currentSong.getTitle();
-  player.querySelector("#artist").textContent = currentSong.getArtist();
+  const titleElement = player.querySelector("#title");
+  const artistElement = player.querySelector("#artist");
+
+  titleElement.textContent = currentSong.getTitle();
+  artistElement.textContent = currentSong.getArtist();
 
   // Update the total time
   const totalTimeElement = document.getElementById("total-time");
   totalTimeElement.textContent = currentSong.getDuration();
+
+  // Re-apply scroll animation with updated title
+  updateScrollAnimation(); 
+}
+
+function updateScrollAnimation() {
+  const titleTester = document.getElementById("title");
+  if (!titleTester) return; // Safety check
+
+  const titleText = titleTester.textContent;
+  const steps = titleText.length;
+
+  // Restart animation cleanly
+  titleTester.style.animation = "none";
+  void titleTester.offsetWidth; // Force reflow
+  titleTester.style.animation = `scroll 10s steps(${steps}) infinite`;
 }
 
 
@@ -1320,18 +1339,12 @@ abButton.textContent = "A/B";
 playerContainer.appendChild(abButton);
 
 // Select the title element
-    const titleTester = document.getElementById('title');
+const titleTester = document.getElementById('title');
 
-    // Function to update scroll based on title length (including spaces)
-    function updateScrollAnimation() {
-      const titleText = titleElement.textContent; // Get the full text, including spaces
-      const titleLength = titleText.length;        // Count all characters, including spaces
-      const steps = Math.max(5, titleLength);      // Adjust steps based on length
-      titleElement.style.animation = `scroll ${steps * 0.5}s steps(${steps}) infinite`;  // Update animation speed
-    }
 
-    // Call the function to update the animation when the page loads
-    updateScrollAnimation();
+
+
+
 
   // Update the UI when the page loads
   updateUI(playlist);
@@ -1440,11 +1453,10 @@ position: relative;
   }
 
   #info-text {
-    width: 200px; /* Take up the remaining 40% of the space */
-    overflow: visible; /* Allow overflow to be visible */
-    white-space: nowrap; /* Prevent breaking text into multiple lines */
-    display: flex;
-    flex-direction: columm;
+    width: 204.2505px; 
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   #time-container {
@@ -1458,8 +1470,6 @@ position: relative;
     display: flex;
     flex-direction: row;
     padding-left: 30px;
-    gap: 20px;
-        z-index: 1; /* Keeps info-text below the title */
   }
   #current-time {
     width:100px;
@@ -1520,11 +1530,12 @@ position: relative;
     text-align:right;
     font-size: 30px;
     width: auto;
+    display: inline-block;
     white-space: nowrap;
-    overflow: visible;
     z-index: 0; 
 	top: -2px;
   	position: absolute;
+    animation: scroll 10s linear infinite;
   }
 
 
