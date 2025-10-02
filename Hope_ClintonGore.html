@@ -93610,118 +93610,6 @@ question_insert("debate_gingrich",question_22_1996_election);
 
 }
 }
-    if (e.question_number+1 == 30){
-    let oslo_3 = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
-    let oslo_3_start = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3_start",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
-        let oslo_3_start_kurds = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3_start_kurds",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_conciliatory_masscuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_conciliatory_masscuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_conciliatory_semicuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_conciliatory_semicuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_conciliatory_nocuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_conciliatory_nocuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_nonconciliatory_masscuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_nonconciliatory_masscuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_nonconciliatory_semicuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_nonconciliatory_semicuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    let soviet_3_nonconciliatory_noncuts = {
-        "model": "campaign_trail.question",
-        "pk": "soviet_3_nonconciliatory_noncuts",
-        "fields": {
-            "priority": 0,
-            "description": "Russia keeps filling the news as Zyuganov's big grin is now standing next to Alexander Lukashenko's own as the declaration of a union state between Belarus and Russia as been done. The borders between the two countries have not yet disappeared just yet but the intention of slowly reforming the soviet union is crystal clear.",
-            "likelihood": 1
-        }
-    }
-    if (CommieReturn == 1) {
-    if (e.player_answers.includes(91003.5) && e.player_answers.includes(91005.5)) {
-    if (e.player_answers.includes(88010.5)) {
-    question_insert("soviet_2_georgia",soviet_3_conciliatory_masscuts);
-    } else if (e.player_answers.includes(88009.5)) {
-    question_insert("soviet_2_georgia",soviet_3_conciliatory_semicuts); 
-    } else {
-    question_insert("soviet_2_georgia",soviet_3_conciliatory_nocuts);
-    }
-    } else {
-    if (e.player_answers.includes(88010.5)) {
-    question_insert("soviet_2_georgia",soviet_3_nonconciliatory_masscuts);
-    } else if (e.player_answers.includes(88009.5)) {
-    question_insert("soviet_2_georgia",soviet_3_nonconciliatory_semicuts); 
-    } else {
-    question_insert("soviet_2_georgia",soviet_3_nonconciliatory_noncuts);
-    }
-    }
-    } else {
-    if (e.player_answers.includes(85002.5)) {
-    if (e.player_answers.includes(200003)) {
-    question_insert("question_21_iraq_airstrikes",oslo_3_start_kurds);
-    } else {
-    question_insert("question_21_iraq_airstrikes",oslo_3_start);   
-    }
-    } else {
-        question_insert("question_21_iraq_airstrikes",oslo_3);
-    }
-    }
-    }
         if (e.question_number+1 == 31 && BuchananNom == 1){
             if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
                 question_insert("campaign_2_buchanan", 
@@ -93751,7 +93639,50 @@ question_insert("debate_gingrich",question_22_1996_election);
         }
         if (e.question_number+1 == 29) {
         if (CommieReturn == 1) {
-        campaignTrail_temp.questions_json[29] = tunnel("campaign_1_powell");
+         question_insert("soviet_4_nowar", 
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_1_powell",
+        "fields": {
+            "priority": 0,
+            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
+            "likelihood": 1
+        }
+    }
+    );
+    question_insert("soviet_4_nonato_noun", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "campaign_1_powell",
+            "fields": {
+                "priority": 0,
+                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
+                "likelihood": 1
+            }
+        }
+        );
+        question_insert("soviet_4_nato_noun", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "campaign_1_powell",
+            "fields": {
+                "priority": 0,
+                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
+                "likelihood": 1
+            }
+        }
+        );
+        question_insert("soviet_4_nonato_un", 
+        {
+            "model": "campaign_trail.question",
+            "pk": "campaign_1_powell",
+            "fields": {
+                "priority": 0,
+                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
+                "likelihood": 1
+            }
+        }
+        );
     question_insert("campaign_1_powell", 
         {
             "model": "campaign_trail.question",
@@ -93763,7 +93694,7 @@ question_insert("debate_gingrich",question_22_1996_election);
             }
         }
         );
-        question_insert("campaign_2_powell", 
+        question_insert("campaign_3_powell", 
         {
             "model": "campaign_trail.question",
             "pk": "debate_powell",
