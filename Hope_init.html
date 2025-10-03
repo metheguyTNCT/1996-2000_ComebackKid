@@ -345,10 +345,7 @@ $(".container")[0].style.backgroundColor = "#ffffff";
 document.getElementById("header").src = "https://files.catbox.moe/t43ts8.png";
 
 
-document.body.background = "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/DC%20Background";
-document.body.style.backgroundPosition = "25% 75%";
-document.body.style.backgroundRepeat = "no-repeat";
-document.body.style.backgroundSize = "cover"; // or "contain" depending on your needs
+document.body.background = "https://i.imgur.com/T1iDVXu.jpeg";
 
 document.getElementById("inner_window_1").children[0].innerHTML="<h3>Are you ready to be President of the United States?</i></h3>"
 
@@ -1370,6 +1367,33 @@ position: relative;
   border: 3px solid rgb(68, 68, 68);
   box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
     position: relative;
+  }
+
+  #info-container::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(186, 186, 186, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  #info-container:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
   }
 
   #info-container {
