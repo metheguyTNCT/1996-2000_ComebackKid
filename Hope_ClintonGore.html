@@ -88477,7 +88477,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     if (e.question_number+1 == 17) { // Healthcare/Welfare IIII
     if (e.player_answers.includes(50004)) {
     if (e.player_answers.includes(51002.5)) {
-    if ((Ideology <= 4) && scandal <= 0) {
+    if ((Ideology <= -4) && scandal <= 0) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
