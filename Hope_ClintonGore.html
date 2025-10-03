@@ -91806,12 +91806,14 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("balanced_budget",soviet_1_transnistria);
     question_insert("question_15_republican_budget",soviet_1_transnistria);
     question_insert("question_15_huge_budget",soviet_1_transnistria);
+    question_insert("question_23_pandora",soviet_1_transnistria);
      } else {
     question_insert("balanced_budget",oslo_2);
     question_insert("question_15_mitigation_budget_nospace",oslo_2);
     question_insert("question_15_mitigation_budget_space",oslo_2);
     question_insert("question_15_republican_budget",oslo_2);
     question_insert("question_15_huge_budget",oslo_2);
+    question_insert("question_23_pandora",oslo_2);
     }
     }
         if (e.question_number+1 == 24){
@@ -91993,6 +91995,7 @@ question_insert("question_20_bosnia_quagmire",
 
 if (e.question_number+1 == 25){
     if (Pandora >= 1) {
+    ctsAchievement("Pandora's Box");
             weld_active = 1
             moveup = 1
             opponents.weld = 10
@@ -93153,6 +93156,7 @@ if (e.question_number+1 == 27) {
 // Pandora
 if (ans == 26002.5 || 26005.5) {
 Pandora += 1
+
 }
     // Candidate Stuff
     if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 88020.5){
