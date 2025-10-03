@@ -961,6 +961,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "candidate_intro_weldperotactedearly",
+        "fields": {
+            "priority": 0,
+            "description": "Ross Perot has finally hatched from his cocoon campaign; his sideshow has become the main attraction as headlines of corruption hit Republicans and Democrats alike. Desperate for survival, the GOP claps back with Bill Weld. Your favorite Republican, whose lifework has been built for this very moment, is all too giddy to usurp your brand of new politics. How will you define yourself as Weld positions himself to take back the mantle of anti-corruption and Perot reinvigorates the ideals of independence against the uniparty apparatus?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "candidate_intro_gingrich",
         "fields": {
             "priority": 3,
@@ -10082,7 +10091,7 @@ campaignTrail_temp.answers_json = [
         "pk": 98004.5,
         "fields": {
             "question": "question_26_pandora",
-            "description": "I-I think this is some kind of complete misunderstanding. Call Kimba on for a little chat. Pelicano's just some Hollywood agent, he's got n-nothing to do with neither me - nor the wheels of government! I'm certain she understands he's not the <i>real</i> enemy she's looking for."
+            "description": "II-I think this is some kind of complete misunderstanding. Call Kimba on for a little chat. Pelicano's just some Hollywood agent, he's got n-nothing to do with neither me - nor the wheels of government! I'm certain she understands he's not the <i>real</i> enemy she's looking for."
         }
     },
     {
@@ -10098,7 +10107,7 @@ campaignTrail_temp.answers_json = [
         "pk": 98006.5,
         "fields": {
             "question": "question_26_pandora_early",
-            "description": "I-I think this is some kind of complete misunderstanding. Call Kimba on for a little chat. Pelicano's just some Hollywood agent, he's got n-nothing to do with neither me - nor the wheels of government! I'm certain she understands he's not the <i>real</i> enemy she's looking for."
+            "description": "II-I think this is some kind of complete misunderstanding. Call Kimba on for a little chat. Pelicano's just some Hollywood agent, he's got n-nothing to do with neither me - nor the wheels of government! I'm certain she understands he's not the <i>real</i> enemy she's looking for."
         }
     },
     {
@@ -10114,7 +10123,7 @@ campaignTrail_temp.answers_json = [
         "pk": 98008.5,
         "fields": {
             "question": "question_26_pandora_early",
-            "description": "This fucker is not gonna cost me re-election. Get me Louis Freeh. I don't care what he does! J-Just burn all the tapes, all the recordings, the damn paper, an-<b>anything</b> that links me to Pelicano! If there's nothing to see, there's nothing to pin on me."
+            "description": "This fucker is not gonna cost me re-election. Get me Louis Freeh. I don't care what he does! J-Just burn all the tapes, all the recordings, the damn paper, an-<b>anything</b> that links me to Pelicano! If there's nothing to see, there's nothing to pin on me.
         }
     },
 
@@ -85631,26 +85640,34 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 98003.5,
             "candidate": 77,
-            "answer_feedback": "The chat starts off cordial, but Wood doesn't make eye contact. When she leaves, Kimba drops that Gennifer said hello. The room turns silent. The phone calls, the wiretapping, the excuses to worm out of, all unraveled in an instant. Everyone will know. You won't be impeached, but you're a dead man walking."
+            "answer_feedback": "Your allusion only made her raise more questions. It's becoming clear, she's gunning for her own party as well. We have to scramble something together very soon before she pounces, or we will find ourselves suffering the same burns as the Republicans are currently facing."
         }
     },
-
+    {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12828722,
+        "pk": 1282913,
         "fields": {
-            "answer": 98006.5,
+            "answer": 98004.5,
             "candidate": 77,
             "answer_feedback": "The chat starts off cordial, but Wood doesn't make eye contact. When she leaves, Kimba drops that Gennifer said hello. The room turns silent. The phone calls, the wiretapping, the excuses to worm out of, all unraveled in an instant. Everyone will know. You won't be impeached, but you're a dead man walking."
         }
     },
-
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 1282913,
         "fields": {
             "answer": 98005.5,
             "candidate": 77,
-            "answer_feedback": "Vince doesn't talk to you for days. Headlines batter Wood as the whore of D.C to the entire nation. It's too much for her. Kimba Wood breaks down in front of reporters, choking on her resignation. You gained a lot from her tenure. It's a shame we <i>just</i> couldn't get along."
+            "answer_feedback": "The tapes were played the next morning in full on the Rush Limbaugh show. His comments was all the right needed to hear for a go-ahead. Vince doesn't talk to you for days. Headlines batter Wood as the whore of D.C to the entire nation. It's too much for her. Kimba Wood breaks down in front of reporters, choking on her resignation. You gained a lot from her tenure. It's a shame we <i>just</i> couldn't get along."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1282913,
+        "fields": {
+            "answer": 98006.5,
+            "candidate": 77,
+            "answer_feedback": "The chat starts off cordial, but Wood doesn't make eye contact. When she leaves, Kimba drops that Gennifer said hello. The room turns silent. The phone calls, the wiretapping, the excuses to worm out of, all unraveled in an instant. Everyone will know. You won't be impeached, but you're a dead man walking."
         }
     },
     {
@@ -85659,7 +85676,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 98007.5,
             "candidate": 77,
-            "answer_feedback": "Vince doesn't talk to you for days. Headlines batter Wood as the whore of D.C to the entire nation. It's too much for her. Kimba Wood breaks down in front of reporters, choking on her resignation. You gained a lot from her tenure. It's a shame we <i>just</i> couldn't get along."
+            "answer_feedback": "The tapes were played the next morning in full on the Rush Limbaugh show. His comments was all the right needed to hear for a go-ahead. Vince doesn't talk to you for days. Headlines batter Wood as the whore of D.C to the entire nation. It's too much for her. Kimba Wood breaks down in front of reporters, choking on her resignation. You gained a lot from her tenure. It's a shame we <i>just</i> couldn't get along."
         }
     },
     {
@@ -85700,6 +85717,7 @@ var scandal = 0
 var Ideology = 0
 var Legacy = 0
 var OsloPoints = 0
+var Pandora = 0
 var SlimGOPCongress = 0
 var RepublicanRevolution = 0
 var DisasterMidterms = 0
@@ -85715,6 +85733,7 @@ var WilsonNom = 0
 var ForbesNom = 0
 var PowellNom = 0
 var GingrichNom = 0
+var WeldNom = 0
 var BushNom = 0
 var SundogNom = 0
 var sundog = 0
@@ -91322,10 +91341,6 @@ question_insert("question_20_bosnia_quagmire",
             gingrich_active = 0
             opponents.gingrich = -10
             }
-            if (weld_active == 1) {
-            weld_active = 0
-            opponents.weld = -10
-            }
             if (bono_active == 1) {
             weld_active = 0
             opponents.weld = -10
@@ -91484,6 +91499,19 @@ question_insert("question_20_bosnia_quagmire",
             opponents.bono = -10
         }
         updateCandidates("junk", 0)
+    if (Pandora >= 1) {
+     question_insert("oslo_question_1_slimgop", 
+        {
+            "model": "campaign_trail.question",
+        "pk": "question_23_pandora",
+        "fields": {
+            "priority": 0,
+            "description": "After you managed to amend S.804 1983 and many of the laws that limited the FBI and Justice Department's investigative powers into members of Congress, Wood has been outdoing herself. While you just thought of drafting new legislation, she's already begun her work toward cleaning up the acts of every branch in government! Some are already recoiling, but it's too late. She smells blood in the water, and all you have to do is give the order.",
+            "likelihood": 1
+        }
+        }
+        );
+    } else {
     if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
         ctsAchievement("Deficit Hawk");
         Legacy += 2;
@@ -91628,6 +91656,7 @@ question_insert("question_20_bosnia_quagmire",
             }
             );
         }
+    }
     }
         if (e.question_number+1 == 23){
         if (sortedOpponents[2+moveup][0] == "dole") {
@@ -91963,6 +91992,47 @@ question_insert("question_20_bosnia_quagmire",
     }
 
 if (e.question_number+1 == 25){
+    if (Pandora >= 1) {
+            weld_active = 1
+            moveup = 1
+            opponents.weld = 10
+            if (dole_active == 1) {
+            dole_active = 0
+            opponents.dole = -10
+            }
+            if (buchanan_active == 1) {
+            buchanan_active = 0
+            opponents.buchanan = -10
+            }
+            if (forbes_active == 1) {
+            forbes_active = 0
+            opponents.forbes = -10
+            }
+            if (alexander_active == 1) {
+            alexander_active = 0
+            opponents.alexander = -10
+            }
+            if (gramm_active == 1) {
+            gramm_active = 0
+            opponents.gramm = -10
+            }
+            if (specter_active == 1) {
+            specter_active = 0
+            opponents.specter = -10
+            }
+            if (wilson_active == 1) {
+            wilson_active = 0
+            opponents.wilson = -10
+            }
+            if (gingrich_active == 1) {
+            gingrich_active = 0
+            opponents.gingrich = -10
+            }
+            if (bono_active == 1) {
+            weld_active = 0
+            opponents.weld = -10
+            }
+        }
         let internet_thirdway_mitigation = {
             "model": "campaign_trail.question",
             "pk": "internet_thirdway_mitigation",
@@ -92098,7 +92168,37 @@ if (e.question_number+1 == 25){
             "likelihood": 1
         }
     }
-    if (CommieReturn == 1) {
+    let question_26_pandora = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_pandora",
+        "fields": {
+            "priority": 0,
+            "description": "Signal DEFCON 2. Kimba is going rogue. Who the hell asked her to extend the sting to Cisneros <i>and</i> the Urban Development department?!  She's gunning after Pelicano too. She's gonna find it. She's gonna find what we did and start a new Watergate. We have to stop her. Right now. Above anything else.",
+            "likelihood": 1
+        }
+    }
+    let question_26_pandora_early = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_pandora_early",
+        "fields": {
+            "priority": 0,
+            "description": "Signal DEFCON 2. Kimba is going rogue. Who the hell asked her to extend the sting to Cisneros <i>and</i> the Urban Development department?!  She's gunning after Pelicano too. She's gonna find it. She's gonna find what we did and start a new Watergate. We have to stop her. Right now. Above anything else.",
+            "likelihood": 1
+        }
+    }
+    if (Pandora >= 1) {
+    if (e.player_answers.includes(98003.5)) {
+    question_insert("oslo_3_start_kurds",question_26_pandora_early);
+    question_insert("oslo_3_start",question_26_pandora_early);
+    question_insert("oslo_3",question_26_pandora_early);
+    question_insert("soviet_2_georgia",question_26_pandora_early);
+    } else {
+    question_insert("oslo_3_start_kurds",question_26_pandora);
+    question_insert("oslo_3_start",question_26_pandora);
+    question_insert("oslo_3",question_26_pandora);
+    question_insert("soviet_2_georgia",question_26_pandora);
+    }
+    } else if (CommieReturn == 1) {
     if (e.player_answers.includes(91003.5) && e.player_answers.includes(91005.5)) {
     if (e.player_answers.includes(88010.5)) {
     question_insert("soviet_2_georgia",soviet_3_conciliatory_masscuts);
@@ -92165,7 +92265,7 @@ if (e.question_number+1 == 25){
 
 if (e.question_number+1 == 26) {
     updateCandidates("junk", 0)
-determineRepublican()
+opponentDecider()
 }
 if (e.question_number+1 == 27) {
     	let dnc_dean_badpell_badhillary = {
@@ -92347,6 +92447,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_dean_goodpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_dean_goodpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_dean_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_dean_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_dean_goodpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_dean_goodpell_goodhillary);
@@ -92362,6 +92464,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_dean_goodpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_dean_goodpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_dean_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_dean_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_dean_goodpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_dean_goodpell_badhillary);
@@ -92377,6 +92481,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_dean_goodpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_dean_goodpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_dean_goodpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_dean_goodpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_badhillary);
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
@@ -92394,6 +92500,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_dean_badpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_dean_badpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_dean_badpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_dean_badpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_dean_badpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_dean_badpell_goodhillary);
@@ -92409,6 +92517,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_dean_badpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_dean_badpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_dean_badpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_dean_badpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_dean_badpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_dean_badpell_badhillary);
@@ -92424,6 +92534,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_dean_badpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_dean_badpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_dean_badpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_dean_badpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_badhillary);
     }
     }
     } else if (Ideology >= -3 && Ideology <= 1) {
@@ -92443,6 +92555,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_bayh_goodpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_bayh_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_bayh_goodpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_bayh_goodpell_goodhillary);
@@ -92458,6 +92572,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_bayh_goodpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_bayh_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_bayh_goodpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_bayh_goodpell_badhillary);
@@ -92473,6 +92589,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_bayh_goodpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_bayh_goodpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_badhillary);
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
@@ -92490,6 +92608,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_bayh_badpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_bayh_badpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_bayh_badpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_bayh_badpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_bayh_badpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_bayh_badpell_goodhillary);
@@ -92505,6 +92625,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_bayh_badpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_bayh_badpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_bayh_badpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_bayh_badpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_bayh_badpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_bayh_badpell_badhillary);
@@ -92520,6 +92642,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_bayh_badpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_bayh_badpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_bayh_badpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_bayh_badpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_badhillary);
     }
     }
 } else if (Ideology <= -4) {
@@ -92539,6 +92663,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_landrieu_goodpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_landrieu_goodpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_landrieu_goodpell_goodhillary);
@@ -92554,6 +92680,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_landrieu_goodpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_landrieu_goodpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_landrieu_goodpell_badhillary);
@@ -92569,6 +92697,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_landrieu_goodpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_badhillary);
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
@@ -92586,6 +92716,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_landrieu_badpell_decenthillary);
         question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_decenthillary);
         question_insert("candidate_intro_sundog",dnc_landrieu_badpell_decenthillary);
+        question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_decenthillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_decenthillary);
     }  else if (Legacy >= 8) {
         question_insert("candidate_intro_dole",dnc_landrieu_badpell_goodhillary);
         question_insert("candidate_intro_dark_dole",dnc_landrieu_badpell_goodhillary);
@@ -92601,6 +92733,8 @@ if (e.question_number+1 == 27) {
         question_insert("candidate_intro_bono",dnc_landrieu_badpell_goodhillary);
         question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_goodhillary);
         question_insert("candidate_intro_sundog",dnc_landrieu_badpell_goodhillary);
+        question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_goodhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_goodhillary);
     } else {
         question_insert("candidate_intro_dole",dnc_landrieu_badpell_badhillary);
         question_insert("candidate_intro_dark_dole",dnc_landrieu_badpell_badhillary);
@@ -92616,6 +92750,8 @@ if (e.question_number+1 == 27) {
        question_insert("candidate_intro_bono",dnc_landrieu_badpell_badhillary);
        question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_badhillary);
        question_insert("candidate_intro_sundog",dnc_landrieu_badpell_badhillary);
+       question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_badhillary);
+        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_badhillary);
     }
     }
 }
@@ -93014,6 +93150,10 @@ if (e.question_number+1 == 27) {
     if (ans == 85027.5){
     ctsAchievement("Orange Tips Only");
     }
+// Pandora
+if (ans == 26002.5 || 26005.5) {
+Pandora += 1
+}
     // Candidate Stuff
     if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 88020.5){
     opponents.dole += 2
@@ -93147,7 +93287,7 @@ if (e.question_number+1 == 27) {
     if (ans == OsloPoints >= 3) {
     ctsAchievement("Shir LaShalom"); 
     }
-function determineRepublican(){
+function opponentDecider(){
     republicanChange(sortedOpponents[0][0])
 }
 
@@ -93335,6 +93475,25 @@ function determineRepublican(){
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/gS1UpHm.png";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.39
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
+    } else if (candidateName == "weld") {
+        WeldNom += 1;
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0D2F9C";
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "H. Ross";
+        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#901090";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
+        campaignTrail_temp.candidate_json[2]["fields"].last_name = "Dellums";
+        campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ron";
+        campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#3E6B89";
+        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Weld";
+        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bill";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#f6df31ff";
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/uMD8uCf.png";
+        if (e.player_answers.includes(98008.5)) {
+        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_weldperotactedearly");
+        } else {
+        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_weldperot");
+        }
     } else if (candidateName == "perot") {
             SundogNom += 1;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Paul";
@@ -96716,6 +96875,7 @@ vpTable = {
     "Lyndon LaRouche" : "Webster Tarpley",
     "Bernie Sanders" : "Jim Hightower",
     "Monica Moorehead" : "Gloria La Riva",
+    "Ron Dellums" : "Eric Chester",
 
     // Reform
     "H. Ross Perot" : "Pat Choate",
