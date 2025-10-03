@@ -352,10 +352,6 @@ document.getElementById("inner_window_1").children[0].innerHTML="<h3>Are you rea
 document.getElementById("inner_window_1").children[1].innerHTML = "<li>After twelve long years, you and a new generation of Americans have ascended to power.</li><li>The challenges ahead are immense. Every decision will be tested in public; every pause will read as weakness.</li><li>You will face hard questions, craft policy, and chart a course for a new era.</li><li>A young global order rests on your shoulders — will it bring stability and renewal, or slide into upheaval?</li><li>At home, the mandate is simpler, at least on paper: turn promise into results before patience runs out.</li><li>The portraits on the wall will watch you, the Hill will count the votes, and the press will keep score.</li><li>Soon you will learn: there are no “right” answers, only the possible.";
 
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
-
-
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#004F6E!important;}</style>";
 document.head.innerHTML +=`
 <style>
       @font-face {
@@ -370,18 +366,6 @@ document.head.innerHTML +=`
 #game_window {
   background-image: url("null"); /* https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Window%20Cartoon to be added laterrrrr */ 
 	background-size: cover;
-}
-
-.mytooltip:hover .mytooltiptext {
-opacity: 1;
-transition-delay: 0.6s;
-  @keyframes crtFlicker {
-  0%   { opacity: 1; }
-  5%   { opacity: 0.9; }
-  10%  { opacity: 1; }
-  15%  { opacity: 0.95; }
-  100% { opacity: 1; }
-}
 }
 
 .game_header {
@@ -404,6 +388,20 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
   padding: 3px;
   border-radius: 0;
 }
+
+#results_container {
+    color:#fff;
+} 
+
+#final_results_description {
+	color: #fff;
+}
+
+#inner_window_2, #inner_window_3, #inner_window_4 {
+    background-color: rgba(4, 170, 109, 0);
+}
+
+
           #opponent_selection_description_window {
   background: 
     linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
@@ -483,13 +481,6 @@ border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 
-#results_container {
-	color: #fff;
-}
-
-#final_results_description {
-	color: #fff;
-}
 
 #overall_result_container {
 background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
@@ -642,6 +633,15 @@ function addDynamicCSS() {
           opacity: 1;
           transition-delay: 0.5s;
           box-shadow: inset 0 0 3px rgba(90, 120, 255, 0.25), 0 0 6px rgba(60, 110, 255, 0.15);
+          transition-delay: 0.6s;
+          @keyframes crtFlicker {
+          0%   { opacity: 1; }
+          5%   { opacity: 0.9; }
+          10%  { opacity: 1; }
+          15%  { opacity: 0.95; }
+          100% { opacity: 1; }
+}
+}
       }
   `;
 
