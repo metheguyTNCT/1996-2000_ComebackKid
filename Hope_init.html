@@ -364,7 +364,7 @@ document.head.innerHTML +=`
 }
 
 #game_window {
-  background-image: url("null"); /* https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Window%20Cartoon to be added laterrrrr */ 
+  background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Window%20Cartoon"); /* https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Window%20Cartoon to be added laterrrrr */ 
 	background-size: cover;
 }
 
@@ -550,11 +550,7 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
   animation: windowPop 0.34s ease-out;
 }
 
-#inner_window_question {
-  width: 80%;
-  max-width: 1000px;
-  min-width: 750px;
-}
+
 </style>`
 
 styling = document.createElement("style");
@@ -1412,7 +1408,8 @@ position: relative;
     padding-left: 30px; /* Optional padding to create space between elements */
   border-radius: 6px;
   outline: 6px inset #17171a;
-  border: 3px inset #414145;
+  border: 3px solid;
+  border-color: #2b2b2e #414145 #414145 #2b2b2e; 
 
   }
   
@@ -1455,6 +1452,7 @@ position: relative;
     gap: 1px;
     align-items: end;
     padding-right: 6px;
+    padding-left: 6px;
   }
 
   #volume-1 {
