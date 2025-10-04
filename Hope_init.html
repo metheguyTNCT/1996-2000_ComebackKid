@@ -379,14 +379,10 @@ background: linear-gradient(to bottom, #004f6e 0%, #005b82 50%, #006d96 100%);
 border: 1px solid #003A4F;
 box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
 }
-  #map_container {
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-  border: 2px double #003A4F;
 
-  box-shadow:
+#map_container {
+  border: 2px double #003A4F;
+  box-shadow: 
     inset 0 1px 2px rgba(120, 150, 255, 0.1),
     1px 1px 0 #ffffff,
     -1px -1px 0 #0183AD,
@@ -395,81 +391,53 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
   border-radius: 0;
 }
 
-#results_container {
-    color:#fff;
-} 
-
-#final_results_description {
-	color: #fff;
+.visit_text {
+  overflow-wrap: normal;
+  width: 700px;
+  left: 30px;
+  position: relative;
 }
+
+#results_container,
+#credits,
+.inner_window_w_desc h3,
+.visit_text {
+    color: #fff;
+} 
 
 #inner_window_2, #inner_window_3, #inner_window_4 {
     background-color: rgba(4, 170, 109, 0);
 }
 
 
-          #opponent_selection_description_window {
+#map_container,
+#opponent_selection_description_window,
+#inner_window_1,
+.inner_window_sign_display,
+#candidate_description_window,
+#running_mate_description_window,
+#election_description_window {
   background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
+  linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
+  linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
   background-blend-mode: soft-light;
-          }
-          #inner_window_1 {
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-  animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
-          }
-          .inner_window_sign_display {
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-          }
-          #candidate_description_window {
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-            overflow:hidden;
-          }
-          #running_mate_description_window {
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-            overflow:hidden;
-          }
-          #election_description_window{
-  background: 
-    linear-gradient(145deg, #f3fafc 0%, #d7eef7 40%, #b7dff0 80%, #e9f7fb 100%),
-    linear-gradient(to bottom, #ffffff 0%, #f0f4fc 100%);
-  background-blend-mode: soft-light;
-          }
-          #election_summary{
+}
+
+#election_summary{
             width:auto;
             z-index: 0;
             color: #000000;
             text-shadow: 
   	      0px 0px 1px rgba(32, 29, 26, 0.15);
           }
+
 .campaign_trail_start_emphasis {
 background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
 }
-.inner_window_question h3 {
-background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
-border: 1px solid #0183AD;
-box-shadow:
-  inset 0 0 3px rgba(90, 120, 255, 0.25),
-  inset 0 1px 0 rgba(255, 255, 255, 0.3),
-  inset 0 -1px 0 rgba(100, 130, 255, 0.1);
-padding: 2px 4px;
-text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
-}
+
+.inner_window_question h3, 
 .overlay_window h3 {
 background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
 border: 1px solid #0183AD;
@@ -481,47 +449,40 @@ padding: 2px 4px;
 text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
 }
-#menu_container {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
-}
 
-
-#overall_result_container {
+#menu_container, 
+#state_result_container, 
+#overall_result_container,
+#state_info h3,
+#overall_result h3,
+#state_result h3 {
 background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
-}
-#state_info h3 {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
-}
-#overall_result h3 {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
 }
 
 .inner_window_question h3,
 .overlay_window h3 {
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
+
 .button,
 .game_header,
 .campaign_trail_start_emphasis {
 transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
+
 .button:hover,
 .game_header:hover,
 .campaign_trail_start_emphasis:hover {
 box-shadow: inset 0 0 6px rgba(60, 110, 255, 0.3), 0 1px 2px rgba(0,0,0,0.1);
 }
+
 .inner_window_question h3:active,
 .overlay_window h3:active {
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.35);
 }
+
 .window_frame {
 border: 2px solid #005B82;
 border-top-color: #0183AD;
@@ -531,16 +492,7 @@ border-bottom-color: #003A4F;
 background: #024E71;
 }
 
-#state_result_container {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
-}
-#state_result h3 {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
-}
+
 @keyframes windowPop {
   0% {
     transform: scale(0.95);
@@ -957,6 +909,7 @@ class Playlist {
 window.Playlist=Playlist
 window.Song=Song
 
+
 function changePlaylist(newPlaylist) {
   playlist = newPlaylist;
   playlist.currentSongIndex = 0;
@@ -966,6 +919,7 @@ function changePlaylist(newPlaylist) {
   audio.play();
 }
 window.changePlaylist=changePlaylist
+
 
 function updateUI(playlist) {
   const currentSong = playlist.getCurrentSong();
@@ -980,12 +934,7 @@ function updateUI(playlist) {
   const totalTimeElement = document.getElementById("total-time");
   totalTimeElement.textContent = currentSong.getDuration();
 
-  // Re-apply scroll animation with updated title
-  updateScrollAnimation(); 
-}
-
-function updateScrollAnimation() {
-  const titleTester = document.getElementById("title");
+    const titleTester = document.getElementById("title");
   if (!titleTester) return; // Safety check
 
   const titleText = titleTester.textContent;
@@ -995,6 +944,7 @@ function updateScrollAnimation() {
   titleTester.style.animation = "none";
   void titleTester.offsetWidth; // Force reflow
   titleTester.style.animation = `scroll 10s steps(${steps}) infinite`;
+
 }
 
 
@@ -1087,7 +1037,7 @@ songInfo.appendChild(infoText);
 
 const titleElement = document.createElement("p");
 titleElement.id = "title";
-titleElement.textContent = "Loading Song Title..."; // Default text before the song starts
+titleElement.style.animation = `scroll 10s steps(17) infinite`;
 infoText.appendChild(titleElement);
 
 const tinyPlay = document.createElement("div"); //this is where all the tiny icons go at the bottom
@@ -1461,26 +1411,25 @@ position: relative;
     padding-left: 6px;
   }
 
-  #volume-1 {
-    height: 3px;
-    width: 5px;
-    background-color: #73ffe4;
-    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
-  }
-
-    #volume-2 {
-    height: 6px;
-    width: 5px;
-    background-color: #73ffe4;
-    box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
-  }
-
-    #volume-3 {
-    height: 9px;
+  #volume-1,
+  #volume-2,
+  #volume-3 {
     width: 5px;
     background-color: #73ffe4;
     visibility: hidden;
     box-shadow: rgba(222,255,251,0.9) 0px 0px 4px; 
+  }
+
+  #volume-1 {
+    height: 3px;
+  }
+
+    #volume-2 {
+    height: 6px;
+  }
+
+    #volume-3 {
+    height: 9px;
   }
 
   #info-text {
@@ -1502,11 +1451,8 @@ position: relative;
     flex-direction: row;
     padding-left: 30px;
   }
-  #current-time {
-    width:100px;
-  }
 
-
+  #current-time,
   #total-time:{
     width: 100px;
 
@@ -1566,7 +1512,6 @@ position: relative;
     z-index: 0; 
 	top: -2px;
   	position: absolute;
-    animation: scroll 10s linear infinite;
   }
 
 
@@ -1604,9 +1549,6 @@ position: relative;
     text-align: center;
 
   }
-  .is-vertical #volumeSlider {
-  width: 125px;
-}
 
  #controls {
     display: flex;
@@ -1627,48 +1569,16 @@ position: relative;
   }
 
 
-  #playPauseButton:active {
-    border: 2px outset #17171a;
-  }
-
-  #nextButton:active {
-    border: 2px outset #17171a;
-  }
-
-  #prevButton:active {
-    border: 2px outset #17171a;
-  }
-
-  #volumeUpButton:active {
-    border: 2px outset #17171a;
-  }
-
+  #playPauseButton:active,
+  #nextButton:active,
+  #prevButton:active,
+  #volumeUpButton:active,
   #volumeDownButton:active {
     border: 2px outset #17171a;
   }
 
-    #playPauseButton {
-    width: 60px;
-    height: 48px;
-	cursor: pointer;
-    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
-    border-radius: 4px;
-    border: 2px outset #7a7979;
-    outline: 4px inset #17171a;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
-  }
-
-  #nextButton {
-    width: 60px;
-    height: 48px;
-	cursor: pointer;
-    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
-    border-radius: 4px;
-    border: 2px outset #7a7979;
-    outline: 4px inset #17171a;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
-  }
-
+  #playPauseButton,
+  #nextButton,
   #prevButton {
     width: 60px;
     height: 48px;
@@ -1708,17 +1618,7 @@ position: relative;
     font-size: 8px;
   }
 
-  #volumeUpButton {
-    height: 20px;
-    width: 100px;
-	cursor: pointer;
-    background-image: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
-    border-radius: 4px;
-    border: 2px outset #7a7979;
-    outline: 4px inset #17171a;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(255, 255, 255, 0.04) 0px 0px 6px inset, rgba(0, 0, 0, 0.5) 0px -2px 2px inset, rgba(255, 255, 255, 0.05) 0px 2px 2px inset;
-  }
-
+  #volumeUpButton,
   #volumeDownButton {
     height: 20px;
     width: 100px;
