@@ -209,8 +209,8 @@ campaignTrail_temp.running_mate_json = [
         "model": "campaign_trail.running_mate",
         "pk": 143018,
         "fields": {
-            "candidate": 92,
-            "running_mate": 95
+            "candidate": 91,
+            "running_mate": 96
         }
     }
 ]
@@ -283,7 +283,7 @@ campaignTrail_temp.temp_election_list = [
 
 jet_data = {
     "headerColor": "#078650",
-    "windowColor": "#32d28d",
+    "windowColor": "#71a890",
     "containerColor": "#949494",
     "innerWindowColor": "#078650",
     "bannerImageUrl": "https://i.postimg.cc/zDWbk7GX/RDT-20250525-1109253459504140879372331.jpg",
@@ -301,7 +301,7 @@ corrr = '\n              <h2>PRESIDENT OF WHAT?</h2>\n            ';
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#078650";
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#32d28d";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#71a890";
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
 
@@ -309,7 +309,7 @@ $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selected
 
 $(".container")[0].style.backgroundColor = "#949494";
 
-$("#game_window")[0].style.backgroundImage = "url(https://files.catbox.moe/ma6eu6.png)"
+$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/CXZRisW.jpeg)"
 
 $("#game_window")[0].style.borderColor = "#078650"
 
@@ -319,7 +319,7 @@ document.getElementById("header").src = "https://i.postimg.cc/zDWbk7GX/RDT-20250
 
 document.body.background = "https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1920,h_1254,g_auto/dpr_auto/f_auto/q_auto:eco/v1/nixon-anti-war-protest-gettyimages-515574696?_a=BAVAZGDX0";
 
-document.head.innerHTML += "<style>#results_container {color:#078650;} .inner_window_w_desc {background-color:#32d28d!important;}</style>";
+document.head.innerHTML += "<style>#results_container {color:#078650;} .inner_window_w_desc {background-color:#71a890!important;}</style>";
 
 document.getElementById("inner_window_1").children[1].innerHTML =  `<li>Welcome to <b><span style="color: #078650;">The Death Of Honesty</span></b>.</li><li>A deeply cynical mod where the player plays as Gerald Ford from 1974-1976.</li><li>You will answer questions about your platform, positions, and about your campaign strategy.</li><li>The answers will affect your popularity for better or worse, both nationwide and in individual states.</li><li>Walk the fine line between appealing to your base and winning a majority of the votes.</li><li>Additionally, the game contains Choose Your Own Adventure elements, secret endings and achievements.</li><li>Content Warning: This mod's writing contains large amounts of profanity and instances of other explicit content.</li>`;
 
@@ -327,7 +327,7 @@ campaignTrail_temp.modBoxTheme = {
   "header_color": "#078650",
   "header_text_color": "#ffffff",
   "description_text_color": "#ffffff",
-  "description_background_color": "#32d28d",
+  "description_background_color": "#71a890",
   "main_color": "#949494",
   "secondary_color": "#078650",
  "ui_text_color": "#ffffff"
@@ -346,15 +346,15 @@ RecReading=true
     alert(text)
   }
 
-HistHexcolour=["#1072a1","#a11510","#db8223","#2ca853"];
-    HistName=[" Ted Kennedy"," Not Gerald Ford"," Roger MacBride"," Eugene McCarthy"];
-    HistEV=[439,99,0,0];
-    HistPV=["42,306,212","37,618,057","788,841","636,422"];
-    HistPVP=["52.0%","46.3%","1.0%","0.8%"];
+HistHexcolour=["#d91e1c","#FF0000","#a29d0b","#027000"];
+    HistName=[" Ronald Reagan"," Jimmy Carter"," John Anderson"," Barry Commoner"];
+    HistEV=[489,49,0,0];
+    HistPV=["43,899,248","35,481,436","5,719,850","233,052"];
+    HistPVP=["50.7%","41.0%","6.6%","0.27%"];
 
-    e.SelectText = "Please select the election you will lose in:"
-    e.CandidText = "Please select your unelected president:"
-    e.VpText = "Please select your unelected vice president:"
+    e.SelectText = "Please select the election you will run in:"
+    e.CandidText = "Please select your candidate:"
+    e.VpText = "Please select your running mate:"
 
 // Select the node that will be observed for mutations
 const windowsAdvisorTargetNode = document.getElementById("game_window");
