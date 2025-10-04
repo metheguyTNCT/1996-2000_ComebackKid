@@ -96843,28 +96843,7 @@ question_insert("question_20_bosnia_quagmire",
     weld_active = 1
      moveup = 1
     opponents.weld = 5
-     question_insert("oslo_question_1_slimgop", 
-        {
-            "model": "campaign_trail.question",
-        "pk": "question_23_pandora",
-        "fields": {
-            "priority": 0,
-            "description": "After you managed to amend S.804 1983 and many of the laws that limited the FBI and Justice Department's investigative powers into members of Congress, Wood has been outdoing herself. While you just thought of drafting new legislation, she's already begun her work toward cleaning up the acts of every branch in government! Some are already recoiling, but it's too late. She smells blood in the water, and all you have to do is give the order.",
-            "likelihood": 1
-        }
-        }
-        );
-    question_insert("oslo_question_1_slimgop_start", 
-        {
-            "model": "campaign_trail.question",
-        "pk": "question_23_pandora",
-        "fields": {
-            "priority": 0,
-            "description": "After you managed to amend S.804 1983 and many of the laws that limited the FBI and Justice Department's investigative powers into members of Congress, Wood has been outdoing herself. While you just thought of drafting new legislation, she's already begun her work toward cleaning up the acts of every branch in government! Some are already recoiling, but it's too late. She smells blood in the water, and all you have to do is give the order.",
-            "likelihood": 1
-        }
-        }
-        );
+     campaignTrail_temp.questions_json[22] = tunnel("question_23_pandora");
     } else {
     if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
         ctsAchievement("Deficit Hawk");
@@ -101152,7 +101131,7 @@ e.executable.push([0, (() => {e.image = e.image = 'https://i.imgur.com/f5Ck3lB.g
     "4:33"
   );
 weldLoss.addSong(weldLossSong);
-changePlaylist(weldLossSong);
+changePlaylist(weldLoss);
 // Blowout Dole
 } else if (quickstats[0] >= 450 && quickstats[0] <= 537 && DoleNom == 1) {
     ctsAchievement("Where's The Outrage?");
