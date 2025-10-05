@@ -1043,20 +1043,28 @@ function updateUI(playlist) {
   artistElement.textContent = currentSong.getArtist();
 
   // Update the total time
-  const totalTimeElement = document.getElementById("total-time");
-  totalTimeElement.textContent = currentSong.getDuration();
+const titleTester = document.getElementById("title");
+if (!titleTester) return; // Safety check
 
-    const titleTester = document.getElementById("title");
-  if (!titleTester) return; // Safety check
+const titleText = titleTester.textContent;
+const steps = titleText.length;
 
-  const titleText = titleTester.textContent;
-  const steps = titleText.length;
+// Function to check if text overflows
+function checkOverflow() {
+  const container = titleTester.parentElement;  // Assuming titleTester is inside a container
+  if (titleTester.scrollWidth > container.clientWidth) {
+    // If text overflows, apply animation
+    titleTester.style.animation = "none";  // Restart animation cleanly
+    void titleTester.offsetWidth;  // Force reflow
+    titleTester.style.animation = `scroll 10s steps(${steps}) infinite`;
+  } else {
+    // If text does not overflow, remove animation
+    titleTester.style.animation = "none";
+  }
+}
 
-  // Restart animation cleanly
-  titleTester.style.animation = "none";
-  void titleTester.offsetWidth; // Force reflow
-  titleTester.style.animation = `scroll 10s steps(${steps}) infinite`;
-
+// Initial check if the title overflows
+checkOverflow();
 }
 
 
