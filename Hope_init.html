@@ -359,6 +359,7 @@ document.getElementById("inner_window_1").children[1].innerHTML = "<li>After twe
 
 document.head.innerHTML +=`
 <style>
+     <style>
       @font-face {
   font-family: digital;
   src: url(https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/digital);
@@ -400,7 +401,9 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
 #results_container,
 #credits,
 .inner_window_w_desc h3,
-.visit_text {
+.visit_text,
+#overall_details_container,
+#main_content_area_reading {
     color: #fff;
 } 
 
@@ -458,6 +461,7 @@ animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
 background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
 border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
+color: #fff;
 }
 
 .inner_window_question h3,
@@ -621,7 +625,7 @@ text-rendering: optimizeSpeed;
 }
 .overlay_window {
   height: auto;
-
+}
 </style>`
 
 styling = document.createElement("style");
