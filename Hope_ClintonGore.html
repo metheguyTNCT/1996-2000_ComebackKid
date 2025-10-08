@@ -1369,7 +1369,7 @@ campaignTrail_temp.questions_json = [
         "pk": "campaign_1_alexander_commies",
         "fields": {
             "priority": 0,
-            "description": "Lamar has pushed education to the forefront. He champions school choice, pitching his ''GI Bill for Kids'', and even flirts with abolishing the Education Department, casting it all as power back to parents and states. With his plaid-shirt outsider shtick, you’ve got room to contrast your plan with his devolution pitch. How do you press the advantage?",
+            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
             "likelihood": 1
         }
     },
@@ -1987,24 +1987,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "oslo_5",
-        "fields": {
-            "priority": 0,
-            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": "oslo_5_win",
-        "fields": {
-            "priority": 0,
-            "description": "As the memory of Yitzhak's death is still fresh in the people's memories, and as the leading coalition was barely holding on without their leader, the new Prime Minister, Shimon Peres, called for early elections. Many think it will be a tough race, as the right is fighting as one under the young Benjamin Netanyahu, who has his own plan for peace with Palestine. Only time will tell who wins.",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": "internet_thirdway_mitigation",
         "fields": {
             "priority": 0,
@@ -2117,6 +2099,60 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "As the situation seems dire, with Gingrich taking control of our term with the aim of making you a one-term president — the latest news is especially concerning. After our refusal to hasten their entry into NATO, even in the face of a forged document attributed to Yeltsin and cuckoo claims that they were starting a nuclear weapons program, they’ve turned to Republicans to achieve the security they desperately crave. Considering the prevalence of Polish migrants in the Midwest, this may kill our chances of reelection out of spite.",
+            "likelihood": 1
+        }
+    },
+        {
+        "model": "campaign_trail.question",
+        "pk": "question_21_russia",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_21_russia_failyugoslavia",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_21_russia_cuts",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_21_russia_none",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "oslo_election_win",
+        "fields": {
+            "priority": 0,
+            "description": "Yitzhak Rabin is dead. You don't believe it at first, then you see that blood-splattered copy of \"Shir LaShalom\" he had kept in his pocket; the realization has you in dread. He's really gone, and with him, the accord too perhaps. Hamas has hit Israel with suicide attacks, while Netanyahu is fanning the flames of revenge for the man he once called Adolf Hitler. The peace is fracturing by the day, You must salvage the accord. Make his memory count.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "oslo_election",
+        "fields": {
+            "priority": 0,
+            "description": "Yitzhak Rabin is dead. You don't believe it at first, then you see that blood-splattered copy of \"Shir LaShalom\" he had kept in his pocket; the realization has you in dread. He's really gone, and with him, the accord too perhaps. Hamas has hit Israel with suicide attacks, while Netanyahu is fanning the flames of revenge for the man he once called Adolf Hitler. The peace is fracturing by the day, You must salvage the accord. Make his memory count.",
             "likelihood": 1
         }
     },
@@ -3655,13 +3691,101 @@ campaignTrail_temp.answers_json = [
           "description": "I know that the United States must be seen as the strongest nation on Earth. But if we start bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re going to issue a clear, firm statement condemning the Iraqi regime and, if necessary, bring this matter before the United Nations. That’s the kind of principled leadership our nation deserves."
       }
   },
-  {
-    "model": "campaign_trail.answer",
-    "pk": 200003,
-    "fields": {
-        "question": "question_21_iraq_airstrikes",
-        "description": "What we need is a more permanent solution. Not invasion, of course, but renewed, serious pressure. We have to apply that push not only from the outside, but inside as well. Let’s help the Kurds, let’s help those democratic forces fighting Saddam’s regime. If he’s taken from both in and out, the mad dog will have to learn how to play.\n"
-    }
+{
+        "model": "campaign_trail.answer",
+        "pk": 200001,
+        "fields": {
+            "question": "question_21_russia",
+            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200002,
+        "fields": {
+            "question": "question_21_russia",
+            "description": "If we go to bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re gonna issue a clear, firm statement condemning the Iraqi regime, and, behind close doors, start negotiating further cuts on the embargoes his regime has been facing. No need to show force when the people are well fed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200003,
+        "fields": {
+            "question": "question_21_russia",
+            "description": "What we need is a more permanent solution. Not invasion of course but a renewed pressure. We have not only to have that push being out but inside too. Let's help the Kurds, let's help those democratic to fight Saddam's regime. If he's taken both in and out the mad dog will have to learn how to play."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200004,
+        "fields": {
+            "question": "question_21_russia_failyugoslavia",
+            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200005,
+        "fields": {
+            "question": "question_21_russia_failyugoslavia",
+            "description": "If we go to bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re gonna issue a clear, firm statement condemning the Iraqi regime, and, behind close doors, start negotiating further cuts on the embargoes his regime has been facing. No need to show force when the people are well fed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200006,
+        "fields": {
+            "question": "question_21_russia_failyugoslavia",
+            "description": "What we need is a more permanent solution. Not invasion of course but a renewed pressure. We have not only to have that push being out but inside too. Let's help the Kurds, let's help those democratic to fight Saddam's regime. If he's taken both in and out the mad dog will have to learn how to play."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200007,
+        "fields": {
+            "question": "question_21_russia_cuts",
+            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200008,
+        "fields": {
+            "question": "question_21_russia_cuts",
+            "description": "If we go to bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re gonna issue a clear, firm statement condemning the Iraqi regime, and, behind close doors, start negotiating further cuts on the embargoes his regime has been facing. No need to show force when the people are well fed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200009,
+        "fields": {
+            "question": "question_21_russia_cuts",
+            "description": "What we need is a more permanent solution. Not invasion of course but a renewed pressure. We have not only to have that push being out but inside too. Let's help the Kurds, let's help those democratic to fight Saddam's regime. If he's taken both in and out the mad dog will have to learn how to play."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200010,
+        "fields": {
+            "question": "question_21_russia_none",
+            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200011,
+        "fields": {
+            "question": "question_21_russia_none",
+            "description": "If we go to bombing Iraq, we risk coming off as bloodthirsty aggressors, striking at a country that can hardly stand on its own. Instead, our approach will be one of measured diplomacy. We’re gonna issue a clear, firm statement condemning the Iraqi regime, and, behind close doors, start negotiating further cuts on the embargoes his regime has been facing. No need to show force when the people are well fed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 200012,
+        "fields": {
+            "question": "question_21_russia_none",
+            "description": "What we need is a more permanent solution. Not invasion of course but a renewed pressure. We have not only to have that push being out but inside too. Let's help the Kurds, let's help those democratic to fight Saddam's regime. If he's taken both in and out the mad dog will have to learn how to play."
+        }
     },
   {
     "model": "campaign_trail.answer",
@@ -8654,18 +8778,50 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 89025.5,
         "fields": {
-            "question": "oslo_5",
-            "description": "Let the sun rise, light up the morning. The purest of prayers, will not bring him back.\n"
+            "question": "oslo_election_win",
+            "description": "Shalom Haver. I cannot stress this enough: this can't be the end. A bullet should not shred the dreams of peace forever. We need to call on Peres and Arafat. Let's make no mistake that we won't let the death of one be the cause of many. If we do not, that assassin will have succeeded in his mission. Though the key has been bloodied, the door is still in front of us, begging to be opened."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 89026.5,
         "fields": {
-            "question": "oslo_5_win",
-            "description": "Let the sun rise, light up the morning. The purest of prayers, will not bring him back.\n"
+            "question": "oslo_election_win",
+            "description": "The dream millions of Jews and Arabs share of peaceful coexistence survives through our friend Shimon Peres. He is the key to opening the door still in front of us, begging to be opened. I proudly endorse him, and I'd like to campaign on his behalf."
         }
     },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 89027.5,
+        "fields": {
+            "question": "oslo_election_win",
+            "description": "Rabin's demise as proven us that we have to be stronger still. A bullet should not end our work and we must make sure this won't come again. Peres knows he could be next. Whatever he needs, whatever must be done to avoid such a tragedy must come to pass."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 89028.5,
+        "fields": {
+            "question": "oslo_election",
+            "description": "Shalom Haver. I cannot stress this enough: this can't be the end. A bullet should not shred the dreams of peace forever. We need to call on Peres and Arafat. Let's make no mistake that we won't let the death of one be the cause of many. If we do not, that assassin will have succeeded in his mission. Though the key has been bloodied, the door is still in front of us, begging to be opened."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 89029.5,
+        "fields": {
+            "question": "oslo_election",
+            "description": "The dream millions of Jews and Arabs share of peaceful coexistence survives through our friend Shimon Peres. He is the key to opening the door still in front of us, begging to be opened. I proudly endorse him, and I'd like to campaign on his behalf."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 89030.5,
+        "fields": {
+            "question": "oslo_election",
+            "description": "Rabin's demise as proven us that we have to be stronger still. A bullet should not end our work and we must make sure this won't come again. Peres knows he could be next. Whatever he needs, whatever must be done to avoid such a tragedy must come to pass."
+        }
+    }
     {
         "model": "campaign_trail.answer",
         "pk": 90001.5,
@@ -19595,16 +19751,6 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": -0.2485
         }
     },
-    {
-      "model": "campaign_trail.answer_score_global",
-      "pk": 12700,
-      "fields": {
-          "answer": 200001,
-          "candidate": 77,
-          "affected_candidate": 77,
-          "global_multiplier": 0.02
-      }
-  },
   {
 	"model": "campaign_trail.answer_score_global",
         "pk": 12750,
@@ -19635,26 +19781,6 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": -0.2475
         }
     },
-    {
-      "model": "campaign_trail.answer_score_global",
-      "pk": 12703,
-      "fields": {
-          "answer": 200002,
-          "candidate": 77,
-          "affected_candidate": 77,
-          "global_multiplier": -0.026
-      }
-  },
-  {
-      "model": "campaign_trail.answer_score_global",
-      "pk": 12703,
-      "fields": {
-          "answer": 200002,
-          "candidate": 77,
-          "affected_candidate": 78,
-          "global_multiplier": 0.013
-      }
-  },
   {
       	"model": "campaign_trail.answer_score_global",
         "pk": 12750,
@@ -19685,16 +19811,6 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": 0.023
         }
     },
-    {
-      "model": "campaign_trail.answer_score_global",
-      "pk": 12703,
-      "fields": {
-          "answer": 200002,
-          "candidate": 77,
-          "affected_candidate": 79,
-          "global_multiplier": -0.056
-      }
-  },
   {
     "model": "campaign_trail.answer_score_global",
     "pk": 12716,
@@ -24565,16 +24681,7 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": 0.03
         }
     },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12729,
-        "fields": {
-            "answer": 200003,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.02
-        }
-    },
+    
     {
         "model": "campaign_trail.answer_score_global",
         "pk": 12738,
@@ -28543,26 +28650,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12850,
-        "fields": {
-            "answer": 89025.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.01315
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12850,
-        "fields": {
-            "answer": 89025.5,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": 0.00875
         }
     },
     {
@@ -33745,6 +33832,196 @@ campaignTrail_temp.answer_score_global_json = [
             "global_multiplier": -0.0215
         }
     },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283604,
+        "fields": {
+            "answer": 200001,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283610,
+        "fields": {
+            "answer": 200003,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283615,
+        "fields": {
+            "answer": 200004,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283619,
+        "fields": {
+            "answer": 200005,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0224
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283623,
+        "fields": {
+            "answer": 200006,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283628,
+        "fields": {
+            "answer": 200007,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283635,
+        "fields": {
+            "answer": 200009,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0254
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283640,
+        "fields": {
+            "answer": 200010,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283644,
+        "fields": {
+            "answer": 200011,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0224
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283648,
+        "fields": {
+            "answer": 200012,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0254
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283655,
+        "fields": {
+            "answer": 89025.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0149988
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283656,
+        "fields": {
+            "answer": 89025.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.00749988
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283669,
+        "fields": {
+            "answer": 89026.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0214
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283670,
+        "fields": {
+            "answer": 89026.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0288
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283672,
+        "fields": {
+            "answer": 89027.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0185
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283676,
+        "fields": {
+            "answer": 89028.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01315
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283677,
+        "fields": {
+            "answer": 89028.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.00875
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283691,
+        "fields": {
+            "answer": 89029.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0263
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283695,
+        "fields": {
+            "answer": 89030.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0185
+        }
+    },
 
 ]
 
@@ -34762,26 +35039,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
       "model": "campaign_trail.answer_score_issue",
-      "pk": 12701,
-      "fields": {
-          "answer": 200001,
-          "issue": 30,
-          "issue_score": -0.3,
-          "issue_importance": 2
-      }
-  },
-  {
-      "model": "campaign_trail.answer_score_issue",
-      "pk": 12704,
-      "fields": {
-          "answer": 200002,
-          "issue": 30,
-          "issue_score": 0.4,
-          "issue_importance": 2
-      }
-  },
-    {
-      "model": "campaign_trail.answer_score_issue",
       "pk": 12705,
       "fields": {
           "answer": 85020.5,
@@ -35787,16 +36044,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 170003,
             "issue": 30,
             "issue_score": 0.3,
-            "issue_importance": 3
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 36020.5,
-        "fields": {
-            "answer": 200003,
-            "issue": 30,
-            "issue_score": -0.123,
             "issue_importance": 3
         }
     },
@@ -40373,6 +40620,126 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_importance": 2
         }
     },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283605,
+        "fields": {
+            "answer": 200001,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283608,
+        "fields": {
+            "answer": 200002,
+            "issue": 30,
+            "issue_score": 0.215,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283611,
+        "fields": {
+            "answer": 200003,
+            "issue": 30,
+            "issue_score": -0.123,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283616,
+        "fields": {
+            "answer": 200004,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283620,
+        "fields": {
+            "answer": 200005,
+            "issue": 30,
+            "issue_score": 0.215,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283624,
+        "fields": {
+            "answer": 200006,
+            "issue": 30,
+            "issue_score": -0.123,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283629,
+        "fields": {
+            "answer": 200007,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283632,
+        "fields": {
+            "answer": 200008,
+            "issue": 30,
+            "issue_score": 0.215,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283636,
+        "fields": {
+            "answer": 200009,
+            "issue": 30,
+            "issue_score": -0.123,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283641,
+        "fields": {
+            "answer": 200010,
+            "issue": 30,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283645,
+        "fields": {
+            "answer": 200011,
+            "issue": 30,
+            "issue_score": 0.215,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283649,
+        "fields": {
+            "answer": 200012,
+            "issue": 30,
+            "issue_score": -0.123,
+            "issue_importance": 2
+        }
+    },
 ]
 
 campaignTrail_temp.answer_score_state_json = [
@@ -40864,248 +41231,6 @@ campaignTrail_temp.answer_score_state_json = [
         "model": "campaign_trail.answer_score_state",
         "pk": 12299,
         "fields": {
-            "answer": 89025.5,
-            "state": 224,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 224,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 183,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 183,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 226,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 226,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 213,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 213,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 190,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 190,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 189,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00542
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 189,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.00546
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 231,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 231,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 203,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 203,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 195,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0035
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 195,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0035
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 230,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0027
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 230,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0027
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89025.5,
-            "state": 212,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0065
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 89026.5,
-            "state": 212,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0065
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
             "answer": 88020.5,
             "state": 190,
             "candidate": 77,
@@ -41254,83 +41379,6 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "state_multiplier": 0.0142
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 203,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 202,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0051
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 218,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "state_multiplier": -0.0031
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 230,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0066
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 193,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0051
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 201,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 200002,
-            "state": 184,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.0075
         }
     },
     {
@@ -83794,6 +83842,248 @@ campaignTrail_temp.answer_score_state_json = [
             "state_multiplier": 0.03
         }
     },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283657,
+        "fields": {
+            "answer": 89025.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283658,
+        "fields": {
+            "answer": 89025.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283659,
+        "fields": {
+            "answer": 89025.5,
+            "state": 226,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283660,
+        "fields": {
+            "answer": 89025.5,
+            "state": 213,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283661,
+        "fields": {
+            "answer": 89025.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283662,
+        "fields": {
+            "answer": 89025.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283663,
+        "fields": {
+            "answer": 89025.5,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283664,
+        "fields": {
+            "answer": 89025.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283665,
+        "fields": {
+            "answer": 89025.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0035
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283666,
+        "fields": {
+            "answer": 89025.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0027
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283667,
+        "fields": {
+            "answer": 89025.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.0065
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283678,
+        "fields": {
+            "answer": 89028.5,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283679,
+        "fields": {
+            "answer": 89028.5,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283680,
+        "fields": {
+            "answer": 89028.5,
+            "state": 226,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283681,
+        "fields": {
+            "answer": 89028.5,
+            "state": 213,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283682,
+        "fields": {
+            "answer": 89028.5,
+            "state": 190,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283683,
+        "fields": {
+            "answer": 89028.5,
+            "state": 189,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.00546
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283684,
+        "fields": {
+            "answer": 89028.5,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283685,
+        "fields": {
+            "answer": 89028.5,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0075
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283686,
+        "fields": {
+            "answer": 89028.5,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0035
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283687,
+        "fields": {
+            "answer": 89028.5,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0027
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283688,
+        "fields": {
+            "answer": 89028.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0065
+        }
+    },
 ]
 
 campaignTrail_temp.answer_feedback_json = [
@@ -84886,33 +85176,6 @@ campaignTrail_temp.answer_feedback_json = [
             "answer_feedback": "''I am more grateful than I can say. You have given me an opportunity and a responsibility that comes to few people. I will do my best. And together, we will — we will — build that bridge to the 21st century. Thank you. Good night, and God bless America.''\n"
         }
     },
-    {
-      "model": "campaign_trail.answer_feedback",
-      "pk": 12699,
-      "fields": {
-          "answer": 200001,
-          "candidate": 77,
-          "answer_feedback": "Guided missiles launched from the USS Laboon, USS Shiloh, and USS California targeted air defense installations in southern Iraq, delivering a severe blow to Saddam, a real black eye, so to speak. With these strikes serving as cover, American soldiers evacuated 700 members of the INC and 6,000 Kurds from northern Iraq."
-      }
-  },
-  {
-      "model": "campaign_trail.answer_feedback",
-      "pk": 12702,
-      "fields": {
-          "answer": 200002,
-          "candidate": 77,
-          "answer_feedback": "Eventually, the British decide to take matters into their own hands. On October 9th, guided missiles are launched from HMS Cardiff and HMS Glasgow, it seems the Empire still stands proud and ready to jump into action. Meanwhile, some in the American public, and especially in the media, are eager to portray your reluctance as utter weakness."
-      }
-  },
-  {
-    "model": "campaign_trail.answer_feedback",
-    "pk": 12728,
-    "fields": {
-        "answer": 200003,
-        "candidate": 77,
-        "answer_feedback": "The Kurds are in the midst of a civil war between people wishing a compromise with Saddam and another wishing for near independence or full independence. Throwing your weight behind the later as well as the united opposition which fought at their side has been grinding on Saddam resolve. You're unlikely to hear him bark for much longer."
-    }
-},
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 12709,
@@ -89704,24 +89967,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12849,
-        "fields": {
-            "answer": 89025.5,
-            "candidate": 77,
-            "answer_feedback": "While the votes were still being counted, Shimon Peres’s party held a narrow majority. However, as the prime minister was elected separately, Benjamin Netanyahu won the office with a bare 50.5% majority. He claims to still be seeking peace — just in his own way — but somehow, you can’t bring yourself to trust his word. Even less so after your first conversation with him, when you instantly disliked him."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12856,
-        "fields": {
-            "answer": 89026.5,
-            "candidate": 77,
-            "answer_feedback": "After a few days that felt like weeks for you, and years for the people of Palestine and Israel, the tally was finally settled. By fewer than 10,000 votes, Shimon Peres was elected Prime Minister. Even if his old rival won’t return, the song of peace still echoes in the hills of Zion."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12700,
         "fields": {
             "answer": 89015.5,
@@ -92706,6 +92951,168 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 98008.5,
             "candidate": 77,
             "answer_feedback": "Slick Willy does it again. Every time you cross paths, Kimba stares daggers into your soul, but without any proof, what else can she do? Wood knows she's toast the next time your cabinet shuffles. Only the Republicans stand in your way now, and you're gonna finish them once and for all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283603,
+        "fields": {
+            "answer": 200001,
+            "candidate": 77,
+            "answer_feedback": "Guided missiles launched from the USS Laboon, USS Shiloh, and USS California targeted air defense installations in southern Iraq, delivering a severe blow to Saddam, a real black eye, so to speak. With these strikes serving as cover, American soldiers evacuated 700 members of the INC and 6,000 Kurds from northern Iraq."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283606,
+        "fields": {
+            "answer": 200002,
+            "candidate": 77,
+            "answer_feedback": "It was a very stressful handful weeks but eventually, Saddam would accept. While he wouldn't become a beacon of peace in the Middle East, he stopped his operation and is unlikely to help the one of others. The public will probably not learn of the real impact of those deals until decades, Limbaugh calls you a Ba'ath apologist, but for now, Iraqi children can once more enjoy Apricot Ice-creams. One more stone laid down for peace."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283609,
+        "fields": {
+            "answer": 200003,
+            "candidate": 77,
+            "answer_feedback": "The Kurds were embroiled in a civil war, one part supporting and the other opposing Saddam, stuck between autonomy and independence. As we are now supporting the later, it becomes clear that while Desert storm was the last hurrah of conventional warfare, we are becoming most adept at this new style of guerilla warfare. Saddam won't howl for a while after what has transpired."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283614,
+        "fields": {
+            "answer": 200004,
+            "candidate": 77,
+            "answer_feedback": "Guided missiles launched from the USS Laboon, USS Shiloh, and USS California targeted air defense installations in southern Iraq, delivering a severe blow to Saddam, a real black eye, so to speak. With these strikes serving as cover, American soldiers evacuated 700 members of the INC and 6,000 Kurds from northern Iraq."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283618,
+        "fields": {
+            "answer": 200005,
+            "candidate": 77,
+            "answer_feedback": "It went back and forth in Switzerland. As ever with those discussion, quite a few different ambassadors talked to other ambassadors that talk to yet more intermediaries before having a commitment to a later commitment. There however, nothing could get set. Something must have been lost in translation but the idea of a \"Yugoslavian scenario\" is apparently weighing heavy on Saddam's mind."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283622,
+        "fields": {
+            "answer": 200006,
+            "candidate": 77,
+            "answer_feedback": "The Kurds were embroiled in a civil war, one part supporting and the other opposing Saddam, stuck between autonomy and independence. As we are now supporting the later, it becomes clear that while Desert storm was the last hurrah of conventional warfare, we are becoming most adept at this new style of guerilla warfare. Saddam won't howl for a while after what has transpired."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283627,
+        "fields": {
+            "answer": 200007,
+            "candidate": 77,
+            "answer_feedback": "Guided missiles launched from the USS Laboon, USS Shiloh, and USS California targeted air defense installations in southern Iraq, delivering a severe blow to Saddam, a real black eye, so to speak. With these strikes serving as cover, American soldiers evacuated 700 members of the INC and 6,000 Kurds from northern Iraq."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283631,
+        "fields": {
+            "answer": 200008,
+            "candidate": 77,
+            "answer_feedback": "It was a very stressful handful weeks but eventually, Saddam would accept. While he wouldn't become a beacon of peace in the Middle East, he stopped his operation and is unlikely to help the one of others. The public will probably not learn of the real impact of those deals until decades, Limbaugh calls you a Ba'ath apologist, but for now, Iraqi children can once more enjoy Apricot Ice-creams. One more stone laid down for peace."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283634,
+        "fields": {
+            "answer": 200009,
+            "candidate": 77,
+            "answer_feedback": "Sending money, weapons, even one or two instructors was the easy part, the hard part was herding the cats facing Saddam. Kurds have been fighting each other and without any chance of showing the weakness of Saddam's regime by any rapid victory, we only made the Iraqi victory one that was pyric. We are out of step with those new ways of conflict."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283639,
+        "fields": {
+            "answer": 200010,
+            "candidate": 77,
+            "answer_feedback": "Guided missiles launched from the USS Laboon, USS Shiloh, and USS California targeted air defense installations in southern Iraq, delivering a severe blow to Saddam, a real black eye, so to speak. With these strikes serving as cover, American soldiers evacuated 700 members of the INC and 6,000 Kurds from northern Iraq."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283643,
+        "fields": {
+            "answer": 200011,
+            "candidate": 77,
+            "answer_feedback": "It went back and forth in Switzerland. As ever with those discussion, quite a few different ambassadors talked to other ambassadors that talk to yet more intermediaries before having a commitment to a later commitment. There however, nothing could get set. Something must have been lost in translation but the idea of a \"Yugoslavian scenario\" is apparently weighing heavy on Saddam's mind."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283647,
+        "fields": {
+            "answer": 200012,
+            "candidate": 77,
+            "answer_feedback": "Sending money, weapons, even one or two instructors was the easy part, the hard part was herding the cats facing Saddam. Kurds have been fighting each other and without any chance of showing the weakness of Saddam's regime by any rapid victory, we only made the Iraqi victory one that was pyric. We are out of step with those new ways of conflict."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283654,
+        "fields": {
+            "answer": 89025.5,
+            "candidate": 77,
+            "answer_feedback": "In grief, you wail for a better tomorrow, for reason over emotion, for mercy of those not yet born. The Israeli people are torn, but ultimately, choose the path of forgiveness. As Shimon Peres assumes his office, he gave you this note. \"Let the sun rise, light up the morning. The purest of prayers, will not bring him back.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283668,
+        "fields": {
+            "answer": 89026.5,
+            "candidate": 77,
+            "answer_feedback": "Inserting yourself into Peres' campaign to this degree is a bridge too far. Netanyahu successfully spins your campaign visits as a naive tourist clueless to the real terror the Jewish nation faces. You're soon reviled by the people, so much so that it pushes Netanyahu to a close victory. The GOP take pleasure mocking your \"failed run for Prime Minister,\" oblivious to the generation you've doomed to genocide which only you seems to fully recognize."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283671,
+        "fields": {
+            "answer": 89027.5,
+            "candidate": 77,
+            "answer_feedback": "Coming to a nation in mourning with policies of defense, of security, of making that stress permeate every facet of life is something Peres never could wield better than Benjamin Netanyahu. you could barely even muster the strength to shake the of Isarel's new leader without feeling disgusted."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283675,
+        "fields": {
+            "answer": 89028.5,
+            "candidate": 77,
+            "answer_feedback": "In grief, you wail for a better tomorrow, for reason over emotion, for mercy of those not yet born. The Israeli people are torn, but ultimately, choose the path of vengeance. Netanyahu shreds the dreams of peace to a permanent end, sentencing the next generation to suffer famine, expulsion, and death."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283690,
+        "fields": {
+            "answer": 89029.5,
+            "candidate": 77,
+            "answer_feedback": "While you're rallying support in Jerusalem, an explosion is heard in the distance, followed by another explosion heard much closer. You're immediately shoved into the Presidential limousine and evacuated from the scene. You witness the panicked crowd flee in terror as ambulances rush to the scene of the explosions. 39 dead, 58 injured. Netanyahu wins in a landslide and invades Southern Lebanon. You stay isolated in the Oval for days, dejected and terrified."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283694,
+        "fields": {
+            "answer": 89030.5,
+            "candidate": 77,
+            "answer_feedback": "Coming to a nation in mourning with policies of defense, of security, of making that stress permeate every facet of life is something Peres never could wield better than Benjamin Netanyahu. you could barely even muster the strength to shake the of Isarel's new leader without feeling disgusted."
         }
     }
 ]
@@ -97794,6 +98201,61 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             opponents.bono = -10
         }
         updateCandidates("junk", 0)
+    if (e.player_answers.includes(85002.5)) {
+    if (e.player_answers.includes(170006)) {
+    if (e.player_answers.includes(88012.5)) {
+        question_insert("question_20_bosnia_win", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_21_russia",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+            }
+        );
+    } else {
+    question_insert("question_20_bosnia_win", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_21_russia_cuts",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+            }
+        );
+    }
+    } else {
+    if (e.player_answers.includes(88012.5)) {
+        question_insert("question_20_bosnia_win", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_21_russia_failyugoslavia",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+            }
+        );
+    } else {
+    question_insert("question_20_bosnia_win", 
+            {
+                "model": "campaign_trail.question",
+        "pk": "question_21_russia_none",
+        "fields": {
+            "priority": 0,
+            "description": "Thanks to the cooling of tensions with Russia, we have found ourselves able to finally be proactive on the world stage. One place we ought to intervene before it degenerates any further is Iraq. In violation of President Bush’s no-fly zones, Saddam Hussein has launched strikes against northern Kurdish militias. The smoke has yet to clear, but our team says an all-out offensive is expected to follow shortly. If Saddam is successful in his show of force, it could convince other powers in the region that they can break opposition by force of arms. It is our duty to act.",
+            "likelihood": 1
+        }
+            }
+        );
+    }
+    }
+    } else {
     if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
     if (e.player_answers.includes(85004.5)) {
     if (e.player_answers.includes(88012.5)) {
@@ -98148,6 +98610,7 @@ question_insert("question_20_bosnia_quagmire",
         );
     }
     }
+    }
 
     if (e.question_number+1 == 21) {
     if (sortedOpponents[4+moveup][0] == "dole") {
@@ -98384,11 +98847,19 @@ question_insert("question_20_bosnia_quagmire",
             question_insert("crooked_deal_cuts",oslo_question_1_start);
             question_insert("crooked_deal_ssrs_nocuts",oslo_question_1_start);
             question_insert("crooked_deal_ssrs_cuts",oslo_question_1_start);
+            question_insert("question_21_russia",oslo_question_1_start);
+            question_insert("question_21_russia_failyugoslavia",oslo_question_1_start);
+            question_insert("question_21_russia_cuts",oslo_question_1_start);
+            question_insert("question_21_russia_none",oslo_question_1_start);
         } else {
             question_insert("crooked_deal_nocuts",oslo_question_1);
             question_insert("crooked_deal_cuts",oslo_question_1);
             question_insert("crooked_deal_ssrs_nocuts",oslo_question_1);
             question_insert("crooked_deal_ssrs_cuts",oslo_question_1);
+            question_insert("question_21_russia",oslo_question_1);
+            question_insert("question_21_russia_failyugoslavia",oslo_question_1);
+            question_insert("question_21_russia_cuts",oslo_question_1);
+            question_insert("question_21_russia_none",oslo_question_1);
         }
         }
     }
@@ -98691,12 +99162,30 @@ question_insert("question_20_bosnia_quagmire",
             "likelihood": 1
         }
      }
-     let oslo_2 = {
+     let oslo_3 = {
         "model": "campaign_trail.question",
-        "pk": "oslo_2",
+        "pk": "oslo_3",
         "fields": {
             "priority": 0,
-            "description": "If the Israeli–Palestinian peace process is to succeed, each nation that borders Israel and Palestine must have no reason for hostility by the time peace is settled. While Egypt is ready to play ball, Jordan has had many reservations, given their current extreme debt and the sheer unpopularity of Israel in their nation. As their allies, we ought to push them in the right direction so that a peace treaty can be signed.",
+            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
+            "likelihood": 1
+        }
+    }
+    let oslo_3_start = {
+        "model": "campaign_trail.question",
+        "pk": "oslo_3_start",
+        "fields": {
+            "priority": 0,
+            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
+            "likelihood": 1
+        }
+    }
+        let oslo_3_start_kurds = {
+        "model": "campaign_trail.question",
+        "pk": "oslo_3_start_kurds",
+        "fields": {
+            "priority": 0,
+            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
             "likelihood": 1
         }
     }
@@ -98706,12 +99195,33 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_15_huge_budget",soviet_1_transnistria);
     question_insert("question_23_pandora",soviet_1_transnistria);
      } else {
-    question_insert("balanced_budget",oslo_2);
-    question_insert("question_15_mitigation_budget_nospace",oslo_2);
-    question_insert("question_15_mitigation_budget_space",oslo_2);
-    question_insert("question_15_republican_budget",oslo_2);
-    question_insert("question_15_huge_budget",oslo_2);
-    question_insert("question_23_pandora",oslo_2);
+    if (e.player_answers.includes(85002.5)) {
+    if (e.player_answers.includes(200003)) {
+    question_insert("balanced_budget",oslo_3_start_kurds);
+    question_insert("question_15_mitigation_budget_nospace",oslo_3_start_kurds);
+    question_insert("question_15_mitigation_budget_space",oslo_3_start_kurds);
+    question_insert("question_15_republican_budget",oslo_3_start_kurds);
+    question_insert("question_15_huge_budget",oslo_3_start_kurds);
+    question_insert("question_23_pandora",oslo_3_start_kurds);
+    } else {
+    question_insert("oslo_2",oslo_3_start);   
+    question_insert("balanced_budget",oslo_3_start);
+    question_insert("question_15_mitigation_budget_nospace",oslo_3_start);
+    question_insert("question_15_mitigation_budget_space",oslo_3_start);
+    question_insert("question_15_republican_budget",oslo_3_start);
+    question_insert("question_15_huge_budget",oslo_3_start);
+    question_insert("question_23_pandora",oslo_3_start);
+    }
+    } else {
+        question_insert("oslo_2",oslo_3);
+        question_insert("oslo_2",oslo_3);   
+    question_insert("balanced_budget",oslo_3);
+    question_insert("question_15_mitigation_budget_nospace",oslo_3);
+    question_insert("question_15_mitigation_budget_space",oslo_3);
+    question_insert("question_15_republican_budget",oslo_3);
+    question_insert("question_15_huge_budget",oslo_3);
+    question_insert("question_23_pandora",oslo_3);
+    }
     }
     }
         if (e.question_number+1 == 24){
@@ -98840,33 +99350,6 @@ question_insert("question_20_bosnia_quagmire",
             opponents.bono = -10
         }
         updateCandidates("junk", 0)
-            let oslo_3 = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
-    let oslo_3_start = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3_start",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
-        let oslo_3_start_kurds = {
-        "model": "campaign_trail.question",
-        "pk": "oslo_3_start_kurds",
-        "fields": {
-            "priority": 0,
-            "description": "You get a series of increasingly tense phone calls as you hear Yitzhak Rabin is trying to also settle his struggle with Syria while pushing for peace with Palestine. Everyone is shouting, people on his right calling him over-compromising, people on his left saying he's giving breadcrumbs, Syria calling for immediate withdrawal from the Golan, and many, many more voices screaming. As the second part of Oslo is soon to come, we must have a clear proposal.",
-            "likelihood": 1
-        }
-    }
     let soviet_2_georgia = {
             "model": "campaign_trail.question",
             "pk": "soviet_2_georgia",
@@ -98876,17 +99359,32 @@ question_insert("question_20_bosnia_quagmire",
                 "likelihood": 1
             }
         }
+    let oslo_election_win = {
+            "model": "campaign_trail.question",
+        "pk": "oslo_election_win",
+        "fields": {
+            "priority": 0,
+            "description": "Yitzhak Rabin is dead. You don't believe it at first, then you see that blood-splattered copy of \"Shir LaShalom\" he had kept in his pocket; the realization has you in dread. He's really gone, and with him, the accord too perhaps. Hamas has hit Israel with suicide attacks, while Netanyahu is fanning the flames of revenge for the man he once called Adolf Hitler. The peace is fracturing by the day, You must salvage the accord. Make his memory count.",
+            "likelihood": 1
+        }
+        }
+    let oslo_election = {
+            "model": "campaign_trail.question",
+        "pk": "oslo_election",
+        "fields": {
+            "priority": 0,
+            "description": "Yitzhak Rabin is dead. You don't believe it at first, then you see that blood-splattered copy of \"Shir LaShalom\" he had kept in his pocket; the realization has you in dread. He's really gone, and with him, the accord too perhaps. Hamas has hit Israel with suicide attacks, while Netanyahu is fanning the flames of revenge for the man he once called Adolf Hitler. The peace is fracturing by the day, You must salvage the accord. Make his memory count.",
+            "likelihood": 1
+        }
+        }
         if (CommieReturn == 1) {
     question_insert("soviet_1_transnistria",soviet_2_georgia);
     } else {
-    if (e.player_answers.includes(85002.5)) {
-    if (e.player_answers.includes(200003)) {
-    question_insert("oslo_2",oslo_3_start_kurds);
+    if (OsloPoints >= 3) {
+    question_insert("oslo_3_start_kurds",oslo_election_win);
     } else {
-    question_insert("oslo_2",oslo_3_start);   
-    }
-    } else {
-        question_insert("oslo_2",oslo_3);
+        question_insert("oslo_3_start",oslo_election);
+        question_insert("oslo_3",oslo_election);
     }
     }
     }
@@ -99050,14 +99548,12 @@ if (e.question_number+1 == 25){
     }
     if (Pandora >= 1) {
     if (e.player_answers.includes(98003.5)) {
-    question_insert("oslo_3_start_kurds",question_26_pandora_early);
-    question_insert("oslo_3_start",question_26_pandora_early);
-    question_insert("oslo_3",question_26_pandora_early);
+    question_insert("oslo_election_win",question_26_pandora_early);
+    question_insert("oslo_election",question_26_pandora_early);
     question_insert("soviet_2_georgia",question_26_pandora_early);
     } else {
-    question_insert("oslo_3_start_kurds",question_26_pandora);
-    question_insert("oslo_3_start",question_26_pandora);
-    question_insert("oslo_3",question_26_pandora);
+    question_insert("oslo_election_win",question_26_pandora);
+    question_insert("oslo_election",question_26_pandora);
     question_insert("soviet_2_georgia",question_26_pandora);
     }
     } else if (CommieReturn == 1) {
@@ -99081,45 +99577,36 @@ if (e.question_number+1 == 25){
     } else {
         if (SlimGOPCongress == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("oslo_3_start_kurds",internet_thirdway_mitigation);
-        question_insert("oslo_3_start",internet_thirdway_mitigation);
-        question_insert("oslo_3",internet_thirdway_mitigation);
+         question_insert("oslo_election_win",internet_thirdway_mitigation);
+    question_insert("oslo_election",internet_thirdway_mitigation);
         } else if (Ideology >= 2) {
-        question_insert("oslo_3_start_kurds",internet_liberal_mitigation);
-        question_insert("oslo_3_start",internet_liberal_mitigation);
-        question_insert("oslo_3",internet_liberal_mitigation);
+        question_insert("oslo_election_win",internet_liberal_mitigation);
+    question_insert("oslo_election",internet_liberal_mitigation);
         } else if (Ideology <= -4) {
-        question_insert("oslo_3_start_kurds",internet_bluedog_mitigation);
-        question_insert("oslo_3_start",internet_bluedog_mitigation);
-        question_insert("oslo_3",internet_bluedog_mitigation);
+        question_insert("oslo_election_win",internet_bluedog_mitigation);
+    question_insert("oslo_election",internet_bluedog_mitigation);
         }
         } else if (RepublicanRevolution == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("oslo_3_start_kurds",internet_thirdway_republican_revolution);
-        question_insert("oslo_3_start",internet_thirdway_republican_revolution);
-        question_insert("oslo_3",internet_thirdway_republican_revolution);
+        question_insert("oslo_election_win",internet_thirdway_republican_revolution);
+    question_insert("oslo_election",internet_thirdway_republican_revolution);
         } else if (Ideology >= 2) {
-        question_insert("oslo_3_start_kurds",internet_liberal_republican_revolution);
-        question_insert("oslo_3_start",internet_liberal_republican_revolution);
-        question_insert("oslo_3",internet_liberal_republican_revolution);
+         question_insert("oslo_election_win",internet_liberal_republican_revolution);
+    question_insert("oslo_election",internet_liberal_republican_revolution);
         } else if (Ideology <= -4) {
-        question_insert("oslo_3_start_kurds",internet_bluedog_republican_revolution);
-        question_insert("oslo_3_start",internet_bluedog_republican_revolution);
-        question_insert("oslo_3",internet_bluedog_republican_revolution);
+        question_insert("oslo_election_win",internet_bluedog_republican_revolution);
+    question_insert("oslo_election",internet_bluedog_republican_revolution);
         }
         } else if (DisasterMidterms == 1) {
         if (Ideology >= -3 && Ideology <= 1) {
-        question_insert("oslo_3_start_kurds",internet_thirdway_disaster_midterms);
-        question_insert("oslo_3_start",internet_thirdway_disaster_midterms);
-        question_insert("oslo_3",internet_thirdway_disaster_midterms);
+        question_insert("oslo_election_win",internet_thirdway_disaster_midterms);
+    question_insert("oslo_election",internet_thirdway_disaster_midterms);
         } else if (Ideology >= 2) {
-        question_insert("oslo_3_start_kurds",internet_liberal_disaster_midterms);
-        question_insert("oslo_3_start",internet_liberal_disaster_midterms);
-        question_insert("oslo_3",internet_liberal_disaster_midterms);
+        question_insert("oslo_election_win",internet_liberal_disaster_midterms);
+    question_insert("oslo_election",internet_liberal_disaster_midterms);
         } else if (Ideology <= -4) {
-        question_insert("oslo_3_start_kurds",internet_bluedog_disaster_midterms);
-        question_insert("oslo_3_start",internet_bluedog_disaster_midterms);
-        question_insert("oslo_3",internet_bluedog_disaster_midterms);
+        question_insert("oslo_election_win",internet_bluedog_disaster_midterms);
+    question_insert("oslo_election",internet_bluedog_disaster_midterms);
         }
         }
 }
@@ -99914,7 +100401,7 @@ if (e.question_number+1 == 27) {
 }
 }
 // FoPo
-    if (ans == 88012.5 || ans == 80003 || ans == 90001 || ans == 900015553 || ans == 85001.5 || ans == 85002.5 || ans == 85003.5 || ans == 85005.5 || ans == 85006.5 || ans == 85007.5 || ans == 100001 || ans == 100002 || ans == 100004 || ans == 170001 || ans == 170004 || ans == 170006 || ans == 200001 || ans == 89006.5 || ans == 89009.5 || ans == 89012.5 || ans == 10022.5 || ans == 10025.5 || ans == 10026.5){
+    if (ans == 88012.5 || ans == 80003 || ans == 90001 || ans == 900015553 || ans == 85001.5 || ans == 85002.5 || ans == 85003.5 || ans == 85005.5 || ans == 85006.5 || ans == 85007.5 || ans == 100001 || ans == 100002 || ans == 100004 || ans == 170001 || ans == 170004 || ans == 170006 || ans == 89006.5 || ans == 89009.5 || ans == 89012.5 || ans == 10022.5 || ans == 10025.5 || ans == 10026.5){
     FPWin += 1;
     updateCandidates("fopo", 1)
     }
@@ -99922,7 +100409,7 @@ if (e.question_number+1 == 27) {
     FPWin += 2;
     updateCandidates("fopo", 1)
     }
-    if (ans == 80001 || ans == 80002 || ans == 80004 || ans == 10002.5 || ans == 900015551 || ans == 900015552 || ans == 10010.5 || ans == 10014.5 || ans == 10016.5 || ans == 10017.5 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 200003 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5 || ans == 10021.5 || ans == 10022.5) {
+    if (ans == 80001 || ans == 80002 || ans == 80004 || ans == 10002.5 || ans == 900015551 || ans == 900015552 || ans == 10010.5 || ans == 10014.5 || ans == 10016.5 || ans == 10017.5 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5 || ans == 10021.5 || ans == 10022.5) {
     FPWin -= 1;
     updateCandidates("fopo", -1)
     }
@@ -99996,7 +100483,7 @@ if (e.question_number+1 == 27) {
    updateCandidates("junk", 0)
    }
 // OsloPoints
-   if (ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5 || ans == 89012.5 || ans == 89013.5 || ans == 89023.5) {
+   if (ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5 || ans == 89012.5 || ans == 89013.5 || ans == 200002 || ans == 200008 || ans == 200003 || ans == 200006 || ans == 89023.5) {
    OsloPoints += 1
    updateCandidates("junk", 0)
    }
@@ -100146,7 +100633,7 @@ Pandora += 1
     if (ans == 85024.5){
     ctsAchievement("Out and Proud");
     }
-    if (ans == OsloPoints >= 3) {
+    if (ans == 89025.5) {
     ctsAchievement("Shir LaShalom"); 
     }
 function opponentDecider(){
@@ -104482,92 +104969,3 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
           console.log("PK not found! "+insertafter_pk);
       }
     }
-/* If you discovered this easter egg, you are truly Number One! Thanks for playing! PS. Hope will return.
-                                                -*                                                  
-                                             =-+=                                                   
-                                           ::= +=                                                   
-                                         :.-   #=                                                   
-                                       +..+    %+                                                   
-                                      =.-      #+                                                   
-                                      :.:      *=                                                   
-                                      =.=      #=                                                   
-                                       -:      *=                                                   
-                                        =-+    *=                                                   
-                                          #+% =-==      *  *                                        
-                                      +=    =--=--%   #+++=-=*%                                     
-                                      =::+  #==-==* #++=----===*%                                   
-                                      =:::-=-+=#=#++=++==------=*#                                  
-                                      -:::-====+-*#+=+===------=+                                   
-                                      +=:::=-%*+-*++++=+++=----=+                                   
-                                      -=:::=-@@@% =##***==+**=++*                                   
-                                    +:--:::--@@%%  ##+=-=-++-*#+                                    
-                                   :.::-:::--@@@@@# %*====-:-%                                      
-                                  ::::--:::--@@@@%%#@++++==%                                        
-                                =--:-==-:::--@@@@%%#@*==#=*%                                        
-                              **==-====-::---@@@@@%#%@=*-+#*@                                       
-                           +=-+==*===+*-::--:@@@@@%%%%*==-++@%@                                     
-                        *=:=-=-=+=++*%#-::--:@@@%@%@#%%=-.=+%@@%%                                   
-                       *.--=-=+*=-=#@@#-:-=-:@@@%@%%##%%=-+*%%@@%%%                                 
-                      +.---:.:+%@@@@@@#-:==::@@%%@%%%%%%%:+#%%%%%@%@                                
-                   *=--:.-#%%%@@@@@@@@#-:=--:@@%%@@%%@%%%#+#%%%%@@%%                                
-                 #-=:-+%@@%@@@@@@@@@@@+::::::@@%%@@@@%@*%%*#%%%@@@%%%                               
-               %==.-%@@@@@@@@@@@%%    =::::::@@%%@@@@@%@#%@@%%%%@@%@%%                              
-            %#=:-%%@@@@@@@@@@         =::::::@@%%@@@%@%%%%#@%@%%@@@@@%          %                   
-         @%+=-#%@@@@@@@%%=            =:::::.@%%%@@%%%%%%@@@@%%%%@%@%%%%     %%%@%                  
-        %@%%@@@@@@%%%#*-=             =:::::.@%%%@%%%@%%%%%@%@##%%%%%@%%@%%%%%%%@@                  
-       %%%@@@@@%%#--=+-=              =-:.::.@%%@@@@@@%%@@%%@%%@@%@%%%%%%@%@@%%%%%                  
-      @@@@@@@% +..-+=-*               =-:.::.@%%@@@@@@@@@@@@@@@@@@@%%%%@%%%%%%%%%%                  
-      @@      =.:+=--+                ==:.:-.@%%%**=-=+++*#%@@##@@%@@%%@%%%%%%%%%                   
-             -.-+=--=                 ==:.:-.@%%@@@%==+--=+::-**@@@@%%@@%%%%@@**                    
-            -.===---                  ==-.:-.@@@@@*++-::-*@@%=#+%@@%@@@@%%%@*-+                     
-           -.----::                   ==-.:-.@@@@@%+--.==#%++=-#@@@@@@@%%@#*                        
-          #.--=-::-                   ==-..-:@@@@@%+===:+%++::+@%@@@@@@++                           
-          -:--=-:.*                   ==-..=.@@@#---*:.=@%==-+@@%%@@#===-+                          
-          ----=-::                    ==-:.=.@@@*...:.*@=:-=-*@%%%%#+#+=-:                          
-         %:---=--=                    ++-:.=.@@@#:-:.%+:..--::@%%%@%  *=--=                         
-         +--==-==*                    ++-:.=.@@@@@@%%-=:.--::.+@%%@@   *-:=                         
-         +--=-*+++                    -+-:.=.@@@@@@@+@@@++=:.:=@%@%@%   -:-                         
-         +-=-- %#*                    :+=:.-.@@@@@@@@@@@#+-#@@@@%%%%%  *-::+                        
-         +-=-+   *#                   :+=:.-:@@@@%@@@@@%@@@@@%%@@%%%% =:-=:*                        
-         %:--*                       @*+=:.::@@%@@@@%@%@@@@@@%%@@%@%%%+=**-=                        
-          .--+#                     @@#+-:::-@@%@@@@@%@@@@@@@%%@@%@@%% #*+**                        
-          =.-=           %        @@@@%+-:::-%@%%@@%%@@@@@@@@@%%@%@@%%                              
-           :.-#          %      @@@@@@%=-:::-%@%%@%%%%@@@@@@@@@%@%%%%%%                             
-             -:-+      *#     %%@@@@@@@--:::=#@%%%%%@@@@@@@@@@@%@@%@%%%                             
-                +-+#*+-=     %%@@@@@@@%:=:::=*@%%%%@@@@@@@@@@@@@@@%@@%%%                            
-                           %%@@@@@@@@%%:+:::=*@%%%%%%@@@@@@@@@@@@@%%@@%%%                           
-                          %@@@%@@@@@%@@:+:::=*@%%%%@@@@@@@@@@@@@@@%%@@%%%%                          
-                          @@%@@@@@@@@@@==-::==@%%%%%@@@@@@@@@@@@@@@%%@@@%%                          
-                         %%%@@@@@@@@@@%#--::=:@@%%%@@@@@@@@@@@@@@@@%%@@@@%                          
-                       %%%@%%@@@@@@@@%%%-=::-.@@%%%@@@@@@@@@@@@@@@@%%%@@@%%                         
-                     %%@@@%@@@@@@@@@%%@%==::-:@@%%%@@@@@@@@@@@@@@@@@@%@@@@%%                        
-                     %@@%%@@%@@@@@@%%@@@+=--::@@@%@@@@@@@@@@@@@@@@@@%%%@@@%%%                       
-                    %@%%@@@%@@@@@@%%%@@@++=-=:@@@%@@@@@@@@@@@@@@@@@@%@%%@@@%%%                      
-                   %%%@@@@%@@@@@@%%%@@@@++=-=:#@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@%                      
-                 @%@@@@@@%@@@@@@@%%%@@@@%:===:=@@@@@@@@@@@@@@@@@@@@@@@@%%@@@%@%                     
-                %@@@@@@%@@@@@@@%%%%@@@@%%:+==:-@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@%                    
-              %%%@@@@@%@@@@@@@@%%%@@@@@%%*+==--@@@@@@@@@@@@@@@@%@@@@@@@@%%@@@@@@%                   
-            %%%%@@@@@%@@@@@@@@%%%@@@@@%%%#++=+-@@@@@@@@@@@@@@@@%@@@@@@@@@%@@@@@@@%                  
-          %@@@@@@@@@%@@@@@@@@%%%@@@@@%%%%@-+=+-@@@@@@@@@@@@@@@@%%%@@@@@@@%%@@@@@@%%                 
-            @@@@@@%%@@@@@@@@%%%@@@@@@%%%@@-*+=-%@@@@@@@@@@@@@@@@%%@@@@@@@@%%@@@@@@%%                
-             @@@@%@@@@@@@@@%%@@@@@@@%%%%@@%-+=+%@@@@@@@@@@@@@@@@%%@@@@@@@@%%@@@@@@@@%               
-               @@@@@@@@@@@%%@@@@@@@@%%%@@@@+==+#@@@@@@@@@@@@@@@@%%@@@@@@@@@%%@@@@@@@@%              
-              @@@@@@@@@@@%%@@@@@@@@%%%%@@@@*+=+-@@@@@@@@@@@@@@@@%%@@@@@@@@@%%%@@@%@@@@              
-             @@@@@@@@@@@@@@@@@@@@@@%%%@@@@@@--=:@@@@@@@@@@@@@@@@%%%@@@@@@@%@%@@@@@%%                
-             @@@@@@@@@@@@@@@@@@@@%%%%@@%@@@@%:=+%@@@@@@@@@@@@@@@%%%@@@@@@@@%%%@@@@@%                
-                @@@@@@@@@@@@@@@@@@%%%@%@@@@@%=:+*@@@@  @@@@@@@@@%%%@@@@@@@@@%%@@@@@@@               
-                   @@@@@@@@@@@@@@%%%%%%@@@@@@*:=#@@         @@@@%%%@@@@@@@@@%%@@%                   
-                   @@@@@@@@@@@@@@%%%%%%@@@@@@@--=@@          @@@%%%@@@@@@@@@@%%@@                   
-                  @@@@@@@@@@@@@@%%%%%%%@@@@@  =-+@@           @@@%% @@@@@@@@@                       
-                  @       @@@@%%%%% @%%%  @    ==*@             %      #*%@%                        
-                         #+@@%%       %         =+@                    #+*++                        
-                        *++***                  #=@@                  +*+----=                      
-                       =----++                   +%@                  %+==--:.+                     
-                     =..:--+*%                    =@                    ##-...:                     
-                    +.:...-#                       %                     %=:.-:-*                   
-                  -.=-=:..=                                               *=-=*=.:                  
-               =....-=..=+*                                                +:.::.=                  
-              =======-==*                                                   *+==*-                  
-                *+++**#                                                      #*=++                  
-
-*/ 
