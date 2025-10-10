@@ -41334,72 +41334,6 @@ campaignTrail_temp.answer_score_state_json = [
         "model": "campaign_trail.answer_score_state",
         "pk": 12299,
         "fields": {
-            "answer": 88020.5,
-            "state": 190,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 88020.5,
-            "state": 203,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 88020.5,
-            "state": 195,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 88020.5,
-            "state": 218,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.008
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 88020.5,
-            "state": 215,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
-            "answer": 88020.5,
-            "state": 184,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 12299,
-        "fields": {
             "answer": 90001,
             "state": 215,
             "candidate": 77,
@@ -91424,7 +91358,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 92004.5,
             "candidate": 77,
-            "answer_feedback": "A few weeks in, the group inside the compound would split in two as nothing prophesized was occurring. As Kimba carried a small girl in her arms back to safety, you knew you had made the right choice. This had the opportunity to be your albatross, but as Koresh was betrayed, thrown out and captured, no one could criticize what your leadership."
+            "answer_feedback": "A few weeks in, the group inside the compound would split in two as nothing prophesized was occurring. As Kimba carried a small girl in her arms back to safety, you knew you had made the right choice. This had the opportunity to be your albatross, but as Koresh was betrayed, thrown out and captured, no one could criticize what your leadership accomplished."
         }
     },
     {
@@ -93401,11 +93335,11 @@ function updateCandidates(type, amt){
             // subs
         } if(type == "ideo" && amt>0){ // Liberal Billy
             // adds
-            if(gramm_active == 1){
-                opponents.gramm += (0.3*amt)
+            if(buchanan_active == 1){
+                opponents.buchanan += (0.2*amt)
             }
-            if(alexander_active == 1){
-                opponents.alexander += (0.2*amt)
+            if(gramm_active == 1){
+                opponents.gramm += (0.2*amt)
             }
             // subs
             if(specter_active == 1){
@@ -93418,6 +93352,11 @@ function updateCandidates(type, amt){
             }
             if(powell_active == 1){
                 opponents.powell += (-0.2*amt)
+            }
+        } if(type == "scan" && amt>0){ // Scandalous Billy
+            // adds
+            if(alexander_active == 1){
+                opponents.alexander += (0.9*amt)
             }
         }
 
@@ -99299,7 +99238,7 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_23_pandora",soviet_1_transnistria);
      } else {
     if (e.player_answers.includes(85002.5)) {
-    if (e.player_answers.includes(200003)) {
+    if (e.player_answers.includes(200002) || e.player_answers.includes(200003) || e.player_answers.includes(200006) || e.player_answers.includes(200006) || e.player_answers.includes(200008)) {
     question_insert("balanced_budget",oslo_3_start_kurds);
     question_insert("question_15_mitigation_budget_nospace",oslo_3_start_kurds);
     question_insert("question_15_mitigation_budget_space",oslo_3_start_kurds);
@@ -100542,14 +100481,22 @@ if (e.question_number+1 == 27) {
    backlash -= 1;
    updateCandidates("junk", -1)
    }
-   if (ans == 250009 || ans == 88020.5) {
+   if (ans == 250009) {
     backlash -= 2;
    updateCandidates("junk", -2)
    }
 // Scandal
-   if (ans == 60003 || ans == 60002.5 || ans == 60003.5 || ans == 60005.5 || ans == 60006.5 || ans == 92000.5 || ans == 92002.5 || ans == 92005.5 || ans == 92006.5 || ans == 92007.5 || ans == 250006 || ans == 250007 || ans == 250008 || ans == 250009  || ans == 88020.5) {
+   if (ans == 60003 || ans == 60002.5 || ans == 60005.5 || ans == 92000.5 || ans == 92007.5 || ans == 250001 || ans == 250003 || ans == 250004 || ans == 250006 || ans == 250007 || ans == 250008 || ans == 250009 || ans == 70002 || ans == 70003 || ans == 85028.5) {
    scandal += 1;
-   updateCandidates("junk", 1)
+   updateCandidates("scan", 1)
+   }
+   if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006) {
+   scandal += 2;
+   updateCandidates("scan", 1) 
+   }
+   if (ans == 92006.5) {
+   scandal += 3;
+   updateCandidates("scan", 1) 
    }
 // Ideo
    if (ans == 30001 || ans == 60001 || ans == 88005.5 || ans == 88006.5 || ans == 88008.5 || ans == 88008.55 || ans == 88009.5 || ans == 88014.5 || ans == 88019.5 || ans == 60002.5 || ans == 60006.5 || ans == 900015551 || ans == 900015552 || ans == 10000244 || ans == 150005 || ans == 85020.5 || ans == 85023.5 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240001 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5 || ans == 89012.5) {
@@ -100607,7 +100554,7 @@ if (ans == 26002.5 || ans == 26005.5) {
 Pandora += 1
 }
     // Candidate Stuff
-    if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 88020.5){
+    if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 93009.5 || ans == 93016.5 || ans == 93020.5 || ans == 93024.5 || ans == 93028.5 || ans == 93032.5 || ans == 93036.5 || ans == 93040.5){
     opponents.dole += 2
     updateCandidates("junk", 0)
     }
@@ -100623,11 +100570,11 @@ Pandora += 1
     opponents.wilson += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 60002.5 || ans == 60006.5 || ans == 250002 || ans == 88020.5 || ans == 88022.5) {
+    if (ans == 60002.5 || ans == 60006.5 || ans == 250002 || ans == 88022.5) {
     opponents.gramm += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 900015551 || ans == 88020.5 || ans == 88022.5) {
+    if (ans == 900015551 || ans == 88022.5) {
     opponents.forbes += 2
     updateCandidates("junk", 0)
     }
