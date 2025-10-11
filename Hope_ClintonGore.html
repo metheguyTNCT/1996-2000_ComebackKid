@@ -23431,7 +23431,7 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 86042.5,
             "candidate": 77,
-            "affected_candidate": 77,
+            "affected_candidate": 78,
             "global_multiplier": -0.05
         }
     },
@@ -99530,7 +99530,10 @@ question_insert("question_20_bosnia_quagmire",
     } else {
     if (OsloPoints >= 3) {
     question_insert("oslo_3_start_kurds",oslo_election_win);
+    question_insert("oslo_3_start",oslo_election_win);
+        question_insert("oslo_3",oslo_election_win);
     } else {
+        question_insert("oslo_3_start_kurds",oslo_election_win);
         question_insert("oslo_3_start",oslo_election);
         question_insert("oslo_3",oslo_election);
     }
