@@ -1,7 +1,57 @@
 
 e = campaignTrail_temp;
 campaignTrail_temp.cyoa = true;
-
+const customStyling = document.createElement("style");
+customStyling.innerHTML = `
+#campaign_sign {
+    background-image: url("https://files.catbox.moe/5ur165.png");
+    background-size: cover;
+    border-color: #c9c9c9;    
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%; 
+    height: 104px; 
+    margin-left: -0.033em;
+    margin-right: -0.033em;
+  }
+#campaign_sign p {
+    color: rgb(0 0 0 / 0%);
+}
+.inner_window_sign_display {
+  margin: 0;
+    margin-right: 0.033px;
+    margin-left: 0.033px;
+  height: 25%;
+  position: relative;
+  width: 35%;
+  height: 28%;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: double;
+  border-color: #C9C9C9;
+}
+#state_info {
+  margin: 5% 0 0;
+  height: 120%;
+  background-color: #FFFFFF;
+  border-style: double;
+  border-color: #C9C9C9;
+}
+.inner_window_question {
+  background-color: #FFFFFF;
+  margin: 0
+  padding-top: .3em;
+  border-style: double;
+  border-color: #C9C9C9;
+  text-align: center;
+  height: 59%;
+  position: relative;
+  clear: both;
+}
+`;
+document.head.appendChild(customStyling);
 function getQuestionNumberFromPk(pk) {
     return campaignTrail_temp.questions_json.map(q=>q.pk).indexOf(pk)-1;
 }
@@ -42,11 +92,6 @@ function unlockAchievement(name) {
 
 function showAchievement(achievementKey) {
   const achievement = campaignTrail_temp.achievements[achievementKey];
-  if(achievementKey == "Kenosis<br>⠀"){
-    var sound = new Audio('https://audio.jukehost.co.uk/LfMOoqTNbyGgxqCEVeC7yN87gywDlI27');   
-    sound.volume = 0.3;
-    sound.play();
-  }
   // Create the achievement box
   const boxContainer = document.createElement('div');
   boxContainer.id = "box-container";
@@ -98926,8 +98971,16 @@ question_insert("question_20_bosnia_quagmire",
         if (SlimGOPCongress == 1) { 
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
         question_insert("question_16.5_jones_case",oslo_question_1_slimgop_start);
+        question_insert("question_21_russia",oslo_question_1_slimgop_start);
+            question_insert("question_21_russia_failyugoslavia",oslo_question_1_slimgop_start);
+            question_insert("question_21_russia_cuts",oslo_question_1_slimgop_start);
+            question_insert("question_21_russia_none",oslo_question_1_slimgop_start);
         } else {
             question_insert("question_16.5_jones_case",oslo_question_1_slimgop);
+            question_insert("question_21_russia",oslo_question_1_slimgop);
+            question_insert("question_21_russia_failyugoslavia",oslo_question_1_slimgop);
+            question_insert("question_21_russia_cuts",oslo_question_1_slimgop);
+            question_insert("question_21_russia_none",oslo_question_1_slimgop);
         }
         } else {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
@@ -103197,7 +103250,7 @@ if (quickstats[0] >= 270 && quickstats[0] <= 449 && DoleNom == 1) {
           `)
           // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
 //e.image = ""
-e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%201/Norm%20Opponents/Loss/Dole%20LoseH'})])
+e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%201/Norm%20Opponents/Loss/Dole%20Lose'})])
 
     const doleLoss = new Playlist();
   const doleLossSong = new Song(
