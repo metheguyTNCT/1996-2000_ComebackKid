@@ -1,57 +1,7 @@
 
 e = campaignTrail_temp;
 campaignTrail_temp.cyoa = true;
-const customStyling = document.createElement("style");
-customStyling.innerHTML = `
-#campaign_sign {
-    background-image: url("https://files.catbox.moe/5ur165.png");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 59%;
-  position: relative;
-  clear: both;
-}
-`;
-document.head.appendChild(customStyling);
+
 function getQuestionNumberFromPk(pk) {
     return campaignTrail_temp.questions_json.map(q=>q.pk).indexOf(pk)-1;
 }
@@ -98,47 +48,143 @@ function showAchievement(achievementKey) {
     sound.play();
   }
   // Create the achievement box
-  const box = document.createElement('div');
-  box.style.position = 'fixed';
-  box.style.right = '20px';
-  box.style.backgroundColor = '#4CAF50';
-  box.style.color = 'white';
-  box.style.width = '250px'; 
-  box.style.height = '110px'; 
-  box.style.textAlign = 'center'; 
-  box.style.padding = '10px 10px';
-  box.style.borderRadius = '8px';
-  box.style.fontSize = '18px';
-  box.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-  box.style.opacity = '0';
-  box.style.transition = 'opacity 1s ease-in-out';
-  box.style.zIndex = '1000';
-  box.style.display = 'flex';
-  box.style.alignItems = 'center';
-  box.style.gap = '15px';
-  
-  box.style.backgroundImage = 'url("https://i.imgur.com/39bg8Op.png")';
-  box.style.backgroundPosition = 'center';
-  box.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)'; 
+  const boxContainer = document.createElement('div');
+  boxContainer.id = "box-container";
+    const box = document.createElement('div');
+  box.id = "box";
+  const headerBox = document.createElement('div');
+  headerBox.id = "header-box";
+  headerBox.innerText = "System Message";
+
+  box.appendChild(headerBox);
+  box.appendChild(boxContainer);
+
+const style = document.createElement("style");
+style.textContent = `
+  #box {
+    position: fixed;
+    right: 20px;
+    background-color: #c0c0c0;
+    color: black;
+    width: 250px;
+    height: 110px;
+    text-align: center;
+    padding: 4px;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 4px solid;
+    border-color: white black black white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    opacity: 0;
+    z-index: 1000;
+    animation: custom-grow 4.1s; 
+}
+
+  #header-box {
+    content: "System Message";
+    font-weight: bold;
+    display: inline-block;
+    width: 246px;
+    height: 6px;
+    text-align: left;
+    padding: 3px;
+    color: white;
+    background: linear-gradient(90deg,navy,#1084d0); /* Match the background to "cut out" the border */
+    display: inline;
+    font-size: 6px;
+    font-family: verdana;
+
+}
+
+ #box-container {
+    width: 250px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-position: center;
+ }
+
+    @keyframes hidden-appear {
+    0% {
+    opacity: 0;
+    }
+    9% {
+    opacity: 0;
+    }
+    10% {
+    opacity: 1;
+    }
+    95% {
+    opacity: 1;
+    }
+    96% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 0;
+    }
+    }
+
+    @keyframes custom-grow {
+  0% {
+    width: 25px;
+    height: 12px;
+  }
+  5% {
+    width: 100px;
+    height: 48px;
+  }
+  7% {
+    width: 200px;
+    height: 72px;
+  }
+  10% {
+    width: 250px;
+    height: 120px;
+  }
+  95% {
+    width: 250px;
+    height: 120px;
+  }
+  97% {
+    width: 100px;
+    height: 48px;
+  }
+  100% {
+    width: 25px;
+    height: 12px;
+  }
+}
+
+`
+document.head.appendChild(style);
 
   const existingBoxes = document.querySelectorAll('.achievement-popup');
   const offset = existingBoxes.length * 132; 
   box.style.bottom = `${20 + offset}px`;
 
   const img = document.createElement('img');
+  img.id = "popup-img";
   img.src = achievement.image;
   img.alt = achievementKey;
-  img.style.width = '100px';  
-  img.style.height = '100px';
+  img.style.width = '90px';  
+  img.style.height = '90px';
+  img.style.animation = 'hidden-appear 4.1s';
 
   const text = document.createElement('div');
   const cleanedAchievementKey = achievementKey.replace('<br>⠀', '');
+  text.id = "popup-text";
   text.innerHTML = `<strong>${cleanedAchievementKey}</strong>`;
   text.style.textAlign = 'center'; 
   text.style.width = '100%'; 
+  text.style.animation = 'hidden-appear 4.1s';
 
-  box.appendChild(img);
-  box.appendChild(text);
+  boxContainer.appendChild(img);
+  boxContainer.appendChild(text);
 
   box.classList.add('achievement-popup');
 
