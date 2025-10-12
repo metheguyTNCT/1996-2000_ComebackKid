@@ -83806,7 +83806,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 70002,
             "candidate": 77,
-            "answer_feedback": "''I’m sorry, Bill, I really am, but I’m not dying on this hill. I’ve told the membership to vote their conscience,'' Byrd says, his voice measured, pointing out the glaring loopholes. But you barely hear him. All you can think about is getting this through, no matter what it takes. You will get something passed. You will leave a legacy of success."
+            "answer_feedback": "''I'm sorry, Bill, but the party isn't dying on this hill. I've told the membership to vote their conscience,'' Mitchell delivers solemly, pointing out the glaring loopholes. But you barely hear him. All you can think about is getting this through, no matter what it takes. You will get something passed. You will leave a legacy of success."
         }
     },
     {
@@ -84166,7 +84166,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 900015553,
             "candidate": 77,
-            "answer_feedback": "While both Chrétien and Salinas were deeply supportive of the agreement as it is, the idea of expanding it continent-wide was a bit harder to convince them of. It’s an opportunity to truly unite the people of one continent, to share prosperity around the entire hemisphere—you know you’ll achieve it, even if the people fear it’ll just lead to more abuse of free trade. They’ll praise you in the end."
+            "answer_feedback": "While both Chrétien and Salinas were deeply supportive of the agreement as it is, the idea of expanding it continent-wide was a bit harder to convince them of. You were able to agree on adding almost every country in the continent with the exception of Cuba to share prosperity around the entire hemisphere. It doesn't matter what Perot says, even if midwesterners fear it’ll just lead to more abuse of free trade. They’ll praise you in the end."
         }
     },
     {
@@ -92780,8 +92780,9 @@ function updateCandidates(type, amt){
         if(type == "fopo" && amt>0){ // Good FoPo for Billy
             // adds
             if(buchanan_active == 1){
-                opponents.buchanan += (0.4*amt)
+                opponents.buchanan += (0.3*amt)
             }
+            // subs
             if (specter_active == 1) {
             opponents.specter -= (0.3*amt)
             }
@@ -92803,7 +92804,7 @@ function updateCandidates(type, amt){
                 opponents.gingrich += 1
             }
             if(dole_active == 1){
-                opponents.dole += 1
+                opponents.dole += (-1.5*amt)
             }
             // subs
         } if(type == "ideo" && amt>0){ // Liberal Billy
@@ -92823,12 +92824,8 @@ function updateCandidates(type, amt){
             if(specter_active == 1){
                 opponents.specter += (-0.3*amt)
             }
-            // subs
-            if(buchanan_active == 1){
-                opponents.buchanan -= (0.4*amt)
-            }
-            if(gramm_active == 1){
-                opponents.gramm -= (0.3*amt)
+            if(specter_active == 1){
+                opponents.specter += (-0.3*amt)
             }
         } if(type == "scan" && amt>0){ // Scandalous Billy
             // adds
@@ -95270,9 +95267,10 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
 }
 }
 }
+console.log(backlash)
 
     if (e.question_number+1 == 16) { // Guns
-    if (backlash >= 5) {
+    if (backlash <= 5) {
     question_insert("question_16_healthcareH", 
             {
         "model": "campaign_trail.question",
@@ -95627,7 +95625,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     } else {
     if (e.player_answers.includes(50007)) {
     if (e.player_answers.includes(94002.5)) {
-    if (backlash >= 5) {
+    if (backlash <= 5) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95675,7 +95673,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         );
     }
     } else {
-    if (backlash >= 4 && LEGWin >= 5) {
+    if (backlash <= 4 && LEGWin >= 5) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95721,7 +95719,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         ); 
-    } else if (backlash >= 2 && LEGWin <= 4) {
+    } else if (backlash <= 3 && LEGWin <= 4) {
        question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95771,7 +95769,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     }
     } else if (e.player_answers.includes(50008)) {
         if (e.player_answers.includes(95000.5)) {
-    if (LEGWin >= 3 && backlash >= 1) {
+    if (LEGWin >= 3 && backlash <= 3) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95794,7 +95792,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         );
-    } else if (LEGWin <= 2 && backlash >= 1) {
+    } else if (LEGWin <= 2 && backlash <= 3) {
         question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95865,7 +95863,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         );
     }
     } else {
-    if (backlash >= 3 && LEGWin >= 6) {
+    if (backlash <= 5 && LEGWin >= 6) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95888,7 +95886,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         );
-    } else if (backlash >= 3 && LEGWin == 5) {
+    } else if (backlash <= 5 && LEGWin == 5) {
            question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95961,7 +95959,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     }
     } else {
     if (e.player_answers.includes(93003.5)) {
-    if (LEGWin >= 3 && backlash >= 4) {
+    if (LEGWin >= 3 && backlash <= 4) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -95985,7 +95983,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
         );
     } else if (LEGWin >= 3 && backlash == 2) {
-        } else if (LEGWin <= 2 && backlash >= 4) {
+        } else if (LEGWin <= 2 && backlash <= 4) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -96008,7 +96006,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         );
-    } else if (LEGWin <= 2 && backlash >= 4) {
+    } else if (LEGWin <= 2 && backlash <= 4) {
     question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -96079,8 +96077,8 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
         );
     }
-    } else if (LEGWin <= 0 && backlash >= 1 || LEGWin >= 1 && backlash <= 0) {
-    if (backlash >= 1) {
+    } else if (LEGWin <= 0 && backlash <= 3 || LEGWin >= 1 && backlash <= 0) {
+    if (backlash <= 3) {
         question_insert("question_7_crime_alt", 
             {
         "model": "campaign_trail.question",
@@ -96151,7 +96149,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         );
     } 
 } else {
-    if (LEGWin >= 5 && backlash >= 3) {
+    if (LEGWin >= 5 && backlash <= 5) {
     if (e.player_answers.includes(93001.5)) {
         question_insert("question_7_crime_alt", 
             {
@@ -96199,7 +96197,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
         );
     }
-    } else if (LEGWin >= 3 && backlash >= 3) {
+    } else if (LEGWin >= 3 && backlash <= 5) {
         if (e.player_answers.includes(93001.5)) {
         question_insert("question_7_crime_alt", 
             {
@@ -96319,7 +96317,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
     }
         );
-    } else if (backlash >= 3 && backlash > LEGWin) {
+    } else if (backlash <= 5 && backlash > LEGWin) {
     question_insert("question_7_crime_alt", 
                 {
         "model": "campaign_trail.question",
@@ -99976,24 +99974,28 @@ if (e.question_number+1 == 27) {
    updateCandidates("cong", -2)
    }
 // backlash
-   if (ans == 50003 || ans == 60001 || ans == 30003 || ans == 50006 || ans == 88011.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 93002.5 || ans == 95001.5 || ans == 85002.5 || ans == 93013.5 || ans == 93017.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5) {
+   if (ans == 60002 || ans == 30003 || ans == 60003.5 || ans == 92000.5 || ans == 92005.5 || ans == 80001 || ans == 250001 || ans == 250007 || ans == 90001) {
    backlash += 1;
    updateCandidates("junk", 1)
    }
-   if (ans == 50008 || ans == 60003 || ans == 250007 || ans == 250008 || ans == 93000.5 || ans == 30001 || ans == 94004.5 || ans == 94007.5 || ans == 10023.5) {
+   if (ans == 60001 || ans == 30001 || ans == 60006.5 || ans == 92002.5 || ans == 80002 || ans == 80004 || ans == 250003 || ans == 250008 || ans == 900015551 || ans == 900015552) {
+   backlash += 2;
+   updateCandidates("junk", 1)
+   }
+   if (ans == 60003 || ans == 60002.5 || ans == 92006.5 || ans == 250002 || ans == 250006 || ans == 900015553) {
+   backlash += 3;
+   updateCandidates("junk", 1)
+   }
+   if (ans == 30002) {
    backlash -= 1;
    updateCandidates("junk", -1)
-   }
-   if (ans == 250009) {
-    backlash -= 2;
-   updateCandidates("junk", -2)
    }
 // Scandal
    if (ans == 60003 || ans == 60002.5 || ans == 60005.5 || ans == 92000.5 || ans == 92007.5 || ans == 250001 || ans == 250003 || ans == 250004 || ans == 250006 || ans == 250007 || ans == 250008 || ans == 250009 || ans == 70002 || ans == 70003 || ans == 85028.5) {
    scandal += 1;
    updateCandidates("scan", 1)
    }
-   if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006) {
+   if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006 || ans == 70002 || ans == 85027.5) {
    scandal += 2;
    updateCandidates("scan", 2) 
    }
@@ -101103,9 +101105,9 @@ if (e.question_number+1 == 18) { // Midterms
     moveup = 1
     opponents.bono = 3
     }
-    if(sortedOpponents[0][1] <= 4.5)
-        opponents.wilson = 5
-            }
+    if(sortedOpponents[0][1] <= 4.5) {
+        opponents.wilson += 5
+    }
     if (e.player_answers.includes(50004)) {
     if ((e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5)) && scandal <= 0) {
     if (e.player_answers.includes(60001)) {
@@ -101142,7 +101144,7 @@ if (e.player_answers.includes(30002)) {
     campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_all");
     ctsAchievement("Counterrevolution");
    } else {
-  if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
+  if (scandal <= 2 && backlash <= 3 && FPWin >= 3) {
             SlimGOPCongress += 1;
             Legacy += 1;
             opponents.dole = -10
@@ -101150,7 +101152,7 @@ if (e.player_answers.includes(30002)) {
             campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_none");
     } else {
         
-        if (LEGWin <= 1 && scandal >= 2 && backlash <= 1){
+        if (LEGWin <= 1 && scandal >= 2 && backlash >= 7){
             gingrich_active = 1
             moveup = 1
             opponents.gingrich = 4
@@ -101163,7 +101165,7 @@ if (e.player_answers.includes(30002)) {
     }
 }
  } else {
-    if (scandal <= 2 && backlash >= 6 && FPWin >= 3) {
+    if (scandal <= 2 && backlash <= 3 && FPWin >= 3) {
     if (e.player_answers.includes(30001)) {
     if (e.player_answers.includes(88007.5)) {
             SlimGOPCongress += 1;
@@ -101186,7 +101188,7 @@ if (e.player_answers.includes(30002)) {
             campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_none");
     }
     } else {
-        if (LEGWin <= 1 && scandal >= 2 && backlash <= 1){
+        if (LEGWin <= 1 && scandal >= 2 && backlash >= 7){
             gingrich_active = 1
             moveup = 1
             opponents.gingrich = 4
@@ -103816,6 +103818,7 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/AKefq29.p
 }
 }
 return construct(0);
+}
 }
 /*
 Welcome to Astro's Variable Headquarters
