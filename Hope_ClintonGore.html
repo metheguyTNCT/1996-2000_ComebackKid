@@ -96174,7 +96174,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         );
     } 
 } else {
-    if (LEGWin >= 5 && backlash <= 5) {
+    if (LEGWin >= 5 && backlash <= 2) {
     if (e.player_answers.includes(93001.5)) {
         question_insert("question_7_crime_alt", 
             {
@@ -99999,11 +99999,11 @@ if (e.question_number+1 == 27) {
    updateCandidates("cong", -2)
    }
 // backlash
-   if (ans == 60002 || ans == 30003 || ans == 60003.5 || ans == 92000.5 || ans == 92005.5 || ans == 80001 || ans == 250001 || ans == 250007 || ans == 90001) {
+   if (ans == 60002 || ans == 30003 || ans == 60003.5 || ans == 92000.5 || ans == 92005.5 || ans == 80001 || ans == 250001 || ans == 250007 || ans == 93002.5) {
    backlash += 1;
    updateCandidates("junk", 1)
    }
-   if (ans == 60001 || ans == 30001 || ans == 60006.5 || ans == 92002.5 || ans == 80002 || ans == 80004 || ans == 250003 || ans == 250008 || ans == 900015551 || ans == 900015552) {
+   if (ans == 60001 || ans == 30001 || ans == 60006.5 || ans == 92002.5 || ans == 80002 || ans == 80004 || ans == 250003 || ans == 250008 || ans == 900015551 || ans == 900015552 || ans == 93000.5) {
    backlash += 2;
    updateCandidates("junk", 1)
    }
@@ -100029,7 +100029,7 @@ if (e.question_number+1 == 27) {
    updateCandidates("scan", 3) 
    }
 // Ideo
-   if (ans == 30001 || ans == 60001 || ans == 88005.5 || ans == 88006.5 || ans == 88008.5 || ans == 88008.55 || ans == 88009.5 || ans == 88014.5 || ans == 88019.5 || ans == 60002.5 || ans == 60006.5 || ans == 900015551 || ans == 900015552 || ans == 10000244 || ans == 150005 || ans == 85020.5 || ans == 85023.5 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240001 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5 || ans == 89012.5) {
+   if (ans == 30001 || ans == 60001 || ans == 88005.5 || ans == 88006.5 || ans == 88008.5 || ans == 88008.55 || ans == 93002.5 || ans == 88009.5 || ans == 88014.5 || ans == 88019.5 || ans == 60002.5 || ans == 60006.5 || ans == 900015551 || ans == 900015552 || ans == 10000244 || ans == 150005 || ans == 85020.5 || ans == 85023.5 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240001 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5 || ans == 89012.5) {
    Ideology += 1;
    updateCandidates("ideo", 1)
    }
@@ -100037,7 +100037,7 @@ if (e.question_number+1 == 27) {
    Ideology += 2;
    updateCandidates("ideo", 2)
    }
-   if (ans == 30002 || ans == 2500911.5 || ans == 50007 || ans == 88003.5 || ans == 60003.5 || ans == 60005.5 || ans == 150002 || ans == 150006 || ans == 180001 || ans == 85022.5 || ans == 85025.5 || ans == 190001 || ans == 85029.5 || ans == 240002 || ans == 240004 || ans == 25017.5 || ans == 25020.5) {
+   if (ans == 30002 || ans == 2500911.5 || ans == 50007 || ans == 88003.5 || ans == 60003.5 || ans == 60005.5 || ans == 150002 || ans == 150006 || ans == 180001 || ans == 93001.5 || ans == 85022.5 || ans == 85025.5 || ans == 190001 || ans == 85029.5 || ans == 240002 || ans == 240004 || ans == 25017.5 || ans == 25020.5) {
    Ideology -= 1;
    updateCandidates("ideo", -1) 
    }
