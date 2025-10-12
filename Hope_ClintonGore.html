@@ -6238,22 +6238,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 85018.5,
-        "fields": {
-            "question": "healthcare_vote_win_kennedy",
-            "description": "We got the votes for this to pass, I’m 100% sure of it! Do it."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 85019.5,
-        "fields": {
-            "question": "healthcare_vote_win_kennedy",
-            "description": "It’s too risky to do it now. We’ll come back to this later, when I know It’ll pass."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 85020.5,
         "fields": {
             "question": "question_ques_18_alt_fail",
@@ -19169,56 +19153,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.07
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12637,
-        "fields": {
-            "answer": 85018.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.035
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12640,
-        "fields": {
-            "answer": 85019.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12641,
-        "fields": {
-            "answer": 85018.5,
-            "candidate": 77,
-            "affected_candidate": 78,
-            "global_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 12643,
-        "fields": {
-            "answer": 85018.5,
-            "candidate": 77,
-            "affected_candidate": 80,
-            "global_multiplier": 0.025
-        }
-    },
-    {
-	"model": "campaign_trail.answer_score_global",
-        "pk": 12643,
-        "fields": {
-            "answer": 85018.5,
-            "candidate": 77,
-            "affected_candidate": 79,
-            "global_multiplier": -0.018
         }
     },
     {
@@ -33704,16 +33638,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 15007.5,
             "issue": 27,
             "issue_score": 0.275,
-            "issue_importance": 2.5
-        }
-    },
-    {
-      	"model": "campaign_trail.answer_score_issue",
-        "pk": 772,
-        "fields": {
-            "answer": 85018.5,
-            "issue": 27,
-            "issue_score": 0.53,
             "issue_importance": 2.5
         }
     },
@@ -84701,24 +84625,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12636,
-        "fields": {
-            "answer": 85018.5,
-            "candidate": 77,
-            "answer_feedback": "As a stampede of press aims their cameras at you, you officially sign the American Health Care Reform Act of 1993, better known as Kennedycare. Universal healthcare, finally achieved. Expanding Medicare to cover all Americans, it ensures healthcare as a right while controlling costs through payroll taxes and price regulations. The weight of the occasion settles as the reporters exit the room. Ted is clearly living up to his moniker as his voice booms down the hallway. You can finally relax now.."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12639,
-        "fields": {
-            "answer": 85019.5,
-            "candidate": 77,
-            "answer_feedback": "As the midterms get closer, almost everything is uncertain. The base calls you a liar, they spit at you, and turn their back, and the opposition cheerish this as the final sign of their incoming victory."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12701,
         "fields": {
             "answer": 35013.6,
@@ -88635,33 +88541,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 12808,
-        "fields": {
-            "answer": 88121.5,
-            "candidate": 77,
-            "answer_feedback": "Greenspan slammed the door on your fingers. You tried your best to talk with him and even suggested a compromise, but ever since the NAFTA debacle, he has been anything but cooperative. His projections show absurd increases in inflation if you do not agree to a compromise. It hurt, but it needed to be done."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12812,
-        "fields": {
-            "answer": 88122.5,
-            "candidate": 77,
-            "answer_feedback": "Putting yourself in charge of the budget changes was always going to be a double-edged sword. It became all about you to the point where the policy itself stopped mattering. The people who love you absolutely adore it, and those who hate you want to obliterate it and dance on its grave. Eventually, the baggage you have carried forced you to compromise."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 12816,
-        "fields": {
-            "answer": 88123.5,
-            "candidate": 77,
-            "answer_feedback": "Gore isn’t the most experienced man in Congress, nor is he someone who agrees with Reich’s more progressive ideas, but one thing he’s always been is a team player. The usually quiet man tries his best to rally Congress, using a technocratic spin to make the plan seem slightly more ''reasonable''. Reich is slightly annoyed by the dampened rhetoric, but nothing has changed structurally, and the plan is larger than before."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 12837,
         "fields": {
             "answer": 88136.5,
@@ -92277,60 +92156,28 @@ function updateCandidates(type, amt){
             if(buchanan_active == 1){
                 opponents.buchanan += (0.4*amt)
             }
-            // subs
-            if(powell_active == 1){
-                opponents.powell -= 1
-            }
             if (specter_active == 1) {
             opponents.specter -= (0.3*amt)
             }
         }
         if(type == "fopo" && amt<0){ // Bad FoPo for Billy
             // adds
-            if(powell_active == 1){
-                opponents.powell += (-1.5*amt)
-            }
             if (specter_active == 1) {
-            opponents.specter += (-0.3*amt)
-            }
-            if (bush_active == 1) {
-            opponents.specter += (-0.6*amt)
+            opponents.specter += (-0.7*amt)
             }
             // subs
         } if(type == "cong" && amt>0){ // Good Cong for Billy
-            // adds
-            if(buchanan_active == 1){
-                opponents.buchanan += 0.1
-            }
-            if(forbes_active == 1){
-                opponents.forbes += 0.2
-            }
             // subs
             if(dole_active == 1){
                 opponents.dole -= (0.5*amt)
-            }
-            if(specter_active == 1){
-                opponents.specter -= (0.2*amt)
-            }
-            if(gramm_active == 1){
-                opponents.gramm -= (0.2*amt)
             }
         } if(type == "cong" && amt<0){ // Bad Cong for Billy
             // adds
             if(gingrich_active == 1){
                 opponents.gingrich += 1
             }
-            if(gramm_active == 1){
-                opponents.gramm += (-0.5*amt)
-            }
-            if(specter_active == 1){
-                opponents.specter += (-0.3*amt)
-            }
             if(dole_active == 1){
                 opponents.dole += 1
-            }
-            if(bono_active == 1) {
-            opponents.bono += (-0.4*amt)
             }
             // subs
         } if(type == "ideo" && amt>0){ // Liberal Billy
@@ -92350,13 +92197,21 @@ function updateCandidates(type, amt){
             if(specter_active == 1){
                 opponents.specter += (-0.3*amt)
             }
-            if(powell_active == 1){
-                opponents.powell += (-0.2*amt)
+            // subs
+            if(buchanan_active == 1){
+                opponents.buchanan -= (0.4*amt)
+            }
+            if(gramm_active == 1){
+                opponents.gramm -= (0.3*amt)
             }
         } if(type == "scan" && amt>0){ // Scandalous Billy
             // adds
             if(alexander_active == 1){
                 opponents.alexander += (0.9*amt)
+            }
+            // subs
+            if(gramm_active == 1){
+                opponents.gramm -= (0.4*amt)
             }
         }
 
@@ -99467,7 +99322,7 @@ if (e.question_number+1 == 27) {
     }
     if (ans == 10023.5 || ans == 10024.5) {
     FPWin += 2;
-    updateCandidates("fopo", 1)
+    updateCandidates("fopo", 2)
     }
     if (ans == 80001 || ans == 80002 || ans == 80004 || ans == 10002.5 || ans == 900015551 || ans == 900015552 || ans == 10010.5 || ans == 10014.5 || ans == 10016.5 || ans == 10017.5 || ans == 85004.5  || ans == 85008.5 || ans == 100003 || ans == 10000244 || ans == 170002 || ans == 170003 || ans == 170005 || ans == 200002 || ans == 89000.5 || ans == 89003.5 || ans == 89001.5 || ans == 89004.5 || ans == 89007.5 || ans == 89010.5 || ans == 89016.5 || ans == 89019.5 || ans == 89022.5 || ans == 10021.5 || ans == 10022.5) {
     FPWin -= 1;
@@ -99478,7 +99333,7 @@ if (e.question_number+1 == 27) {
     updateCandidates("fopo", -2)
     }
 // Cong
-   if (ans == 50002 || ans == 60002 || ans == 250006 || ans == 250008 || ans == 250009 || ans == 88001.5 || ans == 88004.5 || ans == 88010.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 88021.5 || ans == 94000.5 || ans == 95002.5 || ans == 70001 || ans == 85026.5 || ans == 85027.5 || ans == 90001 || ans == 900015553 || ans == 900015551 || ans == 85018.5 || ans == 15006.5 || ans == 25003.5 || ans == 150002 || ans == 180001 || ans == 85024.5 || ans == 190001 || ans == 85029.5 || ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5 || ans == 93013.5 || ans == 93017.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5 || ans == 94004.5 || ans == 94007.5) {
+   if (ans == 50002 || ans == 60002 || ans == 250006 || ans == 250008 || ans == 250009 || ans == 88001.5 || ans == 88004.5 || ans == 88010.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 94000.5 || ans == 95002.5 || ans == 70001 || ans == 85026.5 || ans == 85027.5 || ans == 90001 || ans == 900015553 || ans == 900015551 || ans == 15006.5 || ans == 25003.5 || ans == 150002 || ans == 180001 || ans == 85024.5 || ans == 190001 || ans == 85029.5 || ans == 89006.5 || ans == 89009.5 || ans == 89005.5 || ans == 89011.5 || ans == 93013.5 || ans == 93017.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5 || ans == 94004.5 || ans == 94007.5) {
    LEGWin += 1;
    updateCandidates("cong", 1)
    }
@@ -99486,12 +99341,12 @@ if (e.question_number+1 == 27) {
    LEGWin -= 1;
    updateCandidates("cong", -1)
    }
-   if (ans == 88022.5 || ans == 150005 || ans == 150007 || ans == 93004.5 || ans == 93008.5 || ans == 93011.5 || ans == 93006.5 || ans == 93012.5 || ans == 93021.5 || ans == 93025.5 || ans == 93029.5 || ans == 93033.5 || ans == 93037.5 || ans == 93041.5 || ans == 93014.5 || ans == 93018.5 || ans == 93022.5 || ans == 93026.5 || ans == 93030.5 || ans == 93034.5 || ans == 93038.5 || ans == 93042.5 || ans == 93039.5 || ans == 93044.5 || ans == 93055.5 || ans == 93058.5 || ans == 93061.5 || ans == 93053.5 || ans == 93059.5 || ans == 93062.5 || ans == 95006.5 || ans == 95009.5 || ans == 95012.5 || ans == 95010.5 || ans == 95013.5 || ans == 95014.5 || ans == 95015.5 || ans == 95018.5 || ans == 95021.5 || ans == 95024.5 || ans == 95019.5 || ans == 95025.5 || ans == 95023.5 || ans == 95026.5 || ans == 94015.5 || ans == 94018.5 || ans == 94013.5 || ans == 94016.5 || ans == 94019.5 || ans == 94020.5 || ans == 94003.5 || ans == 94006.5 || ans == 94008.5) {
+   if (ans == 150005 || ans == 150007 || ans == 93004.5 || ans == 93008.5 || ans == 93011.5 || ans == 93006.5 || ans == 93012.5 || ans == 93021.5 || ans == 93025.5 || ans == 93029.5 || ans == 93033.5 || ans == 93037.5 || ans == 93041.5 || ans == 93014.5 || ans == 93018.5 || ans == 93022.5 || ans == 93026.5 || ans == 93030.5 || ans == 93034.5 || ans == 93038.5 || ans == 93042.5 || ans == 93039.5 || ans == 93044.5 || ans == 93055.5 || ans == 93058.5 || ans == 93061.5 || ans == 93053.5 || ans == 93059.5 || ans == 93062.5 || ans == 95006.5 || ans == 95009.5 || ans == 95012.5 || ans == 95010.5 || ans == 95013.5 || ans == 95014.5 || ans == 95015.5 || ans == 95018.5 || ans == 95021.5 || ans == 95024.5 || ans == 95019.5 || ans == 95025.5 || ans == 95023.5 || ans == 95026.5 || ans == 94015.5 || ans == 94018.5 || ans == 94013.5 || ans == 94016.5 || ans == 94019.5 || ans == 94020.5 || ans == 94003.5 || ans == 94006.5 || ans == 94008.5) {
    LEGWin -= 2;
    updateCandidates("cong", -2)
    }
 // backlash
-   if (ans == 50003 || ans == 60001 || ans == 30003 || ans == 50006 || ans == 88011.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 88021.5 || ans == 93002.5 || ans == 95001.5 || ans == 85002.5 || ans == 93013.5 || ans == 93017.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5) {
+   if (ans == 50003 || ans == 60001 || ans == 30003 || ans == 50006 || ans == 88011.5 || ans == 88017.5 || ans == 88018.5 || ans == 88019.5 || ans == 93002.5 || ans == 95001.5 || ans == 85002.5 || ans == 93013.5 || ans == 93017.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5) {
    backlash += 1;
    updateCandidates("junk", 1)
    }
@@ -99510,11 +99365,11 @@ if (e.question_number+1 == 27) {
    }
    if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006) {
    scandal += 2;
-   updateCandidates("scan", 1) 
+   updateCandidates("scan", 2) 
    }
    if (ans == 92006.5) {
    scandal += 3;
-   updateCandidates("scan", 1) 
+   updateCandidates("scan", 3) 
    }
 // Ideo
    if (ans == 30001 || ans == 60001 || ans == 88005.5 || ans == 88006.5 || ans == 88008.5 || ans == 88008.55 || ans == 88009.5 || ans == 88014.5 || ans == 88019.5 || ans == 60002.5 || ans == 60006.5 || ans == 900015551 || ans == 900015552 || ans == 10000244 || ans == 150005 || ans == 85020.5 || ans == 85023.5 || ans == 180002 || ans == 190002 || ans == 85030.5 || ans == 240001 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5 || ans == 89012.5) {
@@ -99524,10 +99379,6 @@ if (e.question_number+1 == 27) {
    if (ans == 88007.5 || ans == 88023.5 || ans == 70002 || ans == 85027.5) {
    Ideology += 2;
    updateCandidates("ideo", 2)
-   }
-   if (ans == 88021.5 || ans == 88022.5 || ans == 85018.5) {
-   Ideology += 3;
-   updateCandidates("ideo", 3)
    }
    if (ans == 30002 || ans == 2500911.5 || ans == 50007 || ans == 88003.5 || ans == 60003.5 || ans == 60005.5 || ans == 150002 || ans == 150006 || ans == 180001 || ans == 85022.5 || ans == 85025.5 || ans == 190001 || ans == 85029.5 || ans == 240002 || ans == 240004 || ans == 25017.5 || ans == 25020.5) {
    Ideology -= 1;
@@ -99544,10 +99395,6 @@ if (e.question_number+1 == 27) {
    }
    if (ans == 89026.5) {
    Legacy += 2;
-   updateCandidates("junk", 0)
-   }
-   if (ans == 85018.5) {
-   Legacy += 3;
    updateCandidates("junk", 0)
    }
 // OsloPoints
@@ -99572,28 +99419,24 @@ if (ans == 26002.5 || ans == 26005.5) {
 Pandora += 1
 }
     // Candidate Stuff
-    if (ans == 30003 || ans == 250003 || ans == 88000.5 || ans == 88002.5 || ans == 88022.5 || ans == 93009.5 || ans == 93016.5 || ans == 93020.5 || ans == 93024.5 || ans == 93028.5 || ans == 93032.5 || ans == 93036.5 || ans == 93040.5){
+    if (ans == 88144.5 || ans == 88148.5 || ans == 88155.5 || ans == 93009.5 || ans == 93016.5 || ans == 93020.5 || ans == 93024.5 || ans == 93028.5 || ans == 93032.5 || ans == 93036.5 || ans == 93040.5){
     opponents.dole += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 88021.5 || ans == 85027.5 || ans == 85018.5) {
+    if (ans == 60006.5 || ans == 85027.5 || ans == 93013.5 || ans == 93017.5 || ans == 93005.5 || ans == 93015.5 || ans == 93019.5 || ans == 93023.5 || ans == 93027.5 || ans == 93031.5 || ans == 93035.5 || ans == 93043.5 || ans == 93009.5 || ans == 93016.5 || ans == 93020.5 || ans == 93024.5 || ans == 93028.5 || ans == 93032.5 || ans == 93036.5 || ans == 93040.5 || ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5 || ans == 94009.5 || ans == 94012.5 || ans == 94010.5 || ans == 94011.5 || ans == 94014.5 || ans == 94017.5) {
     opponents.buchanan += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 250003 || ans == 25017.5 || ans == 25018.5 || ans == 25019.5 || ans == 25020.5 || ans == 25021.5 || ans == 25022.5) {
+    if (ans == 900015551 || ans == 88113.5 || ans == 88116.5 || ans == 88125.5 || 88128.5 || ans == 88131.5 || ans == 88114.5 || ans == 88117.5 || ans == 88120.5 || ans == 88123.5) {
+    opponents.forbes += 2
+    updateCandidates("junk", 0)
+    }
+    if (ans == 250003 || ans == 25017.5 || ans == 25018.5 || ans == 25019.5 || ans == 25020.5 || ans == 25021.5 || ans == 25022.5 || ans == 96006.5 || ans == 96009.5 || ans == 96015.5 || ans == 96007.5 || ans == 96010.5 || ans == 96013.5 || ans == 96005.5 || ans == 96011.5 || ans == 96014.5 || ans == 96028.5 || ans == 96034.5 || ans == 96032.5 || ans == 96035.5 || ans == 96030.5 || ans == 96033.5 || ans == 96036.5) {
     opponents.alexander += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 250001 || ans == 70002 || ans == 70003 || ans == 85028.5) {
-    opponents.wilson += 2
-    updateCandidates("junk", 0)
-    }
-    if (ans == 60002.5 || ans == 60006.5 || ans == 250002 || ans == 88022.5) {
+    if (ans == 60002.5 || ans == 88014.5 || ans == 96004.5 || ans == 96008.5 || ans == 96012.5 || ans == 96025.5 || ans == 96031.5 || ans == 96026.5 || ans == 96029.5 || ans == 96027.5) {
     opponents.gramm += 2
-    updateCandidates("junk", 0)
-    }
-    if (ans == 900015551 || ans == 88022.5) {
-    opponents.forbes += 2
     updateCandidates("junk", 0)
     }
     if (ans == 25007.5 || ans == 150005 || ans == 150007 || ans == 170003) {
@@ -99604,70 +99447,7 @@ Pandora += 1
     opponents.bono += 2
     updateCandidates("junk", 0)
     }
-   //Healthcare Vote CYOA (Succeeds)
-   if (ans == 15004.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
-    }
-    if (ans == 10001){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
-    }
-    if (ans == 10002){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
-    }
-    if (ans == 10003){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
-    }
-    if (ans == 50007){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
-    }
-    if (ans == 50001){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.postimg.cc/RZqX9QSg/ezgif-com-optimize-17.gif';
-    }
-    if (ans == 50002){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://i.postimg.cc/RZqX9QSg/ezgif-com-optimize-17.gif';
-    }
-    if (ans == 100001){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
-    }
-    if (ans == 89015.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89016.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89017.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89018.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89019.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89020.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89021.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89022.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 89023.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/go3d24.gif';
-    }
-    if (ans == 100002){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
-    }
-    if (ans == 100003){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
-    }
-    if (ans == 100004){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
-    }
-    if (ans == 10004){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nn6l4.gif';
-    }
+    // Achievements
     if (ans == 93013.5 || ans == 93017.5){ // Hillary
     ctsAchievement("I Do");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
@@ -99683,17 +99463,6 @@ Pandora += 1
     }
     if (ans == 94009.5 || ans == 94012.5 || ans == 94010.5 || ans == 94011.5 || ans == 94014.5 || ans == 94017.5) { // Bi Partisan
     ctsAchievement("Cats and Dogs");
-    }
-    if (ans == 85018.5){
-    ctsAchievement("The Work Goes On");
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
-    }
-    //Healthcare Vote CYOA (Fails)
-    if (ans == 15001.5){
-    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
-    }
-    if (ans == 15002.5 || ans == 15005.5 || ans == 15008.5) {
-        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
     }
     if (ans == 170006){
     ctsAchievement("Color Revolution Theory");
