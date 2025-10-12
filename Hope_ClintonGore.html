@@ -85174,7 +85174,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35013.6,
             "candidate": 77,
-            "answer_feedback": "Perhaps too far. Wilson, wily as ever, is able to use this to snag a few sympathy points. Instead, the main benefactor is a resurgent and ever painful Perot, who assails both of you as ''Tweedledee and Tweedledum.'' Limbaugh wastes no time to come to the Schemer's aid, stating ''I don't exactly agree with Pete Wilson on everything, but attacks against his health and personal life do not belong in our political landscape.'' Hiding the biggest grin he could possibly muster, as if he were waiting for a moment to catch you sliping. Ironic bastard.\n"
+            "answer_feedback": "Perhaps too far. Wilson, wily as ever, is able to use this to snag a few sympathy points. Instead, the main benefactor is a resurgent and ever painful Perot, who assails both of you as ''Tweedledee and Tweedledum.'' Limbaugh wastes no time to come to the Schemer's aid, stating ''I don't exactly agree with Pete Wilson on everything, but attacks against his health and personal life do not belong in our political landscape.'' Hiding the biggest grin he could possibly muster, as if he were waiting for a moment like this. Ironic bastard.\n"
         }
     },
     {
@@ -92715,7 +92715,7 @@ history_index=0;
 current_website=browser_history[history_index];
 let draggableBox = null;
 
-var dole_var = 1
+var dole_var = 2
 var buchanan_var = 0
 var forbes_var = 0
 var alexander_var = 0
@@ -92825,12 +92825,12 @@ function updateCandidates(type, amt){
                 opponents.specter += (-0.3*amt)
             }
             if(specter_active == 1){
-                opponents.specter += (-0.3*amt)
+                opponents.alexander += (-0.3*amt)
             }
         } if(type == "scan" && amt>0){ // Scandalous Billy
             // adds
             if(alexander_active == 1){
-                opponents.alexander += (0.9*amt)
+                opponents.alexander += (0.8*amt)
             }
             // subs
             if(gramm_active == 1){
@@ -95283,7 +95283,6 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
 }
 }
 }
-console.log(backlash)
 
     if (e.question_number+1 == 16) { // Guns
     if (backlash <= 5) {
@@ -101121,7 +101120,7 @@ if (e.question_number+1 == 18) { // Midterms
     moveup = 1
     opponents.bono = 3
     }
-    if(sortedOpponents[0][1] <= 4.5) {
+    if(sortedOpponents[0][1] <= 3) {
         opponents.wilson += 5
     }
     if (e.player_answers.includes(50004)) {
