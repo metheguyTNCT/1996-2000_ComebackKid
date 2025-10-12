@@ -92916,6 +92916,12 @@ const scandalMap = {
 }
 
 const backlashMap = {
+    "-6": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-1</span>)`,
     "0": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">0</span>)`,
     "1": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span>. (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
     "2": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span>. (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
@@ -92928,6 +92934,10 @@ const backlashMap = {
     "9": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">9</span>)`,
     "10": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">10</span>)`,
     "11": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">11</span>)`,
+    "12": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">12</span>)`,
+    "13": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">13</span>)`,
+    "14": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">14</span>)`,
+    "15": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">15</span>)`,
 
 }
 
@@ -104093,6 +104103,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. ${fpwinMapHTML} with ${legwinMapHTML}.`;
     } else if (lower_url=="clintongore.com") {
+    current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
             webpage_html+=`<div style="
                 background: linear-gradient(to right, #003366 50%, #ff0000 50%);
