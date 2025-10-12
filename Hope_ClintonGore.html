@@ -98548,6 +98548,10 @@ question_insert("question_20_bosnia_quagmire",
     }
     }
         if (e.question_number+1 == 23){
+        if (e.player_answers.includes(88025.5)) {
+        forbes_active = 0
+        opponents.forbes = -10
+        }
         if (Pandora >= 1) {
         if (e.player_answers.includes(98000.5)) {
         if (wilson_active == 1) {
@@ -103812,7 +103816,6 @@ e.executable.push([2, (() => {e.image = e.image = 'https://i.imgur.com/AKefq29.p
 }
 }
 return construct(0);
-}
 }
 /*
 Welcome to Astro's Variable Headquarters
