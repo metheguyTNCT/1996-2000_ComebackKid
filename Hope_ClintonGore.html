@@ -132,7 +132,7 @@ style.textContent = `
     content: "System Message";
     font-weight: bold;
     display: inline-block;
-    width: 246px;
+    width: 100%;
     height: 6px;
     text-align: left;
     padding: 3px;
@@ -145,8 +145,8 @@ style.textContent = `
 }
 
  #box-container {
-    width: 250px;
-    height: 110px;
+    width: 260px;
+    height: 120px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -176,32 +176,32 @@ style.textContent = `
 
     @keyframes custom-grow {
   0% {
-    width: 25px;
-    height: 12px;
+    width: 35px;
+    height: 22px;
   }
   5% {
-    width: 100px;
-    height: 48px;
+    width: 110px;
+    height: 58px;
   }
   7% {
-    width: 200px;
-    height: 72px;
+    width: 210px;
+    height: 82px;
   }
   10% {
-    width: 250px;
-    height: 120px;
+    width: 260px;
+    height: 130px;
   }
   95% {
-    width: 250px;
-    height: 120px;
+    width: 260px;
+    height: 130px;
   }
   97% {
-    width: 100px;
-    height: 48px;
+    width: 110px;
+    height: 58px;
   }
   100% {
-    width: 25px;
-    height: 12px;
+    width: 35px;
+    height: 22px;
   }
 }
 
@@ -216,8 +216,8 @@ document.head.appendChild(style);
   img.id = "popup-img";
   img.src = achievement.image;
   img.alt = achievementKey;
-  img.style.width = '90px';  
-  img.style.height = '90px';
+  img.style.width = '100px';  
+  img.style.height = '100px';
   img.style.animation = 'hidden-appear 4.1s';
 
   const text = document.createElement('div');
