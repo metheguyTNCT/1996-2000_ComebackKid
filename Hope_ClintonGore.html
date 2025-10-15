@@ -776,7 +776,7 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_26_nafta2_fopo_conservatice",
+        "pk": "question_26_nafta2_fopo_bluedog",
         "fields": {
             "priority": 0,
             "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
@@ -10521,7 +10521,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 97006.5,
         "fields": {
-            "question": "question_26_nafta2_fopo_conservatice",
+            "question": "question_26_nafta2_fopo_bluedog",
             "description": "Let's do a round table, I'm sure we can figure something out. Everyone can have their own voice but in the end, if not everyone is satisfied it's normal. Most of the time the right opinion isn't the most popular."
         }
     },
@@ -10529,7 +10529,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 97007.5,
         "fields": {
-            "question": "question_26_nafta2_fopo_conservatice",
+            "question": "question_26_nafta2_fopo_bluedog",
             "description": "I think the only way forward is not only hearing our concerns but those of our neighbors. We won't admit it, but the plan is mostly favoring us. We need it to be a truly equal deal between Washington, Ottawa and Mexico City."
         }
     },
@@ -10537,7 +10537,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 97008.5,
         "fields": {
-            "question": "question_26_nafta2_fopo_conservatice",
+            "question": "question_26_nafta2_fopo_bluedog",
             "description": "I think we've bit off more than we can chew. Let's ring it back around. Change a few things, paint the deal blue and make it signed and ratified. This can be made our win, not Bush's."
         }
     },
@@ -94716,7 +94716,7 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 77,
             "answer_feedback": "Your efforts were noticed by your wife, sure she still believes in her idea of universal healthcare, little by little, you're getting through to her. After Kennedy's minimum wage increased also passed, you finally escaped the doghouse."
         }
-    }
+    },
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 1283603,
@@ -101964,17 +101964,79 @@ if (e.question_number+1 == 25){
             "likelihood": 1
         }
     }
-    if (Pandora >= 1) {
-    if (e.player_answers.includes(98003.5)) {
-    question_insert("oslo_election_win",question_26_pandora_early);
-    question_insert("oslo_election",question_26_pandora_early);
-    question_insert("soviet_2_georgia",question_26_pandora_early);
-    } else {
-    question_insert("oslo_election_win",question_26_pandora);
-    question_insert("oslo_election",question_26_pandora);
-    question_insert("soviet_2_georgia",question_26_pandora);
+    let question_26_goodfeelings = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_goodfeelings",
+        "fields": {
+            "priority": 0,
+            "description": "There was a certain routine that took place. Sure, some will never really give you a honest handshake and other will never feel comfortable with you in the same room as them. Even then, the other half seem to have gotten in a good rhythm. The 104th congress is already the most legislatively effective Congress in this generation. You simply have to put in your input to make it all go through.",
+            "likelihood": 1
+        }
     }
-    } else if (CommieReturn == 1) {
+    let question_26_nafta2_fopo_thirdway = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_fopo_thirdway",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_fopo_liberal = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_fopo_liberal",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_fopo_bluedog = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_fopo_bluedog",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_nofopo_thirdway = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_nofopo_thirdway",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_nofopo_liberal = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_nofopo_liberal",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_nofopo_bluedog = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_nofopo_bluedog",
+        "fields": {
+            "priority": 0,
+            "description": "Since you've put NAFTA on pause, people have been drafting their own way of advancing the cause. From strengthening it's protection to our industries, to the concerns of the environment and workers... Seems like the only thing our party is agreeing is on they aren't agreeing on where to take it forward. ",
+            "likelihood": 1
+        }
+    }
+    let question_26_nafta2_gop = {
+        "model": "campaign_trail.question",
+        "pk": "question_26_nafta2_gop",
+        "fields": {
+            "priority": 0,
+            "description": "Hindsight is 20/20. You've more than likely caused yourself the greatest self sabotage of this decade by freezing NAFTA, and now you'll have to renegotiate it with an hostile House and Senate. People aren't trusting you'd be able to do anything good in such a situation--but who knows? Maybe you'll make another miracle.",
+            "likelihood": 1
+        }
+    }
+    if (CommieReturn == 1) {
     if (e.player_answers.includes(91003.5) && e.player_answers.includes(91005.5)) {
     if (e.player_answers.includes(88010.5)) {
     question_insert("soviet_2_georgia",soviet_3_conciliatory_masscuts);
@@ -101991,6 +102053,46 @@ if (e.question_number+1 == 25){
     } else {
     question_insert("soviet_2_georgia",soviet_3_nonconciliatory_noncuts);
     }
+    }
+    } else if (Pandora >= 1) {
+    if (e.player_answers.includes(98003.5)) {
+    question_insert("oslo_election_win",question_26_pandora_early);
+    question_insert("oslo_election",question_26_pandora_early);
+    } else {
+    question_insert("oslo_election_win",question_26_pandora);
+    question_insert("oslo_election",question_26_pandora);
+    }
+    } else if ((e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5)) && scandal <= 0 && (!e.player_answers.includes(26002.5) || !e.player_answers.includes(26005.5))) {
+    question_insert("oslo_election_win",question_26_goodfeelings);
+    question_insert("oslo_election",question_26_goodfeelings);
+    } else if (e.player_answers.includes(900015552)) {
+    if (SlimGOPCongress == 1) {
+    if (FPWin >= 5) {
+    if (Ideology <= -4) {
+    question_insert("oslo_election_win",question_26_nafta2_fopo_bluedog);
+    question_insert("oslo_election",question_26_nafta2_fopo_bluedog);
+    } else if (Ideology >= -3 && Ideology <= 1) {
+    question_insert("oslo_election_win",question_26_nafta2_fopo_thirdway);
+    question_insert("oslo_election",question_26_nafta2_fopo_thirdway);
+    } else if (Ideology >= 2) {
+    question_insert("oslo_election_win",question_26_nafta2_fopo_liberal);
+    question_insert("oslo_election",question_26_nafta2_fopo_liberal);
+    }
+    } else {
+    if (Ideology <= -4) {
+    question_insert("oslo_election_win",question_26_nafta2_nofopo_bluedog);
+    question_insert("oslo_election",question_26_nafta2_nofopo_bluedog);
+    } else if (Ideology >= -3 && Ideology <= 1) {
+    question_insert("oslo_election_win",question_26_nafta2_nofopo_thirdway);
+    question_insert("oslo_election",question_26_nafta2_nofopo_thirdway);
+    } else if (Ideology >= 2) {
+    question_insert("oslo_election_win",question_26_nafta2_nofopo_liberal);
+    question_insert("oslo_election",question_26_nafta2_nofopo_liberal);
+    }
+    }
+    } else {
+    question_insert("oslo_election_win",question_26_nafta2_gop);
+    question_insert("oslo_election",question_26_nafta2_gop);
     }
     } else {
         if (SlimGOPCongress == 1) {
