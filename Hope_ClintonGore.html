@@ -103273,15 +103273,15 @@ function opponentDecider(){
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(747) // Massachusetts
             e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(756) // New Jersey
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(733) // Connecticut
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(765) // Rhode Island
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
             e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
@@ -106599,6 +106599,8 @@ const weldWinSong = new Song(
   "7:33"
 
 );
+perotWin.addSong(weldWinSong);
+changePlaylist(weldWin);
 // Loss Slides
 } if (quickstats[0] <= 138) {
     e.pages.push(`<span style="font-size: 32px; ">Presidential Falling Out</span><br><br>
