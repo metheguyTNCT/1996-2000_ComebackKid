@@ -111,8 +111,8 @@ style.textContent = `
     right: 20px;
     background-color: #c0c0c0;
     color: black;
-    width: 250px;
-    height: 110px;
+    width: 260px;
+    height: 120px;
     text-align: center;
     padding: 4px;
     font-size: 18px;
@@ -103199,14 +103199,25 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A20029";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(731) // California
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(758) // New York
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.12
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.085
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 27)[0].fields.issue_score = -0.75
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 28)[0].fields.issue_score = -0.75
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 29)[0].fields.issue_score = -0.75
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 30)[0].fields.issue_score = -0.75
+        
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_specter");
     } else if (candidateName == "wilson") {
     updateHistoricalData(newVpTableHistorical6, newHistHexcolour6, newHistName6, newHistEV6, newHistPV6, newHistPVP6);
