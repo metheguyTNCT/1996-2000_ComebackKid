@@ -101401,24 +101401,27 @@ question_insert("question_20_bosnia_quagmire",
             opponents.bono = -10
         }
         updateCandidates("junk", 0)
-    if (Pandora >= 1) {
-    weld_active = 1
-     moveup = 1
-    opponents.weld = 8
-     campaignTrail_temp.questions_json[22] = tunnel("question_23_pandora");
-    } else {
     if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
         ctsAchievement("Deficit Hawk");
         Legacy += 2;
         campaignTrail_temp.questions_json[22] = tunnel("balanced_budget");
-        } else if (SlimGOPCongress == 1) { 
+    if (Pandora >= 1) {
+    weld_active = 1
+     moveup = 1
+    opponents.weld = 8
+    }
+    } else if (Pandora >= 1) {
+    weld_active = 1
+     moveup = 1
+    opponents.weld = 8
+     campaignTrail_temp.questions_json[22] = tunnel("question_23_pandora");
+    } else if (SlimGOPCongress == 1) { 
     campaignTrail_temp.questions_json[22] = tunnel("question_15_mitigation_budget_space");
     } else if (DisasterMidterms == 1) {
         campaignTrail_temp.questions_json[22] = tunnel("question_15_huge_budget");
     } else {
         campaignTrail_temp.questions_json[22] = tunnel("question_15_republican_budget");
         }
-    }
     }
         if (e.question_number+1 == 23){
         if (e.player_answers.includes(88025.5)) {
