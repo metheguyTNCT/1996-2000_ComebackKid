@@ -1,4 +1,3 @@
-
 e = campaignTrail_temp;
 campaignTrail_temp.cyoa = true;
 const customStyling = document.createElement("style");
@@ -163,7 +162,8 @@ style.textContent = `
 document.head.appendChild(style);
 
   const existingBoxes = document.querySelectorAll('.achievement-popup');
-  box.style.bottom = `20px`;
+  const offset = existingBoxes.length * 132; 
+  box.style.bottom = `${20 + offset}px`;
 
   const img = document.createElement('img');
   img.id = "popup-img";
@@ -188,27 +188,17 @@ document.head.appendChild(style);
 
   document.body.appendChild(box);
   
-
-  // Fade in
-  setTimeout(() => {
-    box.style.opacity = '1';
-  }, 10);
-
-  // Fade out and remove after 4 seconds
-  setTimeout(() => {
-    box.style.opacity = '0';
-    box.addEventListener('transitionend', () => {
-      box.remove();
-      adjustPopupPositions(); // Adjust remaining boxes when one is removed
-    });
-  }, 4000);
+setTimeout(() => {
+  box.remove();
+  adjustPopupPositions();
+}, 4000);
 }
-
 function adjustPopupPositions() {
     setTimeout(() => {
         const boxes = document.querySelectorAll('.achievement-popup');
+        const gap = 300;
         boxes.forEach((box, index) => {
-            box.style.bottom = `20px`;
+            box.style.bottom = `${20 + index * gap}px`;
         });
     }, 10);
 }
