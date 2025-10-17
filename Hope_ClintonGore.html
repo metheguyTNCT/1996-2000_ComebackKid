@@ -76,7 +76,7 @@ style.textContent = `
     flex-direction: column;
     align-items: center;
     gap: 3px;
-    opacity: 0;
+    opacity: 1;
     z-index: 1000;
     animation: custom-grow 4.1s; 
 }
@@ -162,7 +162,7 @@ style.textContent = `
 document.head.appendChild(style);
 
   const existingBoxes = document.querySelectorAll('.achievement-popup');
-  const offset = existingBoxes.length * 132; 
+  const offset = existingBoxes.length * 152; 
   box.style.bottom = `${20 + offset}px`;
 
   const img = document.createElement('img');
@@ -196,7 +196,7 @@ setTimeout(() => {
 function adjustPopupPositions() {
     setTimeout(() => {
         const boxes = document.querySelectorAll('.achievement-popup');
-        const gap = 300;
+        const gap = `300px`;
         boxes.forEach((box, index) => {
             box.style.bottom = `${20 + index * gap}px`;
         });
