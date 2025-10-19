@@ -196,7 +196,7 @@ setTimeout(() => {
 function adjustPopupPositions() {
     setTimeout(() => {
         const boxes = document.querySelectorAll('.achievement-popup');
-        const gap = `300px`;
+        const gap = 300;
         boxes.forEach((box, index) => {
             box.style.bottom = `${20 + index * gap}px`;
         });
