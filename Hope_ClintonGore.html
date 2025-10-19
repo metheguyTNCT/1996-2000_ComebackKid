@@ -754,6 +754,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "question_23_recession",
+        "fields": {
+            "priority": 0,
+            "description": "You've done it. In spite of all the efforts of the most powerful people in nation, you've defied the odds and plucked defeat straight from the jaws of victory. The Dow Jones line is heading straight down, unemployment is up and wages are stagnant. The buck stops here. There's only one man to blame.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "question_26_pandora",
         "fields": {
             "priority": 0,
@@ -10665,6 +10674,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_26_goodfeelings",
             "description": "Hillary still hasn't forgave me throwing her healthcare proposal under the bus but... I think it's about time I threw her a bone. I'll support Ted Kennedy and Nancy Kassebaum's healthcare insurance reform. There is no reason why such insurance can't be transferable or why insurance could refuse to protect American tax payers because they have pre-existing conditions."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98012.5,
+        "fields": {
+            "question": "question_23_recession",
+            "description": "Fuck. Now is a time for leadership, and that means taking responsibility. Bentsen needs to hand in his notice."
         }
     }
 
@@ -32413,6 +32430,36 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 77,
             "global_multiplier": 0.0143
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283872,
+        "fields": {
+            "answer": 98012.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0612
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283873,
+        "fields": {
+            "answer": 98012.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283874,
+        "fields": {
+            "answer": 98012.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.04
         }
     },
     {
@@ -94655,6 +94702,15 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 1283871,
+        "fields": {
+            "answer": 98012.5,
+            "candidate": 77,
+            "answer_feedback": "With Bentson's head rolling and the treasury shaken up, you've taken the important step of projecting change after a failed agenda - but this doesn't change the fact <b>you failed </b>."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 1283603,
         "fields": {
             "answer": 200001,
@@ -102909,7 +102965,7 @@ Pandora += 1
     opponents.buchanan += 2
     updateCandidates("junk", 0)
     }
-    if (ans == 900015551 || ans == 88113.5 || ans == 88116.5 || ans == 88125.5 || ans == 88128.5 || ans == 88131.5 || ans == 88114.5 || ans == 88117.5 || ans == 88120.5 || ans == 88123.5) {
+    if (ans == 900015551 || ans == 88113.5 || ans == 88116.5 || ans == 88125.5 || ans == 88128.5 || ans == 88131.5 || ans == 88114.5 || ans == 88117.5 || ans == 88120.5 || ans == 88123.5 || ans == 98012.5) {
     opponents.forbes += 2
     updateCandidates("junk", 0)
     }
@@ -105724,7 +105780,7 @@ e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96O
 gingrichLoss.addSong(gingrichLossSong);
 changePlaylist(gingrichLoss);
 // Beat Weld
-} else if (republican == "weld" && aa[0].electoral_votes >= 270 && aa[0].electoral_votes <= 399) {
+} else if (orderID[0] == 77 && republican == "weld" && aa[0].electoral_votes >= 270 && aa[0].electoral_votes <= 399) {
     ctsAchievement("The Prosecution Rests");
   e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GOVERNOR WELD</h3>
                       <p>And so, another one bites the dust. At the Excelsior Hotel, victory felt just as good the second time around. You could have hoped for even more blue states showing on that screen, but you didn't have to stay all night biting your nails to grasp your victory. There hadn’t been many doubts on you winning the election, now the hopes are that that victory will also translate to a victory downballot. <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding some Billionaire Midget to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br>Perot was quite direct in his concession speech. You could see it in his face that he really didn't want to do it at all. As he spoke, it was clear that he was tired of it all. From campaigning, of course, but also of both the two party system and politics in general. He gave fake smiles but the will wasn't there anymore, walking right back out into obscurity.<br><br>Perot would not dignify you a call, or at least that's what you thought until a week afterward when he asked to directly talk to you. You two would share a talk, or rather you would hear him rant about NAFTA, the deficit, how America is falling behind before Gore saved you by giving you a call half an hour in. Even then, you didn't really brought yourself to hate the guy, he was truly out of his depth.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
@@ -105931,7 +105987,7 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
 // Blowout Weld
-} else if (republican == "weld" && aa[0].electoral_votes >= 400) {
+} else if (orderID[0] == 77 && republican == "weld" && aa[0].electoral_votes >= 400) {
     ctsAchievement("The Prosecution Rests");
     e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GOVERNOR WELD</h3>
           <p>There was an expectation it would take at least a few hours for the results to trickle in and for you to be elected. You knew you had done a great campaign, your opponent always on the backfoot. However, you didn't expect the result to be called for you in less than an hour! Not everyone had even the time to come before people where already celebrating. A sea of blue, states that Republicans thought to be their safe havens since Nixon switching back to you. Maybe it will be enough to gain some control back of Congress. If this don't, nothing will after all! <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding some cheesy 70's musician to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> Salvatore Bono managed to keep quite the sunny disposition, even though he’d just handed the Republican Party another defeat. His speech had something Reagan about it—if a bit less abrasive. There was some irony in his saying he should’ve become an actor to win the election, but at least he did his best. You watched his speech through to the end, somewhat admiring his ability to sidestep the public’s disappointment.<br><br>When he called not ten minutes after stepping off-camera, he sounded different. The subject quickly turned to his faith—and to Scientology. You didn’t quite believe everything he said, but he claimed they’d tried to use him, to worm into the levers of government for their own gain, and that Scientology already had a worrying degree of influence inside the federal system. You were confused, sure—but as you dug in, it started to seem like cults might become a strange little problem in your second term..<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
@@ -106131,7 +106187,7 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
 // 538 Weld
-} else if (quickstats[0] == 538 && WeldNom == 1) {
+} else if (orderID[0] == 77 && quickstats[0] == 538 && WeldNom == 1) {
     ctsAchievement("The Prosecution Rests");
     e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GOVERNOR WELD</h3>
             <p>If you see this, you beat Bill Weld in a landslide!<br></p>`)
@@ -106618,8 +106674,8 @@ e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/GxtqJg8.p
 
 } else if (orderID[0] == 78 && republican == "weld" && aa[0].electoral_votes >= 270 || (aa[0].electoral_votes < 270 && aa[1].electoral_votes < 270 && aa[3].electoral_votes < 270)) { // Weld Term Slides
 e.pages.push(`<span style="font-size: 32px; ">www.thenewpress.com</span><br><br>
-        <p>A Poignant Artistic Reminder of the Failures of President Weld<br>By Ryan Kesler<br>Published 9:08 PM, September 9th, 2003<br><br>Our society today has been broken. There is no other way to put it. We have been consumed by a gaping, irreconcilable anger, engulfing our media and our art as would a maelstrom, a ship stranded out at sea. The cultural zeitgeist of our once great nation, over these past few years, has shifted into an interminable echo chamber of the same commercialised faux-cynicism repeated over and over again to a nauseating degree. Every day I find myself confronted with yet another false Moses, claiming to have found the answer to gun violence or homelessness or greed or capitalism or politics, all for it to just be, once more, nothing but vitriolic bile and sensationalist hyperbole disguised as a ‘realist’s interpretation of the truth’. All of this hate, however, and none of it truly in the face of the unchecked voracity of a power-hungry, callous corporate destruction of our public services and Democratic system.<br><br>That is why, in this environment, when one finds true artistic expression, it is euphoric.<br><br>What I am referencing is the recent piece of political satire, ‘Letter Of A Lover’, which has been widely circulated online as of late. Within it is contained what may be one of the most earnestly blunt pieces of modern writing I have read this year. This is rageful in a sense. Yet it is rage with a purpose. One that does not claim to provide a solution. Only to critique that which stands in the way of one.<br><br>The key dynamic of the piece, the relationship between the two Bills, is brilliant. Their love affair is used as a means by which to both highlight the failures of their administrations and to scathingly critique the two men, especially in their capacity as leaders. It is a torrid, broken affair; yet, much like in the story of genesis, the two are brought back to the forbidden fruit of their irresistible, corrosive love.<br><br>However, one of the most intriguing parts of the work to me is the characterisation.<br><br>The fact is, the character of Weld is portrayed in a manner simultaneously exaggerated and pointedly accurate. He is cowardly. He is wracked by a sense of despair. He is anxious. His stress and fear are projected outwards towards others, manifesting in a bumbling, emotional man, with a slightly pathetic disposition towards self-deprication and insecurity. In truth, this image of Weld, as a man wracked not so much by wickedness, but rather weakness, may be more accurate than the portrait of a cold-hearted creature of political delinquency we see purported by the major pundits of what remains of legacy liberal media.<br><br>Whilst this is obviously written from the perspective of Weld early on in his tenure, it is clear that there is little that has changed in the man over these torrid past 6 years. Observe his response to the Columbine hostage crisis 5 years ago, and his reaction to the LA bombings only a month fresh in this nation’s scarred mind. In both cases, he floundered, equivocated and stalled in an increasingly deteriorating mental state, until pressured by advisors to launch a botched intervention costing the lives of hundreds of Americans. He did not federalise the California National Guard in an act of strength; rather, it was in a desperate attempt to escape the supreme feeling of inadequacy which aides describe Weld as having possessed ever since he entered the White House. His relationship with Bill brings no different ails.<br><br>Clinton’s character, in contrast, is presented as ambiguous in his moral constitution; he bears no defining mark of evil, and brings with him no great indicator of good. This was much the case throughout his Presidency, and, as he edges ever closer to the shrinking circles of power Weld now surrounds himself with, it has become clear that the spectre of this snake oil salesman will not be exorcised from the highest office in the land anytime soon.<br><br>The recent press conference between Clinton and Weld should be only yet another stark indicator of how apt this piece is. Weld has not broken with Clinton or his failures in the slightest. He has continued cravenly on the blazing course of deconstructing the American social construct and remaking the American global order into a new machine of silent imperialism. Their personal friendship which has seemingly blossomed since the 1996 election should not be a surprise to anybody; the two men are both, in their own right, sickly embodiments of decadence and Western hubris. They find comfort and vindication in the fact that their broken status quo has a supporter in the form of the only type of person who matters to the political class; a fellow officeholder, acquainted to the struggles and mental contortion that come with the position.<br><br>I doubt that America, much like Weld, will ever escape the shadow of Clinton. The Democratic Party has collapsed into infighting after their calamity in the 2000 contingent election, all whilst under the thumb of a party apparatus still morbidly enamoured with the former President. The Reform Party is proving unable to sustain itself as a cohesive entity, even in the face of the encroaching ‘Uniparty’ they once warned of becomes an immanent reality. The newly formed ‘American Liberty Party’ offers no solution, its voice only melting into the violence and spite of the political scene. There seems to be no further respite for our current system.<br><br>But I digress. This is a review of a niche piece of writing online, not another one of those manifestos from a false prophet I so decried in the opening stages of this article. I will not encourage you to do anything further than read the original work in all its scathing beauty. And to the artistically inclined amongst you; if you still have a desire to rise above the noise, take notes. This is how one does it.<br><br>You can read ‘Letter of a Lover’ <a href="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Misc/LetterOfALover.txt" target="_blank" rel="noopener noreferrer">here</a>.<br><br>Read More From Ryan Kesler:<br><br><ul><li>Why Al Gore Does Not Care About You</li><li>The Truth Behind the Detroit Riots</li><li>How The Government Hides the Truth of the Akron Extraterrestrial Sightings</li><li>President Weld Should Read the Great Gatsby</li></ul><br><br></p><br></p>
-    `)
+        <p>A Poignant Artistic Reminder of the Failures of President Weld<br>By Ryan Kesler<br>Published 9:08 PM, September 9th, 2003<br><br>Our society today has been broken. There is no other way to put it. We have been consumed by a gaping, irreconcilable anger, engulfing our media and our art as would a maelstrom, a ship stranded out at sea. The cultural zeitgeist of our once great nation, over these past few years, has shifted into an interminable echo chamber of the same commercialised faux-cynicism repeated over and over again to a nauseating degree. Every day I find myself confronted with yet another false Moses, claiming to have found the answer to gun violence or homelessness or greed or capitalism or politics, all for it to just be, once more, nothing but vitriolic bile and sensationalist hyperbole disguised as a ‘realist’s interpretation of the truth’. All of this hate, however, and none of it truly in the face of the unchecked voracity of a power-hungry, callous corporate destruction of our public services and Democratic system.<br><br>That is why, in this environment, when one finds true artistic expression, it is euphoric.<br><br>What I am referencing is the recent piece of political satire, ‘Letter Of A Lover’, which has been widely circulated online as of late. Within it is contained what may be one of the most earnestly blunt pieces of modern writing I have read this year. This is rageful in a sense. Yet it is rage with a purpose. One that does not claim to provide a solution. Only to critique that which stands in the way of one.<br><br>The key dynamic of the piece, the relationship between the two Bills, is brilliant. Their love affair is used as a means by which to both highlight the failures of their administrations and to scathingly critique the two men, especially in their capacity as leaders. It is a torrid, broken affair; yet, much like in the story of genesis, the two are brought back to the forbidden fruit of their irresistible, corrosive love.<br><br>However, one of the most intriguing parts of the work to me is the characterisation.<br><br>The fact is, the character of Weld is portrayed in a manner simultaneously exaggerated and pointedly accurate. He is cowardly. He is wracked by a sense of despair. He is anxious. His stress and fear are projected outwards towards others, manifesting in a bumbling, emotional man, with a slightly pathetic disposition towards self-deprication and insecurity. In truth, this image of Weld, as a man wracked not so much by wickedness, but rather weakness, may be more accurate than the portrait of a cold-hearted creature of political delinquency we see purported by the major pundits of what remains of legacy liberal media.<br><br>Whilst this is obviously written from the perspective of Weld early on in his tenure, it is clear that there is little that has changed in the man over these torrid past 6 years. Observe his response to the Columbine hostage crisis 5 years ago, and his reaction to the LA bombings only a month fresh in this nation’s scarred mind. In both cases, he floundered, equivocated and stalled in an increasingly deteriorating mental state, until pressured by advisors to launch a botched intervention costing the lives of hundreds of Americans. He did not federalise the California National Guard in an act of strength; rather, it was in a desperate attempt to escape the supreme feeling of inadequacy which aides describe Weld as having possessed ever since he entered the White House. His relationship with Bill brings no different ails.<br><br>Clinton’s character, in contrast, is presented as ambiguous in his moral constitution; he bears no defining mark of evil, and brings with him no great indicator of good. This was much the case throughout his Presidency, and, as he edges ever closer to the shrinking circles of power Weld now surrounds himself with, it has become clear that the spectre of this snake oil salesman will not be exorcised from the highest office in the land anytime soon.<br><br>The recent press conference between Clinton and Weld should be only yet another stark indicator of how apt this piece is. Weld has not broken with Clinton or his failures in the slightest. He has continued cravenly on the blazing course of deconstructing the American social construct and remaking the American global order into a new machine of silent imperialism. Their personal friendship which has seemingly blossomed since the 1996 election should not be a surprise to anybody; the two men are both, in their own right, sickly embodiments of decadence and Western hubris. They find comfort and vindication in the fact that their broken status quo has a supporter in the form of the only type of person who matters to the political class; a fellow officeholder, acquainted to the struggles and mental contortion that come with the position.<br><br>I doubt that America, much like Weld, will ever escape the shadow of Clinton. The Democratic Party has collapsed into infighting after their calamity in the 2000 contingent election, all whilst under the thumb of a party apparatus still morbidly enamoured with the former President. The Reform Party is proving unable to sustain itself as a cohesive entity, even in the face of the encroaching ‘Uniparty’ they once warned of becomes an immanent reality. The newly formed ‘American Liberty Party’ offers no solution, its voice only melting into the violence and spite of the political scene. There seems to be no further respite for our current system.<br><br>But I digress. This is a review of a niche piece of writing online, not another one of those manifestos from a false prophet I so decried in the opening stages of this article. I will not encourage you to do anything further than read the original work in all its scathing beauty. And to the artistically inclined amongst you; if you still have a desire to rise above the noise, take notes. This is how one does it.<br><br>You can read ‘Letter of a Lover’ <a href="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Misc/LetterOfALover.txt" target="_blank" rel="noopener noreferrer">here</a>.<br><br>Read More From Ryan Kesler:<br><br><ul><li>Why Al Gore Does Not Care About You</li><li>The Truth Behind the Detroit Riots</li><li>How The Government Hides the Truth of the Akron Extraterrestrial Sightings</li><li>President Weld Should Read the Great Gatsby</li></ul></p>
+`)
 //e.image = ""
 e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/EvFtvBh.png'})])
 // Term slides
