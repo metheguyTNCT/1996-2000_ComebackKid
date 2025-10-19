@@ -4543,7 +4543,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35009.51,
         "fields": {
             "question": "candidate_intro_dark_dole",
-            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level. "
+            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level."
         }
     },
     {
@@ -4583,7 +4583,7 @@ campaignTrail_temp.answers_json = [
         "pk": 35009.51,
         "fields": {
             "question": "candidate_intro_dole",
-            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level. "
+            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level."
         }
     },
     {
@@ -19015,7 +19015,6 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-      
         "model": "campaign_trail.answer_score_global",
         "pk": 12714,
         "fields": {
@@ -87513,7 +87512,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35009.51,
             "candidate": 77,
-            "answer_feedback": "You finish up, speech after speech, crisscrossing this big, wide country in small, medium, and large cities alike. By the time Air Force One lifts off and you flip on the cabin TV, the clips are already rolling, with the Vice President or the First Lady taking hard swings at the Dole-Kemp campaign. "
+            "answer_feedback": "You finish up, speech after speech, crisscrossing this big, wide country in small, medium, and large cities alike. By the time Air Force One lifts off and you flip on the cabin TV, the clips are already rolling, with the Vice President or the First Lady taking hard swings at the Dole-Kemp campaign."
         }
     },
     {
@@ -99274,18 +99273,15 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[6][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[6][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[6][0] == "gingrich") {
             gingrich_active = 0 
@@ -99299,16 +99295,6 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[6][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
         if (e.player_answers.includes(10005.5)){ 
@@ -100508,18 +100494,15 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[5+moveup][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[5+moveup][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[5+moveup][0] == "gingrich") {
             gingrich_active = 0 
@@ -100533,16 +100516,6 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[5+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
     if (e.player_answers.includes(85002.5)) {
@@ -101045,18 +101018,15 @@ question_insert("question_20_bosnia_quagmire",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[4+moveup][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[4+moveup][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[4+moveup][0] == "gingrich") {
             gingrich_active = 0 
@@ -101070,16 +101040,6 @@ question_insert("question_20_bosnia_quagmire",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[4+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
                 let oslo_question_1 = {
@@ -101305,18 +101265,15 @@ question_insert("question_20_bosnia_quagmire",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[3+moveup][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[3+moveup][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[3+moveup][0] == "gingrich") {
             gingrich_active = 0 
@@ -101330,16 +101287,6 @@ question_insert("question_20_bosnia_quagmire",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[3+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
     if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
@@ -101475,18 +101422,15 @@ question_insert("question_20_bosnia_quagmire",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[2+moveup][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[2+moveup][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[2+moveup][0] == "gingrich") {
             gingrich_active = 0 
@@ -101500,16 +101444,6 @@ question_insert("question_20_bosnia_quagmire",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[2+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
         let soviet_1_transnistria = {
@@ -101672,18 +101606,15 @@ question_insert("question_20_bosnia_quagmire",
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[1+moveup][0] == "powell") {
-            powell_active = 0 
+        if (sortedOpponents[1+moveup][0] == "bono") {
+            bono_active = 0 
             if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
+            opponents.specter += (opponents.bono)
             }
             else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
+            opponents.dole += (opponents.bono/2)
             }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
+            opponents.bono = -10
         }
         if (sortedOpponents[1+moveup][0] == "gingrich") {
             gingrich_active = 0 
@@ -101697,16 +101628,6 @@ question_insert("question_20_bosnia_quagmire",
             opponents.buchanan += (opponents.gingrich/2)
             }
             opponents.gingrich = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
         }
         updateCandidates("junk", 0)
     let soviet_2_georgia = {
@@ -105494,19 +105415,7 @@ if (sortedOpponents[1+moveup][0] == "dole") {
             }
             opponents.wilson = -10
         }
-        if (sortedOpponents[1+moveup][0] == "powell") {
-            powell_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.powell/2)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.powell/2)
-            }
-            else if(bono_active == 1) {
-            opponents.bono += (opponents.powell/3)
-            }
-            opponents.powell = -10
-        }
+
         if (sortedOpponents[1+moveup][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -105516,6 +105425,19 @@ if (sortedOpponents[1+moveup][0] == "dole") {
             opponents.dole += (opponents.bono/2)
             }
             opponents.bono = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "gingrich") {
+            gingrich_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gingrich)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.gingrich/2)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gingrich/2)
+            }
+            opponents.gingrich = -10
         }
     updateCandidates("junk", 0)
 }
