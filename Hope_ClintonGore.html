@@ -95007,6 +95007,7 @@ var backlash = 0
 var scandal = 0
 var Ideology = 0
 var Legacy = 0
+var economy = -10
 var OsloPoints = 0
 var Pandora = 0
 var SlimGOPCongress = 0
@@ -101345,7 +101346,9 @@ question_insert("question_20_bosnia_quagmire",
             opponents.gingrich = -10
         }
         updateCandidates("junk", 0)
-    if ((e.player_answers.includes(88004.5) || e.player_answers.includes(88005.5)) && e.player_answers.includes(88010.5)) {
+    if (economy <= -15) {
+    campaignTrail_temp.questions_json[22] = tunnel("question_23_recession");
+    } else if (economy >= 0) {
         ctsAchievement("Deficit Hawk");
         Legacy += 2;
         campaignTrail_temp.questions_json[22] = tunnel("balanced_budget");
@@ -101540,12 +101543,14 @@ question_insert("question_20_bosnia_quagmire",
     }
      if (CommieReturn == 1) {
     question_insert("balanced_budget",soviet_1_transnistria);
+    question_insert("question_23_recession",soviet_1_transnistria);
     question_insert("question_15_republican_budget",soviet_1_transnistria);
     question_insert("question_15_huge_budget",soviet_1_transnistria);
     question_insert("question_23_pandora",soviet_1_transnistria);
      } else {
     if (e.player_answers.includes(85002.5)) {
     if (e.player_answers.includes(200002) || e.player_answers.includes(200003) || e.player_answers.includes(200006) || e.player_answers.includes(200006) || e.player_answers.includes(200008)) {
+    question_insert("question_23_recession",oslo_3_start_kurds);
     question_insert("balanced_budget",oslo_3_start_kurds);
     question_insert("question_15_mitigation_budget_nospace",oslo_3_start_kurds);
     question_insert("question_15_mitigation_budget_space",oslo_3_start_kurds);
@@ -101555,6 +101560,7 @@ question_insert("question_20_bosnia_quagmire",
     } else {
     question_insert("oslo_2",oslo_3_start);   
     question_insert("balanced_budget",oslo_3_start);
+    question_insert("question_23_recession",oslo_3_start);
     question_insert("question_15_mitigation_budget_nospace",oslo_3_start);
     question_insert("question_15_mitigation_budget_space",oslo_3_start);
     question_insert("question_15_republican_budget",oslo_3_start);
@@ -101565,6 +101571,7 @@ question_insert("question_20_bosnia_quagmire",
         question_insert("oslo_2",oslo_3);
         question_insert("oslo_2",oslo_3);   
     question_insert("balanced_budget",oslo_3);
+    question_insert("question_23_recession",oslo_3);
     question_insert("question_15_mitigation_budget_nospace",oslo_3);
     question_insert("question_15_mitigation_budget_space",oslo_3);
     question_insert("question_15_republican_budget",oslo_3);
@@ -102926,6 +102933,36 @@ if (e.question_number+1 == 27) {
    Ideology -= 2;
    updateCandidates("ideo", -2) 
    }
+// Economy
+if (ans == 30002 || ans == 88000.5 || ans == 880026.5 || ans == 88002.5 || ans == 880024.5 || ans == 880028.5 || ans == 8800232.5 || ans == 88006.5 || ans == 90001 || ans == 900015551 || ans == 900015553 || ans == 88011.5 || ans == 88100.5 || ans == 88104.5 || ans == 88108.5) {
+economy += 1;
+   updateCandidates("junk", 1) 
+}
+if (ans == 88001.5 || ans == 880023.5 || ans == 88005.5 || ans == 88010.5 || ans == 88015.55 || ans == 88103.5) {
+economy += 2;
+   updateCandidates("junk", 2) 
+}
+if (ans == 88004.5 || ans == 88009.5) {
+economy += 3;
+   updateCandidates("junk", 3)
+}
+if (ans == 88003.5) {
+   economy += 4;
+   updateCandidates("junk", 2) 
+}
+if (ans == 30001 || ans == 88008.5 || ans == 88012.5 || ans == 88013.5 || ans == 88101.5 || ans == 88105.5 || ans == 88109.5) {
+economy -= 1;
+   updateCandidates("junk", -1) 
+}
+if (ans == 900015552 || ans == 88102.5 || ans == 88106.5 || ans == 88110.5 || ans == 88112.5 || ans == 88113.5 || ans == 88114.5 || ans == 88115.5 || ans == 88116.5 || ans == 88117.5 || ans == 88118.5 || ans == 88119.5 || ans == 88120.5 || ans == 88121.5 || ans == 88122.5 || ans == 88123.5 || ans == 88124.5 || ans == 88125.5 || ans == 88126.5 || ans == 88127.5 || ans == 88128.5 || ans == 88129.5 || ans == 88130.5 || ans == 88131.5 || ans == 88132.5 || ans == 88133.5 || ans == 88134.5 || ans == 88135.5) {
+economy -= 2;
+   updateCandidates("junk", -2) 
+}
+if (ans == 88111.5) {
+economy -= 3;
+   updateCandidates("junk", -3)
+}
+console.log(economy)
 // Legacy 
    if (ans == 85027.5 || ans == 900015551 || ans == 170006 || ans == 85024.5 || ans == 25018.5 || ans == 25021.5 || ans == 25019.5 || ans == 25022.5) {
    Legacy += 1;
