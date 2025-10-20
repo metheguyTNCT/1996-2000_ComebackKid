@@ -95249,6 +95249,27 @@ const scandalMap = {
     "17": `<i><span style="color:rgb(213, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(213, 10, 10);">11</span>)`,
     "18": `<i><span style="color:rgb(213, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(213, 10, 10);">11</span>)`,
 }
+const economyMap = {
+    "-18": `<i><span style="color:rgb(213, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(213, 10, 10);">-18</span>)`,
+    "-17": `<i><span style="color:rgb(213, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(213, 10, 10);">-17</span>)`,
+    "-16": `<i><span style="color:rgb(213, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(213, 10, 10);">-16</span>)`,
+    "-15": `<i><span style="color:rgb(213, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(213, 10, 10);">-15</span>)`,
+    "-14": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-14</span>)`,
+    "-13": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-13</span>)`,
+    "-12": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-12</span>)`,
+    "-11": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-11</span>)`,
+    "-10": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-10</span>)`,
+    "-9": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-9</span>)`,
+    "-8": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-8</span>)`,
+    "-7": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-7</span>)`,
+    "-6": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-6</span>)`,
+    "-5": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-5</span>)`,
+    "-4": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-1</span>)`,
+    "0": `<i><span style="color:rgb(3, 148, 46);">Gone</i></span>. (<span style="color:rgb(3, 148, 46);">0</span>)`,
+}
 
 const backlashMap = {
     "-6": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-6</span>)`,
@@ -107223,6 +107244,7 @@ function website_handler() {
 	if (lower_url=="republicanstowatchoutfor.com") {
 const ideologyHTML = ideologyMap[String(Ideology)];
 const scandalHTML = scandalMap[String(scandal)]; 
+const economyHTML = economyMap[String(economy)]; 
 const backlashHTML = backlashMap[String(backlash)]; 
 const fpwinMapHTML = fpwinMap[String(FPWin)];
 const legwinMapHTML = legwinMap[String(LEGWin)];
@@ -107296,7 +107318,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 
 
         // Use this to control the headline
-        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. ${fpwinMapHTML} with ${legwinMapHTML}.`;
+        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Debt is ${economyHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
     } else if (lower_url=="clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
