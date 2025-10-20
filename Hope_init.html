@@ -377,6 +377,22 @@ document.head.innerHTML +=`
   -moz-osx-font-smoothing: never;
 }
 
+#election_description_window {
+    position: relative;
+}
+
+#election_description_window::after {
+  background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/Clinton%20ED");
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+  position: absolute;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  background-size: cover;
+}
+
 .game_header {
 background: linear-gradient(to bottom, #004f6e 0%, #005b82 50%, #006d96 100%);
 border: 1px solid #003A4F;
