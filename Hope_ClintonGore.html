@@ -95673,7 +95673,7 @@ let wilsonObject = {img: "https://i.imgur.com/DvJ3WdF.png",name: "Pete Wilson",t
 
 let powellObject = {img: "https://i.imgur.com/cp0lPS0.png",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
 let bonoObject = {img: "https://i.imgur.com/Y8ylOGM.png",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The former Mayor of Palm Springs, who was swept into Congress with Newt Gringrich apparently has his eyes on the White House — God knows if he'll make the plunge."};
-let gingrichObject = {img: "https://i.imgur.com/31SzvKh.png",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your opposite number in the House, your dismal performance in the midterms has brought him in the race. However, it's not likely he'll get much farther than that."};
+let gingrichObject = {img: "https://i.imgur.com/31SzvKh.png",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your arch-nemesis in Washington has rode the wave after your dismal performance in the midterms, and the improbability of him being a serious contender for the presidency has become a possibility. If Gingrich wants to graduate to King of the Country, you'll need to prove him right."};
 let weldObject = {img: "https://i.imgur.com/xvc3p9M.png",name: "Bill Weld",title: "GOVERNOR OF MASSACHUSETTS",description: "Desperate times call for desperate measures. Hand picked by higher ups, Bill Weld is the perfect choice to restore trust in the party, much to the contempt of every conservative. But what other choice do they have?"};
 let bushObject = {img: "https://i.imgur.com/RSN7uvX.png",name: "George Bush",title: "POTUS #41",description: "George Bush is the 41st President of the United States, having been defeated by none other than yourself. Given the magnitude of his defeat, and how happy he seems in retirement, his seeking of a second term is incredibly unlikely, unless severe international and domestic destabilization forces his hand."};
 function updateCandidates(type, amt){
@@ -103838,7 +103838,11 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A20029";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.225;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.33;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
@@ -103855,7 +103859,6 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.085
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
-        
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_specter");
     } else if (candidateName == "wilson") {
     updateHistoricalData(newVpTableHistorical6, newHistHexcolour6, newHistName6, newHistEV6, newHistPV6, newHistPVP6);
@@ -103897,6 +103900,20 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#AD1275";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.23;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.225;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.23
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 27)[0].fields.issue_score = -0.45
