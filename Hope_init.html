@@ -403,13 +403,13 @@ document.head.innerHTML +=`
 #candidate_description_window::after {
   background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/BC");
   height: 360px;
-  width: 250px;
+  width: 244px;
 }
 
 #running_mate_description_window::after {
   background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/AlG");
   height: 280px;
-  width: 240px;
+  width: 250px;
 }
 
 .game_header {
@@ -514,16 +514,86 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
-.button,
+
+button,
 .game_header,
 .campaign_trail_start_emphasis {
 transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-.button:hover,
+:root {
+  --desktop-bg: #008080;
+
+  --window-bg: #C0C0C0;
+  --window-fg: #000000;
+
+  --lightest: #FFFFFF;
+  --lighter: #E0E0E0;
+  --light: #DFDFDF;
+  --medium: #C0C0C0;
+  --dark: #808080;
+  --darker: #404040;
+  --darkest: #000000;
+
+  --input-bg: #FFFFFF;
+  --input-fg: #000000;
+
+  --title-bar-bg: var(--dark);
+  --title-bar-fg: var(--medium);
+
+  --title-bar-active-bg: #000080;
+  --title-bar-active-fg: #FFFFFF;
+
+  --selection-bg: #000080;
+  --selection-fg: #FFFFFF;
+  --selection-inverse: #FFFF7F;
+}
+
+/* The "Windows Standard" color scheme in Windows 95 and 98 had an extra  line
+ * of color #DFDFDF next to the left and top borders. This is not present in any
+ * of the other color schemes.
+ */
+
+button:not(:active, .active):focus,
+button:not(:active, .active).focus,
+input[type=button]:not(:active, .active):focus,
+input[type=button]:not(:active, .active).focus,
+input[type=submit]:not(:active, .active):focus,
+input[type=submit]:not(:active, .active).focus,
+input[type=reset]:not(:active, .active):focus,
+input[type=reset]:not(:active, .active).focus,
+.button:not(:active, .active):focus,
+.button:not(:active, .active).focus {
+  box-shadow: inset -1px -1px 0 var(--darkest), inset 1px 1px 0 var(--lightest), 
+    inset -2px -2px 0 var(--dark), inset 2px 2px 0 var(--light);
+}
+
+button:not(:active, .active),
+input[type=button]:not(:active, .active),
+input[type=submit]:not(:active, .active),
+input[type=reset]:not(:active, .active),
+.button:not(:active, .active) {
+  box-shadow: inset -1px -1px 0 var(--dark), inset 1px 1px 0 var(--light);
+}
+
+.title-bar-buttons button:not(:active):focus {
+  box-shadow: inset -1px -1px 0 var(--dark), inset 1px 1px 0 var(--light);
+}
+
+
+button {
+  background-color: #efefef;
+  border-radius: 0px;
+}
+
+button:hover,
 .game_header:hover,
 .campaign_trail_start_emphasis:hover {
 box-shadow: inset 0 0 6px rgba(60, 110, 255, 0.3), 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.game_header {
+  font-family: times new roman;
 }
 
 .inner_window_question h3:active,
@@ -857,7 +927,6 @@ position: relative;
 
   #time-container {
     width: 50%;
-    height:100%;
     padding-top: 30px;
     position: relative;
     background-color: #0a0a0a;
@@ -927,7 +996,7 @@ position: relative;
     display: inline-block;
     white-space: nowrap;
     z-index: 0; 
-	top: -4px;
+	top: -3px;
   	position: absolute;
   }
 
@@ -941,13 +1010,15 @@ position: relative;
   }
 }
 
-  p#artist {
+  #artist {
     font-family: silkscreen;
-    font-size: 13px;
-    width: auto;
+    font-size: 15px;
+    width: 192.6px;
     position: absolute;
     float: left;
-    bottom: -20px
+    bottom: -20px;
+    display: inline-block;
+    white-space: nowrap;
   }
 
   #controls-container {
@@ -1516,30 +1587,30 @@ function updateUI(playlist) {
   titleElement.textContent = currentSong.getTitle();
   artistElement.textContent = currentSong.getArtist();
 
-  // Update the total time
 const titleTester = document.getElementById("title");
-if (!titleTester) return; // Safety check
+const artistTester = document.getElementById("artist");
 
-const titleText = titleTester.textContent;
-const steps = titleText.length;
+// Put them in an array
+const titleTesters = [titleTester, artistTester];
 
-// Function to check if text overflows
-function checkOverflow() {
-  const container = titleTester.parentElement;  // Assuming titleTester is inside a container
-  if (titleTester.scrollWidth > container.clientWidth) {
-    // If text overflows, apply animation
-    titleTester.style.animation = "none";  // Restart animation cleanly
-    void titleTester.offsetWidth;  // Force reflow
-    titleTester.style.animation = `scroll 10s steps(${steps}) infinite`;
+// Function to check if text overflows and apply animation
+function checkOverflow(titleTesters) {
+  const container = titleTesters.parentElement;
+  const steps = titleTesters.textContent.length;
+
+  if (titleTesters.scrollWidth > container.clientWidth) {
+    titleTesters.style.animation = "none";
+    void titleTesters.offsetWidth; // Force reflow
+    titleTesters.style.animation = `scroll 10s steps(${steps}) infinite`;
   } else {
-    // If text does not overflow, remove animation
-    titleTester.style.animation = "none";
+    titleTesters.style.animation = "none";
   }
 }
 
-// Initial check if the title overflows
-checkOverflow();
+// Loop over the array and run checkOverflow on each one
+titleTesters.forEach(checkOverflow);
 }
+
 
 
 
@@ -1924,8 +1995,7 @@ const gameWindow_player = document.getElementById("game_window");
 //use this function directly or put it in an event listener to start the music on the press of a certain button
 setupMusicPlayer();
 
-  
-  document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/win95-theme@1.1.1/95.css">'
+
   document.head.innerHTML += `<link
     rel="stylesheet"
     href="https://jetsimon.com/public/crt.css"
@@ -1980,10 +2050,6 @@ toggleCRT = function(){
   updateGrainOverlay();
 };
 // ————————————————
-  document.head.innerHTML += `<link
-    rel="stylesheet"
-    href="https://unpkg.com/win95-theme@1.1.1/95.css"
-  >`
   
   let crtStyle = document.createElement('style');
 document.head.appendChild(crtStyle);
@@ -2169,4 +2235,3 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
