@@ -104708,20 +104708,9 @@ if (e.player_answers.includes(30002)) {
     ctsAchievement("Good Feelings");
     }
     }
-    } else if ((e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) && scandal <= 0) {
-    SlimGOPCongress += 1;
-    campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_populist");
-    ctsAchievement("Counterrevolution");
-    } else if (e.player_answers.includes(96026.5) || e.player_answers.includes(96029.5)) {
-        SlimGOPCongress += 1;
-    campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_technocrat");
-    ctsAchievement("Counterrevolution");
-    } else if (e.player_answers.includes(96027.5)) {
-        SlimGOPCongress += 1;
-    campaignTrail_temp.questions_json[18] = tunnel("midterm_newdem_win_all");
-    ctsAchievement("Counterrevolution");
    } else {
   if (scandal <= 2 && backlash <= 3 && LEGWin >= 5) {
+    ctsAchievement("Counterrevolution");
             SlimGOPCongress += 1;
             Legacy += 1;
             opponents.dole = -10
@@ -104730,6 +104719,7 @@ if (e.player_answers.includes(30002)) {
     } else {
         
         if (LEGWin <= 1 && scandal >= 3 && backlash >= 7){
+        ctsAchievement("Counterrevolution");
             gingrich_active = 1
             moveup = 1
             opponents.gingrich = 4
