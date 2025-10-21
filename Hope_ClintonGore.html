@@ -1358,7 +1358,25 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": "campaign_1_gramm_civilunions",
+        "fields": {
+            "priority": 0,
+            "description": "Your support of civil unions has revived what many in America considered to be a dead campaign. The south is in rebellion and gathering behind their moral majority champion to immediately repeal the law if he gets elected. You're in a tough spot, but if you can sway the American populous carefully, you can make Phil Gramm the new Barry Goldwater.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": "campaign_2_gramm",
+        "fields": {
+            "priority": 0,
+            "description": "Senator Gramm has become a champion of having so many weaknesses they start to compensate for one another. A disaster lizard: between funding pornography, letting drug dealers go free, and being so openly and brazenly corrupt, nothing seems to stick to him, and even fewer people seem to care if he steals as long as he provides. There must be a way to hit him, and hit him hard, no?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_gramm_balancebudget",
         "fields": {
             "priority": 0,
             "description": "Senator Gramm has become a champion of having so many weaknesses they start to compensate for one another. A disaster lizard: between funding pornography, letting drug dealers go free, and being so openly and brazenly corrupt, nothing seems to stick to him, and even fewer people seem to care if he steals as long as he provides. There must be a way to hit him, and hit him hard, no?",
@@ -1389,6 +1407,15 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "It seems that the momentum has shifted. While Helms is locked down south, Specter barnstorms the Midwest and northeast. Rallying with Senator Al D’Amato, his moderate social stances, fiscal responsibility, and tough-on-crime rhetoric are proving to be a winning combination in urban areas. Worse yet, he and Helms have found out that they can cooperate to attack you on at least one front: foreign policy. With your blunders in that field providing easy ammunition, how can we reverse Specter’s rising poll numbers before it’s too late?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_specter_stone",
+        "fields": {
+            "priority": 0,
+            "description": "An aide informs you of a bizarre breaking story from the National Enquirer. The headline? ''SPECTER CAMPAIGN MANAGER CAUGHT IN GROUP SEX RING'' The tabloid alleges that, among other things, Specter Campaign Manager Roger Stone and his wife, Nikki, put out several half-naked advertisements of themselves in swingers magazines and websites and were seen attending large orgies. Complete with several pictures and excerpts from the purported ads as well as witness testimony from some of the couple’s extra partners, the story seems shockingly credible. How do you even begin to respond?",
             "likelihood": 1
         }
     },
@@ -1470,6 +1497,15 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": 0,
             "description": "Steve Forbes is such an odd little man. A populist millionaire, an outsider that touts a standard insider platform, a single issue candidate touting a single issue that fires up no one — all the while being a profoundly awkward man. Weighing up the options to attack him, you almost feel bad for him.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_2_forbes_civilunions",
+        "fields": {
+            "priority": 0,
+            "description": "Steve Forbes is just an odd little man. A populist millionaire, an outsider that touts a standard insider platform, a single issue candidate touting a single issue that fires up no one — all the while being a profoundly awkward man. Weighing up the options to attack him, you almost feel bad for him.",
             "likelihood": 1
         }
     },
@@ -7730,6 +7766,110 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "debate_weldperot",
             "description": "With this election so far, the main issue has largely been myself. My administration's failures, my cabinet's mistakes, my party's corruption. Well, I'm not going to tolerate it any longer. This debate, it's going to be about debunking these accusations, hitting back at them, properly."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86173.5,
+        "fields": {
+            "question": "campaign_2_forbes_civilunions",
+            "description": "Every since I signed civil unions into law, The GOP have made congressional debates a 1-issue shouting match. With what we know about Malcom Sr, I'll cut to the chase; Would Steve Forbes have rebuked his daddy's right to love?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86174.5,
+        "fields": {
+            "question": "campaign_2_forbes_civilunions",
+            "description": "This is compare and contrast stuff. I grew up in a trailer park, and now I’m President of the United States. Steve Forbes never worked a day in his life to inherit his father’s media company, now he’s treating the Presidency like it can be bought."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86175.5,
+        "fields": {
+            "question": "campaign_2_forbes_civilunions",
+            "description": "Steve Forbes is a millionaire son of a millionaire, and he’s here telling you the tax burden is too much on you, while proposing a tax plan that would massively benefit himself and create either a massive deficit in the federal budget or gut things like Social Security."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86176.5,
+        "fields": {
+            "question": "campaign_1_gramm_civilunions",
+            "description": "The south might be a little behind on progress, but for every Phil Gramm in Houston there's a Bill Clinton in Atlanta. I'm a Christian, I'm a Southerner, I've read the good book, there are a plenty of good people out there we still have a lot in common with. A true person of faith would never stand for a man as vile as Gramm."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86177.5,
+        "fields": {
+            "question": "campaign_1_gramm_civilunions",
+            "description": "Let Gramm become the very thing he's caricatured as. We may lose the south, but if it means he'll scare the shrinking number of liberal Republicans into finally abandoning that sinking ship, it's a sacrifice we ought to make. Put his insane ramblings in our ads. Show everyone just how destructive his ideas really are."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86178.5,
+        "fields": {
+            "question": "campaign_1_gramm_civilunions",
+            "description": "Call me a fool but we are in the gay 90's. If Gramm can't keep up with the times that's his problem, not ours. He's part of a dying breed of people that can't accept change, even if it's for the better. We can't turn back the clock for our future."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86179.5,
+        "fields": {
+            "question": "campaign_2_gramm_balancebudget",
+            "description": "If we can make them laugh, we can make them pay attention. This… ‘’Truck Stop Women’’ film. It turned into an anti-Nixon film as well, right? Bizarre. UnChristian as well, which ought to get feathers ruffled."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86180.5,
+        "fields": {
+            "question": "campaign_2_gramm_balancebudget",
+            "description": "As a young man, I looked up to leaders like John F. Kennedy, men who stood for what was right, no matter the cost. But in today’s politics, too many politicians are tangled up with anonymous money. Don’t just take my word for it, Senator McCain said the same thing last year."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86181.5,
+        "fields": {
+            "question": "campaign_2_gramm_balancebudget",
+            "description": "He can have all his claim of the goodness of trickle down but it's what as put us all into this mess in the first place. Now that we finally getting ourselves out of the hole Reagan as put us into, he's supporting taking us right back into it! We must let our surplus grow before we start spending it all once again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86182.5,
+        "fields": {
+            "question": "campaign_2_gramm_balancebudget",
+            "description": "Betsy’s showing me some real dirt on Gramm. Not the sleazy stuff people joke about — the real bad things. Helping free a drug dealer, Bill Doyle. Defrauding folks with Jerry Stiles. He takes pride in being mean, but this isn’t just mean, it’s downright nasty."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86183.5,
+        "fields": {
+            "question": "campaign_2_specter_stone",
+            "description": "Well, I suppose we can’t be too quick to rush to judgment, right? It is a tabloid after all, even if those pictures do look…  pretty damning. I think we oughta stay hush about this."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86184.5,
+        "fields": {
+            "question": "campaign_2_specter_stone",
+            "description": "Good Lord. This is insane, but talking about it directly is below the dignity of the office. The best we can do here is just to use it to allude to the GOP’s overall hypocrisy a little more in my speeches. I’ll find it quite hard to be lectured to by them on “family values” after something like this. That’s for sure."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86185.5,
+        "fields": {
+            "question": "campaign_2_specter_stone",
+            "description": "You know, more than anything, all this particular craziness aside, what I’m really learning about is how much of a nut this Stone guy is. Talk about that a little. Question Specter, if he wins, was he gonna give this wacko a job in the White House?"
         }
     },
     {
@@ -33514,6 +33654,266 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 1283924,
+        "fields": {
+            "answer": 86173.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283925,
+        "fields": {
+            "answer": 86173.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283929,
+        "fields": {
+            "answer": 86174.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0161
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283930,
+        "fields": {
+            "answer": 86174.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283931,
+        "fields": {
+            "answer": 86174.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283947,
+        "fields": {
+            "answer": 86175.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.02275
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283948,
+        "fields": {
+            "answer": 86175.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283949,
+        "fields": {
+            "answer": 86175.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283971,
+        "fields": {
+            "answer": 86177.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283973,
+        "fields": {
+            "answer": 86178.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283982,
+        "fields": {
+            "answer": 86179.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283983,
+        "fields": {
+            "answer": 86179.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283984,
+        "fields": {
+            "answer": 86179.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283987,
+        "fields": {
+            "answer": 86180.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283988,
+        "fields": {
+            "answer": 86180.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283989,
+        "fields": {
+            "answer": 86180.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.04
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283994,
+        "fields": {
+            "answer": 86182.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283995,
+        "fields": {
+            "answer": 86182.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1283999,
+        "fields": {
+            "answer": 86181.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0343
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284006,
+        "fields": {
+            "answer": 86183.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284007,
+        "fields": {
+            "answer": 86183.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0312
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284008,
+        "fields": {
+            "answer": 86183.5,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284011,
+        "fields": {
+            "answer": 86184.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0243
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284014,
+        "fields": {
+            "answer": 86185.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284015,
+        "fields": {
+            "answer": 86185.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284018,
+        "fields": {
+            "answer": 86185.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 1283604,
         "fields": {
             "answer": 200001,
@@ -40418,6 +40818,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 30,
             "issue_score": 0.224,
             "issue_importance": 1.8
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283926,
+        "fields": {
+            "answer": 86173.5,
+            "issue": 28,
+            "issue_score": 0.4,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283968,
+        "fields": {
+            "answer": 86176.5,
+            "issue": 28,
+            "issue_score": -0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283970,
+        "fields": {
+            "answer": 86177.5,
+            "issue": 28,
+            "issue_score": 0.212,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283975,
+        "fields": {
+            "answer": 86178.5,
+            "issue": 28,
+            "issue_score": 0.4,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1283985,
+        "fields": {
+            "answer": 86179.5,
+            "issue": 28,
+            "issue_score": -0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284012,
+        "fields": {
+            "answer": 86184.5,
+            "issue": 28,
+            "issue_score": -0.4,
+            "issue_importance": 2.9
         }
     },
 ]
@@ -86074,6 +86534,292 @@ campaignTrail_temp.answer_score_state_json = [
             "state_multiplier": 0.02
         }
     },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283932,
+        "fields": {
+            "answer": 86174.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0211483212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283933,
+        "fields": {
+            "answer": 86174.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04183212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283934,
+        "fields": {
+            "answer": 86174.5,
+            "state": 210,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.031483212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283935,
+        "fields": {
+            "answer": 86174.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03342561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283936,
+        "fields": {
+            "answer": 86174.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03342561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283937,
+        "fields": {
+            "answer": 86174.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.042561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283938,
+        "fields": {
+            "answer": 86174.5,
+            "state": 188,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283939,
+        "fields": {
+            "answer": 86174.5,
+            "state": 200,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.051412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283940,
+        "fields": {
+            "answer": 86174.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.032412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283941,
+        "fields": {
+            "answer": 86174.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283942,
+        "fields": {
+            "answer": 86174.5,
+            "state": 219,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283943,
+        "fields": {
+            "answer": 86174.5,
+            "state": 197,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.02212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283944,
+        "fields": {
+            "answer": 86174.5,
+            "state": 199,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283950,
+        "fields": {
+            "answer": 86175.5,
+            "state": 215,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0211483212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283951,
+        "fields": {
+            "answer": 86175.5,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.04183212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283952,
+        "fields": {
+            "answer": 86175.5,
+            "state": 210,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.031483212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283953,
+        "fields": {
+            "answer": 86175.5,
+            "state": 185,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.03342561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283954,
+        "fields": {
+            "answer": 86175.5,
+            "state": 212,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.03342561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283955,
+        "fields": {
+            "answer": 86175.5,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "state_multiplier": 0.042561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283956,
+        "fields": {
+            "answer": 86175.5,
+            "state": 188,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0561412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283957,
+        "fields": {
+            "answer": 86175.5,
+            "state": 200,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.051412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283958,
+        "fields": {
+            "answer": 86175.5,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.032412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283959,
+        "fields": {
+            "answer": 86175.5,
+            "state": 201,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283960,
+        "fields": {
+            "answer": 86175.5,
+            "state": 219,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0412212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283961,
+        "fields": {
+            "answer": 86175.5,
+            "state": 197,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.02212345
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 1283962,
+        "fields": {
+            "answer": 86175.5,
+            "state": 199,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05212345
+        }
+    },
 ]
 
 campaignTrail_temp.answer_feedback_json = [
@@ -90189,6 +90935,123 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 86172.5,
             "candidate": 77,
             "answer_feedback": "Though your advisors had cautioned you against it, by the time the words leave your mouth on that stage, you know you've made the right choice. Your rebuttals are firm, clear, and cautious. And, despite the protestations from your opponents, you come across as integruous and humble to the American public, one trying to reconcile the salacious, scandalous Bill Clinton of the tabloids with the one they've just seen."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283923,
+        "fields": {
+            "answer": 86173.5,
+            "candidate": 77,
+            "answer_feedback": "Forbes ignored the constant attacks everwhere he went. It was painful both personally and politically. Eventually, the pressure became too much to bear--and Forbes started making appearances on talk shows and bending the knee, declaring civil unions a ''non-issue'' and a ''done deal,'' hoping the American people focus on ''real issues.''"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283928,
+        "fields": {
+            "answer": 86174.5,
+            "candidate": 77,
+            "answer_feedback": "Forbes tries to use his business experience to say he has executive experience, but he lacks the flamboyance of a Perot as he weasels his statements out. The American public don’t like men that choose between a Rolls Royce or a Helicopter when going to work."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283946,
+        "fields": {
+            "answer": 86175.5,
+            "candidate": 77,
+            "answer_feedback": "These attacks are wonky, and exactly what Forbes wants — he revels in discussing the finer details of fiscal policy. What he wants isn’t popular with a public that likes flashy slogans."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283967,
+        "fields": {
+            "answer": 86176.5,
+            "candidate": 77,
+            "answer_feedback": "The religious angle wasn't exactly a bad idea given the quantity of southern Christians preaching to love your neighbors, but most of them have already made up their mind. ''Phil Gramm is on fire, Bill Clinton is lukewarm. A real man of God would never sanction sin.'' Billy Graham loudly states while endorsing him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283969,
+        "fields": {
+            "answer": 86177.5,
+            "candidate": 77,
+            "answer_feedback": "Convincing the majority of Americans to support civil unions is a hard sell. But, telling them that all gays should be burned at the stake is an even harder sell. Everyone had one friend they knew was queer, someone they knew that had been beaten down by bullies like Gramm. They won't stand with him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283972,
+        "fields": {
+            "answer": 86178.5,
+            "candidate": 77,
+            "answer_feedback": "The left-wing eats it up like pancakes but the average American is still apprehensive concerning the ''gay issue.'' After the initial fire and brimstone speeches, Gramm narrowed his message down to America becoming a former shell of itself, being mocked around the world, degenerating, and how he's the only man who can reverse the damage you've caused, and it's working. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283986,
+        "fields": {
+            "answer": 86179.5,
+            "candidate": 77,
+            "answer_feedback": "It’s silly, headline grabbing and the effort to correct the story aren’t really effective, but the swing voters regard it as funny and harmless, and the moral majority are kept in line with reminders of the Supreme Court."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283990,
+        "fields": {
+            "answer": 86180.5,
+            "candidate": 77,
+            "answer_feedback": "No one likes the richest people investing in politics, but any attack you throw can hit back just as hard, Gramm just drags out the moribound Whitewater controversy, still nipping at your heels 4 years on."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283993,
+        "fields": {
+            "answer": 86182.5,
+            "candidate": 77,
+            "answer_feedback": "The connection with Doyle is one that’s handwaved as the actions of a rogue secretary, but he raises a far sharper defense of the Stiles issue, correctly anticipating that a years old story built on paperwork and numbers not exactly enticing the imagination of the American public."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1283997,
+        "fields": {
+            "answer": 86181.5,
+            "candidate": 77,
+            "answer_feedback": "Though most analyst seem to agree with you, the average voter is easily swayed by such promises. Gramm is running on fearmongering that your austerity will cause a recession if it's not given back to the people, and people are listening to him intently."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284005,
+        "fields": {
+            "answer": 86183.5,
+            "candidate": 77,
+            "answer_feedback": "The images come quickly: a flustered Specter, an outraged Helms, a defensive and dismissive Stone, who spins a wild tale that the story is a total fabrication and that all the photos were posted by a disgruntled former employee of his with a drug problem who broke into his home and hacked his computer. He’s fired within days."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284010,
+        "fields": {
+            "answer": 86184.5,
+            "candidate": 77,
+            "answer_feedback": "Stone is quickly fired as the Specter campaign enters a state of paralysis, going radio silent for several days after releasing a short statement that acknowledges that the allegations have made it impossible for him to effectively continue on in his current role. No shit."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284013,
+        "fields": {
+            "answer": 86185.5,
+            "candidate": 77,
+            "answer_feedback": "Stone is fired immediately, and the media ruminates on what an odd cartoon character he is. Consistently dressed like a Batman villain, with a proud past as a dirty trickster for Nixon and as a partner in “The Torturers Lobby” for foreign dictators galore, people are beginning to seriously question Specter’s judgment in picking such a man to spearhead his operation. The revelation of Stone’s back tattoo certainly doesn't help his case much either."
         }
     },
     {
@@ -101763,7 +102626,119 @@ question_insert("question_20_bosnia_quagmire",
     }
     }
     }
+if (e.noCounter == 24 && moveup == 1){
+        moveup = 0
+if (sortedOpponents[1+moveup][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "buchanan") {
+            buchanan_active = 0 
+            if(wilson_active == 1){
+            opponents.wilson += (opponents.buchanan/2)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if (weld_active == 1) {
+            opponents.weld += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "gramm") {
+            gramm_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gramm/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
 
+        if (sortedOpponents[1+moveup][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        if (sortedOpponents[1+moveup][0] == "gingrich") {
+            gingrich_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gingrich)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.gingrich/2)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gingrich/2)
+            }
+            opponents.gingrich = -10
+        }
+    updateCandidates("junk", 0)
+}
 if (e.question_number+1 == 25){
     if (Pandora >= 1) {
     ctsAchievement("Pandora's Box");
@@ -104335,1221 +105310,132 @@ question_insert("debate_weldperot_actedearly",question_22_1996_election);
 
 }
 }
-        if (e.question_number+1 == 31 && republican == "buchanan"){
-            if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
-                question_insert("campaign_2_buchanan", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "debate_buchanan_alt",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-            } else {
-                question_insert("campaign_2_buchanan", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "debate_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "As you stand behind the podium in the Bushnell Center, the massive insult of implying you and Buchanan are alike really sinks in. He keeps sending you these little glares while Jim Lehrer reads out the rules, you deny him even a glance. What has your prep been focused on?",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-            }
-        }
-    if (e.question_number+1 == 31 && republican == "wilson") {
-    if (!e.player_answers.includes(35013.6) && !e.player_answers.includes(86049.5)) {
-    question_insert("campaign_2_wilson_voice", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "debate_wilson_strained",
-        "fields": {
-            "priority": 0,
-            "description": "Across the aisle, Wilson massages his neck before he dons a flickering smirk.—San Diego may be his home, but it’s your crowd. You shake his clammy palms and meet his empty, beady eyes before the debate begins. He knows he has the momentum, spinning your successes as inadequate and your failures as glaring. How will you begin?",
-            "likelihood": 1
-        }
-    }
-    );
-    } else {
-    if (!e.player_answers.includes(86049.5)) {
-    question_insert("campaign_2_wilson", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "townhall_wilson",
-        "fields": {
-            "priority": 0,
-            "description": "It's been apparent from the start of the race that Wilson has had a problem. However, the issue of his voice, frail and broken, seems to have finally set his campaign uneasy, with his team eschewing a TV debate in favour of stumbling across the nation in a series of town halls. Wilson, propped up by Fred Thompson as a fellow speaker, excoriates in gravelly tone your administration's calamity at the border and your abrogation of America's influence abroad. Despite his weakness, action is needed. What is it?",
-            "likelihood": 1
-        }
-    }
-    );
-    } else {
-        question_insert("campaign_2_wilson", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "debate_wilson",
-            "fields": {
-                "priority": 0,
-                "description": "You and Wilson stand across from each other—San Diego may be his home, but it’s your crowd. You shake hands respectfully and meet his empty, beady eyes for a moment before the debate begins. Wilson’s got the momentum, spinning your successes as inadequate and your failures as glaring. How’re you going to shake that narrative, Slick?",
-                "likelihood": 1
-            }
-        }
-        );
-    }
-    }
-    }
-if (e.question_number+1 == 30 && republican == "wilson") {
-if (!e.player_answers.includes(35013.6)) {
-if (!e.player_answers.includes(86049.5)) {
-question_insert("campaign_1_wilson", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_2_wilson_voice",
-        "fields": {
-            "priority": 0,
-            "description": "Pete Wilson would be Lee Atwater’s wet dream if he were in your shoes. There are the obvious points of attack—his broken promise not to run for President being the most glaring—but dig a little deeper, and you’ll find plenty more to work with. The question is: which angle do you take, and how do you make it stick? ",
-            "likelihood": 1
-        }
-    }
-    );
-} else {
-question_insert("campaign_1_wilson", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_2_wilson",
-        "fields": {
-            "priority": 0,
-            "description": "Pete Wilson would be Lee Atwater’s wet dream if he were in your shoes. There are the obvious points of attack—his broken promise not to run for President being the most glaring—but dig a little deeper, and you’ll find plenty more to work with. The question is: which angle do you take, and how do you make it stick? ",
-            "likelihood": 1
-        }
-    }
-    );
-}
-} else {
-question_insert("campaign_1_wilson", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_2_wilson",
-        "fields": {
-            "priority": 0,
-            "description": "Pete Wilson would be Lee Atwater’s wet dream if he were in your shoes. There are the obvious points of attack—his broken promise not to run for President being the most glaring—but dig a little deeper, and you’ll find plenty more to work with. The question is: which angle do you take, and how do you make it stick? ",
-            "likelihood": 1
-        }
-    }
-    );
-}
-}
-        if (e.question_number+1 == 29) {
-        if (CommieReturn == 1) {
-         question_insert("soviet_4_nowar", 
-    {
-        "model": "campaign_trail.question",
-        "pk": "campaign_1_powell",
-        "fields": {
-            "priority": 0,
-            "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-            "likelihood": 1
-        }
-    }
-    );
-    question_insert("soviet_4_nonato_noun", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_powell",
-            "fields": {
-                "priority": 0,
-                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-                "likelihood": 1
-            }
-        }
-        );
-        question_insert("soviet_4_nato_noun", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_powell",
-            "fields": {
-                "priority": 0,
-                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-                "likelihood": 1
-            }
-        }
-        );
-        question_insert("soviet_4_nonato_un", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_1_powell",
-            "fields": {
-                "priority": 0,
-                "description": "Some might say Powell is steely. You say he’s just stiff. But when he speaks, people listen, and right now, he’s saying we need competent leadership. With scandals everywhere and a party ready to revolt, Powell promises to be the quietly competent leader you could never be. You need to show the public everything you’ve done, teach them how you helped them.",
-                "likelihood": 1
-            }
-        }
-        );
-    question_insert("campaign_1_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_powell",
-            "fields": {
-                "priority": 0,
-                "description": "Powell hasn’t been directly engaging in personal attacks, letting Nickles carry his water while he calmly and reasonably explains how you’ve failed on national security. The passive-aggressiveness, the cowardice, is this the war hero? Time to try and strike back.",
-                "likelihood": 1
-            }
-        }
-        );
-        question_insert("campaign_2_powell", 
-        {
-            "model": "campaign_trail.question",
-            "pk": "debate_powell",
-            "fields": {
-                "priority": 0,
-                "description": "These past four years, you’ve met so many world leaders, titans of industry, and military experts that you’re awed by few. But the way Powell saunters in, a stony gaze commanding the room, you’re man enough to admit you’re nervous. A lot more than during the ‘92 debates. What’s your tactic to handle him?",
-                "likelihood": 1
-            }
-        }
-        );
-    } else if (Pandora >= 1) {
-    if (e.player_answers.includes(98008.5)) {
-    question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-    if (e.player_answers.includes(88025.5)) {
-    if (e.player_answers.includes(96012.5)) {
-        question_insert("campaign_1_weldperot_actedearly", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_surplus_actedearly_liberalwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-    question_insert("campaign_2_weldperot_surplus_actedearly_liberalwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    } else {
-    question_insert("campaign_1_weldperot_actedearly", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_surplus_actedearly_bluedogwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-    question_insert("campaign_2_weldperot_surplus_actedearly_bluedogwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    }
-} else {
-if (e.player_answers.includes(96012.5)) {
-        question_insert("campaign_1_weldperot_actedearly", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_actedearly_liberalwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-question_insert("campaign_2_weldperot_actedearly_liberalwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    } else {
-    question_insert("campaign_1_weldperot_actedearly", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_actedearly_bluedogwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-      question_insert("campaign_2_weldperot_actedearly_bluedogwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot_actedearly",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    }
-}
-} else {
-question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The Yankee in his element. He’s the man the GOP needs to shed its corrupt reputation. He’s rallying where no Republicans would, reaching numbers only Reagan could muster. He isn’t compromising, despite the far right jumping ship; he’s gaining new allies in the forgotten libertarian sect. His wit dismantles lowly interviewers, who ultimately concede that government needs reinventing. His self-deprecating humor disarms talk-show hosts, a gambit Weld exploits like a game of chess, charming the everyday viewer. All of this makes liberals gush, ready to jump. Will you stop them? That is, if you want to.",
-            "likelihood": 1
-        }
-            });
-    if (e.player_answers.includes(88025.5)) {
-    if (e.player_answers.includes(96012.5)) {
-        question_insert("campaign_1_weldperot", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_surplus_liberalwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-    question_insert("campaign_2_weldperot_surplus_liberalwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    } else {
-    question_insert("campaign_1_weldperot", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_surplus_bluedogwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-    question_insert("campaign_2_weldperot_surplus_bluedogwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    }
-} else {
-if (e.player_answers.includes(96012.5)) {
-        question_insert("campaign_1_weldperot", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_liberalwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-question_insert("campaign_2_weldperot_liberalwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    } else {
-    question_insert("campaign_1_weldperot", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "campaign_2_weldperot_bluedogwelfare",
-        "fields": {
-            "priority": 0,
-            "description": "The Texan’s appeal to every conceivable demographic should defy political viability. From wild-haired hippies to raging reactionaries. From four-eyed investors to rugged blue-collar workers. From pro-choice activists to pro-life demagogues. Polar opposites unite under one banner, one cause, one word: Reform. Their loyalty is cemented by daily headlines exposing political corruption, proving he was right all along. A movement so loyal to one man, and growing by the day, should keep you up at night, but you don’t lose a wink of sleep. Perot’s clown car is fragile; where do you pop the tires?",
-            "likelihood": 1
-        }
-      }
-      );
-      question_insert("campaign_2_weldperot_bluedogwelfare", 
-      {
-            "model": "campaign_trail.question",
-        "pk": "debate_weldperot",
-        "fields": {
-            "priority": 0,
-            "description": "The air is rough with tension in the Dallas auditorium. Despite their faces skulking behind a veil of darkness, you can feel the accusations of the studio audience baring into you. Even after your hours of debate prep with Morris and Stephanopoulos, you can't help but feel off balance. Scratching furiously into his notebook, the sunken figure of Bill Weld seems just as out-of-place. And there, poised center stage, sporting that shit-eating grin, is Ross Perot. With the current race the most chaotic in recent American memory, this debate may be what defines its dynamics all the way to November.",
-            "likelihood": 1
-        }
-      }
-      );
-    }
-}
-}
-        } else {
-        if (republican == "dole") {
-      question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_dole",
-            "fields": {
-                "priority": 0,
-                "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
-                "likelihood": 1
-            }
-            });
-                    question_insert("campaign_1_dole", 
-      {
-            "model": "campaign_trail.question",
-            "pk": "campaign_2_dole",
-            "fields": {
-                "priority": 0,
-                "description": "Bob Dole might be the most boring, complacent man you’ve ever met. A background character in the colorful cast of Washington, with no breakout scene to prove otherwise. With all that time in the swamp, there must be some muck to prod though. We need something sharp, something to shatter the whole facade.",
-                "likelihood": 1
-            }
-      }
-      );
-       question_insert("campaign_2_dole", 
-      {
-                 "model": "campaign_trail.question",
-      "pk": "debate_dole",
-      "fields": {
-          "priority": 0,
-          "description": "You’re in Hartford, Connecticut. To your right stands Senator Dole—the poor old soul. As he wraps up his opening statement, you wonder: why did he run? Doesn’t he see the polls? This has to be one of the most lopsided races in recent memory, and he’s the one taking the punches for all to see. Maybe it doesn’t matter to him. Maybe he sees something you don’t. But if that’s the case, you’ve got to stop him here. For his own good, and for the country’s, it’s time to send him into retirement.",
-          "likelihood": 1
-      }
-      }
-      );
+if (republican == "dole") {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_dole");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_dole");
+campaignTrail_temp.questions_json[31] = tunnel("debate_dole");
 } else if (republican == "buchanan") {
-                 question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_buchanan",
-                        "fields": {
-                            "priority": 0,
-                            "description": "The culture war’s strongest warrior has been marching on since the convention, making a frantic last stand against crime, invaders, and all manner of degeneracy. With cable news eating it up and a few key districts shifting uneasily, what should the campaign make of Pat’s little war on windmills?",
-                            "likelihood": 1
-                        }
-            });
-                      question_insert("campaign_1_buchanan", 
-                        {
-                            "model": "campaign_trail.question",
-                            "pk": "campaign_2_buchanan",
-                            "fields": {
-                                "priority": 0,
-                                "description": "So far, you’ve been mostly reactive to Pat Buchanan’s accusations that you’re a drug-addicted, womanizing pedophile. That’s going to change. You smirk as you read the files on planned attacks, flipping through the pages with a practiced ease. Which one is your favorite?",
-                                "likelihood": 1
-                            }
-                        }
-                        );
-            } else if (republican == "forbes") {
-                question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience — transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience — transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience — transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience — transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-            "pk": "campaign_1_forbes",
-            "fields": {
-                "priority": 0,
-                "description": "Through his worship of the flat tax as a golden calf, Forbes has unintentionally stumbled onto an issue with some salience — transparency and reform in government. While he uses Congressional and Judicial term limits and attacks on Washington insiders to supplant his true love, the flat tax, your stat men are showing his points are resonating. How will we adapt?",
-                "likelihood": 1
-            }
-            });
-        question_insert("campaign_1_forbes", 
-            {
-                "model": "campaign_trail.question",
-                "pk": "campaign_2_forbes",
-                "fields": {
-                    "priority": 0,
-                    "description": "Steve Forbes is just an odd little man. A populist millionaire, an outsider that touts a standard insider platform, a single issue candidate touting a single issue that fires up no one — all the while being a profoundly awkward man. Weighing up the options to attack him, you almost feel bad for him.",
-                    "likelihood": 1
-                }
-            }
-            );
-                    question_insert("campaign_2_forbes", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "debate_forbes",
-                        "fields": {
-                            "priority": 0,
-                            "description": "For a media guy, Forbes sure is an unusual personality. You observe him practicing gesticulation while Jim Leher reads the rules of the debate, and trying to hide a smirk. By most people’s expectations, this will be a stomp. But that means Forbes will be benefiting from low expectations. Tread carefully, Slick — a strong Forbes performance could be a fiasco. ",
-                            "likelihood": 1
-                        }
-                    }
-                    );
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_buchanan");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_buchanan");
+if (e.player_answers.includes(86040.5) || e.player_answers.includes(86036.5)) {
+campaignTrail_temp.questions_json[31] = tunnel("debate_buchanan_alt");
+} else {
+campaignTrail_temp.questions_json[31] = tunnel("debate_buchanan");
+}
+} else if (republican == "forbes") {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_forbes");
+if (e.player_answers.includes(85024.5)) {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_forbes_civilunions");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_forbes");
+}
+campaignTrail_temp.questions_json[31] = tunnel("debate_forbes");
+if (e.player_answers.includes(86173.5)) {
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
+    e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.28;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
+    e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.21;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
+    e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.23;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.28
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(731) // California
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(758) // New York
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(747) // Massachusetts
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(756) // New Jersey
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(733) // Connecticut
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(765) // Rhode Island
+    e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
+}
 } else if (republican == "alexander") {
-                  question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_alexander",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_alexander",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_alexander",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_alexander",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                        "pk": "campaign_1_alexander",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Lamar’s record has brought a typically de-emphasized type of policy to the forefront of the election – education policy. From his opposition of school choice, to his kickback filled time as Bush’s Secretary of Education, to his current hard right turn, this is certainly an issue you have the upper hand on. How should you press your advantage?",
-                            "likelihood": 1
-                        }
-            });
-            question_insert("campaign_1_alexander", 
-                {
-                    "model": "campaign_trail.question",
-                    "pk": "campaign_2_alexander",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Lamar Alexander is a blank canvas. Relatively unknown nationally, despite heading a presidential ticket, you can make him out to be whatever you want, the next Goldwater, or Rockefeller’s ineffectual protégé. How should we define the flannel wearing bozo?",
-                        "likelihood": 1
-                    }
-                }
-                      );
-                question_insert("campaign_2_alexander", 
-                    {
-        "model": "campaign_trail.question",
-        "pk": "debate_alexander",
-        "fields": {
-            "priority": 0,
-            "description": "You and Lamar stand across from each other – San Diego is friendly territory for you at this point, but Lamar clearly feels like he’s behind enemy lines. You enter this debate the favorite, and Lamar’s speaking style may make this debate fatal for his chances. How’re we bringing this election home tonight, Bill?",
-            "likelihood": 1
-        }
-                    }
-                    );
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_alexander");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_alexander");
+campaignTrail_temp.questions_json[31] = tunnel("debate_alexander");
 } else if (republican == "gramm") {
-                 question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_gramm",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Phil Gramm may be the one man with a record as... gray... as your own. To compensate, he’s making every appeal possible to the Religious Right, constant appearances with Jerry Falwell, vague allusions to morality, and bold promises to repeal Roe v. Wade. This would all be typical midterm rhetoric, except he’s not attacking you. Still, you’re not about to let him set the conversation. What’s the plan?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_gramm",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Phil Gramm may be the one man with a record as... gray... as your own. To compensate, he’s making every appeal possible to the Religious Right, constant appearances with Jerry Falwell, vague allusions to morality, and bold promises to repeal Roe v. Wade. This would all be typical midterm rhetoric, except he’s not attacking you. Still, you’re not about to let him set the conversation. What’s the plan?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_gramm",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Phil Gramm may be the one man with a record as... gray... as your own. To compensate, he’s making every appeal possible to the Religious Right, constant appearances with Jerry Falwell, vague allusions to morality, and bold promises to repeal Roe v. Wade. This would all be typical midterm rhetoric, except he’s not attacking you. Still, you’re not about to let him set the conversation. What’s the plan?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_gramm",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Phil Gramm may be the one man with a record as... gray... as your own. To compensate, he’s making every appeal possible to the Religious Right, constant appearances with Jerry Falwell, vague allusions to morality, and bold promises to repeal Roe v. Wade. This would all be typical midterm rhetoric, except he’s not attacking you. Still, you’re not about to let him set the conversation. What’s the plan?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_gramm",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Phil Gramm may be the one man with a record as... gray... as your own. To compensate, he’s making every appeal possible to the Religious Right, constant appearances with Jerry Falwell, vague allusions to morality, and bold promises to repeal Roe v. Wade. This would all be typical midterm rhetoric, except he’s not attacking you. Still, you’re not about to let him set the conversation. What’s the plan?",
-                        "likelihood": 1
-                    }
-            });
-                question_insert("campaign_1_gramm", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "campaign_2_gramm",
-                        "fields": {
-                            "priority": 0,
-                            "description": "Senator Gramm was brave to run for office, to say the least, between funding porn, helping drug dealers walk free, and his cozy ties to big-money donors, it’s a wonder he had the gall to try. Not that you have much room to judge. Still, he’s a soft target. Where to hit?",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-                        question_insert("campaign_2_gramm", 
-                            {
-                                "model": "campaign_trail.question",
-                                "pk": "debate_gramm",
-                                "fields": {
-                                    "priority": 0,
-                                    "description": "Senator Gramm shakes your hand with a firm squeeze, locking eyes with you in a silent challenge as Jim Lehrer explains the rules. But as soon as the cameras roll, his expression shifts to a practiced grin, smoothly launching into why your foreign and domestic policies have been a total failure. It’s clear, he wants a fight, but he wants it clean. Will you indulge?",
-                                    "likelihood": 1
-                                }
-                            }
-                            );
+if (e.player_answers.includes(85024.5)) {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_gramm_civilunions");
+} else {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_gramm");
+}
+if (e.player_answers.includes(88025.5)) {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_gramm_balancebudget");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_gramm");
+}
+campaignTrail_temp.questions_json[31] = tunnel("debate_gramm");
 } else if (republican == "specter") {
-                 question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Unsurprisingly, the campaign’s media landscape remains dominated by discourse over the selection of Jesse Helms. The Senator’s innumerable amount of controversial votes, actions, endorsements, positions, and statements all serve as daily conversational fodder in the national debate over whether America can really stomach a man like him being one heartbeat away from the presidency. How can you ensure that this last vestige of the unrepentant old South joins the rest of them in the dustbin of history?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Unsurprisingly, the campaign’s media landscape remains dominated by discourse over the selection of Jesse Helms. The Senator’s innumerable amount of controversial votes, actions, endorsements, positions, and statements all serve as daily conversational fodder in the national debate over whether America can really stomach a man like him being one heartbeat away from the presidency. How can you ensure that this last vestige of the unrepentant old South joins the rest of them in the dustbin of history?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Unsurprisingly, the campaign’s media landscape remains dominated by discourse over the selection of Jesse Helms. The Senator’s innumerable amount of controversial votes, actions, endorsements, positions, and statements all serve as daily conversational fodder in the national debate over whether America can really stomach a man like him being one heartbeat away from the presidency. How can you ensure that this last vestige of the unrepentant old South joins the rest of them in the dustbin of history?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Unsurprisingly, the campaign’s media landscape remains dominated by discourse over the selection of Jesse Helms. The Senator’s innumerable amount of controversial votes, actions, endorsements, positions, and statements all serve as daily conversational fodder in the national debate over whether America can really stomach a man like him being one heartbeat away from the presidency. How can you ensure that this last vestige of the unrepentant old South joins the rest of them in the dustbin of history?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_specter",
-                    "fields": {
-                        "priority": 0,
-                        "description": "Unsurprisingly, the campaign’s media landscape remains dominated by discourse over the selection of Jesse Helms. The Senator’s innumerable amount of controversial votes, actions, endorsements, positions, and statements all serve as daily conversational fodder in the national debate over whether America can really stomach a man like him being one heartbeat away from the presidency. How can you ensure that this last vestige of the unrepentant old South joins the rest of them in the dustbin of history?",
-                        "likelihood": 1
-                    }
-            });
-                question_insert("campaign_1_specter", 
-                    {
-                        "model": "campaign_trail.question",
-                        "pk": "campaign_2_specter",
-                        "fields": {
-                            "priority": 0,
-                            "description": "It seems that the momentum has shifted. While Helms is locked down south, Specter barnstorms the Midwest and northeast. Rallying with Senator Al D’Amato, his moderate social stances, fiscal responsibility, and tough-on-crime rhetoric are proving to be a winning combination in urban areas. Worse yet, he and Helms have found out that they can cooperate to attack you on at least one front: foreign policy. With your blunders in that field providing easy ammunition, how can we reverse Specter’s rising poll numbers before it’s too late?",
-                            "likelihood": 1
-                        }
-                    }
-                    );
-                        question_insert("campaign_2_specter", 
-                            {
-                                "model": "campaign_trail.question",
-                                "pk": "debate_specter",
-                                "fields": {
-                                    "priority": 0,
-                                    "description": "The Specter campaign is a mass of contradictions waiting to be unraveled, and tonight, you might just get that chance on live TV. As you skim your debate notes under the sweltering lights of the Bushnell Center, a wave of nostalgia hits, a reminder of past battles fought and won. The moment is short-lived, interrupted as Arlen Specter strides over, extending his hand. A brief, firm shake, then back to your notes. Attorney vs Attorney. Clinton V. Specter. Time to present your case.",
-                                    "likelihood": 1
-                                }
-                            }
-                            );
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_specter");
+if (scandal <= 1) {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_specter_stone");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_specter");
+}
+campaignTrail_temp.questions_json[31] = tunnel("debate_specter");
 } else if (republican == "wilson") {
-                  question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As Wilson follows Doctors’ orders to rest his voice, he delegates the rigor of campaign stump speeches to his surrogates, chief among them Senator Thompson. Having distinguished himself on America’s screens over the years, whether it was as a truth-seeking minority counsel in the Watergate hearings or via his acting roles in blockbuster hits like The Hunt for Red October, stepping into the spotlight comes rather naturally for him. Thompson assails your record with gravitas and charm, framing himself as a true outsider and reformer. How do you flip the script?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As Wilson follows Doctors’ orders to rest his voice, he delegates the rigor of campaign stump speeches to his surrogates, chief among them Senator Thompson. Having distinguished himself on America’s screens over the years, whether it was as a truth-seeking minority counsel in the Watergate hearings or via his acting roles in blockbuster hits like The Hunt for Red October, stepping into the spotlight comes rather naturally for him. Thompson assails your record with gravitas and charm, framing himself as a true outsider and reformer. How do you flip the script?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As Wilson follows Doctors’ orders to rest his voice, he delegates the rigor of campaign stump speeches to his surrogates, chief among them Senator Thompson. Having distinguished himself on America’s screens over the years, whether it was as a truth-seeking minority counsel in the Watergate hearings or via his acting roles in blockbuster hits like The Hunt for Red October, stepping into the spotlight comes rather naturally for him. Thompson assails your record with gravitas and charm, framing himself as a true outsider and reformer. How do you flip the script?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As Wilson follows Doctors’ orders to rest his voice, he delegates the rigor of campaign stump speeches to his surrogates, chief among them Senator Thompson. Having distinguished himself on America’s screens over the years, whether it was as a truth-seeking minority counsel in the Watergate hearings or via his acting roles in blockbuster hits like The Hunt for Red October, stepping into the spotlight comes rather naturally for him. Thompson assails your record with gravitas and charm, framing himself as a true outsider and reformer. How do you flip the script?",
-                        "likelihood": 1
-                    }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                    "pk": "campaign_1_wilson",
-                    "fields": {
-                        "priority": 0,
-                        "description": "As Wilson follows Doctors’ orders to rest his voice, he delegates the rigor of campaign stump speeches to his surrogates, chief among them Senator Thompson. Having distinguished himself on America’s screens over the years, whether it was as a truth-seeking minority counsel in the Watergate hearings or via his acting roles in blockbuster hits like The Hunt for Red October, stepping into the spotlight comes rather naturally for him. Thompson assails your record with gravitas and charm, framing himself as a true outsider and reformer. How do you flip the script?",
-                        "likelihood": 1
-                    }
-            });
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_wilson");
+if (!e.player_answers.includes(35013.6) && !e.player_answers.includes(86049.5)) {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_wilson_voice");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_wilson");
+}
+if (e.player_answers.includes(37003.5)) {
+campaignTrail_temp.questions_json[31] = tunnel("debate_wilson_strained");
+} else if ((!e.player_answers.includes(35013.6) && !e.player_answers.includes(86049.5) && !e.player_answers.includes(37003.5)) || ((!e.player_answers.includes(35013.6) && e.player_answers.includes(86049.5)))) {
+campaignTrail_temp.questions_json[31] = tunnel("townhall_wilson");
+} else {
+campaignTrail_temp.questions_json[31] = tunnel("debate_wilson");
+}
+} else if (republican == "powell") {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_powell");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_powell");
+campaignTrail_temp.questions_json[31] = tunnel("debate_powell");
+} else if (republican == "bono") {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_bono");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_bono");
+campaignTrail_temp.questions_json[31] = tunnel("debate_bono");
 } else if (republican == "gingrich") {
-                question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
-             "likelihood": 1
-        }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
-             "likelihood": 1
-        }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
-             "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-             "model": "campaign_trail.question",
-        "pk": "campaign_1_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
-             "likelihood": 1
-        }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-        "pk": "campaign_1_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "The Gingrich campaign has been holding so-called ‘summits’ across the country, one on school choice, one on space and enterprise, one on welfare-to-work, and one on crime and community development, with more likely to come. He’s touring all four corners of the nation and sucking the tits of all the major media markets. It’s certainly flashy, and it’s overshadowing your own messaging. How should we counter this?  ",
-             "likelihood": 1
-        }
-            });
-                              question_insert("campaign_1_gingrich", 
-                {
-                      "model": "campaign_trail.question",
-        "pk": "campaign_2_gingrich",
-        "fields": {
-            "priority": 3,
-            "description": "Your team dumps a stack of papers on the table: the splashy HarperCollins book deal, an ethics-investigation cloud, the orphanages-for-welfare-children push, the shutdowns, his futurist moon-base talk, and K Street ties. You can press hypocrisy, cruelty, or instability, but one angle has to stick. Where do you strike, and how hard?  ",
-             "likelihood": 1
-        }
-                }
-                );
-                 question_insert("campaign_2_gingrich", 
-                {
-                           "model": "campaign_trail.question",
-        "pk": "debate_gingrich",
-        "fields": {
-            "priority": 0,
-            "description": "Verbally sparring with Newt Gingrich has become your least favorite pastime over the last year. Perhaps it was worth it, if only to prepare you for this. Beneath the bright lights of the Mahaffey Theater in St. Petersburg, Florida, you shake hands as the televised debate begins, with a dozen different ways to pick apart the Speaker’s record bubbling up in your mind. Where to begin?",
-            "likelihood": 1
-        }
-                }
-                );
-        } else if (republican == "bono") {
-                                  question_insert("question_19_alt", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_19_pr_and_wo_act", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_29_defense_of_marriage", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_ques_18_alt_fail", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-            question_insert("question_ques_18_alt_win", 
-            {
-              "model": "campaign_trail.question",
-                      "pk": "campaign_1_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
-                          "likelihood": 1
-                      }
-            });
-                              question_insert("campaign_1_bono", 
-                {
-                      "model": "campaign_trail.question",
-                      "pk": "campaign_2_bono",
-                      "fields": {
-                          "priority": 0,
-                          "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper—a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document targeting his scandals and inconsistencies, most of them already aired by his Republican rivals during the long, bitter primary slog. The press barely blinked then, and voters didn’t seem to mind. Now he's polling within striking distance. How do you want to stop this guy?",
-                          "likelihood": 1
-                      }
-                }
-                );
-                 question_insert("campaign_2_bono", 
-                {
-                           "model": "campaign_trail.question",
-                "pk": "debate_bono",
-                "fields": {
-                    "priority": 0,
-                    "description": "You're in Las Vegas, Nevada, on the debate stage, after many hours spent preparing with your team. To your right is the perpetually grinning Sonny Bono, the Congressman seems to be dripping with nervous humor. He plays it off well, regardless, and he's wrapping up his opening statement. You look at the moderator for a second, and he nods to you, ''Mr. President?'' It's your turn, Slick. ",
-                    "likelihood": 1
-                }
-                }
-                );
-        }
-        }
-        }
-if(e.noCounter == 24 && moveup == 1){
-        moveup = 0
-if (sortedOpponents[1+moveup][0] == "dole") {
-            dole_active = 0 
-            if(alexander_active == 1){
-            opponents.alexander += (opponents.dole)
-            }
-            else if(gramm_active == 1){
-            opponents.gramm += (opponents.dole/2)
-            }
-            else if(wilson_active == 1) {
-            opponents.wilson += (opponents.dole/2)
-            }
-            opponents.dole = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "buchanan") {
-            buchanan_active = 0 
-            if(wilson_active == 1){
-            opponents.wilson += (opponents.buchanan/2)
-            }
-            else if(gramm_active == 1){
-            opponents.gramm += (opponents.buchanan/2)
-            }
-            else if (weld_active == 1) {
-            opponents.weld += (opponents.buchanan/2)
-            }
-            opponents.buchanan = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "forbes") {
-            forbes_active = 0 
-            if(dole_active == 1){
-            opponents.dole += (opponents.forbes)
-            }
-            else if(specter_active == 1){
-            opponents.specter += (opponents.forbes/2)
-            }
-            opponents.forbes = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "alexander") {
-            alexander_active = 0 
-            if(dole_active == 1){
-            opponents.dole += (opponents.alexander)
-            }
-            else if(gramm_active == 1){
-            opponents.gramm += (opponents.alexander/2)
-            }
-            else if(forbes_active == 1) {
-            opponents.forbes += (opponents.alexander/2)
-            }
-            opponents.alexander = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "gramm") {
-            gramm_active = 0 
-            if(dole_active == 1){
-            opponents.dole += (opponents.gramm)
-            }
-            else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.gramm/3)
-            }
-            opponents.gramm = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "specter") {
-            specter_active = 0 
-            if(powell_active == 1){
-            opponents.powell += (opponents.specter)
-            }
-            else if(bono_active == 1){
-            opponents.bono += (opponents.specter/2)
-            }
-            else if(dole_active == 1) {
-            opponents.dole += (opponents.specter/3)
-            }
-            opponents.specter = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "wilson") {
-            wilson_active = 0 
-            if(gramm_active == 1){
-            opponents.gramm += (opponents.wilson/2)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.wilson/2)
-            }
-            else if(buchanan_active == 1) {
-            opponents.buchanan += (opponents.wilson/3)
-            }
-            opponents.wilson = -10
-        }
-
-        if (sortedOpponents[1+moveup][0] == "bono") {
-            bono_active = 0 
-            if(specter_active == 1){
-            opponents.specter += (opponents.bono)
-            }
-            else if(dole_active == 1){
-            opponents.dole += (opponents.bono/2)
-            }
-            opponents.bono = -10
-        }
-        if (sortedOpponents[1+moveup][0] == "gingrich") {
-            gingrich_active = 0 
-            if(dole_active == 1){
-            opponents.dole += (opponents.gingrich)
-            }
-            else if(gramm_active == 1){
-            opponents.gramm += (opponents.gingrich/2)
-            }
-            else if(buchanan_active == 1){
-            opponents.buchanan += (opponents.gingrich/2)
-            }
-            opponents.gingrich = -10
-        }
-    updateCandidates("junk", 0)
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_gingrich");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_gingrich");
+campaignTrail_temp.questions_json[31] = tunnel("debate_gingrich");
+} else if (republican == "weld") {
+if (e.player_answers.includes(98008.5)) {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_weldperot_actedearly");
+if (e.player_answers.includes(88025.5)) {
+    if (e.player_answers.includes(96012.5)) {
+    campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_surplus_actedearly_liberalwelfare");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_surplus_actedearly_bluedogwelfare");
+}
+} else {
+if (e.player_answers.includes(96012.5)) {
+    campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_actedearly_liberalwelfare");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_actedearly_bluedogwelfare");
+}
+}
+campaignTrail_temp.questions_json[31] = tunnel("debate_weldperot_actedearly");
+} else {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_weldperot");
+if (e.player_answers.includes(88025.5)) {
+    if (e.player_answers.includes(96012.5)) {
+    campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_surplus_liberalwelfare");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_surplus_bluedogwelfare");
+}
+} else {
+if (e.player_answers.includes(96012.5)) {
+    campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_liberalwelfare");
+} else {
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_weldperot_bluedogwelfare");
+}
+}
+campaignTrail_temp.questions_json[31] = tunnel("debate_weldperot");
+}
 }
 // constructs endings based on header and pages
 construct = (a = 1) => {
