@@ -862,10 +862,19 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "candidate_intro_dark_dole",
+        "pk": "candidate_intro_dole_noshutdown",
         "fields": {
             "priority": 0,
-            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his service in the Second World War, and a promise to cut income taxes by 15% across the board. With Dan Lungren now formally by his side, he declares, ''Let me be the bridge to an America that too many forget, and too few still honor. Let me be the bridge to a time of discipline, conviction, and moral clarity.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
+            "description": "After a bitter primary, the aged Kansas Senator Bob Dole briskly walks up the stage stairs to the podium at the RNC. He speaks of restoring trust in government, his service in the Second World War, and a promise to cut income taxes by 15% across the board. With Jack Kemp now standing beside him, he declares, ''Let me be the bridge to an America that only the unknowing call myth. Let me be the bridge to a time of tranquility, faith, and confidence in action.'' You feel… guilty about what you have to do. He’s out of his weight class. Out of time. But politics is politics. You’ve got to beat him either way. And with the momentum now building in your favor… how will you channel it?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "candidate_intro_dole_mccain",
+        "fields": {
+            "priority": 0,
+            "description": "It's finally his turn. After battling his most hated ally in the primary, Kansas Senator Bob Dole rose with from the pile of bodies to wave the bloodied flag of the GOP. With fellow veteran John McCain by his side, he speaks of restoring trust in government, his service in the Second World War, and a promise to cut income taxes by 15% across the board. Dole boldy declares, ''It's time for Conservatism to have it's final victory, a united and well deserved one.'' You have to stop him no matter what.",
             "likelihood": 1
         }
     },
@@ -1203,9 +1212,18 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
-        {
+    {
         "model": "campaign_trail.question",
         "pk": "campaign_1_dole",
+        "fields": {
+            "priority": 0,
+            "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "campaign_1_dole_noshutdown",
         "fields": {
             "priority": 0,
             "description": "We can't relive our spirit of 92’, but maybe, we can still chase it. If Dole’s shrouded in the past, what’s the harm in us trying the same? Maybe, as the world keeps turning, we can dance one more time to the tune of yesteryear. Maybe, we’ll bring America back in our waltz, back in our control again.",
@@ -4502,9 +4520,9 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 35007.5,
+        "pk": 35007.543,
         "fields": {
-            "question": "candidate_intro_dark_dole",
+            "question": "candidate_intro_dole_mccain",
             "description": "Although I have great respect for him and his service to our country, Bob Dole is a relic of a bygone era, which we, as a nation, need to move on from. We do not need to build a bridge to the past; we need to build a bridge to the future.\n"
         }
     },
@@ -4512,7 +4530,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 35008.5,
         "fields": {
-            "question": "candidate_intro_dark_dole",
+            "question": "candidate_intro_dole_mccain",
             "description": "Dole would have you think he’s a principled bipartisan. That couldn’t be further from the truth. Dole stands by Gingrich’s uncompromising Congress. By the time we’re done with him, they’ll think Gingrich is his running mate."
         }
     },
@@ -4520,16 +4538,16 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 35009.51,
         "fields": {
-            "question": "candidate_intro_dark_dole",
-            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level."
+            "question": "candidate_intro_dole_mccain",
+            "description": "We're not doing too well poll-wise'. We have one way of fixing that, and it's campaigning on the ground. Me and Gore are in much better health as either of those grumpy old war uncles. In '92 power was given to the new generation, in '96 we can't give it back."
         }
     },
     {
 	      "model": "campaign_trail.answer",
         "pk": 3500991.5133,
         "fields": {
-            "question": "candidate_intro_dark_dole",
-            "description": "I want the folks at home to really think about the first major choice Senator Dole made in this race: his running mate. Dan Lungren is fundamentally unfit, and much further to the right than most folks realize. I want to pinpoint that. "
+            "question": "candidate_intro_dole_mccain",
+            "description": "Is Senator Dole sure he hasn't lost his edge on policy? 15% across the board? Can we even afford that? Let's hound him. Who'll pay for it? Either he outs himself as the anti-poor candidate, as a hypocrite budget hawk or admit to not being as sharp as he used to be."
         }
     },
     {
@@ -4570,6 +4588,38 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "candidate_intro_dole",
             "description": "The Senator talks about trust, but trust in what? A Congress that shut down the government? An economic plan that drags us backward? We’ll remind voters what’s at stake, but we’re keeping the focus on progress."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35007.5,
+        "fields": {
+            "question": "candidate_intro_dole_noshutdown",
+            "description": "Although I have great respect for him and his service to our country, Bob Dole is a relic of a bygone era, which we, as a nation, need to move on from. We do not need to build a bridge to the past; we need to build a bridge to the future.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35008.5,
+        "fields": {
+            "question": "candidate_intro_dole_noshutdown",
+            "description": "Dole would have you think he’s a principled bipartisan. That couldn’t be further from the truth. Dole stands by Gingrich’s uncompromising Congress. By the time we’re done with him, they’ll think Gingrich is his running mate."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 35009.51,
+        "fields": {
+            "question": "candidate_intro_dole_noshutdown",
+            "description": "Let our surrogates do the elbow-throwin’. I’m gonna stay upbeat and presidential. We’ll spend more time with folks on the trail and blanket the local airwaves. We’ve got the lead, no need to crawl down to Senator Dole’s level."
+        }
+    },
+    {
+	      "model": "campaign_trail.answer",
+        "pk": 3500991.5133,
+        "fields": {
+            "question": "candidate_intro_dole_noshutdown",
+            "description": "Is Senator Dole sure he hasn't lost his edge on policy? 15% across the board? Can we even afford that? Let's hound him. Who'll pay for it? Either he outs himself as the anti-poor candidate, as a hypocrite budget hawk or admit to not being as sharp as he used to be."
         }
     },
     {
@@ -6181,6 +6231,14 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+        "model": "campaign_trail.answer",
+        "pk": 86001.5,
+        "fields": {
+            "question": "campaign_1_dole_noshutdown",
+            "description": "Bring back Dick Morris. The people want numbers, actions, things they see with their own two eyes. We’re getting back to our message as pragmatic problem solvers, away from the bickering of extremists from both sides of the aisle."
+        }
+    },
+    {
 	      "model": "campaign_trail.answer",
         "pk": 86001.5115,
         "fields": {
@@ -6277,6 +6335,14 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+        "model": "campaign_trail.answer",
+        "pk": 86002.5,
+        "fields": {
+            "question": "campaign_1_dole_noshutdown",
+            "description": "The voters want ''McIssues,'' simple, tangible policies, things that get done, that they can see working. They don’t crave ideological grandstanding. What matters is progress in front of them, and when they see it, they believe their vote counts."
+        }
+    },
+    {
 	"model": "campaign_trail.answer",
         "pk": 86002.522,
         "fields": {
@@ -6293,6 +6359,14 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+        "model": "campaign_trail.answer",
+        "pk": 86003.5,
+        "fields": {
+            "question": "campaign_1_dole_noshutdown",
+            "description": "It’s the economy, stupid! It worked against Bush, and it’s still true against Dole. Voters know who’s been fighting for them, and it sure hasn’t been Mr. Flip-Flop over here, changing his tune with every poll."
+        }
+    },
+    {
 	"model": "campaign_trail.answer",
         "pk": 86003.522,
         "fields": {
@@ -6305,6 +6379,14 @@ campaignTrail_temp.answers_json = [
         "pk": 86004.5,
         "fields": {
             "question": "campaign_1_dole",
+            "description": "Put the pressure on them, not us. Dole-Gingrich will not be let off the hook for all the things they’ve pushed through and hidden behind our backs. Not today, not tomorrow, and certainly not on Election Day, when the people will have their say."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 86004.55,
+        "fields": {
+            "question": "campaign_1_dole_noshutdown",
             "description": "Put the pressure on them, not us. Dole-Gingrich will not be let off the hook for all the things they’ve pushed through and hidden behind our backs. Not today, not tomorrow, and certainly not on Election Day, when the people will have their say."
         }
     },
@@ -10690,6 +10772,102 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "question_23_recession",
             "description": "Fuck. Now is a time for leadership, and that means taking responsibility. Bentsen needs to hand in his notice."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98013.5,
+        "fields": {
+            "question": "question_23_shutdown_all",
+            "description": "Gingrich talks big about being the guy that won't back down for anything, so just don't deal with him. I don't want everyone to suffer just because one crybaby wants to have his cake and eat it too. Let's negotiate with real adults. Call Dole. I'll say I'm ready to compromise but I won't give away on everything. He knows my reputation for reaching across the aisle."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98014.5,
+        "fields": {
+            "question": "question_23_shutdown_all",
+            "description": "Who cares about what he's threatening? All we have to do is convince people that the Grinch is getting ready to steal the future of their children--and theirs when they get old or sick. They won because they branded us as bullies, so let's expose the bullies they truly are. Once he's seen as the jackass he is, his own party will make him bend."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98015.5,
+        "fields": {
+            "question": "question_23_shutdown_all",
+            "description": "There's no avoiding it, we'll talk with Newt. We might as well give him what he wants. Let's mention possibilities about space, defense, the things that get him jumping for joy. Then, we'll catch him to make way. I wish we didn't have to pluck the chicken but if by the end he keeps half of his feathers, that's still an improvement."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98016.5,
+        "fields": {
+            "question": "question_23_shutdown_dole",
+            "description": "Gingrich talks big about being the guy that won't back down for anything, so just don't deal with him. I don't want everyone to suffer just because one crybaby wants to have his cake and eat it too. Let's negotiate with real adults. Call Dole. I'll say I'm ready to compromise but I won't give away on everything. He knows my reputation for reaching across the aisle."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98017.5,
+        "fields": {
+            "question": "question_23_shutdown_dole",
+            "description": "Who cares about what he's threatening? All we have to do is convince people that the Grinch is getting ready to steal the future of their children--and theirs when they get old or sick. They won because they branded us as bullies, so let's expose the bullies they truly are. Once he's seen as the jackass he is, his own party will make him bend."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98018.5,
+        "fields": {
+            "question": "question_23_shutdown_dole",
+            "description": "There's no avoiding it, we'll talk with Newt. We might as well give him what he wants. Let's mention possibilities about space, defense, the things that get him jumping for joy. Then, we'll catch him to make way. I wish we didn't have to pluck the chicken but if by the end he keeps half of his feathers, that's still an improvement."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98019.5,
+        "fields": {
+            "question": "question_23_shutdown_budget",
+            "description": "Gingrich talks big about being the guy that won't back down for anything, so just don't deal with him. I don't want everyone to suffer just because one crybaby wants to have his cake and eat it too. Let's negotiate with real adults. Call Dole. I'll say I'm ready to compromise but I won't give away on everything. He knows my reputation for reaching across the aisle."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98020.5,
+        "fields": {
+            "question": "question_23_shutdown_budget",
+            "description": "Who cares about what he's threatening? All we have to do is convince people that the Grinch is getting ready to steal the future of their children--and theirs when they get old or sick. They won because they branded us as bullies, so let's expose the bullies they truly are. Once he's seen as the jackass he is, his own party will make him bend."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98021.5,
+        "fields": {
+            "question": "question_23_shutdown_budget",
+            "description": "There's no avoiding it, we'll talk with Newt. We might as well give him what he wants. Let's mention possibilities about space, defense, the things that get him jumping for joy. Then, we'll catch him to make way. I wish we didn't have to pluck the chicken but if by the end he keeps half of his feathers, that's still an improvement."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98022.5,
+        "fields": {
+            "question": "question_23_shutdown_none",
+            "description": "Gingrich talks big about being the guy that won't back down for anything, so just don't deal with him. I don't want everyone to suffer just because one crybaby wants to have his cake and eat it too. Let's negotiate with real adults. Call Dole. I'll say I'm ready to compromise but I won't give away on everything. He knows my reputation for reaching across the aisle."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98023.5,
+        "fields": {
+            "question": "question_23_shutdown_none",
+            "description": "Who cares about what he's threatening? All we have to do is convince people that the Grinch is getting ready to steal the future of their children--and theirs when they get old or sick. They won because they branded us as bullies, so let's expose the bullies they truly are. Once he's seen as the jackass he is, his own party will make him bend."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 98024.5,
+        "fields": {
+            "question": "question_23_shutdown_none",
+            "description": "There's no avoiding it, we'll talk with Newt. We might as well give him what he wants. Let's mention possibilities about space, defense, the things that get him jumping for joy. Then, we'll catch him to make way. I wish we didn't have to pluck the chicken but if by the end he keeps half of his feathers, that's still an improvement."
         }
     }
 
@@ -19031,6 +19209,16 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 12702,
+        "fields": {
+            "answer": 35007.543,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0232
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 12718,
         "fields": {
             "answer": 35008.5,
@@ -19054,6 +19242,26 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 12704,
         "fields": {
             "answer": 35007.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35007.543,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0312
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 35007.543,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.25
@@ -21374,6 +21582,36 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 12720,
         "fields": {
             "answer": 86004.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12718,
+        "fields": {
+            "answer": 86004.55,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0155
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12719,
+        "fields": {
+            "answer": 86004.55,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0124
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12720,
+        "fields": {
+            "answer": 86004.55,
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": 0.025
@@ -32362,6 +32600,326 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 1284026,
+        "fields": {
+            "answer": 98013.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.00712
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284027,
+        "fields": {
+            "answer": 98013.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.00704
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284028,
+        "fields": {
+            "answer": 98013.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284030,
+        "fields": {
+            "answer": 98014.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0299
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284031,
+        "fields": {
+            "answer": 98014.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0343
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284033,
+        "fields": {
+            "answer": 98014.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284036,
+        "fields": {
+            "answer": 98015.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0215
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284042,
+        "fields": {
+            "answer": 98016.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.00712
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284043,
+        "fields": {
+            "answer": 98016.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.00704
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284044,
+        "fields": {
+            "answer": 98016.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284048,
+        "fields": {
+            "answer": 98017.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0299
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284049,
+        "fields": {
+            "answer": 98017.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0343
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284050,
+        "fields": {
+            "answer": 98017.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284054,
+        "fields": {
+            "answer": 98018.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284056,
+        "fields": {
+            "answer": 98018.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0214
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284057,
+        "fields": {
+            "answer": 98018.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284061,
+        "fields": {
+            "answer": 98019.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284062,
+        "fields": {
+            "answer": 98019.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284063,
+        "fields": {
+            "answer": 98019.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0353
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284067,
+        "fields": {
+            "answer": 98020.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0299
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284068,
+        "fields": {
+            "answer": 98020.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0343
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284069,
+        "fields": {
+            "answer": 98020.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284073,
+        "fields": {
+            "answer": 98021.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": 0.0215
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284078,
+        "fields": {
+            "answer": 98022.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284079,
+        "fields": {
+            "answer": 98022.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284080,
+        "fields": {
+            "answer": 98022.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.0353
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284084,
+        "fields": {
+            "answer": 98023.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0299
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284085,
+        "fields": {
+            "answer": 98023.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": -0.0343
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284086,
+        "fields": {
+            "answer": 98023.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284090,
+        "fields": {
+            "answer": 98024.5,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.0125
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284091,
+        "fields": {
+            "answer": 98024.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0214
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 1284092,
+        "fields": {
+            "answer": 98024.5,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 1282986,
         "fields": {
             "answer": 86125.5,
@@ -35390,6 +35948,16 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12715,
         "fields": {
             "answer": 35007.5,
+            "issue": 27,
+            "issue_score": 0.1,
+            "issue_importance": 1
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_issue",
+        "pk": 12715,
+        "fields": {
+            "answer": 35007.543,
             "issue": 27,
             "issue_score": 0.1,
             "issue_importance": 1
@@ -40636,6 +41204,126 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": -0.4,
             "issue_importance": 2.9
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284025,
+        "fields": {
+            "answer": 98013.5,
+            "issue": 28,
+            "issue_score": -0.232,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284034,
+        "fields": {
+            "answer": 98014.5,
+            "issue": 28,
+            "issue_score": 0.143,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284038,
+        "fields": {
+            "answer": 98015.5,
+            "issue": 28,
+            "issue_score": -0.336,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284045,
+        "fields": {
+            "answer": 98016.5,
+            "issue": 28,
+            "issue_score": -0.232,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284051,
+        "fields": {
+            "answer": 98017.5,
+            "issue": 28,
+            "issue_score": 0.143,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284055,
+        "fields": {
+            "answer": 98018.5,
+            "issue": 28,
+            "issue_score": -0.336,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284064,
+        "fields": {
+            "answer": 98019.5,
+            "issue": 28,
+            "issue_score": -0.232,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284070,
+        "fields": {
+            "answer": 98020.5,
+            "issue": 28,
+            "issue_score": 0.143,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284074,
+        "fields": {
+            "answer": 98021.5,
+            "issue": 28,
+            "issue_score": -0.336,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284081,
+        "fields": {
+            "answer": 98022.5,
+            "issue": 28,
+            "issue_score": -0.232,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284087,
+        "fields": {
+            "answer": 98023.5,
+            "issue": 28,
+            "issue_score": 0.143,
+            "issue_importance": 2.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 1284093,
+        "fields": {
+            "answer": 98024.5,
+            "issue": 28,
+            "issue_score": -0.336,
+            "issue_importance": 2.5
         }
     },
 ]
@@ -47213,6 +47901,72 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 12714,
         "fields": {
             "answer": 35007.5,
+            "state": 216,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12709,
+        "fields": {
+            "answer": 35007.543,
+            "state": 224,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35007.543,
+            "state": 231,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12711,
+        "fields": {
+            "answer": 35007.543,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12712,
+        "fields": {
+            "answer": 35007.543,
+            "state": 207,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12713,
+        "fields": {
+            "answer": 35007.543,
+            "state": 196,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12714,
+        "fields": {
+            "answer": 35007.543,
             "state": 216,
             "candidate": 77,
             "affected_candidate": 78,
@@ -87957,6 +88711,15 @@ campaignTrail_temp.answer_feedback_json = [
         }
     },
     {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12701,
+        "fields": {
+            "answer": 35007.543,
+            "candidate": 77,
+            "answer_feedback": "And just like that, you have a campaign slogan: “Building a bridge to the twenty-first century.” The message is simply perfect. Bob Dole doesn’t do Bob Dole any favors. At a rally, he reaches down to shake a supporters hand when suddenly the railing on stage supporting Dole gave way. Tumbling the Senator to the ground."
+        }
+    },
+    {
 	"model": "campaign_trail.answer_feedback",
         "pk": 12701,
         "fields": {
@@ -88034,7 +88797,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 35009.51,
             "candidate": 77,
-            "answer_feedback": "You finish up, speech after speech, crisscrossing this big, wide country in small, medium, and large cities alike. By the time Air Force One lifts off and you flip on the cabin TV, the clips are already rolling, with the Vice President or the First Lady taking hard swings at the Dole-Kemp campaign."
+            "answer_feedback": "You and Gore sweat like pigs running around every state, but if it's a campaign based on physical fitness, you'll eventually have them beat. It's clear that voters can't quite name what they like about Dole-McCain, only it as an idea. Now at least, they can see that their best years are behind them, which makes the rose-tinted glasses a bit clearer."
         }
     },
     {
@@ -88052,7 +88815,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3500991.5133,
             "candidate": 77,
-            "answer_feedback": "Dole’s selection of Dan Lungren, the disarmingly direct and likable, but hard-right Attorney General of California, certainly electrified liberals, and focusing on that is apt. But remember: a lot of this is Beltway talk, and it doesn’t really speak to the actual concerns of voters."
+            "answer_feedback": "Trying to attack Dole on policy was met with a kind smile and a firm yet clear response. ''Everyone has to make sacrifices. I'm sure the people understand that they'll be stronger once they're on the other side.'' The man's dry tongue remains but he seem to have satisfied both those looking for zingers and the very few who actually bother to read programs."
         }
     },
     {
@@ -88611,6 +89374,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 86004.5,
             "candidate": 77,
             "answer_feedback": "Flying the bloodied flag of Congressional deadlock does nothing but deepen skepticism over our unkept promises. The wounds from ’94 re-emerge, raw and unhealed, and all you can think about is the people slowly losing their faith in you. Their scorn weighs heavy, threatening to pull you back to the starting line all over again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12717,
+        "fields": {
+            "answer": 86004.55,
+            "candidate": 77,
+            "answer_feedback": "You are raising an issue Dole has dealt with ever since his nomination. The Simpson's gag about ''Abortions for some, miniature American flags for others'' has been playing on repeat especially after he gave a half-answer about leaving the issue to the states."
         }
     },
     {
@@ -95303,6 +96075,114 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 1284023,
+        "fields": {
+            "answer": 98013.5,
+            "candidate": 77,
+            "answer_feedback": "Although Dole did participate in everything Gingrich set up and thrived on, even Beelzebub can have buyer's remorse. Eventually, as you shake hands, you saw Newt fuming behind his desk. You'd readily trade another wealth tax cut for the 1% if it means he'd shut his mouth and your welfare plan passes.  Serve him right."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284029,
+        "fields": {
+            "answer": 98014.5,
+            "candidate": 77,
+            "answer_feedback": "The nuke detonates. Congress is shutdown, and while neither of you got out of the mess unscathed, Gingrich did more damage to himself by acting like an entitled brat than you ever could to him. Months later, After three rounds of negotiation, you ended up signing a welfare bill. You didn't like it, but at least it's a welfare bill."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284035,
+        "fields": {
+            "answer": 98015.5,
+            "candidate": 77,
+            "answer_feedback": "First you had him overhear something about the European Hermès program cancelation, then something about nuclear subs, then suddenly he came at your door with a very different tune. You grit your teeth to appear tough, and the negotiation is successful. You gave Newt new toys to play astronaut with, but at least he was ready to field compromise in exchange and footing the bill for his extravagancies."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284041,
+        "fields": {
+            "answer": 98016.5,
+            "candidate": 77,
+            "answer_feedback": "Although Dole did participate in everything Gingrich set up and thrived on, even Beelzebub can have buyer's remorse. Eventually, as you shake hands, you saw Newt fuming behind his desk. You'd readily trade another wealth tax cut for the 1% if it means he'd shut his mouth and your welfare plan passes.  Serve him right."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284047,
+        "fields": {
+            "answer": 98017.5,
+            "candidate": 77,
+            "answer_feedback": "The nuke detonates. Congress is shutdown, and while neither of you got out of the mess unscathed, Gingrich did more damage to himself by acting like an entitled brat than you ever could to him. Months later, After three rounds of negotiation, you ended up signing a welfare bill. You didn't like it, but at least it's a welfare bill."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284053,
+        "fields": {
+            "answer": 98018.5,
+            "candidate": 77,
+            "answer_feedback": "Morris said those types of subtle manipulation were fool proof. Ever unbending about his commitment to balancing the budget on the back of the working class, all you ended up with was a headache and sore throat out of the whole affair. As the government is shutdown, it does seem like nothing will ever get done before the election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284060,
+        "fields": {
+            "answer": 98019.5,
+            "candidate": 77,
+            "answer_feedback": "You could see his mouth twitch. In his hand, the crayon snapped. He remained polite but it was clear he thought you were extremely bold to assume he'd break his conscience just to help us. Those two hate each other, but they'll unite against you. At least for now, nothing will get done."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284066,
+        "fields": {
+            "answer": 98020.5,
+            "candidate": 77,
+            "answer_feedback": "The nuke detonates. Congress is shutdown, and while neither of you got out of the mess unscathed, Gingrich did more damage to himself by acting like an entitled brat than you ever could to him. Months later, After three rounds of negotiation, you ended up signing a welfare bill. You didn't like it, but at least it's a welfare bill."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284072,
+        "fields": {
+            "answer": 98021.5,
+            "candidate": 77,
+            "answer_feedback": "First you had him overhear something about the European Hermès program cancelation, then something about nuclear subs, then suddenly he came at your door with a very different tune. You grit your teeth to appear tough, and the negotiation is successful. You gave Newt new toys to play astronaut with, but at least he was ready to field compromise in exchange and footing the bill for his extravagancies."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284077,
+        "fields": {
+            "answer": 98022.5,
+            "candidate": 77,
+            "answer_feedback": "You could see his mouth twitch. In his hand, the crayon snapped. He remained polite but it was clear he thought you were extremely bold to assume he'd break his conscience just to help us. Those two hate each other, but they'll unite against you. At least for now, nothing will get done."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284083,
+        "fields": {
+            "answer": 98023.5,
+            "candidate": 77,
+            "answer_feedback": "The nuke detonates. Congress is shutdown, and while neither of you got out of the mess unscathed, Gingrich did more damage to himself by acting like an entitled brat than you ever could to him. Months later, After three rounds of negotiation, you ended up signing a welfare bill. You didn't like it, but at least it's a welfare bill."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 1284089,
+        "fields": {
+            "answer": 98024.5,
+            "candidate": 77,
+            "answer_feedback": "Morris said those types of subtle manipulation were fool proof. Ever unbending about his commitment to balancing the budget on the back of the working class, all you ended up with was a headache and sore throat out of the whole affair. As the government is shutdown, it does seem like nothing will ever get done before the election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 1283603,
         "fields": {
             "answer": 200001,
@@ -101854,7 +102734,7 @@ question_insert("question_20_bosnia_quagmire",
         }
     }
     }
-        if (e.question_number+1 == 22) {
+        if (e.question_number+1 == 22) { // Midterm Update
         if (sortedOpponents[3+moveup][0] == "dole") {
             dole_active = 0 
             if(alexander_active == 1){
@@ -101988,8 +102868,24 @@ question_insert("question_20_bosnia_quagmire",
     } else if (DisasterMidterms == 1) {
         campaignTrail_temp.questions_json[22] = tunnel("question_15_huge_budget");
     } else {
+    if (e.player_answers.includes(50004)) {
         campaignTrail_temp.questions_json[22] = tunnel("question_15_republican_budget");
+        } else {
+        if (Ideology <= -3) {
+        if (economy <= -1 && economy >= -5) {
+        campaignTrail_temp.questions_json[22] = tunnel("question_23_shutdown_all");
+        } else {
+        campaignTrail_temp.questions_json[22] = tunnel("question_23_shutdown_dole");
         }
+        } else {
+        if (economy <= -1 && economy >= -5) {
+        campaignTrail_temp.questions_json[22] = tunnel("question_23_shutdown_budget");
+        } else {
+        campaignTrail_temp.questions_json[22] = tunnel("question_23_shutdown_none");
+        }
+        }
+        }
+    }
     }
         if (e.question_number+1 == 23){
         if (e.player_answers.includes(88025.5)) {
@@ -102168,6 +103064,10 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_15_republican_budget",soviet_1_transnistria);
     question_insert("question_15_huge_budget",soviet_1_transnistria);
     question_insert("question_23_pandora",soviet_1_transnistria);
+    question_insert("question_23_shutdown_all",soviet_1_transnistria);
+    question_insert("question_23_shutdown_dole",soviet_1_transnistria);
+    question_insert("question_23_shutdown_budget",soviet_1_transnistria);
+    question_insert("question_23_shutdown_none",soviet_1_transnistria);
      } else {
     if (e.player_answers.includes(85002.5)) {
     if (e.player_answers.includes(200002) || e.player_answers.includes(200003) || e.player_answers.includes(200006) || e.player_answers.includes(200006) || e.player_answers.includes(200008)) {
@@ -102178,6 +103078,10 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_15_republican_budget",oslo_3_start_kurds);
     question_insert("question_15_huge_budget",oslo_3_start_kurds);
     question_insert("question_23_pandora",oslo_3_start_kurds);
+    question_insert("question_23_shutdown_all",oslo_3_start_kurds);
+    question_insert("question_23_shutdown_dole",oslo_3_start_kurds);
+    question_insert("question_23_shutdown_budget",oslo_3_start_kurds);
+    question_insert("question_23_shutdown_none",oslo_3_start_kurds);
     } else {
     question_insert("oslo_2",oslo_3_start);   
     question_insert("balanced_budget",oslo_3_start);
@@ -102187,6 +103091,10 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_15_republican_budget",oslo_3_start);
     question_insert("question_15_huge_budget",oslo_3_start);
     question_insert("question_23_pandora",oslo_3_start);
+    question_insert("question_23_shutdown_all",oslo_3_start);
+    question_insert("question_23_shutdown_dole",oslo_3_start);
+    question_insert("question_23_shutdown_budget",oslo_3_start);
+    question_insert("question_23_shutdown_none",oslo_3_start);
     }
     } else {
         question_insert("oslo_2",oslo_3);
@@ -102198,6 +103106,10 @@ question_insert("question_20_bosnia_quagmire",
     question_insert("question_15_republican_budget",oslo_3);
     question_insert("question_15_huge_budget",oslo_3);
     question_insert("question_23_pandora",oslo_3);
+    question_insert("question_23_shutdown_all",oslo_3);
+    question_insert("question_23_shutdown_dole",oslo_3);
+    question_insert("question_23_shutdown_budget",oslo_3);
+    question_insert("question_23_shutdown_none",oslo_3);
     }
     }
     }
@@ -102963,349 +103875,61 @@ if (e.question_number+1 == 27) {
     if (Ideology >= 2) {
     if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_dean_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_goodpell_decenthillary");
+
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_dean_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_goodpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_dean_goodpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_dean_goodpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_dean_goodpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_goodpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_goodpell_badhillary");
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_dean_badpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_badpell_decenthillary");
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_dean_badpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_badpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_dean_badpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_dean_badpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_dean_badpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_dean_badpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_dean_badpell_badhillary");
     }
     }
     } else if (Ideology >= -3 && Ideology <= 1) {
     if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_goodpell_decenthillary");
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_goodpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_bayh_goodpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_bayh_goodpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_bayh_goodpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_goodpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_goodpell_badhillary");
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_bayh_badpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_badpell_decenthillary");
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_bayh_badpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_badpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_bayh_badpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_bayh_badpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_bayh_badpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_bayh_badpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_bayh_badpell_badhillary");
     }
     }
 } else if (Ideology <= -4) {
     if (FPWin >= 8) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_goodpell_decenthillary");
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_goodpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_landrieu_goodpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_landrieu_goodpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_landrieu_goodpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_goodpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_goodpell_badhillary");
     } 
    } else if (FPWin <= 7) {
     if (Legacy >= 4 && Legacy <= 7) {
-        question_insert("candidate_intro_dole",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_buchanan",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_alexander",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_powell",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_specter",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_wilson",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_gramm",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_forbes",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_hw",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_hw_commies",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_bono",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_sundog",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_decenthillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_decenthillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_badpell_decenthillary");
     }  else if (Legacy >= 8) {
-        question_insert("candidate_intro_dole",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_buchanan",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_alexander",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_powell",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_specter",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_wilson",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_gramm",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_forbes",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_hw",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_hw_commies",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_bono",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_sundog",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_goodhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_goodhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_badpell_goodhillary");
     } else {
-        question_insert("candidate_intro_dole",dnc_landrieu_badpell_badhillary);
-        question_insert("candidate_intro_dark_dole",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_buchanan",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_alexander",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_powell",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_specter",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_wilson",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_gramm",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_forbes",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_hw",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_hw_commies",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_bono",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_gingrich",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_sundog",dnc_landrieu_badpell_badhillary);
-       question_insert("candidate_intro_weldperot",dnc_landrieu_badpell_badhillary);
-        question_insert("candidate_intro_weldperotactedearly",dnc_landrieu_badpell_badhillary);
+        campaignTrail_temp.questions_json[27] = tunnel("dnc_landrieu_badpell_badhillary");
     }
     }
 }
 }
      if (e.question_number+1 == 28){
-    
-    let ques_19_alt = {
-  "model": "campaign_trail.question",
-        "pk": "question_19_alt",
-        "fields": {
-            "priority": 0,
-            "description": "Welfare is a question you had yet to solve and now, the clock is ticking before election day. As the pressure of the Republican is not as extreme as expected considering their lack of power in the house, some have been particularly ambitious with what to push while other are just wanting to simply make the monster of welfare somewhat more of a tamed beast. What gets through goes through you.",
-            "likelihood": 1
-        }
-     }
-     let question_19_pr_and_wo_act = {
-    "model": "campaign_trail.question",
-        "pk": "question_19_pr_and_wo_act",
-        "fields": {
-            "priority": 0,
-            "description": "You’ve been negotiating with Congress for months, and now it’s sitting in front of you: a bill that, in your own words, will ''end welfare as we know it.'' You’ve vetoed two of these already, but this one has more bipartisan backing. It’s not as draconian as what Gingrich first proposed, but it still makes you uneasy. The pressure is mounting, the country is watching, and Morris has been muttering that no Democrat ever lost votes by looking tough on welfare. Everyone is waiting for your decision. ",
-            "likelihood": 1
-        }
-     }
     	let doma_normal = {
 		 "model": "campaign_trail.question",
         "pk": "question_29_defense_of_marriage",
@@ -103739,10 +104363,14 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#DE3E37";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
-        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole");
         if (DisasterMidterms == 1) {
         vpTable["Bob Dole"] = "John McCain";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.62
+        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_mccain");
+        }else if (e.player_answers.includes(98013.5) || e.player_answers.includes(98016.5) || e.player_answers.includes(98015.5) || e.player_answers.includes(98021.5)) {
+        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_noshutdown");
+        } else {
+        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole");
         }
     } else if (candidateName == "buchanan") { // Buchanan
     updateHistoricalData(newVpTableHistorical, newHistHexcolour, newHistName, newHistEV, newHistPV, newHistPVP);
@@ -105005,7 +105633,11 @@ var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(693) // Louisian
     e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
 }
 if (republican == "dole") {
+if (e.player_answers.includes(98013.5) || e.player_answers.includes(98016.5) || e.player_answers.includes(98015.5) || e.player_answers.includes(98021.5)) {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_dole_noshutdown");
+} else {
 campaignTrail_temp.questions_json[29] = tunnel("campaign_1_dole");
+}
 campaignTrail_temp.questions_json[30] = tunnel("campaign_2_dole");
 campaignTrail_temp.questions_json[31] = tunnel("debate_dole");
 } else if (republican == "buchanan") {
