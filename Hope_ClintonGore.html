@@ -103972,22 +103972,27 @@ function opponentDecider(){
     republicanChange(sortedOpponents[0][0])
     
     if (sortedOpponents[0][0] == "buchanan") {
-    reformChange("weicker")
+    outsiderChange("weicker")
     } 
     else if (sortedOpponents[0][0] == "powell") {
-    reformChange("jbuchanan")
+    outsiderChange("jbuchanan")
     vpTable["Pat Buchanan"] = "Alan Keyes";
     }
     else if (sortedOpponents[0][0] == "weld") {
-    reformChange("perot")
+    outsiderChange("perot")
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.15
-    } else if (Ideology <= -4) {
-    reformChange("penny")
+    } 
+    else if (e.player_answers.includes(900015553) && FPWin <= 0 && economy <= -10) {
+    outsiderChange("trump")
+    } 
+    else if (Ideology <= -4) {
+    outsiderChange("penny")
     }
     else if (Ideology >= 7) {
-    reformChange("lamm")
-    } else {
-    reformChange("perot")
+    outsiderChange("lamm")
+    } 
+    else {
+    outsiderChange("perot")
     }
 }
 
@@ -104279,8 +104284,8 @@ function opponentDecider(){
             e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
             campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
     }
-    function reformChange(candidateName) {
-        reformist = candidateName
+    function outsiderChange(candidateName) {
+        outsider = candidateName
         if (candidateName == "perot") {
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ross";
@@ -104298,11 +104303,13 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Weicker";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Lowell";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#EAB3A6";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://file.garden/aOp8cCiQ5ho9r5b1/Clinton_Buchanan_Weickerpicture.png";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = 0.15
         } else if (candidateName == "jbuchanan") {
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Buchanan";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Pat";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#c7b10a";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.imgur.com/hBmckvd.png";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 27)[0].fields.issue_score = -0.45
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.9
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.9
@@ -104310,10 +104317,15 @@ function opponentDecider(){
         } else if (candidateName == "penny") {
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Penny";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#63827E";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/igvfgk.png";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Timothy";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/igvfgk.png";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.2
-        }
+        } else if (candidateName == "trump") {
+        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Trump";
+        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#A56254";
+        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Donald";
+        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/erlprg.png";
+        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.7
     }
 if (ans == 210001){
     campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/99s058I.png";
@@ -106670,7 +106682,7 @@ e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/oaj4DHb.p
         <p>New York Times<br><br>Sandro Munari<br><br>June 5th 1998<br><br>One of our president's most confounding policies is its dialogue with the middle eastern dictatorship. Being the first president in quite some time to enter in the paws of Syria in Damascus and pushing for greater understanding with the Ayatollahs of Iran, we do not know what is the plan behind it all.<br><br>Even if we don't, we must maintain our double expectations. On the one hand, the president must always keep clear that no negotiation can occur without them giving up on their horrendous treatment of women, christians and their opponents as it was how we wrangled out eastern europe from the soviets. On the other hand, we must also keep our options large as unlike a Gorbachev, it remains to be seen if a nation that calls us "Great Satan", burns our flag and calls for our death can actually be reasoned with.<br><br>With the growing concern on weapons of mass destruction being developed inside of Iran in use of the facilities from the time of the Pahlavi dynasty, the threat of nuclear powered terrorism remains clear. While we cannot discount a peaceful solution, we cannot also discount the possibility of striking first and hard before they have the time to threaten us with nuclear Armageddon.<br><br>Eastern Europe was enslaved to communism for 40 years because dictators had the bomb. If we allow them to have it too, the people of the Middle east may never find any hope for freedom for generations more.</p>`)
 e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/6YQvUTA.png'})])
 } else if (republican == "alexander" && quickstats[0] >= 3 && quickstats[0] <= 268) { // Alexander Term Slides
-    e.pages.push(`<span style="font-size: 32px; ">Shadow the Hedgehog</span><br><br>
+    e.pages.push(`<span style="font-size: 32px; "><b>Shadow the Hedgehog</b></span><br>
         <p>
 <strong><em>SEGA’s throwing shit at the wall and hoping it sticks.</em></strong>
 </p>
@@ -107300,6 +107312,7 @@ vpTable = {
     "Lowell Weicker" : "Dominic Cortese",
     "Richard Lamm" : "Ed Zschau",
     "Timothy Penny" : "Russ Verney",
+    "Donald Trump" : "Bill Armstrong",
 
 }
 
