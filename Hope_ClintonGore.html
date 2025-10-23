@@ -107617,3 +107617,340 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
           console.log("PK not found! "+insertafter_pk);
       }
     }
+    class ChartEnhancer {
+  constructor() {
+    this.isProcessing = false;
+    this.initializeStyles();
+    this.initializeReplacements();
+    this.init();
+  }
+
+  initializeStyles() {
+    if (document.getElementById('ce-tooltip-styles')) return;
+    
+    const style = document.createElement('style');
+    style.id = 'ce-tooltip-styles';
+    
+    style.textContent = `
+      .ce-tooltip-container {
+        position: relative;
+        cursor: help;
+        display: inline-block;
+        opacity: 1;
+        transition-delay: 0.5s;
+        cursor: pointer;
+        text-decoration: underline;
+        color: blue;
+      }
+	  
+	  .ce-tooltip {
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease, visibility 0s 0.3s;
+		
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		transform: translateY(-50%);
+		margin-right: 10px;
+		z-index: 1;
+
+		background-color: #333;
+		color: #fff;
+		font-family: Segoe UI, sans-serif !important;
+		padding: 10px;
+		border-radius: 6px;
+		box-sizing: border-box;
+
+		width: 200px;
+		text-align: center;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
+      
+      .ce-tooltip-container:hover .ce-tooltip {
+        /* Make visible on hover */
+        visibility: visible;
+        opacity: 1;
+
+        /* Hover-specific styles */
+        pointer-events: auto;
+        transition-delay: 0s;
+       background: linear-gradient(90deg,navy,#1084d0);
+        background-size: cover;
+        font-family: Segoe UI, sans-serif !important;
+        font-style: normal !important;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+	  
+	  .ce-tooltip img {
+		display: block;
+		max-width: 85%;
+		height: auto;
+		margin: 0;
+	}
+    	  
+    `;
+    document.head.appendChild(style);
+  }
+
+  createTooltip(text, { img, title, name, desc }) {
+    const imgHtml = img ? `<img src="${img}" alt="${name || text}">` : '';
+    const titleHtml = title ? `${title}<br>` : '';
+    const nameHtml = name ? `<b>${name}</b><br>` : '';
+    const descHtml = desc ? `${desc}` : '';
+    
+    return `<span class="ce-tooltip-container">${text}<span class="ce-tooltip">` +
+           `${imgHtml}` +
+           `${titleHtml}${nameHtml}${descHtml}` +
+           `</span></span>`;
+  }
+
+    initializeReplacements() {
+        this.replacements = new Map([
+        ["Clinton", this.createTooltip("Clinton", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/President%20Bill%20Clinton%20Tooltip.png",
+            title: "President",
+            name: "Bill Clinton",
+            desc: ""
+        })],
+        ["Republicans", this.createTooltip("Republicans", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Republicans%20Tooltip.png",
+            title: "Political Party",
+            name: "Republicans",
+            desc: ""
+        })],
+        ["Dole", this.createTooltip("Dole", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dole%20Tooltip.png",
+            title: "Senator",
+            name: "Bob Dole",
+            desc: ""
+        })],
+        ["Buchanan", this.createTooltip("Buchanan", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Buchanan%20Tooltip.jpg",
+            title: "Commentator",
+            name: "Pat Buchanan",
+            desc: ""
+        })],
+        ["Forbes", this.createTooltip("Forbes", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Steve%20Forbes%20Tooltip.png",
+            title: "Editor-In-Chief",
+            name: "Steve Forbes",
+            desc: ""
+        })],
+        ["Alexander", this.createTooltip("Alexander", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Lamar%20Alexander%20Tooltip.png",
+            title: "Former Governor",
+            name: "Lamar Alexander",
+            desc: ""
+        })],
+        ["Gramm", this.createTooltip("Gramm", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Phil%20Gramm%20Tooltip.png",
+            title: "Senator",
+            name: "Phil Gramm",
+            desc: ""
+        })],
+        ["Specter", this.createTooltip("Specter", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Arlen%20Specter%20Tooltip.png",
+            title: "Senator",
+            name: "Arlen Specter",
+            desc: ""
+        })],
+        ["Wilson", this.createTooltip("Wilson", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Pete%20Wilson%20Tooltip.png",
+            title: "Governor",
+            name: "Pete Wilson",
+            desc: ""
+        })],
+        ["Powell", this.createTooltip("Powell", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Colin%20Powell%20Tooltip.png",
+            title: "General",
+            name: "Colin Powell",
+            desc: ""
+        })],
+        ["Bono", this.createTooltip("Bono", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Sonny%20Bono%20Tooltip.png",
+            title: "Representative",
+            name: "Sonny Bono",
+            desc: ""
+        })],
+        ["Gingrich", this.createTooltip("Gingrich", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Newt%20Gingrich%20Tooltip.png",
+            title: "Speaker",
+            name: "Newt Gingrich",
+            desc: ""
+        })],
+        ["Weld", this.createTooltip("Weld", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Bill%20Weld%20Tooltip.png",
+            title: "Governor",
+            name: "Bill Weld",
+            desc: ""
+        })],
+        ["Perot", this.createTooltip("Perot", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ross%20Perot%20Tooltip.png",
+            title: "Businessman",
+            name: "Ross Perot",
+            desc: ""
+        })],
+        ["Lamm", this.createTooltip("Lamm", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Richard%20Lamm%20Tooltip.png",
+            title: "Former Governor",
+            name: "Richard Lamm",
+            desc: ""
+        })],
+        ["Weicker", this.createTooltip("Weicker", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Lowell%20Weicker%20Tooltip.png",
+            title: "Former Governor",
+            name: "Lowell Weicker",
+            desc: ""
+        })],
+        ["Penny", this.createTooltip("Penny", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Timothy%20Penny%20Tooltip.png",
+            title: "Former Representative",
+            name: "Timothy Penny",
+            desc: ""
+        })],
+        ["Trump", this.createTooltip("Trump", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Donald%20Trump%20Tooltip.png",
+            title: "Celebrity Businessman",
+            name: "Donald Trump",
+            desc: ""
+        })],
+        ["Nader", this.createTooltip("Nader", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ralph%20Nader%20Tooltip.png",
+            title: "Enviornmental Activist",
+            name: "Ralph Nader",
+            desc: ""
+        })],
+        ["Peron", this.createTooltip("Peron", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dennis%20Peron%20Tooltip.png",
+            title: "Marijuana Activist",
+            name: "Dennis Peron",
+            desc: ""
+        })],
+        ["Hagelin", this.createTooltip("Hagelin", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/John%20Hagelin%20Tooltip.png",
+            title: "President of the MIU",
+            name: "John Hagelin",
+            desc: ""
+        })],
+        ["Kaczynski", this.createTooltip("Kaczynski", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ted%20Kaczynski%20Tooltip.png",
+            title: "Prisoner",
+            name: "Ted \"The Unabomber\" Kaczynski",
+            desc: ""
+        })],
+        ["Ehrenreich", this.createTooltip("Ehrenreich", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Barbara%20Ehrenreich%20Tooltip.png",
+            title: "Socialist Activist",
+            name: "Barbara Ehrenreich",
+            desc: ""
+        })],
+        ["McCarthy", this.createTooltip("McCarthy", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Eugene%20McCarthy%20Tooltip.png",
+            title: "Former Senator",
+            name: "Eugene McCarthy",
+            desc: ""
+        })],
+        ["LaRouche", this.createTooltip("LaRouche", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Lyndon%20LaRouche%20Tooltip.png",
+            title: "Activist",
+            name: "Lyndon LaRouche",
+            desc: ""
+        })],
+        ["Sanders", this.createTooltip("Sanders", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Bernie%20Sanders%20Tooltip.png",
+            title: "Representative",
+            name: "Bernie Sanders",
+            desc: ""
+        })],
+        ["Moorehead", this.createTooltip("Moorehead", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Monica%20Moorehead%20Tooltip.png",
+            title: "Worker's Party Activist",
+            name: "Monica Moorehead",
+            desc: ""
+        })],
+        ["Dellums", this.createTooltip("Dellums", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ron%20Dellums%20Tooltip.png",
+            title: "Representative",
+            name: "Ron Dellums",
+            desc: ""
+        })],
+        ["Mazzocchi", this.createTooltip("Mazzocchi", {
+            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Tony%20Mazzocchi%20Tooltip.png",
+            title: "Former VP and Secretary-Treasurer of OCAW",
+            name: "Tony Mazzocchi",
+            desc: ""
+        })]
+        ]);
+    }
+
+    processChart() {
+    if (this.isProcessing) return;
+    
+    const element = document.getElementById("overall_result");
+    if (!element) return;
+    
+    const content = element.innerHTML;
+    
+    if (content.includes('class="ce-tooltip"')) {
+        return;
+    }
+    
+    this.isProcessing = true;
+    
+    let newContent = content;
+    let hasChanges = false;
+    
+    // Debug: log what we're working with
+    console.log('Original content:', content);
+    
+    // Create array of replacements sorted by key length (longest first)
+    const sortedReplacements = Array.from(this.replacements.entries())
+        .sort((a, b) => b[0].length - a[0].length);
+    
+    console.log('Sorted replacements:', sortedReplacements.map(([key]) => key));
+    
+    for (const [searchText, replacement] of sortedReplacements) {
+        // Use word boundaries to ensure we only match whole words
+        const regex = new RegExp(`\\b${searchText}\\b`, 'g');
+        
+        if (regex.test(newContent)) {
+        console.log(`Replacing: "${searchText}"`);
+        newContent = newContent.replace(regex, replacement);
+        hasChanges = true;
+        }
+    }
+    
+    if (hasChanges) {
+        element.innerHTML = newContent;
+        console.log('Final content:', newContent);
+    }
+    
+    setTimeout(() => {
+        this.isProcessing = false;
+    }, 100);
+    }
+
+  init() {
+    const checkAndProcess = () => {
+      this.processChart();
+    };
+    
+    this.intervalId = setInterval(() => {
+      requestAnimationFrame(checkAndProcess);
+    }, 200);
+  }
+
+  destroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+}
+
+const chartEnhancer = new ChartEnhancer();
