@@ -104127,11 +104127,11 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A20029";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.34;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.34;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.35;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.34;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.33;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
@@ -104160,11 +104160,11 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F7657A";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.135;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.135
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
             e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
@@ -104183,11 +104183,11 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#AD1275";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.23;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
@@ -107758,6 +107758,12 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aNtjn2887DiA_8HP/Reform%20Tooltip.png",
             title: "Political Party",
             name: "Reform Party",
+            desc: ""
+        })],
+        ["The Left", this.createTooltip("The Left", {
+            img: "https://file.garden/aNtjn2887DiA_8HP/Republicans%20Tooltip%20(1).png",
+            title: "Political Movement",
+            name: "The Left",
             desc: ""
         })],
         ["Dole", this.createTooltip("Dole", {
