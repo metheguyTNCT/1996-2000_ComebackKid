@@ -105077,12 +105077,20 @@ if (e.question_number+1 == 18) { // Midterms
     if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5))) {
     bono_active = 1
     moveup = 1
+    if (Ideology <= -4) {
+    opponents.bono = 5
+    } else {
     opponents.bono = 4
+    }
     }
     if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85026.5) || e.player_answers.includes(70001))) {
     bono_active = 1
     moveup = 1
+    if (Ideology <= -4) {
+    opponents.bono = 4
+    } else {
     opponents.bono = 3
+    }
     }
     if(sortedOpponents[0][1] < 3) {
         opponents.wilson += 3.5
