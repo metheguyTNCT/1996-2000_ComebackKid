@@ -105074,7 +105074,7 @@ if (ans == 210003){
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/x1gqn2.gif';
 }
 if (e.question_number+1 == 18) { // Midterms
-    if (e.player_answers.includes(88005.5) && e.player_answers.includes(85027.5)) {
+    if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5))) {
     bono_active = 1
     moveup = 1
     opponents.bono = 4
@@ -105085,7 +105085,7 @@ if (e.question_number+1 == 18) { // Midterms
     opponents.bono = 3
     }
     if(sortedOpponents[0][1] < 3) {
-        opponents.wilson += 4
+        opponents.wilson += 3.5
     }
     if (e.player_answers.includes(50004)) {
     if ((e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5)) && scandal <= 0) {
