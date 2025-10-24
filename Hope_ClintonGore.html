@@ -104213,6 +104213,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_bono");
         } else if (candidateName == "gingrich") {
+        updateHistoricalData(newVpTableHistorical9, newHistHexcolour9, newHistName9, newHistEV9, newHistPV9, newHistPVP9);
         GingrichNom += 1;
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0D2F9C";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Mazzocchi";
@@ -104225,6 +104226,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.395
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
     } else if (candidateName == "weld") {
+    updateHistoricalData(newVpTableHistorical10, newHistHexcolour10, newHistName10, newHistEV10, newHistPV10, newHistPVP10);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C4B9B";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Dellums";
         campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ron";
@@ -107335,8 +107337,8 @@ vpTable = {
     "Lyndon LaRouche" : "Webster Tarpley",
     "Bernie Sanders" : "Jim Hightower",
     "Monica Moorehead" : "Gloria La Riva",
-    "Ron Dellums" : "Eric Chester",
     "Tony Mazzocchi" : "Various",
+    "Ron Dellums" : "Eric Chester",
 
     // Reform
     "Ross Perot" : "Pat Choate",
@@ -107463,6 +107465,32 @@ newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Monica Moorehead"];
 newHistEV8 = [366,172,0,0];
 newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
 newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
+
+// Gingrich VP Table
+newVpTableHistorical9 = {
+    "Bill Clinton" : "Al Gore",
+    "Newt Gingrich" : "Pete Domenici",
+    "Ross Perot" : "Pat Choate",
+    "Tony Mazzocchi" : "Various",
+};
+newHistHexcolour9 = ["#0D2F9C","#FF1A58","#9910A8","#3E6B89"];
+newHistName9 = ["Bill Clinton","Newt Gingrich","Ross Perot","Tony Mazzocchi"];
+newHistEV9 = [270,268,0,0];
+newHistPV9 = ["44,094,968","44,287,522","7,509,623","770,217"];
+newHistPVP9 = ["45.8%","46.0%","7.4%","0.8%"];
+
+// Weld VP Table
+newVpTableHistorical10 = {
+    "Ross Perot" : "Pat Choate",
+    "Bill Clinton" : "Al Gore",
+    "Bill Weld" : "Marc Racicot",
+    "Ron Dellums" : "Eric Chester",
+};
+newHistHexcolour10 = ["#9910A8","#0C4B9B","#E0B62A","#39A893"];
+newHistName10 = ["Ross Perot","Bill Clinton","Bill Weld","Ron Dellums"];
+newHistEV10 = [281,193,64,0];
+newHistPV10 = ["32,734,255","32,156,592","30,231,048","1,347,881"];
+newHistPVP10 = ["34.0%","33.4%","31.4%","1.4%"];
 			    
 function onGameWindowChangeCandidates() {
     const resultsTableHolder = document.getElementById("overall_details_container");
