@@ -104209,6 +104209,18 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C64B57";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.19;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.19;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.18;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.18;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.23;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.21;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.14
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_bono");
