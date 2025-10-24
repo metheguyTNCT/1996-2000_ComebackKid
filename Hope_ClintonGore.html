@@ -19345,6 +19345,16 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35007.511,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.035
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 12704,
         "fields": {
             "answer": 35007.511,
@@ -19371,6 +19381,16 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.037871
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35010.511,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.035
         }
     },
     {
@@ -19614,6 +19634,16 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12704,
+        "fields": {
+            "answer": 35008.511,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.035
+        }
+    },
+    {
 	      "model": "campaign_trail.answer_score_global",
         "pk": 12702,
         "fields": {
@@ -19631,6 +19661,16 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.0326
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12703,
+        "fields": {
+            "answer": 35009.511,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.035
         }
     },
     {
@@ -48083,6 +48123,50 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "state_multiplier": 0.0479
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35007.511,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0478934
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35010.511,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0478934
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35009.511,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0478934
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12710,
+        "fields": {
+            "answer": 35008.511,
+            "state": 225,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "state_multiplier": 0.0478934
         }
     },
     {
@@ -104212,9 +104296,9 @@ function opponentDecider(){
     } else if (candidateName == "bono") {
     updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C2E9C";
-        campaignTrail_temp.candidate_json[2]["fields"].last_name = "Moorehead";
-        campaignTrail_temp.candidate_json[2]["fields"].first_name = "Monica";
-        campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#D96015";
+        campaignTrail_temp.candidate_json[2]["fields"].last_name = "Cohen";
+        campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ben";
+        campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#ffc5d9";
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bono";
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C64B57";
@@ -107359,7 +107443,7 @@ vpTable = {
     "Eugene McCarthy" : "Daniel Ellsberg",
     "Lyndon LaRouche" : "Webster Tarpley",
     "Bernie Sanders" : "Jim Hightower",
-    "Monica Moorehead" : "Gloria La Riva",
+    "Ben Cohen" : "Dolores Huerta",
     "Tony Mazzocchi" : "Various",
     "Ron Dellums" : "Eric Chester",
 
@@ -107481,10 +107565,10 @@ newVpTableHistorical8 = {
     "Bill Clinton" : "Al Gore",
     "Sonny Bono" : "George Voinovich",
     "Timothy Penny" : "Russ Verney",
-    "Monica Moorehead" : "Gloria La Riva",
+    "Ben Cohen" : "Dolores Huerta",
 };
-newHistHexcolour8 = ["#0C2E9C","#C64B57","#63827E","#D96015"];
-newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Monica Moorehead"];
+newHistHexcolour8 = ["#0C2E9C","#C64B57","#63827E","#ffc5d9"];
+newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ben Cohen"];
 newHistEV8 = [366,172,0,0];
 newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
 newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
@@ -107905,7 +107989,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Timothy%20Penny%20Tooltip.png",
             title: "Former Representative",
             name: "Timothy Penny",
-            desc: "The Left-Wing's latest infighter."
+            desc: "Democrat-turned-Reform, Minnesota-nice congressman."
         })],
         ["Trump", this.createTooltip("Trump", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Donald%20Trump%20Tooltip.png",
@@ -107917,67 +108001,67 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ralph%20Nader%20Tooltip.png",
             title: "Enviornmental Activist",
             name: "Ralph Nader",
-            desc: ""
+            desc: "The last hero of the American left, an irrelevant joke."
         })],
         ["Peron", this.createTooltip("Peron", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dennis%20Peron%20Tooltip.png",
             title: "Marijuana Activist",
             name: "Dennis Peron",
-            desc: ""
+            desc: "Definitely Inhaled."
         })],
         ["Hagelin", this.createTooltip("Hagelin", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/John%20Hagelin%20Tooltip.png",
             title: "President of the MIU",
             name: "John Hagelin",
-            desc: ""
+            desc: "The one and only Psychic Physicist."
         })],
         ["Kaczynski", this.createTooltip("Kaczynski", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ted%20Kaczynski%20Tooltip.png",
             title: "Prisoner",
             name: "Ted \"The Unabomber\" Kaczynski",
-            desc: ""
+            desc: "The hero of every edgy 15-year-old."
         })],
         ["Ehrenreich", this.createTooltip("Ehrenreich", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Barbara%20Ehrenreich%20Tooltip.png",
             title: "Socialist Activist",
             name: "Barbara Ehrenreich",
-            desc: ""
+            desc: "2nd Generation feminist still stuck in 1973."
         })],
         ["McCarthy", this.createTooltip("McCarthy", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Eugene%20McCarthy%20Tooltip.png",
             title: "Former Senator",
             name: "Eugene McCarthy",
-            desc: ""
+            desc: "Wait... He's still alive?"
         })],
         ["LaRouche", this.createTooltip("LaRouche", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Lyndon%20LaRouche%20Tooltip.png",
             title: "Activist",
             name: "Lyndon LaRouche",
-            desc: ""
+            desc: "Should be put in a nut house."
         })],
         ["Sanders", this.createTooltip("Sanders", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Bernie%20Sanders%20Tooltip.png",
             title: "Representative",
             name: "Bernie Sanders",
-            desc: ""
+            desc: "No one will remember him."
         })],
-        ["Moorehead", this.createTooltip("Moorehead", {
-            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Monica%20Moorehead%20Tooltip.png",
-            title: "Worker's Party Activist",
-            name: "Monica Moorehead",
-            desc: ""
+        ["Cohen", this.createTooltip("Cohen", {
+            img: "https://file.garden/aNtjn2887DiA_8HP/Ben-cohen.png",
+            title: "Businessman & activist",
+            name: "Ben Cohen",
+            desc: "A half-joke lefty independent candidate, the ''Ben'' in Ben & Jerry’s."
         })],
         ["Dellums", this.createTooltip("Dellums", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Ron%20Dellums%20Tooltip.png",
             title: "Representative",
             name: "Ron Dellums",
-            desc: ""
+            desc: "Professional MLK Impersonator."
         })],
         ["Mazzocchi", this.createTooltip("Mazzocchi", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Tony%20Mazzocchi%20Tooltip.png",
             title: "Former VP and Secretary-Treasurer of OCAW",
             name: "Tony Mazzocchi",
-            desc: ""
+            desc: "Wore almost every other pins."
         })]
         ]);
     }
