@@ -367,7 +367,7 @@ function ensureStylesheet(url, id) {
 	document.head.appendChild(link);
 }
 
-ensureStylesheet('https://unpkg.com/98.css', 'unpkg-98css');
+ensureStylesheet('https://cdn.jsdelivr.net/npm/95css@latest/css/95css.min.css', 'unpkg-98css');
 
 function ensureMetaViewport() {
     if (!document.querySelector('meta[name="viewport"]')) {
@@ -455,16 +455,17 @@ const css = `
 
 @font-face {
     font-family: "Balboa W01 Black";
-    url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.woff2")format("woff2");
     url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.ttf")format("truetype"),
 }
 
 @font-face {
     font-family: "Balboa W01 Medium";
-    url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff2")format("woff2");
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.ttf")format("truetype"),
+    
 }
 	
 #game_window {
@@ -2328,7 +2329,6 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
 
 
 
