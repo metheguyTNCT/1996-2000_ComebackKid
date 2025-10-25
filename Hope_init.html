@@ -367,7 +367,7 @@ function ensureStylesheet(url, id) {
 	document.head.appendChild(link);
 }
 
-ensureStylesheet('https://cdn.jsdelivr.net/npm/95css@latest/css/95css.min.css', 'unpkg-98css');
+ensureStylesheet('https://unpkg.com/98.css', 'unpkg-98css');
 
 function ensureMetaViewport() {
     if (!document.querySelector('meta[name="viewport"]')) {
@@ -465,7 +465,6 @@ const css = `
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff2")format("woff2");
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.ttf")format("truetype"),
-    
 }
 	
 #game_window {
@@ -1342,11 +1341,7 @@ function addDynamicCSS() {
           opacity: 0;
           overflow: visible;
           transition: opacity 0.3s;
-          border-top: 20px solid #000;
-          border-left: 1px inset #000;
-          border-right: 1px inset #000;
-          border-bottom: 1px inset #000;
-          outline: outset 3px #C0C0C0;  
+          box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
           pointer-events: none;
           font-size: 13px !important;
           line-height: 1.5em !important;
