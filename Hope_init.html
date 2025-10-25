@@ -431,6 +431,7 @@ const crtstyles = `
 `
 
 const css = `
+/* fonts!*/
     @font-face {
   font-family: digital;
   src: url(https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/digital);
@@ -460,6 +461,7 @@ const css = `
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.svg#Balboa W01 Medium")format("svg");
 }
 	
+/*code 1 setup*/
 #game_window {
   background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/Window%20Cartoon"); 
 	font-smooth: never;
@@ -484,6 +486,8 @@ const css = `
   background-size: cover;
 }
 
+
+/*cool image popouts*/
 #election_description_window::after {
   background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/Clinton%20ED");
   height: 215px;
@@ -500,6 +504,54 @@ const css = `
   background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%201%20Misc/AlG");
   height: 280px;
   width: 250px;
+}
+/*code 2 setup*/
+#campaign_sign {
+    background-image: url("https://files.catbox.moe/5ur165.png");
+    background-size: cover;
+    border-color: #c9c9c9;    
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%; 
+    height: 104px; 
+    margin-left: -0.033em;
+    margin-right: -0.033em;
+  }
+#campaign_sign p {
+    color: rgb(0 0 0 / 0%);
+}
+.inner_window_sign_display {
+  margin: 0;
+    margin-right: 0.033px;
+    margin-left: 0.033px;
+  height: 25%;
+  position: relative;
+  width: 35%;
+  height: 28%;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: double;
+  border-color: #C9C9C9;
+}
+#state_info {
+  margin: 5% 0 0;
+  height: 120%;
+  background-color: #FFFFFF;
+  border-style: double;
+  border-color: #C9C9C9;
+}
+.inner_window_question {
+  background-color: #FFFFFF;
+  margin: 0
+  padding-top: .3em;
+  border-style: double;
+  border-color: #C9C9C9;
+  text-align: center;
+  height: 59%;
+  position: relative;
+  clear: both;
 }
 
 .game_header {
@@ -604,7 +656,7 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
-
+/* Windows 95 CSS imports*/
 button,
 .game_header,
 .campaign_trail_start_emphasis {
@@ -669,7 +721,7 @@ input[type=reset]:not(:active, .active),
 .title-bar-buttons button:not(:active):focus {
   box-shadow: inset -1px -1px 0 var(--dark), inset 1px 1px 0 var(--light);
 }
-
+/* Our basic element styling*/
 
 button {
   background-color: #efefef;
@@ -830,74 +882,7 @@ text-rendering: optimizeSpeed;
   height: auto;
 }
 
-
-        .bluebar {
-    background:#004c7f; 
-    color:white; 
-    padding:6px 8px; 
-    font-family:'Balboa W01 Medium'; 
-    font-size:12px;
-    }
-
-        .redbar {
-    height:4px; 
-    background:#c9002c;
-    }
-
-        .redbartext {
-    color: black; 
-    font-family:'Balboa W01 black'; 
-    margin: 0px;
-    font-size:15px;
-    }
-	
-#campaign_sign {
-    background-image: url("https://files.catbox.moe/5ur165.png");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 59%;
-  position: relative;
-  clear: both;
-}
+/*music player (it's long)*/
 
 #player::before {
     content: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/marantz");
@@ -1241,53 +1226,6 @@ position: relative;
     visibility: hidden
   }
 
-  #campaign_sign {
-    background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%202%20Misc/Init%20Sign");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 59%;
-  position: relative;
-  clear: both;
-}
 
 body {
     background-size: cover;
@@ -2316,4 +2254,5 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
+
 
