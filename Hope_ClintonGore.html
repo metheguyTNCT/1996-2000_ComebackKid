@@ -107683,22 +107683,6 @@ showWin("ach-gay-rights")
         </div>
     </div>
 
-    <div id="bar-senmajleader" style="width:300px;">
-        <p class=redbartext>Senate Majority Leader</p>
-        <div class=redbar></div>
-        <div class=bluebar>
-            <span id="senmaj-text">George Mitchell</span>
-        </div>
-    </div>
-
-    <div id="bar-speaker" style="width:300px;">
-        <p class=redbartext>Speaker Of The House</p>
-        <div class=redbar></div>
-        <div class=bluebar>
-            <span id="soth-text">Thomas Foley</span>
-        </div>
-    </div>
-
     <div id="bar-healthcare" style="width:300px;">
         <p class=redbartext>Leader Of Healthcare Reform</p>
         <div class=redbar></div>
@@ -107715,6 +107699,22 @@ showWin("ach-gay-rights")
         </div>
     </div>
 
+    <div id="bar-senmajleader" style="width:300px;">
+        <p class=redbartext>Senate Majority Leader</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="senmaj-text">George Mitchell</span>
+        </div>
+    </div>
+
+    <div id="bar-speaker" style="width:300px;">
+        <p class=redbartext>Speaker Of The House</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="soth-text">Thomas Foley</span>
+        </div>
+    </div>
+
     </div>
 </div>
 `;
@@ -107722,19 +107722,19 @@ showWin("ach-gay-rights")
     if (e.player_answers.includes(60001)) {
     document.getElementById("attorney-text").innerText = "Kimba Wood";
     } else if (e.player_answers.includes(60002) || e.player_answers.includes(60003) || e.player_answers.includes(92005.5) || e.player_answers.includes(92006.5) || e.player_answers.includes(92007.5) || e.player_answers.includes(98005.5) || e.player_answers.includes(98007.5)) {
-    document.getElementById("press-text").innerText = "Janet Reno";
+    document.getElementById("attorney-text").innerText = "Janet Reno";
     } if (SlimGOPCongress == 1) {
     if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5))) {
-    document.getElementById("sothu-text").innerText = "Bob Michel";
+    document.getElementById("soth-text").innerText = "Bob Michel";
     } else {
-    document.getElementById("sothu-text").innerText = "Newt Gingrich";
+    document.getElementById("soth-text").innerText = "Newt Gingrich";
     }
-    document.getElementById("senmaj-text").innerText = "Tom Dashcle";
+    document.getElementById("senmaj-text").innerText = "Tom Daschle";
     } else if (RepublicanRevolution == 1 || DisasterMidterms == 1) {
-    document.getElementById("sothu-text").innerText = "Newt Gingrich";
+    document.getElementById("soth-text").innerText = "Newt Gingrich";
     document.getElementById("senmaj-text").innerText = "Bob Dole";
     } if (e.player_answers.includes(50006)) {
-    document.getElementById("healthcare-text").innerText = "Hillary Clinton";
+    document.getElementById("healthcare-text").innerText = "First Lady Hillary Clinton";
     } else if (e.player_answers.includes(50007)) {
     document.getElementById("healthcare-text").innerText = "President Clinton & Congressional GOP";
     } else if (e.player_answers.includes(50008)) {
