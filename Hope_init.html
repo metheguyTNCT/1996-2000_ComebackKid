@@ -1624,22 +1624,28 @@ tooltipList = [
       titleBar.style.paddingLeft = "3px";
   };
 
-  
+
 class Song {
-  constructor(title, artist, audioLink, duration) {
+  constructor(title, artist, audioLink, duration = null) {
     this.title = title;
     this.artist = artist;
     this.audioLink = audioLink;
-    this.duration = duration; // e.g., "4:00"
-    this.durationInSeconds = this.convertDurationToSeconds(duration);
+    this.duration = duration;
+    this.durationInSeconds = duration ? this.convertDurationToSeconds(duration) : 0;
   }
 
-  // Convert the duration string to seconds
   convertDurationToSeconds(duration) {
     const [minutes, seconds] = duration.split(":").map(Number);
     return minutes * 60 + seconds;
   }
 
+  setDurationFromAudio(audioDuration) {
+    this.durationInSeconds = Math.floor(audioDuration);
+    const minutes = Math.floor(this.durationInSeconds / 60);
+    const seconds = this.durationInSeconds % 60;
+    this.duration = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+  
   getTitle() {
     return this.title;
   }
@@ -1692,7 +1698,6 @@ function changePlaylist(newPlaylist) {
   playlist = newPlaylist;
   playlist.currentSongIndex = 0;
   updateUI(playlist);
-  const audio = document.getElementById("audio");
   audio.src = playlist.getCurrentSong().audioLink;
   audio.play();
 }
@@ -1740,6 +1745,9 @@ window.updateUI=updateUI
 
 function setupMusicPlayer() {
   playlist = new Playlist();
+  const audio = document.createElement("audio");
+  audio.id = "audio";
+  window.audioElement = audio;
 
 
   const song1 = new Song(
@@ -1825,7 +1833,6 @@ songInfo.appendChild(infoText);
 
 const titleElement = document.createElement("p");
 titleElement.id = "title";
-titleElement.style.animation = `scroll 10s steps(17) infinite`;
 infoText.appendChild(titleElement);
 
 const tinyPlay = document.createElement("div"); //this is where all the tiny icons go at the bottom
@@ -1857,11 +1864,6 @@ const artistElement = document.createElement("p");
 artistElement.id = "artist";
 infoText.appendChild(artistElement);
 
-const playIconTiny = document.createElement("div");
-playIconTiny.id = "tiny-p";
-songInfo.appendChild(infoText);
-
-
 const controlsContainer = document.createElement("div");
 controlsContainer.id = "controls-container";
 
@@ -1888,8 +1890,17 @@ controls.appendChild(nextButton);
 
 controlsContainer.appendChild(controls);
 
+function playSong(playlist) {
+  audioElement.src = playlist.getCurrentSong().audioLink;
+  audioElement.play();
+  
+  const tinyPlay = document.getElementById("tiny-play");
+  const tinyPause = document.getElementById("tiny-Pause");
+  tinyPlay.style.visibility = "visible";
+  tinyPause.style.visibility = "hidden";
+}
+
 playPauseButton.addEventListener("click", function () {
-  const audio = document.getElementById("audio");
   if (audio.paused) {
     audio.play();
     tinyPlay.style.visibility = "visible";
@@ -1904,22 +1915,15 @@ playPauseButton.addEventListener("click", function () {
 nextButton.addEventListener("click", function () {
   playlist.playNext();
   updateUI(playlist);
-  const audio = document.getElementById("audio");
-  audio.src = playlist.getCurrentSong().audioLink;
-  audio.play();
-      tinyPlay.style.visibility = "visible";
-    tinyPause.style.visibility = "hidden";
+  playSong(playlist);
 });
 
 prevButton.addEventListener("click", function () {
   playlist.playPrevious();
   updateUI(playlist);
-  const audio = document.getElementById("audio");
-  audio.src = playlist.getCurrentSong().audioLink;
-  audio.play();
-      tinyPlay.style.visibility = "visible";
-    tinyPause.style.visibility = "hidden";
+  playSong(playlist);
 });
+
 
   const currentTimeElement = document.createElement("span");
 currentTimeElement.id = "current-time";
@@ -1969,21 +1973,16 @@ function updateTimeDisplay(audio) {
 
 
 
-  const audio = document.createElement("audio");
   audio.id = "audio";
   audio.src = playlist.getCurrentSong().audioLink;
   audio.volume = 1/9;
 
 
 audio.addEventListener("ended", function () {
-    // Play the next song when the current song ends
-    playlist.playNext();
-    updateUI(playlist);
-    audio.src = playlist.getCurrentSong().audioLink;
-    audio.play();
-
-    // Reset the time display when a new song starts
-    updateTimeDisplay(audio);
+  // Play the next song when the current song ends
+  playlist.playNext();
+  updateUI(playlist);
+  playSong(playlist);
 });
 
 audio.addEventListener("timeupdate", function () {
@@ -1991,13 +1990,8 @@ audio.addEventListener("timeupdate", function () {
 });
 
       let currentVolume = 6; // Initial volume
-      const volume1Get = document.getElementById("volume1");
-        const volume2Get = document.getElementById("volume2");
-        const volume3Get = document.getElementById("volume3");
-
   
       volumeUpButton.addEventListener("click", function () {
-        const audio = document.getElementById("audio");
         if (currentVolume < 20) { // Increased max volume range
             currentVolume++;
             audio.volume = currentVolume / 20; // Adjusted for new range
@@ -2006,53 +2000,34 @@ audio.addEventListener("timeupdate", function () {
     });
     
     volumeDownButton.addEventListener("click", function () {
-        const audio = document.getElementById("audio");
         if (currentVolume > 0) {
             currentVolume--;
             audio.volume = currentVolume / 20; // Adjusted for new range
             updateVolumeIndicators(); // Call to update visibility
         }
     });
+
+
+audio.addEventListener("loadedmetadata", function () {
+  const currentSong = playlist.getCurrentSong();
+  if (!currentSong.duration) {
+    currentSong.setDurationFromAudio(audio.duration);
+    updateTimeDisplay(audio);
+  }
+});
+
+function updateVolumeIndicators() {
+  const thresholds = [
+    { element: volume1, min: 0 },
+    { element: volume2, min: 4 },
+    { element: volume3, min: 8 }
+  ];
   
-  function updateVolumeIndicators() {
-    // Update visibility based on currentVolume
-    updateVolume1();
-    updateVolume2();
-    updateVolume3();
+  thresholds.forEach(({ element, min }) => {
+    element.style.visibility = currentVolume > min ? "visible" : "hidden";
+  });
 }
   
-    function updateVolume1() {
-        if (currentVolume > 0) {
-          volume1.style.visibility = "visible";
-        }
-        else {
-          volume1.style.visibility = "hidden";
-        }
-    }
-
-        function updateVolume2() {
-        if (currentVolume > 4) {
-          volume2.style.visibility = "visible";
-        }
-        else {
-          volume2.style.visibility = "hidden";
-        }
-    }
-
-            function updateVolume3 () {
-        if (currentVolume > 8) {
-          volume3.style.visibility = "visible";
-        }
-        else {
-          volume3.style.visibility = "hidden";
-        }
-    }
-  
-     function updateAudioVolume() {
-      const audio = document.getElementById("audio");
-      audio.volume = currentVolume / 9; // Set volume between 0 and 1
-    }
-
   document.body.appendChild(audio);
   audio.play();
 
