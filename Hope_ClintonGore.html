@@ -89233,7 +89233,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 85024.5,
             "candidate": 77,
-            "answer_feedback": "It took many days of gritted teeth, but by the time Al cast the tie-breaking vote, it was clear Baehr v. Miike would not just be the law of the Rainbow State, but the basis for the rest of the country. There’s something both cathartic and deeply unnerving in seeing those men break down and shout about the fact that two men, or two women, will now be able to be united civilly under one roof, in one home, and that you might still have four more years living with them."
+            "answer_feedback": "It took many days of gritted teeth, but by the time Gore cast the tie-breaking vote, it was clear Baehr v. Miike would not just be the law of the Rainbow State, but the basis for the rest of the country. There’s something both cathartic and deeply unnerving in seeing those men break down and shout about the fact that two men, or two women, will now be able to be united civilly under one roof, in one home, and that you might still have four more years living with them."
         }
     },
     {
@@ -104086,7 +104086,7 @@ Pandora += 1
     if (ans == 95003.5 || ans == 95004.5 || ans == 95007.5 || ans == 95005.5 || ans == 95008.5 || ans == 95011.5 || ans == 95016.5 || ans == 95022.5 || ans == 95017.5 || ans == 95020.5) { // Mitchell
     ctsAchievement("Man of Zeal");
     }
-    if (ans == 94009.5 || ans == 94012.5 || ans == 94010.5 || ans == 94011.5 || ans == 94014.5 || ans == 94017.5) { // Bi Partisan
+    if (ans == 94009.5 || ans == 94010.5 || ans == 94011.5 || ans == 94012.5 || ans == 94014.5 || ans == 94017.5) { // Bi Partisan
     ctsAchievement("Cats and Dogs");
     }
     if (ans == 170006){
@@ -107458,21 +107458,164 @@ document.getElementById("clintonwwatext").innerText = "Family has always been im
 } else if (Ideology >= -3 && Ideology <= 1) {
 document.getElementById("wwaheader").innerText = "A Voice You Can Rely On";
 document.getElementById("clintonwwaimage").src = "https://file.garden/aOp8cCiQ5ho9r5b1/Clinton_Third_Way.png";
-document.getElementById("clintonwwatext").innerText = "Bill Clinton has constantly fought for and been the voice of the people. Growing up in a small southern town, Clinton is no stranger to middle-class struggle. He's always done whatever he could to ensure that the families who grew up like his own are not only better off, but have someone in the White House who understands their struggle, and is doing everything he to fix it. President Clinton hopes the very people he's fought for re-elect Clinton/Gore on November 5th!";
+document.getElementById("clintonwwatext").innerText = "Bill Clinton has constantly fought for and been the voice of the people. Growing up in a small southern town, Clinton is no stranger to middle-class struggle. He's always done whatever he could to ensure that the families who grew up like his own are not only better off, but have someone in the White House who understands their struggle, and is doing everything he can to fix it. President Clinton hopes the very people he's fought for re-elect Clinton/Gore on November 5th!";
 } else if (Ideology >= 2) {
 document.getElementById("wwaheader").innerText = "All Men Are Created Equal";
 document.getElementById("clintonwwaimage").src = "https://file.garden/aOp8cCiQ5ho9r5b1/Clinton_Liberal.jpg%3Fs%3D612x612%26amp%3Bw%3D0%26amp%3Bk%3D20%26amp%3Bc%3DnD8SzZlmsXxiKjApfh2304wpF0TD0PRaHxEIaZQxpus%3D";
 document.getElementById("clintonwwatext").innerText = "The President of the United States' chief goal is to insure the rights and safety of all Americans, and Bill Clinton has done this all his life. Growing up in a prejudiced south, Clinton never let his surroundings dictate how he saw other people. One of the biggest reasons President Clinton began his career was watching Dr. Martin Luther King Jr's iconic 'I Have A Dream' speech, and his favorite President John F. Kennedy was a young and avid supporter of the civil rights movement. He's brung the same open-mindedness to the White House and understands the pain of the oppressed. He hopes the same minorities he lived around will re-elect Clinton/Gore on November 5th!";
 }
 } else if (lower_url=="clintongore.com/achievements") {
-    current_website="clintongore.com/achievements";
-    webpage_html = `
-        <div style="color:white;font-family:times new roman;">
-            <h2>What We've Done</h2>
-            <p>Placeholder content — edit however you want.</p>
-        </div>`;
-    document.getElementById("webpage_html").innerHTML = webpage_html;
+current_website = "clintongore.com/achievements";
+webpage_html = `
+<div style="
+    background:white; 
+    width:451px; 
+    min-height:100vh; /* full viewport height */
+    font-family:'Times New Roman'; 
+    overflow:auto; /* allow scrolling if content grows */
+">
 
+    <!-- Clinton-Gore 96 Header -->
+    <div style="height:150px; text-align:center;">
+        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
+    </div>
+
+    <!-- Achievements Page Title -->
+    <div style="
+        margin-left:10px;
+        margin-top:-100px;
+        display:flex;
+        flex-direction:column;
+    ">
+        <h2 style="
+            font-family:'Balboa W01 Black';
+            font-size:15px;
+            text-transform:uppercase;
+            margin:0 0 3px 5px;
+            padding-left:4px;
+            border-left:3px black solid;
+            line-height:1;
+            letter-spacing:1px;
+        ">What We Accomplished</h2>
+
+        <div style="width:250px; margin-left:5px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="height:20px; background:#004c7f;"></div>
+        </div>
+    </div>
+
+    <!-- ACHIEVEMENT CONTAINER -->
+    <div id="achievementsContainer" style="
+        margin-top:10px;
+        margin-left:15px;
+        padding-left:5px;
+        display:flex;
+        flex-direction:column;
+        gap:6px;
+    ">
+        <!-- Hidden Achievement Blocks (revealed dynamically) -->
+
+        <div id="ach-bicare" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                PASSED <span style="color:#00eaff;">BIPARTISAN HEALTHCARE REFORM</span>.
+            </div>
+        </div>
+
+        <div id="ach-unicare" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                PASSED <span>UNIVERSAL HEALTHCARE</span>.
+            </div>
+        </div>
+
+        <div id="ach-mitchcare" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                PASSED <span>CONGRESS-LED HEALTHCARE REFORM</span>.
+            </div>
+        </div>
+
+        <div id="ach-oslo" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                SECURED <span>PEACE IN THE MIDDLE EAST</span>.
+            </div>
+        </div>
+
+        <div id="ach-welfare" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                ENDED <span>WELFARE AS WE KNEW IT</span>.
+            </div>
+        </div>
+
+        <div id="ach-deficit" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                GAVE AMERICA <span>A SURPLUS</span>.
+            </div>
+        </div>
+
+        <div id="ach-gay-rights" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                ESTABLISHED <span>CIVIL UNIONS</span>.
+            </div>
+        </div>
+
+        <div id="ach-gun-bill" style="display:none; width:260px;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="background:#004c7f; color:white; padding:6px 8px;
+                        font-family:'Balboa W01 Black'; font-size:12px;">
+                 PASSED AN <span>ASSAULT WEAPONS BAN</span>.
+            </div>
+        </div>
+
+    </div>
+</div>
+`;
+    document.getElementById("webpage_html").innerHTML = webpage_html;
+function showWin(winId) {
+    const winItem = document.getElementById(winId);
+
+    if (!winItem) return; // Exit if element not found
+
+    if (winItem.style.display === "none" || !winItem.style.display) {
+        winItem.style.display = "block";       // Make visible
+    }
+}
+if (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5)) {
+showWin("ach-gun-bill")
+}
+if (e.player_answers.includes(89025.5)) {
+showWin("ach-oslo")
+}
+if (e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5) || e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) {
+showWin("ach-welfare")
+}
+if (e.player_answers.includes(93013.5) || e.player_answers.includes(93017.5) || e.player_answers.includes(93022.5)) {
+showWin("ach-unihealthcare")
+}
+if (e.player_answers.includes(95003.5) || e.player_answers.includes(95004.5) || e.player_answers.includes(95007.5) ||e.player_answers.includes(95005.5) || e.player_answers.includes(95008.5) || e.player_answers.includes(95011.5) || e.player_answers.includes(95016.5) || e.player_answers.includes(95022.5) || e.player_answers.includes(95017.5) || e.player_answers.includes(95020.5)) {
+showWin("ach-mitchcare")
+}
+if (e.player_answers.includes(94009.5) || e.player_answers.includes(94010.5) || e.player_answers.includes(94011.5) || e.player_answers.includes(94012.5) || e.player_answers.includes(94014.5) || e.player_answers.includes(94017.5)) {
+showWin("ach-bicare")
+}
+if (e.player_answers.includes(88025.5)) {
+showWin("ach-deficit")   
+}
+if (e.player_answers.includes(85024.5)) {
+showWin("ach-gay-rights")   
+}
 } else if (lower_url=="clintongore.com/admin") {
     current_website="clintongore.com/admin";
     webpage_html = `
