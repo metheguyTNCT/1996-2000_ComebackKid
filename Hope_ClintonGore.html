@@ -107619,6 +107619,30 @@ showWin("ach-gay-rights")
 } else if (lower_url=="clintongore.com/admin") {
     current_website="clintongore.com/admin";
    webpage_html = `
+   <style>
+           .bluebar {
+    background:#004c7f; 
+    display: flex;
+    align-items: center;
+    color:white; 
+    font-family:'Balboa W01 Medium'; 
+    font-size:15px;
+    width: auto;
+    padding-left: 30px
+    height: 20px;
+    }
+
+        .redbar {
+    height:4px; 
+    background:#c9002c;
+    }
+
+        .redbartext {
+    color: black; 
+    font-family:'Balboa W01 black'; 
+    font-size:15px;
+    }
+</style>
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; min-height:100vh;">
 
     <!-- Clinton-Gore 96 Header -->
@@ -107627,93 +107651,67 @@ showWin("ach-gay-rights")
     </div>
 
     <!-- Header Text + Bars Centered -->
+
     <div style="text-align:center; margin-top:-80px;">
-        <h2 style="
-            font-family:'Balboa W01 Black';
-            color:black;
-            font-size:15px;
-            margin:0 0 3px 0;
-            text-transform:uppercase;
-            letter-spacing:1px;
-            line-height:1;
-            display:inline-flex;
-            align-items:center;
-            gap:5px;
-        ">
-            The Minds
-            <img src="https://file.garden/aOp8cCiQ5ho9r5b1/mac.gif%3Fex%3D68fd1f7b%26amp%3Bis%3D68fbcdfb%26amp%3Bhm%3D940630ba3ef17bfcedce380a38110257d3c722e86092649d5a0fda4408f630ff%26amp%3B%3D" alt="America" style="height:18px;">
-        </h2>
 
-        <!-- Red + Blue Bar -->
-        <div style="width:250px; margin:5px auto 0 auto;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="height:20px; background:#004c7f;"></div>
-        </div>
-    </div>
-
-    <!-- Image + Body Text directly under header -->
-    <div style="
-        display:flex; 
-        flex-direction:column;
-        align-items:center;
-        margin-top:15px;
+    <div style= "
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
     ">
-        <!-- Image Reveal -->
-        <img id="clintonwwaimage" src="https://file.garden/aOp8cCiQ5ho9r5b1/macpic.jpg" style="
-            width:200px;
-            border: 1px solid #c9002c;
-            box-shadow: 5px 5px 3px #ADADAD;
-        ">
 
-        <!-- Body Text -->
-        <div id="clintonwwatext" style="
-            font-size:12px;
-            margin-top:10px;
-            line-height:1.1em;
-            width:300px;
-            text-align:center;
-            height:90px;
-            overflow-y:auto;
+     <!--100% gonna replace this with something better, rn the current pic is filler -->
+            <img src="https://file.garden/aOp8cCiQ5ho9r5b1/mac.gif%3Fex%3D68fd1f7b%26amp%3Bis%3D68fbcdfb%26amp%3Bhm%3D940630ba3ef17bfcedce380a38110257d3c722e86092649d5a0fda4408f630ff%26amp%3B%3D" alt="America" style="height:18px;">
+
+        <!-- Image Reveal -->
+        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/macpic.jpg" style="
+            width:200px;
+            margin-top:15px;
+            float: center;
         ">
-        </div>
     </div>
 
-    <!-- Bars with Titles and Dynamic Text -->
-    <div id="dynamicBarsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:20px;">
+    <div id="dynamicBarsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; text-align:left;">
         
         <!-- Example Bar -->
         <div id="bar-attorney" style="width:300px;">
-        <div style="height:4px; background:#c9002c;"></div>
-        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
-            <strong>Attorney General:</strong> <span id="attorney-text"></span>
+        <p class=redbartext>Attorney General</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="attorney-text"></span>
         </div>
     </div>
 
     <div id="bar-senmajleader" style="width:300px;">
-        <div style="height:4px; background:#c9002c;"></div>
-        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
-            <strong>Senate Majority Leader:</strong> <span id="senmaj-text">George Mitchell</span>
+        <p class=redbartext>Senate Majority Leader</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="senmaj-text">George Mitchell</span>
         </div>
     </div>
 
     <div id="bar-speaker" style="width:300px;">
-        <div style="height:4px; background:#c9002c;"></div>
-        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
-            <strong>Speaker Of The House:</strong> <span id="soth-text">Thomas Foley</span>
+        <p class=redbartext>Speaker Of The House</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="soth-text">Thomas Foley</span>
         </div>
     </div>
 
     <div id="bar-healthcare" style="width:300px;">
-        <div style="height:4px; background:#c9002c;"></div>
-        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
-            <strong>Leader Of Healthcare Reform:</strong> <span id="healthcare-text"></span>
+        <p class=redbartext>Leader Of Healthcare Reform</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="healthcare-text"></span>
         </div>
     </div>
 
     <div id="bar-budget" style="width:300px;">
-        <div style="height:4px; background:#c9002c;"></div>
-        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
-            <strong>Leader of Budget Plan:</strong> <span id="budget-text"></span>
+        <p class=redbartext>Leader of Budget Plan</p>
+        <div class=redbar></div>
+        <div class=bluebar>
+            <span id="budget-text"></span>
         </div>
     </div>
 
