@@ -1293,8 +1293,7 @@ applyGlobalStyles(css, 'mod-style');
 
 function addDynamicCSS() {
   var css = `
-
-      .mytooltip {
+    .mytooltip {
           position: relative;
           display: inline-block;
           cursor: pointer;
@@ -1334,7 +1333,11 @@ function addDynamicCSS() {
           opacity: 0;
           overflow: visible;
           transition: opacity 0.3s;
-          box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+          border-top: 20px solid #000;
+          border-left: 1px inset #000;
+          border-right: 1px inset #000;
+          border-bottom: 1px inset #000;
+          outline: outset 3px #C0C0C0;  
           pointer-events: none;
           font-size: 13px !important;
           line-height: 1.5em !important;
