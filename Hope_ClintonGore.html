@@ -107411,12 +107411,15 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
         <h2 id="wwaheader" style="
             font-family:'Balboa W01 Black';
             color:black;
-            font-size:12px;  /* Change text size here */
-            margin:0 0 3px 0;
+            font-size:15px;  /* Change text size here */
+            margin: 0px 8px;
+            padding-bottom: 3px;
+            padding-left: 3px;
             text-transform:uppercase;
             letter-spacing:1px;
             line-height:1;
             max-width: 250px; /* Prevents overflow */
+            border-left: 3px black solid;
         "></h2>
 
         <!-- Red + Blue Bar -->
@@ -107425,25 +107428,27 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             <div style="height:20px; background:#004c7f;"></div> <!-- Change banner height here -->
         </div>
     </div>
-
-    <!-- Star -->
-    <img src="https://file.garden/aOp8cCiQ5ho9r5b1/star.png%3Fex%3D68fd1ef3%26amp%3Bis%3D68fbcd73%26amp%3Bhm%3Dd0c38b91d10b150f523c30add6ebc72c1dd3914b709587ba2ce85ca5159e55d8%26amp%3B%3D%26amp%3Bformat%3Dwebp%26amp%3Bquality%3Dlossless"
-         style="
-            width:20px;   /* Change star size here */
-            margin-left:4px;
-            margin-bottom:10px; /* Move star up/down */
-         ">
 </div>
 
-    <!-- Hero Image -->
-    <div style="text-align:center; display:flex; margin-top:4px;">
-        <img id="clintonwwaimage" img src="" style="width:200px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
-    </div>
-
+    <!-- Image + Body text shit -->
+<div style="
+    display:flex; 
+    flex-direction:column;
+    margin-left:15px;
+    border-left: 3px black solid;
+    padding-left: 10px;
+    display:flex;
+    padding-top: 5px;
+">
+    <!-- Image Reveal -->
+        <img id="clintonwwaimage" img src="" style="
+        width:200px;
+        border: 1px solid #c9002c;
+        box-shadow: 5px 5px 3px #ADADAD;
+    ">
     <!-- Body Text -->
-    <div id="clintonwwatext" style="font-size:10px; margin:6px 10px; line-height:1.1em; height:90px; overflow-y:auto;">
+    <div id="clintonwwatext" style="font-size:12px; margin-top: 10px; line-height:1.1em; height:90px; overflow-y:auto;">
     </div>
-
 </div>`;
 document.getElementById("webpage_html").innerHTML = webpage_html;
 if (Ideology <= -4) {
