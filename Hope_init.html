@@ -288,13 +288,11 @@ campaignTrail_temp.temp_election_list = [
 
 campaignTrail_temp.credits = "<button onclick='credits()'>The Hope Team</button>"
 
-credits = function() {
-  credits = [ "Lead: AgreeableMachine91", "Coders: AgreebleMachine91, theanswerisme, Naimina OS, Ronnie", "Writing: UlricMorningstarG, Halligan Elysium, Vivarouis, Pringlescanstan, Cecilia, Waflef, GoodGamer, DalTheFox, theanswerisme, Ronnie, gW3n_b1@D3!, .metheguylbj", "Assets: .metheguylbj , SirOrion"]
-  text = "CREDITS:\n\n"
-  for (i in credits) {
-      text += credits[i] + "\n"
-  }
-  alert(text)
+window.credits = function() {
+    const creditsList = ["Lead: AgreeableMachine91", "Coders: AgreebleMachine91, theanswerisme, Naimina OS, Ronnie", "Writing: UlricMorningstarG, Halligan Elysium, Vivarouis, Pringlescanstan, Cecilia, Waflef, GoodGamer, DalTheFox, theanswerisme, Ronnie, gW3n_b1@D3!, .metheguylbj", "Assets: .metheguylbj, SirOrion"]
+    const text = "CREDITS:\n\n" + creditsList.join('\n');
+	
+	alert(text);
 }
 
 jet_data = {
@@ -356,11 +354,96 @@ document.getElementById("inner_window_1").children[0].innerHTML="<h3>Are you rea
 
 document.getElementById("inner_window_1").children[1].innerHTML = "<li>After twelve long years, you and a new generation of Americans have ascended to power.</li><li>The challenges ahead are immense. Every decision will be tested in public; every pause will read as weakness.</li><li>You will face hard questions, craft policy, and chart a course for a new era.</li><li>A young global order rests on your shoulders — will it bring stability and renewal, or slide into upheaval?</li><li>At home, the mandate is simpler, at least on paper: turn promise into results before patience runs out.</li><li>The portraits on the wall will watch you, the Hill will count the votes, and the press will keep score.</li><li>Soon you will learn: there are no “right” answers, only the possible.";
 
-document.head.innerHTML += '<link rel="stylesheet" href="https://unpkg.com/win95-theme@1.1.1/95.css">'
+// helper to ensure a stylesheet is appended only once
+function ensureStylesheet(url, id) {
+	// if an id is provided and exists, bail out
+	if (id && document.getElementById(id)) return;
+	// if a link with same href already exists, bail out
+	if (document.querySelector('link[rel="stylesheet"][href="' + url + '"]')) return;
+	const link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = url;
+	if (id) link.id = id;
+	document.head.appendChild(link);
+}
 
-document.head.innerHTML +=`
-<style>
+ensureStylesheet('https://unpkg.com/98.css', 'unpkg-98css');
 
+function ensureMetaViewport() {
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const m = document.createElement('meta');
+        m.name = 'viewport';
+        m.content = 'width=device-width, initial-scale=1';
+        document.head.appendChild(m);
+    }
+}
+
+applyGlobalStyles.sheets = {};
+
+function applyGlobalStyles(css, id = 'app-theme') {
+    if ('adoptedStyleSheets' in document && 'replaceSync' in CSSStyleSheet.prototype) {
+        if (!applyGlobalStyles.sheets[id]) {
+            applyGlobalStyles.sheets[id] = new CSSStyleSheet();
+            document.adoptedStyleSheets = [...document.adoptedStyleSheets, applyGlobalStyles.sheets[id]];
+        }
+        applyGlobalStyles.sheets[id].replaceSync(css);
+        return;
+    }
+
+    let el = document.getElementById(id);
+    if (!el) {
+        el = document.createElement('style');
+        el.id = id;
+        document.head.appendChild(el);
+    }
+    el.textContent = css;
+}
+
+const crtstyles = `
+@keyframes flicker {
+  0%, 100% { opacity: 0.25; }
+  15% { opacity: 0.9; }
+  25% { opacity: 0.85; }
+  45% { opacity: 0.85; }
+  50% { opacity: 0.95; }
+  55% { opacity: 0.1; }
+  60% { opacity: 0.2; }
+}
+
+@keyframes textShadow {
+  /* maybe something here? */
+}
+
+.crt {
+  animation: textShadow 1.6s infinite;
+}
+
+.crt::before {
+  content: "";
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.crt::after {
+  content: "";
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(186, 186, 186, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+`
+
+const css = `
     @font-face {
   font-family: digital;
   src: url(https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Fonts/digital);
@@ -372,22 +455,16 @@ document.head.innerHTML +=`
 
 @font-face {
     font-family: "Balboa W01 Black";
-    src: url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.eot");
-    src: url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.woff2")format("woff2"),
     url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/d46e5916bc8bfb80a4c0398f38cd0657.svg#Balboa W01 Black")format("svg");
 }
 
 @font-face {
     font-family: "Balboa W01 Medium";
-    src: url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.eot");
-    src: url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff2")format("woff2"),
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/cbf744f006175e2f7bb1583c91e33882.svg#Balboa W01 Medium")format("svg");
 }
 	
 #game_window {
@@ -660,7 +737,6 @@ input[type="radio"] {
   box-shadow:
     inset 2px 2px 0 #fff,
     inset -2px -2px 0 #888;
-  position: relative;
   cursor: pointer;
 }
 
@@ -740,7 +816,6 @@ text-rendering: optimizeSpeed;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
-  margin: 1px;
   border-bottom: 2px solid transparent;
 }
 
@@ -1199,15 +1274,26 @@ position: relative;
   position: relative;
   clear: both;
 }
-</style>`
 
-styling = document.createElement("style");
-document.head.appendChild(styling);          
-styling.innerHTML = `
 body {
     background-size: cover;
 }
-`
+
+/* psst: necessary to get tooltips working on 98.css */
+label[for^="game_answers"] {
+	line-height: 1.3 !important;
+}
+label[for^="game_answers"] {
+	display: inline-block !important;
+	align-items: initial !important;
+}
+
+`;
+
+ensureMetaViewport();
+
+applyGlobalStyles(crtstyles, 'crt-style');
+applyGlobalStyles(css, 'mod-style');
 
 // Tooltips
 
@@ -2017,90 +2103,75 @@ const gameWindow_player = document.getElementById("game_window");
 //use this function directly or put it in an event listener to start the music on the press of a certain button
 setupMusicPlayer();
 
-
-  document.head.innerHTML += `<link
-    rel="stylesheet"
-    href="https://jetsimon.com/public/crt.css"
-  >`
-  
-  document.body.classList.add("crt");
-          // ——— vhs crt whatever overlay ———
+// VHS CRT grain overlay
+document.body.classList.add("crt");
 const grainVideo = document.createElement('video');
 Object.assign(grainVideo, {
-  src:      'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Misc/Crt%20Vid',
+  src: 'https://files.catbox.moe/yby0oi.mp4',
   autoplay: true,
-  loop:     true,
-  muted:    true,
-});
-Object.assign(grainVideo.style, {
-  position:        'absolute',
-  top:             '0',
-  left:            '0',
-  width:           '100%',
-  height:          '100%',
-  objectFit:       'cover',
-  opacity:         '0.051',            // dial this down until it’s as subtle as you like
-  pointerEvents:   'none',
-  zIndex:          '9998',
-  mixBlendMode:    'screen',          // ← add this
-  filter:          'blur(3px)'
+  loop: true,
+  muted: true,
+  playsInline: true
 });
 
-function updateGrainOverlay() {
-  if (document.body.classList.contains('crt')) {
-    if (!document.body.contains(grainVideo)) {
-      document.body.appendChild(grainVideo);
-      grainVideo.currentTime = 0;   // rewind to start
-      grainVideo.play();            // restart playback
-    }
+Object.assign(grainVideo.style, {
+  position: 'fixed',
+  inset: '0',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  opacity: '0.051',
+  pointerEvents: 'none',
+  zIndex: '9998',
+  mixBlendMode: 'screen',
+  filter: 'blur(3px)'
+});
+
+document.body.appendChild(grainVideo);
+
+// CRT state management
+const crtStyle = document.createElement('style');
+document.head.appendChild(crtStyle);
+
+let crtOn = true;
+
+function toggleCRT() {
+  crtOn = !crtOn;
+  
+  // update character images
+  campaignTrail_temp.candidate_image_url = crtOn 
+    ? "https://files.catbox.moe/vpk7bp.gif"
+    : "https://files.catbox.moe/caux3s.png";
+  campaignTrail_temp.running_mate_image_url = crtOn
+    ? "https://files.catbox.moe/fcrql6.gif"
+    : "https://files.catbox.moe/8l930o.png";
+  
+  // update CRT effects
+  crtStyle.textContent = crtOn ? "" : ".crt::before {background: none;}";
+  document.body.classList.toggle("crt", crtOn);
+  
+  // toggle video playback
+  if (crtOn) {
+    grainVideo.style.display = 'block';
+    grainVideo.currentTime = 0;
+    grainVideo.play().catch(e => console.log('Video play failed:', e));
   } else {
-    if (document.body.contains(grainVideo)) {
-      grainVideo.pause();           // stop it cleanly
-      document.body.removeChild(grainVideo);
-    }
+    grainVideo.pause();
+    grainVideo.style.display = 'none';
+  }
+  
+  if (typeof updateCandidateImages === 'function') {
+    updateCandidateImages();
   }
 }
 
-// add it now if CRT is already on
-updateGrainOverlay();
-
-// and hook into your toggle
-// (assuming toggleCRT() is defined just below)
-const originalToggle = toggleCRT;
-toggleCRT = function(){
-  originalToggle();
-  updateGrainOverlay();
-};
-// ————————————————
-  
-  let crtStyle = document.createElement('style');
-document.head.appendChild(crtStyle);
-let crtOn = true;
-function toggleCRT() {
-    crtOn = !crtOn; // Flip ON/OFF
-    if (crtOn) {
-        campaignTrail_temp.candidate_image_url = "https://files.catbox.moe/vpk7bp.gif";
-        campaignTrail_temp.running_mate_image_url = "https://files.catbox.moe/fcrql6.gif";
-    } else {
-        campaignTrail_temp.candidate_image_url = "https://files.catbox.moe/caux3s.png";
-        campaignTrail_temp.running_mate_image_url = "https://files.catbox.moe/8l930o.png";
-    }
-    updateCandidateImages(); // <- You might need to refresh the display if required.
-}
-var setCRTLines = (enabled) => {
-  crtStyle.innerText = enabled ? "" : ".crt::before {background: none;}";
-}
-footer = $(".footer")[0]
-var button = document.createElement("button") // <button onclick="changeBanner()" style="font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;">Change banner</button>
-button.style = `font-weight: bold; height:19.49px; position: static; right: 770px; top: 0px;`
-button.innerHTML = "Toggle CRT Lines"
+// toggle button
+const footer = document.querySelector(".footer");
+const button = document.createElement("button");
+button.style.cssText = 'font-weight: bold; height: 19.49px;';
+button.textContent = "Toggle CRT Lines";
+button.addEventListener("click", toggleCRT);
 footer.insertBefore(button, footer.firstChild);
-button.addEventListener("click", () => {
-  crtOn = !crtOn;
-  setCRTLines(crtOn);
-  document.body.classList.toggle("crt", crtOn);
-  updateGrainOverlay();    // ← ensure the grain video is added/removed
-});
 
 RecReading=true
 e.collect_results=true;
@@ -2257,9 +2328,6 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
-
-
 
 
 
