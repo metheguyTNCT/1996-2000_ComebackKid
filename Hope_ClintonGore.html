@@ -107362,7 +107362,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             <!-- The New Joints -->
             <a href="#" id="whoweare" style="color: #ffffff; text-decoration: none;">Who We Are</a>
         <a href="#" id="whatwevedone" style="color: #ffffff; text-decoration: none;">What We've Done</a>
-        <a href="#" id="theclintonadmin" style="color: #ffffff; text-decoration: none;">The Clinton Admin</a>
+        <a href="#" id="theclintonadmin" style="color: #ffffff; text-decoration: none;">The Homefront</a>
     </div>
             </h3>
             </div>
@@ -107618,12 +107618,136 @@ showWin("ach-gay-rights")
 }
 } else if (lower_url=="clintongore.com/admin") {
     current_website="clintongore.com/admin";
-    webpage_html = `
-        <div style="color:white;font-family:times new roman;">
-            <h2>The Clinton Administration</h2>
-            <p>Placeholder content — you can expand this later.</p>
-        </div>`;
+   webpage_html = `
+<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; min-height:100vh;">
+
+    <!-- Clinton-Gore 96 Header -->
+    <div style="height:150px; text-align:center;">
+        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
+    </div>
+
+    <!-- Header Text + Bars Centered -->
+    <div style="text-align:center; margin-top:-80px;">
+        <h2 style="
+            font-family:'Balboa W01 Black';
+            color:black;
+            font-size:15px;
+            margin:0 0 3px 0;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            line-height:1;
+            display:inline-flex;
+            align-items:center;
+            gap:5px;
+        ">
+            The Minds
+            <img src="https://file.garden/aOp8cCiQ5ho9r5b1/mac.gif%3Fex%3D68fd1f7b%26amp%3Bis%3D68fbcdfb%26amp%3Bhm%3D940630ba3ef17bfcedce380a38110257d3c722e86092649d5a0fda4408f630ff%26amp%3B%3D" alt="America" style="height:18px;">
+        </h2>
+
+        <!-- Red + Blue Bar -->
+        <div style="width:250px; margin:5px auto 0 auto;">
+            <div style="height:4px; background:#c9002c;"></div>
+            <div style="height:20px; background:#004c7f;"></div>
+        </div>
+    </div>
+
+    <!-- Image + Body Text directly under header -->
+    <div style="
+        display:flex; 
+        flex-direction:column;
+        align-items:center;
+        margin-top:15px;
+    ">
+        <!-- Image Reveal -->
+        <img id="clintonwwaimage" src="https://file.garden/aOp8cCiQ5ho9r5b1/macpic.jpg" style="
+            width:200px;
+            border: 1px solid #c9002c;
+            box-shadow: 5px 5px 3px #ADADAD;
+        ">
+
+        <!-- Body Text -->
+        <div id="clintonwwatext" style="
+            font-size:12px;
+            margin-top:10px;
+            line-height:1.1em;
+            width:300px;
+            text-align:center;
+            height:90px;
+            overflow-y:auto;
+        ">
+        </div>
+    </div>
+
+    <!-- Bars with Titles and Dynamic Text -->
+    <div id="dynamicBarsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:20px;">
+        
+        <!-- Example Bar -->
+        <div id="bar-attorney" style="width:300px;">
+        <div style="height:4px; background:#c9002c;"></div>
+        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
+            <strong>Attorney General:</strong> <span id="attorney-text"></span>
+        </div>
+    </div>
+
+    <div id="bar-senmajleader" style="width:300px;">
+        <div style="height:4px; background:#c9002c;"></div>
+        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
+            <strong>Senate Majority Leader:</strong> <span id="senmaj-text">George Mitchell</span>
+        </div>
+    </div>
+
+    <div id="bar-speaker" style="width:300px;">
+        <div style="height:4px; background:#c9002c;"></div>
+        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
+            <strong>Speaker Of The House:</strong> <span id="soth-text">Thomas Foley</span>
+        </div>
+    </div>
+
+    <div id="bar-healthcare" style="width:300px;">
+        <div style="height:4px; background:#c9002c;"></div>
+        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
+            <strong>Leader Of Healthcare Reform:</strong> <span id="healthcare-text"></span>
+        </div>
+    </div>
+
+    <div id="bar-budget" style="width:300px;">
+        <div style="height:4px; background:#c9002c;"></div>
+        <div style="background:#004c7f; color:white; padding:6px 8px; font-family:'Balboa W01 Black'; font-size:12px;">
+            <strong>Leader of Budget Plan:</strong> <span id="budget-text"></span>
+        </div>
+    </div>
+
+    </div>
+</div>
+`;
     document.getElementById("webpage_html").innerHTML = webpage_html;
+    if (e.player_answers.includes(60001)) {
+    document.getElementById("attorney-text").innerText = "Kimba Wood";
+    } else if (e.player_answers.includes(60002) || e.player_answers.includes(60003) || e.player_answers.includes(92005.5) || e.player_answers.includes(92006.5) || e.player_answers.includes(92007.5) || e.player_answers.includes(98005.5) || e.player_answers.includes(98007.5)) {
+    document.getElementById("press-text").innerText = "Janet Reno";
+    } if (SlimGOPCongress == 1) {
+    if (e.player_answers.includes(88005.5) && (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5))) {
+    document.getElementById("sothu-text").innerText = "Bob Michel";
+    } else {
+    document.getElementById("sothu-text").innerText = "Newt Gingrich";
+    }
+    document.getElementById("senmaj-text").innerText = "Tom Dashcle";
+    } else if (RepublicanRevolution == 1 || DisasterMidterms == 1) {
+    document.getElementById("sothu-text").innerText = "Newt Gingrich";
+    document.getElementById("senmaj-text").innerText = "Bob Dole";
+    } if (e.player_answers.includes(50006)) {
+    document.getElementById("healthcare-text").innerText = "Hillary Clinton";
+    } else if (e.player_answers.includes(50007)) {
+    document.getElementById("healthcare-text").innerText = "President Clinton & Congressional GOP";
+    } else if (e.player_answers.includes(50008)) {
+    document.getElementById("healthcare-text").innerText = "President Clinton & Congressional Dems";  
+    } if (e.player_answers.includes(30001)) {
+    document.getElementById("budget-text").innerText = "Lloyd Bentsen";  
+    } else if (e.player_answers.includes(30002)) {
+    document.getElementById("budget-text").innerText = "Robert Reich"; 
+    } else if (e.player_answers.includes(30003)) {
+    document.getElementById("budget-text").innerText = "President Clinton"; 
+    }
     } else {
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
