@@ -1,10 +1,6 @@
 e = campaignTrail_temp;
 campaignTrail_temp.cyoa = true;
-const customStyling = document.createElement("style");
-customStyling.innerHTML = `
 
-`;
-document.head.appendChild(customStyling);
 function getQuestionNumberFromPk(pk) {
     return campaignTrail_temp.questions_json.map(q=>q.pk).indexOf(pk)-1;
 }
@@ -107754,6 +107750,8 @@ function createDraggableBox() {
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
     draggableBox.style.lineWidth = '0';
+	draggableBox.style.zIndex = '100';
+	
     if(!(localStorage.getItem("clickedBox"))){
     alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
     localStorage.setItem("clickedBox", "true")
@@ -107911,27 +107909,28 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     } else if (lower_url=="clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
-            webpage_html+=`
-        <div style="
-            background: linear-gradient(to right, #003366 50%, #ff0000 50%);
-            width:451px;
-            vertical-align:top;
-            font-family: times new roman;
-            display:inline-block;
-            height: auto; ">
-            <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
+            webpage_html+=`<div style="
+                background: linear-gradient(to right, #003366 50%, #ff0000 50%);
+                width:451px;
+                vertical-align:top;
+                font-family: times new roman;
+                display:inline-block;
+                height: auto;
+                            ">
+            
+                <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
                 margin-left: 96px; 
                 margin-right: 0;
                 padding-top: 5px">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
-                <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
-                <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
+           <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
+            <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
+            <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
             </div>
                 <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; 
                 ">
             <div style="
-                display: flex;
-                align-items: center; 
+            display: flex;
+            align-items: center; 
             justify-content: center; 
             gap: 50px; 
             padding-top: 5px; 
@@ -107939,13 +107938,13 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             font-style: italic;
             color: #ffffff;
             ">
-                <!-- The New Joints -->
-                <p href="#" id="whoweare">Who We Are</a>
-                <p href="#" id="whatwevedone">What We've Done</a>
-                <p href="#" id="theclintonadmin">The Homefront</a>
+            <!-- The New Joints -->
+            <p href="#" id="whoweare">Who We Are</a>
+        <p href="#" id="whatwevedone">What We've Done</a>
+        <p href="#" id="theclintonadmin">The Homefront</a>
+    </div>
             </div>
-        </div>
-         `;
+            `;
     
     document.getElementById("webpage_html").innerHTML = webpage_html;
     document.addEventListener("click", function(e) {
