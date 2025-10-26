@@ -1,10 +1,6 @@
 e = campaignTrail_temp;
 campaignTrail_temp.cyoa = true;
-const customStyling = document.createElement("style");
-customStyling.innerHTML = `
 
-`;
-document.head.appendChild(customStyling);
 function getQuestionNumberFromPk(pk) {
     return campaignTrail_temp.questions_json.map(q=>q.pk).indexOf(pk)-1;
 }
@@ -107754,6 +107750,8 @@ function createDraggableBox() {
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
     draggableBox.style.lineWidth = '0';
+	draggableBox.style.zIndex = '100';
+	
     if(!(localStorage.getItem("clickedBox"))){
     alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
     localStorage.setItem("clickedBox", "true")
@@ -107911,27 +107909,28 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     } else if (lower_url=="clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
-            webpage_html+=`
-        <div style="
-            background: linear-gradient(to right, #003366 50%, #ff0000 50%);
-            width:451px;
-            vertical-align:top;
-            font-family: times new roman;
-            display:inline-block;
-            height: auto; ">
-            <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
+            webpage_html+=`<div style="
+                background: linear-gradient(to right, #003366 50%, #ff0000 50%);
+                width:451px;
+                vertical-align:top;
+                font-family: times new roman;
+                display:inline-block;
+                height: auto;
+                            ">
+            
+                <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
                 margin-left: 96px; 
                 margin-right: 0;
                 padding-top: 5px">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
-                <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
-                <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
+           <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
+            <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
+            <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
             </div>
                 <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; 
                 ">
             <div style="
-                display: flex;
-                align-items: center; 
+            display: flex;
+            align-items: center; 
             justify-content: center; 
             gap: 50px; 
             padding-top: 5px; 
@@ -107939,13 +107938,13 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             font-style: italic;
             color: #ffffff;
             ">
-                <!-- The New Joints -->
-                <p href="#" id="whoweare">Who We Are</a>
-                <p href="#" id="whatwevedone">What We've Done</a>
-                <p href="#" id="theclintonadmin">The Homefront</a>
+            <!-- The New Joints -->
+            <p href="#" id="whoweare">Who We Are</a>
+        <p href="#" id="whatwevedone">What We've Done</a>
+        <p href="#" id="theclintonadmin">The Homefront</a>
+    </div>
             </div>
-        </div>
-         `;
+            `;
     
     document.getElementById("webpage_html").innerHTML = webpage_html;
     document.addEventListener("click", function(e) {
@@ -107968,7 +107967,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 } else if (lower_url=="clintongore.com/whoweare") {
     current_website="clintongore.com/whoweare";
     webpage_html = `
-<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
+<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:hidden;">
 
     <!-- Clinton-Gore 96 Header -->
         <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
@@ -108005,7 +108004,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
         <!-- Red + Blue Bar -->
         <div style="width:250px;"> <!-- Change width here -->
             <div style="height:4px; background:#c9002c;"></div>
-            <div style="height:20px; background:#006699;"></div> <!-- Change banner height here -->
+            <div style="height:20px; background:#004c7f;"></div> <!-- Change banner height here -->
         </div>
     </div>
 </div>
@@ -108017,6 +108016,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     margin-left:15px;
     border-left: 3px black solid;
     padding-left: 10px;
+    display:flex;
     padding-top: 5px;
 ">
     <!-- Image Reveal -->
@@ -108026,7 +108026,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
         box-shadow: 5px 5px 3px #ADADAD;
     ">
     <!-- Body Text -->
-    <div id="clintonwwatext" style="font-size:12px; margin-top: 10px; line-height:1.1em; height:auto;">
+    <div id="clintonwwatext" style="font-size:12px; margin-top: 10px; line-height:1.1em; height:90px; overflow-y:auto;">
     </div>
 </div>`;
 document.getElementById("webpage_html").innerHTML = webpage_html;
@@ -108055,7 +108055,7 @@ webpage_html = `
     text-decoration: underline;
     text-align:center;
     line-height: 1;
-    cursor: pointer;
+
 }
 </style>
 <div style="
@@ -108082,56 +108082,17 @@ webpage_html = `
         display: flex;">
 
         <div style="
-            width:301px;
+            width: auto;
             height: auto;
             background: #FFF;
+            flex-grow: 1;
             border-right: 3px black double;
-        ">
-            <div id="beginscreen" style="
-            display: flex;
-            flex-direction:column;
-            gap:0px;
-            height:auto;
             ">
-                <div style="
-                background-image: url('https://www.livingroomcandidate.org/websites/cg96/rissue.gif');
-                Height: 50px;
-                width: 250px;
-                display: block;
-                background-size: 200px;
-                background-repeat: no-repeat;
-                background-position: center;
-                margin: auto;
-                ">
-                </div>
-                <div style="
-                height: 6px;
-                width: 290px;
-                margin: auto;
-                background: linear-gradient(180deg,rgba(2, 16, 90, 1) 0%, rgba(2, 16, 90, 1) 33%, rgba(255, 255, 255, 1) 33%, rgba(255, 255, 255, 1) 66%, rgba(190, 0, 35, 1) 66%, rgba(190, 0, 35, 1) 100%);
-                ">
-                </div>
-                <div style="
-                height: auto;
-                line-height: 1;
-                font-size: 12px;
-                padding: 5px;
-                text-align: center;
-                margin: auto;
-                font-style: italic;
-                ">
-                (Filler if you couldn't tell) Sidney Patrick Crosby OC ONS (born August 7, 1987) is a Canadian professional ice hockey centre and captain of the Pittsburgh Penguins of the National Hockey League (NHL). Nicknamed "Sid the Kid" and dubbed "The Next One", he was selected first overall by the Penguins in the 2005 NHL entry draft.
-                </div>
-                <div style="
-                height: 6px;
-                width: 250px;
-                margin: auto;
-                background: linear-gradient(180deg,rgba(2, 16, 90, 1) 0%, rgba(2, 16, 90, 1) 33%, rgba(255, 255, 255, 1) 33%, rgba(255, 255, 255, 1) 66%, rgba(190, 0, 35, 1) 66%, rgba(190, 0, 35, 1) 100%);
-                ">
-                </div>
-            </div>
+            <div style="
 
-            <img id= "wingif" src="https://www.livingroomcandidate.org/websites/cg96/d7.gif" style= "
+            ">
+            </div>
+            <img src="https://www.livingroomcandidate.org/websites/cg96/d7.gif" style= "
             width: 200px;
             height: 200px;
             display: none;
@@ -108146,19 +108107,23 @@ webpage_html = `
             flex-direction:column;
             width: 150px;
         ">
-                    <h2 id="columnheader" style="
-                    font-family:'Balboa W01 Black';
-                    font-size:15px;
-                    text-transform:uppercase;
-                    margin: 0px 8px;
-                    padding-left:4px;
-                    border-left:3px black solid;
-                    line-height:1;
-                    letter-spacing:1px;
-                    ">What We Accomplished
-                    </h2>
-                    <div id="columnheader" style="height:4px; background:#c9002c;"></div>
-                    <div id="columnheader" style="height:20px; background:#006699;"></div>
+            <h2 style="
+                font-family:'Balboa W01 Black';
+                font-size:15px;
+                text-transform:uppercase;
+                margin: 0px 8px;
+                padding-left:4px;
+                border-left:3px black solid;
+                line-height:1;
+                letter-spacing:1px;
+                ">What We Accomplished
+            </h2>
+
+                <div style="width:auto;">
+                    <div style="height:4px; background:#c9002c;"></div>
+                    <div style="height:20px; background:#004c7f;"></div>
+                </div>
+
                 <!-- ACHIEVEMENT CONTAINER -->
             <div id="achievementsContainer" style="
                 padding-top: 10px;
@@ -108216,22 +108181,6 @@ function showWin(winId) {
         winItem.style.display = "block";       // Make visible
     }
 }
-    document.addEventListener("click", function(e) {
-    if (e.target.className === "wins") {
-    document.getElementById("wingif").style.display = "block";
-    document.getElementById("beginscreen").style.display = "none";
-    }
-    if (e.target.id === "columnheader") {
-    document.getElementById("beginscreen").style.display = "block";
-    document.getElementById("wingif").style.display = "none";
-    }
-    if (e.target.id === "ach-deficit") {
-    document.getElementById("wingif").src = "https://www.livingroomcandidate.org/websites/cg96/d7.gif";
-    }
-    if (e.target.id === "ach-gay-rights") {
-    document.getElementById("wingif").src = "none";
-    }
-});
 if (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5)) {
 showWin("ach-gun-bill")
 }
@@ -108260,8 +108209,8 @@ showWin("ach-gay-rights")
     current_website="clintongore.com/admin";
    webpage_html = `
    <style>
-        .bluebar {
-    background:#006699; 
+           .bluebar {
+    background:#004c7f; 
     display: flex;
     align-items: center;
     color:white; 
