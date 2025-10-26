@@ -107345,26 +107345,35 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
                 width:451px;
                 vertical-align:top;
                 font-family: times new roman;
-                top:0;
-                left:0;
                 display:inline-block;
-                padding:4px;
+                height: auto;
                             ">
             
-            <h1> 
-                <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="margin-left: 96px; margin-right: 0;">
+                <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
+                margin-left: 96px; 
+                margin-right: 0;
+                padding-top: 5px">
            <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
             <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
             <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
             </div>
-                <h3> <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; margin-top: -15px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0;">
+                <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; 
+                ">
+            <div style="
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            gap: 50px; 
+            padding-top: 5px; 
+            font-size: 13px;
+            font-style: italic;
+            color: #ffffff;
+            ">
             <!-- The New Joints -->
-            <a href="#" id="whoweare" style="color: #ffffff; text-decoration: none;">Who We Are</a>
-        <a href="#" id="whatwevedone" style="color: #ffffff; text-decoration: none;">What We've Done</a>
-        <a href="#" id="theclintonadmin" style="color: #ffffff; text-decoration: none;">The Homefront</a>
+            <p href="#" id="whoweare">Who We Are</a>
+        <p href="#" id="whatwevedone">What We've Done</a>
+        <p href="#" id="theclintonadmin">The Homefront</a>
     </div>
-            </h3>
             </div>
             `;
     
@@ -107392,16 +107401,17 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:hidden;">
 
     <!-- Clinton-Gore 96 Header -->
-    <div style=" height:150px; text-align:center;">
-        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
-    </div>
+        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
+        width: 300px; 
+        display: block; 
+        margin: auto;">
 
     <!-- Banner Group Under Clinton-Gore Header -->
 <div style="
     display:flex;
     align-items:flex-end;
     margin-left:10px;   /* moves everything LEFT under logo */
-    margin-top:-100px;   /* move UP or DOWN to adjust height under logo */
+    
 ">
 
     <!-- Slogan + Bars -->
@@ -107467,118 +107477,128 @@ document.getElementById("clintonwwatext").innerText = "The President of the Unit
 } else if (lower_url=="clintongore.com/achievements") {
 current_website = "clintongore.com/achievements";
 webpage_html = `
+<style>
+.wins {
+    width: auto;
+    font-family: "Times New Roman";
+    font-size: 13px;
+    color: rgb(0, 16, 88);
+    text-decoration: underline;
+    text-align:center;
+    line-height: 1;
+
+}
+</style>
 <div style="
     background:white; 
     width:451px; 
-    min-height:100vh; /* full viewport height */
+    height: auto; 
     font-family:'Times New Roman'; 
     overflow:auto; /* allow scrolling if content grows */
-">
+    ">
 
     <!-- Clinton-Gore 96 Header -->
-    <div style="height:150px; text-align:center;">
+    <div style="
+        height:50px; 
+        width: auto; 
+        border-bottom: 3px black double;
+        text-align:center;">
         <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
     </div>
 
     <!-- Achievements Page Title -->
+
+    <!-- Annoying ass flex shit that keeps everything together -->
     <div style="
-        margin-left:10px;
-        margin-top:-100px;
-        display:flex;
-        flex-direction:column;
-    ">
-        <h2 style="
-            font-family:'Balboa W01 Black';
-            font-size:15px;
-            text-transform:uppercase;
-            margin:0 0 3px 5px;
-            padding-left:4px;
-            border-left:3px black solid;
-            line-height:1;
-            letter-spacing:1px;
-        ">What We Accomplished</h2>
+        display: flex;">
 
-        <div style="width:250px; margin-left:5px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="height:20px; background:#004c7f;"></div>
+        <div style="
+            width: auto;
+            height: auto;
+            background: #FFF;
+            flex-grow: 1;
+            border-right: 3px black double;
+            ">
+            <div style="
+
+            ">
+            </div>
+            <img src="https://www.livingroomcandidate.org/websites/cg96/d7.gif" style= "
+            width: 200px;
+            height: 200px;
+            display: none;
+            margin: auto;
+            padding-top: 10px;
+            ">
         </div>
-    </div>
 
-    <!-- ACHIEVEMENT CONTAINER -->
-    <div id="achievementsContainer" style="
-        margin-top:10px;
-        margin-left:15px;
-        padding-left:5px;
-        display:flex;
-        flex-direction:column;
-        gap:6px;
-    ">
-        <!-- Hidden Achievement Blocks (revealed dynamically) -->
+        <div style="
+            float: right;
+            display:flex;
+            flex-direction:column;
+            width: 150px;
+        ">
+            <h2 style="
+                font-family:'Balboa W01 Black';
+                font-size:15px;
+                text-transform:uppercase;
+                margin: 0px 8px;
+                padding-left:4px;
+                border-left:3px black solid;
+                line-height:1;
+                letter-spacing:1px;
+                ">What We Accomplished
+            </h2>
 
-        <div id="ach-bicare" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                PASSED <span style="color:#00eaff;">BIPARTISAN HEALTHCARE REFORM</span>.
+                <div style="width:auto;">
+                    <div style="height:4px; background:#c9002c;"></div>
+                    <div style="height:20px; background:#004c7f;"></div>
+                </div>
+
+                <!-- ACHIEVEMENT CONTAINER -->
+            <div id="achievementsContainer" style="
+                padding-top: 10px;
+                display:flex;
+                flex-direction:column;
+                min-height: 100px;
+                padding-bottom: 25px;
+                gap: 10px;
+             ">
+                <!-- Hidden Achievement Blocks (revealed dynamically) -->
+
+                <div id="ach-bicare" class="wins" style="display:none;">
+                Passed Bipartisan Healthcare Reform
+                </div>
+
+                <div id="ach-unicare" class="wins" style="display:none;">
+                Passed Universial Healthcare
+                </div>
+
+                <div id="ach-mitchcare" class="wins" style="display:none;">
+                Congress-Led Healthcare Reform
+                </div>
+
+                <div id="ach-oslo" class="wins" style="display:none;">
+                Secured Peace in the Levant
+                </div>
+
+                <div id="ach-welfare" class="wins" style="display:none;">
+                Ended Welfare as we Know it
+                </div>
+
+                <div id="ach-deficit" class="wins" style="display:none;">
+                Eliminated the Deficit
+                </div>
+
+                <div id="ach-gay-rights" class="wins" style="display:none;">
+                Established Civil Unions
+                </div>
+
+                <div id="ach-gun-bill" class="wins" style="display:none;">
+                Passed an Assualt Weapons Ban
+                </div>
             </div>
         </div>
-
-        <div id="ach-unicare" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                PASSED <span>UNIVERSAL HEALTHCARE</span>.
-            </div>
-        </div>
-
-        <div id="ach-mitchcare" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                PASSED <span>CONGRESS-LED HEALTHCARE REFORM</span>.
-            </div>
-        </div>
-
-        <div id="ach-oslo" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                SECURED <span>PEACE IN THE MIDDLE EAST</span>.
-            </div>
-        </div>
-
-        <div id="ach-welfare" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                ENDED <span>WELFARE AS WE KNEW IT</span>.
-            </div>
-        </div>
-
-        <div id="ach-deficit" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                GAVE AMERICA <span>A SURPLUS</span>.
-            </div>
-        </div>
-
-        <div id="ach-gay-rights" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                ESTABLISHED <span>CIVIL UNIONS</span>.
-            </div>
-        </div>
-
-        <div id="ach-gun-bill" style="display:none; width:260px;">
-            <div style="height:4px; background:#c9002c;"></div>
-            <div style="background:#004c7f; color:white; padding:6px 8px;
-                        font-family:'Balboa W01 Black'; font-size:12px;">
-                 PASSED AN <span>ASSAULT WEAPONS BAN</span>.
-            </div>
-        </div>
-
     </div>
 </div>
 `;
@@ -107651,16 +107671,17 @@ showWin("ach-gay-rights")
     padding-top: 5px;
     }
 </style>
-<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; min-height:100vh;">
+<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
-    <div style="height:150px; text-align:center;">
-        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
-    </div>
+        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
+        width: 300px; 
+        display: block; 
+        margin: auto;">
 
     <!-- Header Text + Bars Centered -->
 
-    <div style="text-align:center; margin-top:-80px;">
+    <div style="text-align:center;">
 
     <div style= "
     display: flex;
@@ -107668,7 +107689,7 @@ showWin("ach-gay-rights")
     flex-direction: column;
     ">
 
-            <img src="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/Minds%20Making%20America" alt="America" style="height:50px;">
+            <img src="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/ClintonGore.com/Minds%20Making%20America" alt="America" style="height:50px;">
 
         <!-- Image Reveal -->
         <img src="https://file.garden/aOp8cCiQ5ho9r5b1/macpic.jpg" style="
