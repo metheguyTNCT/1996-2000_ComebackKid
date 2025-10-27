@@ -102801,7 +102801,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${economyHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
-    } else if (lower_url=="clintongore.com") {
+    }  else if (lower_url=="clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
             webpage_html+=`<div style="
@@ -102841,25 +102841,9 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             </div>
             `;
     
-    document.getElementById("webpage_html").innerHTML = webpage_html;
-    document.addEventListener("click", function(e) {
-    if (e.target.id === "whoweare") {
-        e.preventDefault();
-        current_website = "clintongore.com/whoweare";
-        website_handler();
-    }
-    if (e.target.id === "whatwevedone") {
-        e.preventDefault();
-        current_website = "clintongore.com/achievements";
-        website_handler();
-    }
-    if (e.target.id === "theclintonadmin") {
-        e.preventDefault();
-        current_website = "clintongore.com/admin";
-        website_handler();
-    }
-});
-} else if (lower_url=="clintongore.com/whoweare") {
+    webpageContainer.innerHTML = webpage_html;
+
+  } else if (lower_url=="clintongore.com/whoweare") {
     current_website="clintongore.com/whoweare";
     webpage_html = `
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
@@ -102924,15 +102908,8 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     <div id="clintonwwatext" style="font-size:12px; margin-top: 10px; line-height:1.1em; height:auto;">
     </div>
 </div>`;
-document.getElementById("webpage_html").innerHTML = webpage_html;
-document.addEventListener("click", function(e) {
+webpageContainer.innerHTML = webpage_html;
 
-    if (e.target.id === "header") {
-    e.preventDefault();
-    current_website = "clintongore.com";
-    website_handler();
-    }
-});
 if (Ideology <= -4) {
 document.getElementById("wwaheader").innerText = "United In Our Core Values";
 document.getElementById("clintonwwaimage").src = "https://file.garden/aOp8cCiQ5ho9r5b1/Clintonfamily.png%3Fex%3D68fd1923%26amp%3Bis%3D68fbc7a3%26amp%3Bhm%3D6aa8fa6116799cdd24a5713bbfa9898ad9596ff4be9f3c31a18ab46cb18dda64%26amp%3B%3D%26amp%3Bformat%3Dwebp%26amp%3Bquality%3Dlossless";
@@ -103109,7 +103086,7 @@ webpage_html = `
     </div>
 </div>
 `;
-    document.getElementById("webpage_html").innerHTML = webpage_html;
+    webpageContainer.innerHTML = webpage_html;
 function showWin(winId) {
     const winItem = document.getElementById(winId);
 
@@ -103119,28 +103096,6 @@ function showWin(winId) {
         winItem.style.display = "block";       // Make visible
     }
 }
-    document.addEventListener("click", function(e) {
-
-    if (e.target.id === "header") {
-    e.preventDefault();
-    current_website = "clintongore.com";
-    website_handler();
-    }
-    if (e.target.className === "wins") {
-    document.getElementById("wingif").style.display = "block";
-    document.getElementById("beginscreen").style.display = "none";
-    }
-    if (e.target.id === "columnheader") {
-    document.getElementById("beginscreen").style.display = "block";
-    document.getElementById("wingif").style.display = "none";
-    }
-    if (e.target.id === "ach-deficit") {
-    document.getElementById("wingif").src = "https://www.livingroomcandidate.org/websites/cg96/d7.gif";
-    }
-    if (e.target.id === "ach-gay-rights") {
-    document.getElementById("wingif").src = "none";
-    }
-});
 
 if (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5)) {
 showWin("ach-gun-bill")
@@ -103279,7 +103234,7 @@ showWin("ach-gay-rights")
     </div>
 </div>
 `;
-    document.getElementById("webpage_html").innerHTML = webpage_html;
+    webpageContainer.innerHTML = webpage_html;
     if (e.player_answers.includes(60001)) {
     document.getElementById("attorney-text").innerText = "Kimba Wood";
     } else if (e.player_answers.includes(60002) || e.player_answers.includes(60003) || e.player_answers.includes(92005.5) || e.player_answers.includes(92006.5) || e.player_answers.includes(92007.5) || e.player_answers.includes(98005.5) || e.player_answers.includes(98007.5)) {
@@ -103311,25 +103266,16 @@ showWin("ach-gay-rights")
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
 }
-    document.addEventListener("click", function(e) {
-
-    if (e.target.id === "header") {
-    e.preventDefault();
-    current_website = "clintongore.com";
-    website_handler();
-    }
-});
 
 window.website_back = function() {
-  if (browser_history[history_index - 1] != null) {
-    console.log("Backward");
-    history_index -= 1;
+  if (history_index > 0) {
+    history_index--;
+    current_website = browser_history[history_index];
+    document.getElementById("website_search_bar").value = current_website;
+    website_handler();
   } else {
     console.log("No history available backward");
   }
-  document.getElementById("website_search_bar").value = browser_history[history_index];
-  current_website = browser_history[history_index];
-  website_handler();
 };
 
 window.website_forward = function() {
