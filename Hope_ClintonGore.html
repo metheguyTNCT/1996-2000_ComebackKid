@@ -102644,10 +102644,9 @@ function createDraggableBox() {
     draggableBox.style.right = '20px'; // Spawns 20px from the right edge
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
-    draggableBox.style.lineWidth = '0';
 	draggableBox.style.zIndex = '100';
 	
-    if(!(localStorage.getItem("clickedBox"))){
+    if(!localStorage.getItem("clickedBox")){
     alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
     localStorage.setItem("clickedBox", "true")
     }
@@ -102696,6 +102695,7 @@ function createDraggableBox() {
     });
 
     document.body.appendChild(draggableBox);
+    document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
     searchbar = document.getElementById('website_search_bar');
 
 searchbar.addEventListener('keydown', (event) => {
@@ -102753,6 +102753,12 @@ function handleWebpageClick(e) {
 }
 
 function website_handler() {
+    const webpageContainer = document.getElementById("webpage_html");
+    if (!webpageContainer) {
+        console.error("Could not find the #webpage_html container");
+        return;
+    }
+
 	console.log(current_website);
     lower_url=current_website.toLowerCase();
 	if (lower_url=="republicanstowatchoutfor.com") {
@@ -102828,12 +102834,11 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             </p></div></div>`;
         }
 
-        document.getElementById("webpage_html").innerHTML = webpage_html;
-
+        webpageContainer.innerHTML = webpage_html;
 
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${economyHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
-    }  else if (lower_url=="clintongore.com") {
+    } else if (lower_url=="clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
             webpage_html+=`<div style="
