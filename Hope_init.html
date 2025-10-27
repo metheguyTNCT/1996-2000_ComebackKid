@@ -2081,42 +2081,11 @@ document.head.appendChild(crtStyle);
 
 let crtOn = true;
 
-function toggleCRT() {
-  crtOn = !crtOn;
-  
-  // update character images
-  campaignTrail_temp.candidate_image_url = crtOn 
-    ? "https://files.catbox.moe/vpk7bp.gif"
-    : "https://files.catbox.moe/caux3s.png";
-  campaignTrail_temp.running_mate_image_url = crtOn
-    ? "https://files.catbox.moe/fcrql6.gif"
-    : "https://files.catbox.moe/8l930o.png";
-  
-  // update CRT effects
-  crtStyle.textContent = crtOn ? "" : ".crt::before {background: none;}";
-  document.body.classList.toggle("crt", crtOn);
-  
-  // toggle video playback
-  if (crtOn) {
-    grainVideo.style.display = 'block';
-    grainVideo.currentTime = 0;
-    grainVideo.play().catch(e => console.log('Video play failed:', e));
-  } else {
-    grainVideo.pause();
-    grainVideo.style.display = 'none';
-  }
-  
-  if (typeof updateCandidateImages === 'function') {
-    updateCandidateImages();
-  }
-}
-
 // toggle button
 const footer = document.querySelector(".footer");
 const button = document.createElement("button");
 button.style.cssText = 'font-weight: bold; height: 19.49px;';
 button.textContent = "Toggle CRT Lines";
-button.addEventListener("click", toggleCRT);
 footer.insertBefore(button, footer.firstChild);
 
 RecReading=true
