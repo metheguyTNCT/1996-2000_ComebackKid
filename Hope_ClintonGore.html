@@ -102720,6 +102720,38 @@ website_handler();
   }
 }
 
+function handleWebpageClick(e) {
+  const targetId = e.target.id;
+  
+  if (targetId === "header") {
+    e.preventDefault();
+    current_website = "clintongore.com";
+    website_handler();
+  } else if (targetId === "whoweare") {
+    e.preventDefault();
+    current_website = "clintongore.com/whoweare";
+    website_handler();
+  } else if (targetId === "whatwevedone") {
+    e.preventDefault();
+    current_website = "clintongore.com/achievements";
+    website_handler();
+  } else if (targetId === "theclintonadmin") {
+    e.preventDefault();
+    current_website = "clintongore.com/admin";
+    website_handler();
+  } else if (e.target.className === "wins") {
+    document.getElementById("wingif").style.display = "block";
+    document.getElementById("beginscreen").style.display = "none";
+  } else if (targetId === "columnheader") {
+    document.getElementById("beginscreen").style.display = "block";
+    document.getElementById("wingif").style.display = "none";
+  } else if (targetId === "ach-deficit") {
+    document.getElementById("wingif").src = "https://www.livingroomcandidate.org/websites/cg96/d7.gif";
+  } else if (targetId === "ach-gay-rights") {
+    document.getElementById("wingif").src = "none";
+  }
+}
+
 function website_handler() {
 	console.log(current_website);
     lower_url=current_website.toLowerCase();
