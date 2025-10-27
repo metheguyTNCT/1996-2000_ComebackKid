@@ -98131,6 +98131,7 @@ campaignTrail_temp.questions_json[15] = tunnel("question_16_healthcareMIT");
     campaignTrail_temp.questions_json[17] = tunnel("question_18_nocomp");
     }
     } else if (LEGWin >= 6 && backlash <= 3) {
+    if (e.player_answers.includes(93001.5)) {
     campaignTrail_temp.questions_json[17] = tunnel("question_18_sleep_comp");
     } else {
     campaignTrail_temp.questions_json[17] = tunnel("question_18_sleep_nocomp");
@@ -98279,6 +98280,7 @@ campaignTrail_temp.questions_json[15] = tunnel("question_16_healthcareMIT");
         campaignTrail_temp.questions_json[19] = tunnel("question_20_bosnia_fading"); 
         } else {
         campaignTrail_temp.questions_json[19] = tunnel("question_20_bosnia_quagmire");
+        } 
         } else {
         if (e.player_answers.includes(80003) && e.player_answers.includes(85002.5)) {
         campaignTrail_temp.questions_json[19] = tunnel("question_20_bosnia_win");
