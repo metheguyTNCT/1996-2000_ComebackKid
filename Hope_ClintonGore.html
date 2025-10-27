@@ -970,7 +970,7 @@ campaignTrail_temp.questions_json = [
         "pk": "campaign_1_bono",
         "fields": {
             "priority": 0,
-            "description": "Since the Republican Revolution, you’ve been going through a certain amount of soul-searching to finally reclaim the dynamism that propelled your campaign in 1992. Despite the sort of celebrity whirlwind surrounding the RNC this year, this is still an election season like any other, and you need to prepare some messaging. What do you think?",
+            "description": "Harkening back to the shouting matches he had with Palm Springs City Hall just to get a sign for his restaurant, Bono frames his campaign as the fight of ordinary citizens against a corrupt, entrenched, and inefficient regulatory bureaucracy, one that’s been fostered and made worse by you. In high-pitched, nasally sermons, he exasperatedly laments how “Government has become too big, too intrusive, too easy with money,” and sings a self-deprecating song that he's not a slick, smart politician, but a pissed off reformist, everyman. How can we cut the music?",
             "likelihood": 1
         }
     },
@@ -6299,7 +6299,7 @@ campaignTrail_temp.answers_json = [
         "pk": 86001.522,
         "fields": {
             "question": "campaign_1_bono",
-            "description": "Get Dick Morris back. What people want, what they understand, are numbers, action, real, actual, tangible results. Let’s return to that image of common-sense pragmatism, far from the extremes on either side."
+            "description": " I agree with Congressman Bono that debilitating federal bureaucracy is an issue. That’s why I’ve taken more action than any President in the last 30 years to create a leaner, meaner federal government, the smallest one since Kennedy, in fact. The Republicans sure can talk a big game here, but I’ve been the one to bring results."
         }
     },
     {
@@ -6379,7 +6379,7 @@ campaignTrail_temp.answers_json = [
         "pk": 86002.522,
         "fields": {
             "question": "campaign_1_bono",
-            "description": "Let’s use ''McIssues'' — simple stuff that the polls show us winning on. Things that aren’t too hard for us to do, but show we’re still working and not resting on our laurels. They’ll make the voters feel important."
+            "description": "Reinventing government is important. Gore and I have laid out comprehensive plans on how to shrink bureaucracy, but you don’t hear much in terms of specifics from my Republican opponents. Seriously, I challenge Congressman Bono to go into detail about his proposals. You can’t wave the finer points away here; this is serious stuff that affects people’s lives and families."
         }
     },
     {
@@ -6403,7 +6403,7 @@ campaignTrail_temp.answers_json = [
         "pk": 86003.522,
         "fields": {
             "question": "campaign_1_bono",
-            "description": "Let’s not make this harder than it is. We got a lot done, brought the economy back. Now some celebrity wants to tear it all down just 'cause we asked polluters to pay their fair share. The American people know better, they know who’s been fighting for them."
+            "description": "You know, Republicans always go on and on about cutting red tape because it makes for a good sound bite, a much better one than their real goal of slashing the social safety net. These same people who move with such urgency to ease the regulations supposedly straining big businesses seldom lift a finger to protect the struggling workers hurt without them."
         }
     },
     {
@@ -21857,7 +21857,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 86001.522,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": 0.01
+            "global_multiplier": 0.005
         }
     },
     {
@@ -22077,7 +22077,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 86001.522,
             "candidate": 77,
             "affected_candidate": 78,
-            "global_multiplier": -0.005
+            "global_multiplier": 0.005
         }
     },
     {
@@ -22171,16 +22171,6 @@ campaignTrail_temp.answer_score_global_json = [
         }
     },
     {
-	"model": "campaign_trail.answer_score_global",
-        "pk": 12713,
-        "fields": {
-            "answer": 86003.522,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": 0.03
-        }
-    },
-    {
         "model": "campaign_trail.answer_score_global",
         "pk": 12714,
         "fields": {
@@ -22192,12 +22182,22 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 12714,
+        "fields": {
+            "answer": 86003.522,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 12715,
         "fields": {
             "answer": 86003.522,
             "candidate": 77,
             "affected_candidate": 80,
-            "global_multiplier": -0.025
+            "global_multiplier": 0.025
         }
     },
     {
@@ -35083,7 +35083,7 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 50001,
             "issue": 27,
             "issue_score": 0.3,
-            "issue_importance": 2
+            "issue_importance": 3
         }
     },
     {
@@ -35093,7 +35093,7 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 50002,
             "issue": 27,
             "issue_score": 0.125,
-            "issue_importance": 2
+            "issue_importance": 3
         }
     },
     {
@@ -35153,7 +35153,7 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 60001,
             "issue": 31,
             "issue_score": 0.37,
-            "issue_importance": 2
+            "issue_importance": 4
         }
     },
     {
@@ -35163,7 +35163,7 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 60002,
             "issue": 31,
             "issue_score": 0.3,
-            "issue_importance": 2
+            "issue_importance": 4
         }
     },
     {
@@ -35173,7 +35173,7 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 60003,
             "issue": 31,
             "issue_score": 0.5,
-            "issue_importance": 2
+            "issue_importance": 4
         }
     },
     {
@@ -36401,8 +36401,8 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12707,
         "fields": {
             "answer": 86003.522,
-            "issue": 29,
-            "issue_score": 0.1,
+            "issue": 30,
+            "issue_score": 0.3,
             "issue_importance": 0.3
         }
     },
@@ -36487,16 +36487,6 @@ campaignTrail_temp.answer_score_issue_json = [
         }
     },
     {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 12832,
-        "fields": {
-            "answer": 30003.5,
-            "issue": 31,
-            "issue_score": 0.05,
-            "issue_importance": 1.2
-        }
-    },
-        {
         "model": "campaign_trail.answer_score_issue",
         "pk": 12721,
         "fields": {
@@ -89959,7 +89949,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86001.522,
             "candidate": 77,
-            "answer_feedback": "You pushed on with executive orders and planks endorsing what you said would ''get 100,000 new policemen on the ground.'' The number is quite optimistic, but compared to the crime wave during Bush’s years, people are taking notice, especially after you gain the support of police associations."
+            "answer_feedback": "Defending your record isn't necessarily a bad choice, but for some people, it’s just never enough. Bono sarcastically scoffs and dismisses your initiatives to reinvent government as mere window dressing compared to “what actually needs to be done to steer us away from crisis!” You can’t help but wonder where all of the damn urgency comes from, what crisis?"
         }
     },
     {
@@ -90121,7 +90111,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86002.522,
             "candidate": 77,
-            "answer_feedback": "As you called for big support on school uniforms and after school programs, some of which had been scuttled by Republicans, you suddenly became the candidate of family values. You’re expecting a huge gain from soccer moms everywhere."
+            "answer_feedback": "Bono tries to cast your calls for him to get into the nitty-gritty of policy as an elitist attempt to have him alienate the average Joe by getting too complicated, but it falls flat as voters slowly realize that he really just can’t. Pressed for particulars, Bono dances around the questions, inarticulately delving into bog-standard GOP talking points, irrelevant anecdotes from Palm Springs, or his comedy routine from the days of old. He won’t be shaking his celebrity image as the boneheaded doofus lucky enough to marry Cher any time soon."
         }
     },
     {
@@ -90148,7 +90138,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 86003.522,
             "candidate": 77,
-            "answer_feedback": "Seeing Al presenting graphs of how things have already gone better in the last 4 years and how things can further improve has got you a cease and desist order from Ross Perot. Still, the Republicans are claiming part of the credit, no matter how absurd that sounds."
+            "answer_feedback": "Your embrace of populist left rhetoric catches most people off guard, earns the praise of Paul Wellstone, and enrages Bono. The Congressman shrieks about “The president questioning MY ethics!” following your implication that he’d be a corporate puppet. Still, you’ve managed to flip the script here at least somewhat."
         }
     },
     {
