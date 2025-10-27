@@ -108196,9 +108196,9 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
             color: #ffffff;
             ">
             <!-- The New Joints -->
-            <p href="#" id="whoweare">Who We Are</a>
-        <p href="#" id="whatwevedone">What We've Done</a>
-        <p href="#" id="theclintonadmin">The Homefront</a>
+            <p id="whoweare" style="cursor: pointer;">Who We Are</a>
+        <p id="whatwevedone" style="cursor: pointer;">What We've Done</a>
+        <p id="theclintonadmin" style="cursor: pointer;">The Homefront</a>
     </div>
             </div>
             `;
@@ -108227,10 +108227,11 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
-        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
+        <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
         width: 300px; 
         display: block; 
-        margin: auto;">
+        margin: auto;
+        cursor: pointer; ">
 
     <!-- Banner Group Under Clinton-Gore Header -->
 <div style="
@@ -108286,6 +108287,14 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     </div>
 </div>`;
 document.getElementById("webpage_html").innerHTML = webpage_html;
+document.addEventListener("click", function(e) {
+
+    if (e.target.id === "header") {
+    e.preventDefault();
+    current_website = "clintongore.com";
+    website_handler();
+    }
+});
 if (Ideology <= -4) {
 document.getElementById("wwaheader").innerText = "United In Our Core Values";
 document.getElementById("clintonwwaimage").src = "https://file.garden/aOp8cCiQ5ho9r5b1/Clintonfamily.png%3Fex%3D68fd1923%26amp%3Bis%3D68fbc7a3%26amp%3Bhm%3D6aa8fa6116799cdd24a5713bbfa9898ad9596ff4be9f3c31a18ab46cb18dda64%26amp%3B%3D%26amp%3Bformat%3Dwebp%26amp%3Bquality%3Dlossless";
@@ -108328,7 +108337,7 @@ webpage_html = `
         width: auto; 
         border-bottom: 3px black double;
         text-align:center;">
-        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px;">
+        <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="width:300px; cursor: pointer;">
     </div>
 
     <!-- Achievements Page Title -->
@@ -108473,6 +108482,12 @@ function showWin(winId) {
     }
 }
     document.addEventListener("click", function(e) {
+
+    if (e.target.id === "header") {
+    e.preventDefault();
+    current_website = "clintongore.com";
+    website_handler();
+    }
     if (e.target.className === "wins") {
     document.getElementById("wingif").style.display = "block";
     document.getElementById("beginscreen").style.display = "none";
@@ -108488,6 +108503,7 @@ function showWin(winId) {
     document.getElementById("wingif").src = "none";
     }
 });
+
 if (e.player_answers.includes(85027.5) || e.player_answers.includes(85032.5)) {
 showWin("ach-gun-bill")
 }
@@ -108550,7 +108566,7 @@ showWin("ach-gay-rights")
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
-        <img src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
+        <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
         width: 300px; 
         display: block; 
         margin: auto;">
@@ -108565,13 +108581,17 @@ showWin("ach-gay-rights")
     flex-direction: column;
     ">
 
-            <img src="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/ClintonGore.com/Minds%20Making%20America" alt="America" style="height:50px;">
+        <img src="https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/ClintonGore.com/Minds%20Making%20America" alt="America" style="
+        height:50px;
+        margin-top:5px;
+        ">
 
         <!-- Image Reveal -->
         <img src="https://file.garden/aOp8cCiQ5ho9r5b1/macpic.jpg" style="
             width:200px;
-            margin-top:15px;
+            margin-top:10px;
             float: center;
+            cursor: pointer;
         ">
     </div>
 
@@ -108653,6 +108673,14 @@ showWin("ach-gay-rights")
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
 }
+    document.addEventListener("click", function(e) {
+
+    if (e.target.id === "header") {
+    e.preventDefault();
+    current_website = "clintongore.com";
+    website_handler();
+    }
+});
 
 window.website_back = function() {
   if (browser_history[history_index - 1] != null) {
