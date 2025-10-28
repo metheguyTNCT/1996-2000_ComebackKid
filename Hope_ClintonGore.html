@@ -108065,7 +108065,7 @@ const main_website_candidate_list = [
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Bob Dole",title: "KANSAS SENATOR",description: "The leading man out of his prime is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' The natural nominee next November if you prove yourself unable to effectively bring about the change you promised to achieve."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Forbius",name: "Steve Forbes",title: "BUSINESSMAN",description: "Flat tax, flat tax, flat tax! That’s all the eccentric multi-millionaire has up his sleeve. There isn’t a flat chance in hell he gets the nomination, unless you’ve failed to restore trust in the economy."},
-{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and area of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he will away with it."},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and tone of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he will away with it."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gramm",name: "Phil Gramm",title: "TEXAS SENATOR",description: "If there were a man drowning in as much scandal as yourself, it would be Phil Gramm. The Texas Senator left the party a few short years ago, and ever since has tried to ''fight the good fight'' as the face of the religious right. Although his attempts have failed for the most part, he'll need to frame the election as an attack against religion if he wants to be nominated."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Specter",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "Governor of the biggest state in the union, Wilson's traction as a candidate is no shock. Building a ''tough on crime'' image, his candidacy could potentially cause a problem for you. If he wants to get nominated, the Republicans need to buy into the idea that America ''isn't safe enough.''"}
@@ -108137,14 +108137,14 @@ function createDraggableBox() {
 
     document.body.appendChild(draggableBox);
     document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
-    searchbar = document.getElementById('website_search_bar');
+    const searchbar = document.getElementById('website_search_bar');
 
 searchbar.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter') {
-    	searched_term = searchbar.value.toLowerCase();
+    	const searched_term = searchbar.value.toLowerCase();
         //console.log(searched_term);
-        if (browser_history[browser_history.length - 1] == searched_term) {
-        	print("Same website.");
+        if (browser_history[browser_history.length - 1] === searched_term) {
+        	console.log("Same website.");
         } else {
         	browser_history = browser_history.slice(0,history_index+1)
         	browser_history.push(searched_term);
@@ -108201,16 +108201,17 @@ function website_handler() {
     }
 
 	console.log(current_website);
-    lower_url=current_website.toLowerCase();
-	if (lower_url=="republicanstowatchoutfor.com") {
-const ideologyHTML = ideologyMap[String(Ideology)];
-const scandalHTML = scandalMap[String(scandal)]; 
-const economyHTML = economyMap[String(economy)]; 
-const backlashHTML = backlashMap[String(backlash)]; 
-const fpwinMapHTML = fpwinMap[String(FPWin)];
-const legwinMapHTML = legwinMap[String(LEGWin)];
+    const lower_url = (current_website || "").toLowerCase();
+    
+	if (lower_url === "republicanstowatchoutfor.com") {
+        const ideologyHTML = ideologyMap[String(Ideology)];
+        const scandalHTML = scandalMap[String(scandal)]; 
+        const economyHTML = economyMap[String(economy)]; 
+        const backlashHTML = backlashMap[String(backlash)]; 
+        const fpwinMapHTML = fpwinMap[String(FPWin)];
+        const legwinMapHTML = legwinMap[String(LEGWin)];
 
-        webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
+        let webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
 
 
         for (let x in main_website_candidate_list) {
@@ -108279,7 +108280,7 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
 
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${economyHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
-    } else if (lower_url=="clintongore.com") {
+    } else if (lower_url === "clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
             webpage_html+=`<div style="
@@ -108321,9 +108322,9 @@ const legwinMapHTML = legwinMap[String(LEGWin)];
     
     webpageContainer.innerHTML = webpage_html;
 
-  } else if (lower_url=="clintongore.com/whoweare") {
+  } else if (lower_url === "clintongore.com/whoweare") {
     current_website="clintongore.com/whoweare";
-    webpage_html = `
+    let webpage_html = `
 <div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
@@ -108401,9 +108402,9 @@ document.getElementById("wwaheader").innerText = "All Men Are Created Equal";
 document.getElementById("clintonwwaimage").src = "https://file.garden/aOp8cCiQ5ho9r5b1/Clinton_Liberal.jpg%3Fs%3D612x612%26amp%3Bw%3D0%26amp%3Bk%3D20%26amp%3Bc%3DnD8SzZlmsXxiKjApfh2304wpF0TD0PRaHxEIaZQxpus%3D";
 document.getElementById("clintonwwatext").innerText = "The President of the United States' chief goal is to insure the rights and safety of all Americans, and Bill Clinton has done this all his life. Growing up in a prejudiced south, Clinton never let his surroundings dictate how he saw other people. One of the biggest reasons President Clinton began his career was watching Dr. Martin Luther King Jr's iconic 'I Have A Dream' speech, and his favorite President John F. Kennedy was a young and avid supporter of the civil rights movement. He's brung the same open-mindedness to the White House and understands the pain of the oppressed. He hopes the same minorities he lived around will re-elect Clinton/Gore on November 5th!";
 }
-} else if (lower_url=="clintongore.com/achievements") {
+} else if (lower_url === "clintongore.com/achievements") {
 current_website = "clintongore.com/achievements";
-webpage_html = `
+let webpage_html = `
 <style>
 .wins {
     width: auto;
@@ -108599,9 +108600,9 @@ showWin("ach-deficit")
 if (e.player_answers.includes(85024.5)) {
 showWin("ach-gay-rights")   
 }
-} else if (lower_url=="clintongore.com/admin") {
+} else if (lower_url === "clintongore.com/admin") {
     current_website="clintongore.com/admin";
-   webpage_html = `
+   let webpage_html = `
    <style>
         .bluebar {
     background:#006699; 
