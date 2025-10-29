@@ -14565,7 +14565,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 189,
-            "state_multiplier": 0.79049862121989289412
+            "state_multiplier": 0.80049862121989289412
         }
     },
     {
@@ -15024,7 +15024,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 189,
-            "state_multiplier": 1.09678987649989988987654321
+            "state_multiplier": 1.10578987649989988987654321
         }
     },
     {
@@ -15942,7 +15942,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 80,
             "state": 189,
-            "state_multiplier": 0.39398
+            "state_multiplier": 0.38398
         }
     },
     {
@@ -105276,6 +105276,8 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
         if (DisasterMidterms == 1) {
         vpTable["Bob Dole"] = "John McCain";
+        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E04C31";
+        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B309B";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.62
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_mccain");
         }else if (e.player_answers.includes(98013.5) || e.player_answers.includes(98016.5) || e.player_answers.includes(98015.5) || e.player_answers.includes(98021.5)) {
