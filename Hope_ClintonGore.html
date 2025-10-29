@@ -276,7 +276,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_11_healthcare_choice",
         "fields": {
             "priority": 0,
-            "description": "Hillary walks up the stage. She's giddy, a beaming smile never seen for years radiates through the dreary posture of congress. It's here. Everything builds up to this moment, and the crowd- the crowd... <i>hates</i> it. A moment of glee sours into defensive frustration. You watch as she fights against the battering of voices, but between waves of dissenters, her strength alone is not enough. You need to do something. Something to save this mess, and the flames surrounding you both.",
+            "description": "Hillary walks up the stage. She's giddy, a beaming smile you haven't seen in years radiates through the dreary posture of Congress. It's here. Everything builds up to this moment, and the crowd- the crowd... <i>hates</i> it. A moment of glee sours into defensive frustration. You watch as she fights against the battering of voices, but between waves of dissenters, her strength alone is not enough. You need to do something. Something to save this mess, and the flames surrounding you both.",
             "likelihood": 1
         }
     },
@@ -2929,7 +2929,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50006,
         "fields": {
             "question": "question_11_healthcare_choice",
-            "description": "Call me crazy, but I'm not going to stand here and let <b>our</b> values get torn to shreds by people who couldn't give a rat's ass about it! We're going to fight for this fucking thing, Congress be damned. Hill, you have my word: we're not going back."
+            "description": "The buck stops here. I'm not gonna stand by and let our values get torn to shreds by people who couldn't give a rat's ass about them! We're going to fight for this fucking thing, Congress be damned. Hill, you have my word: I'm not backing down on you, or the millions of Americans who need our help."
         }
     },
     {
@@ -2937,7 +2937,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50007,
         "fields": {
             "question": "question_11_healthcare_choice",
-            "description": "Look, we've gotta face the facts. This just isn't going to work. I've got a plan, but it won't be pretty. Why don't we take this to the GOP?  Now, I know this sounds like me bailing, but we can absolutely can take their best and make our own stuff even better."
+            "description": "Look, we've gotta face the facts. This just isn't going to work. I've got a plan, but it won't be pretty. Why don't we take this to the GOP?  Now, I know this sounds like me bailing, but we can absolutely can take their best and make our own stuff even better. There's gotta be a common-ground everyone can share."
         }
     },
     {
@@ -2945,7 +2945,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50008,
         "fields": {
             "question": "question_11_healthcare_choice",
-            "description": "I'll be honest, what Hillary has is good, but it ain't built for this doghouse. If they'll block the entrance, we'll just go out of bounds. Hey, George, I heard you had something?"
+            "description": "I'll be honest, what Hillary has is good, but it ain't built for this doghouse. If they'll block the entrance, we'll just go out of bounds. We need a bill sturdy enough Republicans won’t be able to break it once I'm gone. I'll ask Mitchell on his opinion."
         }
     },
     {
@@ -88773,7 +88773,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50007,
             "candidate": 77,
-            "answer_feedback": "Another day, another can kicked down the road. Nobody is happy, let alone satisfied, but deep within your heart, it shouts that the only way forward is this. The only way to not rock the boat, and start a mutiny."
+            "answer_feedback": "It’s a hard pill for her to swallow. No matter what you say, it feels like another typical concession in the name of peacemaking. Another day, another can kicked down the road. Nobody is happy, let alone satisfied, but deep within your heart, it shouts that the only way forward is this. The only way to not rock the boat, and start a mutiny. You tune out the noise and line up a few rounds of Golf as a diversion."
         }
     },
     {
@@ -88782,7 +88782,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 50008,
             "candidate": 77,
-            "answer_feedback": "As you discuss with Mitchell, he raises up the point of stealth linking healthcare to the budget. He warns how it'd be less flexible, but as long as it gets passed through the jaws of Congress, you couldn't care less."
+            "answer_feedback": "As you discuss with Mitchell, he raises up the point of stealth linking healthcare to the budget. In theory, this would make healthcare more stable and, hopefully, more popular in Congress. It’s not exactly the change you promised, and he warns how it'd be less flexible, but as long as it gets passed through the jaws of Congress, you couldn't care less. Instead of counting the cost, you get back to crossword puzzles. Business as usual."
         }
     },
     {
@@ -98375,7 +98375,7 @@ question_insert("question_2_nannygate",
         "pk": "question_11_healthcare_choice",
         "fields": {
             "priority": 0,
-            "description": "Hillary walks up the stage. She's giddy, a beaming smile never seen for years radiates through the dreary posture of congress. It's here. Everything builds up to this moment, and the crowd- the crowd... <i>hates</i> it. A moment of glee sours into defensive frustration. You watch as she fights against the battering of voices, but between waves of dissenters, her strength alone is not enough. You need to do something. Something to save this mess, and the flames surrounding you both.",
+            "description": "Hillary walks up the stage. She's giddy, a beaming smile you haven't seen in years radiates through the dreary posture of Congress. It's here. Everything builds up to this moment, and the crowd- the crowd... <i>hates</i> it. A moment of glee sours into defensive frustration. You watch as she fights against the battering of voices, but between waves of dissenters, her strength alone is not enough. You need to do something. Something to save this mess, and the flames surrounding you both.",
             "likelihood": 1
         }
             }
@@ -108267,7 +108267,7 @@ function createDraggableBox() {
     draggableBox.id = 'draggableBox';
     draggableBox.style.width = '480px';
     draggableBox.style.height = '321px';
-    draggableBox.style.backgroundColor = 'lightgray';
+    draggableBox.style.backgroundImage = "url('https://i.imgur.com/z6bwC6i.png')";
     draggableBox.style.border = '0px solid black';
     draggableBox.style.position = 'absolute';
     draggableBox.style.top = '20px';
@@ -108282,28 +108282,17 @@ function createDraggableBox() {
     }
 
     let assemble_html = [
-      `<img src="https://i.imgur.com/7YfA8Sz.png">`,
-      `<img src="https://i.imgur.com/LrPDb01.png">`,
-      `<img id="exitbutton" style="cursor:pointer" onclick="website_close()" src="https://i.imgur.com/7JnjQNJ.png">`,
-      `<img src="https://i.imgur.com/D9exlQl.png">`,
-      `<img src="https://i.imgur.com/72mDXy7.png">`,
-      `<img src="https://i.imgur.com/RwG518j.png">`,
-      `<img id="backbutton" style="cursor:pointer" onclick="website_back()" src="https://i.imgur.com/0DpV7b1.png">`,
-      `<img id="forwardbutton" style="cursor:pointer" onclick="website_forward()" src="https://i.imgur.com/d9YFJZV.png">`,
-      `<img src="https://i.imgur.com/a8YzesX.png">`,
-      `<img src="https://i.imgur.com/q4JJZUg.png">`,
-      `<img src="https://i.imgur.com/6qWRvbv.png">`,
-      `<input id="website_search_bar" value="${current_website}" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA';">`,
-      `<img src="https://i.imgur.com/7avUKWj.png">`,
-      `<img src="https://i.imgur.com/tvsN2hl.png">`,
-      `<img src="https://i.imgur.com/92Hi4z5.png">`,
-      `<div id="webpage_html" style="background-color:C0C0C0;width:451px;height:178px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:0;left:0;display:inline-block;"></div>`,
-      `<img src="https://i.imgur.com/acKHWZk.png">`,
-      `<img src="https://i.imgur.com/tjBPapT.png">`
+      `<div id="backbutton" style="cursor:pointer; width: 51px; height: 40px; left: 14px; top: 44px; position: absolute;" onclick="website_back()"></div>`,
+      `<div id="forwardbutton" style="cursor:pointer; width: 51px; height: 40px; left: 65px; top: 44px; position: absolute;" onclick="website_forward()"></div>`,
+      `<div id="browser_top" style="background-image: url('https://i.imgur.com/xU6SnCo.png'); height:135px;"></div>`,
+      `<input id="website_search_bar" value="${current_website}" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA'; position: absolute; top: 87px; left: 60px">`,
+      `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute;"></div>`,
+      `<div id="webpage_html" style="background-color:C0C0C0;width:451px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:119px;left:6px;display:inline-block;position:absolute;"></div>`,
+      `<div id="exitbutton" style="cursor:pointer; width:16px; height:14px; top:6px; left:458px; position:absolute;" onclick="website_close()"></div>`,
     ];
 
     draggableBox.innerHTML = assemble_html.join('');
-
+	
     let offset = { x: 0, y: 0 };
     let isDragging = false;
 
@@ -108323,8 +108312,9 @@ function createDraggableBox() {
     document.addEventListener('mouseup', () => {
       isDragging = false;
     });
-
     document.body.appendChild(draggableBox);
+    
+    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`
     document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
     const searchbar = document.getElementById('website_search_bar');
 
