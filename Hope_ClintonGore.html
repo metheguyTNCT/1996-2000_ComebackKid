@@ -65,9 +65,7 @@ style.textContent = `
     text-align: center;
     padding: 4px;
     font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: 4px solid;
-    border-color: white black black white;
+    box-shadow: inset -2px -2px 0 #000, inset 2px 2px 0 #dedede, inset -4px -4px 0 grey, inset 4px 4px 0 #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14567,7 +14565,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 189,
-            "state_multiplier": 0.79149862121989289412
+            "state_multiplier": 0.79049862121989289412
         }
     },
     {
@@ -15026,7 +15024,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 78,
             "state": 189,
-            "state_multiplier": 1.09578987649989988987654321
+            "state_multiplier": 1.09678987649989988987654321
         }
     },
     {
@@ -15944,7 +15942,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 80,
             "state": 189,
-            "state_multiplier": 0.388987498
+            "state_multiplier": 0.39398
         }
     },
     {
@@ -105280,7 +105278,6 @@ function opponentDecider(){
         vpTable["Bob Dole"] = "John McCain";
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.62
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_mccain");
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#D03D36";
         }else if (e.player_answers.includes(98013.5) || e.player_answers.includes(98016.5) || e.player_answers.includes(98015.5) || e.player_answers.includes(98021.5)) {
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_noshutdown");
         } else {
