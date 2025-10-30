@@ -108272,7 +108272,7 @@ function createDraggableBox() {
       `<div id="forwardbutton" style="cursor:pointer; width: 51px; height: 40px; left: 65px; top: 44px; position: absolute;" onclick="website_forward()"></div>`,
       `<div id="browser_top" style="background-image: url('https://i.imgur.com/xU6SnCo.png'); height:135px;"></div>`,
       `<input id="website_search_bar" value="${current_website}" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA'; position: absolute; top: 87px; left: 60px">`,
-      `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute;"></div>`,
+      `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute; cursor: n-resize;"></div>`,
       `<div id="webpage_html" style="background-color:C0C0C0;width:451px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:119px;left:6px;display:inline-block;position:absolute;"></div>`,
       `<div id="exitbutton" style="cursor:pointer; width:16px; height:14px; top:6px; left:458px; position:absolute;" onclick="website_close()"></div>`,
     ];
@@ -108280,42 +108280,27 @@ function createDraggableBox() {
     draggableBox.innerHTML = assemble_html.join('');
 	
     let offset = { x: 0, y: 0 };
-    let topDragging = false;
-	let bottomDragging = false;
-	document.body.appendChild(draggableBox);
-    document.getElementById("browser_top").addEventListener('mousedown', (e) => {
-      topDragging = true;
+    let isDragging = false;
+
+    draggableBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
       offset.x = e.clientX - draggableBox.offsetLeft;
       offset.y = e.clientY - draggableBox.offsetTop;
     });
-	
-	document.getElementById("browser_bottom").addEventListener('mousedown', (e) => {
-      bottomDragging = true;
-      init_y = e.clientY;
-	  init_height = draggableBox.clientHeight;
-    });
 
     document.addEventListener('mousemove', (e) => {
-      if (topDragging) {
+      if (isDragging) {
         draggableBox.style.left = e.clientX - offset.x + 'px';
         draggableBox.style.top = e.clientY - offset.y + 'px';
       }
-	  if (bottomDragging) {
-		draggableBox.style.height = init_height + e.clientY - init_y + 'px';
-        draggableBox.style.minHeight = '321px';
-		document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`;
-	  }
     });
 
     document.addEventListener('mouseup', () => {
-      topDragging = false;
-	  bottomDragging = false;
+      isDragging = false;
     });
+    document.body.appendChild(draggableBox);
     
-    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`;
-    document.getElementById("webpage_html").style.minHeight = `177px`;
-	
-	
+    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`
     document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
     const searchbar = document.getElementById('website_search_bar');
 
@@ -108463,34 +108448,25 @@ function website_handler() {
     } else if (lower_url === "clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
-            webpage_html+=`<style>
-                #webpage_html {
+            webpage_html+=`<div style="
                 background: linear-gradient(to right, #003366 50%, #ff0000 50%);
                 width:451px;
                 vertical-align:top;
                 font-family: times new roman;
                 display:inline-block;
                 height: auto;
-                }
-                </style>
-            <div style="
-              display: flex;
-              flex-direction: column;
-              position: absolute;
-              top: 45%;
-              left: 50%; 
-              transform: translate(-50%, -50%);">
+                            ">
+            
                 <img src="https://i.imgur.com/z5z7nxF.png" width="227" height="32" style="
-                margin-right: 30px;
+                margin-left: 96px; 
+                margin-right: 0;
                 padding-top: 5px">
            <div style="display: flex; justify-content: center; align-items: center; gap: 0;">
             <img src="https://i.imgur.com/tJH1aq0.png" width="55" height="55">
             <img src="https://i.imgur.com/pVKrgTP.png" width="55" height="55">
             </div>
-                <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="
-                margin-left: 12px;; 
+                <img src="https://i.imgur.com/h66e7CA.png" width="227" height="56" style="margin-left: 108px; margin-right: 0; 
                 ">
-            </div>
             <div style="
             display: flex;
             align-items: center; 
@@ -108500,15 +108476,13 @@ function website_handler() {
             font-size: 13px;
             font-style: italic;
             color: #ffffff;
-            position: absolute;
-            left: 15%;
-            bottom: 2px;
             ">
             <!-- The New Joints -->
             <p id="whoweare" style="cursor: pointer;">Who We Are</a>
         <p id="whatwevedone" style="cursor: pointer;">What We've Done</a>
         <p id="theclintonadmin" style="cursor: pointer;">The Homefront</a>
     </div>
+            </div>
             `;
     
     webpageContainer.innerHTML = webpage_html;
@@ -108516,14 +108490,7 @@ function website_handler() {
   } else if (lower_url === "clintongore.com/whoweare") {
     current_website="clintongore.com/whoweare";
     let webpage_html = `
-<style>
-#webpage_html {
-background:white;
-width:451px; 
-font-family:'Times New Roman'; 
-overflow:auto; 
-height: auto; 
-</style>
+<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
         <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
@@ -108570,13 +108537,10 @@ height: auto;
 <div style="
     display:flex; 
     flex-direction:column;
-    height: 100%;
     margin-left:15px;
     border-left: 3px black solid;
     padding-left: 10px;
-    padding-right: 5px;
     padding-top: 5px;
-    padding-bottom: 20px;
 ">
     <!-- Image Reveal -->
         <img id="clintonwwaimage" img src="" style="
@@ -108586,7 +108550,8 @@ height: auto;
     ">
     <!-- Body Text -->
     <div id="clintonwwatext" style="font-size:12px; margin-top: 10px; line-height:1.1em; height:auto;">
-    </div>`;
+    </div>
+</div>`;
 webpageContainer.innerHTML = webpage_html;
 
 if (Ideology <= -4) {
@@ -108616,14 +108581,14 @@ let webpage_html = `
     line-height: 1;
     cursor: pointer;
 }
-#webpage_html {
+</style>
+<div style="
     background:white; 
     width:451px; 
     height: auto; 
     font-family:'Times New Roman'; 
     overflow:auto; /* allow scrolling if content grows */
-}
-</style>
+    ">
 
     <!-- Clinton-Gore 96 Header -->
     <div style="
@@ -108638,12 +108603,11 @@ let webpage_html = `
 
     <!-- Annoying ass flex shit that keeps everything together -->
     <div style="
-        display: flex;
-        height: 100%;">
+        display: flex;">
 
         <div style="
             width:301px;
-            height: 100%;
+            height: auto;
             background: #FFF;
             border-right: 3px black double;
         ">
@@ -108705,7 +108669,6 @@ let webpage_html = `
             display:flex;
             flex-direction:column;
             width: 150px;
-            height: 100%;
         ">
                     <h2 id="columnheader" style="
                     font-family:'Balboa W01 Black';
@@ -108765,6 +108728,7 @@ let webpage_html = `
             </div>
         </div>
     </div>
+</div>
 `;
     webpageContainer.innerHTML = webpage_html;
 function showWin(winId) {
@@ -108835,15 +108799,8 @@ showWin("ach-gay-rights")
     width: auto;
     padding-top: 5px;
     }
-
-#webpage_html {
-    background:white; 
-    width:451px; 
-    height: auto; 
-    font-family:'Times New Roman'; 
-    overflow:auto; /* allow scrolling if content grows */
-}
 </style>
+<div style="background:white; width:451px; font-family:'Times New Roman'; overflow:auto; height: auto; padding-bottom: 5%;">
 
     <!-- Clinton-Gore 96 Header -->
         <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
@@ -108875,7 +108832,7 @@ showWin("ach-gay-rights")
         ">
     </div>
 
-    <div id="dynamicBarsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; text-align:left; padding-bottom: 20px;">
+    <div id="dynamicBarsContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; text-align:left;">
         
         <!-- Example Bar -->
         <div id="bar-attorney" style="width:300px;">
@@ -108919,6 +108876,7 @@ showWin("ach-gay-rights")
     </div>
 
     </div>
+</div>
 `;
     webpageContainer.innerHTML = webpage_html;
     if (e.player_answers.includes(60001)) {
