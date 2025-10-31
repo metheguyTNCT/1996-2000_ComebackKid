@@ -1361,14 +1361,14 @@ function addDynamicCSS() {
       }
      .mytooltip .mytooltiptext::before {
       content: "Tooltip - Microsoft Internet Explorer"; /* The text to display */
-      top: -20px;
+      top: 0px;
       left: 0px;
-      outline: solid 2px #C0C0C0; 
+      border-bottom: solid 1px #C0C0C0;
+	  outline: solid 1px #C0C0C0;
       text-shadow: none;
       text-align: left;
       position: absolute;
-      padding-right: 35px;
-      padding-left: 4px;
+	  width: 100%;
       color: white;
       background: linear-gradient(90deg,navy,#1084d0); /* Match the background to "cut out" the border */
       font-weight: bold;
@@ -1384,6 +1384,7 @@ function addDynamicCSS() {
           text-shadow: 1px 1px 2px #313b44;
           text-align: center;
           padding: 10px;
+		  padding-top: 25px;
           position: absolute;
           z-index: 99;
           bottom: 20%;
@@ -1392,10 +1393,10 @@ function addDynamicCSS() {
           opacity: 0;
           overflow: visible;
           transition: opacity 0.3s;
-          border-top: 20px solid #000;
-          border-left: 1px inset #000;
-          border-right: 1px inset #000;
-          border-bottom: 1px inset #000;
+          border-top: 1px solid #000;
+          border-left: 1px solid #000;
+          border-right: 1px solid #000;
+          border-bottom: 1px solid #000;
           outline: outset 3px #C0C0C0;  
           pointer-events: none;
           font-size: 13px !important;
@@ -2367,6 +2368,7 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
+
 
 
 
