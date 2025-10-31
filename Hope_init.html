@@ -631,8 +631,7 @@ border: 1px solid #003A4F;
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
 }
 
-.inner_window_question h3, 
-.overlay_window h3 {
+.inner_window_question h3, {
 background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
 border: 1px solid #0183AD;
 box-shadow:
@@ -656,11 +655,17 @@ box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);
 }
 
 
-.inner_window_question h3,
-.overlay_window h3 {
+.inner_window_question h3, {
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
-
+	
+.overlay_window h3 {
+	width: 97%;
+	margin: auto;
+	background: linear-gradient(90deg,navy,#1084d0);
+	color: white;
+	border: none;
+}
 .overlay_window {
   position: absolute;
   opacity: 1;
@@ -668,6 +673,7 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
   border-radius: 0;
   box-shadow: inset -2px -2px 0 #000, inset 2px 2px 0 #dedede, inset -4px -4px 0 grey, inset 4px 4px 0 #fff;
   border: none;
+  padding-top: 7px;
   height: auto;
   min-height: 368.7px;
   top: 50%;
@@ -688,15 +694,6 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
   font-weight: 400;
   overflow-y: auto;
   max-height: calc(85vh - 120px);
-}
-
-.overlay_window h3 {
-  margin: 0;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
-  letter-spacing: 0.5px;
 }
 
 .overlay_window img {
@@ -845,8 +842,7 @@ box-shadow: inset 0 0 6px rgba(60, 110, 255, 0.3), 0 1px 2px rgba(0,0,0,0.1);
   font-family: times new roman;
 }
 
-.inner_window_question h3:active,
-.overlay_window h3:active {
+.inner_window_question h3:active, {
 box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.35);
 }
 
@@ -2372,6 +2368,7 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
+
 
 
 
