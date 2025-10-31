@@ -109548,7 +109548,7 @@ function createDraggableBox() {
       `<div id="forwardbutton" style="cursor:pointer; width: 51px; height: 40px; left: 65px; top: 44px; position: absolute;" onclick="website_forward()"></div>`,
       `<div id="browser_top" style="background-image: url('https://i.imgur.com/xU6SnCo.png'); height:135px;"></div>`,
       `<input id="website_search_bar" value="${current_website}" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA'; position: absolute; top: 87px; left: 60px">`,
-      `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute; cursor: n-resize;"></div>`,
+      `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute;"></div>`,
       `<div id="webpage_html" style="background-color:C0C0C0;width:451px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:119px;left:6px;display:inline-block;position:absolute;"></div>`,
       `<div id="exitbutton" style="cursor:pointer; width:16px; height:14px; top:6px; left:458px; position:absolute;" onclick="website_close()"></div>`,
     ];
@@ -109556,42 +109556,27 @@ function createDraggableBox() {
     draggableBox.innerHTML = assemble_html.join('');
 	
     let offset = { x: 0, y: 0 };
-    let topDragging = false;
-	let bottomDragging = false;
-	document.body.appendChild(draggableBox);
-    document.getElementById("browser_top").addEventListener('mousedown', (e) => {
-      topDragging = true;
+    let isDragging = false;
+
+    draggableBox.addEventListener('mousedown', (e) => {
+      isDragging = true;
       offset.x = e.clientX - draggableBox.offsetLeft;
       offset.y = e.clientY - draggableBox.offsetTop;
     });
-	
-	document.getElementById("browser_bottom").addEventListener('mousedown', (e) => {
-      bottomDragging = true;
-      init_y = e.clientY;
-	  init_height = draggableBox.clientHeight;
-    });
 
     document.addEventListener('mousemove', (e) => {
-      if (topDragging) {
+      if (isDragging) {
         draggableBox.style.left = e.clientX - offset.x + 'px';
         draggableBox.style.top = e.clientY - offset.y + 'px';
       }
-	  if (bottomDragging) {
-		draggableBox.style.height = init_height + e.clientY - init_y + 'px';
-        draggableBox.style.minHeight = '321px';
-		document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`;
-	  }
     });
 
     document.addEventListener('mouseup', () => {
-      topDragging = false;
-	  bottomDragging = false;
+      isDragging = false;
     });
+    document.body.appendChild(draggableBox);
     
-    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`;
-    document.getElementById("webpage_html").style.minHeight = `177px`;
-	
-	
+    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`
     document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
     const searchbar = document.getElementById('website_search_bar');
 
