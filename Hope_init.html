@@ -467,6 +467,7 @@ const css = `
 	font-smooth: never;
   -webkit-font-smoothing: never;
   -moz-osx-font-smoothing: never;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
 }
 
 #election_description_window, 
@@ -660,11 +661,11 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
   position: absolute;
   opacity: 1;
   background: #C0C0C0;
-  border: 2px solid;
-  border-color: #FFFFFF #000000 #000000 #FFFFFF;
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: inset -2px -2px 0 #000, inset 2px 2px 0 #dedede, inset -4px -4px 0 grey, inset 4px 4px 0 #fff;
+  border: none;
   height: auto;
+  min-height: 368.7px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -683,7 +684,6 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
   font-weight: 400;
   overflow-y: auto;
   max-height: calc(85vh - 120px);
-  background: #C0C0C0;
 }
 
 .overlay_window h3 {
@@ -698,11 +698,9 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 .overlay_window img {
   margin: 12px;
   border: 2px solid;
-  border-color: #808080 #FFFFFF #FFFFFF #808080;
   border-radius: 0;
   height: auto;
   object-fit: cover;
-  background: #C0C0C0;
 }
 
 .overlay_window p {
@@ -982,9 +980,6 @@ text-rendering: optimizeSpeed;
 }
   .campaign_trail_start_emphasis{
   background-color: #004F6E;
-}
-.overlay_window {
-  height: auto;
 }
 
 /*music player (it's long)*/
@@ -2372,7 +2367,6 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
 
 
 
