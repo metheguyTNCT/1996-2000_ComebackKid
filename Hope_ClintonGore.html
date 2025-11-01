@@ -106045,6 +106045,7 @@ if (e.question_number+1 == 26) {
 opponentDecider()
 }
 if (e.question_number+1 == 27) {
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Bill%20Clinton%20Campaign.gif';
     	let dnc_dean_badpell_badhillary = {
         "model": "campaign_trail.question",
         "pk": "dnc_dean_badpell_badhillary",
@@ -106718,6 +106719,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bob";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#DE3E37";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/6aV67fR.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Bob%20Dole%20RNC.gif';
         if (DisasterMidterms == 1) {
         vpTable["Bob Dole"] = "John McCain";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E3532D";
@@ -106739,6 +106741,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pat";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#3A040D";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/hBmckvd.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Pat%20Buchanan%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
                 e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.36;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
@@ -106764,6 +106767,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Steve";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#84273A";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/rE6zjln.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Steve%20Forbes%20RNC.gif';
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_forbes");
     } else if (candidateName == "alexander") { // Alexander
     updateHistoricalData(newVpTableHistorical3, newHistHexcolour3, newHistName3, newHistEV3, newHistPV3, newHistPVP3);
@@ -106775,6 +106779,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Lamar";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A64334";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/8DOlckh.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Lamar%20Alexander%20RNC.gif';
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.06
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_alexander");
     } else if (candidateName == "gramm") { // Gramm
@@ -106791,6 +106796,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Phil";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#DC143C";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/7nMG3fA.jpeg";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Phil%20Gramm%20RNC.gif';
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.72
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gramm");
     } else if (candidateName == "specter") { // Specter
@@ -106803,6 +106809,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Arlen";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#A20029";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/tEpY7C4.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Arlen%20Specter%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.34;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
@@ -106826,7 +106833,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.4
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_specter");
-    } else if (candidateName == "wilson") {
+    } else if (candidateName == "wilson") { // Wilson
     updateHistoricalData(newVpTableHistorical6, newHistHexcolour6, newHistName6, newHistEV6, newHistPV6, newHistPVP6);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#092E9E";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "LaRouche";
@@ -106836,6 +106843,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Pete";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#F7657A";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Pete%20Wilson%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.135;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
@@ -106849,7 +106857,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.07
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.64
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_wilson");
-    } else if (candidateName == "powell") {
+    } else if (candidateName == "powell") { // Powell
     updateHistoricalData(newVpTableHistorical7, newHistHexcolour7, newHistName7, newHistEV7, newHistPV7, newHistPVP7);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C2F9E";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Sanders";
@@ -106859,6 +106867,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Colin";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#AD1275";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/glCU1Ft.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Colin%20Powell%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.24;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
@@ -106876,7 +106885,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.23
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_powell");
-    } else if (candidateName == "bono") {
+    } else if (candidateName == "bono") { // Bono
     updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C2E9C";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Cohen";
@@ -106886,6 +106895,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Sonny";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C64B57";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Sonny%20Bono%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.19;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
@@ -106911,6 +106921,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Newt";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#FF1A58";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/gS1UpHm.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Newt%20Gingrich%20RNC.gif';
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.395
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
     } else if (candidateName == "weld") {
@@ -106923,6 +106934,7 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Bill";
         campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#E0B62A";
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/uMD8uCf.png";
+        campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Bill%20Weld%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(863) // Ohio
             e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(866) // Pennsylvaina
