@@ -664,21 +664,21 @@ if(!campaignTrail_temp.loaded1){
     "model": "campaign_trail.candidate",
     "pk": 90,
     "fields": {
-        "first_name": "Dan",
-        "last_name": "Quayle",
+        "first_name": "Newt",
+        "last_name": "Gingrich",
         "election": 9,
         "party": "Republican",
-        "state": "Indiana",
+        "state": "Georgia",
         "priority": 11,
         "description": "''",
         "color_hex": "#CD0B0A",
         "secondary_color_hex": "#DC5B5A",
         "is_active": 0,
-        "image_url": "https://i.imgur.com/wMo8Xfr.png",
+        "image_url": "https://i.imgur.com/Ik35Pst.png",
         "electoral_victory_message": "''",
         "electoral_loss_message": "''",
         "no_electoral_majority_message": "''",
-        "description_as_running_mate": "<p>Potatoe</p>",
+        "description_as_running_mate": "<p>Speaker of the House</p>",
         "candidate_score": 0,
         "running_mate": true
     }
@@ -686,29 +686,6 @@ if(!campaignTrail_temp.loaded1){
   {
     "model": "campaign_trail.candidate",
     "pk": 91,
-    "fields": {
-        "first_name": "John",
-        "last_name": "Kasich",
-        "election": 9,
-        "party": "Republican",
-        "state": "Ohio",
-        "priority": 11,
-        "description": "''",
-        "color_hex": "#CD0B0A",
-        "secondary_color_hex": "#DC5B5A",
-        "is_active": 0,
-        "image_url": "https://i.imgur.com/JFhWes3.png",
-        "electoral_victory_message": "''",
-        "electoral_loss_message": "''",
-        "no_electoral_majority_message": "''",
-        "description_as_running_mate": "<p>Congressman of Ohio</p>",
-        "candidate_score": 0,
-        "running_mate": true
-    }
-  },
-  {
-    "model": "campaign_trail.candidate",
-    "pk": 92,
     "fields": {
         "first_name": "Jack",
         "last_name": "Kemp",
@@ -731,33 +708,10 @@ if(!campaignTrail_temp.loaded1){
   },
   {
     "model": "campaign_trail.candidate",
-    "pk": 93,
+    "pk": 92,
     "fields": {
-        "first_name": "Newt",
-        "last_name": "Gingrich",
-        "election": 9,
-        "party": "Republican",
-        "state": "Georgia",
-        "priority": 11,
-        "description": "''",
-        "color_hex": "#CD0B0A",
-        "secondary_color_hex": "#DC5B5A",
-        "is_active": 0,
-        "image_url": "https://i.imgur.com/Ik35Pst.png",
-        "electoral_victory_message": "''",
-        "electoral_loss_message": "''",
-        "no_electoral_majority_message": "''",
-        "description_as_running_mate": "<p>Speaker of the House</p>",
-        "candidate_score": 0,
-        "running_mate": true
-    }
-  },
-  {
-    "model": "campaign_trail.candidate",
-    "pk": 94,
-    "fields": {
-        "first_name": "George",
-        "last_name": "Pataki",
+        "first_name": "Colin",
+        "last_name": "Powell",
         "election": 9,
         "party": "Republican",
         "state": "New York",
@@ -766,34 +720,34 @@ if(!campaignTrail_temp.loaded1){
         "color_hex": "#CD0B0A",
         "secondary_color_hex": "#DC5B5A",
         "is_active": 0,
-        "image_url": "https://i.imgur.com/wWVbDUf.png",
+        "image_url": "https://file.garden/aOp8cCiQ5ho9r5b1/Colin%20Powell%20TCTC.png",
         "electoral_victory_message": "''",
         "electoral_loss_message": "''",
         "no_electoral_majority_message": "''",
-        "description_as_running_mate": "<p>New York Governor</p>",
+        "description_as_running_mate": "<p>Oh no the convention mega-deadlocked</p>",
         "candidate_score": 0,
         "running_mate": true
     }
   },
   {
     "model": "campaign_trail.candidate",
-    "pk": 95,
+    "pk": 93,
     "fields": {
-        "first_name": "Mitt",
-        "last_name": "Romney",
+        "first_name": "William H.",
+        "last_name": "Gates",
         "election": 9,
-        "party": "Republican",
-        "state": "Massachusetts",
+        "party": "Independent",
+        "state": "Washington",
         "priority": 11,
         "description": "''",
         "color_hex": "#CD0B0A",
         "secondary_color_hex": "#DC5B5A",
         "is_active": 0,
-        "image_url": "https://i.imgur.com/zbHuxxJ.png",
+        "image_url": "https://file.garden/aOp8cCiQ5ho9r5b1/Bill%20Gates%20TCTC.png",
         "electoral_victory_message": "''",
         "electoral_loss_message": "''",
         "no_electoral_majority_message": "''",
-        "description_as_running_mate": "<p>Romney Style!</p>",
+        "description_as_running_mate": "<p>YOU BLOW JOBS YOU ARROGENT PRICK WITH YOUR SECOND-HAND JEANS AND YOUR TURTULE NECK</p>",
         "candidate_score": 0,
         "running_mate": true
     }
@@ -1003,14 +957,6 @@ if(!campaignTrail_temp.loaded1){
     "fields": {
         "candidate": 77,
         "running_mate": 94
-    }
-  },
-  {
-    "model": "campaign_trail.running_mate",
-    "pk": 62,
-    "fields": {
-        "candidate": 77,
-        "running_mate": 95
     }
   },
   {
@@ -1380,65 +1326,51 @@ if(!campaignTrail_temp.loaded1){
               e.candidate_json[id].fields.first_name = "George W."
               e.candidate_json[id].fields.last_name = "Bush"
         }
-        if (!localStorage.getItem("LEBRON")) {
+        if (!localStorage.getItem("UnlockMcCain")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '87') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("CURRY")) {
+        if (!localStorage.getItem("UnlockKeyes")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '88') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("DURANT")) {
+        if (!localStorage.getItem("UnlockDole")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '89') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("WESTBROOK")) {
+        if (!localStorage.getItem("UnlockGingrich")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '90') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("HARDEN")) {
+        if (!localStorage.getItem("UnlockKemp")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '91') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("LILLARD")) {
+        if (!localStorage.getItem("UnlockPowell")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '92') {
               selectElement.remove(i);
             }
           }
         }
-        if (!localStorage.getItem("JORDAN")) {
+        if (!localStorage.getItem("UnlockGates")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '93') {
-              selectElement.remove(i);
-            }
-          }
-        }
-        if (!localStorage.getItem("KOBE")) {
-          for (let i = selectElement.options.length - 1; i >= 0; i--) {
-            if (selectElement.options[i].value === '94') {
-              selectElement.remove(i);
-            }
-          }
-        }
-        if (!localStorage.getItem("ALI")) {
-          for (let i = selectElement.options.length - 1; i >= 0; i--) {
-            if (selectElement.options[i].value === '95') {
               selectElement.remove(i);
             }
           }
@@ -1884,9 +1816,9 @@ if(!campaignTrail_temp.loaded1){
         );
   
       const song4_W = new Song(
-      "Paradise By The Dashboard Light",
-      "Meat Loaf",
-      "https://audio.jukehost.co.uk/30ysZumO82CY4tJkOpXzkKmfPSyzW7y3"
+      "King For a Day",
+      "Jamiroquai",
+      "https://file.garden/Z7qfmQZIZjO_xV5N/KingforaDay.mp3"
       );
       
       const song4_REF = new Song(
@@ -1902,9 +1834,9 @@ if(!campaignTrail_temp.loaded1){
       );
       
       const song5_W = new Song(
-      "King For a Day",
-      "Jamiroquai",
-      "https://file.garden/Z7qfmQZIZjO_xV5N/KingforaDay.mp3"
+      "My City Was Gone",
+      "Pretenders",
+      "https://audio.jukehost.co.uk/F04qKdt2FDN9WxSjZQ1Y416as4d2VrFD"
       );
   
       const song5_REF = new Song(
@@ -1919,15 +1851,15 @@ if(!campaignTrail_temp.loaded1){
         "https://audio.jukehost.co.uk/zwORXIkn2msfNZMMxiSpJoxs5We9QDLK"
       );
       const song6_W = new Song(
-      "Sleep Now in the Fire",
-      "Rage Against the Machine",
-      "https://audio.jukehost.co.uk/qozzcT2pN8to9iZLd5rrOoXVLIXF24mo"
+      "Opportunities (Let's Make Lots of Money)",
+      "Pet Shop Boys",
+      "https://audio.jukehost.co.uk/xUqOaQwqalaqY570GVLdjp0q7T5tCBVY"
       );
   
       const song6_REF = new Song(
-        "Burning Down the House",
-        "Talking Heads",
-        "https://audio.jukehost.co.uk/QLKBDgZyGtZXhrc1EbA7kWYdZRoDSB2l"
+        "My Name Is",
+      "Eminem",
+      "https://audio.jukehost.co.uk/lomFeBO1wvPB5c50xHYVqg1azkw68hGj"
         );
       
       const song7_Gore = new Song(
@@ -1937,15 +1869,15 @@ if(!campaignTrail_temp.loaded1){
       );
       
       const song7_W = new Song(
-      "My City Was Gone",
-      "Pretenders",
-      "https://audio.jukehost.co.uk/F04qKdt2FDN9WxSjZQ1Y416as4d2VrFD"
+      "I Won't Back Down",
+      "Tom Petty",
+      "https://audio.jukehost.co.uk/Q4sIcCkSyYv5V2BtLqUM7mgTwc62jmZy"
       );
 
       const song7_REF = new Song(
-        "My Name Is",
-      "Eminem",
-      "https://audio.jukehost.co.uk/lomFeBO1wvPB5c50xHYVqg1azkw68hGj"
+      "Burning Down the House",
+        "Talking Heads",
+        "https://audio.jukehost.co.uk/QLKBDgZyGtZXhrc1EbA7kWYdZRoDSB2l"
         );
   
       const song8_Gore = new Song(
@@ -1955,9 +1887,9 @@ if(!campaignTrail_temp.loaded1){
         );
   
         const song8_W = new Song(
-        "I Won't Back Down",
-      "Tom Petty",
-      "https://audio.jukehost.co.uk/Q4sIcCkSyYv5V2BtLqUM7mgTwc62jmZy"
+        "What's My Age Again?",
+      "blink-182",
+      "https://audio.jukehost.co.uk/oJkRIDtgUPQY2T4UtfMieOlk1ke8PMhl"
           );
 
         const song8_REF = new Song(
@@ -1971,6 +1903,17 @@ if(!campaignTrail_temp.loaded1){
         "Kara's Flowers",
         "https://audio.jukehost.co.uk/FJ3Xr5hVqy5bIBkJZXWjZKWZFGHpyRmW"
           );
+      
+      const song9_W = new Song(
+      "Paradise By The Dashboard Light",
+      "Meat Loaf",
+      "https://audio.jukehost.co.uk/30ysZumO82CY4tJkOpXzkKmfPSyzW7y3"
+      );
+      const song9_REF = new Song(
+      "Country Grammar (Hot Shit)",
+      "Nelly",
+      "https://audio.jukehost.co.uk/NlGcv8iQWTqOBLPWRr82ZjLj3N0TaYOv"
+      );
       
       playlist.addSong(song1_Gore);
       playlist.addSong(song2_Gore);
@@ -2000,6 +1943,7 @@ if(!campaignTrail_temp.loaded1){
       w_playlist.addSong(song6_W);
       w_playlist.addSong(song7_W);
       w_playlist.addSong(song8_W);
+      w_playlist.addSong(song9_W);
       
       ref_playlist.addSong(song1_REF);
       ref_playlist.addSong(song2_REF);
@@ -2009,6 +1953,7 @@ if(!campaignTrail_temp.loaded1){
       ref_playlist.addSong(song6_REF);
       ref_playlist.addSong(song7_REF);
       ref_playlist.addSong(song8_REF);
+      ref_playlist.addSong(song9_REF);
     
       const playerContainer = document.createElement("div");
       playerContainer.id = "player";
