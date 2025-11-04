@@ -1298,13 +1298,6 @@ if(!campaignTrail_temp.loaded1){
         const runningMateElement = document.getElementById("running_mate_id");
         if (!runningMateElement) return; // Exit early if the element isn't there
       
-        const v = runningMateElement.value;
-        console.log(v + "   " + storedVeep);
-        if(e.candidate_id == 78) {
-          console.log("clicked");
-          runningMateButton.click();
-          observer.disconnect()
-        }
         if(e.candidate_id == 80) {
           console.log("clicked");
           runningMateButton.click();
@@ -1313,19 +1306,29 @@ if(!campaignTrail_temp.loaded1){
         if (e.candidate_id == 77) {
           veepBB.remove();
         }
-        if (v == 86 && storedVeep != 86) {
-          var id = e.candidate_json.map(p=>p.pk).indexOf(77)
-              e.candidate_json[id].fields.first_name = "George W."
-              e.candidate_json[id].fields.last_name = "Bush"
-        }
-        if (!localStorage.getItem("UnlockMcCain")) {
-          for (let i = selectElement.options.length - 1; i >= 0; i--) {
-            if (selectElement.options[i].value === '87') {
-              selectElement.remove(i);
-            }
-          }
-        }
-        if (!localStorage.getItem("UnlockKeyes")) {
+        if (runningMateElement) {
+  function updateVeep() {
+    const v = runningMateElement.value;
+    console.log(v + "   " + storedVeep);
+    if (v == 86 && storedVeep != 86) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "George W.";
+      e.candidate_json[id].fields.last_name = "Bush";
+      storedVeep = 86;
+    }
+    if (v == 87 && storedVeep != 87) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "John";
+      e.candidate_json[id].fields.last_name = "McCain";
+      storedVeep = 87;
+    }
+  }
+
+  updateVeep();
+
+  runningMateElement.addEventListener("change", updateVeep);
+}
+if (!localStorage.getItem("UnlockKeyes")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '88') {
               selectElement.remove(i);
