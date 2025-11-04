@@ -98917,6 +98917,9 @@ function updateCandidates(type, amt){
             if (specter_active == 1) {
             opponents.specter -= (0.3*amt)
             }
+            if (cheney_active == 1) {
+            opponents.cheney -= (0.3*amt)
+            }
         }
         if(type == "fopo" && amt<0){ // Bad FoPo for Billy
             // adds
