@@ -958,7 +958,7 @@ campaignTrail_temp.questions_json = [
         "pk": "candidate_intro_cheney",
         "fields": {
             "priority": 0,
-            "description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that damn bulldog has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead — America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: the moderate, strong-jawed Governor of Pennsylvania, Tom Ridge. What a joke. Still, you'll need to respond. ",
+            "description": "You're sitting at home, watching this year's RNC in San Diego. Dick Cheney, the former Secretary of Defense and Minority Whip, that damn bulldog has done it. You watch him slowly, and steadily address the crowd: ''A President too busy spinning scandals is too busy to lead — America deserves better.'' You sigh, tempted to turn off the television. Then he gestures toward his running mate: the politically irrelavent, yet ever president Secretary of Defense under Nixon, Donald Rumsfeld. What a joke. Still, you'll need to respond. ",
             "likelihood": 1
         }
     },
@@ -98853,10 +98853,10 @@ var gramm_var = 0
 var specter_var = 0
 var wilson_var = 0
 var powell_var = -99
+var cheney_var = -99
 var bono_var = -99
 var gingrich_var = -99
 var weld_var = -99
-var bush_var = -99
 
 var moveup = 0
 
@@ -98867,12 +98867,12 @@ var alexander_active = 1
 var gramm_active = 1
 var specter_active = 1
 var wilson_active = 1
-var powell_active = 0
 
+var powell_active = 0
+var cheney_active = 0
 var bono_active = 0
 var gingrich_active = 0
 var weld_active = 0
-var bush_active = 0
 
 let opponents = {
     dole: dole_var,
@@ -98883,10 +98883,10 @@ let opponents = {
     specter: specter_var,
     wilson: wilson_var,
     powell: powell_var,
+    cheney: cheney_var,
     bono: bono_var,
     gingrich: gingrich_var,
     weld: weld_var,
-    bush: bush_var
 };
 
 let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
@@ -98894,12 +98894,13 @@ let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
 let doleObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Bob Dole",title: "KANSAS SENATOR",description: "The leading man out of his prime is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' The natural nominee next November if you prove yourself unable to effectively bring about the change you promised to achieve."};
 let buchananObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
 let forbesObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Forbius",name: "Steve Forbes",title: "BUSINESSMAN",description: "Flat tax, flat tax, flat tax! That’s all the eccentric multi-millionaire has up his sleeve. There isn’t a flat chance in hell he gets the nomination, unless you’ve failed to restore trust in the economy."};
-let alexanderObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and area of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he'll get away with it."};
+let alexanderObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. SECRETARY OF EDUCATION",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and area of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he'll get away with it."};
 let grammObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gramm",name: "Phil Gramm",title: "TEXAS SENATOR",description: "Scandal can burst a candidate’s ship wide open. Amazingly however, money can patch up that hole quite effectively, and perhaps buy the nomination if the GOP goes morally bankrupt."};
 let specterObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Specter",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."};
 let wilsonObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "He’d be the frontrunner if he learned to shut up. Don't count him out though. If the GOP is caught in a disastrous shouting match at San Diego, his voice could rise again as one of clarity. "};
 
 let powellObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Powell",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
+let cheneyObject = {img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dick%20Cheney%20RTWOF%20Pic.png",name: "Dick Cheney",title: "FMR. SECRETARY OF DEFENSE",description: "Humpty Dumpty is certainly not the most inspiring choice the GOP could pick. He’s as dull as Pancakes without Syrup, however, he does seem to satisfy the average Republican hawk. If they see no better alternative, they’ll send Dick in."};
 let bonoObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Bono",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The GOP is so desperate for another Reagan that they might nominate the furthest man from him. The marijuana smoking, three time divorcee, scientologist ''outsider'' grabs the attention of those who, in morbid curiosity, want to see how far he'll go."};
 let gingrichObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gingrich",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your arch-nemesis in Washington has rode the wave after your dismal performance in the midterms, and the improbability of him being a serious contender for the presidency has become a possibility. If Gingrich wants to graduate to King of the Country, you'll need to prove him right."};
 let weldObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Weld",name: "Bill Weld",title: "GOVERNOR OF MASSACHUSETTS",description: "Desperate times call for desperate measures. Hand picked by higher ups, Bill Weld is the perfect choice to restore trust in the party, much to the contempt of every conservative. But what other choice do they have?"};
@@ -98921,6 +98922,9 @@ function updateCandidates(type, amt){
             // adds
             if (specter_active == 1) {
             opponents.specter += (-0.7*amt)
+            }
+            if (cheney_active == 1) {
+            opponents.cheney += (-0.7*amt)
             }
             // subs
         } if(type == "cong" && amt>0){ // Good Cong for Billy
@@ -98950,6 +98954,9 @@ function updateCandidates(type, amt){
             }
             if(gramm_active == 1){
                 opponents.gramm += (0.2*amt)
+            }
+            if(cheney_active == 1){
+                opponents.cheney += (0.3*amt)
             }
             // subs
             if(specter_active == 1){
@@ -99014,6 +99021,8 @@ sortedOpponents.forEach(([name, value]) => {
         main_website_candidate_list.push(wilsonObject);
     } else if (name === 'powell' && powell_active == 1) {
         main_website_candidate_list.push(powellObject);
+    } else if (name === 'cheney' && cheney_active == 1) {
+        main_website_candidate_list.push(cheneyObject);
     } else if (name === 'bono' && bono_active == 1) {
         main_website_candidate_list.push(bonoObject);
     } else if (name === 'gingrich' && gingrich_active == 1) {
@@ -99620,6 +99629,15 @@ question_insert("question_2_nannygate",
 }
 
 if (e.question_number+1 == 14) { // Budget III
+  if (FPWin <= 0) {
+    cheney_active = 1
+    moveup = 1
+    if (Ideology >= 2) {
+    opponents.cheney = 3
+    } else {
+    opponents.cheney = 2
+    }
+    }
     if (e.player_answers.includes(30003)) {
 if (e.player_answers.includes(880021.5) || e.player_answers.includes(880025.5) || e.player_answers.includes(880029.5) || e.player_answers.includes(8800233.5)) {
 if ((e.player_answers.includes(88002.5) || e.player_answers.includes(880024.5) || e.player_answers.includes(880028.5)) || e.player_answers.includes(8800232.5)) {
@@ -103217,6 +103235,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
+        if (sortedOpponents[6][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
         if (sortedOpponents[6][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -104438,6 +104466,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
+        if (sortedOpponents[5+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
         if (sortedOpponents[5+moveup][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -104585,6 +104623,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             opponents.buchanan += (opponents.wilson/3)
             }
             opponents.wilson = -10
+        }
+        if (sortedOpponents[4+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
         }
         if (sortedOpponents[4+moveup][0] == "bono") {
             bono_active = 0 
@@ -104833,6 +104881,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
+        if (sortedOpponents[3+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
         if (sortedOpponents[3+moveup][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -105007,6 +105065,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             opponents.buchanan += (opponents.wilson/3)
             }
             opponents.wilson = -10
+        }
+        if (sortedOpponents[2+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
         }
         if (sortedOpponents[2+moveup][0] == "bono") {
             bono_active = 0 
@@ -105212,6 +105280,16 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
             }
             opponents.wilson = -10
         }
+        if (sortedOpponents[1+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
         if (sortedOpponents[1+moveup][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -105364,7 +105442,16 @@ if (sortedOpponents[1+moveup][0] == "dole") {
             }
             opponents.wilson = -10
         }
-
+        if (sortedOpponents[1+moveup][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
         if (sortedOpponents[1+moveup][0] == "bono") {
             bono_active = 0 
             if(specter_active == 1){
@@ -106278,6 +106365,18 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.23
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_powell");
+    } else if (candidateName == "cheney") { // Cheney
+    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B329B";
+    campaignTrail_temp.candidate_json[2]["fields"].last_name = "Cohen";
+    campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ben";
+    campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#6E4636";
+    campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
+    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#6B0B05";
+    campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
+    campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
+    e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
+    e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
+    campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_cheney");
     } else if (candidateName == "bono") { // Bono
     updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C2E9C";
@@ -106366,54 +106465,7 @@ function opponentDecider(){
         } else {
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_weldperot");
         }
-    } else if (candidateName == "perot") {
-        campaignTrail_temp.candidate_json[3]["fields"].last_name = "Paul";
-        campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/5gurvc.png";
-        campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ron";
-        campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#d2a825";
-        campaignTrail_temp.candidate_json[2]["fields"].last_name = "McKinney";
-        campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#00A0B0";
-        campaignTrail_temp.candidate_json[1]["fields"].last_name = "Perot";
-        campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B329B";
-        campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#9D1439";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-        campaignTrail_temp.candidate_json[1]["fields"].first_name = "Ross";
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.2
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.2
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.89
-        e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.51
-        campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_sundog");
-    } else if (candidateName == "bush") {
-    campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-    campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-    campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ross";
-    campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#78118A";
-    campaignTrail_temp.candidate_json[2]["fields"].last_name = "Davis";
-    campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#4CAF50";
-    campaignTrail_temp.candidate_json[1]["fields"].last_name = "Bush";
-    campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#1B4E7F";
-    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#B54330";
-    campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/XeDbjdP.png";
-    campaignTrail_temp.candidate_json[1]["fields"].first_name = "George";
-    e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.39
-    campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_hw_commies");
     }
-    }
-    function CheneyMentum() {
-            campaignTrail_temp.candidate_json[3]["fields"].last_name = "Perot";
-            campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://i.postimg.cc/PJWYvpDq/5ta6po.png";
-            campaignTrail_temp.candidate_json[3]["fields"].first_name = "Ross";
-            campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#7F158F";
-            campaignTrail_temp.candidate_json[2]["fields"].last_name = "McReynolds";
-            campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#00ACC1";
-            campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
-            campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#6B0B05";
-            campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
-            campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
-            campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#9A5655";
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
-            e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
-            campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
     }
     function outsiderChange(candidateName) {
         outsider = candidateName
@@ -107485,6 +107537,10 @@ campaignTrail_temp.questions_json[31] = tunnel("debate_wilson");
 campaignTrail_temp.questions_json[29] = tunnel("campaign_1_powell");
 campaignTrail_temp.questions_json[30] = tunnel("campaign_2_powell");
 campaignTrail_temp.questions_json[31] = tunnel("debate_powell");
+} else if (republican == "cheney") {
+campaignTrail_temp.questions_json[29] = tunnel("campaign_1_cheney");
+campaignTrail_temp.questions_json[30] = tunnel("campaign_2_cheney");
+campaignTrail_temp.questions_json[31] = tunnel("debate_cheney");
 } else if (republican == "bono") {
 campaignTrail_temp.questions_json[29] = tunnel("campaign_1_bono");
 campaignTrail_temp.questions_json[30] = tunnel("campaign_2_bono");
@@ -107794,6 +107850,27 @@ e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96O
 powellLoss.addSong(powellLossSong);
 changePlaylist(powellLoss);
     }
+// Beat Cheney
+} else if (quickstats[0] >= 270 && quickstats[0] <= 449 && republican == "cheney") {
+    ctsAchievement("Big Time");
+  e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS SECRETARY CHENEY</h3>
+          <p>And so, another one bites the dust. At the Excelsior Hotel, victory felt just as good the second time around. You could have hoped for even more blue states showing on that screen, but you didn't have to stay all night biting your nails to grasp your victory. There had been a few doubts on you winning the election, now the hopes are that that victory will also translate to a victory downballot. <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding a Gulf War grifter who had no legs of his own to stand on to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> The general held a post-election meeting as split as the coalition that supported his candidacy. There were all sorts of corners of the GOP present, the near fanatical supporters who tried to blame Powell's loss on anything between Don Nickles and racism, the moderates in the party, who were never really sold on him to begin with, and some particularly vile far-right nuts calling him a baby killer that had to be escorted out. He kept his calm to the end before leaving with dignity, his job remaining yet unfinished.<br><br>The call was to the point, he assured you that he held no grudge in defeat and that he will continue to serve the nation and it's Commander-in-Chief faithfully. During the call, he brought something up that he'd never said in public, simply out of annoyance of hearing the word "race card." He thought all people of color had a good place to be in the nation, however there remains people that would only like to see them gone. The gap of color in the nation has not fully healed, and simple excellence won't ever satisfy those that simply refuse that you should exist. He asked you if you could make a vow, to support those in this country who don't have a voice. You say yes of course, and the call ends, both of you on good terms.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
+          `)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/aOp8cCiQ5ho9r5b1/Cheney_Lose.gif'})])
+    if (songChange != 1) {
+    songChange = 1
+    const cheneyLoss = new Playlist();
+  const cheneyLossSong = new Song(
+    "The Wanderer",
+    "U2, Johnny Cash",
+    "https://audio.jukehost.co.uk/k6FcZafOleIhU8IR6hpxUcrrXipWhmme",
+    "5:41"
+  );
+cheneyLoss.addSong(cheneyLossSong);
+changePlaylist(cheneyLoss);
+    }
 // Beat Bono
 } else if (quickstats[0] >= 270 && quickstats[0] <= 449 && republican == "bono") {
     ctsAchievement("Goin' Home");
@@ -108008,6 +108085,27 @@ changePlaylist(weldLoss);
 } else if (quickstats[0] >= 450 && quickstats[0] <= 537 && republican == "powell") {
     ctsAchievement("Olympus Has Fallen");
     e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS GENERAL POWELL</h3>
+          <p>There was an expectation it would take at least a few hours for the results to trickle in and for you to be elected. You knew you had done a great campaign, your opponent always on the backfoot. However, you didn't expect the result to be called for you in less than an hour! Not everyone had even the time to come before people where already celebrating. A sea of blue, states that Republicans thought to be their safe havens since Nixon switching back to you. Maybe it will be enough to gain some control back of Congress. If this don't, nothing will after all! <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding a Gulf War grifter who had no legs of his own to stand on to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> The general held a post-election meeting as split as the coalition that supported his candidacy. Still, the mood was clear, ranging from disapointment to outright hate. He had everything to vainquish that hated president, over-promised and under-delivered. The hero of Iraq became a pariah. He would carry on his words under constant insults before finally vacating the premises.<br><br>The call was to the point, he assured you that he held no grudge in defeat and that he will continue to serve the nation and it's Commander-in-Chief faithfully. During the call, he brought something up that he'd never said in public, simply out of annoyance of hearing the word "race card." He thought all people of color had a good place to be in the nation, however there remains people that would only like to see them gone. The gap of color in the nation has not fully healed, and simple excellence won't ever satisfy those that simply refuse that you should exist. He asked you if you could make a vow, to support those in this country who don't have a voice. You say yes of course, and the call ends, both of you on good terms.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
+          `)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%201/Special%20Endings/Special%20Conditions/Landslide%20Victory'})])
+     if (songChange != 1) {
+    songChange = 1
+      const ClintonBlowout = new Playlist();
+    const ClintonBlowoutSong = new Song(
+      "Sonic Boom",
+      "SONIC SOUND TEAM",
+      "https://audio.jukehost.co.uk/Pod5gGdfKMMX3tvnDJk7yqMRYbE19soC",
+      "3:08",
+    );
+  ClintonBlowout.addSong(ClintonBlowoutSong);
+  changePlaylist(ClintonBlowout);
+  }
+// Blowout Cheney
+} else if (quickstats[0] >= 450 && quickstats[0] <= 537 && republican == "cheney") {
+    ctsAchievement("Big Time");
+    e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS SECRETARY CHENEY</h3>
           <p>There was an expectation it would take at least a few hours for the results to trickle in and for you to be elected. You knew you had done a great campaign, your opponent always on the backfoot. However, you didn't expect the result to be called for you in less than an hour! Not everyone had even the time to come before people where already celebrating. A sea of blue, states that Republicans thought to be their safe havens since Nixon switching back to you. Maybe it will be enough to gain some control back of Congress. If this don't, nothing will after all! <br><br>Sure, you had the economy, and the Republicans didn't help themselves by fielding a Gulf War grifter who had no legs of his own to stand on to face you. Still, it meant something. No matter what's been happening, no matter the constant scandals, the character assassination attempts by the right, all the mud flung in your face, you've beaten them a second time.  <br><br> The general held a post-election meeting as split as the coalition that supported his candidacy. Still, the mood was clear, ranging from disapointment to outright hate. He had everything to vainquish that hated president, over-promised and under-delivered. The hero of Iraq became a pariah. He would carry on his words under constant insults before finally vacating the premises.<br><br>The call was to the point, he assured you that he held no grudge in defeat and that he will continue to serve the nation and it's Commander-in-Chief faithfully. During the call, he brought something up that he'd never said in public, simply out of annoyance of hearing the word "race card." He thought all people of color had a good place to be in the nation, however there remains people that would only like to see them gone. The gap of color in the nation has not fully healed, and simple excellence won't ever satisfy those that simply refuse that you should exist. He asked you if you could make a vow, to support those in this country who don't have a voice. You say yes of course, and the call ends, both of you on good terms.<br><br>As the crowd around you began taking out the bottles, Hillary toasting to 4 more years, you could feel your heart burn some while in the celebration. The want was there, and so was the will to do but even as the stress of the campaign faded, those of ruling swirled once again. You have so much more to do: the environment, the budget, healthcare, education… It dawns on you how much the fight was just beginning as you bit your lips and carried on out. You were not alone after all, and with a Veep and a wife like those, you may just have 4 better years than before! <br><br>On November 6, you could see the jubilant look in the crowd. It felt like in 1992, when you managed to take out Goliath, there was that same hopeful shine in their eyes. Even in 4 years of struggle, deadlock, and tension, they had kept their trust in you, they had kept the hope for a better tomorrow, and they entrusted it in you. As you joked with Hillary, Tipper, and Al, it felt different this time around. You had begun writing a story that was larger than yourself, one that would continue after you. <br></p>
           `)
             // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
@@ -108264,6 +108362,27 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
+    // 538 Colin Powell
+} else if (quickstats[0] == 538 && republican == "cheney") {
+    ctsAchievement("Big Time");
+    e.pages.push(`<h3> FOUR MORE YEARS: PRESIDENT CLINTON BEATS SECRETARY CHENEY</h3>
+            <p>If you see this, you beat Dick Cheney in a landslide!<br></p>`)
+            // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%201/Special%20Endings/Special%20Conditions/538'})])
+
+      if (songChange != 1) {
+    songChange = 1
+      const ClintonBlowout = new Playlist();
+    const ClintonBlowoutSong = new Song(
+      "Don't Stop",
+        "Fleetwood Mac",
+        "https://audio.jukehost.co.uk/52nnBJOfW8ODHL9yUZ3sYp4e8jZwMI83",
+        "5:31",
+      );
+  ClintonBlowout.addSong(ClintonBlowoutSong);
+  changePlaylist(ClintonBlowout);
+    }
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
 // 538 Sonny Bono
@@ -108474,6 +108593,26 @@ changePlaylist(weldLoss);
     );
   wilsonWin.addSong(wilsonWinSong);
   changePlaylist(wilsonWin);
+}
+// Wilson Blowout
+  } else if (republican == "cheney" && quickstats[0] <= 138) {
+      e.pages.push(`<h3>''CNN CAN NOW PROJECT DICK CHENEY THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+          <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio, states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>
+          `)
+          // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+  //e.image = ""
+  e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/aOp8cCiQ5ho9r5b1/Cheney_Win.gif'})])
+  if (songChange != 1) {
+    songChange = 1
+  const cheneyWin = new Playlist();
+  const cheneyWinSong = new Song(
+    "My Heart Will Go On",
+        "Celine Dion",
+      "https://audio.jukehost.co.uk/l6KEXG7FzRAKzB0ucQSibbuzGTBDVt9w",
+      "4:40"
+    );
+  cheneyWin.addSong(cheneyWinSong);
+  changePlaylist(cheneyWin);
 }
 // Bono Blowout
   } else if (republican == "bono" && quickstats[0] <= 138) {
@@ -108691,6 +108830,26 @@ const powellWinSong = new Song(
 );
 powellWin.addSong(powellWinSong);
 changePlaylist(powellWin);
+  }
+// Cheney Win
+} else if (republican == "cheney" && quickstats[0] <= 268) {
+    e.pages.push(`<h3>''CNN CAN NOW PROJECT DICK CHENEY THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON''</h3>
+        <p> That was that. All the hard work, effort and progress you made, gone in one night. You sat in a corner of the ballroom at the Excelsior Hotel in Little Rock, staring blankly at the television screen. Around, you could hear aides whisper quietly, some avoiding your gaze, others casting anxious glances in your direction. The party had started with cautious optimism. Sure, the economy had its ups and downs, and the Republicans had hammered you relentlessly on Whitewater and your personal scandals, but there had been hope. Now, that hope was gone.<br><br>The screen flickered with images of cheering crowds in Kansas, in Indiana, in Ohio, states that had been expected to lean Republican but had turned out in force for the GOP. The electoral map was painted a harsh red across the Midwest and much of the South, with only a few splashes of blue along the coasts and in Illinois. It didn’t matter how much he won by, it was still decisive enough to leave no doubt, at least in your own mind, that you were a failure. States that you won easily in ’92, flipped. The ''Third Way Democrat'' movement that you spearheaded seems to be permanently dead.<br><br>You rubbed your temple, trying to find some sort of moment for relaxation. The moments of triumph from four years ago seemed distant now. The young, energetic candidate who had promised to build a bridge to the 21st century was now a man weighed down by defeats and mistakes, real and perceived. You were confident, maybe too confident. You’d told yourself that the debates had gone well, that the voters cared more about jobs and health care than your personal life. But in the end, you weren’t been able to overcome the relentless drumbeat of Republican attacks or the weariness of an electorate ready for change.<br><br>Hillary sat beside you, her hand resting on your knee. She was quiet, but her presence steadied you, as it always has. You glanced at her, seeing in her eyes a mixture of sorrow and determination. ''She’s gonna keep fightin’, that’s my girl.'', you said in your head. She always did.<br><br>You took a deep breath and stood, smoothing your tie. You knew what you had to do. It wasn’t the first time you faced defeat, but it was the hardest. As you walked to the stage, you could feel the weight of the moment pressing down on you. You made a simple speech about accepting the results of the election, and continuing the fight, even outside of the Oval Office. Although the crowd cheered, you felt as if it was almost out of pity. You still felt like there was work to do, and that the American people cut you short. As you left the stage, the applause fading behind you, you couldn’t shake the feeling that your time in the spotlight had come to an end.<br></p>
+        `)
+        // idk how to add playlists but to do that you create a new playlist in code1 with just that song and put changePlaylist(nameOfYourEndingPlaylist) right here
+//e.image = ""
+e.executable.push([0, (() => {e.image = e.image = 'https://file.garden/aOp8cCiQ5ho9r5b1/Cheney_Win.gif'})])
+  if (songChange != 1) {
+    songChange = 1
+const cheneyWin = new Playlist();
+const cheneyWinSong = new Song(
+  "Power and Sacrifice",
+  "Swans",
+  "https://audio.jukehost.co.uk/yIS2QyFFLZY8WarNVLdjHcnwprbn9qH1",
+  "5:37"
+);
+cheneyWin.addSong(cheneyWinSong);
+changePlaylist(cheneyWin);
   }
 // Bono win
 } else if (republican == "bono" && quickstats[0] >= 3 && quickstats[0] <= 268) {
@@ -109149,7 +109308,7 @@ const main_website_candidate_list = [
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Bob Dole",title: "KANSAS SENATOR",description: "The leading man out of his prime is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' The natural nominee next November if you prove yourself unable to effectively bring about the change you promised to achieve."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, Buchanan's base is as ecstatic as ever, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Forbius",name: "Steve Forbes",title: "BUSINESSMAN",description: "Flat tax, flat tax, flat tax! That’s all the eccentric multi-millionaire has up his sleeve. There isn’t a flat chance in hell he gets the nomination, unless you’ve failed to restore trust in the economy."},
-{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. TN GOVERNOR",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and tone of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he'll get away with it."},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Lamar Alexander",title: "FMR. SECRETARY OF EDUCATION",description: "Lamar is a Republican recast of yourself. Southern Governor in the 80s, President of the NGA, and tone of appeal. His blatant rehash of your ‘92 campaign is humorous to you, but oblivious to many. If in comparison to a scandal ridden, out of touch, administration, he'll get away with it."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gramm",name: "Phil Gramm",title: "TEXAS SENATOR",description: "Scandal can burst a candidate’s ship wide open. Amazingly however, money can patch up that hole quite effectively, and perhaps buy the nomination if the GOP goes morally bankrupt."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Specter",name: "Arlen Specter",title: "PENNSYLVANIA SENATOR",description: "The moderate in this election, Specter's unique positions on abortion and other social issues may make Republicans unlikely to support him. If it were to happen, it would be a mass rebuke of a conservative administration."},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "He’d be the frontrunner if he learned to shut up. Don't count him out though. If the GOP is caught in a disastrous shouting match at San Diego, his voice could rise again as one of clarity. "}
@@ -109952,6 +110111,7 @@ vpTable = {
     "Arlen Specter" : "Jesse Helms",
     "Pete Wilson" : "Fred Thompson",
     "Colin Powell" : "Don Nickles",
+    "Dick Cheney" : "Donald Rumsfeld",
     "Sonny Bono" : "George Voinovich",
     "Newt Gingrich" : "Christine Todd Whitman",
     "Bill Weld" : "Marc Racicot",
