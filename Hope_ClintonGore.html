@@ -99636,9 +99636,17 @@ if (e.question_number+1 == 14) { // Budget III
     cheney_active = 1
     moveup = 1
     if (Ideology >= 2) {
+    if (scandal >= 2) {
+    opponents.cheney = 4
+    } else {
+    opponents.cheney = 3
+    }
+    } else {
+    if (scandal >= 2) {
     opponents.cheney = 3
     } else {
     opponents.cheney = 2
+    }
     }
     }
     if (e.player_answers.includes(30003)) {
