@@ -98927,7 +98927,7 @@ function updateCandidates(type, amt){
             opponents.specter += (-0.7*amt)
             }
             if (cheney_active == 1) {
-            opponents.cheney += (-0.7*amt)
+            opponents.cheney += 1
             }
             // subs
         } if(type == "cong" && amt>0){ // Good Cong for Billy
@@ -99637,13 +99637,13 @@ if (e.question_number+1 == 14) { // Budget III
     moveup = 1
     if (Ideology >= 2) {
     if (scandal >= 2) {
-    opponents.cheney = 4
+    opponents.cheney = 5
     } else {
     opponents.cheney = 3
     }
     } else {
     if (scandal >= 2) {
-    opponents.cheney = 3
+    opponents.cheney = 4
     } else {
     opponents.cheney = 2
     }
