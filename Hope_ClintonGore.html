@@ -20063,7 +20063,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35017.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.64357984
+        "global_multiplier": -0.58357984
     }
 },
 {
@@ -20093,7 +20093,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35018.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.64357984
+        "global_multiplier": -0.58357984
     }
 },
 {
@@ -20123,7 +20123,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 35019.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.64357984
+        "global_multiplier": -0.58357984
     }
 },
 {
@@ -20153,7 +20153,7 @@ campaignTrail_temp.answer_score_global_json = [
         "answer": 3501919.5,
         "candidate": 77,
         "affected_candidate": 80,
-        "global_multiplier": -0.64357984
+        "global_multiplier": -0.58357984
     }
 },
 {
@@ -105897,15 +105897,15 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://i.imgur.com/nd8ZoJR.png";
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Pete%20Wilson%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.145;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.135;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.175;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.17;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.1475
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.145
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.1485;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.15;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.1485;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.07
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.64
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_wilson");
