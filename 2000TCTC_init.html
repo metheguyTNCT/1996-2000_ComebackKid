@@ -1314,13 +1314,41 @@ if(!campaignTrail_temp.loaded1){
       var id = e.candidate_json.map(p=>p.pk).indexOf(77);
       e.candidate_json[id].fields.first_name = "George W.";
       e.candidate_json[id].fields.last_name = "Bush";
-      storedVeep = 86;
     }
     if (v == 87 && storedVeep != 87) {
       var id = e.candidate_json.map(p=>p.pk).indexOf(77);
       e.candidate_json[id].fields.first_name = "John";
       e.candidate_json[id].fields.last_name = "McCain";
-      storedVeep = 87;
+    }
+    if (v == 88 && storedVeep != 88) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Alan";
+      e.candidate_json[id].fields.last_name = "Keyes";
+    }
+    if (v == 89 && storedVeep != 89) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Elizabeth";
+      e.candidate_json[id].fields.last_name = "Dole";
+    }
+    if (v == 90 && storedVeep != 90) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Newt";
+      e.candidate_json[id].fields.last_name = "Gingrich";
+    }
+    if (v == 91 && storedVeep != 91) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Jack";
+      e.candidate_json[id].fields.last_name = "Kemp";
+    }
+    if (v == 92 && storedVeep != 92) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Colin";
+      e.candidate_json[id].fields.last_name = "Powell";
+    }
+    if (v == 93 && storedVeep != 93) {
+      var id = e.candidate_json.map(p=>p.pk).indexOf(77);
+      e.candidate_json[id].fields.first_name = "Rush";
+      e.candidate_json[id].fields.last_name = "Limbaugh";
     }
   }
 
@@ -1328,6 +1356,13 @@ if(!campaignTrail_temp.loaded1){
 
   runningMateElement.addEventListener("change", updateVeep);
 }
+if (!localStorage.getItem("UnlockMcCain")) {
+          for (let i = selectElement.options.length - 1; i >= 0; i--) {
+            if (selectElement.options[i].value === '87') {
+              selectElement.remove(i);
+            }
+          }
+        }
 if (!localStorage.getItem("UnlockKeyes")) {
           for (let i = selectElement.options.length - 1; i >= 0; i--) {
             if (selectElement.options[i].value === '88') {
