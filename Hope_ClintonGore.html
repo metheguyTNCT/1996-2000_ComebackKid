@@ -106355,10 +106355,10 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.23
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_powell");
     } else if (candidateName == "cheney") { // Cheney
-    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0B329B";
+    campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C369E";
     campaignTrail_temp.candidate_json[2]["fields"].last_name = "Biafra";
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Jello";
-    campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#4CFF66";
+    campaignTrail_temp.candidate_json[2]["fields"].color_hex = "#3E9E5A";
     campaignTrail_temp.candidate_json[1]["fields"].last_name = "Cheney";
     campaignTrail_temp.candidate_json[1]["fields"].color_hex = "#C8703F";
     campaignTrail_temp.candidate_json[1]["fields"].first_name = "Dick";
@@ -109511,6 +109511,7 @@ vpTable = {
     "Ben Cohen" : "Dolores Huerta",
     "Tony Mazzocchi" : "Various",
     "Ron Dellums" : "Eric Chester",
+    "Jello Biafra" : "Mumia Abu-Jamal",
 
     // Reform
     "Ross Perot" : "Pat Choate",
@@ -110140,6 +110141,12 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             title: "Representative",
             name: "Ron Dellums",
             desc: "Professional MLK Impersonator."
+        })],
+        ["Biafra", this.createTooltip("Dellums", {
+            img: "https://i.postimg.cc/rFJnMtDH/Jello-Biafra-Tooltip.png",
+            title: "Musician",
+            name: "Jello Biafra",
+            desc: "Ex–Dead Kennedys frontman turned scold of the American empire."
         })],
         ["Mazzocchi", this.createTooltip("Mazzocchi", {
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Tony%20Mazzocchi%20Tooltip.png",
