@@ -99419,7 +99419,7 @@ let opponents = {
     weld: weld_var,
 };
 
-let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] — a[1]);
+let sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
 
 let doleObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Bob Dole",title: "KANSAS SENATOR",description: "The leading man out of his prime is seen by most as the frontrunner for the nomination, finally viewing 1996 as ''His turn.'' The natural nominee next November if you prove yourself unable to effectively bring about the change you promised to achieve."};
 let buchananObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "Pat Buchanan",title: "POLITICAL COMMENTATOR",description: "The Culture War's strongest soldier marches to battle, a fight he knows he cannot win. Still, his base is unwavering, believing this is the year they take back America. In order to get where he needs to be, Republicans need to be convinced that an all-out attack against liberalism is what they need this November."};
@@ -99531,7 +99531,7 @@ function updateCandidates(type, amt){
             }
         }
 
-        sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] — a[1]);
+        sortedOpponents = Object.entries(opponents).sort((a, b) => b[1] - a[1]);
         sortedOpponents.forEach(([name, value]) => {
             console.log(`${name}: ${value}`);
         });
@@ -99728,7 +99728,7 @@ e.noCounter = 0;
 
 cyoAdventure = function(a) {
     update_EV_dict();
-    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length — 1]
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     e.noCounter += 1
 if (e.question_number+1 == 2) { // DADT
 if ((e.player_answers.includes(60002) && LEGWin >= 2 && scandal <= 0) || (e.player_answers.includes(60001) && LEGWin >= 1 && scandal <= 0)) {
@@ -107498,7 +107498,7 @@ if (e.page > 0) {
 
 html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
 }
-if (e.page < e.pages.length — 1) {
+if (e.page < e.pages.length - 1) {
 
 html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
 }
@@ -109337,14 +109337,14 @@ function createDraggableBox() {
 
     draggableBox.addEventListener('mousedown', (e) => {
       isDragging = true;
-      offset.x = e.clientX — draggableBox.offsetLeft;
-      offset.y = e.clientY — draggableBox.offsetTop;
+      offset.x = e.clientX - draggableBox.offsetLeft;
+      offset.y = e.clientY - draggableBox.offsetTop;
     });
 
     document.addEventListener('mousemove', (e) => {
       if (isDragging) {
-        draggableBox.style.left = e.clientX — offset.x + 'px';
-        draggableBox.style.top = e.clientY — offset.y + 'px';
+        draggableBox.style.left = e.clientX - offset.x + 'px';
+        draggableBox.style.top = e.clientY - offset.y + 'px';
       }
     });
 
@@ -109353,7 +109353,7 @@ function createDraggableBox() {
     });
     document.body.appendChild(draggableBox);
     
-    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight — document.getElementById("browser_top").clientHeight — document.getElementById("browser_bottom").clientHeight + 32}px`
+    document.getElementById("webpage_html").style.height = `${draggableBox.clientHeight - document.getElementById("browser_top").clientHeight - document.getElementById("browser_bottom").clientHeight + 32}px`
     document.getElementById('webpage_html').addEventListener('click', handleWebpageClick);
     const searchbar = document.getElementById('website_search_bar');
 
@@ -109361,7 +109361,7 @@ searchbar.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter') {
     	const searched_term = searchbar.value.toLowerCase();
         //console.log(searched_term);
-        if (browser_history[browser_history.length — 1] === searched_term) {
+        if (browser_history[browser_history.length - 1] === searched_term) {
         	console.log("Same website.");
         } else {
         	browser_history = browser_history.slice(0,history_index+1)
@@ -110395,17 +110395,17 @@ function getTooltips(str) {
         while ((match = regex.exec(str)) !== null) {
             matches.push({
                 start: match.index + (match[0].startsWith('“') ? 1 : 0), // Adjust for potential starting “
-                end: match.index + match[0].length — (match[0].endsWith('”') ? 1 : 0) — (match[2] ? 1 : 0), 
+                end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), 
                 tooltipIndex: index
             });
         }
     });
 
     // Sort by starting position; if two start at the same position, longer match comes first
-    matches.sort((a, b) => a.start — b.start || b.end — b.start — (a.end — a.start));
+    matches.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
 
     // Filter out overlaps
-    for (let i = 0; i < matches.length — 1; ) {
+    for (let i = 0; i < matches.length - 1; ) {
         if (matches[i + 1].start < matches[i].end) {
             matches.splice(i + 1, 1); // Remove the next match since it overlaps
         } else {
@@ -110782,7 +110782,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
     
     // Create array of replacements sorted by key length (longest first)
     const sortedReplacements = Array.from(this.replacements.entries())
-        .sort((a, b) => b[0].length — a[0].length);
+        .sort((a, b) => b[0].length - a[0].length);
     
     console.log('Sorted replacements:', sortedReplacements.map(([key]) => key));
     
