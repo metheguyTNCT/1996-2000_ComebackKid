@@ -2826,7 +2826,7 @@ campaignTrail_temp.answers_json = [
         "pk": 50007,
         "fields": {
             "question": "question_11_healthcare_choice",
-            "description": "Look, we've gotta face the facts. This just isn't going to work. I've got a plan, but it won't be pretty. Why don't we take this to the GOP?  Now, I know this sounds like me bailing, but we can absolutely can take their best and make our own stuff even better. There's gotta be a common-ground everyone can share."
+            "description": "Make no mistake, we've gotta face the facts. This just isn't going to work. I've got a plan, but it won't be pretty. Why don't we take this to the GOP?  Now, I know this sounds like me bailing, but we can absolutely can take their best and make our own stuff even better. There's gotta be a common-ground everyone can share."
         }
     },
     {
@@ -3378,7 +3378,7 @@ campaignTrail_temp.answers_json = [
         "pk": 230003,
         "fields": {
             "question": "question_16.5_jones_case",
-            "description": "Look, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate, I’m running a country, for God’s sake. We’ll settle, but only if it’s for a reasonable amount. No spectacle, no dragging this out."
+            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate, I’m running a country, for God’s sake. We’ll settle, but only if it’s for a reasonable amount. No spectacle, no dragging this out."
         }
     },
     {
@@ -3810,7 +3810,7 @@ campaignTrail_temp.answers_json = [
     "pk": 250004,
     "fields": {
         "question": "question_8_whitewater_reno",
-        "description": "Look, they can speculate all they want, but there’s nothing to gain by entertaining the conversation. Besides, the nation agrees, there was nothing improper in those investments. They wouldn’t have elected me if they didn’t."
+        "description": "Make no mistake, they can speculate all they want, but there’s nothing to gain by entertaining the conversation. Besides, the nation agrees, there was nothing improper in those investments. They wouldn’t have elected me if they didn’t."
     }
 },
     {
@@ -3850,7 +3850,7 @@ campaignTrail_temp.answers_json = [
         "pk": 250009,
         "fields": {
             "question": "question_8_whitewater_wood",
-            "description": "Look, they can speculate all they want, there’s nothing else to be added or gain by entertaining the conversation. Besides, the nation agrees that there was nothing improper in those investments. They wouldn’t have elected me if they did."
+            "description": "Make no mistake, they can speculate all they want, there’s nothing else to be added or gain by entertaining the conversation. Besides, the nation agrees that there was nothing improper in those investments. They wouldn’t have elected me if they did."
         }
     },
     {
@@ -4444,7 +4444,7 @@ campaignTrail_temp.answers_json = [
         "pk": 135001.5,
         "fields": {
             "question": "candidate_intro_alexander",
-            "description": "Look, Lamar’s out there playing his folksy routine, selling nostalgia and calling me a liberal, but this is the guy that raised the sales tax to fund his plan in Nashville and later went to Washington to run the Education Department. Now he calls himself the outsider? Voters deserve the full record."
+            "description": "Make no mistake, Lamar’s out there playing his folksy routine, selling nostalgia and calling me a liberal, but this is the guy that raised the sales tax to fund his plan in Nashville and later went to Washington to run the Education Department. Now he calls himself the outsider? Voters deserve the full record."
         }
     },
     {
@@ -5124,7 +5124,7 @@ campaignTrail_temp.answers_json = [
         "pk": 36001.5645,
         "fields": {
             "question": "debate_gingrich",
-            "description": "Look, I’m far from perfect, but it is really rich to get daily lectures on ethics and corruption from a man with so many skeletons of his own to point out. If he wants the election to be about character, that’s a fight I think I can win."
+            "description": "Make no mistake, I’m far from perfect, but it is really rich to get daily lectures on ethics and corruption from a man with so many skeletons of his own to point out. If he wants the election to be about character, that’s a fight I think I can win."
         }
     },
     {
@@ -109679,8 +109679,14 @@ function website_handler() {
         webpageContainer.innerHTML = webpage_html;
 
         // Use this to control the headline
-        document.getElementById("headline").innerHTML = `HOPE TEAM: we're modders lalalala (there's moreeee but they all haven't been added yet)`;
+        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${deficitHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
     } else if (lower_url === "modderstowatchoutfor.com") {
+        const ideologyHTML = ideologyMap[String(Ideology)];
+        const scandalHTML = scandalMap[String(scandal)]; 
+        const deficitHTML = deficitmap[String(deficit)]; 
+        const backlashHTML = backlashMap[String(backlash)]; 
+        const fpwinMapHTML = fpwinMap[String(FPWin)];
+        const legwinMapHTML = legwinMap[String(LEGWin)];
 
         let webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
 
@@ -109749,6 +109755,8 @@ function website_handler() {
 
         webpageContainer.innerHTML = webpage_html;
 
+        // Use this to control the headline
+        document.getElementById("headline").innerHTML = `HOPE TEAM: we're modders lalalala (there's moreeee but they all haven't been added yet)`;
     } else if (lower_url === "clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
