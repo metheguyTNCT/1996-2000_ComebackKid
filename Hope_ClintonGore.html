@@ -109679,14 +109679,8 @@ function website_handler() {
         webpageContainer.innerHTML = webpage_html;
 
         // Use this to control the headline
-        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${deficitHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
+        document.getElementById("headline").innerHTML = `HOPE TEAM: we're modders lalalala (there's moreeee but they all haven't been added yet)`;
     } else if (lower_url === "modderstowatchoutfor.com") {
-        const ideologyHTML = ideologyMap[String(Ideology)];
-        const scandalHTML = scandalMap[String(scandal)]; 
-        const deficitHTML = deficitmap[String(deficit)]; 
-        const backlashHTML = backlashMap[String(backlash)]; 
-        const fpwinMapHTML = fpwinMap[String(FPWin)];
-        const legwinMapHTML = legwinMap[String(LEGWin)];
 
         let webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
 
@@ -109755,8 +109749,6 @@ function website_handler() {
 
         webpageContainer.innerHTML = webpage_html;
 
-        // Use this to control the headline
-        document.getElementById("headline").innerHTML = `HOPE TEAM: we're modders lalalala (there's moreeee but they all haven't been added yet)`;
     } else if (lower_url === "clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
