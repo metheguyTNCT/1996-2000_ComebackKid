@@ -109468,6 +109468,20 @@ const main_website_candidate_list = [
 
 ];
 
+const main_modder_list = [
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Agreeable",title: "LEAD DEVELOPER AND CODER",description: "THE ONE PIEEEECE THE ONE PIECE IS REAAAL"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "GoodGamer",title: "WRITER",description: "More like racistgamer am I right or am I right"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Forbius",name: "GW3n_B1@D3!",title: "WRITER",description: "Nice hat, dork, you look like a duck I had Alfred read your books, he told me they suck "},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Me The Guy",title: "WRITER",description: "Bro when does this game get fucking good"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gramm",name: "Ronnie",title: "WRITER, CODER, AND ARTIST",description: "Tapping on the glass at the boy aquarium"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Specter",name: "Theanswerisme",title: "WRITER AND CODER",description: "Imagine there's no .38 special snubnose revolvers"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "UlricMorningstarG",title: "WRITER",description: "''War is bad'' WOW!! COOL ROBOT!!"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "VivaRouis",title: "WRITER",description: "''Furries'' - MLB player Andrew McCutchen"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "NaiminaOS",title: "CODER",description: ".lunch empowerment rip lunchables"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Strawberrymaster",title: "CODER",description: "To be fair you need a very high IQ to understand rick and morty"},
+{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Epicisman",title: "idk",description: "67"},
+];
+
 function createDraggableBox() {
   if (!draggableBox || !document.body.contains(draggableBox)) {
     draggableBox = document.createElement('div');
@@ -109666,6 +109680,83 @@ function website_handler() {
 
         // Use this to control the headline
         document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${deficitHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
+    } else if (lower_url === "modderstowatchoutfor.com") {
+        const ideologyHTML = ideologyMap[String(Ideology)];
+        const scandalHTML = scandalMap[String(scandal)]; 
+        const deficitHTML = deficitmap[String(deficit)]; 
+        const backlashHTML = backlashMap[String(backlash)]; 
+        const fpwinMapHTML = fpwinMap[String(FPWin)];
+        const legwinMapHTML = legwinMap[String(LEGWin)];
+
+        let webpage_html='<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
+
+
+        for (let x in main_modder_list) {
+            webpage_html+=`<div id="candidate-entry" style="
+            background-color:C0C0C0;
+            width:213px;
+            height:92px;
+            vertical-align:top;
+            top:0;
+            left:0;
+            display:inline-block;
+            padding:4px;
+            ">
+
+            <img src="${main_modder_list[x]["img"]}"><div style="
+            width:121px;
+            height:92px;
+            vertical-align:top;
+            overflow-y:scroll;
+            scrollbar-width:none;
+            top:0;
+            left:0;
+            display:inline-block;
+            ">
+
+            <p style="
+            font-size: 14.4px;
+            font-style: italic;
+            font-family: arial;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0em;
+            ">
+            <b>${main_modder_list[x]["name"]}</b>
+            </p>
+            
+            <p style="
+            font-size:9.6px;
+            font-family: times new roman;
+            text-transform: uppercase;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0.3em;
+            ">
+            <strong>${main_modder_list[x]["title"]}</strong>
+            </p>
+
+            <p style="
+            font-size:11.6px;
+            font-family: times new roman;
+            overflow-wrap:break-word;
+            line-height:1em;
+            margin-inline-start: 3px;
+            margin-inline-end:0px;
+            margin-block: 0em;
+            ">
+            ${main_modder_list[x]["description"]}
+            </p></div></div>`;
+        }
+
+        webpageContainer.innerHTML = webpage_html;
+
+        // Use this to control the headline
+        document.getElementById("headline").innerHTML = `HOPE TEAM: we're modders lalalala (there's moreeee but they all haven't been added yet)`;
     } else if (lower_url === "clintongore.com") {
     current_website="clintongore.com";
         let webpage_html = ''; // always start fresh
