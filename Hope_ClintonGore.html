@@ -103000,12 +103000,19 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
 		margin-right: 10px;
 		z-index: 1;
 
-		background-color: #333;
-		color: #fff;
-		font-family: Segoe UI, sans-serif !important;
+		background-color: #eee;
+		color: #1b1b21;
+		font-family: Times New Roman !important;
 		padding: 10px;
-		border-radius: 6px;
+		border-radius: 1px;
+    border: #d6d6be 2px solid;
 		box-sizing: border-box;
+        box-shadow:
+        0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+        0 10px 0 -5px #eee, /* The second layer */
+        0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+        0 20px 0 -10px #eee, /* The third layer */
+        0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
 
 		width: 200px;
 		text-align: center;
@@ -103024,11 +103031,16 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
         /* Hover-specific styles */
         pointer-events: auto;
         transition-delay: 0s;
-       background: linear-gradient(90deg,navy,#1084d0);
+       background-color: #ecebd1;
         background-size: cover;
-        font-family: Segoe UI, sans-serif !important;
         font-style: normal !important;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 
+        0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+        0 10px 0 -5px #d6d6be, /* The second layer */
+        0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+        0 20px 0 -10px #b9b19d, /* The third layer */
+        0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
+        0px 4px 8px rgba(0, 0, 0, 0.1);
       }
 	  
 	  .ce-tooltip img {
@@ -103036,21 +103048,23 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
 		max-width: 85%;
 		height: auto;
 		margin: 0;
+    border: double 3px #1b1b21;
+    mix-blend-mode: multiply;
 	}
     	  
     `;
     document.head.appendChild(style);
   }
 
-  createTooltip(text, { img, title, name, desc }) {
+  createTooltip(text, { img, name, title, desc }) {
     const imgHtml = img ? `<img src="${img}" alt="${name || text}">` : '';
-    const titleHtml = title ? `${title}<br>` : '';
-    const nameHtml = name ? `<b>${name}</b><br>` : '';
+    const nameHtml = name ? `<span style="text-transform: uppercase; text-decoration: underline; font-size: 1.5em;"><b>${name}</b></span>` : '';
+    const titleHtml = title ? `<i>${title}</i><br>` : '';
     const descHtml = desc ? `${desc}` : '';
     
     return `<span class="ce-tooltip-container">${text}<span class="ce-tooltip">` +
            `${imgHtml}` +
-           `${titleHtml}${nameHtml}${descHtml}` +
+           `${nameHtml}${titleHtml}${descHtml}` +
            `</span></span>`;
   }
 
