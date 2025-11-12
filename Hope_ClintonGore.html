@@ -99291,6 +99291,8 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Richard";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#4F2F6E";
         campaignTrail_temp.candidate_json[3]["fields"].image_url = "https://files.catbox.moe/0lbf5h.png";
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(834) // Colorado
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.23
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 27)[0].fields.issue_score = -0.31
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.66
