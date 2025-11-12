@@ -99017,8 +99017,10 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.62
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_mccain");
         }else if (e.player_answers.includes(98013.5) || e.player_answers.includes(98016.5) || e.player_answers.includes(98015.5) || e.player_answers.includes(98021.5)) {
+        updateHistoricalData(vpTableHistorical, HistHexcolour, HistName, HistEV, HistPV, HistPVP);
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole_noshutdown");
         } else {
+        updateHistoricalData(vpTableHistorical, HistHexcolour, HistName, HistEV, HistPV, HistPVP);
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_dole");
         }
     } else if (candidateName == "buchanan") { // Buchanan
@@ -102611,7 +102613,7 @@ vpTableHistorical = {
 }
 HistHexcolour = ["#0B2F9D","#E14932","#830B96","#00C100"];
 HistName = ["Bill Clinton","Bob Dole","Ross Perot","Ralph Nader"];
-Hist = [379,159,0,0];
+HistEV = [379,159,0,0];
 HistPV = ["47,402,357","39,198,755","8,085,402","685,297"];
 HistPVP = ["49.2%","40.7%","8.4%","0.7%"];
 
