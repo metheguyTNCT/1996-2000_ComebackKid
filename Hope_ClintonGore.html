@@ -3564,7 +3564,7 @@ campaignTrail_temp.answers_json = [
         "pk": 200001,
         "fields": {
             "question": "question_21_russia",
-            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+            "description": "Let me tell you something, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
         }
     },
     {
@@ -3588,7 +3588,7 @@ campaignTrail_temp.answers_json = [
         "pk": 200004,
         "fields": {
             "question": "question_21_russia_failyugoslavia",
-            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+            "description": "Let me tell you something, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
         }
     },
     {
@@ -3612,7 +3612,7 @@ campaignTrail_temp.answers_json = [
         "pk": 200007,
         "fields": {
             "question": "question_21_russia_cuts",
-            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+            "description": "Let me tell you something, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
         }
     },
     {
@@ -3636,7 +3636,7 @@ campaignTrail_temp.answers_json = [
         "pk": 200010,
         "fields": {
             "question": "question_21_russia_none",
-            "description": "I'll tell you what, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
+            "description": "Let me tell you something, Saddam knows only force. We tried it out once before to deal with a tiger by giving him kind words. But with those kind of monsters, you need a gun. I'm authorizing strikes against Iraq to cripple his assault. Combined with the evacuation of Kurdish forces, he'll gain nothing but sand. If we're fast enough to cut the wind of his charge, then he'll have no power to show to the rest of the middle east."
         }
     },
     {
@@ -99312,6 +99312,8 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 29)[0].fields.issue_score = -0.91
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 30)[0].fields.issue_score = 0.66
         } else if (candidateName == "penny") {
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(851) // Minnesota
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.15;
         campaignTrail_temp.candidate_json[3]["fields"].last_name = "Penny";
         campaignTrail_temp.candidate_json[3]["fields"].color_hex = "#716689";
         campaignTrail_temp.candidate_json[3]["fields"].first_name = "Timothy";
@@ -102719,9 +102721,9 @@ newVpTableHistorical7 = {
 };
 newHistHexcolour7 = ["#AD1275","#0C2F9E","#AAAB10","#0BA39C"];
 newHistName7 = ["Colin Powell","Bill Clinton","Pat Buchanan","Bernie Sanders"];
-newHistEV7 = [354,184,0,0];
-newHistPV7 = ["51,380,613","48,185,209","5,575,493","2,017,378"];
-newHistPVP7 = ["47.9%","45.0%","5.2%","1.9%"];
+newHistEV7 = [365,173,0,0];
+newHistPV7 = ["49,486,492","40,917,819","4,910,138","962,772"];
+newHistPVP7 = ["51.4%","42.5%","5.1%","1.0%"];
 
 // Bono VP Table
 newVpTableHistorical8 = {
