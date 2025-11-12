@@ -99178,6 +99178,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = 0.23
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_powell");
     } else if (candidateName == "cheney") { // Cheney
+    updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
     campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C369E";
     campaignTrail_temp.candidate_json[2]["fields"].last_name = "Biafra";
     campaignTrail_temp.candidate_json[2]["fields"].first_name = "Jello";
@@ -99190,7 +99191,7 @@ function opponentDecider(){
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
     campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_cheney");
     } else if (candidateName == "bono") { // Bono
-    updateHistoricalData(newVpTableHistorical8, newHistHexcolour8, newHistName8, newHistEV8, newHistPV8, newHistPVP8);
+    updateHistoricalData(newVpTableHistorical9, newHistHexcolour9, newHistName9, newHistEV9, newHistPV9, newHistPVP8);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C2E9C";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Cohen";
         campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ben";
@@ -99216,7 +99217,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_bono");
         } else if (candidateName == "gingrich") { // Gingrich
-        updateHistoricalData(newVpTableHistorical9, newHistHexcolour9, newHistName9, newHistEV9, newHistPV9, newHistPVP9);
+        updateHistoricalData(newVpTableHistorical10, newHistHexcolour10, newHistName10, newHistEV10, newHistPV10, newHistPVP9);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0D2F9C";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Mazzocchi";
         campaignTrail_temp.candidate_json[2]["fields"].first_name = "Tony";
@@ -99229,7 +99230,7 @@ function opponentDecider(){
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.395
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_gingrich");
     } else if (candidateName == "weld") { // Weld
-    updateHistoricalData(newVpTableHistorical10, newHistHexcolour10, newHistName10, newHistEV10, newHistPV10, newHistPVP10);
+    updateHistoricalData(newVpTableHistorical11, newHistHexcolour11, newHistName11, newHistEV11, newHistPV11, newHistPVP10);
         campaignTrail_temp.candidate_json[0]["fields"].color_hex = "#0C4B9B";
         campaignTrail_temp.candidate_json[2]["fields"].last_name = "Dellums";
         campaignTrail_temp.candidate_json[2]["fields"].first_name = "Ron";
@@ -102721,48 +102722,61 @@ newVpTableHistorical7 = {
 };
 newHistHexcolour7 = ["#AD1275","#0C2F9E","#AAAB10","#0BA39C"];
 newHistName7 = ["Colin Powell","Bill Clinton","Pat Buchanan","Bernie Sanders"];
-newHistEV7 = [365,173,0,0];
-newHistPV7 = ["49,486,492","40,917,819","4,910,138","962,772"];
-newHistPVP7 = ["51.4%","42.5%","5.1%","1.0%"];
+newHistEV7 = [354,184,0,0];
+newHistPV7 = ["51,380,613","48,185,209","5,575,493","2,017,378"];
+newHistPVP7 = ["47.9%","45.0%","5.2%","1.9%"];
+
+// Cheney VP Table
+newVpTableHistorical8 = {
+    "Bill Clinton" : "Al Gore",
+    "Dick Cheney" : "John Sununu",
+    "Donald Trump" : "Montel Williams",
+    "Jello Biafra" : "Mumia Abu-Jamal",
+};
+newHistHexcolour8 = ["#0C369E","#C8703F","#D4AF37","#3E9E5A"];
+newHistName8 = ["Bill Clinton","Dick Cheney","Donald Trump","Jello Biafra"];
+newHistEV8 = [331,207,0,0];
+newHistPV8 = ["49,409,079","40,055,073","13,911,601","930,264"];
+newHistPVP8 = ["46.0%","40.1%","13.0%","0.9%"];
 
 // Bono VP Table
-newVpTableHistorical8 = {
+newVpTableHistorical9 = {
     "Bill Clinton" : "Al Gore",
     "Sonny Bono" : "George Voinovich",
     "Timothy Penny" : "Russ Verney",
     "Ben Cohen" : "Dolores Huerta",
 };
-newHistHexcolour8 = ["#0C2E9C","#C64B57","#716689","#6E4636"];
-newHistName8 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ben Cohen"];
-newHistEV8 = [366,172,0,0];
-newHistPV8 = ["47,079,562","41,688,037","6,643,128","866,495"];
-newHistPVP8 = ["48.9%","43.3%","6.9%","0.9%"];
+newHistHexcolour9 = ["#0C2E9C","#C64B57","#716689","#6E4636"];
+newHistName9 = ["Bill Clinton","Sonny Bono","Timothy Penny","Ben Cohen"];
+newHistEV9 = [366,172,0,0];
+newHistPV9 = ["47,079,562","41,688,037","6,643,128","866,495"];
+newHistPVP9 = ["48.9%","43.3%","6.9%","0.9%"];
 
 // Gingrich VP Table
-newVpTableHistorical9 = {
+newVpTableHistorical10 = {
     "Bill Clinton" : "Al Gore",
     "Newt Gingrich" : "Christine Todd Whitman",
     "Ross Perot" : "Pat Choate",
     "Tony Mazzocchi" : "Various",
 };
-newHistHexcolour9 = ["#0D2F9C","#FF1A58","#9910A8","#3E6B89"];
-newHistName9 = ["Bill Clinton","Newt Gingrich","Ross Perot","Tony Mazzocchi"];
-newHistEV9 = [270,268,0,0];
-newHistPV9 = ["44,094,968","44,287,522","7,509,623","770,217"];
-newHistPVP9 = ["45.8%","46.0%","7.4%","0.8%"];
+newHistHexcolour10 = ["#0D2F9C","#FF1A58","#9910A8","#3E6B89"];
+newHistName10 = ["Bill Clinton","Newt Gingrich","Ross Perot","Tony Mazzocchi"];
+newHistEV10 = [270,268,0,0];
+newHistPV10 = ["44,094,968","44,287,522","7,509,623","770,217"];
+newHistPVP10 = ["45.8%","46.0%","7.4%","0.8%"];
 
 // Weld VP Table
-newVpTableHistorical10 = {
+newVpTableHistorical11 = {
     "Ross Perot" : "Pat Choate",
     "Bill Clinton" : "Al Gore",
     "Bill Weld" : "Marc Racicot",
     "Ron Dellums" : "Eric Chester",
 };
-newHistHexcolour10 = ["#9910A8","#0C4B9B","#E0B62A","#9A0000"];
-newHistName10 = ["Ross Perot","Bill Clinton","Bill Weld","Ron Dellums"];
-newHistEV10 = [281,193,64,0];
-newHistPV10 = ["32,734,255","32,156,592","30,231,048","1,347,881"];
-newHistPVP10 = ["34.0%","33.4%","31.4%","1.4%"];
+newHistHexcolour11 = ["#9910A8","#0C4B9B","#E0B62A","#9A0000"];
+newHistName11 = ["Ross Perot","Bill Clinton","Bill Weld","Ron Dellums"];
+newHistEV11 = [281,193,64,0];
+newHistPV11 = ["32,734,255","32,156,592","30,231,048","1,347,881"];
+newHistPVP11 = ["34.0%","33.4%","31.4%","1.4%"];
 			    
 function onGameWindowChangeCandidates() {
     const resultsTableHolder = document.getElementById("overall_details_container");
