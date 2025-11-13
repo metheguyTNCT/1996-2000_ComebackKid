@@ -414,7 +414,7 @@ const crtstyles = `
     linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
     linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
   background-size: 100% 2px, 3px 100%;
-  z-index: 2;
+  z-index: 103;
   pointer-events: none;
 }
 
@@ -425,7 +425,7 @@ const crtstyles = `
   inset: 0;
   background: rgba(186, 186, 186, 0.1);
   opacity: 0;
-  z-index: 2;
+  z-index: 103;
   pointer-events: none;
 }
 `
@@ -1357,6 +1357,7 @@ function addDynamicCSS() {
       content: "Tooltip - Microsoft Internet Explorer"; /* The text to display */
       top: 0px;
       left: 0px;
+      box-shadow: 0px 2px black;
       border-bottom: solid 1px #C0C0C0;
 	  outline: solid 1px #C0C0C0;
       text-shadow: none;
@@ -1366,6 +1367,7 @@ function addDynamicCSS() {
       color: white;
       background: linear-gradient(90deg,navy,#1084d0); /* Match the background to "cut out" the border */
       font-weight: bold;
+        text-indent: 5px;
     }
       .mytooltip:hover {
           color: purple;
@@ -2377,10 +2379,3 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
-
-
-
-
-
-
