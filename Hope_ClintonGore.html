@@ -102295,34 +102295,18 @@ let webpage_html = `
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: -2px;
-  left: 0;
-  height: 10px;
-  width: 10px;
-  background-color: #FFF;
-  border: 1px solid black;
-}
-
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: red;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  visibility: hidden;
 }
+
 </style>
 <div style="
     background:white; 
@@ -102386,16 +102370,19 @@ let webpage_html = `
                 font-style: italic;
                 ">
                 <p class="checkcontainer">Welfare Reform
-                <span class="checkmark"></span>
+                <span id "wealthref" class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Deficit Reduction
-                <span class="checkmark"></span>
+                <span id="defreduc"class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Healthcare Reform
-                <span class="checkmark"></span>
+                <span id="healthref" class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Tax Cuts for the Middle Class
                 <span class="checkmark"></span>
+                </p>
+                <p class="checkcontainer">Rights for Gay Soldiers in the Millitary
+                <span id="gayrights" class="checkmark"></span>
                 </p>
                 </div>
                 <div style="
@@ -102505,18 +102492,23 @@ showWin("ach-welfare")
 }
 if (e.player_answers.includes(93013.5) || e.player_answers.includes(93017.5) || e.player_answers.includes(93022.5)) {
 showWin("ach-unihealthcare")
+document.getElementById("healthref").style.visibility = "visible";  
 }
 if (e.player_answers.includes(95003.5) || e.player_answers.includes(95004.5) || e.player_answers.includes(95007.5) ||e.player_answers.includes(95005.5) || e.player_answers.includes(95008.5) || e.player_answers.includes(95011.5) || e.player_answers.includes(95016.5) || e.player_answers.includes(95022.5) || e.player_answers.includes(95017.5) || e.player_answers.includes(95020.5)) {
 showWin("ach-mitchcare")
+document.getElementById("healthref").style.visibility = "visible";  
 }
 if (e.player_answers.includes(94009.5) || e.player_answers.includes(94010.5) || e.player_answers.includes(94011.5) || e.player_answers.includes(94012.5) || e.player_answers.includes(94014.5) || e.player_answers.includes(94017.5)) {
 showWin("ach-bicare")
+document.getElementById("healthref").style.visibility = "visible";  
 }
 if (e.player_answers.includes(88025.5)) {
-showWin("ach-deficit")   
+showWin("ach-deficit") 
+document.getElementById("defreduc").style.visibility = "visible";  
 }
-if (e.player_answers.includes(85024.5)) {
+if (e.player_answers.includes(85024.5)) { 
 showWin("ach-gay-rights")   
+document.getElementById("gayrights").style.visibility = "visible";  
 }
 } else if (lower_url === "clintongore.com/admin") {
     current_website="clintongore.com/admin";
