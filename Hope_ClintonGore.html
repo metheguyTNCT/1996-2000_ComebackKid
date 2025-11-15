@@ -1783,10 +1783,19 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_16.5_jones_case",
+        "pk": "question_21_jones_case",
         "fields": {
             "priority": 0,
-            "description": "It’s been a week since you lapsed — with a young intern you never should’ve gotten involved with — and the world still turns. The staff still moves. The press still smiles. Hillary still stands. That’s what matters. But your thoughts won’t quiet. What were you thinking? How could you cheat on your wife, a woman who’s stood by you all these years? Don’t play dumb. This isn’t the first time. You’re still tangled up in the Paula Jones case, hoping the Supreme Court doesn’t take it up. Settling might make it all go away, but it’d look like guilt. So... what now? ",
+            "description": "Paula Jones. Former Arkansas employee. Her story goes like this: she’s called to your hotel room, and when the door closes, you pin her down. She’s trapped, terrified, and isolated. But she escapes. You’ve known about it for a while, but only now has Jones spoken up. Egged on by her arch-Cinton hater husband, she’s opted to go after you directly. Holding an explosive press conference, Jones announces a full on lawsuit, with driven intent to seek retribution for your crimes.  ",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": "question_21_jones_case_wood",
+        "fields": {
+            "priority": 0,
+            "description": "Paula Jones. Former Arkansas employee. Her story goes like this: she’s called to your hotel room, and when the door closes, you pin her down. She’s trapped, terrified, and isolated. But she escapes. You’ve known about it for a while, but only now has Jones spoken up. Egged on by her arch-Cinton hater husband, she’s opted to go after you directly. Holding an explosive press conference, Jones announces a full on lawsuit, with driven intent to seek retribution for your crimes.  ",
             "likelihood": 1
         }
     },
@@ -3235,24 +3244,48 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 230001,
         "fields": {
-            "question": "question_16.5_jones_case",
-            "description": "Of course I’m gonna fight it! Why the hell would I pay her off when all that does is drag my name through the mud and bring even more attention to something that should be long behind me? Settling only makes me look guilty, and I’m not giving them that."
+            "question": "question_21_jones_case",
+            "description": "We’ve shut down her case before, and by God we’re gonna do it again. Just stall it. Just keep stalling and it’ll all go away. Eventually, she will get tired of fighting and give up."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 230002,
         "fields": {
-            "question": "question_16.5_jones_case",
-            "description": "We can end this without spending a dime. She needs to understand she’s not dealing with a Governor anymore—she’s dealing with the President of the United States. Have Bennett get me on the phone with her. I’ll take care of it."
+            "question": "question_21_jones_case",
+            "description": "We can end this without spending a dime or an ounce of our time. Jones better understand she’s not dealing with a Governor anymore—she’s dealing with the President of the United States. She says she’s ‘not that kind of girl’? We’ll see about that. Bennett tells me about this one guy who Jones herself harassed, not to mention all the others she gave ‘favors’ to. They all called her a ‘party girl' for a reason."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 230003,
         "fields": {
-            "question": "question_16.5_jones_case",
-            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate, I’m running a country, for God’s sake. We’ll settle, but only if it’s for a reasonable amount. No spectacle, no dragging this out."
+            "question": "question_21_jones_case",
+            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate already, I’m running a country, for crying out loud. I've gotta come clean; this was gonna bite me back eventually. I'll say I knew Paula Jones, and we may have gotten slightly close a few times, but <i>I did not<i> have sexual relations with that woman."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230001,
+        "fields": {
+            "question": "question_21_jones_case_wood",
+            "description": "We’ve shut down her case before, and by God we’re gonna do it again. Just stall it. Just keep stalling and it’ll all go away. Eventually, she will get tired of fighting and give up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230004,
+        "fields": {
+            "question": "question_21_jones_case_wood",
+            "description": "We can end this without spending a dime or an ounce of our time. Jones better understand she’s not dealing with a Governor anymore—she’s dealing with the President of the United States. She says she’s ‘not that kind of girl’? We’ll see about that. Bennett tells me about this one guy who Jones herself harassed, not to mention all the others she gave ‘favors’ to. They all called her a ‘party girl' for a reason."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 230003,
+        "fields": {
+            "question": "question_21_jones_case_wood",
+            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate already, I’m running a country, for crying out loud. I've gotta come clean; this was gonna bite me back eventually. I'll say I knew Paula Jones, and we may have gotten slightly close a few times, but <i>I did not<i> have sexual relations with that woman."
         }
     },
     {
@@ -18071,6 +18104,16 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 80,
             "global_multiplier": -0.02334893839
+        }
+    },
+    {
+	"model": "campaign_trail.answer_score_global",
+        "pk": 12621,
+        "fields": {
+            "answer": 230004,
+            "candidate": 77,
+            "affected_candidate": 80,
+            "global_multiplier": 0.02334893839
         }
     },
     {
@@ -36530,6 +36573,56 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 230001,
+            "issue": 31,
+            "issue_score": -0.1,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 230002,
+            "issue": 28,
+            "issue_score": 0.132,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 230004,
+            "issue": 28,
+            "issue_score": 0.132,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 230002,
+            "issue": 31,
+            "issue_score": 0.1,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 230003,
+            "issue": 31,
+            "issue_score": -0.2,
+            "issue_importance": 4
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
         "pk": 13017,
         "fields": {
             "answer": 10007.5,
@@ -40008,6 +40101,28 @@ campaignTrail_temp.answer_score_state_json = [
         "model": "campaign_trail.answer_score_state",
         "pk": 12299,
         "fields": {
+            "answer": 230004,
+            "state": 184,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.00999
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 184,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": -0.0111
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
             "answer": 230003,
             "state": 184,
             "candidate": 77,
@@ -40944,6 +41059,83 @@ campaignTrail_temp.answer_score_state_json = [
         "pk": 12299,
         "fields": {
             "answer": 230002,
+            "state": 230,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.007
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 203,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.009
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 195,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 202,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 183,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 186,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "state_multiplier": 0.0095
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
+            "state": 218,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "state_multiplier": 0.006
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12299,
+        "fields": {
+            "answer": 230004,
             "state": 230,
             "candidate": 77,
             "affected_candidate": 77,
@@ -84343,7 +84535,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 230001,
             "candidate": 77,
-            "answer_feedback": "After a talk with Bennett, you decide to keep fighting. You stare into the mirror, gripping the sink. For a second, you think about admitting everything. The guilt gnaws at you, but so does the belief that if you play this right, you can fix it. You always have. You're the leader of the free world, yet coming clean feels like lighting a match in a room full of gas. You shake it off. It won’t come to that. It can’t."
+            "answer_feedback": "Your lawyers do what they do best, and using arguments of presidential immunity, manage to get a temporary postponement until ‘97. As the news is handed to Jones, she tears up the letter immediately. There’s nothing she can do as another casualty of the Slick Willy special. The only thing Jones can do is wait, just like all the others fighting to right a wrong."
         }
     },
     {
@@ -84352,7 +84544,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 230002,
             "candidate": 77,
-            "answer_feedback": "It takes Bennett a full day of calls and runarounds, but he finally gets you on the phone with her. Then it’s two hours of coaxing, dismissing, pressuring, whatever it takes, but she won’t budge. You float the idea of a settlement, but she cuts you off and hangs up before you can even finish the thought. You slam the phone down, jaw tight. Goddamn white trash. She doesn’t want justice, she wants a payday, a scandal, a piece of you."
+            "answer_feedback": "The records that fly out are scandalous and inflammatory. Your base laps it up, but the GOP are astonished. Here is the most powerful man in the world gunning to burn a single woman at stake. Her story is discarded, just like all the rest."
         }
     },
     {
@@ -84361,7 +84553,16 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 230003,
             "candidate": 77,
-            "answer_feedback": "Bennett gets you on the phone with her quickly once your intentions are clear. It takes twenty minutes, calm assurances, carefully chosen words, the right mix of charm and pressure, to reach an agreement. As soon as you hang up, you feel a weight lift, not all of them, but one. The GOP will see this as an admission of guilt, but that doesn’t matter. You can put this behind you now, or at least, that’s what you tell yourself. "
+            "answer_feedback": "The sudden vindication of her claims only stokes the flames of righteous anger. Soon, Starr sets up a press conferece, with Limbaugh baying for your blood, wondering what else you’re hiding. Beyond the volley of Republican rage and the fracturing form within voiceless victims watching from afar, the American people stand by you. They hear the sincerity, the regret and repentance in your voice. They think it should be a family-issue, not a national one. Jones continues to scorn your name in front of flocks of reporters. She has found no justice, only closure. You can put this behind you now, or at least, that’s what you tell yourself."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12620,
+        "fields": {
+            "answer": 230004,
+            "candidate": 77,
+            "answer_feedback": "Kimba can’t bring herself to do it, and tears you out for even suggesting such a thing to begin with. As Bennett is forced to deny everything, you wish the New Yorker’s morals wouldn’t get in the way of Washington business. She’s ahead of her time, but you couldn’t care less."
         }
     },
     {
@@ -97484,7 +97685,13 @@ document.head.appendChild(customStyling);
     }
     }
     } else {
-    if (DisasterMidterms == 1 || RepublicanRevolution == 1) {
+    if (scandal >= 2 || SlimGOPCongress == 1){
+    if (e.player_answers.includes(60001)) {
+    campaignTrail_temp.questions_json[20] = tunnel("question_21_jones_case_wood");
+    } else {
+    campaignTrail_temp.questions_json[20] = tunnel("question_21_jones_case");
+    }
+    } else {
     if (e.player_answers.includes(85004.5)) {
     if (e.player_answers.includes(88012.5)) {
     campaignTrail_temp.questions_json[20] = tunnel("crooked_deal_ssrs_nocuts");
@@ -97498,11 +97705,9 @@ document.head.appendChild(customStyling);
     campaignTrail_temp.questions_json[20] = tunnel("crooked_deal_cuts");
     }
 }
-    } else {
-    campaignTrail_temp.questions_json[20] = tunnel("question_16.5_jones_case");
     }
     }
-    }
+}
 
     if (e.question_number+1 == 21) {
     if (sortedOpponents[4+moveup][0] == "dole") {
@@ -97726,13 +97931,15 @@ document.head.appendChild(customStyling);
         } else {
         if (SlimGOPCongress == 1) { 
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
-        question_insert("question_16.5_jones_case",oslo_question_1_slimgop_start);
+        question_insert("question_21_jones_case",oslo_question_1_slimgop_start);
+        question_insert("question_21_jones_case_wood",oslo_question_1_slimgop_start);
         question_insert("question_21_russia",oslo_question_1_slimgop_start);
             question_insert("question_21_russia_failyugoslavia",oslo_question_1_slimgop_start);
             question_insert("question_21_russia_cuts",oslo_question_1_slimgop_start);
             question_insert("question_21_russia_none",oslo_question_1_slimgop_start);
         } else {
-            question_insert("question_16.5_jones_case",oslo_question_1_slimgop);
+            question_insert("question_21_jones_case",oslo_question_1_slimgop);
+            question_insert("question_21_jones_case_wood",oslo_question_1_slimgop);
             question_insert("question_21_russia",oslo_question_1_slimgop);
             question_insert("question_21_russia_failyugoslavia",oslo_question_1_slimgop);
             question_insert("question_21_russia_cuts",oslo_question_1_slimgop);
@@ -97740,6 +97947,8 @@ document.head.appendChild(customStyling);
         }
         } else {
         if (e.player_answers.includes(85002.5) && e.player_answers.includes(80003)) {
+            question_insert("question_21_jones_case",oslo_question_1_start);
+            question_insert("question_21_jones_case_wood",oslo_question_1_start);
             question_insert("crooked_deal_nocuts",oslo_question_1_start);
             question_insert("crooked_deal_cuts",oslo_question_1_start);
             question_insert("crooked_deal_ssrs_nocuts",oslo_question_1_start);
@@ -97749,6 +97958,8 @@ document.head.appendChild(customStyling);
             question_insert("question_21_russia_cuts",oslo_question_1_start);
             question_insert("question_21_russia_none",oslo_question_1_start);
         } else {
+            question_insert("question_21_jones_case",oslo_question_1);
+            question_insert("question_21_jones_case_wood",oslo_question_1);
             question_insert("crooked_deal_nocuts",oslo_question_1);
             question_insert("crooked_deal_cuts",oslo_question_1);
             question_insert("crooked_deal_ssrs_nocuts",oslo_question_1);
@@ -98982,11 +99193,11 @@ if (Ideology >= 2) {
    updateCandidates("junk", 0)
    }
 // Scandal
-   if (ans == 60003 || ans == 60002.5 || ans == 60005.5 || ans == 92000.5 || ans == 92007.5 || ans == 250001 || ans == 250003 || ans == 250004 || ans == 250006 || ans == 250007 || ans == 250008 || ans == 250009 || ans == 70002 || ans == 70003 || ans == 85028.5) {
+   if (ans == 60003 || ans == 60002.5 || ans == 60005.5 || ans == 92000.5 || ans == 92007.5 || ans == 250001 || ans == 250003 || ans == 250004 || ans == 250006 || ans == 250007 || ans == 250008 || ans == 250009 || ans == 70002 || ans == 70003 || ans == 85028.5 || ans == 230003) {
    scandal += 1;
    updateCandidates("scan", 1)
    }
-   if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006) {
+   if (ans == 92002.5 || ans == 92005.5 || ans == 250002 || ans == 250006 || ans == 230004) {
    scandal += 2;
    updateCandidates("scan", 2) 
    }
