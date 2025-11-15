@@ -3261,7 +3261,7 @@ campaignTrail_temp.answers_json = [
         "pk": 230003,
         "fields": {
             "question": "question_21_jones_case",
-            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate already, I’m running a country, for crying out loud. I've gotta come clean; this was gonna bite me back eventually. I'll say I knew Paula Jones, and we may have gotten slightly close a few times, but <i>I did not<i> have sexual relations with that woman."
+            "description": "Make no mistake, she has us beat. You know how bad this will look if the Supreme Court picks it up? I’ve got enough on my plate already, I’m running a country, for crying out loud. I've gotta come clean; this was gonna bite me back eventually. I'll say I knew Paula Jones, and we may have gotten slightly close a few times, but <i>I did not</i> have sexual relations with that woman."
         }
     },
     {
@@ -99305,6 +99305,14 @@ Pandora += 1
     if (ans == 60002.5 || ans == 88014.5 || ans == 96004.5 || ans == 96008.5 || ans == 96012.5 || ans == 96025.5 || ans == 96031.5 || ans == 96026.5 || ans == 96029.5 || ans == 96027.5 || ans == 88025.5) {
     opponents.gramm += 2
     updateCandidates("junk", 0)
+    }
+    if (ans == 80004 || ans == 85004.5 || ans == 85008.5 || ans == 170003) {
+    opponents.specter += 2
+    updateCandidates("junk", 0)   
+    }
+    if (ans == 200005) {
+    opponents.cheney += 2
+    updateCandidates("junk", 0)   
     }
     if (ans == 25007.5 || ans == 150005 || ans == 150007 || ans == 170003) {
     opponents.gingrich += 2
