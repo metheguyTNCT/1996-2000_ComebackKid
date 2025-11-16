@@ -102195,7 +102195,10 @@ Credit to Nina, who made the original code that summoned the new screen (origina
 Go ahead and use this code in your mods — just give me credit. I hope it helps you out!
 */
 
-e =campaignTrail_temp
+let savedX = null;
+let savedY = null;
+
+e = campaignTrail_temp;
 // Load the sound
 const errorSound = new Audio('https://files.catbox.moe/4szj6s.mp3');
 
@@ -102287,8 +102290,14 @@ function createDraggableBox() {
     draggableBox.style.backgroundImage = "url('https://i.imgur.com/z6bwC6i.png')";
     draggableBox.style.border = '0px solid black';
     draggableBox.style.position = 'absolute';
-    draggableBox.style.top = '20px';
-    draggableBox.style.right = '20px'; // Spawns 20px from the right edge
+    if (savedX !== null && savedY !== null) {
+        draggableBox.style.left = savedX + 'px';
+        draggableBox.style.top = savedY + 'px';
+    }
+    else {
+        draggableBox.style.top = '20px';
+        draggableBox.style.right = '20px'; // Spawns 20px from the right edge
+    }
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
 	draggableBox.style.zIndex = '100';
