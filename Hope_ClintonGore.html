@@ -2236,7 +2236,7 @@ campaignTrail_temp.questions_json = [
         "pk": "question_5_bosnia_intervention",
         "fields": {
             "priority": 0,
-            "description": "As the situation in Somalia is finally beginning to settle, you can now shift your focus onto other places that need your help. While you can't be everywhere all at once, you seem to have learned a winning formula for bringing peace to the land. If war can be fought head on, then it will just be a matter of which conflict to resolve first!",
+            "description": "As the situation in Somalia is finally beginning to settle, you can now shift your focus onto other places that need your help. While you can't be everywhere all at once, you seem to have learned a winning formula for bringing peace to the land. If war can be fought head on, then it will just be a matter of which conflict to resolve first?",
             "likelihood": 1
         }
     },
@@ -92001,7 +92001,7 @@ question_insert("question_2_nannygate",
         "pk": "question_5_bosnia_intervention",
         "fields": {
             "priority": 0,
-            "description": "Another poisoned chalice from the previous administration is the situation in Yugoslavia. As the patchwork nation falls in slow motion, Bush refused to intervene last April after Bosnia declared independence. However, the lack of intervention has not improved the situation, as the nation is now suffering both an invasion from Yugoslavia and a civil war between its Serb, Croat, and Bosnian populations against a backdrop of ethnic cleansing. Thanks to Russia's prodding, the UN has been powerless to stop the descent into anarchy. If nothing is done, the situation may soon become even worse.",
+            "description": "As the situation in Somalia is finally beginning to settle, you can now shift your focus onto other places that need your help. While you can't be everywhere all at once, you seem to have learned a winning formula for bringing peace to the land. If war can be fought head on, then it will just be a matter of which conflict to resolve first?",
             "likelihood": 1
         }
             }
@@ -92013,7 +92013,7 @@ question_insert("question_2_nannygate",
         "pk": "question_5_bosnia",
         "fields": {
             "priority": 0,
-            "description": "Another poisoned chalice from the previous administration is the situation in Yugoslavia. As the patchwork nation falls in slow motion, Bush refused to intervene last April after Bosnia declared independence. However, the lack of intervention has not improved the situation, as the nation is now suffering both an invasion from Yugoslavia and a civil war between its Serb, Croat, and Bosnian populations against a backdrop of ethnic cleansing. Thanks to Russia's prodding, the UN has been powerless to stop the descent into anarchy. If nothing is done, the situation may soon become even worse.",
+            "description": "While Somalia was a dud, you may still bring peace in Bosnia, as the patchwork nation is falling in slow motion. The previous administration's lack of intervention has not improved the situation, as the nation is now suffering both an invasion of Yugoslavia and a civil war between its Serb, Croat and Bosnian populations against a backdrop of ethnic cleansing. Thanks to Russia's prodding, the UN has been powerless to stop the descent into anarchy. If nothing is done, the situation may become even worse very soon.",
             "likelihood": 1
         }
             }
@@ -99081,59 +99081,25 @@ if (Ideology >= 2) {
     }
     if (CommieReturn == 1) {
     if (e.player_answers.includes(91007.5) || e.player_answers.includes(91010.5) || e.player_answers.includes(91013.5)) {
-        question_insert("dnc_dean_farehillary",soviet_4_nowar);
-        question_insert("dnc_bayh_carehillary",soviet_4_nowar);
-        question_insert("dnc_bayh_farehillary",soviet_4_nowar);
-        question_insert("dnc_landrieu_carehillary",soviet_4_nowar);
-        question_insert("dnc_landrieu_farehillary",soviet_4_nowar);
+        campaignTrail_temp.questions_json[28] = tunnel("soviet_4_nowar");
     } else {
     if (e.player_answers.includes(91001.5)) {
-    question_insert("dnc_dean_carehillary",soviet_4_nato_noun);
-        question_insert("dnc_dean_farehillary",soviet_4_nato_noun);
-        question_insert("dnc_bayh_carehillary",soviet_4_nato_noun);
-        question_insert("dnc_bayh_farehillary",soviet_4_nato_noun);
-        question_insert("dnc_landrieu_carehillary",soviet_4_nato_noun);
-        question_insert("dnc_landrieu_farehillary",soviet_4_nato_noun);
+    campaignTrail_temp.questions_json[28] = tunnel("soviet_4_nato_noun");
     } else if (e.player_answers.includes(91002.5) && e.player_answers.includes(80003)) {
-        question_insert("dnc_dean_carehillary",soviet_4_nonato_un);
-        question_insert("dnc_dean_farehillary",soviet_4_nonato_un);
-        question_insert("dnc_bayh_carehillary",soviet_4_nonato_un);
-        question_insert("dnc_bayh_farehillary",soviet_4_nonato_un);
-        question_insert("dnc_landrieu_carehillary",soviet_4_nonato_un);
-        question_insert("dnc_landrieu_farehillary",soviet_4_nonato_un);
+        campaignTrail_temp.questions_json[28] = tunnel("soviet_4_nonato_un");
     } else {
-        question_insert("dnc_dean_carehillary",soviet_4_nonato_noun);
-        question_insert("dnc_dean_farehillary",soviet_4_nonato_noun);
-        question_insert("dnc_bayh_carehillary",soviet_4_nonato_noun);
-        question_insert("dnc_bayh_farehillary",soviet_4_nonato_noun);
-        question_insert("dnc_landrieu_carehillary",soviet_4_nonato_noun);
-        question_insert("dnc_landrieu_farehillary",soviet_4_nonato_noun);
+        campaignTrail_temp.questions_json[28] = tunnel("soviet_4_nonato_noun");
     }
     }
     } else {
     if ((e.player_answers.includes(60001.5)) || e.player_answers.includes(60002.5) || (e.player_answers.includes(60004.5)) || e.player_answers.includes(60006.5)) {
     if (SlimGOPCongress == 1 && backlash <= 2 && LEGWin >= 6) {
-        question_insert("dnc_dean_carehillary",ques_18_alt_win);
-        question_insert("dnc_dean_farehillary",ques_18_alt_win);
-        question_insert("dnc_bayh_carehillary",ques_18_alt_win);
-        question_insert("dnc_bayh_farehillary",ques_18_alt_win);
-        question_insert("dnc_landrieu_carehillary",ques_18_alt_win);
-        question_insert("dnc_landrieu_farehillary",ques_18_alt_win);
+        campaignTrail_temp.questions_json[28] = tunnel("question_ques_18_alt_win");
     } else {
-         question_insert("dnc_dean_carehillary",ques_18_alt_fail);
-        question_insert("dnc_dean_farehillary",ques_18_alt_fail);
-        question_insert("dnc_bayh_carehillary",ques_18_alt_fail);
-        question_insert("dnc_bayh_farehillary",ques_18_alt_fail);
-        question_insert("dnc_landrieu_carehillary",ques_18_alt_fail);
-        question_insert("dnc_landrieu_farehillary",ques_18_alt_fail);
+        campaignTrail_temp.questions_json[28] = tunnel("question_ques_18_alt_fail");
     }
     } else {
-        question_insert("dnc_dean_carehillary",doma_normal);
-        question_insert("dnc_dean_farehillary",doma_normal);
-        question_insert("dnc_bayh_carehillary",doma_normal);
-        question_insert("dnc_bayh_farehillary",doma_normal);
-        question_insert("dnc_landrieu_carehillary",doma_normal);
-        question_insert("dnc_landrieu_farehillary",doma_normal);
+    campaignTrail_temp.questions_json[28] = tunnel("question_29_defense_of_marriage");
     }
 }
 }
