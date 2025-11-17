@@ -4910,7 +4910,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 35033.55,
         "fields": {
-            "question": "dnc_bayh_farehillary",
+            "question": "dnc_landrieu_carehillary",
             "description": "This is the party of justice. You cannot be a Democrat and be an oppressor. You cannot be a Democrat and be perpetrator of prejudice. Nobody understands this better than one of our party's finest legislators, tonight's speaker, and a man I am proud to call my good friend, Henry González!"
         }
     },
@@ -4974,7 +4974,7 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 35033.55,
         "fields": {
-            "question": "dnc_landrieu_carehillary",
+            "question": "dnc_bayh_farehillary",
             "description": "This is the party of justice. You cannot be a Democrat and be an oppressor. You cannot be a Democrat and be perpetrator of prejudice. Nobody understands this better than one of our party's finest legislators, tonight's speaker, and a man I am proud to call my good friend, Henry González!"
         }
     },
@@ -91774,144 +91774,145 @@ refreshSurrogates();
 }
 
 const ideologyMap = {
-    "-9": `<i><span style="color:rgb(5, 9, 95);">D.I.N.O.</i></span>. (<span style="color:rgb(5, 9, 95);">-9</span>)`,
-    "-8": `<i><span style="color:rgb(5, 9, 95);">D.I.N.O.</i></span>. (<span style="color:rgb(5, 9, 95);">-8</span>)`,
-    "-7": `<i><span style="color:rgb(5, 9, 95);">D.I.N.O.</i></span>. (<span style="color:rgb(5, 9, 95);">-7</span>)`,
-    "-6": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-6</span>)`,
-    "-5": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-5</span>)`,
-    "-4": `<i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span>. (<span style="color:rgb(5, 9, 129);">-4</span>)`,
-    "-3": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-3</span>)`,
-    "-2": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-2</span>)`,
-    "-1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">-1</span>)`,
-    "0": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136)">0</span>)`,
-    "1": `<i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span>. (<span style="color:rgb(82, 94, 136);">1</span>)`,
-    "2": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">2</span>)`,
-    "3": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">3</span>)`,
-    "4": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">4</span>)`,
-    "5": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">5</span>)`,
-    "6": `<i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span>. (<span style="color:rgb(70, 114, 226);">6</span>)`,
-    "7": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">7</span>)`,
-    "8": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">8</span>)`,
-    "9": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">9</span>)`,
-    "10": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">10</span>)`,
-    "11": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">11</span>)`,
-    "12": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">12</span>)`,
-    "13": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span>. (<span style="color:rgb(35, 165, 212);">13</span>)`,
+    "-9": `A <i><span style="color:rgb(5, 9, 95);">D.I.N.O.</i></span> (<span style="color:rgb(5, 9, 95);">-9</span>)`,
+    "-8": `A <i><span style="color:rgb(5, 9, 95);">D.I.N.O.</i></span> (<span style="color:rgb(5, 9, 95);">-8</span>)`,
+    "-7": `A <i><span style="color:rgb(5, 9, 95)">D.I.N.O.</i></span> (<span style="color:rgb(5, 9, 95);">-7</span>)`,
+    "-6": `A <i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span> (<span style="color:rgb(5, 9, 129);">-6</span>)`,
+    "-5": `A <i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span> (<span style="color:rgb(5, 9, 129);">-5</span>)`,
+    "-4": `A <i><span style="color:rgb(5, 9, 129);">Blue Dog Democrat</i></span> (<span style="color:rgb(5, 9, 129);">-4</span>)`,
+    "-3": `A <i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span> (<span style="color:rgb(82, 94, 136);">-3</span>)`,
+    "-2": `A <i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span> (<span style="color:rgb(82, 94, 136);">-2</span>)`,
+    "-1": `A <i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span> (<span style="color:rgb(82, 94, 136);">-1</span>)`,
+    "0": `A <i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span> (<span style="color:rgb(82, 94, 136)">0</span>)`,
+    "1": `A <i><span style="color:rgb(82, 94, 136);">New Kind of Democrat</i></span> (<span style="color:rgb(82, 94, 136);">1</span>)`,
+    "2": `A <i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span> (<span style="color:rgb(70, 114, 226);">2</span>)`,
+    "3": `A <i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span> (<span style="color:rgb(70, 114, 226);">3</span>)`,
+    "4": `A <i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span> (<span style="color:rgb(70, 114, 226);">4</span>)`,
+    "5": `A <i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span> (<span style="color:rgb(70, 114, 226);">5</span>)`,
+    "6": `A <i><span style="color:rgb(70, 114, 226);">Classic Democrat</i></span> (<span style="color:rgb(70, 114, 226);">6</span>)`,
+    "7": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">7</span>)`,
+    "8": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">8</span>)`,
+    "9": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">9</span>)`,
+    "10": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">10</span>)`,
+    "11": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">11</span>)`,
+    "12": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">12</span>)`,
+    "13": `<i><span style="color:rgb(35, 165, 212);">The L-Word</i></span> (<span style="color:rgb(35, 165, 212);">13</span>)`,
 
 }
 
 const scandalMap = {
-    "0": `<i><span style="color:rgb(3, 148, 46);">Quenched</i></span>. (<span style="color:rgb(3, 148, 46);">0</span>)`,
-    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Rising</i></span>. (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
-    "2": `<i><span style="color:rgba(176, 90, 145, 1);">Piling Up</i></span>. (<span style="color:rgba(176, 90, 145, 1);">2</span>)`,
-    "3": `<i><span style="color:rgba(176, 72, 110, 1);">Getting Heated</i></span>. (<span style="color:rgba(176, 72, 110, 1);">3</span>)`,
-     "5": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">5</span>)`,
-    "6": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">6</span>)`,
-    "7": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">7</span>)`,
-    "8": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">8</span>)`,
-    "9": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">9</span>)`,
-    "10": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span>. (<span style="color:rgb(160, 10, 10);">10</span>)`
+    "0": `<i><span style="color:rgb(3, 148, 46);">Quenched</i></span> (<span style="color:rgb(3, 148, 46);">0</span>)`,
+    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Rising</i></span> (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
+    "2": `<i><span style="color:rgba(176, 90, 145, 1);">Piling Up</i></span> (<span style="color:rgba(176, 90, 145, 1);">2</span>)`,
+    "3": `<i><span style="color:rgba(176, 72, 110, 1);">Getting Heated</i></span> (<span style="color:rgba(176, 72, 110, 1);">3</span>)`,
+     "5": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">5</span>)`,
+    "6": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">6</span>)`,
+    "7": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">7</span>)`,
+    "8": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">8</span>)`,
+    "9": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">9</span>)`,
+    "10": `<i><span style="color:rgb(160, 10, 10);">Never-Ending</i></span> (<span style="color:rgb(160, 10, 10);">10</span>)`
 }
 const deficitmap = {
-   "-18": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(160, 10, 10);">-18</span>)`,
-    "-17": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(160, 10, 10);">-17</span>)`,
-    "-16": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(160, 10, 10);">-16</span>)`,
-    "-15": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span>. (<span style="color:rgb(160, 10, 10);">-15</span>)`,
-    "-14": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-14</span>)`,
-    "-13": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-13</span>)`,
-    "-12": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-12</span>)`,
-    "-11": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-11</span>)`,
-    "-10": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-10</span>)`,
-    "-9": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-9</span>)`,
-    "-8": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span>. (<span style="color:rgb(213, 10, 10);">-8</span>)`,
-    "-7": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-7</span>)`,
-    "-6": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-6</span>)`,
-    "-5": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-5</span>)`,
-    "-4": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span>. (<span style="color:rgba(176, 115, 174, 1);">-4</span>)`,
-    "-3": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-3</span>)`,
-    "-2": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-2</span>)`,
-    "-1": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">-1</span>)`,
-    "0": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span>. (<span style="color:rgb(16, 129, 234);">0</span>)`,
-    "1": `<i><span style="color:rgb(3, 148, 46);">Gone</i></span>. (<span style="color:rgb(3, 148, 46);">1</span>)`,
-    "2": `<i><span style="color:rgb(3, 148, 46);">Gone</i></span>. (<span style="color:rgb(3, 148, 46);">2</span>)`,
+    "-18": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span> (<span style="color:rgb(160, 10, 10);">-18</span>)`,
+    "-17": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span> (<span style="color:rgb(160, 10, 10);">-17</span>)`,
+    "-16": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span> (<span style="color:rgb(160, 10, 10);">-16</span>)`,
+    "-15": `<i><span style="color:rgb(160, 10, 10);">Uncontrolable</i></span> (<span style="color:rgb(160, 10, 10);">-15</span>)`,
+    "-14": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-14</span>)`,
+    "-13": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-13</span>)`,
+    "-12": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-12</span>)`,
+    "-11": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-11</span>)`,
+    "-10": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-10</span>)`,
+    "-9": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-9</span>)`,
+    "-8": `<i><span style="color:rgb(213, 10, 10);">Deep</i></span> (<span style="color:rgb(213, 10, 10);">-8</span>)`,
+    "-7": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span> (<span style="color:rgba(176, 115, 174, 1);">-7</span>)`,
+    "-6": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span> (<span style="color:rgba(176, 115, 174, 1);">-6</span>)`,
+    "-5": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span> (<span style="color:rgba(176, 115, 174, 1);">-5</span>)`,
+    "-4": `<i><span style="color:rgba(176, 115, 174, 1);">Draining</i></span> (<span style="color:rgba(176, 115, 174, 1);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span> (<span style="color:rgb(16, 129, 234);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span> (<span style="color:rgb(16, 129, 234);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span> (<span style="color:rgb(16, 129, 234);">-1</span>)`,
+    "0": `<i><span style="color:rgb(16, 129, 234);">Managed</i></span> (<span style="color:rgb(16, 129, 234);">0</span>)`,
+    "1": `<i><span style="color:rgb(3, 148, 46);">Vanquished</i></span> (<span style="color:rgb(3, 148, 46);">1</span>)`,
+    "2": `<i><span style="color:rgb(3, 148, 46);">Vanquished</i></span> (<span style="color:rgb(3, 148, 46);">2</span>)`,
 }
 
 const backlashMap = {
-    "-6": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span>. (<span style="color:rgb(3, 148, 46);">-6</span>)`,
-    "-5": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span>. (<span style="color:rgb(3, 148, 46);">-5</span>)`,
-    "-4": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span>. (<span style="color:rgb(3, 148, 46);">-4</span>)`,
-    "-3": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-3</span>)`,
-    "-2": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-2</span>)`,
-    "-1": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">-1</span>)`,
-    "0": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span>. (<span style="color:rgb(3, 148, 46);">0</span>)`,
-    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span>. (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
-    "2": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span>. (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
-    "3": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span>. (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
-    "4": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span>. (<span style="color:rgb(213, 10, 10);">4</span>)`,
-    "5": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span>. (<span style="color:rgb(213, 10, 10);">5</span>)`,
-    "6": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span>. (<span style="color:rgb(213, 10, 10);">6</span>)`,
-    "7": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">7</span>)`,
-    "8": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">8</span>)`,
-    "9": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span>. (<span style="color:rgb(213, 10, 10);">9</span>)`,
-    "11": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">11</span>)`,
-    "12": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">12</span>)`,
-    "13": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">13</span>)`,
-    "14": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">14</span>)`,
-    "15": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">15</span>)`,
-    "16": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">16</span>)`,
-    "17": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">17</span>)`,
-    "18": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span>. (<span style="color:rgb(160, 10, 10);">18</span>)`,
+    "-6": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span> (<span style="color:rgb(3, 148, 46);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span> (<span style="color:rgb(3, 148, 46);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(3, 148, 46);">Friendly</i></span> (<span style="color:rgb(3, 148, 46);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span> (<span style="color:rgb(3, 148, 46);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span> (<span style="color:rgb(3, 148, 46);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span> (<span style="color:rgb(3, 148, 46);">-1</span>)`,
+    "0": `<i><span style="color:rgb(3, 148, 46);">Passive</i></span> (<span style="color:rgb(3, 148, 46);">0</span>)`,
+    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span> (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
+    "2": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span> (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
+    "3": `<i><span style="color:rgba(176, 115, 174, 1);">Angered</i></span> (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
+    "4": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span> (<span style="color:rgb(213, 10, 10);">4</span>)`,
+    "5": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span> (<span style="color:rgb(213, 10, 10);">5</span>)`,
+    "6": `<i><span style="color:rgb(213, 10, 10);">Fired Up</i></span> (<span style="color:rgb(213, 10, 10);">6</span>)`,
+    "7": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span> (<span style="color:rgb(213, 10, 10);">7</span>)`,
+    "8": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span> (<span style="color:rgb(213, 10, 10);">8</span>)`,
+    "9": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span> (<span style="color:rgb(213, 10, 10);">9</span>)`,
+    "10": `<i><span style="color:rgb(213, 10, 10);">Incensed</i></span> (<span style="color:rgb(213, 10, 10);">10</span>)`,
+    "11": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">11</span>)`,
+    "12": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">12</span>)`,
+    "13": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">13</span>)`,
+    "14": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">14</span>)`,
+    "15": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">15</span>)`,
+    "16": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">16</span>)`,
+    "17": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">17</span>)`,
+    "18": `<i><span style="color:rgb(160, 10, 10);">Foaming at the mouth</i></span> (<span style="color:rgb(160, 10, 10);">18</span>)`,
 
 }
 
 
 const fpwinMap = {
-    "-6": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(160, 10, 10);">-6</span>)`,
-    "-5": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(160, 10, 10);">-5</span>)`,
-    "-4": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(160, 10, 10);">-4</span>)`,
-    "-3": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span>. (<span style="color:rgb(160, 10, 10);">-3</span>)`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">-2</span>)`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">-1</span>)`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span>. (<span style="color:rgb(213, 10, 10);">0</span>)`,
-    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span>. (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
-    "2": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span>. (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
-    "3": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span>. (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
-    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">4</span>)`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">5</span>)`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">6</span>)`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span>. (<span style="color:rgb(16, 129, 234);">7</span>)`,
-    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">8</span>)`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">9</span>)`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">10</span>)`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">11</span>)`,
-    "12": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span>. (<span style="color:rgb(3, 148, 46);">12</span>)`,
+    "-6": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span> (<span style="color:rgb(160, 10, 10);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span> (<span style="color:rgb(160, 10, 10);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span> (<span style="color:rgb(160, 10, 10);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(160, 10, 10);">A Foreign Embaressment</i></span> (<span style="color:rgb(160, 10, 10);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span> (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span> (<span style="color:rgb(213, 10, 10);">-1</span>)`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">World Leaders Watching</i></span> (<span style="color:rgb(213, 10, 10);">0</span>)`,
+    "1": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span> (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
+    "2": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span> (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
+    "3": `<i><span style="color:rgba(176, 115, 174, 1);">Finishing the Job Abroad</i></span> (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
+    "4": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span> (<span style="color:rgb(16, 129, 234);">4</span>)`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span> (<span style="color:rgb(16, 129, 234);">5</span>)`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span> (<span style="color:rgb(16, 129, 234);">6</span>)`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">Solidifying Hegemony</i></span> (<span style="color:rgb(16, 129, 234);">7</span>)`,
+    "8": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span> (<span style="color:rgb(3, 148, 46);">8</span>)`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span> (<span style="color:rgb(3, 148, 46);">9</span>)`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span> (<span style="color:rgb(3, 148, 46);">10</span>)`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span> (<span style="color:rgb(3, 148, 46);">11</span>)`,
+    "12": `<i><span style="color:rgb(3, 148, 46);">A Peacemaker</i></span> (<span style="color:rgb(3, 148, 46);">12</span>)`,
           
 }
 
 const legwinMap = {
-    "-6": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(160, 10, 10);">-6</span>)`,
-    "-5": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(160, 10, 10);">-5</span>)`,
-    "-4": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(160, 10, 10);">-4</span>)`,
-    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span>. (<span style="color:rgb(213, 10, 10);">-3</span>)`,
-    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">-2</span>)`,
-    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">-1</span>)`,
-    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span>. (<span style="color:rgb(213, 10, 10);">0</span>)`,
-    "1": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span>. (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
-    "2": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span>. (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
-    "3": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span>. (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
-    "4": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span>. (<span style="color:rgba(176, 115, 174, 1);">4</span>)`,
-    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">5</span>)`,
-    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">6</span>)`,
-    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">7</span>)`,
-    "8": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span>. (<span style="color:rgb(16, 129, 234);">8</span>)`,
-    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">9</span>)`,
-    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">10</span>)`,
-    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">11</span>)`,
-    "12": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span>. (<span style="color:rgb(3, 148, 46);">12</span>)`,
-    "13": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span>. (<span style="color:rgb(5, 108, 30);">13</span>)`,
-    "14": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span>. (<span style="color:rgb(5, 108, 30);">14</span>)`,
-    "15": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span>. (<span style="color:rgb(5, 108, 30);">15</span>)`,
-
+    "-6": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span> (<span style="color:rgb(160, 10, 10);">-6</span>)`,
+    "-5": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span> (<span style="color:rgb(160, 10, 10);">-5</span>)`,
+    "-4": `<i><span style="color:rgb(160, 10, 10);">A Lack of Capital</i></span> (<span style="color:rgb(160, 10, 10);">-4</span>)`,
+    "-3": `<i><span style="color:rgb(213, 10, 10);">A Lack of Capital</i></span> (<span style="color:rgb(213, 10, 10);">-3</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span> (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-2": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span> (<span style="color:rgb(213, 10, 10);">-2</span>)`,
+    "-1": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span> (<span style="color:rgb(213, 10, 10);">-1</span>)`,
+    "0": `<i><span style="color:rgb(213, 10, 10);">Congress Waiting</i></span> (<span style="color:rgb(213, 10, 10);">0</span>)`,
+    "1": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span> (<span style="color:rgba(176, 115, 174, 1);">1</span>)`,
+    "2": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span> (<span style="color:rgba(176, 115, 174, 1);">2</span>)`,
+    "3": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span> (<span style="color:rgba(176, 115, 174, 1);">3</span>)`,
+    "4": `<i><span style="color:rgba(176, 115, 174, 1);">A Few Washington Wins</i></span> (<span style="color:rgba(176, 115, 174, 1);">4</span>)`,
+    "5": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span> (<span style="color:rgb(16, 129, 234);">5</span>)`,
+    "6": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span> (<span style="color:rgb(16, 129, 234);">6</span>)`,
+    "7": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span> (<span style="color:rgb(16, 129, 234);">7</span>)`,
+    "8": `<i><span style="color:rgb(16, 129, 234);">A Congressional Mastery</i></span> (<span style="color:rgb(16, 129, 234);">8</span>)`,
+    "9": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span> (<span style="color:rgb(3, 148, 46);">9</span>)`,
+    "10": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span> (<span style="color:rgb(3, 148, 46);">10</span>)`,
+    "11": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span> (<span style="color:rgb(3, 148, 46);">11</span>)`,
+    "12": `<i><span style="color:rgb(3, 148, 46);">A Fulfilled Checklist of Promises</i></span> (<span style="color:rgb(3, 148, 46);">12</span>)`,
+    "13": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span> (<span style="color:rgb(5, 108, 30);">13</span>)`,
+    "14": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span> (<span style="color:rgb(5, 108, 30);">14</span>)`,
+    "15": `<i><span style="color:rgb(5, 108, 30);">Never Seen Legislative Success</i></span> (<span style="color:rgb(5, 108, 30);">15</span>)`,
 }
 
 function tunnel(new_q){
@@ -101845,7 +101846,7 @@ e.pages.push(`<span style=" font-family: courier new">
 <strong>1. INT. OVAL OFFICE – DAY</strong>
 </p>
 <p>
-MEDIUM WIDE SHOT. Stage lights are dimmed, with a faint yellow spotlight facing down towards THE PRESIDENT, middle aged, white. He sits in front of the resolute, TURNED AWAY FROM THE CAMERA and facing the window, centered in frame. The camera slowly zooms into a medium shot. THE PRESIDENT is frustrated at something. Or more precisely, someONE. THE PRESIDENT waits after the audience reacts before speaking. 
+MEDIUM WIDE SHOT. Stage lights are dimmed, with a faint yellow spotlight facing down towards THE PRESIDENT. He sits in front of the resolute, TURNED AWAY FROM THE CAMERA and facing the window, centered in frame. The camera slowly zooms into a medium shot. THE PRESIDENT is frustrated at something. Or more precisely, someONE. THE PRESIDENT waits after the audience reacts before speaking. 
 </p>
 <p style="text-align: center">
 <strong>THE PRESIDENT</strong>
@@ -101905,7 +101906,7 @@ Soon after, an AIDE, any age, woman, walks in, oblivious to the chaos.
 Mr President, your 12-O clock is here.
 </p>
 <p style="text-align: center">
-The AIDE exits soon afterwards, leaving the two politicians to stare at Bono in confusion. VOINOVICH CURSES BONO UNDER HIS BREATH, trying to avoid eye contact with the President.
+The AIDE exits soon afterwards, leaving VOINOVICH to stare at BONO in confusion. VOINOVICH CURSES BONO UNDER HIS BREATH, trying to avoid eye contact with the President.
 </p>
 <p style="text-align: center">
 <strong>JOHN EDWARDS (O.S)</strong>
@@ -102278,7 +102279,7 @@ function createDraggableBox() {
     }
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
-	draggableBox.style.zIndex = '100';
+	draggableBox.style.zIndex = '101';
 	
     if(!localStorage.getItem("clickedBox")){
     alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
@@ -102462,7 +102463,7 @@ function website_handler() {
         webpageContainer.innerHTML = webpage_html;
 
         // Use this to control the headline
-        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML}, The GOP are ${backlashHTML} and Scandals are ${scandalHTML}. The Deficit is ${deficitHTML}, ${fpwinMapHTML} with ${legwinMapHTML}.`;
+        document.getElementById("headline").innerHTML = `CLINTON ADMIN: ${ideologyHTML} dealing with a ${deficitHTML} deficit and a ${backlashHTML} GOP. Scandals are ${scandalHTML}, with a record of ${fpwinMapHTML} and ${legwinMapHTML}.`;
     } else if (lower_url === "modderstowatchoutfor.com") {
         const ideologyHTML = ideologyMap[String(Ideology)];
         const scandalHTML = scandalMap[String(scandal)]; 
@@ -102972,7 +102973,9 @@ document.getElementById("gayrights").style.visibility = "visible";
         <img id="header" src="https://file.garden/aOp8cCiQ5ho9r5b1/ClintonGore.com.png" style="
         width: 300px; 
         display: block; 
-        margin: auto;">
+        margin: auto;
+        cursor: pointer;
+        ">
 
     <!-- Header Text + Bars Centered -->
 
@@ -102994,7 +102997,6 @@ document.getElementById("gayrights").style.visibility = "visible";
             width:200px;
             margin-top:10px;
             float: center;
-            cursor: pointer;
         ">
     </div>
 
@@ -103010,7 +103012,7 @@ document.getElementById("gayrights").style.visibility = "visible";
     </div>
 
     <div id="bar-healthcare" style="width:300px;">
-        <div class=redbartext>Leader Of Healthcare Reform</div>
+        <div class=redbartext id="Care/Fareheader">Leader of Healthcare Reform</div>
         <div class=redbar></div>
         <div class=bluebar>
             <span id="healthcare-text"></span>
@@ -103034,7 +103036,7 @@ document.getElementById("gayrights").style.visibility = "visible";
     </div>
 
     <div id="bar-speaker" style="width:300px;">
-        <div class=redbartext>Speaker Of The House</div>
+        <div class=redbartext>Speaker of the House</div>
         <div class=redbar></div>
         <div class=bluebar>
             <span id="soth-text">Thomas Foley</span>
@@ -103044,6 +103046,9 @@ document.getElementById("gayrights").style.visibility = "visible";
     </div>
 `;
     webpageContainer.innerHTML = webpage_html;
+      if (e.player_answers.includes(50004)) {
+    document.getElementById("Care/Fareheader").innerText = "Leader of Welfare Reform";
+    }
     if (e.player_answers.includes(60001)) {
     document.getElementById("attorney-text").innerText = "Kimba Wood";
     } else if (e.player_answers.includes(60002) || e.player_answers.includes(60003) || e.player_answers.includes(92005.5) || e.player_answers.includes(92006.5) || e.player_answers.includes(92007.5) || e.player_answers.includes(98005.5) || e.player_answers.includes(98007.5)) {
