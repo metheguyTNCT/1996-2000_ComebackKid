@@ -99505,13 +99505,13 @@ function opponentDecider(){
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
             e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.295;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(761) // Ohio
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.035;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(764) // Pennsylvaina
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.035;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(748) // Michigan
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.06;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(776) // Wisconsin
-            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.25;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.035;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.45
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.9
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.9
