@@ -99460,6 +99460,14 @@ function opponentDecider(){
             e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.285;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
             e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.295;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(761) // Ohio
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(764) // Pennsylvaina
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(748) // Michigan
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(776) // Wisconsin
+            e.candidate_state_multiplier_json[id].fields.state_multiplier += 0.35;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.45
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.9
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.9
@@ -100803,8 +100811,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Steve Forbes
 } else if (quickstats[0] == 538 && republican == "forbes") {
     ctsAchievement("Rage Against the Machine");
@@ -100826,8 +100832,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Lamar Alexander
 } else if (quickstats[0] == 538 && republican == "alexander") {
     ctsAchievement("Easy as ABC");
@@ -100849,8 +100853,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Phil Gramm
 } else if (quickstats[0] == 538 && republican == "gramm") {
     ctsAchievement("Damn Yankee");
@@ -100872,8 +100874,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Arlen Specter
 } else if (quickstats[0] == 538 && republican == "specter") {
     ctsAchievement("Life Among the Cannibals");
@@ -100895,8 +100895,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Pete Wilson
 } else if (quickstats[0] == 538 && republican == "wilson") {
     ctsAchievement("Great Incarcerator");
@@ -100918,8 +100916,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Colin Powell
 } else if (quickstats[0] == 538 && republican == "powell") {
     ctsAchievement("Olympus Has Fallen");
@@ -100962,8 +100958,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Sonny Bono
 } else if (quickstats[0] == 538 && republican == "bono") {
     ctsAchievement("Goin' Home");
@@ -100985,8 +100979,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Newt Gingrich
 } else if (quickstats[0] == 538 && Gingrich == 1) {
     ctsAchievement("Breach of Contract");
@@ -101008,8 +101000,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // 538 Weld
 } else if (orderID[0] == 77 && quickstats[0] == 538 && republican == "weld") {
     ctsAchievement("The Prosecution Rests");
@@ -101031,8 +101021,6 @@ changePlaylist(weldLoss);
   ClintonBlowout.addSong(ClintonBlowoutSong);
   changePlaylist(ClintonBlowout);
     }
-  ClintonBlowout.addSong(ClintonBlowoutSong);
-  changePlaylist(ClintonBlowout);
 // Dole Blowout
 } else if (republican == "dole" && quickstats[0] <= 138) {
     e.pages.push(`<h3>CNN CAN NOW PROJECT BOB DOLE THE 43RD PRESIDENT OF THE UNITED STATES, DEFEATING PRESIDENT CLINTON</h3>
