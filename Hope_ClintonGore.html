@@ -91978,8 +91978,8 @@ cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     e.noCounter += 1
 if (e.question_number+1 == 2) { // DADT
-if ((e.player_answers.includes(60002) && LEGWin >= 2 && scandal <= 0) || (e.player_answers.includes(60001) && LEGWin >= 1 && scandal <= 0)) {
 if (e.player_answers.includes(60001)) {
+    if (backlash <= 1) {
 question_insert("question_2_nannygate", 
             {
         "model": "campaign_trail.question",
@@ -91995,7 +91995,7 @@ question_insert("question_2_nannygate",
 question_insert("question_2_nannygate", 
             {
         "model": "campaign_trail.question",
-        "pk": "question_3_dadt_reno_win",
+        "pk": "question_3_dadt_wood",
         "fields": {
             "priority": 0,
             "description": "The promise you've made to let members of the gay community openly serve in the military has faced resistance from leadership, as expected, but now, conservatives and religious leaders from St. Louis to Baton Rouge are piling on. Military generals are even threatening to resign en masse if it's allowed. After a lot of discussion, General Powell presents a compromise: recruiters won’t ask about an individual's sexual orientation, but the military will retain the right to discharge those who are openly gay. It sounds tempting to bite the bullet and get back to work, but you <i>still</i> have a promise to keep.",
@@ -92005,11 +92005,11 @@ question_insert("question_2_nannygate",
         );
 }
 } else {
-if (e.player_answers.includes(60001)) {
+if (LEGWin >= 1) {
 question_insert("question_2_nannygate", 
             {
         "model": "campaign_trail.question",
-        "pk": "question_3_dadt_wood",
+        "pk": "question_3_dadt_reno_win",
         "fields": {
             "priority": 0,
             "description": "The promise you've made to let members of the gay community openly serve in the military has faced resistance from leadership, as expected, but now, conservatives and religious leaders from St. Louis to Baton Rouge are piling on. Military generals are even threatening to resign en masse if it's allowed. After a lot of discussion, General Powell presents a compromise: recruiters won’t ask about an individual's sexual orientation, but the military will retain the right to discharge those who are openly gay. It sounds tempting to bite the bullet and get back to work, but you <i>still</i> have a promise to keep.",
