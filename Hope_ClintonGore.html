@@ -99642,17 +99642,19 @@ function opponentDecider(){
         campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/8vn20p.png";
         campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aOp8cCiQ5ho9r5b1/Sonny%20Bono%20RNC.gif';
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(727) // Alabama
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.19;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.12;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(750) // Mississippi
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.2;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.13;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(766) // South Carolina
-            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.18;
+            e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.12;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(736) // Georgia
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.18;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.11;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(768) // Tennessee
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.23;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.16;
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
-                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.21;
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.14;
+        var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(735) // Florida
+                e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.0125;
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = -0.14
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.07
         campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_bono");
@@ -103777,7 +103779,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             desc: "Everyone's undescribable former colleague."
         })],
         ["Bono", this.createTooltip("Bono", {
-            img: "https://file.garden/aOp8cCiQ5ho9r5b1/Sonny%20Bono%20Tooltip.png",
+            img: "https://file.garden/aNtjn2887DiA_8HP/Sonny%20Bono%20Tooltip.png",
             title: "Representative",
             name: "Sonny Bono",
             desc: "Let's hope his candidacy ages as well as his music."
