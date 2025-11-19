@@ -2278,10 +2278,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
-            "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
+            "description": "As you lay your tent right inside the chasm, you find someone else that's been right here for a while. John Glenn, the Chair of the Senate Governmental Affairs Committee, is from a dying species, both as an astronaut and as someone unwilling to put his two arms in the mud, slinging at the opposition. He may not have the most influence of all the party, but he's a foot in the door. A lot of people have to go through him, we just need him to go through us.",
             "likelihood": 1
         }
     },
@@ -9386,31 +9386,31 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 96000.5,
         "fields": {
-            "question": "question_16_welfareMPS",
-            "description": "I’m going to sound archaic, but in this nation we share core values—Christian values. We give to one another; we help each other rise and walk on our own two feet. These are the things that unite those of us who want to help others fend for themselves. However, we’re trying to shift from short-term relief to a long-term solution. We need to help all of us walk again."
+            "question": "question_16_welfare_glenn",
+            "description": "If he's our ticket, I think we ought to march on with something he'd really, desperately like to do. Congress has been bleeding NASA for all it could since we put a flag on the moon. If we can get people to stop talking about the cost and more about the reward in our campaigns, I'm sure he'll warm up to us."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 96001.5,
         "fields": {
-            "question": "question_16_welfareMPS",
-            "description": "Deficit. Sustainability. Jobs. People don’t care about great ideas when they feel they’re being ripped off. If we just focus, like a laser, on those core concepts, people will stop meandering and the problem will get fixed."
+            "question": "question_16_welfare_glenn",
+            "description": "John Glenn has pushed for the end of government inefficiency for decades now. It's a job no one actually wants, but it's one that has to be done. I know we are going to make enemies if we do this, but we could also make friends that just want things to work. Let me tell you, I'd tell you the pros outweigh the cons."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 96002.5,
         "fields": {
-            "question": "question_16_welfareMPS",
-            "description": "The President’s duty is to inspire us all. We are facing completely unpredictable problems. Such problems require brand-new solutions, and those solutions can only be figured out together. Bickering will get us nowhere; we must focus on the task at hand."
+            "question": "question_16_welfare_glenn",
+            "description": "Everybody knows that Glenn was part of the Keating Five. Nothing against him, but we've gotta go another way around instead of directly working with him. Reach out to the folks who fund him, then try to get that to slowly sway him towards our side. No one is going to bite the hand that feeds them after all, and it won't be Glenn."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 96003.5,
         "fields": {
-            "question": "question_16_welfareMPS",
+            "question": "question_16_welfare_glenn",
             "description": "Let me tell you something, there is a culture and tradition that has been losing steam: liberalism. It has become a dirty word, but, let’s be clear, it remains the pursuit of greater freedom for all, including the huddled masses, to find their way to happiness. This is our way forward."
         }
     },
@@ -28716,22 +28716,12 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 12956,
-        "fields": {
-            "answer": 96001.5,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.0254
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 12967,
         "fields": {
             "answer": 96002.5,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.0311
+            "global_multiplier": -0.01
         }
     },
     {
@@ -37725,7 +37715,47 @@ campaignTrail_temp.answer_score_issue_json = [
         "fields": {
             "answer": 96000.5,
             "issue": 28,
-            "issue_score": -0.354,
+            "issue_score": 0.155,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12946,
+        "fields": {
+            "answer": 96000.5,
+            "issue": 27,
+            "issue_score": 0.221,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12946,
+        "fields": {
+            "answer": 96001.5,
+            "issue": 28,
+            "issue_score": 0.132,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12946,
+        "fields": {
+            "answer": 96001.5,
+            "issue": 27,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12946,
+        "fields": {
+            "answer": 96002.5,
+            "issue": 27,
+            "issue_score": 0.214,
             "issue_importance": 3
         }
     },
@@ -91052,7 +91082,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 96000.5,
             "candidate": 77,
-            "answer_feedback": "You aren’t the type to invoke God too much, but being raised in a Southern Baptist home gives you great fluency in reaching Jesus-loving Americans. Faith is a nice shield, especially when it leaves the Right unable to use it without sounding hypocritical, for those who would cast stones from glass houses."
+            "answer_feedback": "Your call to renew space ventures was received with thunderous applause from most of Congress, and most surprisingly, from Newt Gingrich. As Gingrich preached the Good News among Republicans and you among Democrats, there was suddenly something everyone agreed on. Glenn couldn't thank you enough."
         }
     },
     {
@@ -91061,7 +91091,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 96001.5,
             "candidate": 77,
-            "answer_feedback": "Those kinds of sound bites are what got you elected, but it’s clear that they’re not well suited to making laws. First, those abstract words can mean a lot of things to different people, causing endless arguments over phrasing. Second, you can try and simplify the idea of welfare, but you won’t ever be able to simplify it more than someone who’s making stuff up."
+            "answer_feedback": "You're ignoranced failed to realize the truth, that most Congressmen wants to cut money until that money helps them. Glenn appreciated the effort, but this didn't get far. You just ended up angering a lot of people with nothing to show for it."
         }
     },
     {
@@ -91070,7 +91100,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 96002.5,
             "candidate": 77,
-            "answer_feedback": "Shaming people for not doing their work has never been conducive to their suddenly doing it. There is already a group claiming that welfare is a domino in the American empire’s decline, after your speeches about bringing in the new, not the old. Things are not getting better."
+            "answer_feedback": "While your prodding remained out of sight, Glenn has become vigilant against anything that remotely resembled corruption since the scandal. He's no crook at the end of the day. While it's good for him, it's bad for us. You'll have to find another way in."
         }
     },
     {
@@ -94501,7 +94531,7 @@ if (e.player_answers.includes(51002.5)) {
 question_insert("budget_2_normal_comp_con", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94512,7 +94542,7 @@ question_insert("budget_2_normal_comp_con",
 question_insert("budget_2_normal_comp_lib", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94523,7 +94553,7 @@ question_insert("budget_2_normal_comp_lib",
 question_insert("budget_2_normal_uncomp_con", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94534,7 +94564,7 @@ question_insert("budget_2_normal_uncomp_con",
 question_insert("budget_2_normal_uncomp_lib", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94545,7 +94575,7 @@ question_insert("budget_2_normal_uncomp_lib",
 question_insert("budget_2_normal_comp", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94556,7 +94586,7 @@ question_insert("budget_2_normal_comp",
 question_insert("budget_2_normal_uncomp", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94567,7 +94597,7 @@ question_insert("budget_2_normal_uncomp",
 question_insert("budget_2_bentsen_commission", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94578,7 +94608,7 @@ question_insert("budget_2_bentsen_commission",
 question_insert("budget_2_bentsen_cuts", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94589,7 +94619,7 @@ question_insert("budget_2_bentsen_cuts",
 question_insert("budget_2_bentsen_carbon", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94600,7 +94630,7 @@ question_insert("budget_2_bentsen_carbon",
 question_insert("budget_2_reich_greenspan_noscan_welfare", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94611,7 +94641,7 @@ question_insert("budget_2_reich_greenspan_noscan_welfare",
 question_insert("budget_2_reich_nogreenspan_noscan_welfare", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94622,7 +94652,7 @@ question_insert("budget_2_reich_nogreenspan_noscan_welfare",
 question_insert("budget_2_reich_greenspan_scan_welfare", 
        {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -94633,7 +94663,7 @@ question_insert("budget_2_reich_greenspan_scan_welfare",
 question_insert("budget_2_reich_nogreenspan_scan_welfare", 
             {
                 "model": "campaign_trail.question",
-        "pk": "question_16_welfareMPS",
+        "pk": "question_16_welfare_glenn",
         "fields": {
             "priority": 0,
             "description": "Asking for everyone’s opinion is the ideal way of exposing problems. However, it’s also a perfect way to get bogged down in how to actually solve those problems. Ideas on welfare are reaching such a velocity of transformation that they have become vapor, figments in the air, impossible to catch. You need a path forward, something all can agree on.",
@@ -95251,7 +95281,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         );
-        question_insert("question_16_welfareMPS", 
+        question_insert("question_16_welfare_glenn", 
             {
         "model": "campaign_trail.question",
         "pk": "question_17_crime_ban_jail",
@@ -95330,7 +95360,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
         }
             }
         );
-        question_insert("question_16_welfareMPS", 
+        question_insert("question_16_welfare_glenn", 
             {
         "model": "campaign_trail.question",
         "pk": "question_17_crime_ban",
@@ -95408,7 +95438,7 @@ question_insert("budget_2_reich_nogreenspan_scan_healthcare",
     }
     }
     );
-    question_insert("question_16_welfareMPS", 
+    question_insert("question_16_welfare_glenn", 
             {
         "model": "campaign_trail.question",
         "pk": "question_17_crime",
