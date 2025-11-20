@@ -100699,6 +100699,130 @@ if (e.question_number+1 == 18) { // Midterms
     if(sortedOpponents[0][1] < 3) {
         opponents.wilson += 3.5
     }
+    if (moveup == 1) {
+    if (sortedOpponents[7][0] == "dole") {
+            dole_active = 0 
+            if(alexander_active == 1){
+            opponents.alexander += (opponents.dole)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.dole/2)
+            }
+            else if(wilson_active == 1) {
+            opponents.wilson += (opponents.dole/2)
+            }
+            opponents.dole = -10
+        }
+        if (sortedOpponents[7][0] == "buchanan") {
+            buchanan_active = 0 
+            if(gingrich_active == 1) {
+            opponents.gingrich += (opponents.buchanan)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.buchanan/2)
+            }
+            else if(wilson_active == 1){
+            opponents.wilson += (opponents.buchanan/2)
+            }
+            opponents.buchanan = -10
+        }
+        if (sortedOpponents[7][0] == "forbes") {
+            forbes_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.forbes)
+            }
+            else if(specter_active == 1){
+            opponents.specter += (opponents.forbes/2)
+            }
+            opponents.forbes = -10
+        }
+        if (sortedOpponents[7][0] == "alexander") {
+            alexander_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.alexander)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.alexander/2)
+            }
+            else if(forbes_active == 1) {
+            opponents.forbes += (opponents.alexander/2)
+            }
+            opponents.alexander = -10
+        }
+        if (sortedOpponents[7][0] == "gramm") {
+            gramm_active = 0 
+            if(gingrich_active == 1){
+            opponents.gingrich += (opponents.gramm)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.gramm)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gramm/3)
+            }
+            opponents.gramm = -10
+        }
+        if (sortedOpponents[7][0] == "specter") {
+            specter_active = 0 
+            if(powell_active == 1){
+            opponents.powell += (opponents.specter)
+            }
+            else if(bono_active == 1){
+            opponents.bono += (opponents.specter/2)
+            }
+            else if(dole_active == 1) {
+            opponents.dole += (opponents.specter/3)
+            }
+            opponents.specter = -10
+        }
+        if (sortedOpponents[7][0] == "wilson") {
+            wilson_active = 0 
+            if(gramm_active == 1){
+            opponents.gramm += (opponents.wilson/2)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.wilson/2)
+            }
+            else if(buchanan_active == 1) {
+            opponents.buchanan += (opponents.wilson/3)
+            }
+            opponents.wilson = -10
+        }
+        if (sortedOpponents[7][0] == "cheney") {
+            cheney_active = 0
+           if(dole_active == 1){
+            opponents.dole += (opponents.cheney/2)
+            } 
+            else if(specter_active == 1){
+            opponents.specter += (opponents.cheney/3)
+            }
+            opponents.cheney = -10
+        }
+        if (sortedOpponents[7][0] == "bono") {
+            bono_active = 0 
+            if(specter_active == 1){
+            opponents.specter += (opponents.bono)
+            }
+            else if(dole_active == 1){
+            opponents.dole += (opponents.bono/2)
+            }
+            opponents.bono = -10
+        }
+        if (sortedOpponents[7][0] == "gingrich") {
+            gingrich_active = 0 
+            if(dole_active == 1){
+            opponents.dole += (opponents.gingrich)
+            }
+            else if(gramm_active == 1){
+            opponents.gramm += (opponents.gingrich/2)
+            }
+            else if(buchanan_active == 1){
+            opponents.buchanan += (opponents.gingrich/2)
+            }
+            opponents.gingrich = -10
+        }
+        updateCandidates("junk", 0)
+    }
     if (backlash <= 1 && scandal <= 0 && (e.player_answers(94009.5) || e.player_answers(94010.5) || e.player_answers(94011.5) || e.player_answers(94012.5) || e.player_answers(94014.5) || e.player_answers(94017.5) || e.player_answers.includes(96004.5) || e.player_answers.includes(96005.5))) {
     if (e.player_answers.includes(60001)) {
     if (e.player_answers.includes(30002)) {
