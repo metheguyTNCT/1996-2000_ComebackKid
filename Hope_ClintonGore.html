@@ -100629,8 +100629,7 @@ if (e.question_number+1 == 18) { // Midterms
     if(sortedOpponents[0][1] < 3) {
         opponents.wilson += 3.5
     }
-    if (e.player_answers.includes(50004)) {
-    if ((e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5)) && scandal <= 0) {
+    if (backlash <= 1 && scandal <= 0 && LEGWin >= 5) {
     if (e.player_answers.includes(60001)) {
     if (e.player_answers.includes(30002)) {
         SlimGOPCongress += 1;
@@ -100652,28 +100651,7 @@ if (e.player_answers.includes(30002)) {
     ctsAchievement("Good Feelings");
     }
     }
-   } else {
-  if (scandal <= 2 && backlash <= 3 && LEGWin >= 5) {
-    ctsAchievement("Counterrevolution");
-            SlimGOPCongress += 1;
-            Legacy += 1;
-            opponents.dole = -10
-            dole_active = 0
-            campaignTrail_temp.questions_json[18] = tunnel("midterm_minor_gop_win_none");
-    } else {
-        
-        if (LEGWin <= 1 && scandal >= 3 && backlash >= 7){
-            gingrich_active = 1
-            moveup = 1
-            opponents.gingrich = 4
-            DisasterMidterms += 1;
-            campaignTrail_temp.questions_json[18] = tunnel("midterm_gop_sweep");
-    } else {
-            RepublicanRevolution += 1;
-        campaignTrail_temp.questions_json[18] = tunnel("midterm_gop_revolution");
-    }
-    }
-}
+   
  } else {
     if (scandal <= 2 && backlash <= 3 && LEGWin >= 5) {
     if (e.player_answers.includes(30001)) {
