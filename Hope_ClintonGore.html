@@ -26151,6 +26151,16 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 12746,
+        "fields": {
+            "answer": 88112.5,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.0215
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 12749,
         "fields": {
             "answer": 88109.5,
@@ -38542,6 +38552,66 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 28,
             "issue_score": 0.377,
             "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88112.5,
+            "issue": 28,
+            "issue_score": 0.244,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88112.5,
+            "issue": 27,
+            "issue_score": 0.15,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88113.5,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88113.5,
+            "issue": 27,
+            "issue_score": 0.28,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88114.5,
+            "issue": 28,
+            "issue_score": 0.3,
+            "issue_importance": 2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12748,
+        "fields": {
+            "answer": 88114.5,
+            "issue": 27,
+            "issue_score": 0.45,
+            "issue_importance": 3
         }
     },
     {
@@ -100088,13 +100158,13 @@ console.log(deficit)
    OsloPoints += 1
    updateCandidates("junk", 0)
    }
-    if (ans == 88017.5){
+    if (ans == 88138.5 || ans == 88142.5 || ans == 88146.5 || ans == 88150.5 || ans == 88153.5 || ans == 88156.5 || ans == 88139.5 || ans == 88143.5 || ans == 88147.5 || ans == 88151.5 || ans == 88154.5 || ans == 88157.5){
     ctsAchievement("No Lie");
     }
-    if (ans == 88020.5){
+    if (ans == 88103.5){
     ctsAchievement("Chainsaw Man");
     }
-    if (ans == 88021.5){
+    if (ans == 88113.5 || ans == 88116.5 || ans == 88125.5 || ans == 88128.5 || ans == 88131.5 || ans == 88114.5 || ans == 88117.5 || ans == 88120.5 || ans == 88123.5){
     ctsAchievement("Renewal");
     }
     if (ans == 85027.5 || ans == 85032.5){
@@ -103563,7 +103633,7 @@ let webpage_html = `
                 <span id="healthref" class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Tax Cuts for the Middle-Class
-                <span class="checkmark"></span>
+                <span id="taxcuts" class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Rights for Gay Soldiers in the Millitary
                 <span id="gayrights" class="checkmark"></span>
@@ -103682,6 +103752,10 @@ document.getElementById("healthref").style.visibility = "visible";
 if (e.player_answers.includes(95003.5) || e.player_answers.includes(95004.5) || e.player_answers.includes(95007.5) ||e.player_answers.includes(95005.5) || e.player_answers.includes(95008.5) || e.player_answers.includes(95011.5) || e.player_answers.includes(95016.5) || e.player_answers.includes(95022.5) || e.player_answers.includes(95017.5) || e.player_answers.includes(95020.5)) {
 showWin("ach-mitchcare")
 document.getElementById("healthref").style.visibility = "visible";  
+}
+if (e.player_answers.includes(88138.5) || e.player_answers.includes(88139.5) || e.player_answers.includes(88142.5) || e.player_answers.includes(88143.5) || e.player_answers.includes(88146.5) || e.player_answers.includes(88147.5) || e.player_answers.includes(88140.5) || e.player_answers.includes(88151.5) || e.player_answers.includes(88153.5) || e.player_answers.includes(88154.5) || e.player_answers.includes(88156.5) || e.player_answers.includes(88157.5)) {
+document.getElementById("taxcuts").style.visibility = "visible";  
+
 }
 if (e.player_answers.includes(94009.5) || e.player_answers.includes(94010.5) || e.player_answers.includes(94011.5) || e.player_answers.includes(94012.5) || e.player_answers.includes(94014.5) || e.player_answers.includes(94017.5)) {
 showWin("ach-bicare")
