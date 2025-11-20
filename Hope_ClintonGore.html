@@ -100145,6 +100145,9 @@ Pandora += 1
     updateCandidates("junk", 0)
     }
     // Achievements
+    if (ans == 96004.5 || ans == 96005.5 || ans == 96007.5 || ans == 96009.5 || ans == 96010.5 || e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) { // Welfare
+    ctsAchievement("SNAPback");
+    }
     if (ans == 93013.5 || ans == 93017.5 || ans == 93022.5){ // Hillary
     ctsAchievement("I Do");
     campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://files.catbox.moe/6nkd4x.gif';
@@ -103573,7 +103576,7 @@ let webpage_html = `
                 font-style: italic;
                 ">
                 <p class="checkcontainer">Welfare Reform
-                <span id "wealthref" class="checkmark"></span>
+                <span id "welref" class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Deficit Reduction
                 <span id="defreduc"class="checkmark"></span>
@@ -103581,7 +103584,7 @@ let webpage_html = `
                 <p class="checkcontainer">Healthcare Reform
                 <span id="healthref" class="checkmark"></span>
                 </p>
-                <p class="checkcontainer">Tax Cuts for the Middle Class
+                <p class="checkcontainer">Tax Cuts for the Middle-Class
                 <span class="checkmark"></span>
                 </p>
                 <p class="checkcontainer">Rights for Gay Soldiers in the Millitary
@@ -103690,8 +103693,9 @@ showWin("ach-gun-bill")
 if (e.player_answers.includes(89025.5)) {
 showWin("ach-oslo")
 }
-if (e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5) || e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) {
+if (e.player_answers.includes(96004.5) || e.player_answers.includes(96005.5) || e.player_answers.includes(96007.5) || e.player_answers.includes(96009.5) || e.player_answers.includes(96010.5) || e.player_answers.includes(96004.5) || e.player_answers.includes(96008.5) || e.player_answers.includes(96012.5) || e.player_answers.includes(96025.5) || e.player_answers.includes(96031.5)) {
 showWin("ach-welfare")
+document.getElementById("welref").style.visibility = "visible";
 }
 if (e.player_answers.includes(93013.5) || e.player_answers.includes(93017.5) || e.player_answers.includes(93022.5)) {
 showWin("ach-unihealthcare")
