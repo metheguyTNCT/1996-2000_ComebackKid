@@ -994,7 +994,7 @@ campaignTrail_temp.questions_json = [
         "pk": "campaign_1_bono",
         "fields": {
             "priority": 0,
-            "description": "Harkening back to the shouting matches he had with Palm Springs City Hall just to get a sign for his restaurant, Bono frames his campaign as the fight of ordinary citizens against a corrupt, entrenched, and inefficient regulatory bureaucracy, one that’s been fostered and made worse by you. In high-pitched, nasally sermons, he exasperatedly laments how “Government has become too big, too intrusive, too easy with money,” and sings a self-deprecating song that he's not a slick, smart politician, but a pissed off reformist, everyman. How can we cut the music?",
+            "description": "Harkening back to the shouting matches he had with Palm Springs City Hall just to get a sign for his restaurant, Bono frames his campaign as the fight of ordinary citizens against a corrupt, entrenched, and inefficient regulatory bureaucracy, one that’s been fostered and made worse by you. In high-pitched, nasally sermons, he exasperatedly laments how “Government has become too big, too intrusive, too easy with money,” and sings a self-deprecating song that he's not a slick, smart politician, but a pissed off reformist, everyman. How can we cut the music, Bubba?",
             "likelihood": 1
         }
     },
@@ -1003,7 +1003,7 @@ campaignTrail_temp.questions_json = [
         "pk": "campaign_2_bono",
         "fields": {
             "priority": 0,
-            "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper — a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document detailing his scandals and inconsistencies, most of them already dragged out by his Republican rivals during the long, bitter primary slog. The press barely blinked then, but this is the big-time now. How do you want to stop this guy?",
+            "description": "The rise of Sonny Bono was nominally sparked by your carbon tax, but it doesn't take an expert to see he's tapping into something deeper — a cocktail of conservative discontent, celebrity appeal, and anti-establishment mood. Your campaign has assembled document after document detailing his scandals and inconsistencies, most of them already dragged out by his Republican rivals during the long, bitter primary slog. The press barely blinked then, but this is the big-time now. How do you want to stop this guy, Bubba?",
             "likelihood": 1
         }
     },
@@ -1021,7 +1021,7 @@ campaignTrail_temp.questions_json = [
         "pk": "debate_cheney",
         "fields": {
             "priority": 0,
-            "description": "You're in Athens, Georgia, on the debate stage. It's your first of the cycle, and to your right stands Secretary Dick Cheney, cool as a cucumber, as per usual. For a moment, you nearly drift off. The egghead drones on and on about something or other, his voice sounds like static. You blink. And just like that, it's your turn, Bubba.",
+            "description": "You're in Athens, Georgia, at the newly opened Classic Center Theatre, on the debate stage. It's your first of the cycle, and to your right stands Secretary Dick Cheney, cool as a cucumber, as per usual. For a moment, you nearly drift off. The egghead drones on and on about something or other; his voice sounds like static. You blink. And just like that, his closing statement is done; it's your turn, Bubba.",
             "likelihood": 1
         }
     },
@@ -5285,6 +5285,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": "debate_cheney",
             "description": "I’m not gonna play Mr. Nice Guy out there. Cheney’s campaign’s been totally shady, and you know, he’s real nasty behind the scenes, and he's doing the bidding of the hard right. Ask anyone out here. We’re gonna hit him where it counts: the double-talk, the ads, all that bullshit. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 36001.53125,
+        "fields": {
+            "question": "debate_cheney",
+            "description": "I know Cheney would love you all to think he has the ultimate credibility when it comes to our world affairs, but I want people to know what he's been doing since he left government. He hasn't worked to make the world safer or chaired an organization fighting for peace. He's been working at Halliburton, a defense contractor. How can he really be trusted? "
         }
     },
     {
@@ -14208,7 +14216,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 77,
             "state": 189,
-            "state_multiplier": 0.84674961249859889879862121989289412
+            "state_multiplier": 0.85036911214121314674961249859889879862121989289412
         }
     },
     {
@@ -18977,6 +18985,36 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 77,
             "affected_candidate": 78,
             "global_multiplier": 0.032313
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.53125,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.042313
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.53125,
+            "candidate": 77,
+            "affected_candidate": 78,
+            "global_multiplier": 0.02498121142313
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12671,
+        "fields": {
+            "answer": 36001.53125,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.00942313
         }
     },
     {
@@ -37232,6 +37270,16 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 31,
             "issue_score": 0.513,
             "issue_importance": 9
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12951,
+        "fields": {
+            "answer": 36001.53125,
+            "issue": 30,
+            "issue_score": 0.126,
+            "issue_importance": 1
         }
     },
     {
@@ -74448,7 +74496,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 202,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.0392
+            "state_multiplier": 0.0424
         }
     },
     {
@@ -74459,7 +74507,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 202,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.0392
+            "state_multiplier": 0.0424
         }
     },
     {
@@ -74470,7 +74518,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 202,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.0392
+            "state_multiplier": 0.0424
         }
     },
     {
@@ -74481,7 +74529,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 202,
             "candidate": 77,
             "affected_candidate": 78,
-            "state_multiplier": 0.0392
+            "state_multiplier": 0.0424
         }
     },
     {
@@ -74767,7 +74815,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 210,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0212398
+            "state_multiplier": -0.00751212398
         }
     },
     {
@@ -74778,7 +74826,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 210,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0212398
+            "state_multiplier": -0.00751212398
         }
     },
     {
@@ -74789,7 +74837,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 210,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0212398
+            "state_multiplier": -0.00751212398
         }
     },
     {
@@ -74800,7 +74848,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 210,
             "candidate": 77,
             "affected_candidate": 77,
-            "state_multiplier": -0.0212398
+            "state_multiplier": -0.00751212398
         }
     },
     {
@@ -85457,6 +85505,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 36001.5312,
             "candidate": 77,
             "answer_feedback": "For a long time, the right-wing press painted a version of you the average Joe never really saw. But tonight, they did. They saw your self-righteous, venomous anger on every TV in the country. Dick Cheney, to his credit, wasn’t about to lie down. But after ten minutes of steady fire, it was like he put up a steel wall. Smiling faintly. Shaking his head. The press says he won. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12670,
+        "fields": {
+            "answer": 36001.53125,
+            "candidate": 77,
+            "answer_feedback": "To the shock of many progressive, anti-war Democrats and outright leftists, your tone was a welcome surprise. As you stood there slamming the connection between government and the arms industry, a pillar of the military-industrial complex, Cheney wore a lax, almost bored expression. When his turn came, he offered a dry defense of the free market system. It was all so boring. "
         }
     },
     {
@@ -104596,7 +104653,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
     initializeReplacements() {
         this.replacements = new Map([
         ["Clinton", this.createTooltip("Clinton", {
-            img: "https://file.garden/aNtjn2887DiA_8HP/William%20Jefferson%20Clinton%20Tooltip%20Pic.png",
+            img: "https://file.garden/aNtjn2887DiA_8HP/William%20J.%20Clinton%20Tooltip%20Pic.png",
             title: "President",
             name: "Bill Clinton",
             desc: "Loyal to no one, compromiser for all."
@@ -104680,7 +104737,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             desc: "Let's hope his candidacy ages as well as his music."
         })],
         ["Gingrich", this.createTooltip("Gingrich", {
-            img: "https://file.garden/aNtjn2887DiA_8HP/Newt%20Gingrich%20Tooltip.png",
+            img: "https://file.garden/aNtjn2887DiA_8HP/Newton%20Gingrich%20Tooltip%20Pic.png",
             title: "Speaker",
             name: "Newt Gingrich",
             desc: "Eager to treat you like one of his wives."
@@ -104740,7 +104797,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             desc: "The one and only Psychic Physicist."
         })],
         ["Kaczynski", this.createTooltip("Kaczynski", {
-            img: "https://file.garden/aNtjn2887DiA_8HP/Kaczynski%20Tooltip.png",
+            img: "https://file.garden/aNtjn2887DiA_8HP/Theodore%20Kaczynski%20Tooltip.png",
             title: "Prisoner",
             name: "Ted \"The Unabomber\" Kaczynski",
             desc: "The hero of every edgy 15-year-old."
