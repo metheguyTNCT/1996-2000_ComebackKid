@@ -104206,7 +104206,7 @@ showWin("ach-gay-rights")
     } else if (e.player_answers.includes(30003)) {
     document.getElementById("budget-text").innerText = "President Clinton"; 
     }
-    } else if (lower_url === "worldfactbook.com" || "ciaworldfactbook.com" || "cia.gov/worldfactbook" || "worldfactbookcia.com") {
+    } else if (lower_url === "worldfactbook.com") {
     current_website="worldfactbook.com";
    let webpage_html = `
    <style>
@@ -104257,8 +104257,7 @@ showWin("ach-gay-rights")
    </div>
    `;
    webpageContainer.innerHTML = webpage_html;
-    }
-    else {
+    } else {
     	document.getElementById("webpage_html").innerHTML = `<p style="line-height:1em;margin-inline:5px;">Sorry, the webpage "${current_website}" cannot be found.</p>`;
     }
 }
