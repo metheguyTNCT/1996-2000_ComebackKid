@@ -293,12 +293,8 @@ campaignTrail_temp.credits = "<button onclick='credits()'>A New Bunch Of Modders
 
 function credits_handler() {
   const webpageContainer = document.querySelector("#credits_popup_window #webpage_html");
-  if (!webpageContainer) {
-    console.error("Could not find the #webpage_html container inside credits box");
-    return;
-  }
-  
-  let webpage_html = '<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;"></h3>'
+
+  let webpage_html = '<h3 id="headline" style="margin-block-start:0.2em;line-height:1em;margin-block-end:0.1em;font-size:0.9em;margin-inline:4px;text-align:center;">HOPE TEAM: Hopehopehopehopehopehopehopehopehope</h3>'
 
   for (let x in main_modder_list) {
     webpage_html += `<div id="candidate-entry" style="
@@ -387,18 +383,14 @@ credits = function() {
     
     draggableBox.style.padding = '0px';
     draggableBox.style.lineHeight = '0';
-    draggableBox.style.zIndex = '9999';
-	
-    if (!localStorage.getItem("clickedBox")) {
-      alert('If you want a more in-depth view of your term besides CLINTON ADMIN, type into the address bar "clintongore.com", there are other websites besides the opponents one.');
-      localStorage.setItem("clickedBox", "true")
-    }
+    draggableBox.style.zIndex = '101';
+
 
     let assemble_html = [
       `<div id="backbutton" style="cursor:pointer; width: 51px; height: 40px; left: 14px; top: 44px; position: absolute;"></div>`,
       `<div id="forwardbutton" style="cursor:pointer; width: 51px; height: 40px; left: 65px; top: 44px; position: absolute;"></div>`,
       `<div id="browser_top" style="background-image: url('https://i.imgur.com/xU6SnCo.png'); height:135px;"></div>`,
-      `<input id="website_search_bar" value="creditsroll.com" type="text" style="vertical-align: top;height: 19px;width: 359px; font-family: 'W95FA'; position: absolute; top: 87px; left: 60px">`,
+      `<div id="website_search_bar" style="height: 17px;width: 342px; font-family: 'W95FA'; position: absolute; top: 91px; left: 62px; background-color: white; font-size: 13.33px; line-height: 1.2; padding-left: 3px;">modderstowatchoutfor.com</div>`,
       `<div id="browser_bottom" style="background-image: url('https://i.imgur.com/2DP4tpa.png'); height:41px; width: 480px; bottom: 0px; position: absolute;"></div>`,
       `<div id="webpage_html" style="background-color:C0C0C0;width:451px;vertical-align:top;overflow-y:scroll;scrollbar-width:none;top:119px;left:6px;display:inline-block;position:absolute;"></div>`,
       // call the specific close function
@@ -2597,4 +2589,3 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
-
