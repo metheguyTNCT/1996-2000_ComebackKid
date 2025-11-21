@@ -92590,7 +92590,7 @@ let specterObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC
 let wilsonObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "Pete Wilson",title: "GOVERNOR OF CALIFORNIA",description: "He’d be the frontrunner if he learned to shut up. Don't count him out though. If the GOP is caught in a disastrous shouting match at San Diego, his voice could rise again as one of clarity. "};
 
 let powellObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Powell",name: "Colin Powell",title: "4-STAR GENERAL",description: "Viewed as the only man who can beat you by most, the Gulf War hero has publicly declined a run, touting a lack of ''passion for politics'', though a severe rebuke of your administration could change his mind."};
-let cheneyObject = {img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dick%20Cheney%20RTWOF%20Pic.png",name: "Dick Cheney",title: "FMR. SECRETARY OF DEFENSE",description: "Humpty Dumpty is certainly not the most inspiring choice the GOP could pick. He’s as dull as Pancakes without Syrup. However, he does seem to satisfy the average Republican hawk. If they see no better alternative, they’ll send Dick in."};
+let cheneyObject = {img: "https://file.garden/aOp8cCiQ5ho9r5b1/Dick%20Cheney%20RTWOF%20Pic.png",name: "Dick Cheney",title: "FMR. SECRETARY OF DEFENSE",description: "Humpty Dumpty is certainly not the most inspiring choice the GOP could pick, being as dull as pancakes without syrup. However, he does seem to satisfy the average Republican hawk. If they see no better alternative, they’ll send Dick in."};
 let bonoObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Bono",name: "Sonny Bono",title: "CA. REPRESENTATIVE",description: "The GOP is so desperate for another Reagan that they might nominate the furthest man from him. The marijuana smoking, three time divorcee, scientologist ''outsider'' grabs the attention of those who, in morbid curiosity, want to see how far he'll go."};
 let gingrichObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gingrich",name: "Newt Gingrich",title: "SPEAKER OF THE HOUSE",description: "Your arch-nemesis in Washington has rode the wave after your dismal performance in the midterms, and the improbability of him being a serious contender for the presidency has become a possibility. If Gingrich wants to graduate to King of the Country, you'll need to prove him right."};
 let weldObject = {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Weld",name: "Bill Weld",title: "GOVERNOR OF MASSACHUSETTS",description: "Desperate times call for desperate measures. Hand picked by higher ups, Bill Weld is the perfect choice to restore trust in the party, much to the contempt of every conservative. But what other choice do they have?"};
@@ -100637,6 +100637,7 @@ function opponentDecider(){
         var id = e.candidate_state_multiplier_json.map(p=>p.pk).indexOf(743) // Kentucky
                 e.candidate_state_multiplier_json[id].fields.state_multiplier -= 0.02;
     campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://files.catbox.moe/mkuhg5.png";
+    campaignTrail_temp.election_json[0]["fields"].advisor_url = 'https://file.garden/aR6kfGEzxHQ5DUic/CheneyRNC.gif';
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.075
     e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.85
     campaignTrail_temp.questions_json[26] = tunnel("candidate_intro_cheney");
@@ -102690,7 +102691,7 @@ e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/GxtqJg8.p
         e.pages.push(`<span style="font-size: 32px; ">Seinfeld actor lets fly with racist tirade</span><br><br>
             <p><b>This article is 10 years old</b>><br><ul><li>2-minute attack on black hecklers caught on film</li></ul><br><ul><li>Comic unrepentant in face of national controversy</li></ul><br><br>The comic actor Michael Richards, better known as Cosmo Kramer in the long-running TV show Seinfeld, has released a statement, in which he decried 'the liberal culture of censorship strangling Hollywood', on a recent racist outburst that was captured on film and spread across the United States, causing a stir of controversy engulfing the actor.<br><br>Richards, 57, took exception when some black audience members talked during his act at a Los Angeles comedy club on Friday. In the recording, Richards says from the stage: "Fifty years ago we'd have you upside down with a fucking fork up your ass."<br><br>He then proceeds to insult one man with a succession of racial epithets. "Throw his ass out. He's a ni--er! He's a n--er! He's a ni--er! A ni--er, look, there's a ni--er!" Richards says.<br><br>In a television appearance on Monday night, after news of the tirade broke, Richards was unrepentant, telling host David Letterman - who was interviewing Seinfeld star Jerry Seinfeld - that he was not a racist, but was instead simply acting as the character of Kramer whom Richards was playing for the night.<br><br>"I was at a comedy club trying to do my act, and I got heckled and I responded in character," Richards said. "This guy, he payed to see me play Kramer, and suddenly he's upset when I do! I'm not a racist, really, I'm not, and that's the crazy thing about this, because we've got this mob of overly sensitive, uh, well, snowflakes, these soft Teddy-Bear activists who can't take a joke."<br><br>Richards went on to say that his outburst was not pre-planned in any way and that it was simply an expression of what he believed to be Kramer's character.<br><br>"You know, I'm a performer," he said. "I push the envelope, because that's what these people I'm playing would do. And that's why I said these things, because I was improvising and I thought, 'hey, Kramer's the type of guy to say these things', look, it's spontaneous, I went into character and I think I went into character well. But it's a character, and I would never, never, never say these things outside of that."<br><br>Throughout the tirade, which lasted for two minutes, the audience became confused, uncertain whether the extreme language was part of Richards' act. Some laughed at the comments but as the attacks from the stage continued, there were gasps and some voices could be heard expressing disbelief.<br><br>The target of Richards' comments shouted back at Richards several times, telling him that the insults were uncalled for. "That's un-fucking called for," one man said. "It ain't necessary."<br><br>Another man said: "It's not funny. That's why you're a reject, never had no shows, never had no movies. Seinfeld, that's it."<br><br>The response seemed to drive Richards to further express his anger. Several members of the audience left their seats as Richards continued his rant before himself leaving the stage. There can also be applause and raucous laughter heard from some members of the crowd as well. The following night, he returned to the club to perform his act.<br><br>Following the publicity given to the incident, club owner Jamie Masada said that Richards would not perform again at the Hollywood club. "The Laugh Factory is a comedy club, not a forum for personal attacks," he said.<br><br>The recording first appeared on the celebrity gossip website TMZ.com, the site that broke the news of Mel Gibson's anti-Semitic tirade which garnered similar controversy earlier in the summer.<br><br>After the incident, Richards has become far more vocal on political issues such as the ongoing 'culture war', describing it as, "The thing that will determine whether our children get to grow up in The United States of America or The Soviet Union."<br><br>Many celebrities and political commentators have weighed in on the response, with figures such as Senator Rush Limbaugh or Tom Cruise expressing their support for Richards. The conservative Think Tank 'The Heritage Society' applauded Richards', "Willingness to fight against the liberal overreach of traditional legacy media that has stifled free speech in America for decades."<br><br>Former President and Senator Al Sharpton, however, released a statement heavily condemning Richards' behavior, attacking President Pat Buchanan on his, "Unashamed enabling of racist attitudes such as those displayed by Richards that night."<br><br>Since appearing as the scene-stealing Kramer in Seinfeld, Richards has been dormant. A television spin-off, The Michael Richards Show, was dropped after a few episodes, and other than his one-man comedy act and a brief stint in a West End production of Arsenic and Old Lace, Richards career has consisted of giving interviews for Seinfeld DVD compilations.<br><br>However, it seems as though recent attention has breathed a new life into Richards' acting career. In his interview, Richards stated to Letterman, "We've been getting so many calls recently, from all these different companies, and it's been insane, they've all been asking, "Oh, can Michael come and do an ad with us," or, "Hey, would Michael be interested to come and audition for so-and-so," I mean, there are so many patriots who have just been really ready to come to my side and have my back throughout all of this. It's amazing, they're great people, all of them."<br><br>From John Sergeant, Politics Correspondent, reporting from Los Angeles<br><b>An Incredible Self-Own</b><br>In 1936, John Scott, son of the late Guardian owner and legendary editor CP Scott, did something unheard of for a media heir: he gave up his stake for the greater good.<br><br>After inheriting the newspaper, Scott renounced all financial benefit – bar his salary – in the Guardian (worth £1m at the time and around £89m today) and passed ownership over to the newly formed Scott Trust. The Trust would evolve to have one key mission: to secure the financial and editorial independence of the Guardian in perpetuity.<br><br>That means the Guardian can’t be bought. Not by private equity, not by a conglomerate, and definitely not by a bigot billionaire President looking for another political mouthpiece.<br><br>Our independence means we can say what we want, report on who we want, challenge who we want, and stand up at a time when others are sitting down. And in a world of Howard Sterns and Eric Adamses, that makes all the difference.<br><br>But this unique model also means we depend on readers like you from the United States to help fund our work. If you would rather the news you read was the result of decisions made by journalists and editors, not oligarchs or ultra-wealthy tech bros, then, well, you know what to do:<br><br><br>Support the Guardian on a monthly basis.<br><br><br>Support $10/monthly<br>Recommended<br><br>Support $30/monthly<br>Unlock All-access digital benefits:<br>Far fewer asks for support<br>Ad-free reading<br>Unlimited access to the Guardian app<br>Exclusive newsletter for supporters<br>Unlimited access to the Feast App<br>Support with another amount:</p>
             `)
-    e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aOp8cCiQ5ho9r5b1/1996%3A%20Hope/Buchanan%20Term%20Slide.png'})])
+    e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/KramerNooo.png'})])
 } else if (republican == "forbes" && quickstats[0] >= 101 && quickstats[0] <= 268) { // Forbes Term Slides
 e.pages.push(`<span style="font-size: 32px; ">Beyond Belief: Episode 7, Season 3</span><br><br>
 <p>Imagine the family restaurant. A simple concept, really. A place for sustenance, for community. But in your reality, at the dawn of the 21st century, these establishments underwent a... remarkable transformation. They became temples of theme. Jungles erupted in dining rooms. Animatronic gorillas beat their chests next to tables where families ate mozzarella sticks.</p>
@@ -102706,7 +102707,7 @@ e.pages.push(`<span style="font-size: 32px; ">Beyond Belief: Episode 7, Season 3
 <p>Your reality suggests... it did.</p>
 `)
 //e.image = ""
-e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aOp8cCiQ5ho9r5b1/Forbes%20Term%20Ending%20Slide.png'})])
+e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/ForbesEnding.png'})])
 } else if (republican == "alexander" && quickstats[0] >= 101 && quickstats[0] <= 268) { // Alexander Term Slides
     e.pages.push(`<span style="font-size: 32px; "><b>Shadow! the Hedgehog</b></span><br>
         <p>
@@ -102754,10 +102755,10 @@ If you loved Shadow’s character in Sonic Adventure 2 and Sonic Heroes, if you 
 e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%203/Opponent%20Win/Shadow'})])
 }  else if (republican == "gramm" && quickstats[0] >= 101 && quickstats[0] <= 268) { // Gramm Term Slides
     e.pages.push(`<span style="font-size: 32px; ">To Kill a President</span><br><br>
-        <p>Info Wars<br><br>October 15th 2001<br><br>Alex Jones<br><br>So let me get this straight. I don't care much for Gramm. I mean the guy's a sociopath, a sexual maniac, he's really just Clinton painted with a republican hue, but if it was just that, I wouldn't care. I'll tell you, what's really making me angry is that bastard is daring to call himself the "best representative of our Christian nation" while being an absolute bastard and a crook.<br><br>Honestly, I feel queasy. On that network I called on all of you to vote for him because at least he wasn't Bradley but... Jesus Christ... We should have primaried that bastard. What we're seeing with Enron isn't a witch hunt, it's him trying to fill all his pockets with your tax payer money being funneled in.<br><br>Folks, this is it. This is the moment where we either stand up and say NO to these globalist puppets, these wolves in sheep’s clothing, or we watch as they dismantle everything this country was built on. They’re laughing at you. At all of us. All the while they rob you blind and preach about "family values." WAKE UP, AMERICA!<br><br>This isn’t just corruption. This is a full-blown assault on the American people. And mark my words, if we don’t stop them now, it’ll be too late. They’re coming for your freedoms, your wallets, and your children’s future.<br><br>We've got to put that bastard in jail! We seen it with Nixon! We can't let it continue! Impeach him! Put that motherfucker in jail!</p>`)
-e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/oaj4DHb.png'})])
+        <p>Info Wars<br><br>October 15th 2001<br><br>Alex Jones<br><br>So let me get this straight. I don't care much for Phil Gramm. I mean the guy's a sociopath, a sexual maniac, he's really just Clinton painted with a Republican hue, but if it was just that, I wouldn't care. I'll tell you, what's really making me angry is that bastard is daring to call himself the "best representative of our Christian nation" while being an absolute bastard and a crook.<br><br>Honestly, I feel queasy. On that network I called on all of you to vote for him because at least he wasn't Bradley but... Jesus Christ... We should have primaried that bastard. What we're seeing with Enron isn't a witch hunt, it's him trying to fill all his pockets with your tax payer money being funneled in.<br><br>Folks, this is it. This is the moment where we either stand up and say NO to these globalist puppets, these wolves in sheep’s clothing, or we watch as they dismantle everything this country was built on. They’re laughing at you. At all of us. All the while they rob you blind and preach about "family values." WAKE UP, AMERICA!<br><br>This isn’t just corruption. This is a full-blown assault on the American people. And mark my words, if we don’t stop them now, it’ll be too late. They’re coming for your freedoms, your wallets, and your children’s future.<br><br>We've got to put that bastard in jail! We've seen it with Nixon! We can't let it continue! Impeach him! Put that motherfucker in jail!</p>`)
+e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/GrammEnding.png'})])
 } else if (republican == "specter" && quickstats[0] >= 101 && quickstats[0] <= 268) { // Specter Term Slides
-    e.pages.push(`<span style="font-size: 32px; ">Judas' final Betrayal</span><br><br>
+    e.pages.push(`<span style="font-size: 32px; ">Judas' Final Betrayal</span><br><br>
 <p>
 <strong>In another show of his selective bi-partisanship, ex-president Specter publicly supports Harvey-Care </strong>
 </p>
@@ -102768,10 +102769,10 @@ by Jack Brabham
 Fox News: 15 February 2009
 </p>
 <p>
-Back in 2001, I had hoped that Arlen Specter would go with the wind. The Judas that had convinced the flock to nominate him for president only to work for the Democrats. We thought that his unsuccessful turn-coating toward the Democrats and rejection by the family he came from in 2000 would have finally put his name to rest in the dusty history books only opened when we speak of the "presidential party switch amendment".
+Back in 2001, I had hoped that Arlen Specter would be gone with the wind. The Judas had convinced the flock to nominate him for president, only to work for the Democrats. We thought that his unsuccessful turn-coating toward the Democrats and rejection by the family he came from in 2000 would have finally put his name to rest in the dusty history books only opened when we speak of the "presidential party switch amendment".
 </p>
 <p>
-Yet it was not to be. Once more, coming out of the swamp of which he was born, the Republican-in-name only turned blue-blooded Democrat and came out of retirement to spew more of his noxious opinions. This time it's not about supporting the right to murder children, nor is it about further denial of the status of the United States as a Christian country. This time, Specter finally conceded that Soviet Healthcare was actually always fine.
+Yet it was not to be. Once more, coming out of the swamp of which he was born, the Republican-in-name only turned blue-blooded Democrat came out of retirement to spew more of his noxious opinions. This time it's not about supporting the right to murder children, nor is it about further denial of the status of the United States as a Christian country. This time, Specter finally conceded that Soviet Healthcare was actually always fine.
 </p>
 <p>
 We should have seen this coming. From the start, it was certain that Helms wouldn't be able to contain our ex-president's arch-liberal tendencies. A commitment to our foreign allies the democrats lacked was never going to be enough to seal away his venom. As the wolf in sheep's clothing, he massacred our victory once in 1996. Now, his honeyed words about the needs of the needy, of the obviousness of communistic healthcare, as he supports that euphemistically called "Americanized Canadian Healthcare plan", are going to ravage not only our economy, our enterprises, the livelihood of our population but the very spirit animating each American in their right to choose which healthcare they wish provided to them.
@@ -102788,7 +102789,7 @@ It won't happen in a dramatic show. The reds won't come with tanks to take the c
 <p>
 We must stop this now. This path cannot continue for the sanctity of our republic is at hand.
 </p>`)
-e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/6YQvUTA.png'})])
+e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/SpecterEnding.png'})])
 
 } else if (republican == "wilson" && quickstats[0] >= 101 && quickstats[0] <= 268) { // Wilson Term Slides
     e.pages.push(`<span style="font-size: 32px; "><b>CALIFORNIA SCHEMER (2013)</b></span><br>
@@ -103162,7 +103163,7 @@ LIVE FROM NEW YORK, IT'S SATURDAY NIGHT!
 </span>
 `)
 //e.image = ""
-e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Endings/Slide%203/Opponent%20Win/SNL'})])
+e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/BonoEnding.png'})])
 } else if (orderID[0] == 78 && republican == "weld" && aa[0].electoral_votes >= 270 || (aa[0].electoral_votes < 270 && aa[1].electoral_votes < 270 && aa[3].electoral_votes < 270)) { // Weld Term Slides
 e.pages.push(`<span style="font-size: 32px; ">A Poignant Artistic Reminder of the Failures of President Weld</span><br><br>
 <p>
@@ -103223,7 +103224,7 @@ Read More From Kirk McLean:
 <li>President Weld Should Read the Great Gatsby
 `)
 //e.image = ""
-e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/EvFtvBh.png'})])
+e.executable.push([1, (() => {e.image = e.image = 'https://file.garden/aR6kfGEzxHQ5DUic/WeldEnding.png'})])
 // Term slides
 } if (quickstats[0] >= 270) {
 if (DisasterMidterms == 1 && CommieReturn == 1) {
@@ -103267,7 +103268,7 @@ e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/WyMbM9u.p
             <p>By Stephen Peterhansel<br>Fox News<br><br>At recent progressive rallies and fundraisers, Clinton is still greeted like a rock star. High-profile feminists, including some who have condemned other powerful men for similar behavior, continue to praise him. Even as his previous action should have left him to fall, Clinton enjoys standing ovations and fawning media coverage.<br><br>"Bill Clinton is a champion of women’s rights," declared Senator Landrieu at a recent event, despite previously acknowledging the "problematic" nature of his past. Meanwhile, Bill's own wife, who once famously dismissed Lewinsky as a "narcissistic looney tune" has rebranded herself as a feminist icon.<br><br>If the Republican party is ever to capture back the female vote, something has to make sense. First of all, we can't let sexual predators like our president woo each woman like it's a simple corrida, and yet there's the feeling that something is just that deeply wrong about society for people to venerate such a nefarious man.<br><br>It can't be about policy, Clinton has so little to really be proud of outside of being the president that happen to overlap with the peace dividend of a post soviet time. It's such a drag his Vice President seems to invent some completely unknown policy from a top hat at each of his rallies. It's such a confused campaign with a man that has a quarter the charisma but simple osmosis with the current president make polls look absurdly competitive.<br><br>As such... We ask ourselves this. What's the Deal here? Are we suffering the greatest psy-op democrats ever created or is there a secret they do not wish to tell us? Either case remain, We ask you to not trust the polls for there is simply no conceivable way a president like that can be reelected.</p>`)
     e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/wnPwNOT.png'})])
     } else {
-        e.pages.push(`<span style="font-size: 32px; ">More popular than John Lennon</span><br><br>
+        e.pages.push(`<span style="font-size: 32px; ">Bigger Than John Lennon</span><br><br>
             <p>By Stephen Peterhansel<br>Fox News<br><br>When we look back in time, we can get why someone like John Lennon became such a legend. He and the Beatles were in the perfect position to take advantage of the Baby Boomers need for a counter to their parents, while having both the aura and charisma about them to have a cult following around him (sometimes literally), and all that before dying young enough to become immortal.<br><br>Then we ask ourselves, why are people acting like Clinton is him? Sure, we don't see massive stampede of ovary controlled women running on the face of all police and security to gush about Slick but... Are we that far from that actually? It's true that he showed himself quite the champion for women right as long as you don't ask nothing about his personal act against them much like Lennon, still, it remains confusing.<br><br>On the one hand, if a Republican would have done half of what he did, he would be smeared in oil and feathered but with Bill, it's like his actions give an even greater shine on him, as if just nothing would stick to him. No politician had ever been so embroiled in scandal, and yet find his supporters worshiping him like Jesus Christ and never break from him.<br><br>I think we can call it a cult. While he's running the nation of a cliff, the hippie virus, the left virus, whatever it is has completely subverted a massive part of our population, and now they're gushing about the slab of concrete called Al Gore just because he was his wingman.<br><br>We need to give a focus back on what's clear. Bill's a monster, he's dangerous for this nation, the fact he was reelected is a shame in itself, and the fact people still see him as such a Christ-like figure shows just how much we fell as a society. We cannot live in a nation embroiled in such cult for much longer. Tomorrow, it's vote or die.</p>`)
     e.executable.push([1, (() => {e.image = e.image = 'https://i.imgur.com/wnPwNOT.png'})])
     }
@@ -103435,7 +103436,7 @@ const main_modder_list = [
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Dole",name: "Agreeable",title: "LEAD DEVELOPER AND CODER",description: "THE ONE PIEEEECE THE ONE PIECE IS REAAAL"},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Buchanan",name: "GoodGamer",title: "WRITER",description: "More like racistgamer am I right or am I right"},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Forbius",name: "GW3n_B1@D3!",title: "WRITER",description: "Nice hat, dork, you look like a duck I had Alfred read your books, he told me they suck "},
-{img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Lamar",name: "Me The Guy",title: "WRITER",description: "Bro when does this game get fucking good"},
+{img: "https://file.garden/aR6kfGEzxHQ5DUic/Rancorman.png",name: "Me The Guy",title: "WRITER",description: "Bro when does this game get fucking good"},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Gramm",name: "Ronnie",title: "WRITER, CODER, AND ARTIST",description: "Tapping on the glass at the boy aquarium"},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Specter",name: "Theanswerisme",title: "WRITER AND CODER",description: "Imagine there's no .38 special snubnose revolvers"},
 {img: "https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/PC/RTWOF.com/Wilson",name: "UlricMorningstarG",title: "WRITER AND CODER",description: "''War is bad'' WOW!! COOL ROBOT!!"},
@@ -104876,7 +104877,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aNtjn2887DiA_8HP/Dennis%20Peron%20Tooltip.png",
             title: "Marijuana Activist",
             name: "Dennis Peron",
-            desc: "Definitely Inhaled."
+            desc: "Definitely inhaled."
         })],
         ["Hagelin", this.createTooltip("Hagelin", {
             img: "https://file.garden/aNtjn2887DiA_8HP/John%20Hagelin%20Tooltip.png",
@@ -104906,7 +104907,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aOp8cCiQ5ho9r5b1/Lyndon%20LaRouche%20Tooltip.png",
             title: "Activist",
             name: "Lyndon LaRouche",
-            desc: "Should be put in a nut house."
+            desc: "Should be put in a nuthouse."
         })],
         ["Sanders", this.createTooltip("Sanders", {
             img: "https://file.garden/aNtjn2887DiA_8HP/Bernie%20Sanders%20Tooltip.png",
@@ -104924,7 +104925,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aNtjn2887DiA_8HP/Ron%20Dellums%20Tooltip.png",
             title: "Representative",
             name: "Ron Dellums",
-            desc: "Professional MLK Impersonator."
+            desc: "Professional MLK impersonator."
         })],
         ["Biafra", this.createTooltip("Biafra", {
             img: "https://i.postimg.cc/rFJnMtDH/Jello-Biafra-Tooltip.png",
@@ -104936,7 +104937,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             img: "https://file.garden/aNtjn2887DiA_8HP/Mazzocchi%20Tooltip.png",
             title: "Former VP and Secretary-Treasurer of OCAW",
             name: "Tony Mazzocchi",
-            desc: "Wore almost every pin out there."
+            desc: "Wore every conceivable pin."
         })]
         ]);
     }
