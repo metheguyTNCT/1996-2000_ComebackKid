@@ -680,6 +680,47 @@ const css = `
   width: 250px;
 }
 /*code 2 setup*/
+
+
+/* table styles */
+#overall_election_details table,
+.final_results_table,
+#state_result_data_summary table,
+#main_content_area table {
+    background-color: rgb(0, 79, 110);
+    border: 1px solid;
+    border-color: #fff #aaaaaa #aaaaaa #fff;
+    border-spacing: 2px;
+}
+
+/* cell styles */
+#overall_election_details th,
+#overall_election_details td,
+.final_results_table th,
+.final_results_table td,
+#state_result_data_summary table th,
+#state_result_data_summary table td {
+    border: 1px solid;
+    border-color: #aaaaaa #fff #fff #aaaaaa;
+    background-color: white;
+}
+
+/* header styles */
+#overall_election_details th,
+.final_results_table th,
+#state_result_data_summary table th,
+#running-mate {
+    background-color: rgb(0, 79, 110);
+    font-family: Balboa W01 Medium;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: #aaaaaa #fff #fff #aaaaaa;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
 #campaign_sign {
     background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%202%20Misc/Init%20Sign");
     background-size: cover;
