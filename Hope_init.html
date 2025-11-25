@@ -681,117 +681,7 @@ const css = `
 }
 /*code 2 setup*/
 
-
-/* table styles */
-#overall_election_details table,
-.final_results_table,
-#state_result_data_summary table,
-#main_content_area table {
-    background-color: rgb(0, 79, 110);
-    border: 1px solid;
-    border-color: #fff #aaaaaa #aaaaaa #fff;
-    border-spacing: 2px;
-}
-
-/* cell styles */
-#overall_election_details th,
-#overall_election_details td,
-.final_results_table th,
-.final_results_table td,
-#state_result_data_summary table th,
-#state_result_data_summary table td {
-    border: 1px solid;
-    border-color: #aaaaaa #fff #fff #aaaaaa;
-    background-color: white;
-}
-
-/* header styles */
-#overall_election_details th,
-.final_results_table th,
-#state_result_data_summary table th,
-td#running-mate {
-    background-color: rgb(0, 79, 110);
-    font-family: Balboa W01 Medium;
-    text-transform: uppercase;
-    border-style: solid;
-    border-color: #aaaaaa #fff #fff #aaaaaa;
-    color: #fff;
-    font-weight: normal;
-    font-size: 14px;
-}
-
-
-#campaign_sign {
-    background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%202%20Misc/Init%20Sign");
-    background-size: cover;
-    border-color: #c9c9c9;    
-    border-width: .01em;
-    margin: 0 auto;
-    background-position: center;
-    width: 100%; 
-    height: 104px; 
-    margin-left: -0.033em;
-    margin-right: -0.033em;
-  }
-#campaign_sign p {
-    color: rgb(0 0 0 / 0%);
-}
-.inner_window_sign_display {
-  margin: 0;
-    margin-right: 0.033px;
-    margin-left: 0.033px;
-  height: 25%;
-  position: relative;
-  width: 35%;
-  height: 28%;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-#state_info {
-  margin: 5% 0 0;
-  height: 120%;
-  background-color: #FFFFFF;
-  border-style: double;
-  border-color: #C9C9C9;
-}
-.inner_window_question {
-  background-color: #FFFFFF;
-  margin: 0
-  padding-top: .3em;
-  border-style: double;
-  border-color: #C9C9C9;
-  text-align: center;
-  height: 58%;
-  position: relative;
-  clear: both;
-}
-
-.game_header {
-background: linear-gradient(to bottom, #004f6e 0%, #005b82 50%, #006d96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
-}
-
-#map_container {
-  border: 2px double #003A4F;
-  box-shadow: 
-    inset 0 1px 2px rgba(120, 150, 255, 0.1),
-    1px 1px 0 #ffffff,
-    -1px -1px 0 #0183AD,
-    2px 2px 4px rgba(0, 0, 0, 0.04);
-  padding: 3px;
-  border-radius: 0;
-}
-
-.visit_text {
-  overflow-wrap: normal;
-  width: 700px;
-  left: 30px;
-  position: relative;
-}
+/*basic recolouring*/
 
 #results_container,
 #credits,
@@ -809,10 +699,170 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
     color: #000;
 }
 
-#inner_window_2, #inner_window_3, #inner_window_4 {
-    background-color: rgba(4, 170, 109, 0);
+#menu_container, 
+#state_result_container, 
+#overall_result_container,
+#inner_window_2, 
+#inner_window_3, 
+#inner_window_4 {
+  background: none;
 }
 
+#state_info h3,
+#overall_result h3,
+#state_result h3,
+.game_header,
+.campaign_trail_start_emphasis {
+background: linear-gradient(to bottom, #004f6e 0%, #005b82 50%, #006d96 100%);
+border: 1px solid #003A4F;
+}
+
+#state_info h3,
+#overall_result h3,
+#state_result h3 {
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
+font-family: balboa w01 black;
+font-weight: normal;
+line-height: 1.2;
+}
+
+.game_header,
+.campaign_trail_start_emphasis {
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
+font-family: times new roman;
+}
+
+.inner_window_question h3:active, {
+box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.35);
+}
+
+/* table styles */
+
+#overall_election_details h4,
+#state_result_data_summary h4 {
+  font-size: 18px;
+  font-family: balboa w01 black;
+  font-weight: normal;
+  line-height: 0;
+  letter-spacing: 1.5px;
+}
+
+
+#overall_election_details table,
+.final_results_table,
+#state_result_data_summary table,
+#main_content_area table {
+    background-color: rgb(0, 79, 110);
+    border: 1px solid;
+    border-color: #fff #aaaaaa #aaaaaa #fff;
+    border-spacing: 2px;
+    padding: 5px;
+}
+
+  /* cell styles */
+#overall_election_details th,
+#overall_election_details td,
+.final_results_table th,
+.final_results_table td,
+#state_result_data_summary table th,
+#state_result_data_summary table td {
+    border-color: #aaaaaa #fff #fff #aaaaaa;
+    background-color: white;
+}
+
+  /* header styles */
+#overall_election_details th,
+.final_results_table th,
+#state_result_data_summary table th,
+td#running-mate {
+    background-color: rgb(0, 79, 110);
+    font-family: Balboa W01 Medium;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: #aaaaaa #fff #fff #aaaaaa;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: .9;
+}
+
+/* question box layout*/
+
+#campaign_sign {
+    background-image: url("https://file.garden/Zsz7wL96OyyJ2oZe/Hope%20Images/Code%202%20Misc/Init%20Sign");
+    background-size: cover;
+    border-color: #c9c9c9;    
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%; 
+    height: 104px; 
+    margin-left: -0.033em;
+    margin-right: -0.033em;
+  }
+#campaign_sign p {
+    color: rgb(0 0 0 / 0%);
+}
+
+.inner_window_sign_display,
+#state_info,
+.inner_window_question, {
+  border-style: double;
+  border-color: #C9C9C9;
+  background-color: #FFFFFF;
+}
+
+.inner_window_sign_display {
+  margin: 0 auto;
+  position: relative;
+  width: 35%;
+  height: 28%;
+}
+#state_info {
+  margin: 5% 0 0;
+  height: 120%;
+}
+.inner_window_question {
+  background-color: #FFFFFF;
+  margin: 0
+  padding-top: .3em;
+  text-align: center;
+  height: 58%;
+  position: relative;
+  clear: both;
+}
+
+.inner_window_question h3 {
+background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
+border: 1px solid #0183AD;
+box-shadow:
+  inset 0 0 3px rgba(90, 120, 255, 0.25),
+  inset 0 1px 0 rgba(255, 255, 255, 0.3),
+  inset 0 -1px 0 rgba(100, 130, 255, 0.1);
+padding: 2px 4px;
+text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
+transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+
+#map_container {
+  border: 2px double #003A4F;
+  box-shadow: 
+    inset 0 1px 2px rgba(120, 150, 255, 0.1),
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #0183AD,
+    2px 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 3px;
+  border-radius: 0;
+}
+
+.visit_text {
+  overflow-wrap: normal;
+  width: 700px;
+  right: 25%; /* If we decide to port to NCT, change this to "left: 39%;" */
+  position: absolute;
+}
 
 #map_container,
 #opponent_selection_description_window,
@@ -835,40 +885,7 @@ box-shadow: inset 0 0 5px rgba(60, 110, 255, 0.2);;
   	      0px 0px 1px rgba(32, 29, 26, 0.15);
           }
 
-.campaign_trail_start_emphasis {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.2);
-}
-
-.inner_window_question h3:active, {
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.35);
-}
-
-.inner_window_question h3 {
-background: linear-gradient(180deg, #c7e8f2 0%, #a9d9ec 20%, #8ac9e4 40%, #a1d4ea 60%, #b6dfee 80%, #c9eaf3 100%);
-border: 1px solid #0183AD;
-box-shadow:
-  inset 0 0 3px rgba(90, 120, 255, 0.25),
-  inset 0 1px 0 rgba(255, 255, 255, 0.3),
-  inset 0 -1px 0 rgba(100, 130, 255, 0.1);
-padding: 2px 4px;
-text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-animation: fadeInScale 0.3s cubic-bezier(0.3, 1.2, 0.2, 1) forwards;
-transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
-}
-
-#menu_container, 
-#state_result_container, 
-#overall_result_container,
-#state_info h3,
-#overall_result h3,
-#state_result h3 {
-background: linear-gradient(to bottom, #004F6E 0%, #005B82 50%, #006D96 100%);
-border: 1px solid #003A4F;
-box-shadow: inset 0 0 4px rgba(60, 110, 255, 0.25);  
-}
-
+/* advisor feedback window */
 	
 .overlay_window h3 {
 	width: 97%;
@@ -1045,10 +1062,6 @@ button:hover,
 box-shadow: inset 0 0 6px rgba(60, 110, 255, 0.3), 0 1px 2px rgba(0,0,0,0.1);
 }
 
-.game_header {
-  font-family: times new roman;
-}
-
 .window_frame {
 border: 2px solid #005B82;
 border-top-color: #0183AD;
@@ -1073,6 +1086,31 @@ background: #024E71;
 .window {
   animation: windowPop 0.34s ease-out;
 }
+
+body {
+cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1017.cur'), auto;
+-webkit-font-smoothing: none;
+-moz-osx-font-smoothing: grayscale;
+font-smooth: never;
+text-rendering: optimizeSpeed;
+}
+
+.window {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.window.done {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.inner_window_w_desc {
+  border: none;
+}
+
+/*question checking stuff*/
 
 /* BASIC STRUCTURE */
 input[type="radio"] {
@@ -1144,25 +1182,6 @@ label {
   font-size:1em!important;
 }
 
-body {
-cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1017.cur'), auto;
--webkit-font-smoothing: none;
--moz-osx-font-smoothing: grayscale;
-font-smooth: never;
-text-rendering: optimizeSpeed;
-}
-.window {
-  opacity: 0;
-  transform: scale(0.97);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.window.done {
-  opacity: 1;
-  transform: scale(1);
-}
-.inner_window_w_desc {
-  border: none;
-}
 #question_form label {
   font-size: 14px;
   font-weight: 400;
