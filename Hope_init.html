@@ -849,13 +849,16 @@ transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 
 #map_container {
   border: 2px double #003A4F;
-  box-shadow: 
-    inset 0 1px 2px rgba(120, 150, 255, 0.1),
-    1px 1px 0 #ffffff,
-    -1px -1px 0 #0183AD,
-    2px 2px 4px rgba(0, 0, 0, 0.04);
-  padding: 3px;
-  border-radius: 0;
+  border-radius: 2px;
+  padding: 4px;
+  background: #f5f8fb;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.06),
+    0 1px 0 #ffffff,
+    1px 2px 0 #0183AD,
+    3px 4px 6px rgba(0, 0, 0, 0.18);
 }
 
 .visit_text {
@@ -2673,6 +2676,7 @@ campaignTrail_temp.achievements = {
       "cannotBeCheated" : true
   }
   }
+
 
 
 
